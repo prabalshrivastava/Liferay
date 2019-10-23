@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_2_0.dtd">
+
+<liferay-portlet-app>
+	<portlet>
+		<portlet-name>sp-challenge-action</portlet-name>
+		<icon>/icon.png</icon>
+		<indexer-class>com.sambaash.platform.spchallenge.indexer.SPChallengeIndexer</indexer-class>
+		<indexer-class>com.sambaash.platform.spchallenge.indexer.SPChallengeApplicantIndexer</indexer-class>
+		<open-search-class>com.sambaash.platform.spchallenge.indexer.SPChallengeOpenSearchImpl</open-search-class>
+        <friendly-url-mapper-class>com.liferay.portal.kernel.portlet.DefaultFriendlyURLMapper</friendly-url-mapper-class>
+        <friendly-url-mapping>spchallenge</friendly-url-mapping>
+        <friendly-url-routes>com/sambaash/platform/spchallenge/routes/routes.xml</friendly-url-routes>
+		<template-handler>com.sambaash.platform.spchallenge.template.ChallengeDisplayTemplateHandler</template-handler>
+		<user-notification-definitions>user-notifications.xml</user-notification-definitions>
+	    <user-notification-handler-class>com.sambaash.platform.spchallenge.notification.SPChallengeNotificationHandler</user-notification-handler-class>	
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>
+			sp-challenge-action-portlet
+		</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>my-challenges-action</portlet-name>
+		<icon>/icon.png</icon>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>
+			my-challenges-action-portlet
+		</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>sp-challenge-applicant-action</portlet-name>
+		<icon>/icon.png</icon>
+		<template-handler>com.sambaash.platform.spchallenge.template.ChallengeApplicantDisplayTemplateHandler</template-handler>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>
+			sp-challenge-applicant-action-portlet
+		</css-class-wrapper>
+	</portlet>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>guest</role-name>
+		<role-link>Guest</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>power-user</role-name>
+		<role-link>Power User</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>user</role-name>
+		<role-link>User</role-link>
+	</role-mapper>
+</liferay-portlet-app>

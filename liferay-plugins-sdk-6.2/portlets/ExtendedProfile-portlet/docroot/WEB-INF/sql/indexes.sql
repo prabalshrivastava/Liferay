@@ -1,0 +1,1 @@
+create index IX_62B4F36 on SPJobRole (userId);

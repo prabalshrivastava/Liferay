@@ -1,0 +1,371 @@
+@import "sp_custom_variables";
+@import "sp_mixins";
+@import "sp_media-queries";
+.portlet-blogs {
+	margin: 0 auto;
+    max-width: $screen-max-width ;
+    .accordion-inner {
+        border: 1px solid $white-five!important;
+    }
+}
+
+.aui .padding-quarter {
+    padding: 10px;
+}
+
+.aui .align-top {
+    vertical-align: top;
+}
+
+.aui .padding-right-quarter {
+    padding-right: 10px;
+}
+
+.aui .padding-left-quarter {
+    padding-left: 10px;
+}
+
+.padding-top-half {
+    padding-top: 20px;
+}
+
+#spblogs-stream.spblogs-fixed{
+	padding-top: 105px;
+}
+
+.spblogs-channel-select{
+	height: 40px!important;
+}
+
+#spblogs-stream {
+    background: none repeat scroll 0 0 #FFF;
+    border: 1px solid #D9E0E2;
+    font-weight: 400;
+}
+
+.spblogs-select span {
+    font-size: 13pt;
+    text-transform: uppercase;
+}
+
+.spblogs-portlet {
+    background-color: $white;
+    .spblogs-stream {
+        .theme-bg-2 {
+            background-color: $pinkish-grey-three;
+            color: $white;
+            font-size: $fontSize-normal;
+            font-weight: $fontWeight-regular;
+        }
+        #spblogs-stream-switcher {
+            background-color: $custom-color-45;
+        }
+        #spblogs-stream-list {
+            ul {
+                li {
+                    border-top: 1px solid $custom-color-46;
+                    &:first-child {
+                        border-top: none;
+                    }
+                    &.active {
+                        background-color: #f6fbff;
+                        border-top-color: $link-hover-color;
+                        a {
+                            color: $link-hover-color !important;
+                            font-size: 10pt;
+                        }
+                    }
+                    .spblogs-thumb {
+                        a {
+                            line-height: 0;
+                        }
+                    }
+                    .spblogs-body {
+                        a {
+                            font-weight: $fontWeight-bold;
+                            line-height: 1.29;
+                            font-size: 14px;
+                        }
+                        .spblogs-date {
+                            font-size: 8pt;
+                            color: $gray;
+                            margin-top: 3px;
+                        }
+                    }
+                }
+            }
+        }
+        .spblogs-stream-load-more {
+            font-weight: 10pt;
+        }
+    }
+    .spblogs-content-title {
+        font-weight: $fontWeight-bold;
+        line-height: 1.2;
+        font-size: 18pt;
+    }
+    .spblogs-content-right-title {
+        font-weight: $fontWeight-bold;
+        line-height: 1.29;
+        font-size: 11pt;
+    }
+    .spblogs-article-author-name {
+    	font-size: 10px !important;
+        a {
+            font-size: 10px !important;
+            font-weight: $fontWeight-bold;
+            line-height: 1.8;
+        }
+    }
+    .spblogs-article-date{
+    font-size: 10px !important;
+    }
+    .spblogs-article-title {
+        color: $dark-gray;
+        font-size: 27pt;
+        font-weight: $fontWeight-black;
+        line-height: inherit;
+        font-family: inherit;
+            margin-bottom: 15px;
+    }
+    #spblogs-content {
+        @include vendor-prefix(box-sizing, border-box);
+         padding-right: 0px;
+        .spblogs-hilight-loadmore-container {
+            .spblogs-horizontal {
+                @include animate-cubic(.4s);
+                li {
+                    background-color: $white;
+                    -webkit-column-break-inside: avoid;
+                    -moz-column-break-inside: avoid;
+                    column-break-inside: avoid;
+                    page-break-inside: avoid;
+                    border: 1px solid $custom-color-47;
+                    @include animate-cubic(.4s);
+                    @include vendor-prefix(border-radius, 3px);
+                    @include vendor-prefix(box-sizing, border-box);
+
+                    .spblogs-main-content-head {
+                        a {
+                            font-size: $fontSize;
+                        }
+                        >a {
+                            line-height: normal;
+                        }
+                        @include vendor-prefix(box-sizing, border-box);
+                    }
+                }
+            }
+        }
+        .view-more-link {
+            background-color: transparent;
+            font-weight: $fontWeight-bold;
+            text-transform: uppercase;
+            font-size: 11pt ;
+            &:hover {
+                background-color: $white-Header2;
+            }
+        }
+    }
+    .spblogs-main-article {
+    width: 65.5%;
+        .spblogs-main-content {
+            @include vendor-prefix(box-sizing, border-box);
+            @include vendor-prefix(border-radius, 5px);
+            background-color: $white;
+            border: 1px solid $custom-color-47;
+            .spblogs-main-content-image {
+                a {
+                    font-size: 0;
+                }
+            }
+            .spblogs-main-content-head {
+                >a {
+                    font-size: 20pt;
+                       line-height: normal;
+                }
+            }
+            .main-content-excerpt {
+                p {
+    				font-size: 11pt;
+    				font-weight: $fontWeight-regular;
+                    a {
+                        color: $link-hover-color;
+                        line-height: 1.5;
+                        font-size: 12px;
+                        &::hover {
+                            color: $themeColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .spblogs-main-content-right {
+        .spblogs-main {
+            border: 1px solid $custom-color-47;
+            @include vendor-prefix(box-sizing, border-box);
+            @include vendor-prefix(border-radius, 3px);
+            .spblogs-main-image {
+                line-height: 0;
+            }
+            .spblogs-main-content-head {
+                background-color: $white;
+                a {
+                    font-size: $fontSize;
+                    text-transform: none;
+                }
+                >a {
+                    font-size: $fontSize;
+                }
+            }
+        }
+    }
+    .spblogs-content-author {
+        font-weight: 10pt;
+    }
+    #spblogs-article-wrapper {
+        .spblogs-article {
+            border: 1px solid $custom-color-46;
+            @include vendor-prefix(box-sizing, border-box);
+            @include vendor-prefix(border-radius, 5px);
+            .spblogs-nav-buttons {
+                border-top: 1px solid $custom-color-46;
+                border-bottom: 1px solid $custom-color-46;
+            }
+            * {
+                @include vendor-prefix(box-sizing, border-box);
+                @include animate-cubic(.4s);
+            }
+        }
+        .spblogs-article-more {
+            .loopPostWrap {
+                @include animate-cubic(.4s);
+                .spblogs-loop-post {
+                    background-color: $white;
+                    -webkit-column-break-inside: avoid;
+                    -moz-column-break-inside: avoid;
+                    column-break-inside: avoid;
+                    page-break-inside: avoid;
+                    border: 1px solid $custom-color-47;
+                    min-width: 250px;
+                    @include animate-cubic(.4s);
+                    @include vendor-prefix(border-radius, 3px);
+                    @include vendor-prefix(box-sizing, border-box);
+                    .spblogs-loop-post-content {
+                        .spblogs-loop-post-image {
+                            line-height: 0;
+                        }
+                        h2 {
+                            line-height: 1.29;
+                            font-size: 11pt;
+                             font-size: $fontWeight-bold;
+                            @include vendor-prefix(box-sizing, border-box);
+                        }
+                    }
+                }
+            }
+            h3 {
+                @include vendor-prefix(box-sizing, border-box);
+            }
+        }
+    }
+}
+
+//Blog Templates
+
+.botomMargin{
+	margin-bottom:40px!important;
+}
+.blog_container {
+    .capitalize {
+        font-size: 25pt;
+    }
+    .quotedFrom {
+    	color: $themeColor;
+	}
+    .quoteText_r {
+        float: right;
+        color: $themeColor;
+   		 font-size: 16pt;
+   		  font-weight:$fontWeight-light;
+    }
+    .quoteText_l {
+        color: $themeColor;
+    }
+    .blog_img_title {
+	    font-size: 18pt;
+	    color: $themeColor;
+    } 
+    .blog_wrap {
+        .blog_headerImage {
+            line-height: 0;
+        }
+        .blog_contents {
+            .blog_content_head {
+                font-size: $fontSize;
+                line-height: 19pt;
+                color: $themeColor;
+                @include vendor-prefix(box-sizing, border-box);
+            }
+            
+            .blog_content_text {
+                font-size: $fontSize;
+                line-height: 18pt;
+                font-weight: $fontWeight-light;
+            }
+           
+            .fLeft {
+                @include vendor-prefix(box-sizing, border-box);
+            }
+            .fRight {
+                @include vendor-prefix(box-sizing, border-box);
+            }
+            figure {
+                &.figure {
+                    @include vendor-prefix(box-sizing, border-box);
+                    background-color: $white;
+                    figcaption {
+                        font-size: 8pt;
+                        color: $black;
+                    }
+                }
+            }
+            .emphaText {
+                color: $themeColor;
+            }
+        }
+    }
+}
+
+@include screen(320px, 767px) {
+
+		
+    .spblogs-portlet {
+        #spblogs-article-wrapper {
+       
+        //DONE BY KARTHIK
+        .spblogs-main-content-right {
+            .spblogs-main {
+                border: 1px solid $custom-color-47;
+                @include vendor-prefix(box-sizing, border-box);
+                @include vendor-prefix(border-radius, 3px);
+                .spblogs-main-image {
+                    line-height: 0;
+                }
+                .spblogs-main-content-head {
+                    background-color: $white;
+                    a {
+                        font-size: $fontSize;
+                    }
+                    >a {
+                        font-size: 12pt;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+    
+}

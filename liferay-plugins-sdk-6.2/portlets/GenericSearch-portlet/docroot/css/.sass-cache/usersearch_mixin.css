@@ -1,0 +1,269 @@
+/** profile_form_navigation -- additional text **/
+/** sp_custom.scss **/
+/** main wrapper bg color -- declared as variable in sp_custom.scss **/
+/** main navigation list bg & on hover color **/
+/** signed in menu list on hover bg color & aui-dialog - header bg color **/
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** profile_form_navigation -- additional text **/
+/** sp_custom.scss **/
+/** main wrapper bg color -- declared as variable in sp_custom.scss **/
+/** main navigation list bg & on hover color **/
+/** signed in menu list on hover bg color & aui-dialog - header bg color **/
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*# sourceMappingURL=usersearch_mixin.css.map */
+

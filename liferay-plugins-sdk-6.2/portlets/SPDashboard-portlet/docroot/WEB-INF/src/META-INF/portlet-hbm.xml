@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.spdashboard.model.SPAnalyticsConfig" />
+	<class name="com.sambaash.platform.srv.spdashboard.model.impl.SPAnalyticsConfigImpl" table="SPAnalyticsConfig">
+		<cache usage="read-write" />
+		<id name="spAnalyticsConfigId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="config" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="type" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="type_" />
+		<property name="query" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="warId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

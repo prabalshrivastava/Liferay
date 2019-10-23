@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="15px" viewBox="0 0 18 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>FD73DF5D-6F54-4670-BD9C-8D05258B0DA4</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M20.5191359,23.4052853 C20.1707339,23.4052853 19.8610432,23.2697956 19.6094195,23.0375276 L13.6672298,17.0759822 C12.8542918,16.2630442 11.9445755,14.7920135 12.0026425,13.3596942 C12.0994208,11.0370142 14.0156318,9.12080317 16.3383119,9.00466917 C18.0803219,8.9272465 19.6868422,9.81760717 20.5191359,11.3079935 C21.3514296,9.83696284 22.9385942,8.9272465 24.6999599,9.00466917 C27.0032843,9.12080317 28.9001396,10.9983028 29.0356293,13.3016272 C29.1130519,14.7339465 28.1452686,16.3017556 27.4678203,16.9985596 L21.4288522,23.0375276 C21.1965842,23.2697956 20.8675379,23.4052853 20.5191359,23.4052853 L20.5191359,23.4052853 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="17.0400009" height="14.4052853" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Missing-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03---Startup-details-About" transform="translate(-1235.000000, -139.000000)" stroke="#E37683" stroke-width="2">
+            <g id="Content01" transform="translate(-177.000000, 98.000000)">
+                <g id="Actions" transform="translate(1400.000000, 32.000000)">
+                    <use id="Shape" mask="url(#mask-2)" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,8 @@
+package com.sambaash.platform.pe.jaxb;
+
+public enum PENodeSubType {
+
+	JSP, FORM, FORMV2, PROCESS, MSG, MAIL, STATUS, CREATEACCOUNT,CUSTOM_ACTION,PAYMENT, 
+	PAYMENTV2, PRICING, API, ENTITY, PREVIEW, SCHEDULED_MAIL
+
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 6.2.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_6_2_0.dtd">
+
+<routes>
+	<!-- use this for capturing new data -->
+	<route>
+		<pattern>/load/form/{formId}</pattern>
+		<implicit-parameter name="actionp">loadDynamicForm</implicit-parameter>
+	</route>
+	<!-- use this for modifying the data -->
+	<route>
+		<pattern>/load/form/{formId}/{formStorageId}</pattern>
+		<implicit-parameter name="actionp">loadDynamicFormWithData</implicit-parameter>
+		<implicit-parameter name="readOnly">false</implicit-parameter>
+	</route>
+	<!-- use this for viewing (Read Only) the data -->
+	<route>
+		<pattern>/view/form/{formId}/{formStorageId}</pattern>
+		<implicit-parameter name="actionp">loadDynamicFormWithData</implicit-parameter>
+		<implicit-parameter name="readOnly">true</implicit-parameter>
+	</route>
+</routes>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<action-mappings>
+		<action path="/document_library/share_file_entry"
+			type="com.sambaash.platform.portlet.documentlibrary.action.ShareFileAndFolderAction">
+			<forward name="portlet.document_library.share_file_entry"
+				path="portlet.document_library.share_file_entry" />
+		</action>
+	</action-mappings>
+
+</struts-config>

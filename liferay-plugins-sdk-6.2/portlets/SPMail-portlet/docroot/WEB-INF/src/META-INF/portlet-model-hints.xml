@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.mail.model.SPEMailAudit">
+		<field name="spEMailAudit" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="sentTo" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="cc" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="bcc" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="category" type="String" />
+		<field name="subject" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="content" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="sentDate" type="Date" />
+		<field name="messasgeId" type="String" />
+		<field name="userId" type="long" />
+		<field name="orgId" type="long" />
+		<field name="processStateId" type="long" />
+		<field name="nodeId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.mail.model.SPMailBlackList">
+		<field name="spMailBlackListId" type="long" />
+		<field name="spMailCampaignId" type="long" />
+		<field name="userId" type="long" />
+		<field name="emailAddress" type="String" />
+		<field name="bounced" type="boolean" />
+		<field name="bounce_soft" type="boolean" />
+		<field name="complain" type="boolean" />
+		<field name="createDate" type="Date" />
+		<field name="message" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="messageId" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.mail.model.SPMailCampaign">
+		<field name="spMailCampaignId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="campaignName" type="String">
+			<hint name="max-length">250</hint>
+		</field>
+		<field name="categoryId" type="long" />
+		<field name="mainTempalteId" type="long" />
+		<field name="rem1TempalteId" type="long" />
+		<field name="rem2TempalteId" type="long" />
+		<field name="rem3TempalteId" type="long" />
+		<field name="thankyouTempalteId" type="long" />
+		<field name="missedyouTempalteId" type="long" />
+		<field name="mainScheduledDate" type="Date" />
+		<field name="rem1ScheduledDate" type="Date" />
+		<field name="rem2ScheduledDate" type="Date" />
+		<field name="rem3ScheduledDate" type="Date" />
+		<field name="thankYouScheduledDate" type="Date" />
+		<field name="missedyouScheduledDate" type="Date" />
+		<field name="rsvpId" type="long" />
+		<field name="dlFileEntryId" type="long" />
+		<field name="sentBy" type="long" />
+		<field name="sentDate" type="Date" />
+		<field name="createBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="archive" type="boolean" />
+		<field name="campaignType" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.mail.model.SPMailCampaignEDM">
+		<field name="spMailCampaignEDMId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String">
+			<hint name="max-length">250</hint>
+		</field>
+		<field name="spMailCampaignId" type="long" />
+		<field name="spMailTemplateId" type="long" />
+		<field name="seqNo" type="int" />
+		<field name="dayOfWeek" type="int" />
+		<field name="dayOfMonth" type="int" />
+		<field name="delayUnit" type="String" />
+		<field name="status" type="String" />
+		<field name="delayAmount" type="int" />
+		<field name="croneType" type="String" />
+		<field name="nextScheduleDateTime" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.mail.model.SPMailCampaignSubscribers">
+		<field name="spMailCampaignSubscribersId" type="long" />
+		<field name="spMailCampaignId" type="long" />
+		<field name="userId" type="long" />
+		<field name="parentSubscriberId" type="long" />
+		<field name="emailAddress" type="String" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="spMailType" type="int" />
+		<field name="messageId" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="opened" type="boolean" />
+		<field name="countryName" type="String" />
+		<field name="city" type="String" />
+		<field name="regionName" type="String" />
+		<field name="areaCode" type="int" />
+		<field name="latitude" type="String">
+			<hint name="max-length">50</hint>
+		</field>
+		<field name="longitude" type="String">
+			<hint name="max-length">50</hint>
+		</field>
+		<field name="ipAddress" type="String">
+			<hint name="max-length">15</hint>
+		</field>
+		<field name="webVersion" type="boolean" />
+		<field name="openedDate" type="Date" />
+		<field name="createBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.sambaash.platform.srv.mail.model.SPMailLinkTracking">
+		<field name="spMailLinkTrackingId" type="long" />
+		<field name="spMailCampaignId" type="long" />
+		<field name="spMailCampaignEDMId" type="long" />
+		<field name="spMailCampaignSubscribersId" type="long" />
+		<field name="label" type="String" />
+		<field name="link" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="encryptedlink" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="status" type="boolean" />
+		<field name="openedDate" type="Date" />
+		<field name="createDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.mail.model.SPMailSubscriberUserAgent">
+		<field name="spMailSubscriberUserAgentId" type="long" />
+		<field name="spMailCampaignSubscribersId" type="long" />
+		<field name="spMailCampaignId" type="long" />
+		<field name="name" type="String">
+			<hint name="max-length">250</hint>
+		</field>
+		<field name="type" type="String">
+			<hint name="max-length">250</hint>
+		</field>
+		<field name="typeName" type="String">
+			<hint name="max-length">250</hint>
+		</field>
+		<field name="deviceCategory" type="String">
+			<hint name="max-length">250</hint>
+		</field>
+		<field name="family" type="String">
+			<hint name="max-length">250</hint>
+		</field>
+		<field name="operatingSystem" type="String">
+			<hint name="max-length">250</hint>
+		</field>
+		<field name="versionNumber" type="String" />
+		<field name="userAgent" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.mail.model.SPMailTemplate">
+		<field name="spMailTemplateId" type="long" />
+		<field name="productTypeId" type="long" />
+		<field name="subProductTypeId" type="long" />
+		<field name="templateName" type="String">
+			<hint name="max-length">250</hint>
+		</field>
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="subject" type="String">
+			<hint name="max-length">550</hint>
+		</field>
+		<field name="htmlContent" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="textContent" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="htmlUpload" type="boolean" />
+		<field name="status" type="boolean" />
+		<field name="createBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="parentTempalteId" type="long" />
+		<field name="versionNumber" type="String" />
+		<field name="fromAddress" type="String" />
+		<field name="fromName" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.mail.model.SPMailTemplateAttachment">
+		<field name="spTemplateAttachmentId" type="long" />
+		<field name="templateId" type="long" />
+		<field name="rsvpId" type="long" />
+		<field name="fileEntryId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.mail.model.SPMailUnsubscribe">
+		<field name="spMailUnsubscribeId" type="long" />
+		<field name="categoryId" type="long" />
+		<field name="userId" type="long" />
+		<field name="emailAddress" type="String" />
+		<field name="unsubscribeDate" type="Date" />
+	</model>
+</model-hints>

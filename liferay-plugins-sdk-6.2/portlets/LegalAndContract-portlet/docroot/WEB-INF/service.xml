@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder
+	package-path="com.sambaash.platform.srv.legalandcontract">
+	<author>nareshchebolu</author>
+	<namespace>LegalAndContract</namespace>
+
+	<entity name="Agency" uuid="true" table="SPAgency"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spAgencyId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="number" type="String" />
+		<column name="country" type="String" />
+		<column name="name" type="String" />
+		<column name="reference" type="String" />
+		<column name="startDate" type="String" />
+		<column name="endDate" type="String" />
+
+		<column name="address" type="String" />
+		<column name="remarks" type="String" />
+		<column name="status" type="String" />
+
+		<column name="customField1" type="String" />
+		<column name="customField2" type="String" />
+		<column name="customField3" type="String" />
+		<column name="customDate1" type="Date" />
+		<column name="customDate2" type="Date" />
+		<column name="customDate3" type="Date" />
+		<column name="version" type="String" />
+
+		<column name="rootSpAgencyId" type="long" />
+		<!-- Order -->
+
+		<!-- Finder methods -->
+
+		<finder name="NumberCountryVersion" return-type="Agency" unique="true">
+			<finder-column name="number"></finder-column>
+			<finder-column name="country"></finder-column>
+			<finder-column name="version"></finder-column>
+		</finder>
+		<finder name="NumberCountry" return-type="Agency">
+			<finder-column name="number"></finder-column>
+			<finder-column name="country"></finder-column>
+		</finder>
+
+
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="PortletPreferences" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetLink" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetCategory"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetTag"></reference>
+		<reference package-path="com.liferay.portlet.expando"
+			entity="ExpandoValue" />
+	</entity>
+
+	<entity name="ClassMaster" uuid="true" table="SPClassMaster"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spClassId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="code" type="String" />
+		<column name="country" type="String" />
+		<column name="filedBy" type="String" />
+
+		<column name="customField1" type="String" />
+		<column name="customField2" type="String" />
+
+		<column name="customDate1" type="Date" />
+		<column name="customDate2" type="Date" />
+
+		<column name="version" type="String" />
+		<column name="rootSpClassId" type="long" />
+		<!-- Order -->
+
+		<!-- Finder methods -->
+
+		<finder name="CodeCountry" return-type="ClassMaster">
+			<finder-column name="code"></finder-column>
+			<finder-column name="country"></finder-column>
+		</finder>
+
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="PortletPreferences" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetLink" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetCategory"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetTag"></reference>
+		<reference package-path="com.liferay.portlet.expando"
+			entity="ExpandoValue" />
+
+	</entity>
+	<entity name="Trademarks" uuid="true" table="SPTrademarksMaster"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spTrademarksId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="registrationNumber" type="String" />
+		<column name="applicationNo" type="String" />
+		<column name="country" type="String" />
+		<column name="trademark" type="String" />
+		<column name="trademarkLocalized" type="String" />
+		<column name="registeredOwner" type="String" />
+
+		<column name="applicationDate" type="Date" />
+		<column name="firstRegistrationDate" type="Date" />
+		<column name="renewalDate" type="Date" />
+		<column name="goodsServices" type="String" />
+		<column name="pendingComments" type="String" />
+		<column name="spAgencyId" type="long" />
+		<column name="classDescription" type="String" />
+
+		<column name="legalConfRemarks" type="String" />
+		<column name="workflowStatus" type="long" />
+
+		<column name="customField1" type="String" />
+		<column name="customField2" type="String" />
+		<column name="customField3" type="String" />
+		<column name="customDate1" type="Date" />
+		<column name="customDate2" type="Date" />
+		<column name="customDate3" type="Date" />
+
+		<column name="classCodes" type="String" />
+		<column name="version" type="String" />
+		<column name="trademarkType" type="String" />
+		<column name="rootSpTrademarksId" type="long" />
+
+		<!-- Order -->
+
+		<!-- Finder methods -->
+
+		<finder name="RegistrationNumberCountry" return-type="Trademarks">
+			<finder-column name="registrationNumber"></finder-column>
+			<finder-column name="country"></finder-column>
+		</finder>
+		<finder name="ApplicationNoCountry" return-type="Trademarks">
+			<finder-column name="applicationNo"></finder-column>
+			<finder-column name="country"></finder-column>
+		</finder>
+		
+		<finder name="ApplicationNoCountryVersion" return-type="Trademarks" unique="true">
+			<finder-column name="applicationNo"></finder-column>
+			<finder-column name="country"></finder-column>
+			<finder-column name="version"></finder-column>
+		</finder>
+		
+
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="PortletPreferences" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetLink" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetCategory"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetTag"></reference>
+		<reference package-path="com.liferay.portlet.expando"
+			entity="ExpandoValue" />
+
+	</entity>
+	<entity name="Litigation" uuid="true" table="SPLitigationDetails"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spLitigationId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="country" type="String" />
+		<column name="filedBy" type="String" />
+		<column name="filedOn" type="Date" />
+		<column name="filedAtCountry" type="String" />
+		<column name="claimsRemarks" type="String" />
+		<column name="responseDeadline" type="Date" />
+		<column name="actualResponseDate" type="Date" />
+		<column name="status" type="String" />
+
+		<column name="customField1" type="String" />
+		<column name="customField2" type="String" />
+		<column name="customField3" type="String" />
+		<column name="customDate1" type="Date" />
+		<column name="customDate2" type="Date" />
+		<column name="customDate3" type="Date" />
+
+		<column name="legalConfRemarks" type="String" />
+		<column name="version" type="String" />
+		<column name="spTrademarksId" type="long" />
+		<column name="rootSpLitigationId" type="long" />
+		
+		<!-- Order -->
+
+		<!-- Finder methods -->
+
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="PortletPreferences" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetLink" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetCategory"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetTag"></reference>
+		<reference package-path="com.liferay.portlet.expando"
+			entity="ExpandoValue" />
+
+	</entity>
+	<entity name="RDL" uuid="true" table="SPLitigationRDL"
+		local-service="true" remote-service="false">
+		<!-- PK fields -->
+
+		<column name="spRdlId" type="long" primary="true" />
+		<column name="spLitigationId" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="responseDeadline" type="Date" />
+		<column name="claimsRemarks" type="String" />
+		<column name="alertBefore" type="long" />
+		
+		<order by="asc">
+			<order-column name="responseDeadline" />
+		</order>
+		<finder name="RdlIdLitigationId" return-type="RDL">
+			<finder-column name="spRdlId"></finder-column>
+			<finder-column name="spLitigationId"></finder-column>
+		</finder>
+
+		<finder name="litigationId" return-type="Collection" >
+			<finder-column name="spLitigationId"></finder-column>
+		</finder>
+		
+		
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="PortletPreferences" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetLink" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetCategory"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetTag"></reference>
+		<reference package-path="com.liferay.portlet.expando"
+			entity="ExpandoValue" />
+			
+			
+	</entity>	
+	
+	<exceptions>
+		<exception>DuplicateAgency</exception>
+	</exceptions>
+</service-builder>

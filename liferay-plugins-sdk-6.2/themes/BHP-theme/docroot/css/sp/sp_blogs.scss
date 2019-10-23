@@ -1,0 +1,345 @@
+@import "_sp_custom_variables";
+@import "_sp_mixins";
+@import "sp_media-queries";
+.portlet-blogs {
+    .accordion-inner {
+        border: 1px solid $custom-color-20!important;
+    }
+}
+
+.spblogs-stream-container
+{
+    background-color: #ffffff;
+}
+.taglib-social-bookmarks li {
+    float: none !important;
+    line-height: normal !important;
+    margin-right: 2px;
+    display: inline-block;
+}
+li.taglib-social-bookmark-facebook {
+    vertical-align: top;
+}
+.taglib-social-bookmarks {
+    margin-top: 1.5em;
+    background-color: #fff;
+    margin-bottom: 1.5em;
+}
+#spblogs-stream {
+    height: 100%;
+}
+
+.spblogs-portlet {
+    background-color: $light-gray;
+    .spblogs-stream {
+        .theme-bg-2 {
+            background-color: $custom-color-145;
+            color: $bg-white;
+            font-size: $fontSize-standard;
+            font-weight: $fontWeight-regular;
+        }
+        #spblogs-stream-switcher {
+            background-color: $bgColor-tHead;
+        }
+        #spblogs-stream-list {
+            ul {
+                li {
+                    border-top: 1px solid $custom-color-108;
+                    &:first-child {
+                        border-top: none;
+                    }
+                    &.active {
+                        background-color: $custom-color-146;
+                        border-top-color: $themeColor-2;
+                        a {
+                            color: $themeColor-2 !important;
+                            font-size: $fontSize-smaller;
+                        }
+                    }
+                    .spblogs-thumb {
+                        a {
+                            line-height: 0;
+                        }
+                    }
+                    .spblogs-body {
+                        a {
+                            font-weight: $fontWeight-regular;
+                        }
+                        .spblogs-date {
+                            font-size: $fontSize-tiny;
+                            color: $medium-gray;
+                        }
+                    }
+                }
+            }
+        }
+        .spblogs-stream-load-more {
+            font-weight: $fontSize-smaller;
+        }
+    }
+
+    .spblogs-content-title {
+        font-weight: 500;
+        line-height: 20px;
+        font-size: 14pt;
+    }
+    .spblogs-content-right-title {
+        font-weight: $fontWeight-medium;
+        line-height: normal;
+        font-size: 12pt;
+    }
+    .spblogs-article-author-name {
+        a {
+            font-size: $fontSize-smaller !important;
+        }
+    }
+    .spblogs-article-title {
+        color: $bodyColor;
+        font-size: $fontSize-big;
+        font-weight: $fontWeight-black;
+        line-height: normal;
+        font-family: inherit;
+            margin-bottom: 15px;
+    }
+    
+    #spblogs-content {
+        @include vendor-prefix(box-sizing, border-box);
+         padding-right: 20px;
+        .spblogs-hilight-loadmore-container {
+            .spblogs-horizontal {
+                @include animate-cubic(.4s);
+                li {
+                    background-color: $white;
+                    -webkit-column-break-inside: avoid;
+                    -moz-column-break-inside: avoid;
+                    column-break-inside: avoid;
+                    page-break-inside: avoid;
+                    border: 1px solid $custom-color-12;
+                    @include animate-cubic(.4s);
+                    @include vendor-prefix(border-radius, 3px);
+                    @include vendor-prefix(box-sizing, border-box);
+
+                    .spblogs-main-content-head {
+                        a {
+                            font-size: $fontSize-standard;
+                        }
+                        >a {
+                            line-height: normal;
+                        }
+                        @include vendor-prefix(box-sizing, border-box);
+                    }
+                }
+            }
+        }
+        .view-more-link {
+            background-color: transparent;
+            font-weight: $fontWeight-regular;
+            text-transform: uppercase;
+            font-size: $fontSize-standard ;
+            a {
+                color: #333;
+            }
+            &:hover {
+                background-color: $custom-color-92;
+            }
+        }
+    }
+    .spblogs-main-article {
+    width: 65.5%;
+        .spblogs-main-content {
+            @include vendor-prefix(box-sizing, border-box);
+            @include vendor-prefix(border-radius, 5px);
+            background-color: $white;
+            border: 1px solid $custom-color-12;
+            .spblogs-main-content-image {
+                a {
+                    font-size: 0;
+                }
+            }
+            .spblogs-main-content-head {
+                >a {
+                    font-size: 20pt;
+                }
+            }
+            .main-content-excerpt {
+                p {
+                    a {
+                        color: $themeColor-3;
+                        &::hover {
+                            color: $themeColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .spblogs-main-content-right {
+        .spblogs-main {
+            border: 1px solid $custom-color-12;
+            @include vendor-prefix(box-sizing, border-box);
+            @include vendor-prefix(border-radius, 3px);
+            .spblogs-main-image {
+                line-height: 0;
+            }
+            .spblogs-main-content-head {
+                background-color: $white;
+                a {
+                    font-size: $fontSize-standard;
+                    text-transform: none;
+                }
+                >a {
+                    font-size: $fontSize-standard;
+                }
+            }
+        }
+    }
+    .spblogs-content-author {
+        font-weight: $fontSize-smaller;
+    }
+    #spblogs-article-wrapper {
+        .spblogs-article {
+            border: 1px solid $custom-color-108;
+            @include vendor-prefix(box-sizing, border-box);
+            @include vendor-prefix(border-radius, 5px);
+            .spblogs-nav-buttons {
+                border-top: 1px solid $custom-color-108;
+                border-bottom: 1px solid $custom-color-108;
+            }
+            * {
+                @include vendor-prefix(box-sizing, border-box);
+                @include animate-cubic(.4s);
+            }
+        }
+        .spblogs-article-more {
+            .loopPostWrap {
+                @include animate-cubic(.4s);
+                .spblogs-loop-post {
+                min-width: 280px;
+                    background-color: $white;
+                    -webkit-column-break-inside: avoid;
+                    -moz-column-break-inside: avoid;
+                    column-break-inside: avoid;
+                    page-break-inside: avoid;
+                    border: 1px solid $custom-color-12;
+                    @include animate-cubic(.4s);
+                    @include vendor-prefix(border-radius, 3px);
+                    @include vendor-prefix(box-sizing, border-box);
+                    .spblogs-loop-post-content {
+                        .spblogs-loop-post-image {
+                            line-height: 0;
+                        }
+                        h2 {
+                            line-height: 16pt;
+                            font-size: 12pt;
+                            @include vendor-prefix(box-sizing, border-box);
+                        }
+                    }
+                }
+            }
+            h3 {
+                @include vendor-prefix(box-sizing, border-box);
+            }
+        }
+    }
+}
+
+//Blog Templates
+.botomMargin{
+	margin-bottom:80px!important;
+}
+.blog_container {
+    .capitalize {
+        font-size: 25pt;
+    }
+    
+    .quotedFrom {
+    	color: $themeColor;
+	}
+	
+    .quoteText_r {
+        float: right;
+        color: $themeColor;
+   		 font-size: 16pt;
+   		     line-height: 20pt;
+   		     font-weight:$fontWeight-light;
+    }
+    .quoteText_l {
+        color: $themeColor;
+    }
+    .blog_img_title {
+	    font-size: 18pt;
+	    color: $themeColor;
+    } 
+    .blog_wrap {
+        .blog_headerImage {
+            line-height: 0;
+        }
+        .blog_contents {
+            .blog_content_head {
+                font-size: $fontSize-standard;
+                line-height: 19pt;
+                color: $themeColor;
+                @include vendor-prefix(box-sizing, border-box);
+            }
+            
+            .blog_content_text {
+                font-size: $fontSize-standard;
+                line-height: 18pt;
+                font-weight: $fontWeight-light;
+                color: $medium-gray;
+            }
+           
+            .fLeft {
+                @include vendor-prefix(box-sizing, border-box);
+            }
+            .fRight {
+                @include vendor-prefix(box-sizing, border-box);
+            }
+            figure {
+                &.figure {
+                    @include vendor-prefix(box-sizing, border-box);
+                    background-color: $white;
+                    figcaption {
+                        font-size: 8pt;
+                        color: $black;
+                    }
+                }
+            }
+            .emphaText {
+                color: $themeColor;
+            }
+        }
+    }
+}
+
+@include screen(320px, 767px) {
+
+		
+    .spblogs-portlet {
+        #spblogs-article-wrapper {
+       
+        //DONE BY KARTHIK
+        .spblogs-main-content-right {
+            .spblogs-main {
+                border: 1px solid $custom-color-47;
+                @include vendor-prefix(box-sizing, border-box);
+                @include vendor-prefix(border-radius, 3px);
+                .spblogs-main-image {
+                    line-height: 0;
+                }
+                .spblogs-main-content-head {
+                    background-color: $white;
+                    a {
+                        font-size: $fontSize-standard;
+                    }
+                    >a {
+                        font-size: 12pt;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+    
+}

@@ -1,0 +1,1043 @@
+@import "_sp_custom_variables";
+@import "_sp_mixins";
+@import "sp_media-queries";
+
+
+$profile_head_height: 650px;
+$profile_list_height: 162px;
+$profile_formNav_height: 400px;
+$profile_formWrap_height: 700px;
+
+
+
+/** Mixins**/
+
+
+
+.Column_25_50_25{
+	padding: 20px;
+	background-color: $custom-color-62 !important;
+}
+
+.yui3-widget-bd{
+	position: relative;
+}
+
+#column-2 .userprofile-portlet, #column-3 .userprofile-portlet {
+    margin-left: 20px;
+}
+
+#column-1 .userprofile-portlet{
+	margin-left:40px;
+}
+/** USER-PROFILE **/
+
+.userprofile-portlet{
+
+
+
+	.aui-toolbar{
+		display: none;
+	}
+
+
+
+}
+
+.workHistory-startDate{
+	border-right: 1px solid $custom-color-79;
+    display: inline-block;
+    width: 35%;
+}
+
+.workHistory-endDate{
+	display: inline-block;
+    margin-left: 35px;
+    width: 40%;
+}
+
+.mentorButton{
+    border: 1px solid $custom-color-66;
+    display: inline-block;
+    float: right;
+    height: 201px;
+    margin-top: -20px;
+    text-align: center;
+    vertical-align: top;
+    width: 43%;
+}
+
+.mentorApplyButton{
+	display: inline-block;
+    padding-top: 40px;
+    vertical-align: middle;
+}
+
+.aui-w50{
+	.UserProfile-portlet{
+		.portlet-content{
+			padding-left: 0;
+		}
+		.aui-panel{
+			padding-left: 0;
+			padding-right: 0;
+			height: 0px;
+
+			.aui-panel-content{
+				border-left: 0;
+				@include vendor-prefix(border-radius,0);
+				.aui-panel-bd{
+					height: auto;
+					overflow-y: auto;
+				}
+			}
+		}
+	}
+}
+
+.SimpleProfileImage-portlet{
+	padding: 20px;
+	padding-right: 0;
+
+	 .portlet-content{
+	 	padding: 0 !important;
+	 	text-align: center;
+		 @include vendor-prefix( border-radius,50%);
+		  width: 150px;
+		  height: 150px;
+		  overflow: hidden;
+		  display: inline-block;
+		  *display: inline;
+		  zoom: 1;
+		  border-collapse: initial;
+		  border: 2px solid $custom-color-66;
+	 }
+
+	 .portlet-content-container{
+
+		  display: block;
+
+		  .portlet-body{
+		  	padding: 0;
+		  	border: 0;
+
+		  }
+
+
+
+	 }
+	 .portlet-body{
+
+	 	background: $white;
+		  border-radius: 4px;
+		  @include vendor-prefix(border-radius,4px);
+		  border:1px solid $custom-color-66;
+		  text-align: center;
+		  border-right: 0;
+				@include vendor-prefix(border-bottom-right-radius,0);
+				@include vendor-prefix(border-top-right-radius,0);
+
+				padding: 20px;
+
+				height: 161px;
+
+		  .pi-portrait-img{
+		  	max-width: 105%;
+		  	width: 105%;
+		  	margin-left: -2%;
+		  	margin-top: -2%;
+
+		  }
+	 }
+}
+
+.userProfileCTA{
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	padding: 40px;
+	background: $white;
+	@include vendor-prefix(box-sizing,border-box);
+		  border-radius: 4px;
+		  @include vendor-prefix(border-radius,4px);
+		  border:1px solid $custom-color-66;
+		  border-left: 0;
+		  text-align: center;
+
+				@include vendor-prefix(border-bottom-left-radius,0);
+				@include vendor-prefix(border-top-left-radius,0);
+
+				span.ctaText{
+					font-size: 12pt;
+					font-style: italic;
+					line-height: 18pt;
+
+
+
+					margin-bottom:10px;
+					color: $black;
+					display: block;
+				}
+
+				a.genCTA{
+					display: inline-block;
+					*display: inline;
+					zoom: 1;
+					margin: 0 !important;
+
+				}
+
+
+
+}
+.aui-w25#column-3{
+	display: none !important;
+}
+.aui-w25#column-3{
+			.portlet-content{
+				padding-left: 0;
+			}
+			.journal-content-article{
+				display: table;
+				height: 202px;
+			}
+		}
+
+/** END USER-PROFILE **/
+
+.no_height{
+		height: 0 !important;
+		@include vendor-prefix(transition, height ease-in-out 1s);
+}
+
+.w_height{
+
+	@include vendor-prefix(transition, height ease-in-out 1s);
+}
+
+.mobileNavSelect{
+	display: none;
+}
+
+
+/** Mobile **/
+
+
+@include screen(320px, 767px){
+
+	input[type="text"],
+	input[type="password"],
+	input[type="file"],
+	select,
+	textarea,
+	.textarea{
+		width: 100% !important;
+	}
+
+	.Column_25_50_25{
+		.aui-w33{
+			width: 100%;
+		}
+	}
+	.UserProfile-portlet {
+		.aui-panel{
+			padding: 0;
+		}
+
+		.aui-panel-content{
+			padding: 15px 10px;
+		}
+	}
+
+
+	#basicInfo{
+		.maindivpersonalInfo{
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			vertical-align: top;
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	.SimpleProfileImage-portlet{
+		padding: 20px 0;
+		padding-bottom: 0;
+
+		.portlet-body{
+			  border: 1px solid $custom-color-66;
+			  border-bottom: 0;
+
+			  border-bottom-right-radius: 0;
+			  border-bottom-left-radius: 0;
+		}
+
+	}
+
+	.aui-w50 {
+		.UserProfile-portlet{
+			.aui-panel{
+				padding: 20px 0;
+				padding-top: 0;
+				padding-bottom:0;
+				height: auto;
+
+				.aui-panel-content{
+					border: 1px solid $custom-color-66;
+					  border-top: 0;
+ 					  border-bottom: 0;
+ 					  padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.aui-w25#column-3{
+		.portlet-content{
+			padding: 20px 0;
+			padding-top: 0;
+		}
+		.journal-content-article{
+			height: 210px;
+		}
+	}
+
+	.userProfileCTA{
+
+	}
+
+	.portlet-column{
+		display: block;
+		width:100%;
+	}
+
+	.portlet-layout{
+		display: block;
+	}
+
+	.userProfile-portlet{
+		#webInfo{
+			.groupWidth{
+				div{
+					word-break: break-all;
+  					font-size: 8pt;
+				}
+			}
+			.networkinformation-button{
+				width: 18%;
+			}
+		}
+	}
+}
+@include screen(768px,1100px, portrait){
+
+	input[type="text"],
+	input[type="password"],
+	input[type="file"],
+	select,
+	textarea,
+	.textarea{
+		width: 100% !important;
+	}
+
+	.Column_25_50_25{
+		.aui-w33{
+			width: 100%;
+		}
+	}
+	.UserProfile-portlet {
+		.aui-panel{
+			padding: 0;
+		}
+
+		.aui-panel-content{
+			padding: 15px 10px;
+		}
+	}
+
+
+	#basicInfo{
+		.maindivpersonalInfo{
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			vertical-align: top;
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	.SimpleProfileImage-portlet{
+		padding: 20px 0;
+		padding-bottom: 0;
+
+		.portlet-body{
+			  border: 1px solid $custom-color-66;
+			  border-bottom: 0;
+
+			  border-bottom-right-radius: 0;
+			  border-bottom-left-radius: 0;
+		}
+
+	}
+
+	.aui-w50 {
+		.UserProfile-portlet{
+			.aui-panel{
+				padding: 20px 0;
+				padding-top: 0;
+				padding-bottom:0;
+				height: auto;
+
+				.aui-panel-content{
+					border: 1px solid $custom-color-66;
+					  border-top: 0;
+ 					  border-bottom: 0;
+ 					  padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.aui-w25#column-3{
+		.portlet-content{
+			padding: 20px 0;
+			padding-top: 0;
+		}
+		.journal-content-article{
+			height: 210px;
+		}
+	}
+
+	.userProfileCTA{
+
+	}
+
+	.portlet-column{
+		display: block;
+		width:100%;
+	}
+
+	.portlet-layout{
+		display: block;
+	}
+
+	.userProfile-portlet{
+		#webInfo{
+			.groupWidth{
+				div{
+					word-break: break-all;
+  					font-size: 8pt;
+				}
+			}
+			.networkinformation-button{
+				width: 18%;
+			}
+		}
+	}
+}
+
+#workhistory_add{
+	  display: inline-block;
+	  *display: inline;
+	  zoom: 1;
+
+	  text-align: right;
+	  width: 100%;
+
+	a.userprofile-add-link{
+		position: relative !important;
+	}
+}
+
+
+.aui-datepicker-select-wrapper select {
+width:auto!important;
+}
+
+
+
+.aui-datepicker-button-wrapper .aui-buttonitem-content {
+  margin: 7px;
+  padding: 0px;
+  height: 20px;
+  width: 18px;
+}
+
+.yui3-panel{
+	position:inherit !important;
+}
+
+.userprofile-portlet {
+
+	.portlet-content-container{
+		background-color: transparent;
+	}
+
+	.portlet-content {
+    	padding: 0!important;
+	}
+
+	.yui3-panel {
+    	padding: 20px !important;
+	}
+
+	.yui3-widget-hd{
+		background: none !important;
+	    border: none !important;
+	    border-color: $custom-color-93 $custom-color-94 $custom-color-94 $custom-color-93;
+	    text-shadow: none !important;
+	    text-align: right;
+	    padding: 0;
+    	font-size: 8pt;
+    	text-transform: uppercase;
+    	color: $themeColor;
+    	float: none;
+    	line-height: 8pt;
+	}
+
+	.yui3-panel-content {
+		border:1px solid $custom-color-66 !important;
+		background: $white;
+		/*@include vendor-prefix(border-radius, 5px);*/
+		overflow: hidden;
+		padding: 15px;
+
+		.yui3-widget-bd {
+			padding : 5px 15px;
+
+			> div {
+				width :100%;
+				margin-bottom: 15px;
+				clear:both;
+				padding-top:15px;
+
+				.content-title {
+				    clear: both;
+				    font-weight: bold;
+				    max-height: 21px;
+				    min-height: 21px;
+				    overflow: hidden;
+				    padding: 2px 0;
+				    display: block;
+				    font-size: 12pt;
+				    text-transform: none;
+				    color: $black;
+				    margin-bottom: 5px;
+				    font-weight: 500;
+				    position: relative;
+				}
+
+				input, .textedit-input, .single-input-div, .hosturl {
+					color: $custom-color-95;
+					font-size: 12pt;
+				}
+
+				.textedit-input {
+				    cursor: pointer;
+				    display: inline-block;
+				    padding: 5px 5px 5px 0;
+				}
+				.single-input, .single-input-div {
+				    word-wrap: break-word;
+				    text-align: justify;
+				}
+				.single-input, .single-input-div, .multiple-input {
+				    float: left;
+				    margin: 0;
+				    width: 100%;
+				    padding: 10px;
+				    line-height: 12pt;
+				    vertical-align: middle;
+				}
+
+				input {
+					background: $custom-color-10;
+					/*@ include vendor-prefix(border-radius, 3px);*/
+					border: none !important;
+					width: 81%;
+
+					&[type="radio"]{
+						width: auto;
+						display: inline-block;
+						zoom: 1;
+						vertical-align: middle;
+						margin: 0;
+						margin-top: -5px;
+						margin-right: 5px;
+					}
+				}
+
+			}/* end of > div */
+
+			.userjobdetails-input-height {
+				width: 100%;
+				margin-bottom: 15px;
+				display: inline-block;
+
+				&-right-align{
+					&.radioField{
+						font-size: 12pt;
+					}
+				}
+				&-left-align{
+					&.radioField{
+						font-size: 12pt;
+					}
+				}
+
+				.buttonitem-content{
+					    display: block;
+					   	@include vendor-prefix( box-sizing,content-box);
+					    background-image: none;
+				}
+			}
+
+		}/* end of .yui3-widget-bd */
+	}/* end of .yui3-panel-content*/
+
+	.header-pretitle, .header-posttitle{
+	    font-size: 12pt;
+		font-weight: $fontWeight-medium;
+		color: $medium-gray;
+	 }
+
+	 .showdowheader-profile{
+	 }
+
+	 .seperatedline{
+		background:none;
+	}
+
+	.userprofile-add-link{
+		text-decoration: none;
+		  background: url("@theme_image_path@/content/add-icon.png");
+		  width: 14px;
+		  height: 14px;
+		  background-size: contain;
+		  display: inline-block;
+		  *display: inline;
+		  zoom: 1;
+		  vertical-align: middle;
+		  position: absolute;
+		  top: 0;
+		  right: 0;
+	}
+
+	.userprofile-delete-link{
+		text-decoration: none;
+		  background: url("@theme_image_path@/content/delete-icon.png");
+		  width: 14px;
+		  height: 14px;
+		  background-size: contain;
+		  display: inline-block;
+		  *display: inline;
+		  zoom: 1;
+
+		  vertical-align: middle;
+	}
+
+	.userprofile-edit-link{
+		text-decoration: none;
+		  background: url("@theme_image_path@/content/edit-icon.png");
+		  width: 14px;
+		  height: 14px;
+		  background-size: contain;
+		  display: inline-block;
+		  *display: inline;
+		  zoom: 1;
+		  vertical-align: middle;
+		  margin-left	: 5px;
+	}
+
+
+	select, .aui-field-input-select, .aui-datepicker-select-wrapper select{
+		  background-position: right 9px center!important;
+	}
+} /* end of .userprofile-portlet */
+
+
+		.maindivpersonalInfo{
+			display: block;
+			zoom: 1;
+			vertical-align: top;
+
+		}
+
+.content-title {
+	clear: both;
+	font-weight: bold;
+	max-height: 17px;
+	min-height: 17px;
+	margin: 0;
+	overflow: hidden;
+	padding: 2px 0;
+	display: block;
+}
+
+.textedit-input-hide{
+	display:none !important;
+}
+
+#contactInfo, #webInfo, #personalInfo, #availability, #basicInfo, #workHistory {
+    width: 100%;
+    box-shadow: none;
+}
+
+.userpersonaldetails-value-full-width {
+    width: 100%;
+}
+
+#basicInfo .yui3-widget-hd, #personalInfo .yui3-widget-hd, #availability .yui3-widget-hd, #webInfo .yui3-widget-hd, #contactInfo .yui3-widget-hd, #workHistory .yui3-widget-hd {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    float: left;
+    width: 100%;
+    border-style: hidden;
+    border-width: 0;
+    margin-bottom: 5px;
+}
+
+#basicInfo .yui3-widget-bd, #personalInfo .yui3-widget-bd, #workHistory .yui3-widget-bd, #webinfo_details .yui3-widget-bd {
+    margin-top: 14px;
+    padding-left: 0;
+}
+
+.basicinfo-textedit {
+    padding: 5px 5px 5px 0;
+}
+
+#basicInfo {
+    width: auto;
+    .maindivpersonalInfo{
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			vertical-align: top;
+			width: 100%;
+			margin-left: 0;
+		}
+}
+
+.otherBasicInfo{
+	display:inline-block;
+	float:right;
+	width:46%;
+}
+
+.nameBasicInfo{
+	display:inline-block;
+	float:left;
+	width:40%;
+	/*border-right:1px solid $custom-color-66;*/
+}
+
+#personalInfo {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+
+#workHistory{
+		position: relative;
+			.workhistory-horizontalspacing{
+				margin-bottom:15px;
+				a{
+					text-decoration: none;
+					text-transform: uppercase;
+					color: $themeColor;
+					font-size: 10pt
+				}
+			}
+
+			.workhistory-jobtitle{
+				margin-bottom:15px;
+			}
+
+			.workhistory-savedata{
+				display: inline-block !important;
+				*display: inline;
+				zoom: 1;
+
+				text-align: left;
+			}
+
+			.workhistory-savedatabutton{
+				display: block;
+				text-align: right;
+
+				position: absolute;
+				top: 0;
+				right: 32px;
+
+				.available-saveinfo{
+					display: inline-block;
+					*display: inline;
+					zoom: 1;
+
+					padding: 0 5px;
+					line-height: 0;
+
+					a{
+						background: url('@theme_image_path@/content/save-icon.png');
+						width: 14px;
+						height:14px;
+						background-size: contain;
+
+
+					}
+
+				}
+
+				.available_undo{
+					display: inline-block;
+					*display: inline;
+					zoom: 1;
+
+					padding: 0 10px;
+					line-height: 0;
+
+					a{
+						background: url('@theme_image_path@/content/delete-icon.png');
+						width: 14px;
+						height:14px;
+						background-size: contain;
+
+					}
+
+				}
+
+				a{
+					float: none !important;
+					text-decoration: none;
+					display: inline-block;
+					*display: inline;
+					zoom: 1;
+				}
+			}
+
+			.workhistory-buttonalign{
+				display: none;
+			}
+		}
+
+
+
+		#webInfo{
+			.groupWidth{
+				.content-title{
+					div{
+						float: none !important;
+					}
+				}
+
+				div{
+					float: none !important;
+				}
+
+				margin-bottom:25px;
+				display: block;
+			}
+
+			.networkinformation-value{
+				display: inline-block;
+				*display: inline;
+				zoom: 1;
+				width: 80%;
+
+				vertical-align: middle;
+
+				a{
+					color: $custom-color-95;
+					text-decoration: none;
+				}
+			}
+
+			.networkinformation-button{
+				display: inline-block;
+				*display: inline;
+				zoom: 1;
+				width: 18%;
+				vertical-align: middle;
+				text-align: right;
+
+			}
+
+			.workhistory-inputuserprofileaction{
+				display: inline-block;
+				*display: inline;
+				zoom: 1;
+				position: relative;
+				vertical-align: middle;
+
+				width: 80%;
+
+				padding: 5px 0;
+
+				input{
+					margin-bottom: 0;
+					width: 100% !important;
+				}
+
+
+				a{
+					text-decoration: none;
+					  background: url("@theme_image_path@/content/save-icon.png");
+					  width: 14px;
+					  height: 14px;
+					  background-size: contain;
+					  display: inline-block;
+					  *display: inline;
+					  zoom: 1;
+
+					  vertical-align: middle;
+
+					  position: absolute;
+					  top:15px;
+					  left:110%;
+				}
+
+				.networkinfo-inputfield{
+					display: none;
+				}
+			}
+
+			.workhistory-inputuserprofile-delete-link{
+				display: inline-block;
+				*display: inline;
+				zoom: 1;
+
+				vertical-align: middle;
+				width: 19%;
+				text-align: right;
+			}
+		}
+
+.save_button {
+    display: inline-block;
+    float: right;
+    width: 10%;
+    margin-top: 10px;
+}
+
+#about_container a {
+    color: $white;
+}
+#about_submit_button {
+    border: none;
+    padding: 5px 12px 5px 5px;
+    margin-left: 8px;
+}
+.update-button {
+    background: $custom-color-132 url("/UnileverFoundry-theme/images/content/save-icon.png") no-repeat scroll 0 0/contain;
+    float: right;
+    height: 5px;
+    width: 15px;
+    border: none;
+    vertical-align: top;
+}
+
+.available_undo, .undo_button {
+    display: inherit;
+    width: 6%;
+    float: right;
+    margin-top: 10px;
+}
+
+.undo_button {
+    background: url("/UnileverFoundry-theme/images/userprofile/undo.png") no-repeat scroll left top transparent!important;
+    float: left;
+    width: 20px;
+    border: none;
+}
+
+.ckeditor_alignRight {
+    display: inline-block;
+}
+
+.personal_info_update_button, .personal_info_input, .personal_info_textarea, .personal_info_combox {
+    vertical-align: middle;
+}
+.personal_info_textarea {
+    width: 81%;
+    height: 12em;
+    margin-right: 10px;
+    float: left;
+    vertical-align: middle;
+    resize: none;
+    padding-left: 8px;
+}
+
+
+		/* profile image upload */
+.pi-drop-zone {
+    background: none repeat scroll 0 0 $white;
+    margin: 0;
+    min-height: 80px;
+    position: relative;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.pi-drop-text {
+    background: none repeat scroll 0 0 gray;
+    border-radius: 5px 5px 5px 5px;
+    margin: auto 0;
+    text-align: center;
+    text-shadow: 0 -1px 1px $custom-color-136, 0 1px 1px $custom-color-116;
+    width: 100%;
+    color: $custom-color-66;
+    font: bold 30px/35px Helvetica, Arial, sans-serif;
+    min-height: 80px;
+    padding: 60px 0 0;
+}
+
+.pi-file-preview {
+    margin: 10px 0 0;
+}
+
+.pi-file-preview img {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+.pi-or-hr:before {
+    background-color: $white;
+    content: "Or";
+    font-size: 16px;
+    left: 195px;
+    position: absolute;
+    text-align: center;
+    top: -12px;
+    width: 40px;
+}
+
+.pi-or-hr {
+    border-top: 1px solid $custom-color-79;
+    margin-top: 35px;
+    padding-top: 25px;
+    position: relative;
+}
+
+.profile-image-container {
+    margin: 20px;
+}
+
+.sp-mbl {
+    margin-bottom: 20px;
+}
+.sp-mbm {
+    margin-bottom: 10px;
+}
+
+.sp-mtm {
+    margin-top: 10px;
+}
+
+.sp-mlm {
+    margin-left: 10px;
+}
+
+/* end of profile image upload */

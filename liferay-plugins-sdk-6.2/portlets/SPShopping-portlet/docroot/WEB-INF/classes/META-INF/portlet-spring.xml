@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.spshopping.service.SPCartLocalService" class="com.sambaash.platform.srv.spshopping.service.impl.SPCartLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.persistence.SPCartPersistence" class="com.sambaash.platform.srv.spshopping.service.persistence.SPCartPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.SPCartPackageLocalService" class="com.sambaash.platform.srv.spshopping.service.impl.SPCartPackageLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.persistence.SPCartPackagePersistence" class="com.sambaash.platform.srv.spshopping.service.persistence.SPCartPackagePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.SPCartPackageItemLocalService" class="com.sambaash.platform.srv.spshopping.service.impl.SPCartPackageItemLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.persistence.SPCartPackageItemPersistence" class="com.sambaash.platform.srv.spshopping.service.persistence.SPCartPackageItemPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.SPDiscountLocalService" class="com.sambaash.platform.srv.spshopping.service.impl.SPDiscountLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.persistence.SPDiscountPersistence" class="com.sambaash.platform.srv.spshopping.service.persistence.SPDiscountPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.SPPackageItemsLocalService" class="com.sambaash.platform.srv.spshopping.service.impl.SPPackageItemsLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.persistence.SPPackageItemsPersistence" class="com.sambaash.platform.srv.spshopping.service.persistence.SPPackageItemsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.SPSellingItemLocalService" class="com.sambaash.platform.srv.spshopping.service.impl.SPSellingItemLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.persistence.SPSellingItemPersistence" class="com.sambaash.platform.srv.spshopping.service.persistence.SPSellingItemPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.SPSellingPackageLocalService" class="com.sambaash.platform.srv.spshopping.service.impl.SPSellingPackageLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.persistence.SPSellingPackagePersistence" class="com.sambaash.platform.srv.spshopping.service.persistence.SPSellingPackagePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.SPSellingPriceLocalService" class="com.sambaash.platform.srv.spshopping.service.impl.SPSellingPriceLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.persistence.SPSellingPricePersistence" class="com.sambaash.platform.srv.spshopping.service.persistence.SPSellingPricePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.SPShoppingLocalService" class="com.sambaash.platform.srv.spshopping.service.impl.SPShoppingLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.SPShoppingService" class="com.sambaash.platform.srv.spshopping.service.impl.SPShoppingServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.SPTaxLocalService" class="com.sambaash.platform.srv.spshopping.service.impl.SPTaxLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spshopping.service.persistence.SPTaxPersistence" class="com.sambaash.platform.srv.spshopping.service.persistence.SPTaxPersistenceImpl" parent="basePersistence" />
+</beans>

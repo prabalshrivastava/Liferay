@@ -1,0 +1,618 @@
+/**blue**/
+/**red**/
+/**
+$bgColor-activeState			: $custom-color-4;
+
+$bgColor-body					: $light-gray;
+$bgColor-header					: rgba(255,255,255,0.9);
+$bgColor-section				: rgba(255,255,255,1);
+$bgColor-mark					: #71c5e8;
+$bgColor-link					: #f5f5f1;
+$bgColor-badge					: $tertiary-color;
+$bgColor-field					: #fafafa;
+$bgColor-tHead					: #e3e4e9;
+$bgColor-tCell					: $light-gray;
+
+
+$bgColor-btn-primary			: $light-gray;
+$bgColor-btn-primary-hover		: #e2e2e2;
+$bgColor-btn-primary-active		: $light-gray;
+$bgColor-btn-callout			: $secondary-color;
+$bgColor-btn-callout-hover		: $tertiary-color;
+$bgColor-btn-disabled			: #eef4f7;
+$bgColor-btn-icon				: $secondary-color;
+$bgColor-btn-icon-hover			: $tertiary-color;
+$bgColor-btn-link-bar			: $light-gray;
+$bgColor-btn-link-bar-hover		: #e7e7e7;
+$bgColor-btn-link-bar-active	: $light-gray;
+$bgColor-btn-social-icon		: $secondary-color;
+$bgColor-btn-social-icon-hover	: $tertiary-color;
+$bgColor-btn-group-item			: $light-gray;
+$bgColor-btn-group-item-hover	: $white;
+$bgColor-btn-group-item-active	: $light-gray;
+$bgColor-btn-dropdown			: $light-gray;
+$bgColor-btn-dropdown-hover		: $white;
+$bgColor-btn-dropdown-active	: $light-gray;
+$bgColor-btn-text-icon			: $light-gray;
+$bgColor-btn-text-icon-hover	: $white;
+$bgColor-btn-text-icon-active	: $light-gray;
+
+
+$color-feature					: #67747c;
+$color-caption					: #67747c;
+$color-small					: $bodyColor;
+$color-mark						: $bodyColor;
+$color-blockquote				: #757575;
+$color-cite						: #757575;
+$color-link						: $secondary-color;
+$color-link-hover				: $tertiary-color;
+$color-link-disabled			: #cbd9e4;
+$color-tooltip					: #999999;
+$color-badge					: #FFFFFF;
+$color-dropdown					: $bodyColor;
+$color-border					: #bfbfbf;
+$color-tagline					: #a5a5a5;
+
+
+$color-btn-callout				: $white;
+$color-btn-disabled				: #d8e2e8;
+$color-btn-icon					: $white;
+$color-btn-link-bar				: $bodyColor;
+$color-btn-social-icon			: $white;
+$color-btn-group-item			: $bodyColor;
+$color-btn-dropdown				: $bodyColor;
+$color-btn-text-icon			: $bodyColor;
+
+$color-facebook					: #4c66a4;
+$color-googleplus				: #dd4b39;
+$color-pinterest				: #cb2027;
+$color-twitter					: #2fc2ef;
+$color-youtube					: #de332b;
+$color-tumbler					: #35465c;
+
+
+
+$notice    						: #f9d17c;
+$notice-hl 						: #fcbd36;
+$error							: #b94a48;
+$success   						: #468847;
+$warning     					: #c09853;
+$info							: #3a87ad;
+
+
+$max-width						: 1280px;
+$max-height						: 100%;
+
+
+$section-padding				: 5%;
+$button-padding-big				: 15px;
+$button-padding-medium			: 10px;
+$button-padding-small			: 8px;
+$button-padding-smaller			: 5px;
+
+
+$radius-round					: 50%;
+$radius-big						: 10px;
+$radius-medium					: 5px;
+$radius-small					: 3px;
+$radius-smaller					: 2px;
+
+**/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/*startupprofile*/
+/**blue**/
+/**red**/
+/**
+$bgColor-activeState			: $custom-color-4;
+
+$bgColor-body					: $light-gray;
+$bgColor-header					: rgba(255,255,255,0.9);
+$bgColor-section				: rgba(255,255,255,1);
+$bgColor-mark					: #71c5e8;
+$bgColor-link					: #f5f5f1;
+$bgColor-badge					: $tertiary-color;
+$bgColor-field					: #fafafa;
+$bgColor-tHead					: #e3e4e9;
+$bgColor-tCell					: $light-gray;
+
+
+$bgColor-btn-primary			: $light-gray;
+$bgColor-btn-primary-hover		: #e2e2e2;
+$bgColor-btn-primary-active		: $light-gray;
+$bgColor-btn-callout			: $secondary-color;
+$bgColor-btn-callout-hover		: $tertiary-color;
+$bgColor-btn-disabled			: #eef4f7;
+$bgColor-btn-icon				: $secondary-color;
+$bgColor-btn-icon-hover			: $tertiary-color;
+$bgColor-btn-link-bar			: $light-gray;
+$bgColor-btn-link-bar-hover		: #e7e7e7;
+$bgColor-btn-link-bar-active	: $light-gray;
+$bgColor-btn-social-icon		: $secondary-color;
+$bgColor-btn-social-icon-hover	: $tertiary-color;
+$bgColor-btn-group-item			: $light-gray;
+$bgColor-btn-group-item-hover	: $white;
+$bgColor-btn-group-item-active	: $light-gray;
+$bgColor-btn-dropdown			: $light-gray;
+$bgColor-btn-dropdown-hover		: $white;
+$bgColor-btn-dropdown-active	: $light-gray;
+$bgColor-btn-text-icon			: $light-gray;
+$bgColor-btn-text-icon-hover	: $white;
+$bgColor-btn-text-icon-active	: $light-gray;
+
+
+$color-feature					: #67747c;
+$color-caption					: #67747c;
+$color-small					: $bodyColor;
+$color-mark						: $bodyColor;
+$color-blockquote				: #757575;
+$color-cite						: #757575;
+$color-link						: $secondary-color;
+$color-link-hover				: $tertiary-color;
+$color-link-disabled			: #cbd9e4;
+$color-tooltip					: #999999;
+$color-badge					: #FFFFFF;
+$color-dropdown					: $bodyColor;
+$color-border					: #bfbfbf;
+$color-tagline					: #a5a5a5;
+
+
+$color-btn-callout				: $white;
+$color-btn-disabled				: #d8e2e8;
+$color-btn-icon					: $white;
+$color-btn-link-bar				: $bodyColor;
+$color-btn-social-icon			: $white;
+$color-btn-group-item			: $bodyColor;
+$color-btn-dropdown				: $bodyColor;
+$color-btn-text-icon			: $bodyColor;
+
+$color-facebook					: #4c66a4;
+$color-googleplus				: #dd4b39;
+$color-pinterest				: #cb2027;
+$color-twitter					: #2fc2ef;
+$color-youtube					: #de332b;
+$color-tumbler					: #35465c;
+
+
+
+$notice    						: #f9d17c;
+$notice-hl 						: #fcbd36;
+$error							: #b94a48;
+$success   						: #468847;
+$warning     					: #c09853;
+$info							: #3a87ad;
+
+
+$max-width						: 1280px;
+$max-height						: 100%;
+
+
+$section-padding				: 5%;
+$button-padding-big				: 15px;
+$button-padding-medium			: 10px;
+$button-padding-small			: 8px;
+$button-padding-smaller			: 5px;
+
+
+$radius-round					: 50%;
+$radius-big						: 10px;
+$radius-medium					: 5px;
+$radius-small					: 3px;
+$radius-smaller					: 2px;
+
+**/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/*startupprofile*/
+/** Button css **/
+/* FONT MIXINS */
+/*********************
+
+RESPONSIVE BREAKPOINT
+**********************/
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .aui .detailPage_wrap {
+    padding: 0;
+    position: absolute;
+    padding-bottom: 0;
+    background: #fff;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  .aui .detailPage_personas {
+    position: relative;
+    min-height: 600px;
+    height: 820px;
+    overflow: hidden;
+    background: url(../images/careergenie/bg_slash_pillars.png) #8c5219;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center; }
+
+  .aui .careerGenie_bg_wrap {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    padding: 40px; }
+
+  .aui .careerGenie_bg_wrap .careerGenie_bg {
+    position: fixed;
+    background-attachment: fixed; }
+
+  .aui .careerGenie_wrap {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    z-index: 2;
+    padding: 20px 0;
+    color: #fff; }
+
+  .aui .careerGenie_wrap .careerGenie_head {
+    padding: 0 10px; }
+
+  .aui .careerGenie_wrap .careerGenie_head .h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    color: #7d3680;
+    font-weight: 600; }
+
+  .aui .careerGenie_Subtext {
+    padding: 5px 10px; }
+
+  .aui .careerGenie_description {
+    padding: 5px 10px; }
+
+  .aui .careerGenie_description ul li {
+    padding: 0px 22px;
+    text-indent: -17px; }
+
+  .aui .careerGenie_nav ul li {
+    text-align: left;
+    display: block;
+    font-size: 0;
+    padding: 20px 10px;
+    cursor: pointer; }
+
+  .aui .careerGenie_nav_icon {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 30%;
+    overflow: hidden;
+    padding: 4px 4px;
+    max-width: 200px; }
+
+  .aui .careerGenie_nav_icon img {
+    width: 100%;
+    height: auto; }
+
+  .aui .careerGenie_nav_details {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 70%;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  .aui .careerGenie_nav_title {
+    text-transform: none;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 16px;
+    color: #7d3680;
+    padding: 0 10px;
+    font-weight: bold;
+    letter-spacing: 0;
+    border-right: 0;
+    text-align: left;
+    padding: 0 25px;
+    line-height: 20px; }
+
+  .aui .border-rightg {
+    display: none; }
+
+  .aui .careerGenie_nav_description {
+    padding: 10px 0 0px 25px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+    letter-spacing: 0; }
+
+  .aui .mobileTab {
+    background: #ffffff; }
+
+  .aui .APEventFAQ_answers {
+    padding: 20px 40px 0; }
+
+  .aui .APEventFAQ_questions {
+    padding: 20px 20px 0; }
+
+  .aui .APEventFAQ_answers ul {
+    padding-left: 0; }
+
+  .aui .pageLeftContent {
+    width: 100%; }
+
+  .aui .pageLeftContent .headWrap_details {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 100%;
+    overflow: hidden;
+    padding: 4px 4px 14px;
+    float: left; }
+
+  .aui .pageLeftContent .content_Description {
+    font-size: 14px;
+    text-align: justify;
+    color: #333;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 22px; }
+
+  .aui .pageLeftContent figure {
+    border: none;
+    height: 207px;
+    margin: 0 auto;
+    float: none;
+    display: block;
+    border-bottom: 1px solid #9d7690;
+    background: transparent;
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 0;
+    position: 'absolute';
+    top: 165px;
+    left: 82px;
+    width: 197px; }
+
+  .aui .pageLeftContent figure img {
+    width: 100%;
+    margin-top: 15px; }
+
+  .aui .pageRightContent {
+    display: none; }
+
+  .aui .careergenie_head {
+    padding: 0 10px; }
+
+  .aui .careergenie_head h1 {
+    font-size: 24px;
+    color: #002f76;
+    text-align: center; } }
+.mobileTab {
+  display: block;
+  width: 100%; }
+
+.mobileTabItem {
+  display: block;
+  width: 100%; }
+
+.mobileTabItem a.mobileTabA {
+  padding: 10px 20px;
+  text-decoration: none;
+  text-align: left;
+  font-size: 14pt;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: block;
+  color: #000;
+  background: #fff; }
+
+.mobileTabItem a.mobileTabA img {
+  display: inline-block;
+  max-width: 30px;
+  vertical-align: middle;
+  padding: 9px; }
+
+.mobileTabItem a.mobileTabA span::after {
+  content: "+";
+  padding: 25px 0;
+  position: absolute;
+  right: 6%;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0;
+  height: inherit;
+  font-size: 20pt; }
+
+.mobileTabItem a.MobileTabSection_Active span::after {
+  content: "-"; }
+
+.mobileTabContentWrap {
+  height: auto; }
+
+.showTabContent {
+  display: block; }
+
+.mobileTabContent {
+  background: #fff;
+  padding: 20px;
+  display: none; }
+
+#map-canvas, #map-canvas2, #map-canvas3 {
+  height: 200px; }
+
+.mobileTab .Content_Section_Details .SubContent .profile ul li {
+  text-align: center; }
+
+.mobileTab .profile_img {
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10px; }
+
+.mobileTab .profile_desc {
+  width: 100%;
+  padding: 20px; }
+
+.mobileTab .Content_Section_Details .SubContent ul, .mobileTab .Content_Section_Details .SubContent ol {
+  margin-left: 0; }
+
+/*# sourceMappingURL=Careergenie_mobtab.css.map */
+

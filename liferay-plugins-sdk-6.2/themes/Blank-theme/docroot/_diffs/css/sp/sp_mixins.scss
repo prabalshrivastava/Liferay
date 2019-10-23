@@ -1,0 +1,167 @@
+@import "sp_custom_variables";
+
+
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+
+@mixin animate-cubic($time){
+ 	@include vendor-prefix(transition, all cubic-bezier(.06,.76,.25,.96) #{$time});
+}
+
+/** Button css **/
+
+@mixin primary{
+	  padding: 10px 15px;
+	  background: $btn-primary-bg-color;
+	  border: 1px solid $btn-primary-border-color;
+	  color: $btn-primary-color;
+	  text-decoration: none;
+	  -webkit-border-radius: 3px;
+	  -ms-border-radius: 3px;
+	  -moz-border-radius: 3px;
+	  -o-border-radius: 3px;
+	  border-radius: 3px;
+	  -webkit-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+	  -ms-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+	  -moz-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+	  -o-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+	  transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+	  text-align: center;
+	  font-size: 12pt;
+	  font: $fontFamily;
+	  text-shadow: none;
+	  vertical-align: middle; 
+}
+
+@mixin primary-hover{
+	background: $btn-primary-hover-bg-color;
+    color: $btn-primary-hover-color;
+    border: 1px solid $btn-primary-hover-border-color; 
+}
+
+@mixin primary-active{
+	background: $btn-primary-bg-color;
+    color: $btn-primary-color;
+    border: 1px solid $btn-primary-border-color; 
+}
+
+//@include fontcolor-size(green, 12px);
+@mixin fontcolor-size ($color, $size) {
+    color: $color;
+    font-size: $size;
+}
+
+//@include fontcolor-size(green, 12px);
+@mixin fontsize-weight ( $size, $weight) {
+    font-size: $size, ;
+    font-weight: $weight;
+}
+
+//@include fontcolor-size-weight(green, 12px, 600);
+@mixin fontcolor-size-weight ($color-1, $size-1, $weight-1) {
+    color: $color-1;
+    font-size: $size-1;
+    font-weight: $weight-1;
+}
+
+//Linear Gradient
+//Linear Gradient
+@mixin linearGradient($top, $bottom) {
+    background: $top;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, $top 0%, $bottom 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, $top 0%, $bottom 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, $top 0%, $bottom 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, $top 0%, $bottom 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, $top 0%, $bottom 100%);
+    /* W3C */
+    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0);
+    /* IE6-9 */
+}
+
+@mixin linearGradientLeft($right, $left) {
+    background: $right;
+    /* Old browsers */
+    background: -moz-linear-gradient(right, $right 0%, $left 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left right, left left, color-stop(0%, $right), color-stop(100%, $left));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(right, $right 0%, $left 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(right, $right 0%, $left 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(right, $right 0%, $left 100%);
+    /* IE10+ */
+    background: linear-gradient(to left, $right 0%, $left 100%);
+    /* W3C */
+    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0);
+    /* IE6-9 */
+}
+
+//@include radial-gradient(#555A5F, #000);
+@mixin radial-gradient($from, $to) {
+    background: -moz-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $from), color-stop(100%, $to));
+    background: -webkit-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: -o-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: -ms-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background-color: $from;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//borders
+@mixin border( $coordinates: 0 0 0 0, $colour: #000000, $style: solid) {
+    $top: nth($coordinates, 1);
+    $right: nth($coordinates, 2);
+    $bottom: nth($coordinates, 3);
+    $left: nth($coordinates, 4);
+    @if not(unitless($top)) {
+        border-top: $top $style $colour;
+    }
+    @if not(unitless($right)) {
+        border-right: $right $style $colour;
+    }
+    @if not(unitless($bottom)) {
+        border-bottom: $bottom $style $colour;
+    }
+    @if not(unitless($left)) {
+        border-left: $left $style $colour;
+    }
+}
+
+//@include box-sizing(border-box);
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model; // Safari <= 5
+    -moz-box-sizing: $box-model; // Firefox <= 19
+    box-sizing: $box-model;
+}
+//Button
+@mixin button-bg($bg) {
+    background: $bg;
+    &:hover {
+        background: darken($bg, 8%);
+        transition: all 0.3s ease;
+    }
+    &:active {
+        background: darken($bg, 25%);
+    }
+}

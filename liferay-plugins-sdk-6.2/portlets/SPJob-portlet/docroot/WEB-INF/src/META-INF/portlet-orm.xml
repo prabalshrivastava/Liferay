@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.spjob.model.impl.SPJobModelImpl">
+		<attributes>
+			<id name="spJobId">
+				<column name="JOBID" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="createdBy" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="updatedBy" />
+			<basic name="yearsOfExperience">
+				<column name="EXPERIENCE" />
+			</basic>
+			<basic name="corporateName" />
+			<basic name="corporateId" />
+			<basic name="jobTitle" />
+			<basic name="jobType" />
+			<basic name="jobLocation" />
+			<basic name="jobDescription" />
+			<basic name="status" />
+			<basic name="autoMatch" />
+			<basic name="currency" />
+			<basic name="salary" />
+			<basic name="rate" />
+			<basic name="startDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="endDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="closingDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="extra1" />
+			<basic name="extra2" />
+			<basic name="extra3" />
+			<basic name="extra4" />
+			<basic name="extra5" />
+			<basic name="notefto" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spjob.model.impl.SPJobApplicantsModelImpl">
+		<attributes>
+			<id name="spJobApplicantsId" />
+			<basic name="jobId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="createdBy" />
+			<basic name="updatedBy" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="firstName" />
+			<basic name="lastName" />
+			<basic name="emailAddress" />
+			<basic name="contactNumber" />
+			<basic name="yearsOfExperience">
+				<column name="EXPERIENCE" />
+			</basic>
+			<basic name="resume" />
+			<basic name="coverLetter" />
+			<basic name="briefInfos" />
+			<basic name="extra1" />
+			<basic name="extra2" />
+			<basic name="extra3" />
+			<basic name="extra4" />
+			<basic name="extra5" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spjob.model.impl.SPJobApplicantsPortfolioModelImpl">
+		<id-class class="com.sambaash.platform.srv.spjob.service.persistence.SPJobApplicantsPortfolioPK" />
+		<attributes>
+			<id name="jobApplyId" />
+			<id name="porfolioId" />
+			<basic name="userId" />
+			<basic name="createdBy" />
+			<basic name="updatedBy" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="extra1" />
+			<basic name="extra2" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.spjob.model.impl.SPJobImpl" name="SPJob">
+		<table name="SPJob" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spjob.model.impl.SPJobApplicantsImpl" name="SPJobApplicants">
+		<table name="SPJobApplicants" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spjob.model.impl.SPJobApplicantsPortfolioImpl" name="SPJobApplicantsPortfolio">
+		<table name="SPJobApplicantsCustomizedPortfolio" />
+		<attributes />
+	</entity>
+</entity-mappings>

@@ -1,0 +1,82 @@
+.form .form-row-one .control-group{
+	display:inline-block;
+	width: 100%;
+	vertical-align: top;
+}
+
+.form .form-row-two .control-group{
+	display:inline-block;
+	width: 49.6%;
+	vertical-align: top;
+}
+
+.form .form-row-three .control-group{
+	display:inline-block;
+	width: 33%;
+	vertical-align: top;	
+}
+
+.form .pkg-item-container-wrap {
+	border: 1px solid #bfbfbf;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+/* MENU STYLING */
+
+.aui .left-main-menu {
+	list-style: none;
+	font-size: 14px
+}
+
+.aui .left-main-menu li.header {
+	color: #666;
+	border: 1px solid #bbb;
+	background: #AFAFAF;
+	padding: 6px;
+}
+
+.aui .left-main-menu li.selected {
+	background: #DCDCDC;
+}
+.aui .left-main-menu li {
+	border: 1px solid #bbb;
+	border-top: 0;
+	margin: 0;
+	background: #F0F0F0;
+}
+.aui .left-main-menu li a {
+	text-decoration: none;
+	color: #666;
+	display: inline-block;
+	padding: 17px;
+}
+.aui .left-main-menu li .link {
+	width: 75%;
+}
+.aui .left-main-menu li:hover {
+	background: #DCDCDC;
+	text-decoration: none;
+}
+.aui .left-main-menu li ul {
+	list-style: none;
+	background: #F0F0F0;
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*sub menus*/
+.aui .left-main-menu li ul li {
+	margin: 0;
+	border: 0;
+	border-bottom: 1px solid #bbb;
+}
+
+.aui .left-main-menu li ul li a {
+	padding: 5px 10px;
+	display: block;
+	padding-left: 33px;
+	background: #d3d3d3;
+}

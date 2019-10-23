@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 6.2.0//EN" "http://www.liferay.com/dtd/liferay-hook_6_2_0.dtd">
+
+<hook>
+	<portal-properties>portal.properties</portal-properties>
+    <language-properties>content/Language.properties</language-properties>
+    <language-properties>content/Language_en.properties</language-properties>
+	<custom-jsp-dir>/custom_jsps</custom-jsp-dir>
+	<servlet-filter>
+         <servlet-filter-name>UserActivityFilter</servlet-filter-name>
+         <servlet-filter-impl>com.sambaash.platform.filter.UserActivityFilter</servlet-filter-impl>
+     </servlet-filter>
+     <servlet-filter-mapping>
+         <servlet-filter-name>UserActivityFilter</servlet-filter-name>
+         <url-pattern>/*</url-pattern>
+         <dispatcher>REQUEST</dispatcher>
+         <dispatcher>FORWARD</dispatcher>
+     </servlet-filter-mapping>
+    <struts-action>
+        <struts-action-path>/roles_admin/edit_role</struts-action-path>
+        <struts-action-impl>com.sambaash.platform.action.hook.EditRoleAction</struts-action-impl>
+    </struts-action>
+</hook>

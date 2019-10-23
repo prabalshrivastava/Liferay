@@ -1,0 +1,161 @@
+.aui input[type=checkbox]:checked {
+  opacity: 1 !important; }
+
+.aui body label input[type=checkbox] {
+  display: inline-block !important; }
+
+.Table-Layout {
+  display: table;
+  width: 100%;
+  text-align: left;
+  border: 1.5px solid #d9dce3; }
+
+.Table-Layout .Heading {
+  display: table-row;
+  padding: 10px 0;
+  height: auto; }
+
+.Table-Layout .Heading .Cell {
+  display: table-cell;
+  padding: 15px; }
+
+.Table-Layout .Heading .Cell p {
+  margin: 0;
+  padding: 0;
+  color: #060606 !important;
+  font-size: 11px !important;
+  line-height: 15px !important; }
+
+.Table-Layout .Heading .Cell:last-child {
+  width: 5% !important;
+  text-align: center; }
+
+.Table-Layout .Row {
+  display: table-row; }
+
+.Table-Layout .Row .Cell {
+  display: table-cell;
+  padding: 15px;
+  position: relative;
+  vertical-align: top; }
+
+.Table-Layout .Row .Cell p {
+  margin: 0;
+  padding: 0; }
+
+.Table-Layout .Row .Cell:last-child {
+  width: 5% !important;
+  text-align: center; }
+
+.btn-state {
+  border-radius: 3px;
+  font-weight: 600;
+  color: #ffffff !important;
+  text-transform: uppercase; }
+
+.btn-update {
+  background-color: #4c4c84 !important; }
+
+.btn-delete {
+  background-color: #d44848 !important; }
+
+.btn-create {
+  background-color: #058e2f !important;
+  width: 100% !important; }
+
+.enrollmentTitle {
+  background-color: #f5f8fb; }
+
+.enrolledCandidates {
+  font-size: 10px;
+  text-align: right; }
+
+.pendingCandidatesAssignment {
+  font-size: 10px; }
+
+.candidateCount {
+  color: #1181d5;
+  font-weight: 600; }
+
+.aui .newPortlets .pagination {
+  background-color: #f1f4fc;
+  padding: 14px 20px 5px 10px;
+  width: 100%;
+  margin: 0; }
+
+.aui .newPortlets .pagination .pagination.pagination-large {
+  padding: 0;
+  margin: 0; }
+
+.aui .newPortlets .pagination ul {
+  box-shadow: none; }
+
+.aui .newPortlets .pagination ul li {
+  display: inline-block; }
+
+.aui .newPortlets .pagination ul li a {
+  color: #59647b;
+  padding: 4px 10px;
+  background: none;
+  border: 0;
+  font: 400 14px "Work Sans", sans-serif; }
+
+.aui .newPortlets .pagination ul li a.active {
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  background-color: #0f349f;
+  color: #fff; }
+
+.aui .newPortlets .pagination ul li .first, .aui .newPortlets .pagination ul li .last {
+  background: url(../images/first.png) no-repeat;
+  width: 12px;
+  height: 12px;
+  height: 20px;
+  background-position: 4px 4px; }
+
+.aui .newPortlets .pagination ul li .last {
+  background: url(../images/last.png) no-repeat;
+  background-position: 0 3px; }
+
+.aui .newPortlets .pagination ul li .prev, .aui .newPortlets .pagination ul li .next {
+  background: url(../images/prev.png) no-repeat;
+  width: 8px;
+  height: 12px;
+  height: 17px;
+  background-position: 0 1px;
+  padding-right: 0; }
+
+.aui .newPortlets .pagination ul li .next {
+  background: url(../images/next.png) no-repeat;
+  background-position: 0 0; }
+
+.aui .newPortlets .pagination .control-label {
+  float: left;
+  display: block;
+  margin-right: 20px;
+  margin-bottom: 0; }
+
+.aui .newPortlets .pagination select {
+  float: left;
+  width: 10%;
+  border: 0;
+  background: none;
+  height: 18px;
+  padding: 0;
+  margin-right: 20px;
+  color: #3d70b2; }
+
+.aui .newPortlets .pagination .control-group {
+  margin-bottom: 0;
+  margin-right: 20px; }
+
+.aui .newPortlets .pagination span {
+  border-left: 1.5px solid #59647b;
+  padding-left: 10px;
+  top: 5px;
+  position: relative; }
+
+.aui .pagination ul > li > a {
+  line-height: 11px !important; }
+

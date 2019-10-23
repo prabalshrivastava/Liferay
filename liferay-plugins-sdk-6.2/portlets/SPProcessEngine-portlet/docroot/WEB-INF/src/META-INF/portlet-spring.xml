@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.processbuilder.service.FormBuilderLocalService" class="com.sambaash.platform.srv.processbuilder.service.impl.FormBuilderLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.FormBuilderService" class="com.sambaash.platform.srv.processbuilder.service.impl.FormBuilderServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.PECustomActionInfoLocalService" class="com.sambaash.platform.srv.processbuilder.service.impl.PECustomActionInfoLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.persistence.PECustomActionInfoPersistence" class="com.sambaash.platform.srv.processbuilder.service.persistence.PECustomActionInfoPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.PEDummyEntityLocalService" class="com.sambaash.platform.srv.processbuilder.service.impl.PEDummyEntityLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.persistence.PEDummyEntityPersistence" class="com.sambaash.platform.srv.processbuilder.service.persistence.PEDummyEntityPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.PEEngineLocalService" class="com.sambaash.platform.srv.processbuilder.service.impl.PEEngineLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.PEEngineService" class="com.sambaash.platform.srv.processbuilder.service.impl.PEEngineServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.PEProcessLocalService" class="com.sambaash.platform.srv.processbuilder.service.impl.PEProcessLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessPersistence" class="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.PEProcessAuditLocalService" class="com.sambaash.platform.srv.processbuilder.service.impl.PEProcessAuditLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessAuditPersistence" class="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessAuditPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.PEProcessStageLocalService" class="com.sambaash.platform.srv.processbuilder.service.impl.PEProcessStageLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessStagePersistence" class="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessStagePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.PEProcessStateLocalService" class="com.sambaash.platform.srv.processbuilder.service.impl.PEProcessStateLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessStatePersistence" class="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessStatePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessStateFinder" class="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessStateFinderImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.PEProcessStatusTypeLocalService" class="com.sambaash.platform.srv.processbuilder.service.impl.PEProcessStatusTypeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessStatusTypePersistence" class="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessStatusTypePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.PERuleLocalService" class="com.sambaash.platform.srv.processbuilder.service.impl.PERuleLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.persistence.PERulePersistence" class="com.sambaash.platform.srv.processbuilder.service.persistence.PERulePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.PERuleSetLocalService" class="com.sambaash.platform.srv.processbuilder.service.impl.PERuleSetLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.persistence.PERuleSetPersistence" class="com.sambaash.platform.srv.processbuilder.service.persistence.PERuleSetPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.PESupervisorLocalService" class="com.sambaash.platform.srv.processbuilder.service.impl.PESupervisorLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.processbuilder.service.persistence.PESupervisorPersistence" class="com.sambaash.platform.srv.processbuilder.service.persistence.PESupervisorPersistenceImpl" parent="basePersistence" />
+</beans>

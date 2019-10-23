@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.startupprofile.service.AddressLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.AddressLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.AddressPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.AddressPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.FundingRoundLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.FundingRoundLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.FundingRoundPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.FundingRoundPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.OrganizationLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.OrganizationLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.OrganizationPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.OrganizationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.PersonLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.PersonLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.PersonPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.PersonPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.QuestionnaireLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.QuestionnaireLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.QuestionnairePersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.QuestionnairePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.RelationshipLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.RelationshipLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.RelationshipPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.RelationshipPersistenceImpl" parent="basePersistence" />
+</beans>

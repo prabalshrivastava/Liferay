@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.spjob.service.SPJobLocalService" class="com.sambaash.platform.srv.spjob.service.impl.SPJobLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spjob.service.persistence.SPJobPersistence" class="com.sambaash.platform.srv.spjob.service.persistence.SPJobPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spjob.service.SPJobApplicantsLocalService" class="com.sambaash.platform.srv.spjob.service.impl.SPJobApplicantsLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spjob.service.persistence.SPJobApplicantsPersistence" class="com.sambaash.platform.srv.spjob.service.persistence.SPJobApplicantsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spjob.service.SPJobApplicantsPortfolioLocalService" class="com.sambaash.platform.srv.spjob.service.impl.SPJobApplicantsPortfolioLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spjob.service.persistence.SPJobApplicantsPortfolioPersistence" class="com.sambaash.platform.srv.spjob.service.persistence.SPJobApplicantsPortfolioPersistenceImpl" parent="basePersistence" />
+</beans>

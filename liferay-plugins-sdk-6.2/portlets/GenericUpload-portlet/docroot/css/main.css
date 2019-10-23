@@ -1,0 +1,188 @@
+/* ***************** Enrolment Common Css **************** */
+/* ******************************************************* */
+.enrolment-body {
+max-width: 1280px;
+min-height: 730px; box-shadow : 0 0 30px 0 #e1e6eb;
+background-color: #f7f9fc;
+box-shadow: 0 0 30px 0 #e1e6eb;
+}
+
+.enrolment-center-align {
+margin: 0 auto;
+}
+
+.header-home-link{
+	padding-right:10px;
+	cursor: pointer;
+}
+
+.header-title{
+	transform: translate(9%);
+}
+
+.pt-100 {
+padding-top: 100px;
+}
+.mt-50 {
+margin-top: 50px;
+}
+.mt-100 {
+margin-top: 100px;
+}
+.text-blue {
+color: #265ba1 !important;
+}
+.aui .formContainer .formio-choices .form-control {
+height: auto;
+border: 1px solid #b1bed7;
+padding: 13px 15px;
+border-radius: 3px;
+box-shadow: none;
+background: #fff;
+}
+.aui .btn {
+padding: 10px 20px !important;
+color: #0d3ba9;
+}
+.aui .newPortlets .formio-form {
+background-color: unset !important;
+box-shadow: unset !important;
+} 
+.aui .container {
+width: auto !important;
+}
+#standardFeeToggler, #miscellaneousFeesToggler {
+background: #fff;
+margin-bottom: 26px;
+border: 1px solid #dcdcdc;
+box-shadow: 0 0 30px 0 #e1e6eb;
+}
+.fee-toggler-header {
+padding: 12px !important;
+border-bottom: 2px solid #e3e7e9;
+border-left: 4px solid #0d3ba9;
+font-weight: 500 !important;
+color: #0d3ba9 !important;
+}
+#fees, #misc-fees {
+box-shadow: unset !important;
+}
+
+/* .aui .newPortlets .formContainer .formio-choices .form-control {
+padding: 0px !important;
+}*/
+.choices__input choices__input--cloned{
+background:#fff !important;
+} 
+/************************ Process Enrollment Landing page *****************/
+.enrolment-ready-enroll-text {
+font-size: 32px;
+font-weight: 300;
+margin: 20px;
+}
+.enrolment-panel {
+background: #fff;
+text-align: center;
+padding: 20px;
+line-height: 48px;
+width: 156px;
+height: 120px;
+border-radius: 6px;
+box-shadow: 0 0 30px 1px #e6eaef;
+display: inline-block;
+margin: 10px;
+border: 1px solid transparent;
+}
+/*****************SPONSORS*************/
+.tabs {
+display: inline-block;
+border-radius: 13px;
+background: #fff;
+border-bottom: 2px solid #e3e7e9;
+}
+.tab {
+display: inline-block;
+color: #10349f !important;
+padding: 7px 15px;
+min-width: 200px;
+border-right: 2px solid #f8fafc;
+}
+.tab-selected {
+background: #10349f;
+color: #fff !important;
+border-radius: 4px;
+}
+.card {
+border-radius: 5px;
+box-shadow: 0 0 15px 0 #e1e6eb, 0 0 29px 0 #e6eaef;
+border: solid 1px rgba(177, 190, 215, 0.1);
+background-color: #ffffff;
+margin: 20px 0px;
+}
+.card-header {
+background: white !important;
+padding: 15px 15px;
+color: #10349f;
+border-left: 4px solid #10349f;
+}
+.card-body.panel-body {
+padding: 40px;
+background-image: linear-gradient(to top, #ffffff, #f7f8fa);
+}
+/* SPChat Css Overriding issue */
+.panel-title {
+background: unset;
+color: unset;
+font-weight: unset;
+height: unset;
+line-height: unset;
+padding-right: unset;
+text-indent: unset;
+font-weight: 500 !important;
+}
+/************************Upload Contacts********************/
+/***********************************************************/
+.uc-box{
+width:720px;
+min-height:150px;
+}
+.uc-box-bottom{
+background: #fff;
+    margin: -27px 27px 27px 27px;
+    padding-bottom: 50px;
+    
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    width: 220px;
+  	height: 50px;
+	background-color: #0f9f1c !important;
+	border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-file input[type=file] {
+	
+    position: absolute;
+    top: 0;
+    right: 0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    color: white;
+    cursor: inherit;
+    display: block;
+    cursor: pointer;
+}
+.view-header{
+	transform: translate(-2%) !important;
+}
+
+	
+

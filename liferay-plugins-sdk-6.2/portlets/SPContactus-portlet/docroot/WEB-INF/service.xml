@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.contactus">
+	<author>gauravvijayvergia</author>
+	<namespace>SPContactUs</namespace>
+
+	<entity name="SPContactUs" table="SPContactUs" local-service="true"
+		remote-service="false">
+		<column name="spContactUsId" db-name="spContactUsId" type="long"
+			primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Other fields -->			
+			
+		<column name="name" db-name="name" type="String" />
+		<column name="lastName" db-name="lastName" type="String" />
+		<column name="emailAddress" db-name="emailAddress" type="String" />
+		<column name="category" db-name="category" type="String" />
+		<column name="comment" db-name="comment" type="String" />
+		<column name="countryName" db-name="countryName" type="String" />
+		<column name="contactNumber" db-name="contactNumber" type="long" />
+		<column name="company" db-name="company" type="String" />
+		<column name="jobTitle" db-name="jobTitle" type="String" />
+		<column name="companyUrl" db-name="companyUrl" type="String" />
+		<column name="noOfEmployee" db-name="noOfEmployee" type="long" />
+		<column name="rate" db-name="rate" type="String" />
+		<column name="typeOfEnquiry" db-name="typeOfEnquiry" type="String" />
+		<column name="location" db-name="location" type="String" />
+	</entity>
+	
+</service-builder>

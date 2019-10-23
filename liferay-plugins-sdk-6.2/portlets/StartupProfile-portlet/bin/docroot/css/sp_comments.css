@@ -1,0 +1,89 @@
+.commentsDiv {
+  margin: 30px;
+  font-size: 11pt; }
+
+.commentBox {
+  display: inline-block;
+  min-height: 30px;
+  width: 83%; }
+
+.commentTemplate {
+  position: relative;
+  padding-left: 40px;
+  padding-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.commentDeleteIconDiv {
+  position: absolute;
+  top: 0px;
+  right: 0px; }
+
+.commentTemplate .userImgDiv {
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+.commentTemplate .userImg {
+  width: 32px;
+  height: 32px;
+  vertical-align: sub;
+  border-radius: 25px; }
+
+.writeCommentMainDiv {
+  position: relative; }
+
+.replyCommentMainDiv {
+  position: relative; }
+
+.replyCommentSubDiv {
+  padding: 15px 30px 70px;
+  position: relative;
+  bottom: 25px;
+  left: 40px;
+  word-break: break-all; }
+
+.writeCommentsubDiv {
+  left: 50px;
+  position: relative;
+  top: -30px;
+  word-break: break-all;
+  width: 90%; }
+
+.selfImgCB {
+  width: 32px;
+  height: 32px;
+  border-radius: 25px;
+  position: relative;
+  top: 15px; }
+
+.noCommentMsg {
+  margin-bottom: 20px; }
+  .noCommentMsg .vr {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 20px; }
+
+.replyCommentButton {
+  float: right; }
+
+.commentActionsDiv ul {
+  display: inline-flex; }
+  .commentActionsDiv ul li {
+    margin-right: 10px; }
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .writeCommentsubDiv {
+    left: 20px;
+    margin-left: 20px; }
+
+  .replyCommentButton {
+    float: left; }
+
+  .commentsDiv {
+    width: 100%;
+    height: auto;
+    overflow: visible; } }
+
+/*# sourceMappingURL=sp_comments.css.map */

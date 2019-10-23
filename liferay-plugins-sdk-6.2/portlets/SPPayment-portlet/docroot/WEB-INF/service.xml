@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.sppayment">
+	<author>pradeep</author>
+	<namespace>SPPayment</namespace>
+
+	<entity name="SPPurchase" table="SPPurchase"
+		local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="spPurchaseId" type="long" primary="true"></column>
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+		
+		<column name="cartId" type="long"></column>
+		<column name="extPaymentId" type="String"></column>
+		<column name="extStatus" type="String"></column>
+		<column name="extErrorCode" type="long"></column>
+		<column name="extErrorMsg" type="String"></column>
+		
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+	</entity>
+	
+	<entity name="SPPayment" local-service="true" remote-service="false">
+	</entity>
+</service-builder>

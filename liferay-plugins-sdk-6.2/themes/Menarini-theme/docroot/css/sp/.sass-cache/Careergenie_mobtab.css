@@ -1,0 +1,525 @@
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** SP Mixins **/
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .aui .detailPage_wrap {
+    padding: 0;
+    position: absolute;
+    padding-bottom: 0;
+    background: #fff;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  .aui .detailPage_personas {
+    position: relative;
+    min-height: 600px;
+    height: 820px;
+    overflow: hidden;
+    background: url(../images/careergenie/bg_slash_pillars.png) #8c5219;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center; }
+
+  .aui .careerGenie_bg_wrap {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    padding: 40px; }
+
+  .aui .careerGenie_bg_wrap .careerGenie_bg {
+    position: fixed;
+    background-attachment: fixed; }
+
+  .aui .careerGenie_wrap {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    z-index: 2;
+    padding: 20px 0;
+    color: #fff; }
+
+  .aui .careerGenie_wrap .careerGenie_head {
+    padding: 0 10px; }
+
+  .aui .careerGenie_wrap .careerGenie_head .h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    color: #7d3680;
+    font-weight: 600; }
+
+  .aui .careerGenie_Subtext {
+    padding: 5px 10px; }
+
+  .aui .careerGenie_description {
+    padding: 5px 10px; }
+
+  .aui .careerGenie_description ul li {
+    padding: 0px 22px;
+    text-indent: -17px; }
+
+  .aui .careerGenie_nav ul li {
+    text-align: left;
+    display: block;
+    font-size: 0;
+    padding: 20px 10px;
+    cursor: pointer; }
+
+  .aui .careerGenie_nav_icon {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 30%;
+    overflow: hidden;
+    padding: 4px 4px;
+    max-width: 200px; }
+
+  .aui .careerGenie_nav_icon img {
+    width: 100%;
+    height: auto; }
+
+  .aui .careerGenie_nav_details {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 70%;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  .aui .careerGenie_nav_title {
+    text-transform: none;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 16px;
+    color: #7d3680;
+    padding: 0 10px;
+    font-weight: bold;
+    letter-spacing: 0;
+    border-right: 0;
+    text-align: left;
+    padding: 0 25px;
+    line-height: 20px; }
+
+  .aui .border-rightg {
+    display: none; }
+
+  .aui .careerGenie_nav_description {
+    padding: 10px 0 0px 25px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+    letter-spacing: 0; }
+
+  .aui .mobileTab {
+    background: #ffffff; }
+
+  .aui .APEventFAQ_answers {
+    padding: 20px 40px 0; }
+
+  .aui .APEventFAQ_questions {
+    padding: 20px 20px 0; }
+
+  .aui .APEventFAQ_answers ul {
+    padding-left: 0; }
+
+  .aui .pageLeftContent {
+    width: 100%; }
+
+  .aui .pageLeftContent .headWrap_details {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 100%;
+    overflow: hidden;
+    padding: 4px 4px 14px;
+    float: left; }
+
+  .aui .pageLeftContent .content_Description {
+    font-size: 14px;
+    text-align: justify;
+    color: #333;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 22px; }
+
+  .aui .pageLeftContent figure {
+    border: none;
+    height: 207px;
+    margin: 0 auto;
+    float: none;
+    display: block;
+    border-bottom: 1px solid #9d7690;
+    background: transparent;
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 0;
+    position: 'absolute';
+    top: 165px;
+    left: 82px;
+    width: 197px; }
+
+  .aui .pageLeftContent figure img {
+    width: 100%;
+    margin-top: 15px; }
+
+  .aui .pageRightContent {
+    display: none; }
+
+  .aui .careergenie_head {
+    padding: 0 10px; }
+
+  .aui .careergenie_head h1 {
+    font-size: 24px;
+    color: #000000;
+    text-align: center; } }
+.mobileTab {
+  display: block;
+  width: 100%; }
+
+.mobileTabItem {
+  display: block;
+  width: 100%; }
+
+.mobileTabItem a.mobileTabA {
+  padding: 10px 20px;
+  text-decoration: none;
+  text-align: left;
+  font-size: 14pt;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: block;
+  color: #000;
+  background: #fff; }
+
+.mobileTabItem a.mobileTabA img {
+  display: inline-block;
+  max-width: 30px;
+  vertical-align: middle;
+  padding: 9px; }
+
+.mobileTabItem a.mobileTabA span::after {
+  content: "+";
+  padding: 25px 0;
+  position: absolute;
+  right: 6%;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0;
+  height: inherit;
+  font-size: 20pt; }
+
+.mobileTabItem a.MobileTabSection_Active span::after {
+  content: "-"; }
+
+.mobileTabContentWrap {
+  height: auto; }
+
+.showTabContent {
+  display: block; }
+
+.mobileTabContent {
+  background: #fff;
+  padding: 20px;
+  display: none; }
+
+#map-canvas, #map-canvas2, #map-canvas3 {
+  height: 200px; }
+
+.mobileTab .Content_Section_Details .SubContent .profile ul li {
+  text-align: center; }
+
+.mobileTab .profile_img {
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10px; }
+
+.mobileTab .profile_desc {
+  width: 100%;
+  padding: 20px; }
+
+.mobileTab .Content_Section_Details .SubContent ul, .mobileTab .Content_Section_Details .SubContent ol {
+  margin-left: 0; }
+
+/*# sourceMappingURL=Careergenie_mobtab.css.map */
+

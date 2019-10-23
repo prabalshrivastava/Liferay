@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+	<sql id="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfileFinder.findByU1_S1_S_E">
+		<![CDATA[
+			SELECT
+				sp.*
+			FROM
+				User_ u, SPSocialProfile sp
+			WHERE
+				sp.userId = u.userId AND sp.userRegistrationStatus = ? AND u.active_ = ?
+			ORDER BY
+				u.createDate DESC
+		]]>
+	</sql>
+	<sql id="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfileFinder.findSocialProfileLocation">
+		<![CDATA[
+			SELECT GROUP_CONCAT(DISTINCT sp.location) AS location
+			FROM
+				SPSocialProfile sp
+			WHERE
+				sp.location NOT IN (SELECT c.name FROM Country c) AND sp.location != ''
+				AND sp.userRegistrationStatus = 'active'
+		]]>
+	</sql>
+</custom-sql>

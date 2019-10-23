@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="com.liferay"
+		module="DataValidation-portlet"
+		revision="working@pere-T56"
+		conf="default"
+		confs="default, internal"
+		date="20191004165846"/>
+	<dependencies>
+	</dependencies>
+</ivy-report>

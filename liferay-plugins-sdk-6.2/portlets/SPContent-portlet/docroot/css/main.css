@@ -1,0 +1,51 @@
+.sp-tab-cat-content-list {
+	margin: 0 auto !important;
+	padding: 16px !important;
+	display:inline-block !important;
+}
+
+.sp-tab-cat-content-full-textarea {
+	width: 65%	!important;
+}
+
+.sp-tab-cat-content-centered {
+	margin: 0 auto !important;
+}
+
+.padding-row._item {
+	width: 100%	!important;
+}
+
+.close .accordionItemContent {
+	display: none !important;
+}
+
+.image-section img {
+    min-height: 200px !important;
+}
+
+.main-content {
+	background-color: #ececec !important;
+}
+
+.ideas-section {
+    -webkit-column-count: 3	!important;
+    -moz-column-count: 3	!important;
+    column-count: 3	!important;
+
+    -webkit-column-gap: 0	!important;
+    -moz-column-gap: 0	!important;
+    column-gap: 0	!important;
+	
+	.col {
+		width: 100%	!important;
+	}
+	
+	.pad-3px {
+		padding: 3px !important;
+	}
+	
+	.padding-row .single-idea .idea-content .small-title {
+    	text-transform: capitalize !important;
+	}
+}

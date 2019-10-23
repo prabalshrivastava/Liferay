@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 6.2.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_6_2_0.dtd">
+
+<routes>
+     <route>
+        <pattern>/view/{orgId}</pattern>
+        <implicit-parameter name="actionp">displayProfile</implicit-parameter>
+    </route>
+     <route>
+        <pattern>/applications/{orgId}</pattern>
+        <implicit-parameter name="actionp">displayProfile</implicit-parameter>
+        <implicit-parameter name="initialTab">applications</implicit-parameter>
+    </route>
+    <route>
+        <pattern>/edit/{orgId}</pattern>
+        <implicit-parameter name="actionp">editProfile</implicit-parameter>
+    </route>
+</routes>

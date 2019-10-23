@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.spmicroservice.service.CandidateMicroserviceLocalService" class="com.sambaash.platform.srv.spmicroservice.service.impl.CandidateMicroserviceLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spmicroservice.service.EnrolmentMicroserviceLocalService" class="com.sambaash.platform.srv.spmicroservice.service.impl.EnrolmentMicroserviceLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spmicroservice.service.FormsMicroserviceLocalService" class="com.sambaash.platform.srv.spmicroservice.service.impl.FormsMicroserviceLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spmicroservice.service.PricingMicroserviceLocalService" class="com.sambaash.platform.srv.spmicroservice.service.impl.PricingMicroserviceLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spmicroservice.service.RulesMicroserviceLocalService" class="com.sambaash.platform.srv.spmicroservice.service.impl.RulesMicroserviceLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spmicroservice.service.SPMicroserviceLocalService" class="com.sambaash.platform.srv.spmicroservice.service.impl.SPMicroserviceLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spmicroservice.service.SPMicroserviceService" class="com.sambaash.platform.srv.spmicroservice.service.impl.SPMicroserviceServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spmicroservice.service.SystemSetupMicroserviceLocalService" class="com.sambaash.platform.srv.spmicroservice.service.impl.SystemSetupMicroserviceLocalServiceImpl" />
+</beans>

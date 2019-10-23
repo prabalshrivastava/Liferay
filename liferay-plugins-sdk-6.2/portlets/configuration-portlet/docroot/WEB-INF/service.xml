@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.wtberks.configuration">
+	<author>liferay</author>
+	<namespace>configuration</namespace>
+
+	<entity name="ConfigurationProperty" local-service="true"
+		remote-service="false" uuid="true" table="ConfigurationProperty">
+
+		<!-- PK fields -->
+
+		<column name="configurationPropertyId" type="long"
+			primary="true">
+		</column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<!-- Actual fields -->
+        <column name="key" type="String"></column>
+        <column name="value" type="String"></column>
+        <finder name="Key" return-type="ConfigurationProperty">
+            <finder-column name="companyId"></finder-column>
+            <finder-column name="groupId"></finder-column>
+            <finder-column name="key"></finder-column>
+        </finder>
+        
+        <finder name="UserIdAndKey" return-type="ConfigurationProperty">
+            <finder-column name="userId"></finder-column>
+            <finder-column name="companyId"></finder-column>
+            <finder-column name="groupId"></finder-column>
+            <finder-column name="key"></finder-column>
+        </finder>
+		
+<!--         <finder name="Key" return-type="ConfigurationProperty"> -->
+<!--             <finder-column name="userId"></finder-column> -->
+<!--             <finder-column name="companyId"></finder-column> -->
+<!--             <finder-column name="groupId"></finder-column> -->
+<!--             <finder-column name="key"></finder-column> -->
+<!--         </finder> -->
+		
+	</entity>
+</service-builder>

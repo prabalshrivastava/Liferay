@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.mail.service.SPEMailAuditLocalService" class="com.sambaash.platform.srv.mail.service.impl.SPEMailAuditLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.mail.service.persistence.SPEMailAuditPersistence" class="com.sambaash.platform.srv.mail.service.persistence.SPEMailAuditPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.mail.service.SPMailLocalService" class="com.sambaash.platform.srv.mail.service.impl.SPMailLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.mail.service.SPMailBlackListLocalService" class="com.sambaash.platform.srv.mail.service.impl.SPMailBlackListLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.mail.service.persistence.SPMailBlackListPersistence" class="com.sambaash.platform.srv.mail.service.persistence.SPMailBlackListPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.mail.service.SPMailCampaignLocalService" class="com.sambaash.platform.srv.mail.service.impl.SPMailCampaignLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.mail.service.persistence.SPMailCampaignPersistence" class="com.sambaash.platform.srv.mail.service.persistence.SPMailCampaignPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.mail.service.SPMailCampaignEDMLocalService" class="com.sambaash.platform.srv.mail.service.impl.SPMailCampaignEDMLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.mail.service.persistence.SPMailCampaignEDMPersistence" class="com.sambaash.platform.srv.mail.service.persistence.SPMailCampaignEDMPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.mail.service.SPMailCampaignSubscribersLocalService" class="com.sambaash.platform.srv.mail.service.impl.SPMailCampaignSubscribersLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.mail.service.persistence.SPMailCampaignSubscribersPersistence" class="com.sambaash.platform.srv.mail.service.persistence.SPMailCampaignSubscribersPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.mail.service.SPMailLinkTrackingLocalService" class="com.sambaash.platform.srv.mail.service.impl.SPMailLinkTrackingLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.mail.service.persistence.SPMailLinkTrackingPersistence" class="com.sambaash.platform.srv.mail.service.persistence.SPMailLinkTrackingPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.mail.service.SPMailSubscriberUserAgentLocalService" class="com.sambaash.platform.srv.mail.service.impl.SPMailSubscriberUserAgentLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.mail.service.persistence.SPMailSubscriberUserAgentPersistence" class="com.sambaash.platform.srv.mail.service.persistence.SPMailSubscriberUserAgentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.mail.service.SPMailTemplateLocalService" class="com.sambaash.platform.srv.mail.service.impl.SPMailTemplateLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.mail.service.SPMailTemplateService" class="com.sambaash.platform.srv.mail.service.impl.SPMailTemplateServiceImpl" />
+	<bean id="com.sambaash.platform.srv.mail.service.persistence.SPMailTemplatePersistence" class="com.sambaash.platform.srv.mail.service.persistence.SPMailTemplatePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.mail.service.SPMailTemplateAttachmentLocalService" class="com.sambaash.platform.srv.mail.service.impl.SPMailTemplateAttachmentLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.mail.service.persistence.SPMailTemplateAttachmentPersistence" class="com.sambaash.platform.srv.mail.service.persistence.SPMailTemplateAttachmentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.mail.service.SPMailUnsubscribeLocalService" class="com.sambaash.platform.srv.mail.service.impl.SPMailUnsubscribeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.mail.service.persistence.SPMailUnsubscribePersistence" class="com.sambaash.platform.srv.mail.service.persistence.SPMailUnsubscribePersistenceImpl" parent="basePersistence" />
+</beans>

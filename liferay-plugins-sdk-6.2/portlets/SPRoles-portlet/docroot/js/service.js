@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.roles", "com.sambaash.platform.srv.service", "SPRoles-portlet");

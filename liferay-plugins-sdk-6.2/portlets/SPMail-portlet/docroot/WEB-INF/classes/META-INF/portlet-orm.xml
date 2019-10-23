@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.mail.model.impl.SPEMailAuditModelImpl">
+		<attributes>
+			<id name="spEMailAudit" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="sentTo" />
+			<basic name="cc" />
+			<basic name="bcc" />
+			<basic name="category" />
+			<basic name="subject" />
+			<basic name="content" />
+			<basic name="sentDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="messasgeId" />
+			<basic name="userId" />
+			<basic name="orgId" />
+			<basic name="processStateId" />
+			<basic name="nodeId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.mail.model.impl.SPMailBlackListModelImpl">
+		<attributes>
+			<id name="spMailBlackListId" />
+			<basic name="spMailCampaignId" />
+			<basic name="userId" />
+			<basic name="emailAddress" />
+			<basic name="bounced" />
+			<basic name="bounce_soft" />
+			<basic name="complain" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="message" />
+			<basic name="messageId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.mail.model.impl.SPMailCampaignModelImpl">
+		<attributes>
+			<id name="spMailCampaignId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="campaignName" />
+			<basic name="categoryId" />
+			<basic name="mainTempalteId" />
+			<basic name="rem1TempalteId" />
+			<basic name="rem2TempalteId" />
+			<basic name="rem3TempalteId" />
+			<basic name="thankyouTempalteId" />
+			<basic name="missedyouTempalteId" />
+			<basic name="mainScheduledDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="rem1ScheduledDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="rem2ScheduledDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="rem3ScheduledDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="thankYouScheduledDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="missedyouScheduledDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="rsvpId" />
+			<basic name="dlFileEntryId" />
+			<basic name="sentBy" />
+			<basic name="sentDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createBy" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedBy" />
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="status" />
+			<basic name="archive" />
+			<basic name="campaignType" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.mail.model.impl.SPMailCampaignEDMModelImpl">
+		<attributes>
+			<id name="spMailCampaignEDMId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="name" />
+			<basic name="spMailCampaignId" />
+			<basic name="spMailTemplateId" />
+			<basic name="seqNo" />
+			<basic name="dayOfWeek" />
+			<basic name="dayOfMonth" />
+			<basic name="delayUnit" />
+			<basic name="status" />
+			<basic name="delayAmount" />
+			<basic name="croneType" />
+			<basic name="nextScheduleDateTime">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.mail.model.impl.SPMailCampaignSubscribersModelImpl">
+		<attributes>
+			<id name="spMailCampaignSubscribersId" />
+			<basic name="spMailCampaignId" />
+			<basic name="userId" />
+			<basic name="parentSubscriberId" />
+			<basic name="emailAddress" />
+			<basic name="firstName" />
+			<basic name="lastName" />
+			<basic name="spMailType" />
+			<basic name="messageId" />
+			<basic name="opened" />
+			<basic name="countryName" />
+			<basic name="city" />
+			<basic name="regionName" />
+			<basic name="areaCode" />
+			<basic name="latitude" />
+			<basic name="longitude" />
+			<basic name="ipAddress" />
+			<basic name="webVersion" />
+			<basic name="openedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createBy" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedBy" />
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="status" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.mail.model.impl.SPMailLinkTrackingModelImpl">
+		<attributes>
+			<id name="spMailLinkTrackingId" />
+			<basic name="spMailCampaignId" />
+			<basic name="spMailCampaignEDMId" />
+			<basic name="spMailCampaignSubscribersId" />
+			<basic name="label" />
+			<basic name="link" />
+			<basic name="encryptedlink" />
+			<basic name="status" />
+			<basic name="openedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.mail.model.impl.SPMailSubscriberUserAgentModelImpl">
+		<attributes>
+			<id name="spMailSubscriberUserAgentId" />
+			<basic name="spMailCampaignSubscribersId" />
+			<basic name="spMailCampaignId" />
+			<basic name="name" />
+			<basic name="type" />
+			<basic name="typeName" />
+			<basic name="deviceCategory" />
+			<basic name="family" />
+			<basic name="operatingSystem" />
+			<basic name="versionNumber" />
+			<basic name="userAgent" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.mail.model.impl.SPMailTemplateModelImpl">
+		<attributes>
+			<id name="spMailTemplateId" />
+			<basic name="productTypeId" />
+			<basic name="subProductTypeId" />
+			<basic name="templateName" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="subject" />
+			<basic name="htmlContent" />
+			<basic name="textContent" />
+			<basic name="htmlUpload" />
+			<basic name="status" />
+			<basic name="createBy" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedBy" />
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="parentTempalteId" />
+			<basic name="versionNumber" />
+			<basic name="fromAddress" />
+			<basic name="fromName" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.mail.model.impl.SPMailTemplateAttachmentModelImpl">
+		<attributes>
+			<id name="spTemplateAttachmentId">
+				<column name="SPRSVPTEMPLATEID" />
+			</id>
+			<basic name="templateId" />
+			<basic name="rsvpId" />
+			<basic name="fileEntryId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.mail.model.impl.SPMailUnsubscribeModelImpl">
+		<attributes>
+			<id name="spMailUnsubscribeId" />
+			<basic name="categoryId" />
+			<basic name="userId" />
+			<basic name="emailAddress" />
+			<basic name="unsubscribeDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.mail.model.impl.SPEMailAuditImpl" name="SPEMailAudit">
+		<table name="SPEMailAudit" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.mail.model.impl.SPMailBlackListImpl" name="SPMailBlackList">
+		<table name="SPMailBlackList" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.mail.model.impl.SPMailCampaignImpl" name="SPMailCampaign">
+		<table name="SPMailCampaign" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.mail.model.impl.SPMailCampaignEDMImpl" name="SPMailCampaignEDM">
+		<table name="SPMailCampaignEDM" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.mail.model.impl.SPMailCampaignSubscribersImpl" name="SPMailCampaignSubscribers">
+		<table name="SPMailCampaignSubscribers" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.mail.model.impl.SPMailLinkTrackingImpl" name="SPMailLinkTracking">
+		<table name="SPMailLinkTracking" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.mail.model.impl.SPMailSubscriberUserAgentImpl" name="SPMailSubscriberUserAgent">
+		<table name="SPMailSubscriberUserAgent" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.mail.model.impl.SPMailTemplateImpl" name="SPMailTemplate">
+		<table name="SPMailTemplate" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.mail.model.impl.SPMailTemplateAttachmentImpl" name="SPMailTemplateAttachment">
+		<table name="SPMailTemplateAttachment" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.mail.model.impl.SPMailUnsubscribeImpl" name="SPMailUnsubscribe">
+		<table name="SPMailUnsubscribe" />
+		<attributes />
+	</entity>
+</entity-mappings>

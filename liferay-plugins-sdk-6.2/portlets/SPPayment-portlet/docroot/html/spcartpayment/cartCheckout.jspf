@@ -1,0 +1,30 @@
+<%@page import="com.liferay.portal.security.auth.AuthTokenUtil"%>
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
+
+<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui"%>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui"%>
+<%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme"%>
+<%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet"%>
+<%@ taglib uri="http://liferay.com/tld/util" prefix="liferay-util"%>
+
+<portlet:defineObjects />
+<liferay-theme:defineObjects />
+
+<div class="form-row">
+	<label>Shopping Cart</label>
+</div>
+<div class="form-row">
+	<aui:input name="Product" label="Purchased Product ID:"
+		value="Course_10034">
+	</aui:input>
+</div>
+<div class="form-row">
+	<aui:input name="Product" label="Purchased Product Name:"
+		value="Java Programming Course">
+	</aui:input>
+</div>
+<div class="form-row">
+	<aui:input name="Product" label="Amount:"
+		value="${pay_currency} ${pay_amount}">
+	</aui:input>
+</div>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 6.2.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_6_2_0.dtd">
+
+<resource-action-mapping>
+    <portlet-resource>
+        <portlet-name>manage-startup-profile</portlet-name>
+        <permissions>
+            <supports>
+                <action-key>VIEW_STARTUP</action-key>
+                <action-key>VIEW_COMMENTS</action-key>
+                <action-key>ADD_COMMENT</action-key>
+                <action-key>UPDATE_COMMENT</action-key>
+                <action-key>DELETE_COMMENT</action-key>
+                <action-key>ADD_PORTLET_DISPLAY_TEMPLATE</action-key>
+            </supports>
+            <site-member-defaults>
+            </site-member-defaults>
+            <guest-defaults>
+            </guest-defaults>
+            <guest-unsupported>
+                <action-key>VIEW_STARTUP</action-key>
+                <action-key>VIEW_COMMENTS</action-key>                
+                <action-key>ADD_COMMENT</action-key>
+                <action-key>UPDATE_COMMENT</action-key>
+                <action-key>DELETE_COMMENT</action-key>
+            </guest-unsupported>
+        </permissions>
+    </portlet-resource>
+</resource-action-mapping>

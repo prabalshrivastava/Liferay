@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.rsvp.model.Rsvp">
+		<field name="uuid" type="String" />
+		<field name="rsvpId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="title" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="description" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="eventId" type="long" />
+		<field name="spAssetTypeId" type="long" />
+		<field name="status" type="boolean" />
+		<field name="rsvpUrl" type="String" />
+		<field name="processing" type="int" />
+		<field name="price" type="String" />
+		<field name="currency" type="String" />
+		<field name="tax" type="String" />
+		<field name="accountId" type="String" />
+		<field name="paymentFlag" type="boolean" />
+		<field name="registerFlag" type="boolean" />
+		<field name="ticketFlag" type="boolean" />
+		<field name="dynamicSectionName" type="String" />
+		<field name="ccEmail" type="boolean" />
+	</model>
+	<model name="com.sambaash.platform.srv.rsvp.model.RsvpCoParticipantDetail">
+		<field name="uuid" type="String" />
+		<field name="rsvpCoParticipantDetailId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="rsvpDetailId" type="long" />
+		<field name="rsvpPaymentId" type="long" />
+		<field name="userId" type="long" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="nric" type="String" />
+		<field name="identificationType" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="rsvpStatus" type="int" />
+		<field name="attendance" type="int" />
+		<field name="attendanceBy" type="long" />
+		<field name="attendanceDate" type="Date" />
+		<field name="ticketNumber" type="String">
+			<hint name="max-length">16</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.rsvp.model.RsvpDetail">
+		<field name="uuid" type="String" />
+		<field name="rsvpDetailId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="rsvpId" type="long" />
+		<field name="userId" type="long" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="identifiactionType" type="String" />
+		<field name="nric" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="rsvpStatus" type="int" />
+		<field name="source" type="int" />
+		<field name="attendance" type="int" />
+		<field name="attendanceBy" type="long" />
+		<field name="attendanceDate" type="Date" />
+		<field name="rsvpStatusDate" type="Date" />
+		<field name="rsvpStatusBy" type="long" />
+		<field name="numberOfPeople" type="int" />
+		<field name="streetAddress1" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="streetAddress2" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="postalCode" type="String" />
+		<field name="city" type="String" />
+		<field name="country" type="String" />
+		<field name="state" type="String" />
+		<field name="gender" type="String" />
+		<field name="phoneNumber1" type="String">
+			<hint name="max-length">16</hint>
+		</field>
+		<field name="phoneNumber2" type="String">
+			<hint name="max-length">16</hint>
+		</field>
+		<field name="hearAboutUs" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="attendedWebinar" type="String" />
+		<field name="ageGroup" type="String" />
+		<field name="termsOfUse" type="boolean" />
+		<field name="ageRestriction" type="boolean" />
+	</model>
+	<model name="com.sambaash.platform.srv.rsvp.model.RsvpDiscount">
+		<field name="uuid" type="String" />
+		<field name="rsvpDiscountId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="rsvpId" type="long" />
+		<field name="rsvpTicketId" type="long" />
+		<field name="fromDate" type="Date" />
+		<field name="toDate" type="Date" />
+		<field name="noOfTickets" type="int" />
+		<field name="discount" type="double" />
+		<field name="modifiedBy" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.rsvp.model.RsvpPayment">
+		<field name="uuid" type="String" />
+		<field name="rsvpPaymentId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="rsvpDetailId" type="long" />
+		<field name="rsvpId" type="long" />
+		<field name="rsvpTicketId" type="long" />
+		<field name="rsvpDiscountId" type="long" />
+		<field name="rsvpPromoCodeId" type="long" />
+		<field name="price" type="double" />
+		<field name="numberOfPeople" type="int" />
+		<field name="discount" type="int" />
+		<field name="netTotal" type="double" />
+		<field name="ticketNumber" type="String">
+			<hint name="max-length">16</hint>
+		</field>
+		<field name="payerEmailAddress" type="String" />
+		<field name="receiverEmailAddress" type="String" />
+		<field name="transactionId" type="String" />
+		<field name="transactionStatus" type="String" />
+		<field name="transactionAmount" type="double" />
+		<field name="transactionDate" type="Date" />
+		<field name="emailStatus" type="boolean" />
+	</model>
+	<model name="com.sambaash.platform.srv.rsvp.model.RsvpPromoCode">
+		<field name="uuid" type="String" />
+		<field name="rsvpPromoCodeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="rsvpId" type="long" />
+		<field name="rsvpTicketId" type="long" />
+		<field name="promoCode" type="String" />
+		<field name="fromDate" type="Date" />
+		<field name="toDate" type="Date" />
+		<field name="noOfTickets" type="int" />
+		<field name="discount" type="int" />
+		<field name="modifiedBy" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.rsvp.model.RsvpTicket">
+		<field name="uuid" type="String" />
+		<field name="rsvpTicketId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="rsvpId" type="long" />
+		<field name="price" type="double" />
+		<field name="quantity" type="int" />
+		<field name="soldQuantity" type="int" />
+		<field name="ticketSequence" type="int" />
+		<field name="lastSequenceNumber" type="int" />
+		<field name="sequencePrefix" type="String">
+			<hint name="max-length">2</hint>
+		</field>
+		<field name="sequenceSuffix" type="String">
+			<hint name="max-length">2</hint>
+		</field>
+		<field name="ticketTemplateUrl" type="String">
+			<hint name="max-length">250</hint>
+		</field>
+		<field name="modifiedBy" type="long" />
+	</model>
+</model-hints>

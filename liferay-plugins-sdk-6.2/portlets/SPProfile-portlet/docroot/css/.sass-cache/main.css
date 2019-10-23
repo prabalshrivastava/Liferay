@@ -1,0 +1,49 @@
+.section-wrapper {
+  margin: 10px; }
+
+.profilePic {
+  display: block;
+  margin: auto; }
+
+.cmHeader h2 {
+  text-align: left !important; }
+
+.profile-user-detail-info {
+  font-size: 12px;
+  color: white; }
+
+.invigilator-text {
+  color: white;
+  padding: 5px 12px;
+  background: #004079;
+  border-radius: 20px; }
+
+.status-label {
+  color: black;
+  padding: 2px 9px;
+  border-radius: 20px;
+  margin-left: 10px;
+  font-weight: normal;
+  font-size: 10px; }
+
+.active-background {
+  background: #00d100; }
+
+.deactive-background {
+  background: red; }
+
+.edit-link {
+  margin-left: 10px;
+  padding: 1px 5px;
+  background: #e2e2ff;
+  border-radius: 50%;
+  border-color: #d1d1fe;
+  border-style: solid;
+  border-width: 1px; }
+
+.edit-link img {
+  height: 10px;
+  width: 10px; }
+
+/*# sourceMappingURL=main.css.map */
+

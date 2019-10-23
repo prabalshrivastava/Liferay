@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.enrolment.model.EnrollBatchUpload" />
+	<import class="com.sambaash.platform.srv.enrolment.model.EnrollUploadedTempRecords" />
+	<class name="com.sambaash.platform.srv.enrolment.model.impl.EnrollBatchUploadImpl" table="enrolment_EnrollBatchUpload">
+		<cache usage="read-write" />
+		<id name="uploadStatId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uploadTransactId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="errorField" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="errorReason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="uploadedRecId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sambaash.platform.srv.enrolment.model.impl.EnrollUploadedTempRecordsImpl" table="enrolment_EnrollUploadedTempRecords">
+		<cache usage="read-write" />
+		<id name="uploadedRecId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uploadTransactId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sprCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fullOfficialName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="gender" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dateofBirth" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

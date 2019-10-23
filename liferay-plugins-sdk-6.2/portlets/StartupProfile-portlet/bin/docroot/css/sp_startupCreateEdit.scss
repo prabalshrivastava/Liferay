@@ -1,0 +1,1851 @@
+    @import "sp_mixins";
+    @import "sp_media-queries";
+    $profile_head_height: 650px;
+    $profile_list_height: 162px;
+    $profile_formNav_height: 400px;
+    $profile_formWrap_height: 700px;
+
+.manage-startup-profile-portlet{
+.formTextField.fw,.formGroupTitle,.formTextField,.formTitle,.formSelectField{
+	p{
+	font-weight:600;
+	padding-bottom:5px;
+	font-size: 12pt;
+    }	
+}
+}
+
+    .aui .manage-startup-profile-portlet select[multiple] {
+        overflow-y: scroll;
+        padding-right: 0px;
+        height:auto!important;
+    }
+
+    .ie.manage-startup-profile-portlet select[multiple] {
+        overflow-y: scroll;
+        padding-right: 0px;
+    }
+
+    .ie select::-ms-expand {
+        display: none;
+    }
+
+    .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review input[type="Button"].submit.reviewSubmit {
+        float: right;
+    }
+
+    .aui {
+        /** SP-PROFILE **/
+        .startuplisting-portlet {
+
+            margin: 0 auto;
+            display: block;
+            padding: 0 30px;
+            @include vendor-prefix(box-sizing, border-box);
+        }
+        .ie {
+            .sp_profile {
+                section.profile_content {
+                    .profile_forms_wrap {
+                        .profile_form {
+                            margin-left: 30%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .manage-startup-profile-portlet {
+            margin: 0 auto;
+            .sp_profile.sp_profile_view {
+                .sp_ratings {
+                    padding: 0;
+                    margin-top: 0;
+                    .ratingsSection_wrap {
+
+                        display: initial;
+
+                        .rs_container {
+                            .rs_ave {
+                                padding: 0 30px;
+                                .rs_link {
+                                    display: inline-block;
+                                }
+                                .aveRating.stars {
+                                    display: block;
+                                }
+                                .rs_cta {
+                                    display: inline-block;
+
+                                    margin-left: 18px;
+                                    padding: 0 0 0 18px;
+                                }
+                                span.aveValue {
+                                    display: none;
+                                }
+                                .ratings-pop-wrap {
+                                    .ratings-pop-content {
+                                        max-width: 475px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .ratings-pop-wrap {
+
+                    .ratings-pop-content {
+
+                        margin: 28vh auto;
+                        height: auto;
+                        .ratings-pop-subtitle {
+                            margin: 30px 0;
+                        }
+                        .ratings-pop-item {
+                            display: block;
+
+                            width: 100%;
+                            margin: 25px;
+                            span {
+                                span {
+                                    width: 100%;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    .rating-content {
+
+                        a:nth-child(2) {
+                            margin-right: 15.5vw;
+                        }
+                        a:nth-child(3) {
+                            margin-right: 12vw;
+                        }
+                        a:nth-child(4) {
+                            margin-right: 8.5vw;
+                        }
+                        a:nth-child(5) {
+                            margin-right: 5vw;
+                        }
+                        a:nth-child(6) {
+                            margin-right: 1.5vw;
+                        }
+                    }
+                }
+                .big-banner {
+                    height: auto;
+                }
+                .header-cta-band {
+                    padding: 35px 12%;
+                }
+                .social-share {
+                    a {
+                        display: inline-block;
+                        width: 44px;
+                        margin: 0 15px;
+                    }
+                }
+                /* only for startup display page.*/
+                .sp_tab_buttons {
+
+                    margin: 0 25%;
+
+                    li {
+
+                        width: 20%;
+                    }
+                    li.active {
+
+                        position: relative;
+                    }
+                    li.active:after {
+
+                        position: absolute;
+                        bottom: -9px;
+                        left: 42%;
+                    }
+                }
+            }
+            .result_wrapper {
+                display: inline-block;
+                *display: inline;
+
+                margin: 5px;
+            }
+            .results_link {
+                padding: 10px;
+            }
+            .control-group {
+                margin-bottom: 0;
+            }
+        }
+        .sp_tab_buttons {
+
+            margin-bottom: 38px;
+
+            li {
+                display: inline-block;
+                padding: 5px 35px;
+
+                width: 33.3%;
+
+                float: left;
+            }
+        }
+        .sp_tabs {
+            .sp_tab {
+                display: none;
+                &.active {
+                    display: block;
+
+                    padding: 0;
+                }
+                .fileEntry {
+
+                    padding: 1px 50px;
+                    margin-top: 10px;
+                    .fileEntryCta {
+                        float: right;
+                    }
+                    .fileEntryImg img {
+                        width: 55px;
+                        height: 36px;
+                    }
+                }
+            }
+        }
+
+        .profileEditButton {
+            margin-bottom: 20px;
+        }
+        .sp_profile {
+            width: 100%;
+            display: block;
+            min-height: 720px;
+            position: relative;
+            .head_wrap {
+                .cta_item.cb {
+                    display: none !important;
+                }
+                .sep_line {
+                    display: none !important;
+                }
+                .cta_item.new {
+                    padding: 0;
+                }
+            }
+            .profile_avatar_wrap {
+                width: 100%;
+                display: block;
+                position: relative;
+
+                padding: 20px;
+                @include vendor-prefix(box-sizing, border-box);
+
+                .avatar_container {
+                    min-width: 150px;
+                    min-height: 150px;
+                    width: 150px;
+                    height: 150px;
+
+                    overflow: hidden;
+
+                    position: relative;
+                    display: inline-block;
+                    *display: inline;
+
+                    &.ddImage {
+
+                        width: 100%;
+                        min-height: 350px;
+
+                        overflow: hidden;
+                        img {
+                            max-height: 100% !important;
+                            width: auto;
+                        }
+                        .avatar_cta {
+                            position: absolute;
+                            bottom: 5px;
+                            right: 5px;
+                            width: 50%;
+
+                            input.avatarCTA {
+                                display: inline-block !important;
+                                *display: inline;
+
+                                margin-left: 5px;
+
+                                width: 50%;
+                                max-width: 100px;
+                            }
+                        }
+                    }
+                    &:before {
+
+                        position: absolute;
+
+                        top: 4px;
+                        left: 4px;
+                        right: 4px;
+                        bottom: 4px;
+                    }
+                    img {
+                        width: 105%;
+                        height: 105%;
+                        min-height: 200px;
+                        margin-left: -2%;
+                        margin-top: -2%;
+                    }
+                    .avatar_cta {
+                        display: none;
+                    }
+                }
+            }
+            section.head {
+
+                overflow: hidden;
+                height: $profile_head_height;
+                .head_wrap {
+                    padding: 20px 40px;
+                }
+                .headText {
+
+                    margin: 20px 0;
+                    span {
+
+                        display: block;
+                        padding: 10px 0;
+                    }
+                }
+                .cta_wrap {
+                    display: block;
+                    font-size: 0;
+                    margin: 20px auto;
+                    position: relative;
+                    .cta_item {
+                        display: inline-block;
+                        *display: inline;
+
+                        width: 50%;
+                        @include vendor-prefix(box-sizing, border-box);
+                        padding: 10px;
+                        overflow: hidden;
+                        a {
+                            display: inline-block;
+                            *display: inline;
+
+                            width: 180px;
+                            padding: 15px 20px;
+
+                            span {
+
+                                display: inline-block;
+                                *display: inline;
+                            }
+                            i {
+                                display: inline-block;
+                                *display: inline;
+                            }
+                        }
+                        .cta_item_desc {
+
+                            display: block;
+                            padding: 10px 0;
+                        }
+                    }
+
+                    .sep_line {
+                        width: 1px;
+
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        span {
+
+                            padding: 20px;
+                            @include vendor-prefix(border-radius, 50%);
+                            overflow: hidden;
+
+                            position: absolute;
+                            top: 36%;
+                            left: -33px;
+                        }
+                    }
+                }
+            }
+            section.crunchbaseSelectList {
+
+                display: none;
+
+                height: 0;
+                overflow: hidden;
+                input {
+
+                    display: inline-block;
+                    *display: inline;
+
+                    padding: 10px 15px;
+                    width: 300px;
+                }
+                .cbListWrap {
+                    display: none;
+                    padding: 40px;
+                }
+            }
+            section.crunchbaseSelectList.active {
+                display: block;
+                .cbListWrap {
+                    display: block;
+                }
+            }
+            section.profile_content.active {
+                display: block;
+            }
+            section.profile_content {
+                display: none;
+                .profile_forms_wrap {
+                    display: block;
+                    width: 100%;
+
+                    @include vendor-prefix(box-sizing, border-box);
+
+                    padding: 60px 0;
+                    .page_headTitle {
+                        padding: 10px;
+                        padding-bottom: 20px;
+                        display: block;
+
+                        i {
+                            display: inline-block;
+                            *display: inline;
+
+                            width: 30px;
+
+                            margin-right: 10px;
+
+                            margin: 0 15px;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        span {
+                            display: inline-block;
+                            *display: inline;
+                        }
+                        #preview-button {
+                            float: right;
+                            margin-top: -30px
+                        }
+                    }
+                    .profile_form_navigation {
+                        display: inline-block;
+                        *display: inline;
+
+                        width: 30%;
+                        max-width: 290px;
+
+                        @include vendor-prefix(box-sizing, border-box);
+                        padding: 0;
+                        position: absolute;
+                        -webkit-transition: none;
+
+                        .formNavTitle {
+                            padding: 14px 0 14px 26px;
+
+                            display: block;
+                        }
+                        nav {
+                            width: 100%;
+                            display: block;
+                            margin: 0 auto;
+                            ul {
+                                padding: 20px 0;
+
+                                li {
+
+                                    width: 100%;
+                                    @include vendor-prefix(box-sizing, border-box);
+
+                                    padding: 0 25px;
+                                    span {
+                                        display: inline-block;
+                                        *display: inline;
+
+                                        @include vendor-prefix(box-sizing, border-box);
+                                        padding: 7px 0 7px 8px;
+                                        width: 90%;
+
+                                        position: relative;
+                                    }
+                                    i {
+                                        position: relative;
+                                        width: 14px;
+                                        display: inline-block;
+                                    }
+                                }
+
+                                li.formDone {
+                                    span::after {
+
+                                        width: 20px;
+                                        height: 20px;
+                                        display: inline-block;
+                                        *display: inline;
+
+                                        position: absolute;
+                                        right: 5%;
+                                    }
+                                }
+                                li.active {
+                                    span {
+
+                                        padding: 7px 0 7px 8px;
+                                    }
+                                    span::after {
+
+                                        width: 10px;
+                                        height: 10px;
+                                        display: inline-block;
+
+
+                                        position: relative;
+                                        right: -5%;
+
+                                        top: -1px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .ie .profile_form_navigation {
+                        display: inline-block;
+                        *display: inline;
+
+                        width: 30%;
+                        max-width: 290px;
+
+                        @include vendor-prefix(box-sizing, border-box);
+                        padding: 20px 40px;
+                        position: relative;
+                        -webkit-transition: none;
+                        transition: none;
+                    }
+                    .profile_form {
+                        display: inline-block;
+                        *display: inline;
+
+                        position: relative;
+
+                        width: 70%;
+                        max-width: 960px;
+                        margin: 0 auto;
+                        @include vendor-prefix(box-sizing, border-box);
+                        padding: 20px 40px;
+
+                        margin-left: 30%;
+
+                        .form {
+                            display: none;
+                            .formContent {
+                                overflow-y: visible;
+                            }
+                            .formTitle {
+                                padding: 5px 0;
+                                padding-top: 0;
+
+                                display: block;
+                                margin-bottom: 20px;
+
+                                position: relative;
+                                padding-top: 6px;
+                            }
+                            .formSubTitle {
+                                padding: 10px 0;
+                                padding-top: 0;
+
+                                display: block;
+                                margin-bottom: 0px;
+                                margin-top: 10px;
+                                position: relative;
+                                span {
+                                    display: inline-block;
+                                    *display: inline;
+
+                                    position: relative;
+                                }
+                            }
+                            .aui-form-validator-error-container {
+                                .aui-field-element {
+
+                                    padding-right: 0;
+                                    width: 100%;
+                                }
+                            }
+                            .formGroupTitle {
+                                padding: 10px 0;
+
+                                display: block;
+                                position: relative;
+                                span {
+                                    display: inline-block;
+                                    *display: inline;
+
+                                    position: relative;
+                                }
+                            }
+                            select {
+                                width: 100%;
+                            }
+                        }
+                        .form.active {
+                            display: block;
+                        }
+                        .formTextField,
+                        .formTextArea,
+                        .formSelect,
+                        .formRadio,
+                        .formCTA,
+                        .formSelectField,
+                        .formCheckField,
+                        .formRadioField {
+                            display: inline-block;
+                            *display: inline;
+
+                            vertical-align: top;
+                            padding: 10px 10px 10px 0;
+                            width: 50%;
+                            @include vendor-prefix(box-sizing, border-box);
+
+                            position: relative;
+                            &:last-child {
+                                padding-right: 0;
+                            }
+                            .form-validator-stack-error {
+                                padding: 0;
+                            }
+                            .form-validator-message {
+                                position: absolute;
+
+                                top: 100%;
+                            }
+                        }
+                        .formCheckField {
+                            .checkItem {
+                                display: inline-block;
+                                *display: inline;
+
+                                margin-right: 20px;
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                                label {
+                                    display: inline-block;
+                                    *display: inline;
+
+                                    margin-right: 5px;
+                                    margin-bottom: 5px;
+                                }
+                                input {}
+                            }
+                        }
+                        .formRadioField {
+                            .radioItem {
+                                display: inline-block;
+                                *display: inline;
+                                zoom: 1;
+
+                                margin-right: 10px;
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                                label {
+                                    display: inline-block;
+                                    *display: inline;
+
+                                    margin-right: 5px;
+                                    margin-bottom: 5px;
+                                }
+                                input {}
+                            }
+                        }
+                        .formGroupfield {
+                            display: inline-block;
+                            *display: inline;
+
+                            width: 50%;
+                            @include vendor-prefix(box-sizing, border-box);
+
+                            position: relative;
+                            padding: 10px;
+                            .formGroupfield {
+                                padding: 0 20px 15px 20px;
+
+                                margin: 10px 0;
+                                .formSubTitle {
+                                    .multipleCTA {
+                                        a.removeButton {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .fw {
+                            width: 100%;
+
+                            padding: 10px 0;
+                        }
+                        label,
+                        .aui-field-label {
+                            display: block;
+                            padding-bottom: 5px;
+
+                            margin: 0 !important;
+                        }
+                        .aui-field-element {
+                            display: block;
+                        }
+                        input,
+                        textarea {
+                            padding: 10px;
+
+                            display: block !important;
+                            width: 100% !important;
+                            @include vendor-prefix(box-sizing, border-box !important);
+
+                            margin: 0;
+                        }
+                        input[type="Submit"] {
+                            display: inline-block !important;
+                            *display: inline;
+
+                            margin-left: 5px;
+
+                            width: 40%;
+                            max-width: 200px;
+                        }
+                        input[type="Button"] {
+                            display: inline-block !important;
+                            *display: inline;
+
+                            margin-left: 5px;
+
+                            width: 40%;
+                            max-width: 200px;
+                        }
+                        input[type="Cancel"] {
+                            display: inline-block !important;
+                            *display: inline;
+
+                            margin-left: 5px;
+
+                            width: 40%;
+                            max-width: 200px;
+                        }
+                        input[type="Submit"]:hover {}
+                        input[type="Cancel"]:hover {}
+                        input[type=text],
+                        textarea {
+
+                            padding: 10px;
+                        }
+
+                        .multipleCTA {
+                            display: inline-block;
+                            *display: inline;
+
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            margin-top: -7px; //added by karthik june07
+                            a {
+                                display: inline-block;
+                                *display: inline;
+
+                                padding: 10px;
+
+                                margin: 5px;
+                                position: relative;
+
+                                width: 10px;
+                                height: 10px;
+
+                                @include vendor-prefix(box-sizing, content-box);
+                            }
+                        }
+                        .form_review,
+                        .form_disabled,
+                        .normal_view {
+
+                            input,
+                            textarea {
+                                padding: 10px;
+
+                                display: block;
+                                width: 100%;
+                                @include vendor-prefix(box-sizing, border-box !important);
+                            }
+                            select {
+                                margin: 0;
+                                @include vendor-prefix(appearance, none);
+
+                                @include vendor-prefix(box-sizing, border-box !important);
+                                width: 100% !important;
+                                padding-left: 10px !important;
+                                padding-right: 10px !important;
+                                height: 40px;
+
+                                overflow: hidden;
+                            }
+                            
+                            input[type="Submit"] {
+                                display: inline-block !important;
+                                *display: inline;
+
+                                margin-left: 5px;
+
+                                width: 40%;
+                                max-width: 200px;
+                            }
+                            input[type="Button"] {
+                                display: inline-block !important;
+                                *display: inline;
+
+                                margin-left: 5px;
+
+                                width: 40%;
+                                max-width: 200px;
+                            }
+                            input[type="Cancel"] {
+                                display: inline-block !important;
+                                *display: inline;
+
+                                margin-left: 5px;
+
+                                width: 40%;
+                                max-width: 200px;
+                            }
+                            input[type="Submit"]:hover {}
+                            input[type="Cancel"]:hover {}
+                            .formFields_data {
+                                padding: 0 20px;
+                                .formContent {
+                                    overflow-y: visible;
+                                    height: auto;
+                                }
+                                .form_section {
+                                    margin-bottom: 20px;
+                                    span.form_section_title {
+                                        display: block;
+                                        padding: 20px 0;
+                                    }
+                                    .form_section_content {
+                                        padding: 10px 0;
+
+                                        .fieldName {
+                                            display: inline-block;
+                                            *display: inline;
+
+                                            padding: 10px 20px;
+                                            @include vendor-prefix(box-sizing, border-box);
+                                            width: 50%;
+
+                                            margin-top: 1px;
+                                        }
+                                        .fieldContent {
+                                            display: inline-block;
+                                            *display: inline;
+
+                                            padding: 10px 20px;
+                                            @include vendor-prefix(box-sizing, border-box);
+                                            width: 50%;
+
+                                            margin-top: 1px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sp_profile.sp_profile_view {
+            .stickyNav {
+                left: 4%;
+            }
+            section.profile_content {
+                .profile_forms_wrap {
+
+                    .profile_form {
+                        vertical-align: top;
+                        width: 70%;
+                        max-width: 960px;
+                        .form {
+                            .logoDiv-viewPage {
+                                width: 150px;
+                                height: 150px;
+
+                                overflow: hidden;
+                                margin: 20px 0;
+                                display: table;
+
+                                .logoContent-viewPage {
+                                    line-height: 0;
+                                    display: table-cell;
+
+                                    width: 100%;
+                                    height: 100%;
+
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .formViewItem {
+                                padding: 10px 0;
+                                .formViewContent {
+                                    display: none;
+                                }
+                                .formTitle {
+                                    padding-top: 0;
+
+                                    &:after {
+
+                                        position: absolute;
+                                        right: 0;
+                                        top: 0;
+                                        display: block;
+                                    }
+                                }
+                                &.active {
+                                    .formViewContent {
+                                        display: block;
+                                    }
+                                    .formTitle {
+                                        &:after {
+                                            display: inline-block;
+                                            *display: inline;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .tab_helpText {
+
+            padding: 20px;
+            display: block;
+
+            margin-top: 20px;
+            position: relative;
+            .icon_helpText {
+                display: block;
+                padding: 5px 0;
+                span {
+                    @include vendor-prefix(border-radius,
+                    50%);
+
+                    padding: 0 5px;
+                }
+            }
+            .title_helpText {
+                display: block;
+                padding: 10px 0;
+                padding-bottom: 0;
+            }
+            .content_helpText {
+                display: block;
+                padding: 10px 0;
+                padding-bottom: 0;
+            }
+            .arrow_helpText {
+                position: absolute;
+                width: 20px;
+                display: inline-block;
+                *display: inline;
+
+                left: 100%;
+                top: 42%;
+
+                &:after {
+
+                    display: inline-block;
+
+                    margin: 0;
+                }
+                &:before {
+
+                    display: inline-block;
+
+                    margin: 0;
+                }
+            }
+        }
+        /** SP-RATINGS **/
+        .sp_ratings {
+            width: 100%;
+            display: block;
+
+            padding: 20px;
+            margin-top: 58px;
+            @include vendor-prefix(box-sizing,
+            border-box);
+            .ratingsSection_wrap {
+                max-width: 350px;
+                margin: 0 auto;
+
+                overflow: hidden;
+                width: 100%;
+                display: inline-block;
+                *display: inline;
+
+                @include vendor-prefix(box-sizing,
+                border-box);
+                .rs_container {
+                    @include vendor-prefix(box-sizing,
+                    border-box);
+                    .rs_link {
+                        display: block;
+                        padding: 10px 0;
+                    }
+                    .rs_cta {
+
+                        display: block;
+
+                        padding: 20px;
+                    }
+                    .rs_ave {
+
+                        padding: 20px 30px;
+                        @include vendor-prefix(box-sizing,
+                        border-box);
+
+                        span.aveText {
+
+                            padding-bottom: 5px;
+                            display: block;
+                        }
+                        span.aveValue {
+
+                            display: block;
+                        }
+                        span.noRatingsYet {
+
+                            display: block;
+                        }
+                        .aveRating {
+
+                            ul {
+                                font-size: 0;
+                                li {
+                                    width: 32px;
+                                    height: 32px;
+                                    margin: 5px;
+                                    display: inline-block;
+                                    *display: inline;
+
+                                    background-position: 0 0;
+                                    &.r-on {
+                                        background-position: 0 -32px;
+                                    }
+                                    &.r-hover {
+                                        background-position: 0 -64px;
+                                    }
+                                    &.r-full {
+                                        background-position: 0 -32px;
+                                    }
+                                    &.r-half {
+                                        background-position: 0 -96px;
+                                    }
+                                    &.r-50 {
+                                        background-position: 0 -96px;
+                                    }
+                                    &.r-25 {
+                                        background-position: 0 -128px;
+                                    }
+                                    &.r-75 {
+                                        background-position: 0 -160px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .rs_items {
+                        display: none;
+
+                        padding: 20px;
+                        &.active {
+                            display: block;
+                        }
+                        input[type="radio"] {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .aui-rating {
+            .aui-rating-label-element {
+                display: block;
+            }
+            .aui-rating-element {
+                display: inline-block;
+                *display: inline;
+
+                float: none;
+                width: 32px;
+                height: 32px;
+                margin: 5px;
+            }
+        }
+        .ratings-pop-wrap {
+            &.active {
+                display: block;
+            }
+            display: none;
+
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+            .closePop {
+                position: absolute;
+                display: inline-block;
+                *display: inline;
+
+                right: 0;
+                top: 0;
+                margin: 10px;
+                width: 15px;
+                height: 15px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .ratings-pop-content {
+                display: inline-block;
+                *display: inline;
+                zoom: 1;
+                width: 70%;
+                max-width: 850px;
+                padding: 20px;
+
+                margin: 10% 15%;
+
+                @include vendor-prefix(box-sizing,
+                border-box);
+
+                position: relative;
+                .ratings-pop-title {
+
+                    display: block;
+
+                    padding: 0 0 10px 0;
+                }
+                .ratings-pop-subtitle {
+
+                    display: block;
+                }
+                .ratings-pop-item {
+                    display: inline-block;
+                    *display: inline;
+
+                    margin: 10px;
+                    width: 30%;
+                    &.showAttr {
+                        display: inline-block !important;
+                    }
+                }
+            }
+            .aveRating {
+                display: inline-block;
+                *display: inline;
+
+                margin: 10px;
+            }
+        }
+        .attr-def {
+            padding: 10px;
+            margin: 10px;
+        }
+        .show-inline {
+            display: inline-block;
+            *display: inline;
+        }
+        .show-block {
+            display: block;
+        }
+        .hide-content {
+            display: none !important;
+        }
+        /** END SP-RATINGS **/
+        /** Drag Drop **/
+        .fd_container {
+            display: table;
+            width: 100%;
+            height: 300px;
+
+            position: relative;
+            overflow: hidden;
+
+
+            .fdWrap {
+                display: table-cell;
+
+                position: relative;
+                z-index: 1;
+                visibility: visible;
+
+                &.hover {
+
+                    margin: 1em 0;
+                }
+            }
+            .imageContainer {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+
+                visibility: visible;
+
+                img {
+                    margin: 0 auto;
+                }
+            }
+        }
+        .filesTable {
+            display: none;
+        }
+        .display_view {
+            font-size: 0;
+            display: block;
+
+            .col_section {
+                .formTextField {
+                    padding: 10px;
+                }
+            }
+        }
+        .col_section {
+            display: inline-block;
+            *display: inline;
+
+            padding: 20px 40px;
+            @include vendor-prefix(box-sizing,
+            border-box);
+            .col_section_title {
+                padding-bottom: 20px;
+            }
+            &.col_section_80 {
+                width: 75%;
+                display: inline-block;
+                img {
+                    width: 100%;
+                }
+            }
+            &.col_section_20 {
+                width: 25%;
+
+                display: inline-block;
+                .col_section_item {
+                    .col_applyItem {
+
+                        position: relative;
+                        padding: 40px 0;
+                        &:first-child {
+                            padding-top: 0;
+                        }
+
+                        span {
+
+                            display: inline-block;
+                            *display: inline;
+                            zoom: 1;
+                        }
+                        a {
+                            &.genCTA {
+                                margin: 20px auto;
+                                display: inline-block;
+                                *display: inline;
+                                zoom: 1;
+                                padding: 10px;
+                                @include vendor-prefix(border-radius,
+                                4px);
+                            }
+                            &.btn-callout {
+                                margin: 0 auto;
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sepOr {
+            &:before {
+
+                display: inline-block;
+                *display: inline;
+
+                width: 30px;
+                height: 30px;
+
+                position: absolute;
+                left: 43%;
+                top: -13px;
+            }
+        }
+        #toggler {
+
+            .toggler_item {
+                padding: 15px 0 0;
+                cursor: pointer;
+
+                .toggler_content {
+                    height: 0px;
+                    display: block;
+                    overflow: hidden;
+
+                    ul {
+                        padding: 15px;
+
+                        li {
+                            padding: 5px;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+                span {
+
+                    padding: 15px;
+                    padding-top: 0;
+                    display: block;
+                }
+                &.active {
+
+                    .toggler_content {
+
+                        height: 130px !important;
+                        overflow-y: scroll;
+                    }
+                }
+            }
+        }
+        .dockbar-ready {
+            .posFixed {
+                margin-top: 202px;
+            }
+            .posFixed-scrolled {
+                margin-top: 135px !important;
+            }
+            .sp_profile_view {
+                .posFixed {
+                    margin-top: 450px;
+
+                    &.posFixed-scrolled {
+                        margin-top: 165px !important;
+                    }
+                }
+            }
+        }
+        .mobile_form_nav_btn {
+            display: none;
+        }
+        .form_review,
+        .form_disabled,
+        .normal_view,
+        .display_view {
+
+            input,
+            textarea {
+                padding: 10px;
+
+                display: block;
+                width: 100%;
+                @include vendor-prefix(box-sizing,
+                border-box !important);
+            }
+            select {
+                margin: 0;
+                @include vendor-prefix(appearance,
+                none);
+
+                @include vendor-prefix(box-sizing,
+                border-box !important);
+                width: 100% !important;
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+                height: 40px;
+
+                overflow: hidden;
+            }
+            input[type="Submit"] {
+                display: inline-block !important;
+                *display: inline;
+                zoom: 1;
+                margin-left: 5px;
+
+                width: 40%;
+                max-width: 200px;
+            }
+            input[type="Button"] {
+                display: inline-block !important;
+                *display: inline;
+
+                margin-left: 5px;
+
+                width: 40%;
+                max-width: 200px;
+            }
+            input[type="Cancel"] {
+                display: inline-block !important;
+                *display: inline;
+
+                margin-left: 5px;
+
+                width: 40%;
+                max-width: 200px;
+            }
+            input[type="Submit"]:hover {}
+            input[type="Cancel"]:hover {}
+            .formFields_data {
+                padding: 0 20px;
+                .formContent {
+                    overflow-y: visible;
+                    height: auto;
+                }
+                .form_section {
+                    margin-bottom: 20px;
+                    span.form_section_title {
+                        display: block;
+                        padding: 20px 0;
+                    }
+                    .form_section_content {
+                        padding: 10px 0;
+                        font-size: 0;
+                        .fieldName {
+                            display: inline-block;
+                            *display: inline;
+
+                            padding: 10px 20px;
+                            @include vendor-prefix(box-sizing,
+                            border-box);
+                            width: 50%;
+
+                            margin-top: 1px;
+                        }
+                        .fieldContent {
+                            display: inline-block;
+                            *display: inline;
+                            zoom: 1;
+                            padding: 10px 20px;
+                            @include vendor-prefix(box-sizing,
+                            border-box);
+                            width: 50%;
+
+                            margin-top: 1px;
+                        }
+                    }
+                }
+            }
+            .fd_container {
+
+                height: auto;
+
+                .imageContainer {
+                    position: relative;
+                }
+            }
+        }
+        .animated {
+            .d_left {
+                @include vendor-prefix(animation-delay,
+                .3s);
+            }
+            .d_right {
+                @include vendor-prefix(animation-delay,
+                .3s);
+            }
+            .d_down {
+                @include vendor-prefix(animation-delay,
+                .4s);
+            }
+        }
+        .sp-challenge-action-portlet {
+            .sp_profile {
+                section.profile_content {
+                    .profile_forms_wrap {
+                        .profile_form {
+                            margin: 0;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        /** Dashboard **/
+        .my-challenges-action-portlet {
+            .sp_profile {
+                section.profile_content {
+                    .profile_forms_wrap {
+                        .profile_form {
+                            margin: 0;
+                            margin-top: 0;
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+            .sp_results_wrap {
+                padding: 0;
+                margin: 20px 0;
+                .profile_form {
+                    width: 100% !important;
+                }
+            }
+
+            .result_item {
+                width: 100%;
+                max-width: 100%;
+                min-width: 100%;
+                min-height: 170px;
+                height: 170px;
+                max-height: 170px;
+                margin: .2%;
+
+                figure,
+                .result_item_image {
+                    display: inline-block;
+                    *display: inline;
+
+                    width: 35%;
+                }
+                .result_item_title {
+                    height: 100%;
+                    padding: 20px;
+                    display: inline-block;
+                    *display: inline;
+
+                    width: 65%;
+
+                    position: relative;
+                }
+                .result_item_author {
+                    display: inline-block;
+                    *display: inline;
+
+                    right: 0;
+                    left: auto;
+                    bottom: 0;
+                }
+            }
+        }
+        .my-startups-portlet {
+            #toggler {
+                margin: 20px 0;
+                .toggler_item {
+                    &.active {
+                        .toggler_content {
+                            height: 120px!important;
+                        }
+                    }
+                }
+            }
+            .myStartups {
+                padding: 40px 20px;
+            }
+
+            .mystartup_content {
+                margin: 10px 0;
+
+                .startup_name {
+                    a {
+                        display: inline!important;
+                    }
+                }
+                .myStartupActionIcons {
+                    float: right;
+                }
+                li {
+                    padding: 5px 0;
+                    position: relative;
+                    span {
+                        display: inline-block;
+                        *display: inline;
+
+                        margin-right: 10px;
+                        &.startup_logo {
+                            width: 45px;
+                            height: 45px;
+
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        a {
+                            display: inline-block;
+                            *display: inline;
+                            zoom: 1;
+
+                            margin: 15px 5px;
+                            width: 15px;
+                            height: 15px;
+                            img {
+                                width: 15px;
+
+                                margin-left: 3px;
+                                margin-top: -6px; //added by karthik 07June2017
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /** End Dashboard **/
+        .no_height {
+            height: 0 !important;
+        }
+
+        .posFixed {
+            position: fixed;
+            top: 0;
+            left: auto;
+            margin-top: 137px;
+            -webkit-transition: top 0.5s, bottom 0.5s;
+            &.posFixedAbs {
+                position: absolute;
+                top: auto;
+                bottom: 40px;
+                left: auto;
+            }
+        }
+        .posFixed-scrolled {
+            margin-top: 82px;
+        }
+        .section_title {
+
+            margin: 10px 0;
+            display: block;
+        }
+        .mobileNavSelect {
+            display: none;
+        }
+    }
+
+    @include screen(1101px,
+    1280px) {
+        .sp_profile {
+            section.profile_content {
+                .profile_forms_wrap {
+                    .profile_form {
+                        margin-left: 30%;
+                    }
+                }
+            }
+            /* &.sp_profile_view{
+            section.profile_content {
+                .profile_forms_wrap {
+                    .profile_form{
+
+                        margin-left: 0;
+
+                    }
+                }
+            }
+        } */
+        }
+    }
+
+    @include screen(320px,
+    767px) {
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review input[type="Button"].submit.reviewSubmit {
+            float: inherit;
+            margin: 0;
+            display: block !important;
+            width: 100% !important;
+
+            margin-left: 50%!important;
+        }
+        .sp_tab_buttons {
+            width: 100%!important;
+            margin: 0 auto !important;
+        }
+        .productDiv {
+            width: 100%!important;
+
+            padding: 20px;
+        }
+        .infoDiv {
+            width: 100%!important;
+        }
+        .page_headTitle #preview-button {
+            display: none;
+        }
+    }
+    /**Changes Done by karthik **/
+
+    .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form input[type="file"] {
+        display: inline-block;
+        zoom: 1;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 20px;
+        height: auto;
+        margin: 0;
+        -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html.aui.lp-fh .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation,
+    html.aui .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation,
+    html.aui.ab-us .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation {
+        width: 90% !important;
+        position: inherit;
+        height: 500px;
+        margin: 0 auto;
+    } //added by karthik for startup profile edit (sidebar alignment)
+    .ie8.aui #portlet_managestartupprofile_WAR_StartupProfileportlet .profile_form_navigation {
+        left: 20%;
+        margin-left: -180px;
+    }
+
+    .ie9.aui #portlet_managestartupprofile_WAR_StartupProfileportlet .profile_form_navigation {
+        left: 20%;
+        margin-left: -180px;
+    }
+
+    .ie10.aui #portlet_managestartupprofile_WAR_StartupProfileportlet .profile_form_navigation {
+        left: 20%;
+        margin-left: -180px;
+    }
+
+    .ie11.aui #portlet_managestartupprofile_WAR_StartupProfileportlet .profile_form_navigation {
+        left: 20%;
+        margin-left: -180px;
+    }
+
+    .safari.aui #portlet_managestartupprofile_WAR_StartupProfileportlet .profile_form_navigation {
+        left: 20%;
+        margin-left: -180px;
+    }
+
+    .ie .sp_profile section.profile_content .profile_forms_wrap .profile_form {
+        margin-left: 30%
+    }
+
+    .sp_profile section.profile_content .profile_forms_wrap .profile_form {
+        margin-left: 30%;
+    }
+
+
+
+
+    .aui.win.ie10 .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li i img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .aui.win.ie11 .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li i img {
+        width: 15px;
+        height: 15px;
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 320px) {
+
+        .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form {
+            margin-left: 0;
+        }
+
+        .ie8.aui .profile_form_navigation {
+            left: 0;
+            margin-left: 0;
+        }
+        .ie9.aui .profile_form_navigation {
+            left: 0;
+            margin-left: 0;
+        }
+        .ie10.aui .profile_form_navigation {
+            left: 0;
+            margin-left: 0;
+        }
+        .ie11.aui .profile_form_navigation {
+            left: 0;
+            margin-left: 0;
+        }
+        .safari.aui .profile_form_navigation {
+            left: 0;
+            margin-left: 0;
+        }
+
+        .safari.aui #portlet_managestartupprofile_WAR_StartupProfileportlet .profile_form_navigation {
+            left: 0 !important;
+            margin-left: 0!important;
+        }
+        .ie.aui #portlet_managestartupprofile_WAR_StartupProfileportlet .profile_form_navigation {
+            left: 0!important;
+            margin-left: 0!important;
+        }
+        .ie10.aui #portlet_managestartupprofile_WAR_StartupProfileportlet .profile_form_navigation {
+            left: 0!important;
+            margin-left: 0!important;
+        }
+        .aui .tabdetails-content {
+            .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form {
+                vertical-align: top;
+                width: 100%;
+                max-width: 960px;
+                padding: 20px;
+            }
+            .page_headTitle {
+                line-height: normal;
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .aui .proceedFromTop.hide {
+        display: none;
+    }
+        @include screen (1024px, 1366px, landscape) {
+
+    html.aui .sp_profile .profile_content .profile_forms_wrap .profile_form_navigation nav ul li
+    {
+        display: block !important;
+    }
+}
+    
+    // Added by Aishwarya - begins
+    .aui .startup-create-prefrences {
+    	margin-top: 30px;
+    	display: grid;
+    }
+    
+    .aui .startup-create-prefrences-fields{
+    	margin-left: 30px;
+    }
+    
+    // Added by Aishwarya - ends
+    
+    

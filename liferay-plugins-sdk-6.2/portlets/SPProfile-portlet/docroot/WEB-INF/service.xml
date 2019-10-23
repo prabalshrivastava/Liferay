@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.spprofile">
+	<author>harini</author>
+	<namespace>SPProfile</namespace>
+
+	<entity name="ProfilePreferences" table="SPProfilePreferences" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="proferenceId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="layoutId" type="String" />
+		<column name="portletId" type="String" />
+		<column name="preferenceName" type="String" />
+		<column name="portletPreferences" type="String" />
+
+		<!-- Finder methods -->
+
+		<finder name="layOutIdAndPortletId" return-type="Collection">
+			<finder-column name="layoutId" />
+			<finder-column name="portletId" />
+		</finder>
+		<finder name="layOutIdPortletIdAndPreferenceName" return-type="ProfilePreferences">
+			<finder-column name="layoutId" />
+			<finder-column name="portletId" />
+			<finder-column name="preferenceName" />
+		</finder>
+	</entity>
+</service-builder>

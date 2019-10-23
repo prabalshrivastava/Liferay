@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>8F04A2EF-9064-4EC4-B796-8ED3C32CF855</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Missing-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03---Startup-details-About" transform="translate(-545.000000, -732.000000)">
+            <g id="Video" transform="translate(150.000000, 520.000000)">
+                <g id="Icon-play-regular-yellow" filter="url(#filter-1)" transform="translate(400.000000, 215.000000)">
+                    <path d="M23.5,0 C10.520748,0 0,10.520748 0,23.5 C0,36.479252 10.520748,47 23.5,47 C36.479252,47 47,36.479252 47,23.5 C47,10.520748 36.479252,0 23.5,0 L23.5,0 Z" id="Shape" stroke="#FED02F"></path>
+                    <path d="M17.625,32.293571 C17.625,32.844804 18.0059468,33.0467723 18.4618821,32.753671 L30.4964513,25.0171623 C30.9586485,24.7200355 30.9523866,24.2342723 30.4964513,23.941171 L18.4618821,16.2046623 C17.9996849,15.9075355 17.625,16.1200549 17.625,16.6647623 L17.625,32.293571 Z" id="Shape" fill="#FED02F"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

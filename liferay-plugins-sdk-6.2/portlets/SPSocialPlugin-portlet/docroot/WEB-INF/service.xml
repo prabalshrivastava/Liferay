@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.spsocialsharing">
+	<author>harini</author>
+	<namespace>SPSocialSharing</namespace>
+
+	<entity name="SPSocialSharing" table="SPSocialSharing"
+		local-service="true" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spSocialSharingId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+
+		<!-- Other fields -->
+
+		<column name="classNameId" type="long" />
+		<column name="classPK" type="long" />
+		<column name="facebook" type="int" />
+		<column name="twitter" type="int" />
+		<column name="linkedin" type="int" />
+		<column name="yahoo" type="int" />
+		<column name="google" type="int" />
+		<column name="facebookPage" type="int" />
+
+		<!-- Finder methods -->
+
+		<finder name="classNameIdAndClassPK" return-type="SPSocialSharing"
+			unique="true">
+			<finder-column name="classNameId" />
+			<finder-column name="classPK" />
+		</finder>
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+	</entity>
+
+</service-builder>

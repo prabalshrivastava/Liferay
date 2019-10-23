@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.spscheduler.model.SPJobEntry">
+		<field name="uuid" type="String" />
+		<field name="spJobEntryId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="jobName" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="jobClass" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="portletId" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="status" type="int" />
+		<field name="statusMsg" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="cronExpression" type="String" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+</model-hints>

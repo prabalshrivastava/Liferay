@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('font/fontawesome-webfont.eot?v=4.4.0');
+  src: url('font/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('font/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('font/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('font/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+}
+/**
+ * @license
+ * MyFonts Webfont Build ID 3776199, 2019-06-20T03:07:27-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed font(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: CentGothWGL-Italic by Monotype 
+ * URL: https://www.myfonts.com/fonts/mti/century-gothic/wgl-italic/
+ * Licensed pageviews: 5,000,000
+ * 
+ * Webfont: CentGothWGL by Monotype 
+ * URL: https://www.myfonts.com/fonts/mti/century-gothic/wgl-regular/
+ * Licensed pageviews: 10,000,000
+ * 
+ * Webfont: CentGothWGL-Bold by Monotype 
+ * URL: https://www.myfonts.com/fonts/mti/century-gothic/wgl-bold/
+ * Licensed pageviews: 10,000,000
+ * 
+ * Webfont: CentGothWGL-BdIt by Monotype 
+ * URL: https://www.myfonts.com/fonts/mti/century-gothic/wgl-bold-italic/
+ * Licensed pageviews: 10,000,000
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3776199
+ * font copyright: Copyright The Monotype Corporation. All rights reserved. &#x0022;Century Gothic&#x0022; is a trademark of The Monotype Corporation in the United States and/or other countries.
+ * 
+ * © 2019 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/399ec7");
+
+  
+@font-face {font-family: 'CentGothWGL-Italic';src: url('font/399EC7_0_0.eot');src: url('font/399EC7_0_0.eot?#iefix') format('embedded-opentype'),url('font/399EC7_0_0.woff2') format('woff2'),url('font/399EC7_0_0.woff') format('woff'),url('font/399EC7_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'CentGothWGL';src: url('font/399EC7_1_0.eot');src: url('font/399EC7_1_0.eot?#iefix') format('embedded-opentype'),url('font/399EC7_1_0.woff2') format('woff2'),url('font/399EC7_1_0.woff') format('woff'),url('font/399EC7_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'CentGothWGL-Bold';src: url('font/399EC7_2_0.eot');src: url('font/399EC7_2_0.eot?#iefix') format('embedded-opentype'),url('font/399EC7_2_0.woff2') format('woff2'),url('font/399EC7_2_0.woff') format('woff'),url('font/399EC7_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'CentGothWGL-BdIt';src: url('font/399EC7_3_0.eot');src: url('font/399EC7_3_0.eot?#iefix') format('embedded-opentype'),url('font/399EC7_3_0.woff2') format('woff2'),url('font/399EC7_3_0.woff') format('woff'),url('font/399EC7_3_0.ttf') format('truetype');}
+

@@ -1,0 +1,339 @@
+.aui select, .aui input[type="file"] {
+    height: 30px;
+    line-height: 17px;
+}
+#rsvpDetails {
+    overflow: auto;
+    width: 100%;
+}
+
+.dateContainer .Calendar-Icon{
+	display:none;
+}
+.rsvp-filter-details {
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.rsvp-list-label {
+    margin-right: 20px;
+    width: 25%;
+    display: inline-block;
+}
+
+.rsvp-filter-list {
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+#rsvpDetails table {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#rsvpDetails td {
+    text-align: left;
+}
+
+.rsvp-preference-border {
+    padding: 10px 10px 10px 20px;
+    width: 100%;
+    border:1px solid #bcbcbc;
+}
+
+.rsvp-textbox {
+    width: 200px;
+}
+
+#successMsgTemplate {
+    height: 18px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 97%;
+    margin-bottom: 10px;
+}
+
+.template-list {
+    height: 30px;
+    text-align:center!important	;
+    padding: 10px;
+}
+
+.mailtemplate-list-title {
+    padding: 7px;
+}
+
+#newTemplateDiv.campaignCreate{
+	    width: 75%;
+    margin: 0 auto;
+    
+    select,input[type="text"]{
+    	width:100%;
+    }
+}
+
+.aui #templateEdmRootNode{
+	select,input[type="text"]{
+    	width:100%!important;
+    }
+}
+
+#rsvpDiv{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#newTemplateDiv select, #subscriberDetail select{
+	height:43px;
+}
+
+#templateEdmRootNode{
+	border:1px solid #ccc;
+	background: none;
+    padding-left: 0px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.startDateWrap,.startTimeWrap{
+	display:inline-block;
+}
+
+.left-creatediv {
+    width: 25%;
+    display: inline-block;
+        margin-bottom: 10px;
+}
+
+.right-creatediv {
+    width: 75%;
+    display: inline;
+        margin-bottom: 10px;
+}
+
+.right-creatediv select,.right-creatediv input,#edmsList select,#edmsList input,#subscriberDetail select,#subscriberDetail input[type="text"]{
+	width:300px!important;
+}
+
+#subscriberDetails input[type="text"]{
+	width:100px!important;
+	    padding: 10px 0;
+}
+
+.mailTemplateSectionHidden {
+    height: 0px;
+    visibility: hidden;
+}
+
+.mailTemplateSectionSlide {
+    height: auto;
+    visibility: visible;
+}
+
+.mailtemplate-subtitle {
+    height: 35px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.campaign-mainTitle {
+    width: 100%;
+    padding-left: 10px;
+    margin-top: 30px;
+}
+
+.campaign-Title {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.campaign-detail-div {
+    font-size: 15px;
+    text-align: left;
+    padding-left: 0px;
+    width: 22%;
+    display: inline-block;
+}
+
+.black_overlay {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+.white_content {
+    display: none;
+    position: absolute;
+    top: 9%;
+    left: 25%;
+    width: 55%;
+    height: 50%;
+    padding: 16px;
+    z-index: 1002;
+    overflow: auto;
+}
+
+.loadMore_hide {
+    display: none;
+}
+
+.loadMore_show {
+    visibility: visible;
+}
+
+.rsvpbox-title {
+    text-align: center;
+    width: 100%;
+    line-height: 40px;
+    margin-top:40px;
+}
+
+.addClass{
+	text-align: right; 
+	display: inline-block; 
+	width: 100%; 
+	padding-bottom: 20px;
+}
+
+.hide {
+display : none;
+}
+#edmsList .edmName{
+ width: 300px;
+}
+.mailTemplateId{
+/*display: block;*/
+}
+.croneType{
+display : block;
+}
+.dateContainer{
+margin-bottom: 20px;
+}
+.delayContanier{
+margin-top: 10px;
+}
+#edmsList  .delayUnit{
+display: inline-block;
+}
+#edmsList .delayAmount{
+display: inline-block;
+width: 80px;
+}
+#edmsList .not-active {
+   pointer-events: none;
+   cursor: default;
+   color: black;
+}
+.dayContainer{
+	margin-top: 20px;
+}
+#mailTemplateExpand{
+display: inline-block;
+}
+
+    .subscribeOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ 
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999999;
+}
+.subscribeOverlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.subscribePopup {
+  margin: 150px auto;
+  padding: 40px;
+
+  width: 40%;
+  min-height: 300px;
+  position: relative;
+
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+}
+
+.subscribePopup h2 {
+  margin-top: 20px;
+
+ 
+}
+.subscribePopup .subscribeClose {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+ 
+}
+
+
+.subscribePopup .content {
+
+  max-height: 40%;
+    overflow: auto;
+    margin-top: 15px;
+    
+}
+
+@media screen and (max-width: 700px){
+  .subscribeBox{
+    width: 70%;
+  }
+  .subscribePopup{
+    width: 70%;
+  }
+}
+
+/** for mail subscription screen **/
+
+.subscribeFormWrap .subscribeForm .control-group{
+display:block;
+}
+
+.campaignNameDisplay{
+	    text-align: center;
+    font-size: 22pt;
+}
+
+.subscribeFormWrap .subscribeForm{
+padding:20px 40px 40px!important;
+width:50%;
+margin:40px auto!important;
+text-align:center!important;
+display: block !important;
+}
+
+.subscribeFormWrap .subscribeForm label {
+    display: block!important;
+    text-align:left;
+}
+
+/* #_mailsubscribe_WAR_SPMailportlet_INSTANCE_p1Yy152Pfh5b_fm {
+    display: block!important;
+    margin-top: 0px!important;
+} */
+
+.subscribeFormWrap .subscribeForm a {
+    padding: 10px 15px;
+}

@@ -1,0 +1,349 @@
+@import "_sp_custom_variables";
+@import "_sp_mixins";
+@import "sp_media-queries";
+
+@include screen(320px, 767px) {
+    html.aui {
+        
+        .sp_profile {
+            section.head {
+               
+                .headText {
+                   
+                    font-size: 12pt;
+                    span {
+                        font-size: $fontSize-big;
+                    }
+                }
+                .cta_wrap {
+                  
+                    .cta_item {
+                       
+                       
+                    }
+                    
+                    .sep_line {
+                       
+                        span {
+                           
+                            font-size: 8pt;
+                        }
+                    }
+                }
+            }
+            section.profile_content {
+               
+                .profile_forms_wrap {
+                    
+                    .profile_form_navigation {
+                        
+                        background: $white;
+                        text-align: center;
+                       
+                        .formNavTitle {
+                            
+                            font-size: $fontSize-smaller;
+                          
+                            text-align: center;
+                        }
+                        nav {
+                            .mobileNavSelect {
+                               
+                                zoom: 1;
+                                vertical-align: middle;
+                               
+                                background-color: $custom-color-78;
+                                color: $white;
+                               
+                            }
+                            .mobileNavSelect::after {
+                                content: ">";
+                                color: $custom-color-114;
+                                font-size: 12pt;
+                               
+                                zoom: 1;
+                                vertical-align: middle;
+                                position: absolute;
+                                right: 5%;
+                                @include vendor-prefix(transform, rotate(90deg));
+                            }
+                            ul {
+                                padding:0;
+                                li {
+                                   
+                                    background: $custom-color-24;
+                                    border-bottom: 1px solid $custom-color-127;
+                                    span {
+                                        color: $black;
+                                       
+                                    }
+                                    span::after {
+                                        @include vendor-prefix(transform, rotate(90deg));
+                                        content: "" !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .profile_form {
+                       
+                        .profile_avatar_wrap {
+                          
+                            text-align: center;
+                        }
+                        .form {
+                           
+                            .formTitle {
+                              
+                                font-size: $fontSize-small;
+                            }
+                           
+                           
+                        }
+                        
+                        .form.mobileActive {
+                            .formTitle::after {
+                                content: '-';
+                            }
+                            
+                        }
+                        
+                        .formCTA {
+                            display: block;
+                        }
+                        input[type="Button"],
+                        input[type="Cancel"],
+                        input[type="Submit"] {
+                           
+                            font-size: 8pt !important;
+                        }
+                       
+                        label,
+                        .aui-field-label {
+                           
+                            text-transform: none;
+                        }
+                        .form_review,
+                        .form_disabled,
+                        .normal_view {
+                            
+                            .formFields_data {
+                               
+                                .form_section {
+                                    .form_section_content {
+                                        .fieldContent {
+                                            word-break: break-all;
+                                        }
+                                        .fieldName {
+                                            word-break: break-all;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            
+        }
+        .sp_ratings {
+            // position: fixed;
+            // top: 0;
+            // left: 0;
+            // width: 100%;
+            // padding: 0;
+            // margin: 0;
+            // margin-top: 93px;
+            .ratingsSection_wrap {
+               
+                .rs_container {
+                    .rs_ave {
+                        .aveText {
+                           
+                            vertical-align: middle;
+                            font-size: 9pt;
+                            
+                        }
+                        .aveValue {
+                          
+                            vertical-align: middle;
+                            font-size: 9pt;
+                            line-height: 9pt;
+                        }
+                    }
+                    
+                }
+            }
+        }
+       
+    }
+    
+}
+
+@include screen(768px, 1100px, portrait) {
+    html.aui {
+        
+      
+       
+        .sp_profile {
+            section.head {
+               
+                .headText {
+                  
+                    font-size: 12pt;
+                    span {
+                        font-size: $fontSize-big;
+                    }
+                }
+                .cta_wrap {
+                   
+                  
+                    .sep_line {
+                       
+                        span {
+                            
+                            font-size: 8pt;
+                        }
+                    }
+                }
+            }
+            .profile_content {
+              
+                .profile_forms_wrap {
+                   
+                    .profile_form_navigation {
+                       
+                        background: $white;
+                        text-align: center;
+                      
+                        .formNavTitle {
+                          
+                            font-size: $fontSize-smaller;
+                          
+                            text-align: center;
+                        }
+                        nav {
+                            .mobileNavSelect {
+                                
+                                zoom: 1;
+                                vertical-align: middle;
+                               
+                                background-color: $custom-color-78;
+                                color: $white;
+                               
+                            }
+                            .mobileNavSelect::after {
+                                content: ">";
+                                color: $custom-color-114;
+                                font-size: 12pt;
+                               
+                                zoom: 1;
+                                vertical-align: middle;
+                                
+                                @include vendor-prefix(transform, rotate(90deg));
+                            }
+                            ul {
+                                li {
+                                   
+                                    background: $custom-color-24;
+                                    border-bottom: 1px solid $custom-color-127;
+                                    span {
+                                        color: $black;
+                                       
+                                    }
+                                    span::after {
+                                        @include vendor-prefix(transform, rotate(90deg));
+                                        content: "" !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .profile_form {
+                        
+                        
+                        .profile_avatar_wrap {
+                           
+                            text-align: center;
+                        }
+                        .form {
+                           
+                            .formTitle {
+
+                                font-size: $fontSize-small;
+                            }
+                            
+                            
+                        }
+                        
+                        .form.mobileActive {
+                            .formTitle::after {
+                                content: '-';
+                            }
+                          
+                        }
+                        
+                        
+                        input[type="Button"],
+                        input[type="Cancel"],
+                        input[type="Submit"] {
+                          
+                            font-size: 8pt !important;
+                        }
+                        
+                        label,
+                        .aui-field-label {
+                           
+                            text-transform: none;
+                        }
+                        .form_review,
+                        .form_disabled,
+                        .normal_view {
+                            
+                            .formFields_data {
+
+                                .form_section {
+                                    .form_section_content {
+                                        .fieldContent {
+                                            word-break: break-all;
+                                        }
+                                        .fieldName {
+                                            word-break: break-all;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+           
+        }
+        .sp_ratings {
+            .ratingsSection_wrap {
+               
+                .rs_container {
+                    .rs_ave {
+                        .aveText {
+                            
+                            font-size: 9pt;
+                            
+                        }
+                        .aveValue {
+                           
+                            font-size: 9pt;
+                            line-height: 9pt;
+                        }
+                    }
+                   
+                }
+            }
+        }
+        .page_headTitle {
+            line-height: 24pt;
+        }
+        
+    }
+}

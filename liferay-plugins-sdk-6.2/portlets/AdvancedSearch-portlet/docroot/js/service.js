@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.SPSearchFilter", "com.sambaash.platform.srv.filter.service", "AdvancedSearch-portlet");

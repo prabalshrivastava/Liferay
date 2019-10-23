@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.sppayment.model.SPPurchase">
+		<field name="spPurchaseId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="cartId" type="long" />
+		<field name="extPaymentId" type="String" />
+		<field name="extStatus" type="String" />
+		<field name="extErrorCode" type="long" />
+		<field name="extErrorMsg" type="String" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+</model-hints>

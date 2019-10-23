@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.enrolment">
+	<author>Baxture</author>
+	<namespace>enrolment</namespace>
+	
+	<entity name="EnrollBatchUpload" local-service="true" remote-service="false">		
+		<column name="uploadStatId" type="long" primary="true" />
+		
+		<column name="uploadTransactId" type="String" />
+		<column name="errorField" type="String" />
+		<column name="errorReason" type="String" />
+		
+		<column name="uploadedRecId" type="long" />
+		
+		<column name="userId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Finder -->
+		<finder name="UploadTransactId" return-type="Collection">
+			<finder-column name="uploadTransactId" />
+		</finder>
+	</entity>
+	
+	<entity name="EnrollUploadedTempRecords" local-service="true" remote-service="false">		
+		<column name="uploadedRecId" type="long" primary="true" />
+		<column name="uploadTransactId" type="String" />
+		<!-- <column name="rowData" type="String" /> -->
+		
+		<column name="sprCode" type="String" />
+		<column name="title" type="String" />
+		<column name="fullOfficialName" type="String" />
+		<column name="gender" type="String" />
+		<column name="dateofBirth" type="String" />
+		<column name="email" type="String" />
+		
+		<column name="userId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Finder -->
+		<finder name="UploadTransactId" return-type="EnrollUploadedTempRecords">
+			<finder-column name="uploadTransactId" />
+		</finder>
+	</entity>
+</service-builder>

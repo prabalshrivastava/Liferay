@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.SPMail", "com.sambaash.platform.srv.mail.service", "SPMail-portlet");

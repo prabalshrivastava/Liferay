@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="45px" height="44px" viewBox="0 0 45 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon - Competency Unit</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Lithan---Product---Create/Edit-(Desktop)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00---Product-(Create)---Intro" transform="translate(-698.000000, -297.000000)">
+            <g id="Content-/-Basic-Data" transform="translate(-1.000000, 0.000000)">
+                <g id="Dropdown" transform="translate(427.000000, 246.000000)">
+                    <g id="Group-2" transform="translate(209.000000, 0.000000)">
+                        <g id="Icon---Competency-Unit" transform="translate(63.000000, 51.000000)">
+                            <rect id="Rectangle-932" stroke="#656565" x="0" y="1.72788942" width="45" height="41.469346" rx="2"></rect>
+                            <path d="M9.51923077,0.863944708 L9.51923077,7.94829114 L13.9014569,7.94829114" id="Line" stroke="#979797" stroke-linecap="square" transform="translate(11.710344, 4.406118) scale(-1, 1) rotate(-180.000000) translate(-11.710344, -4.406118) "></path>
+                            <path d="M33.75,0.863944708 L33.75,7.94829114 L38.1322261,7.94829114" id="Line" stroke="#979797" stroke-linecap="square" transform="translate(35.941113, 4.406118) scale(-1, 1) rotate(-180.000000) translate(-35.941113, -4.406118) "></path>
+                            <path d="M16.4423077,16.4149494 L37.2115385,16.4149494" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                            <path d="M16.4423077,19.8707283 L37.2115385,19.8707283" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                            <polygon id="Star-1" fill="#F59807" points="9.51923077 20.3027006 6.9759292 21.6375686 7.46165658 18.8102729 5.40408238 16.8079709 8.24757998 16.395474 9.51923077 13.8231153 10.7908816 16.395474 13.6343792 16.8079709 11.576805 18.8102729 12.0625323 21.6375686 "></polygon>
+                            <path d="M26.8269231,28.5101753 L37.2115385,28.5101753" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                            <path d="M26.8269231,31.9659542 L37.2115385,31.9659542" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                            <polygon id="Star-1" fill="#F59807" points="9.51923077 32.3979265 6.9759292 33.7327945 7.46165658 30.9054988 5.40408238 28.9031968 8.24757998 28.4906999 9.51923077 25.9183412 10.7908816 28.4906999 13.6343792 28.9031968 11.576805 30.9054988 12.0625323 33.7327945 "></polygon>
+                            <polygon id="Star-1" fill="#F59807" points="19.9038462 32.3979265 17.3605446 33.7327945 17.846272 30.9054988 15.7886978 28.9031968 18.6321954 28.4906999 19.9038462 25.9183412 21.1754969 28.4906999 24.0189945 28.9031968 21.9614203 30.9054988 22.4471477 33.7327945 "></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

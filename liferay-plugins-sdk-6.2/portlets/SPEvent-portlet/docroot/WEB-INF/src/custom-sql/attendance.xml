@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+	<sql
+		id="com.sambaash.platform.srv.rsvp.service.persistence.RsvpDetailFinder.findByRsvpId">
+		<![CDATA[
+			SELECT
+				a.spRsvpPaymentId AS rsvpPaymentId,
+				b.firstName AS firstName,
+				b.lastName AS lastName,
+				b.emailAddress AS emailAddress,
+				b.attendance AS attendance,
+				a.numberOfPeople AS numberOfPeople,
+				a.transactionId AS payPalId,
+				a.transactionAmount AS amount,
+				a.transactionDate AS transactionDate,
+				c.userInfo AS userInfo,
+				a.spRsvpDetailId AS rsvpDetailId,
+				a.ticketNumber AS ticketNumber,
+				d.promoCode AS promoCode,
+				b.gender AS gender,
+				b.ageGroup AS ageGroup,
+				b.identifiactionType AS identificationType,
+				b.nric AS nric,
+				b.streetAddress1 AS streetAddress1,
+				b.streetAddress2 AS streetAddress2,
+				b.city AS city,
+				b.state_ AS state,
+				b.postalCode AS postalCode,
+				b.country AS country,
+				b.phoneNumber1 AS phoneNumber1,
+				b.phoneNumber2 AS phoneNumber2,
+				b.hearAboutUs AS hearAboutUs,
+				b.attendedWebinar AS attendedWebinar
+			FROM
+				SPRsvpPayment a
+			INNER JOIN SPRsvpDetail b ON a.spRsvpDetailId = b.spRsvpDetailId
+			AND a.transactionStatus = 'Completed'
+			AND b.spRsvpId = ?
+			LEFT OUTER JOIN SPSocialProfile c ON b.userId = c.userId LEFT JOIN SPRsvpPromoCode d ON a.spRsvpPromoCodeId = d.spRsvpPromoCodeId 
+			ORDER BY
+				a.transactionDate;
+		]]>
+	</sql>
+
+
+	<sql
+		id="com.sambaash.platform.srv.rsvp.service.persistence.RsvpDetailFinder.findByName">
+		<![CDATA[
+			SELECT
+				a.spRsvpPaymentId AS rsvpPaymentId,
+				b.firstName AS firstName,
+				b.lastName AS lastName,
+				b.emailAddress AS emailAddress,
+				b.attendance AS attendance,
+				a.numberOfPeople AS numberOfPeople,
+				a.transactionId AS payPalId,
+				a.transactionAmount AS amount,
+				a.transactionDate AS transactionDate,
+				c.userInfo AS userInfo,
+				a.spRsvpDetailId AS rsvpDetailId,
+				a.ticketNumber AS ticketNumber,
+				d.promoCode AS promoCode,
+				b.gender AS gender,
+				b.ageGroup AS ageGroup,
+				b.identifiactionType AS identificationType,
+				b.nric AS nric,
+				b.streetAddress1 AS streetAddress1,
+				b.streetAddress2 AS streetAddress2,
+				b.city AS city,
+				b.state AS state,
+				b.postalCode AS postalCode,
+				b.country AS country,
+				b.phoneNumber1 AS phoneNumber1,
+				b.phoneNumber2 AS phoneNumber2,
+				b.hearAboutUs AS hearAboutUs,
+				b.attendedWebinar AS attendedWebinar
+			FROM
+				SPRsvpPayment a
+			INNER JOIN SPRsvpDetail b ON a.spRsvpDetailId = b.spRsvpDetailId
+			AND a.transactionStatus = 'Completed'
+			AND b.spRsvpId = ?
+			AND (LOWER(b.firstName) like ? or LOWER(b.lastName) like ?)
+			LEFT OUTER JOIN SPSocialProfile c ON b.userId = c.userId LEFT JOIN SPRsvpPromoCode d ON a.spRsvpPromoCodeId = d.spRsvpPromoCodeId 
+			ORDER BY
+				a.transactionDate;
+		]]>
+	</sql>
+
+	<sql
+		id="com.sambaash.platform.srv.rsvp.service.persistence.RsvpDetailFinder.findByEmailAddress">
+		<![CDATA[
+			SELECT
+				a.spRsvpPaymentId AS rsvpPaymentId,
+				b.firstName AS firstName,
+				b.lastName AS lastName,
+				b.emailAddress AS emailAddress,
+				b.attendance AS attendance,
+				a.numberOfPeople AS numberOfPeople,
+				a.transactionId AS payPalId,
+				a.transactionAmount AS amount,
+				a.transactionDate AS transactionDate,
+				c.userInfo AS userInfo,
+				a.spRsvpDetailId AS rsvpDetailId,
+				a.ticketNumber AS ticketNumber,
+				d.promoCode AS promoCode,
+				b.gender AS gender,
+				b.ageGroup AS ageGroup,
+				b.identifiactionType AS identificationType,
+				b.nric AS nric,
+				b.streetAddress1 AS streetAddress1,
+				b.streetAddress2 AS streetAddress2,
+				b.city AS city,
+				b.state AS state,
+				b.postalCode AS postalCode,
+				b.country AS country,
+				b.phoneNumber1 AS phoneNumber1,
+				b.phoneNumber2 AS phoneNumber2,
+				b.hearAboutUs AS hearAboutUs,
+				b.attendedWebinar AS attendedWebinar
+				
+			FROM
+				SPRsvpPayment a
+			INNER JOIN SPRsvpDetail b ON a.spRsvpDetailId = b.spRsvpDetailId
+			AND a.transactionStatus = 'Completed'
+			AND b.spRsvpId = ?
+			AND LOWER(b.emailAddress) = ?
+			LEFT OUTER JOIN SPSocialProfile c ON b.userId = c.userId LEFT JOIN SPRsvpPromoCode d ON a.spRsvpPromoCodeId = d.spRsvpPromoCodeId 
+			ORDER BY
+				a.transactionDate;
+		]]>
+	</sql>
+
+
+
+</custom-sql>

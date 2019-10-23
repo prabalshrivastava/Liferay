@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_2_0.dtd">
+
+<liferay-portlet-app>
+	<portlet>
+		<portlet-name>manage-startup-profile</portlet-name>
+		<icon>/icon.png</icon>
+		<indexer-class>com.sambaash.platform.startupprofile.indexer.StartupProfileIndexer</indexer-class>
+		<friendly-url-mapper-class>com.liferay.portal.kernel.portlet.DefaultFriendlyURLMapper</friendly-url-mapper-class>
+		<friendly-url-mapping>manage-profile</friendly-url-mapping>
+		<friendly-url-routes>com/sambaash/platform/startupprofile/routes/manage-startup-profile-routes.xml</friendly-url-routes>
+		<template-handler>com.sambaash.platform.startupprofile.template.StartupDisplayTemplateHandler</template-handler>
+		<user-notification-definitions>user-notifications.xml</user-notification-definitions>
+	    <user-notification-handler-class>com.sambaash.platform.startupprofile.notification.StartupProfileNotificationHandler</user-notification-handler-class>	
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
+		<css-class-wrapper>manage-startup-profile-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>my-startups</portlet-name>
+		<icon>/icon.png</icon>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>my-startups-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>startuplisting</portlet-name>
+		<icon>/icon.png</icon>
+		<friendly-url-mapper-class>com.liferay.portal.kernel.portlet.DefaultFriendlyURLMapper</friendly-url-mapper-class>
+		<friendly-url-mapping>startup-listing</friendly-url-mapping>
+		<friendly-url-routes>com/sambaash/platform/startupprofile/routes/startup-listing-routes.xml</friendly-url-routes>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>startuplisting-portlet</css-class-wrapper>
+	</portlet>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>guest</role-name>
+		<role-link>Guest</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>power-user</role-name>
+		<role-link>Power User</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>user</role-name>
+		<role-link>User</role-link>
+	</role-mapper>
+</liferay-portlet-app>

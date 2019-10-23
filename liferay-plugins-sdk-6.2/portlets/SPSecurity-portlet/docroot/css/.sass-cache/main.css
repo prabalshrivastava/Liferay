@@ -1,0 +1,13 @@
+h1 {
+  color: #1A1A1A;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 0 7px; }
+
+.leftColumn {
+  width: 30%; }
+
+.rightColumn {
+  width: 70%; }
+

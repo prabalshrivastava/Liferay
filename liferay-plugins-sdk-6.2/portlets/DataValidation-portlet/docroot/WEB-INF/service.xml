@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.validation">
+	<author>gauravvijayvergia</author>
+	<namespace>DataValidation</namespace>
+
+	<entity name="SPStudentProgramme" table="SPStudentProgramme"
+		local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="spStudentCourseId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="nric" type="String" />
+		<column name="emailAddress" type="String" />
+		<column name="programme" type="String" />
+		<column name="courseCentre" type="String" />
+		<column name="courseStartDate" type="Date" />
+		<column name="courseEndDate" type="Date" />
+
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="courseEndDate" />
+		</order>
+
+		<finder name="NricAndProgramme" return-type="Collection">
+			<finder-column name="nric"></finder-column>
+			<finder-column name="programme"></finder-column>
+		</finder>
+
+		<finder name="EmailAddressAndProgramme" return-type="Collection">
+			<finder-column name="emailAddress"></finder-column>
+			<finder-column name="programme"></finder-column>
+		</finder>
+
+	</entity>
+
+	<entity name="SPStudentProgrammeResult" table="SPStudentProgrammeResult"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spStudentProgrammeResultId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="nric" type="String" />
+		<column name="emailAddress" type="String" />
+		<column name="courseCentre" type="String" />
+		<column name="courseStartDate" type="Date" />
+		<column name="courseEndDate" type="Date" />
+		<column name="programme" type="String" />
+		<column name="exam" type="Date" />
+		<column name="examType" type="String" />
+		<column name="paper1Result" type="String" />
+		<column name="paper2Result" type="String" />
+		<column name="overallResult" type="String" />
+
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="exam" />
+		</order>
+
+		<finder name="NricAndProgramme" return-type="Collection">
+			<finder-column name="nric"></finder-column>
+			<finder-column name="programme"></finder-column>
+		</finder>
+
+		<finder name="EmailAddressAndProgramme" return-type="Collection">
+			<finder-column name="emailAddress"></finder-column>
+			<finder-column name="programme"></finder-column>
+		</finder>
+
+	</entity>
+</service-builder>

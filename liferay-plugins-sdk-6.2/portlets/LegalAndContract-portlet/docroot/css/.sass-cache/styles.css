@@ -1,0 +1,124 @@
+/*
+Styles for HTML5 File Drag & Drop demonstration
+Featured on SitePoint.com
+Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
+*/
+.forms_fileDrag_wrap {
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -o-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border: 1px solid #333;
+  padding: 20px;
+  background: #fff;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod�EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, white 0%, #f7f7f7 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #f7f7f7));
+  background: -webkit-linear-gradient(top, white 0%, #f7f7f7 100%);
+  background: -o-linear-gradient(top, white 0%, #f7f7f7 100%);
+  background: -ms-linear-gradient(top, white 0%, #f7f7f7 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #f7f7f7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f7f7f7',GradientType=0 ); }
+
+.form_fileDrag {
+  display: block;
+  font-weight: 400;
+  font-size: 15pt;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 1em 0;
+  color: #d5d5d5;
+  border: 2px dashed #d5d5d5;
+  border-radius: 7px;
+  cursor: default;
+  transition: all ease-in-out .5s;
+  -webkit-transition: all ease-in-out .5s;
+  -moz-transition: all ease-in-out .5s;
+  -o-transition: all ease-in-out .5s;
+  -ms-transition: all ease-in-out .5s; }
+
+.forms_fileDrag_wrap .field-label {
+  font-size: 11pt !important; }
+
+#filedrag1,
+#filedrag2 {
+  display: none;
+  text-align: center;
+  padding: 2em 0;
+  cursor: default;
+  font-weight: 400;
+  font-size: 15pt;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 1em 0;
+  color: #d5d5d5;
+  border: 2px dashed #d5d5d5;
+  border-radius: 7px;
+  cursor: default;
+  transition: all ease-in-out .5s;
+  -webkit-transition: all ease-in-out .5s;
+  -moz-transition: all ease-in-out .5s;
+  -o-transition: all ease-in-out .5s;
+  -ms-transition: all ease-in-out .5s; }
+
+#filedrag1.hover,
+#filedrag2.hover {
+  color: #c1362d;
+  border-color: #c1362d;
+  border-style: solid;
+  box-shadow: inset 0 3px 4px #888;
+  font-weight: 400;
+  font-size: 15pt;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 1em 0;
+  border: 2px dashed #c1362d;
+  border-radius: 7px;
+  cursor: default;
+  transition: all ease-in-out .5s;
+  -webkit-transition: all ease-in-out .5s;
+  -moz-transition: all ease-in-out .5s;
+  -o-transition: all ease-in-out .5s;
+  -ms-transition: all ease-in-out .5s; }
+
+img {
+  max-width: 100%; }
+
+pre {
+  width: 95%;
+  height: 8em;
+  font-family: monospace;
+  font-size: 0.9em;
+  padding: 1px 2px;
+  margin: 0 0 1em auto;
+  border: 1px inset #666;
+  background-color: #eee;
+  overflow: auto; }
+
+#messages {
+  padding: 0 10px;
+  margin: 1em 0;
+  border: 1px solid #999; }
+
+#filesTab1 p,
+#filesTab2 p {
+  display: block;
+  width: 240px;
+  padding: 2px 5px;
+  margin: 2px 0;
+  border: 1px inset #446;
+  border-radius: 5px;
+  background: #eeeeee url("/LegalAndContract-portlet/html/progress.png") 100% 0 repeat-y; }
+
+#filesTab1 p.success,
+#filesTab2 p.success {
+  background: #0c0 none 0 0 no-repeat; }
+
+#filesTab1 p.failed,
+#filesTab2 p.failed {
+  background: #c00 none 0 0 no-repeat; }
+

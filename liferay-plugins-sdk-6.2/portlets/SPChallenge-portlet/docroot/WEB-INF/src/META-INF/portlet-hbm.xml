@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.spchallenge.model.SPChallenge" />
+	<import class="com.sambaash.platform.srv.spchallenge.model.SPChallengeApplicant" />
+	<class name="com.sambaash.platform.srv.spchallenge.model.impl.SPChallengeImpl" table="SPChallenge">
+		<cache usage="read-write" />
+		<id name="spChallengeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="openTo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="type" type="com.liferay.portal.dao.orm.hibernate.StringType" column="type_" />
+		<property name="background" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="scope" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="benefits" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="budget" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startDate" type="org.hibernate.type.TimestampType" />
+		<property name="endDate" type="org.hibernate.type.TimestampType" />
+		<property name="applyBy" type="org.hibernate.type.TimestampType" />
+		<property name="extras" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="active_" />
+		<property name="notifyTo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="scout" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="logoId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="draft" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="budgetCcySign" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="brand" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="vpApprover" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="budgetApprover" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spchallenge.model.impl.SPChallengeApplicantImpl" table="SPChallengeApplicant">
+		<cache usage="read-write" />
+		<id name="spChallengeApplicantId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="applicantRefId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="applicantType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="spChallengeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="q1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q4" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q5" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q6" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q7" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q8" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q9" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q10" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q11" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q12" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q13" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q14" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q15" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q16" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q17" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q18" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q19" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="q20" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customStatus1" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="customStatus2" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="active_" />
+		<property name="applicationStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="notificationStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+</hibernate-mapping>

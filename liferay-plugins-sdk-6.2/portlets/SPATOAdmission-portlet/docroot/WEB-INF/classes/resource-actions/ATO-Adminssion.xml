@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 6.2.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_6_2_0.dtd">
+
+<resource-action-mapping>
+	<portlet-resource>
+		<portlet-name>ATO-Adminssion</portlet-name>
+		<permissions>
+			<supports>
+			    <action-key>VIEW_LISTING</action-key>
+                <action-key>VIEW_MODEL</action-key>
+                <action-key>ADD_MODEL</action-key>
+                <action-key>COPY_MODEL</action-key>
+                <action-key>EDIT_MODEL</action-key>
+                <action-key>EXPORT_MODEL</action-key>
+				<action-key>SEND_INVOICE</action-key>
+				<action-key>MAKE_PAYMENT</action-key>
+				<action-key>MARK_VERIFIED</action-key>
+				<action-key>MARK_SELF_SPONSORED</action-key>
+				<action-key>PRINT_MODEL</action-key>
+					<action-key>DOWNLOAD_INVOICE</action-key>
+				
+				
+			</supports>
+			<site-member-defaults>
+				<action-key>VIEW_LISTING</action-key>
+			</site-member-defaults>
+			<guest-defaults>
+				<action-key>VIEW_LISTING</action-key>
+			</guest-defaults>
+			<guest-unsupported>
+				<action-key>VIEW_MODEL</action-key>
+				<action-key>EXPORT_MODEL</action-key>
+				
+				<action-key>PRINT_MODEL</action-key>
+				
+				
+			</guest-unsupported>
+		</permissions>
+	</portlet-resource>
+
+</resource-action-mapping>

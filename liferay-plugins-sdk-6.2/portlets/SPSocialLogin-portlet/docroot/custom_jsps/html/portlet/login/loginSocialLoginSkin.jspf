@@ -1,0 +1,102 @@
+<%
+
+	boolean loginEnabledGoogle     = ExpandoValueLocalServiceUtil.getData(companyId,Company.class.getName(),"SP_SOCIAL_LOGIN","googleLoginEnabled",companyId,false);
+	boolean loginEnabledFacebook   = ExpandoValueLocalServiceUtil.getData(companyId,Company.class.getName(),"SP_SOCIAL_LOGIN","facebookLoginEnabled",companyId,false);
+	boolean loginEnabledTwitter    = ExpandoValueLocalServiceUtil.getData(companyId,Company.class.getName(),"SP_SOCIAL_LOGIN","twitterLoginEnabled",companyId,false);
+	boolean loginEnabledLinkedin   = ExpandoValueLocalServiceUtil.getData(companyId,Company.class.getName(),"SP_SOCIAL_LOGIN","linkedinLoginEnabled",companyId,false);
+	boolean loginEnabledMicrosoft  = ExpandoValueLocalServiceUtil.getData(companyId,Company.class.getName(),"SP_SOCIAL_LOGIN","microsoftLoginEnabled",companyId,false);
+	boolean loginEnabledLiferay    = ExpandoValueLocalServiceUtil.getData(companyId,Company.class.getName(),"SP_SOCIAL_LOGIN","enableLiferayLogin",companyId,true);
+	
+	
+	String facebookAuthURL = PortalUtil.getPathContext() + "/c/portal/facebook_social_login?cmd=login";
+	String taglibOpenFacebookLoginWindow = "javascript:var facebookSocialLoginWindow = window.open('" + facebookAuthURL.toString() + "', 'facebooksocial', 'align=center,directories=no,height=560,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,width=1000'); void(''); facebookSocialLoginWindow.focus();";
+	
+	String googleAuthURL = PortalUtil.getPathContext() + "/c/portal/google_social_login?cmd=login";
+	String taglibOpenGoogleLoginWindow = "javascript:var googleSocialLoginWindow = window.open('" + googleAuthURL.toString() + "', 'google', 'align=center,directories=no,height=560,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,width=1000'); void(''); googleSocialLoginWindow.focus();";
+	
+	String linkedinAuthURL = PortalUtil.getPathContext() + "/c/portal/linkedin_social_login?cmd=login";
+	String taglibOpenLinkedinLoginWindow = "javascript:var linkedinLoginWindow = window.open('" + linkedinAuthURL.toString() + "', 'linkedin', 'align=center,directories=no,height=560,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,width=1000'); void(''); linkedinLoginWindow.focus();";
+	
+	String microsoftAuthURL = PortalUtil.getPathContext() + "/c/portal/microsoft_social_login_cmd";
+	String taglibOpenMicrosoftLoginWindow = "javascript:var microsoftLoginWindow = window.open('" + microsoftAuthURL.toString() + "', 'microsoft', 'align=center,directories=no,height=560,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,width=1000'); void(''); microsoftLoginWindow.focus();";
+	
+	String twitterAuthURL = PortalUtil.getPathContext() + "/c/portal/twitter_social_login?cmd=login";
+	String taglibOpenTwitterLoginWindow = "javascript:var twitterLoginWindow = window.open('" + twitterAuthURL.toString() + "', 'twitter', 'align=center,directories=no,height=560,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,width=1000'); void(''); twitterLoginWindow.focus();";
+
+	PortletURL portletURL = renderResponse.createRenderURL();
+	portletURL.setParameter("skin",String.valueOf(Boolean.TRUE));	
+%>
+	<c:if test="<%=loginEnabledGoogle %>">
+		<aui:button-row>
+			<a class="btn-login-wrapper" href="<%=taglibOpenGoogleLoginWindow%>">
+				<div class="btn-login type-google">
+		          	    <%=LanguageUtil.get(pageContext, "login-with")+" "%>Google+
+		      	</div>
+			</a>
+		</aui:button-row>
+	</c:if>
+	
+	<c:if test="<%=loginEnabledFacebook %>">
+		<aui:button-row>
+			<a class="btn-login-wrapper" href="<%=taglibOpenFacebookLoginWindow%>">
+				<div class="btn-login type-facebook">
+		          	    <%=LanguageUtil.get(pageContext, "login-with")+" "%>Facebook
+		      		</div>
+			</a>
+		</aui:button-row>
+	</c:if>
+	
+	<c:if test="<%=loginEnabledTwitter %>">
+		<aui:button-row>
+			<a class="btn-login-wrapper" href="<%=taglibOpenTwitterLoginWindow%>">
+				<div class="btn-login type-twitter">
+		          	    <%=LanguageUtil.get(pageContext, "login-with")+" "%>Twitter
+		      		</div>
+			</a>
+		</aui:button-row>
+	</c:if>
+	
+	<c:if test="<%=loginEnabledLinkedin %>">
+		<aui:button-row>
+			<a class="btn-login-wrapper" href="<%=taglibOpenLinkedinLoginWindow%>">
+				<div class="btn-login type-linkedin">
+		          	    <%=LanguageUtil.get(pageContext, "login-with")+" "%>Linkedin
+		      		</div>
+			</a>
+		</aui:button-row>
+	</c:if>
+	
+	<c:if test="<%=loginEnabledMicrosoft %>">
+		<aui:button-row>
+			<a class="btn-login-wrapper" href="<%=taglibOpenMicrosoftLoginWindow%>">
+				<div class="btn-login type-microsoft">
+		          	    <%=LanguageUtil.get(pageContext, "login-with")+" "%>Microsoft
+		      		</div>
+			</a>
+		</aui:button-row>
+	</c:if>
+	
+	<c:if test="<%=loginEnabledLiferay  %>">	
+		<aui:button-row>
+			<a class="btn-login-wrapper" href="<%=portletURL.toString()%>">
+				<div class="btn-login type-liferay">
+		          	    <%=LanguageUtil.get(pageContext, "login-with")+" "%>Liferay
+		      		</div>
+			</a>
+		</aui:button-row>
+	</c:if>
+	
+	<c:if test="<%=!loginEnabledGoogle && !loginEnabledFacebook &&  !loginEnabledTwitter && !loginEnabledLinkedin && !loginEnabledMicrosoft && !loginEnabledLiferay%>">
+		<div class="portlet-msg-error">
+			<%=LanguageUtil.get(pageContext,"no-login-configured") %>	
+		</div>
+		<aui:button-row>
+			<a class="btn-login-wrapper" href="<%=portletURL.toString()%>">
+				<div class="btn-login type-liferay">
+		          	    <%=LanguageUtil.get(pageContext, "login-with")+" "%>Liferay
+		      		</div>
+			</a>
+		</aui:button-row>
+	</c:if>
+
+

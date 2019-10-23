@@ -1,0 +1,23 @@
+.aui .main-content-wrap {
+    position: relative;
+    margin-top: 9px;
+}
+
+#editProcessFormId select, #editProcessFormId textarea, #editProcessFormId input[type=text], #editProcessFormId input[type=password], #editProcessFormId input[type=datetime], #editProcessFormId input[type=datetime-local], #editProcessFormId input[type=date], #editProcessFormId input[type=month], #editProcessFormId input[type=time], #editProcessFormId input[type=week], #editProcessFormId input[type=number], #editProcessFormId input[type=email], #editProcessFormId input[type=url], #editProcessFormId input[type=search], #editProcessFormId input[type=tel], #editProcessFormId input[type=color], #editProcessFormId .uneditable-input {
+    height: auto;
+    padding: 10px 15px;
+    width: 220px;
+}
+
+#sideNav:hover {
+	opacity: 1;
+}
+
+#sideNav {
+	opacity: 0.1;
+}
+.aui .newPortlets,.topHeaderFixed{
+	margin-top:0 !important;
+	
+}
+.aui .newPortlets .formRoot{max-width:100%;}

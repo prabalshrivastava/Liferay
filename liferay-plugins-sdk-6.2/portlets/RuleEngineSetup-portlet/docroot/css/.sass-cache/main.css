@@ -1,0 +1,90 @@
+.aui .control-group input[type=text] {
+  background: none; }
+
+.aui .control-group input[type=password] {
+  background: none; }
+
+.aui .control-group input[type=datetime] {
+  background: none; }
+
+.aui .control-group input[type=datetime-local] {
+  background: none; }
+
+.aui .control-group input[type=date] {
+  background: none; }
+
+.aui .control-group input[type=month] {
+  background: none; }
+
+.aui .control-group input[type=time] {
+  background: none; }
+
+.aui .control-group input[type=week] {
+  background: none; }
+
+.aui .control-group input[type=number] {
+  background: none; }
+
+.aui .control-group input[type=email] {
+  background: none; }
+
+.aui .control-group input[type=url] {
+  background: none; }
+
+.aui .control-group input[type=search] {
+  background: none; }
+
+.aui .control-group input[type=tel] {
+  background: none; }
+
+.aui .control-group input[type=color] {
+  background: none; }
+
+table.aui {
+  border: 1px solid #dcdcdc;
+  width: 100%;
+  padding: 10px; }
+
+table.aui tr {
+  border-bottom: 1px solid #dcdcdc; }
+
+table.aui th {
+  padding: 0 10px;
+  text-align: left;
+  background-color: #f5f7fa;
+  height: 48px;
+  color: #333333;
+  font: 500 14px "Work Sans", sans-serif;
+  border-top: 1px solid #dfe3e6; }
+
+.threedots:after {
+  content: '\2807';
+  font-size: 1em;
+  color: #2e2e2e; }
+
+table.aui td {
+  padding: 10px;
+  text-align: left;
+  font: 400 14px "Work Sans", sans-serif; }
+
+.aui .btn {
+  background: #158cb8;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+  text-shadow: none;
+  margin-bottom: 15px; }
+
+.aui .container h2 {
+  margin-bottom: 15px;
+  color: #158cb8;
+  font: 600 34px "Work Sans", sans-serif; }
+
+.aui .container label {
+  font: 500 13px "Work Sans", sans-serif; }
+
+table.aui td .control-group {
+  margin-bottom: 0; }
+
+/*# sourceMappingURL=main.css.map */
+

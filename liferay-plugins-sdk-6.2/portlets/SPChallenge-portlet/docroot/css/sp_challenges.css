@@ -1,0 +1,1542 @@
+.aui .padding-right-75 {
+  padding-right: 30px; }
+
+.aui .padding-left-75 {
+  padding-left: 30px; }
+
+.aui .padding-left-one {
+  padding-left: 40px; }
+
+.aui .full-width {
+  width: 100%; }
+
+[contenteditable="false"] {
+  color: #555; }
+
+.aui .hide-content {
+  display: none !important; }
+
+.aui .my-challenges-action-portlet .section_box {
+  height: auto !important;
+  max-height: 100% !important;
+  min-height: 100%; }
+
+.aui .commonForm input[type="file"] {
+  display: inline-block;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 10px 20px;
+  margin: 0;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.commonForm input[type=text],
+.commonForm textarea {
+  margin-bottom: 0px !important; }
+
+.challenge_applicants .table-cell.last .lfr-icon-menu .dropdown-toggle > img,
+.table-cell.last .lfr-icon-menu .dropdown-toggle .lfr-icon-menu-text {
+  display: block; }
+
+.aui .fd_container {
+  display: table;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden; }
+
+.aui .fd_container .imageContainer {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  visibility: visible;
+  text-align: center; }
+
+.aui .fd_container .fdWrap {
+  display: table-cell;
+  position: relative;
+  z-index: 1;
+  visibility: visible; }
+
+.btn-chal-edit {
+  margin-left: 10px !important; }
+
+.Margin-20-Challenges {
+  margin-left: 21px; }
+
+.padding-10-30-chanllenge {
+  padding: 10px 40px; }
+
+.chal-none {
+  display: none; }
+
+.Margin-Social {
+  margin-top: 90px !important; }
+
+.Margin-Content {
+  margin-top: 202px !important; }
+
+.Down-arrow-pos {
+  position: absolute;
+  bottom: 20%;
+  left: 50%; }
+
+.stick {
+  position: fixed;
+  z-index: 10;
+  min-height: 120px !important;
+  height: auto; }
+
+.Challenge-padBot-0 {
+  padding-bottom: 0px !important; }
+
+.sp-challenge-applicant-action-portlet {
+  padding: 0 30px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.aui .fd_container .imageContainer {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  visibility: visible; }
+
+.sp_profile {
+  width: 100%;
+  display: block;
+  min-height: 720px;
+  position: relative; }
+  .sp_profile .head_wrap .cta_item.cb {
+    display: none !important; }
+  .sp_profile .head_wrap .sep_line {
+    display: none !important; }
+  .sp_profile .head_wrap .cta_item.new {
+    padding: 0; }
+  .sp_profile .profile_avatar_wrap {
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+    .sp_profile .profile_avatar_wrap .avatar_container {
+      min-width: 150px;
+      min-height: 150px;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      *display: inline; }
+      .sp_profile .profile_avatar_wrap .avatar_container.ddImage {
+        width: 100%;
+        min-height: 350px;
+        overflow: hidden; }
+        .sp_profile .profile_avatar_wrap .avatar_container.ddImage img {
+          max-height: 100% !important;
+          width: auto; }
+        .sp_profile .profile_avatar_wrap .avatar_container.ddImage .avatar_cta {
+          position: absolute;
+          bottom: 5px;
+          right: 5px;
+          width: 50%; }
+          .sp_profile .profile_avatar_wrap .avatar_container.ddImage .avatar_cta input.avatarCTA {
+            display: inline-block !important;
+            *display: inline;
+            margin-left: 5px;
+            width: 50%;
+            max-width: 100px; }
+      .sp_profile .profile_avatar_wrap .avatar_container:before {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        right: 4px;
+        bottom: 4px; }
+      .sp_profile .profile_avatar_wrap .avatar_container img {
+        width: 105%;
+        height: 105%;
+        min-height: 200px;
+        margin-left: -2%;
+        margin-top: -2%; }
+      .sp_profile .profile_avatar_wrap .avatar_container .avatar_cta {
+        display: none; }
+  .sp_profile section.head {
+    overflow: hidden;
+    height: 650px; }
+    .sp_profile section.head .head_wrap {
+      padding: 20px 40px; }
+    .sp_profile section.head .headText {
+      margin: 20px 0; }
+      .sp_profile section.head .headText span {
+        display: block;
+        padding: 10px 0; }
+    .sp_profile section.head .cta_wrap {
+      display: block;
+      font-size: 0;
+      margin: 20px auto;
+      position: relative; }
+      .sp_profile section.head .cta_wrap .cta_item {
+        display: inline-block;
+        *display: inline;
+        width: 50%;
+        -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+        overflow: hidden; }
+        .sp_profile section.head .cta_wrap .cta_item a {
+          display: inline-block;
+          *display: inline;
+          width: 180px;
+          padding: 15px 20px; }
+          .sp_profile section.head .cta_wrap .cta_item a span {
+            display: inline-block;
+            *display: inline; }
+          .sp_profile section.head .cta_wrap .cta_item a i {
+            display: inline-block;
+            *display: inline; }
+        .sp_profile section.head .cta_wrap .cta_item .cta_item_desc {
+          display: block;
+          padding: 10px 0; }
+      .sp_profile section.head .cta_wrap .sep_line {
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%; }
+        .sp_profile section.head .cta_wrap .sep_line span {
+          padding: 20px;
+          -webkit-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          overflow: hidden;
+          position: absolute;
+          top: 36%;
+          left: -33px; }
+  .sp_profile section.crunchbaseSelectList {
+    display: none;
+    height: 0;
+    overflow: hidden; }
+    .sp_profile section.crunchbaseSelectList input {
+      display: inline-block;
+      *display: inline;
+      padding: 10px 15px;
+      width: 300px; }
+    .sp_profile section.crunchbaseSelectList .cbListWrap {
+      display: none;
+      padding: 40px; }
+  .sp_profile section.crunchbaseSelectList.active {
+    display: block; }
+    .sp_profile section.crunchbaseSelectList.active .cbListWrap {
+      display: block; }
+  .sp_profile section.profile_content.active {
+    display: block; }
+  .sp_profile section.profile_content {
+    display: none; }
+    .sp_profile section.profile_content .profile_forms_wrap {
+      display: block;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 60px 0; }
+      .sp_profile section.profile_content .profile_forms_wrap .page_headTitle {
+        padding: 10px;
+        padding-bottom: 20px;
+        display: block; }
+        .sp_profile section.profile_content .profile_forms_wrap .page_headTitle i {
+          display: inline-block;
+          *display: inline;
+          width: 30px;
+          margin-right: 10px;
+          margin: 0 15px; }
+          .sp_profile section.profile_content .profile_forms_wrap .page_headTitle i img {
+            width: 100%; }
+        .sp_profile section.profile_content .profile_forms_wrap .page_headTitle span {
+          display: inline-block;
+          *display: inline; }
+        .sp_profile section.profile_content .profile_forms_wrap .page_headTitle #preview-button {
+          float: right;
+          margin-top: -30px; }
+      .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation {
+        display: inline-block;
+        *display: inline;
+        width: 30%;
+        max-width: 290px;
+        -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        -webkit-transition: none; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation .formNavTitle {
+          padding: 14px 0 14px 26px;
+          display: block; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav {
+          width: 100%;
+          display: block;
+          margin: 0 auto; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul {
+            padding: 20px 0; }
+            .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li {
+              width: 100%;
+              -webkit-box-sizing: border-box;
+              -ms-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              -o-box-sizing: border-box;
+              box-sizing: border-box;
+              padding: 0 25px; }
+              .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li span {
+                display: inline-block;
+                *display: inline;
+                -webkit-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 7px 0 7px 8px;
+                width: 90%;
+                position: relative; }
+              .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li i {
+                position: relative;
+                width: 14px;
+                display: inline-block; }
+            .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li.formDone span::after {
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              *display: inline;
+              position: absolute;
+              right: 5%; }
+            .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li.active span {
+              padding: 7px 0 7px 8px; }
+            .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li.active span::after {
+              width: 10px;
+              height: 10px;
+              display: inline-block;
+              position: relative;
+              right: -5%;
+              top: -1px; }
+      .sp_profile section.profile_content .profile_forms_wrap .ie .profile_form_navigation {
+        display: inline-block;
+        *display: inline;
+        width: 30%;
+        max-width: 290px;
+        -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 20px 40px;
+        position: relative;
+        -webkit-transition: none;
+        transition: none; }
+      .sp_profile section.profile_content .profile_forms_wrap .profile_form {
+        display: inline-block;
+        *display: inline;
+        position: relative;
+        width: 70%;
+        max-width: 960px;
+        margin: 0 auto;
+        -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 20px 40px;
+        margin-left: 30%; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form {
+          display: none; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .formContent {
+            overflow-y: visible; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .formTitle {
+            padding: 5px 0;
+            padding-top: 0;
+            display: block;
+            margin-bottom: 20px;
+            position: relative;
+            padding-top: 6px; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .formSubTitle {
+            padding: 10px 0;
+            padding-top: 0;
+            display: block;
+            margin-bottom: 0px;
+            margin-top: 10px;
+            position: relative; }
+            .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .formSubTitle span {
+              display: inline-block;
+              *display: inline;
+              position: relative; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .aui-form-validator-error-container .aui-field-element {
+            padding-right: 0;
+            width: 100%; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .formGroupTitle {
+            padding: 10px 0;
+            display: block;
+            position: relative; }
+            .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .formGroupTitle span {
+              display: inline-block;
+              *display: inline;
+              position: relative; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .form select {
+            width: 100%; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form.active {
+          display: block; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .formTextField,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .formTextArea,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .formSelect,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadio,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCTA,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .formSelectField,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCheckField,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadioField {
+          display: inline-block;
+          *display: inline;
+          vertical-align: top;
+          padding: 10px 10px 10px 0;
+          width: 50%;
+          -webkit-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          box-sizing: border-box;
+          position: relative; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formTextField:last-child,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formTextArea:last-child,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formSelect:last-child,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadio:last-child,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCTA:last-child,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formSelectField:last-child,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCheckField:last-child,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadioField:last-child {
+            padding-right: 0; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formTextField .form-validator-stack-error,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formTextArea .form-validator-stack-error,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formSelect .form-validator-stack-error,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadio .form-validator-stack-error,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCTA .form-validator-stack-error,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formSelectField .form-validator-stack-error,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCheckField .form-validator-stack-error,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadioField .form-validator-stack-error {
+            padding: 0; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formTextField .form-validator-message,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formTextArea .form-validator-message,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formSelect .form-validator-message,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadio .form-validator-message,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCTA .form-validator-message,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formSelectField .form-validator-message,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCheckField .form-validator-message,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadioField .form-validator-message {
+            position: absolute;
+            top: 100%; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCheckField .checkItem {
+          display: inline-block;
+          *display: inline;
+          margin-right: 20px; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCheckField .checkItem:last-child {
+            margin-right: 0; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCheckField .checkItem label {
+            display: inline-block;
+            *display: inline;
+            margin-right: 5px;
+            margin-bottom: 5px; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadioField .radioItem {
+          display: inline-block;
+          *display: inline;
+          zoom: 1;
+          margin-right: 10px; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadioField .radioItem:last-child {
+            margin-right: 0; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadioField .radioItem label {
+            display: inline-block;
+            *display: inline;
+            margin-right: 5px;
+            margin-bottom: 5px; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .formGroupfield {
+          display: inline-block;
+          *display: inline;
+          width: 50%;
+          -webkit-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          box-sizing: border-box;
+          position: relative;
+          padding: 10px; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .formGroupfield .formGroupfield {
+            padding: 0 20px 15px 20px;
+            margin: 10px 0; }
+            .sp_profile section.profile_content .profile_forms_wrap .profile_form .formGroupfield .formGroupfield .formSubTitle .multipleCTA a.removeButton {
+              display: none; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .fw {
+          width: 100%;
+          padding: 10px 0; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form label,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .aui-field-label {
+          display: block;
+          padding-bottom: 5px;
+          margin: 0 !important; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .aui-field-element {
+          display: block; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form input,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form textarea {
+          padding: 10px;
+          display: block !important;
+          width: 100% !important;
+          -webkit-box-sizing: border-box !important;
+          -ms-box-sizing: border-box !important;
+          -moz-box-sizing: border-box !important;
+          -o-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+          margin: 0; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form input[type="Submit"] {
+          display: inline-block !important;
+          *display: inline;
+          margin-left: 5px;
+          width: 40%;
+          max-width: 200px; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form input[type="Button"] {
+          display: inline-block !important;
+          *display: inline;
+          margin-left: 5px;
+          width: 40%;
+          max-width: 200px; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form input[type="Cancel"] {
+          display: inline-block !important;
+          *display: inline;
+          margin-left: 5px;
+          width: 40%;
+          max-width: 200px; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form input[type=text],
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form textarea {
+          padding: 10px; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .multipleCTA {
+          display: inline-block;
+          *display: inline;
+          position: absolute;
+          right: 0;
+          top: 0;
+          margin-top: -7px; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .multipleCTA a {
+            display: inline-block;
+            *display: inline;
+            padding: 10px;
+            margin: 5px;
+            position: relative;
+            width: 10px;
+            height: 10px;
+            -webkit-box-sizing: content-box;
+            -ms-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            -o-box-sizing: content-box;
+            box-sizing: content-box; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review input,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review textarea,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled input,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled textarea,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view input,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view textarea {
+          padding: 10px;
+          display: block;
+          width: 100%;
+          -webkit-box-sizing: border-box !important;
+          -ms-box-sizing: border-box !important;
+          -moz-box-sizing: border-box !important;
+          -o-box-sizing: border-box !important;
+          box-sizing: border-box !important; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review select,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled select,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view select {
+          margin: 0;
+          -webkit-appearance: none;
+          -ms-appearance: none;
+          -moz-appearance: none;
+          -o-appearance: none;
+          appearance: none;
+          -webkit-box-sizing: border-box !important;
+          -ms-box-sizing: border-box !important;
+          -moz-box-sizing: border-box !important;
+          -o-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+          width: 100% !important;
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+          height: 40px;
+          overflow: hidden; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review input[type="Submit"],
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled input[type="Submit"],
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view input[type="Submit"] {
+          display: inline-block !important;
+          *display: inline;
+          margin-left: 5px;
+          width: 40%;
+          max-width: 200px; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review input[type="Button"],
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled input[type="Button"],
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view input[type="Button"] {
+          display: inline-block !important;
+          *display: inline;
+          margin-left: 5px;
+          width: 40%;
+          max-width: 200px; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review input[type="Cancel"],
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled input[type="Cancel"],
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view input[type="Cancel"] {
+          display: inline-block !important;
+          *display: inline;
+          margin-left: 5px;
+          width: 40%;
+          max-width: 200px; }
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review .formFields_data,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled .formFields_data,
+        .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view .formFields_data {
+          padding: 0 20px; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review .formFields_data .formContent,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled .formFields_data .formContent,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view .formFields_data .formContent {
+            overflow-y: visible;
+            height: auto; }
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review .formFields_data .form_section,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled .formFields_data .form_section,
+          .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view .formFields_data .form_section {
+            margin-bottom: 20px; }
+            .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review .formFields_data .form_section span.form_section_title,
+            .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled .formFields_data .form_section span.form_section_title,
+            .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view .formFields_data .form_section span.form_section_title {
+              display: block;
+              padding: 20px 0; }
+            .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review .formFields_data .form_section .form_section_content,
+            .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled .formFields_data .form_section .form_section_content,
+            .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view .formFields_data .form_section .form_section_content {
+              padding: 10px 0; }
+              .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review .formFields_data .form_section .form_section_content .fieldName,
+              .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled .formFields_data .form_section .form_section_content .fieldName,
+              .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view .formFields_data .form_section .form_section_content .fieldName {
+                display: inline-block;
+                *display: inline;
+                padding: 10px 20px;
+                -webkit-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                box-sizing: border-box;
+                width: 50%;
+                margin-top: 1px; }
+              .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review .formFields_data .form_section .form_section_content .fieldContent,
+              .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled .formFields_data .form_section .form_section_content .fieldContent,
+              .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view .formFields_data .form_section .form_section_content .fieldContent {
+                display: inline-block;
+                *display: inline;
+                padding: 10px 20px;
+                -webkit-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                box-sizing: border-box;
+                width: 50%;
+                margin-top: 1px; }
+
+.sp_profile.sp_profile_view .stickyNav {
+  left: 4%; }
+.sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form {
+  vertical-align: top;
+  width: 70%;
+  max-width: 960px; }
+  .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .logoDiv-viewPage {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: 20px 0;
+    display: table; }
+    .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .logoDiv-viewPage .logoContent-viewPage {
+      line-height: 0;
+      display: table-cell;
+      width: 100%;
+      height: 100%; }
+      .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .logoDiv-viewPage .logoContent-viewPage img {
+        width: 100%; }
+  .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .formViewItem {
+    padding: 10px 0; }
+    .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .formViewItem .formViewContent {
+      display: none; }
+    .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .formViewItem .formTitle {
+      padding-top: 0; }
+      .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .formViewItem .formTitle:after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block; }
+    .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .formViewItem.active .formViewContent {
+      display: block; }
+    .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .formViewItem.active .formTitle:after {
+      display: inline-block;
+      *display: inline; }
+
+.aui .tab_helpText {
+  padding: 20px;
+  display: block;
+  margin-top: 20px;
+  position: relative; }
+  .aui .tab_helpText .icon_helpText {
+    display: block;
+    padding: 5px 0; }
+    .aui .tab_helpText .icon_helpText span {
+      -webkit-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      padding: 0 5px; }
+  .aui .tab_helpText .title_helpText {
+    display: block;
+    padding: 10px 0;
+    padding-bottom: 0; }
+  .aui .tab_helpText .content_helpText {
+    display: block;
+    padding: 10px 0;
+    padding-bottom: 0; }
+  .aui .tab_helpText .arrow_helpText {
+    position: absolute;
+    width: 20px;
+    display: inline-block;
+    *display: inline;
+    left: 100%;
+    top: 42%; }
+    .aui .tab_helpText .arrow_helpText:after {
+      display: inline-block;
+      margin: 0; }
+    .aui .tab_helpText .arrow_helpText:before {
+      display: inline-block;
+      margin: 0; }
+
+.sp-challenge-action-portlet .portlet-content-container {
+  background-color: transparent; }
+.sp-challenge-action-portlet .create-edit-wrap select {
+  width: 100%; }
+.sp-challenge-action-portlet .sp-group-column .control-group {
+  margin-bottom: 0; }
+.sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si {
+  display: inline-block;
+  padding: 5px;
+  margin: 1px;
+  width: 49%;
+  position: relative;
+  height: 43px;
+  overflow-x: hidden; }
+  .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-lfloat {
+    display: inline-block; }
+    .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-lfloat img {
+      max-width: 30px; }
+  .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px; }
+    .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib .sp-group-ui-dib:first-child {
+      display: none; }
+  .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib:last-child,
+  .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib.x-button {
+    display: inline-block; }
+    .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib:last-child .sp-group-ui-dib,
+    .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib.x-button .sp-group-ui-dib {
+      display: block;
+      right: 0;
+      position: absolute;
+      top: 15px; }
+      .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib:last-child .sp-group-ui-dib .ip-si-x,
+      .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib.x-button .sp-group-ui-dib .ip-si-x {
+        padding: 2px; }
+.sp-challenge-action-portlet .ip-sb .ip-sb-c {
+  display: none; }
+.sp-challenge-action-portlet .ip-sb .ip-sb-options .ip-sb-option .sp-group-lfloat {
+  display: inline-block; }
+  .sp-challenge-action-portlet .ip-sb .ip-sb-options .ip-sb-option .sp-group-lfloat img {
+    width: 40px; }
+.sp-challenge-action-portlet .ip-sb .ip-sb-options .ip-sb-option .sp-group-ui-oh {
+  display: inline-block;
+  padding-left: 10px; }
+  .sp-challenge-action-portlet .ip-sb .ip-sb-options .ip-sb-option .sp-group-ui-oh .sp-group-ui-dib .sp-group-ui-dib:first-child {
+    display: none; }
+.sp-challenge-action-portlet .innerPage_header.big-banner {
+  height: 400px; }
+.sp-challenge-action-portlet .innerPage_header {
+  position: relative;
+  height: auto; }
+  .sp-challenge-action-portlet .innerPage_header .innerPage_header_content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 5%;
+    margin-bottom: -4.4vw;
+    width: 450px; }
+  .sp-challenge-action-portlet .innerPage_header .header-circle {
+    width: 9vw;
+    height: 9vw;
+    display: inline-block;
+    margin: 0px 10px; }
+    .sp-challenge-action-portlet .innerPage_header .header-circle .header-circle-title {
+      margin-top: 26%;
+      margin-bottom: 5%; }
+  .sp-challenge-action-portlet .innerPage_header .innerPage_header_social_cta {
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+    padding-left: 100px; }
+    .sp-challenge-action-portlet .innerPage_header .innerPage_header_social_cta .social-share {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 25px; }
+      .sp-challenge-action-portlet .innerPage_header .innerPage_header_social_cta .social-share img {
+        max-width: 9%;
+        margin: -10px 20px; }
+.sp-challenge-action-portlet .header-cta-band {
+  min-height: 150px; }
+  .sp-challenge-action-portlet .header-cta-band .h3 {
+    width: 58%; }
+  .sp-challenge-action-portlet .header-cta-band .header_page_infobar {
+    margin-top: -100px;
+    padding: 30px;
+    margin-right: 100px; }
+    .sp-challenge-action-portlet .header-cta-band .header_page_infobar .header-circle {
+      width: 135px;
+      height: 135px;
+      display: inline-block;
+      margin: 0px 10px; }
+      .sp-challenge-action-portlet .header-cta-band .header_page_infobar .header-circle div {
+        margin-top: 25%; }
+    .sp-challenge-action-portlet .header-cta-band .header_page_infobar .social-share img {
+      width: 45px;
+      margin: 10px 10px 10px 0px; }
+.sp-challenge-action-portlet .navBar {
+  display: block; }
+  .sp-challenge-action-portlet .navBar ul {
+    margin-left: 40px; }
+    .sp-challenge-action-portlet .navBar ul li {
+      display: inline-block;
+      padding: 12px 30px; }
+  .sp-challenge-action-portlet .navBar .nav-butts {
+    padding-top: 6px;
+    width: 220px; }
+    .sp-challenge-action-portlet .navBar .nav-butts a {
+      display: inline-block;
+      width: 20%; }
+      .sp-challenge-action-portlet .navBar .nav-butts a img {
+        padding: 0px 5px; }
+.sp-challenge-action-portlet .sp_profile.apply-challenge section.profile_content .profile_forms_wrap .profile_form {
+  margin-left: 30%; }
+.sp-challenge-action-portlet .sp_profile .profile_form_navigation .profile_form_navigation_wrap .filterButtonSet .toggleButton {
+  width: 100%;
+  padding: 10px 0; }
+  .sp-challenge-action-portlet .sp_profile .profile_form_navigation .profile_form_navigation_wrap .filterButtonSet .toggleButton .additionalText {
+    display: inline-block; }
+.sp-challenge-action-portlet .sp_profile.sp_filter.sp-challenges-listing {
+  padding-bottom: 40px; }
+.sp-challenge-action-portlet .sp_profile.sp_filter .filterButtonSet .toggleButton {
+  height: auto; }
+  .sp-challenge-action-portlet .sp_profile.sp_filter .filterButtonSet .toggleButton span:first-child {
+    display: block;
+    padding: 0; }
+  .sp-challenge-action-portlet .sp_profile.sp_filter .filterButtonSet .toggleButton span.additionalText {
+    display: inline-block;
+    width: 70%;
+    padding-top: 5px; }
+.sp-challenge-action-portlet .display_view .col_section.col_section_80 {
+  min-height: 420px; }
+.sp-challenge-action-portlet .display_view .col_section.col_section_80 form {
+  padding: 0px 0px !important; }
+.sp-challenge-action-portlet .display_view .col_section .aui-field-label {
+  padding: 10px;
+  display: block;
+  width: 100%; }
+.sp-challenge-action-portlet .display_view .col_section .aui-field-element {
+  position: relative;
+  display: inline-block;
+  width: 75%;
+  padding-left: 40px;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+.sp-challenge-action-portlet .display_view .col_section .formTextField {
+  padding: 0;
+  border-bottom: none; }
+  .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group {
+    margin-bottom: 0;
+    padding-bottom: 15px; }
+    .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group .control-label {
+      width: 50%;
+      padding-top: 0;
+      padding-bottom: 8px; }
+    .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group .field {
+      padding: 0 10px 0 0; }
+      .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group .field textarea {
+        color: #3b3b3b; }
+.sp-challenge-action-portlet .display_view .display_view {
+  display: block; }
+  .sp-challenge-action-portlet .display_view .display_view .col_section .formTextField {
+    padding: 10px; }
+.sp-challenge-action-portlet .display_view .col_section {
+  display: inline-block;
+  *display: inline;
+  padding: 20px 40px;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+  .sp-challenge-action-portlet .display_view .col_section .col_section_title {
+    padding-bottom: 20px; }
+  .sp-challenge-action-portlet .display_view .col_section.col_section_80 {
+    width: 75%;
+    display: inline-block; }
+    .sp-challenge-action-portlet .display_view .col_section.col_section_80 img {
+      width: 100%; }
+  .sp-challenge-action-portlet .display_view .col_section.col_section_20 {
+    width: 25%;
+    display: inline-block; }
+    .sp-challenge-action-portlet .display_view .col_section.col_section_20 .col_section_item .col_applyItem {
+      position: relative;
+      padding: 40px 0; }
+      .sp-challenge-action-portlet .display_view .col_section.col_section_20 .col_section_item .col_applyItem:first-child {
+        padding-top: 0; }
+      .sp-challenge-action-portlet .display_view .col_section.col_section_20 .col_section_item .col_applyItem span {
+        display: inline-block;
+        *display: inline; }
+      .sp-challenge-action-portlet .display_view .col_section.col_section_20 .col_section_item .col_applyItem a.genCTA {
+        margin: 20px auto;
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        padding: 10px; }
+      .sp-challenge-action-portlet .display_view .col_section.col_section_20 .col_section_item .col_applyItem a.btn-callout {
+        margin: 0 auto;
+        margin-top: 20px; }
+.sp-challenge-action-portlet .display_view section.tab.active {
+  display: block; }
+.sp-challenge-action-portlet .display_view section.tab {
+  display: none; }
+.sp-challenge-action-portlet .col_section_title img {
+  max-width: 100px; }
+.sp-challenge-action-portlet .result_item {
+  width: 24%;
+  max-width: 240px;
+  min-width: 240px;
+  height: 170px;
+  max-height: 170px;
+  min-height: 170px;
+  margin: 5px;
+  display: inline-block; }
+  .sp-challenge-action-portlet .result_item .result_item_title {
+    height: 35%;
+    padding: 0 10px;
+    margin-bottom: 5px; }
+  .sp-challenge-action-portlet .result_item .result_item_author {
+    display: none; }
+  .sp-challenge-action-portlet .result_item .result_item_image {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px; }
+    .sp-challenge-action-portlet .result_item .result_item_image img {
+      width: 100%;
+      max-width: none; }
+  .sp-challenge-action-portlet .result_item figure {
+    width: 100%;
+    box-sizing: border-box; }
+    .sp-challenge-action-portlet .result_item figure img {
+      width: 100%; }
+.sp-challenge-action-portlet .applicantImage {
+  max-width: 90px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: block; }
+.sp-challenge-action-portlet #toggler .toggler_item.active .toggler_content {
+  height: 250px !important; }
+.sp-challenge-action-portlet .sp_filter .profile_form_navigation {
+  padding: 20px 10px !important;
+  max-width: 20% !important;
+  margin-top: 26px !important;
+  height: auto !important;
+  min-height: auto; }
+.sp-challenge-action-portlet .sp_filter .profile_form {
+  width: 80% !important;
+  min-width: 80%;
+  padding: 0 !important;
+  margin-top: 21px !important; }
+
+.sp_results_wrap {
+  padding: 0;
+  min-width: 100% !important; }
+
+@media (max-width: 979px) {
+  .taglib-page-iterator .lfr-pagination-buttons > li > a {
+    padding: 11px 9px; } }
+@media screen and (min-width: 1024px) and (max-width: 767px) {
+  .aui .sp-challenge-action-portlet .display_view {
+    padding: 0 40px; } }
+@media screen and (min-width: 1024px) and (max-width: 767px) and (orientation: landscape) {
+  .aui .sp-challenge-action-portlet .display_view {
+    padding: 0 40px; } }
+@media screen and (min-width: 1100px) and (max-width: 767px) {
+  html.aui.vp2 section.profile_content .profile_forms_wrap .profile_form {
+    width: 70% !important;
+    min-width: 70% !important; }
+
+  html.aui.vp2 section.profile_content .profile_forms_wrap .profile_form_navigation {
+    width: 30% !important; }
+
+  .sp-challenge-action-portlet .result_item {
+    width: 10%;
+    max-width: 140px;
+    min-width: 140px;
+    height: 170px;
+    max-height: 170px;
+    min-height: 170px;
+    margin: 5px;
+    display: inline-block; }
+
+  .Margin-Content {
+    margin-top: 0 !important; } }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  /* COPIED FROM Ul_lp Challenges page*/
+  .sp-challenge-action-portlet .innerPage_header {
+    position: relative;
+    height: auto; }
+
+  .padding-right-75 {
+    padding-right: 0; }
+
+  .sp-challenge-action-portlet .innerPage_header.big-banner {
+    height: 132px; }
+
+  .sp-challenge-action-portlet .header-cta-band .h3 {
+    width: 100%; }
+
+  html.aui .sp-challenge-action-portlet .header-cta-band .header_page_infobar .header-circle {
+    width: 115px;
+    height: 115px; }
+
+  .sp-challenge-action-portlet .navBar ul li {
+    display: inline-block;
+    padding: 12px 16px; }
+
+  .aui .col_section .col_section_title h2 {
+    padding: 10px 0; }
+
+  .btn-chal-view {
+    margin-right: 0; }
+
+  /* COPIED FROM Ul_lp */
+  .col_section {
+    width: 100% !important;
+    padding: 20px !important; }
+
+  .challenge_applicants .search_filters {
+    width: 100%; }
+
+  .aui .dockbar-ready #wrapper {
+    margin-top: 0;
+    padding-top: 43px; }
+
+  .aui .sp-challenge-applicant-action-portlet .margin-left-half {
+    margin-left: 0; }
+
+  .aui .col_section.col_section_80 {
+    width: 100%;
+    display: inline-block; }
+
+  .aui .col_section.col_section_20 {
+    width: 100%;
+    display: inline-block; }
+
+  .Margin-20-Challenges {
+    margin-left: 0; }
+
+  .sp-challenge-action-portlet .display_view .col_section.col_section_80 {
+    min-height: auto; }
+
+  .sp-challenge-action-portlet .navBar .nav-butts {
+    padding-top: 14px;
+    width: 175px; }
+
+  .mcts1 li div.slidebox {
+    float: none;
+    width: 100% !important;
+    min-height: 800px;
+    height: 800px;
+    display: inline-block;
+    margin: 0 0.1%; }
+
+  .stick {
+    position: relative !important;
+    top: 0 !important;
+    min-height: auto !important;
+    display: block !important; }
+
+  .aui .dockbar-ready .stick {
+    top: 0; }
+
+  .Margin-Content {
+    margin-top: 0 !important; }
+
+  .chal-none {
+    display: block; }
+
+  .Margin-Social {
+    margin-top: 0 !important; }
+
+  .result_item .result_item_overlay a {
+    width: auto;
+    max-width: 150px;
+    margin: 10px auto !important; }
+
+  .sp_results_wrap {
+    padding: 0;
+    margin-top: 10px;
+    min-width: 100% !important; }
+
+  html.aui .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si {
+    width: 100%; }
+  html.aui .sp-challenge-action-portlet .portlet-content {
+    padding: 0; }
+  html.aui .sp-challenge-action-portlet .header-cta-band .header_page_infobar {
+    margin-top: 0;
+    position: initial;
+    margin-right: auto; }
+    html.aui .sp-challenge-action-portlet .header-cta-band .header_page_infobar .header-circle {
+      width: 75px;
+      height: 75px;
+      margin: 0 2px; }
+      html.aui .sp-challenge-action-portlet .header-cta-band .header_page_infobar .header-circle div {
+        margin-top: 25%; }
+  html.aui .sp-challenge-action-portlet .innerPage_header .header_page_name span.header_page_name_text {
+    padding: 0;
+    max-width: 100%;
+    display: block; }
+  html.aui .sp-challenge-action-portlet .innerPage_header .header_cta {
+    padding: 5px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    html.aui .sp-challenge-action-portlet .innerPage_header .header_cta a {
+      width: 40px; }
+  html.aui .sp-challenge-action-portlet .create-edit-wrap {
+    padding: 0 20px !important; }
+  html.aui .sp-challenge-action-portlet .sp_profile.apply-challenge section.profile_content .profile_forms_wrap .profile_form {
+    margin-left: 0; }
+  html.aui .sp-challenge-action-portlet .sp_filter {
+    padding: 0;
+    margin: 20px 0; }
+    html.aui .sp-challenge-action-portlet .sp_filter .profile_content {
+      margin: 0; }
+      html.aui .sp-challenge-action-portlet .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation {
+        max-width: 100% !important;
+        margin: 0 auto; }
+        html.aui .sp-challenge-action-portlet .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation .profile_form_navigation_wrap {
+          overflow-y: scroll;
+          height: 60vh;
+          margin: 20px 0; }
+        html.aui .sp-challenge-action-portlet .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation.active {
+          left: 0% !important; }
+        html.aui .sp-challenge-action-portlet .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation .mobile_form_nav_btn {
+          width: 10vw;
+          height: 10vw; }
+      html.aui .sp-challenge-action-portlet .sp_filter .profile_content .profile_forms_wrap .profile_form .result_item {
+        min-height: 170px;
+        height: 170px;
+        max-height: 170px;
+        margin: 5px; }
+        html.aui .sp-challenge-action-portlet .sp_filter .profile_content .profile_forms_wrap .profile_form .result_item .result_item_title {
+          height: 45%; }
+    html.aui .sp-challenge-action-portlet .sp_filter .filterButtonSet {
+      padding-bottom: 20px; }
+      html.aui .sp-challenge-action-portlet .sp_filter .filterButtonSet .toggleButton {
+        height: auto; }
+        html.aui .sp-challenge-action-portlet .sp_filter .filterButtonSet .toggleButton span {
+          width: 70%;
+          padding: 0 !important; }
+  html.aui .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group .control-label {
+    width: 100% !important;
+    padding-right: 10px !important; }
+  html.aui .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group .field {
+    padding-left: 10px !important;
+    max-height: 100%;
+    max-width: 100% !important; }
+    html.aui .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group .field textarea {
+      max-height: 200px;
+      overflow-y: scroll !important; }
+  html.aui .sp-challenge-action-portlet .display_view .col_section .control-group .formTextField {
+    padding: 0 0; }
+    html.aui .sp-challenge-action-portlet .display_view .col_section .control-group .formTextField textarea {
+      max-height: 200px;
+      overflow-y: scroll !important; }
+  html.aui .sp-challenge-action-portlet .display_view label,
+  html.aui .sp-challenge-action-portlet .display_view .aui-field-label {
+    padding: 10px;
+    display: block;
+    width: 100%; }
+  html.aui .sp-challenge-action-portlet .display_view .aui-field-element {
+    display: block;
+    width: 100%;
+    padding: 0; }
+  html.aui .sp-challenge-action-portlet .aui-dialog {
+    width: 90% !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 25 !important;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+  html.aui .sp-challenge-action-portlet .col_section.col_section_80 {
+    width: 100%; }
+    html.aui .sp-challenge-action-portlet .col_section.col_section_80 form {
+      padding: 20px !important; }
+  html.aui .sp-challenge-action-portlet .col_section.col_section_80 {
+    width: 100%; }
+
+  .aui .sp-challenge-action-portlet .display_applicant.sp_profile section.profile_content .profile_forms_wrap .profile_form {
+    margin-left: 0 !important;
+    margin-top: 0; } }
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  html.aui .mcts1 li div.slidebox {
+    float: none;
+    width: 100%;
+    min-height: 800px;
+    height: 800px;
+    display: inline-block;
+    margin: 0 0.1%; }
+  html.aui .stick {
+    position: relative !important;
+    top: 0;
+    min-height: auto !important;
+    display: block !important; }
+  html.aui .aui .dockbar-ready .stick {
+    top: 62px; }
+  html.aui .chal-none {
+    display: block; }
+  html.aui .Margin-Social {
+    margin-top: 90px; }
+  html.aui .Margin-Content {
+    margin-top: 0 !important; }
+  html.aui .sp-challenge-action-portlet .sp_filter .profile_form {
+    width: 67% !important;
+    min-width: 67%;
+    padding: 40px 40px !important; }
+  html.aui .aui .col_section.col_section_20 {
+    width: 25%;
+    display: inline-block; }
+  html.aui .aui .col_section.col_section_80 {
+    width: 75%;
+    display: inline-block; }
+  html.aui .Margin-20-Challenges {
+    margin-left: 0; }
+  html.aui .sp-challenge-action-portlet .header-cta-band .h3 {
+    width: 100%; }
+  html.aui .sp-challenge-action-portlet .innerPage_header.big-banner {
+    height: 200px; } }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .aui .col_section.col_section_20 {
+    font-size: 12pt;
+    padding: 0 3px; }
+
+  .stick {
+    position: fixed;
+    top: 62px !important;
+    min-height: auto !important; }
+
+  .aui .dockbar-ready .stick {
+    top: 62px; }
+
+  .sp-challenge-action-portlet .result_item {
+    width: 24%;
+    max-width: 175px;
+    min-width: 175px;
+    height: 170px;
+    max-height: 130px;
+    min-height: 130px;
+    margin: 5px;
+    display: inline-block; }
+
+  html.aui .sp-challenge-action-portlet .sp_filter .profile_form {
+    width: 75% !important;
+    min-width: 75%;
+    padding: 0 !important; }
+
+  .sp-challenge-action-portlet .sp_filter .profile_form_navigation {
+    padding: 20px 10px !important;
+    max-width: 20% !important;
+    margin-top: 26px !important;
+    height: 100% !important;
+    min-height: 100% !important; }
+
+  .aui .col_section.col_section_20 {
+    width: 25%;
+    display: inline-block; }
+
+  .aui .col_section.col_section_80 {
+    width: 60%;
+    display: inline-block; } }
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  html.aui .sp-challenge-action-portlet .sp_filter .profile_form {
+    width: 75% !important;
+    min-width: 75%; }
+    html.aui .sp-challenge-action-portlet .sp_filter .profile_form .filterButtonSet .toggleButton {
+      height: auto; }
+  html.aui .sp-challenge-action-portlet .sp_filter .header-cta-band .header_page_infobar {
+    margin-top: -81px;
+    margin-right: auto; }
+    html.aui .sp-challenge-action-portlet .sp_filter .header-cta-band .header_page_infobar .header-circle {
+      width: 85px;
+      height: 85px;
+      overflow: hidden; }
+      html.aui .sp-challenge-action-portlet .sp_filter .header-cta-band .header_page_infobar .header-circle div {
+        margin-top: 25%; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .portlet-content {
+    padding: 0; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .innerPage_header .header_page_name span {
+    font-size: 20pt; }
+    html.aui html.aui.vp1 .sp-challenge-action-portlet .innerPage_header .header_page_name span.header_page_name_text {
+      padding: 0;
+      max-width: 100%;
+      display: block; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .innerPage_header .header_cta {
+    padding: 5px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: right; }
+    html.aui html.aui.vp1 .sp-challenge-action-portlet .innerPage_header .header_cta a {
+      width: 40px; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .sp_profile .profile_content .profile_forms_wrap .profile_form .result_item {
+    min-height: 170px;
+    height: 170px;
+    max-height: 170px;
+    margin: 10px !important; }
+    html.aui html.aui.vp1 .sp-challenge-action-portlet .sp_profile .profile_content .profile_forms_wrap .profile_form .result_item .result_item_title {
+      height: 45%; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .sp_profile.apply-challenge section.profile_content .profile_forms_wrap .profile_form {
+    margin-left: 0; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation {
+    left: -50% !important; }
+    html.aui html.aui.vp1 .sp-challenge-action-portlet .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation.active {
+      min-height: 100%; }
+    html.aui html.aui.vp1 .sp-challenge-action-portlet .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation .mobile_form_nav_btn {
+      left: 100% !important;
+      width: 10vw;
+      height: 10vw; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .sp_filter .filterButtonSet .toggleButton {
+    height: auto; }
+    html.aui html.aui.vp1 .sp-challenge-action-portlet .sp_filter .filterButtonSet .toggleButton span {
+      width: 70%; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .aui-dialog {
+    width: 90% !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 25 !important;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group .control-label {
+    width: 100% !important;
+    padding-right: 10px !important; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group .field {
+    padding-left: 10px !important;
+    max-height: 100%; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .display_view .col_section .control-group .formTextField {
+    padding: 0; }
+    html.aui html.aui.vp1 .sp-challenge-action-portlet .display_view .col_section .control-group .formTextField textarea {
+      max-height: 200px;
+      overflow-y: scroll !important; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .display_view .col_section .formTextField {
+    padding: 0 0; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .display_view .col_section textarea {
+    max-height: 200px;
+    overflow-y: scroll !important; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .display_view label,
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .display_view .aui-field-label {
+    padding: 10px;
+    display: block;
+    width: 100%; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .display_view .aui-field-element {
+    display: block;
+    width: 100%;
+    padding: 0; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .create-edit-wrap {
+    padding: 20px !important; }
+  html.aui html.aui.vp1 .sp-challenge-action-portlet .col_section.col_section_80 form {
+    padding: 20px !important; }
+  html.aui html.aui.vp2 .sp-challenge-action-portlet .sp_filter .filterButtonSet .toggleButton {
+    height: auto; }
+  html.aui .aui .dockbar-ready .stick {
+    top: 62px; } }
+@media screen and (min-width: 1101px) and (max-width: 1280px) {
+  html.aui.gecko .sp-challenge-action-portlet .sp_filter .filterButtonSet .toggleButton {
+    height: auto; }
+  html.aui.gecko .sp-challenge-action-portlet .sp_filter section.profile_content .profile_forms_wrap .profile_form {
+    margin: 0; }
+
+  .sp-challenge-action-portlet .sp_filter .profile_form {
+    width: 75% !important;
+    min-width: 75%;
+    padding: 0 !important;
+    margin-top: 21px !important; }
+
+  .stick {
+    position: fixed;
+    top: 84px;
+    z-index: 10;
+    min-height: auto !important; }
+
+  .aui .dockbar-ready .stick {
+    top: 127px; } }
+@media screen and (min-width: 770px) and (max-width: 440px) {
+  html.aui .sp-challenge-action-portlet .sp_filter .profile_form {
+    width: 65% !important;
+    min-width: 65%;
+    padding: 21px !important; } }
+@media screen and (min-width: 770px) and (max-width: 500px) and (orientation: landscape) {
+  .sp-challenge-action-portlet .sp_filter .profile_form_navigation {
+    padding: 20px 10px !important;
+    max-width: 190px !important;
+    margin-top: 26px !important;
+    height: 100% !important;
+    min-height: 500px !important; }
+
+  aui .col_section.col_section_20 {
+    width: 40%;
+    font-size: 12pt;
+    display: inline-block; }
+
+  .aui .col_section.col_section_80 {
+    width: 60%;
+    display: inline-block; } }
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .aui .dockbar-ready .stick {
+    top: 127px; }
+
+  .stick {
+    position: fixed;
+    top: 84px;
+    z-index: 10;
+    min-height: auto !important; }
+
+  .result_item .result_item_overlay a {
+    width: auto;
+    max-width: 200px;
+    margin: 5px auto; } }
+.aui .sp-challenge-action-portlet .display_applicant.sp_profile section.profile_content .profile_forms_wrap {
+  padding: 0 0 30px 0; }
+
+.display_applicant .profile-image-container {
+  display: none; }
+
+.aui .display_applicant.sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation.posFixed {
+  position: fixed;
+  margin-top: 239px; }
+
+.aui .sp-challenge-action-portlet .display_applicant.sp_profile .profile_forms_wrap .profile_form_navigation {
+  background: none; }
+
+.aui .display_applicant.sp_profile .tab_helpText {
+  margin-top: 0px; }
+
+.aui .display_applicant.sp_profile .page_headTitle {
+  padding: 40px 0; }
+
+.aui .sp_profile.apply-challenge .posFixed {
+  margin-top: 0; }
+
+.aui .sp-challenge-action-portlet .display_applicant.sp_profile section.profile_content .profile_forms_wrap .profile_form {
+  margin-left: 30%; }
+
+.aui .sp_profile.apply-challenge section.profile_content .profile_forms_wrap {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0 30px 0; }
+
+.aui .dockbar-ready .sp_profile.apply-challenge .posFixed {
+  margin-top: 0px !important; }
+
+.aui .sp_profile.apply-challenge .tab_helpText {
+  margin-top: 0px; }
+
+.aui .sp_profile.apply-challenge .page_headTitle {
+  padding: 40px 0; }
+
+.portlet-column-content.empty {
+  padding: 50px;
+  display: none; }
+
+.portlet-column-content.empty {
+  display: none; }
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .sp-challenge-action-portlet .header-cta-band .header_page_infobar {
+    margin-right: 0; }
+
+  .header-cta-band .header_page_infobar .header-circle div {
+    margin-top: 0 !important;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; } }
+.refreshStatus span {
+  color: #333;
+  font-weight: 400;
+  padding: 0 10px; }
+  .refreshStatus span:hover {
+    cursor: pointer; }
+
+.refreshStatus li:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  background-color: #0db5e7;
+  background-image: linear-gradient(to bottom, #0ebdf1, #0caad9);
+  background-repeat: repeat-x; }
+
+/*# sourceMappingURL=sp_challenges.css.map */

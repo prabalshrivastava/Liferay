@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.validation.model.impl.SPStudentProgrammeModelImpl">
+		<attributes>
+			<id name="spStudentCourseId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="nric" />
+			<basic name="emailAddress" />
+			<basic name="programme" />
+			<basic name="courseCentre" />
+			<basic name="courseStartDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="courseEndDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.validation.model.impl.SPStudentProgrammeResultModelImpl">
+		<attributes>
+			<id name="spStudentProgrammeResultId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="nric" />
+			<basic name="emailAddress" />
+			<basic name="courseCentre" />
+			<basic name="courseStartDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="courseEndDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="programme" />
+			<basic name="exam">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="examType" />
+			<basic name="paper1Result" />
+			<basic name="paper2Result" />
+			<basic name="overallResult" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.validation.model.impl.SPStudentProgrammeImpl" name="SPStudentProgramme">
+		<table name="SPStudentProgramme" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.validation.model.impl.SPStudentProgrammeResultImpl" name="SPStudentProgrammeResult">
+		<table name="SPStudentProgrammeResult" />
+		<attributes />
+	</entity>
+</entity-mappings>

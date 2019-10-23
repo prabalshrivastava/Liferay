@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.rsvp">
+	<author>gauravvijayvergia</author>
+	<namespace>SPRsvp</namespace>
+
+	<entity name="Rsvp" table="SPRsvp" uuid="true" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="rsvpId" db-name="spRsvpId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="title" type="String" />
+		<column name="description" type="String" />
+		<column name="eventId" type="long" />
+		<column name="spAssetTypeId" type="long" />
+		<column name="status" type="boolean" />
+		<column name="rsvpUrl" type="String" />
+		<column name="processing" type="int" />
+		<column name="price" type="String" />
+		<column name="currency" type="String" />
+		<column name="tax" type="String" />
+		<column name="accountId" type="String" />
+		<column name="paymentFlag" type="boolean" />
+		<column name="registerFlag" type="boolean" />
+		<column name="ticketFlag" type="boolean" />
+		<column name="dynamicSectionName" type="String" />
+		<column name="ccEmail" type="boolean" />
+
+		<finder name="eventId" return-type="Rsvp" db-index="false">
+			<finder-column name="eventId"></finder-column>
+		</finder>
+
+		<finder name="spAssetTypeId" return-type="Rsvp" db-index="false">
+			<finder-column name="spAssetTypeId"></finder-column>
+		</finder>
+
+		<finder name="eventIdAndSpAssetTypeId" return-type="Rsvp" db-index="false">
+			<finder-column name="eventId"></finder-column>
+			<finder-column name="spAssetTypeId"></finder-column>
+		</finder>
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+
+	</entity>
+
+	<entity name="RsvpDetail" table="SPRsvpDetail" uuid="true"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="rsvpDetailId" db-name="spRsvpDetailId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="rsvpId" db-name="spRsvpId" type="long" />
+
+		<column name="userId" type="long" />
+		<column name="firstName" type="String" />
+		<column name="lastName" type="String" />
+		<column name="identifiactionType" type="String" />
+		<column name="nric" type="String" />
+		<column name="emailAddress" type="String" />
+		<column name="rsvpStatus" type="int" />
+		<column name="source" type="int" />
+		<column name="attendance" type="int" />
+		<column name="attendanceBy" type="long" />
+		<column name="attendanceDate" type="Date" />
+		<column name="rsvpStatusDate" type="Date" />
+		<column name="rsvpStatusBy" type="long" />
+		<column name="numberOfPeople" type="int" />
+		<column name="streetAddress1" type="String" />
+		<column name="streetAddress2" type="String" />
+		<column name="postalCode" type="String" />
+		<column name="city" type="String" />
+		<column name="country" type="String" />
+		<column name="state" type="String" />
+		<column name="gender" type="String" />
+		<column name="phoneNumber1" type="String" />
+		<column name="phoneNumber2" type="String" />
+		<column name="hearAboutUs" type="String" />
+		<column name="attendedWebinar" type="String" />
+		<column name="ageGroup" type="String" />
+		<column name="termsOfUse" type="boolean" />
+		<column name="ageRestriction" type="boolean" />
+
+		<finder name="RsvpId" return-type="Collection">
+			<finder-column name="rsvpId"></finder-column>
+		</finder>
+
+		<finder name="emailAddressAndRsvpId" return-type="Collection">
+			<finder-column name="rsvpId"></finder-column>
+			<finder-column name="emailAddress"></finder-column>
+		</finder>
+		
+		<finder name="nameAndRsvpId" return-type="Collection">
+			<finder-column name="firstName"></finder-column>
+			<finder-column name="rsvpId"></finder-column>
+		</finder>
+
+		<finder name="emailAddress" return-type="Collection">
+			<finder-column name="emailAddress"></finder-column>
+		</finder>
+
+		<finder name="rsvpStatusAndRsvpId" return-type="Collection" db-index="false">
+			<finder-column name="rsvpId"></finder-column>
+			<finder-column name="rsvpStatus"></finder-column>
+		</finder>
+
+		<finder name="rsvpIdAndSource" return-type="Collection" db-index="false">
+			<finder-column name="rsvpId"></finder-column>
+			<finder-column name="source"></finder-column>
+		</finder>
+
+		<finder name="rsvpIdAndAttendance" return-type="Collection" db-index="false">
+			<finder-column name="rsvpId"></finder-column>
+			<finder-column name="attendance"></finder-column>
+		</finder>
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+
+	</entity>
+
+
+	<entity name="RsvpCoParticipantDetail" table="SPRsvpCoParticipantDetail" uuid="true"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="rsvpCoParticipantDetailId" db-name="spRsvpCoParticipantDetailId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="rsvpDetailId" db-name="spRsvpDetailId" type="long" />
+		<column name="rsvpPaymentId" db-name="spRsvpPaymentId" type="long" />
+
+		<column name="userId" type="long" />
+		<column name="firstName" type="String" />
+		<column name="lastName" type="String" />
+		<column name="nric" type="String" />
+		<column name="identificationType" type="String" />
+		<column name="emailAddress" type="String" />
+		<column name="rsvpStatus" type="int" />
+		<column name="attendance" type="int" />
+		<column name="attendanceBy" type="long" />
+		<column name="attendanceDate" type="Date" />
+		<column name="ticketNumber" type="String" />
+
+		<finder name="RsvpDetailId" return-type="Collection">
+			<finder-column name="rsvpDetailId"></finder-column>
+		</finder>
+
+		<finder name="TicketNumber" return-type="RsvpCoParticipantDetail" unique="true">
+			<finder-column name="ticketNumber"></finder-column>
+		</finder>
+
+		<finder name="RsvpDetailIdAndSPRsvpPaymentId" return-type="Collection">
+			<finder-column name="rsvpDetailId"></finder-column>
+			<finder-column name="rsvpPaymentId"></finder-column>
+		</finder>
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+
+	</entity>
+
+
+	<entity name="RsvpPayment" table="SPRsvpPayment" uuid="true"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="rsvpPaymentId" db-name="spRsvpPaymentId" type="long" primary="true"  />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="rsvpDetailId" db-name="spRsvpDetailId" type="long" />
+		<column name="rsvpId" db-name="spRsvpId" type="long" />
+		<column name="rsvpTicketId" db-name="spRsvpTicketId" type="long" />
+		<column name="rsvpDiscountId" db-name="spRsvpDiscountId" type="long" />
+		<column name="rsvpPromoCodeId" db-name="spRsvpPromoCodeId" type="long" />
+
+		<column name="price" type="double" />
+		<column name="numberOfPeople" type="int" />
+		<column name="discount" type="int" />
+		<column name="netTotal" type="double" />
+
+		<column name="ticketNumber" type="String" convert-null="false" />
+		<column name="payerEmailAddress" type="String" />
+		<column name="receiverEmailAddress" type="String" />
+		<column name="transactionId" type="String" />
+		<column name="transactionStatus" type="String" />
+		<column name="transactionAmount" type="double" />
+		<column name="transactionDate" type="Date" />
+		<column name="emailStatus" type="boolean" />
+
+		<finder name="RsvpDetailId" return-type="Collection">
+			<finder-column name="rsvpDetailId"></finder-column>
+		</finder>
+
+		<finder name="TicketNumber" return-type="RsvpPayment" unique="true">
+			<finder-column name="ticketNumber"></finder-column>
+		</finder>
+
+		<finder name="RsvpDetailIdTransactionStatus" return-type="Collection">
+			<finder-column name="rsvpDetailId"></finder-column>
+			<finder-column name="transactionStatus"></finder-column>
+		</finder>
+
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+
+	</entity>
+
+
+
+	<entity name="RsvpDiscount" table="SPRsvpDiscount" uuid="true"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="rsvpDiscountId" db-name="spRsvpDiscountId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="rsvpId" db-name="spRsvpId" type="long" />
+		<column name="rsvpTicketId" db-name="spRsvpTicketId" type="long" />
+
+		<column name="fromDate" type="Date" />
+		<column name="toDate" type="Date" />
+		<column name="noOfTickets" type="int" />
+		<column name="discount" type="double" />
+		<column name="modifiedBy" type="long" />
+
+		<finder name="rsvpId" return-type="Collection">
+			<finder-column name="rsvpId"></finder-column>
+		</finder>
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+
+	</entity>
+
+
+	<entity name="RsvpPromoCode" table="SPRsvpPromoCode" uuid="true"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="rsvpPromoCodeId" db-name="spRsvpPromoCodeId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="rsvpId" db-name="spRsvpId" type="long" />
+		<column name="rsvpTicketId" db-name="spRsvpTicketId" type="long" />
+
+		<column name="promoCode" type="String" />
+		<column name="fromDate" type="Date" />
+		<column name="toDate" type="Date" />
+		<column name="noOfTickets" type="int" />
+		<column name="discount" type="int" />
+		<column name="modifiedBy" type="long" />
+
+		<finder name="rsvpId" return-type="Collection">
+			<finder-column name="rsvpId"></finder-column>
+		</finder>
+
+		<finder name="PromoCode" return-type="Collection">
+			<finder-column name="promoCode"></finder-column>
+		</finder>
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+
+	</entity>
+
+	<entity name="RsvpTicket" table="SPRsvpTicket" uuid="true"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="rsvpTicketId" db-name="spRsvpTicketId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="rsvpId" db-name="spRsvpId" type="long" />
+
+		<column name="price" type="double" />
+		<column name="quantity" type="int" />
+		<column name="soldQuantity" type="int" />
+		<column name="ticketSequence" type="int" />
+		<column name="lastSequenceNumber" type="int" />
+		<column name="sequencePrefix" type="String" />
+		<column name="sequenceSuffix" type="String" />
+		<column name="ticketTemplateUrl" type="String" />
+		<column name="modifiedBy" type="long" />
+
+		<finder name="rsvpId" return-type="Collection">
+			<finder-column name="rsvpId"></finder-column>
+		</finder>
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+
+	</entity>
+
+</service-builder>

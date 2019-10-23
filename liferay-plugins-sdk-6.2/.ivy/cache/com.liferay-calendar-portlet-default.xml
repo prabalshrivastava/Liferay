@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="com.liferay"
+		module="calendar-portlet"
+		revision="working@pere-T56"
+		conf="default"
+		confs="default, internal"
+		date="20191004165206"/>
+	<dependencies>
+		<module organisation="com.liferay" name="com.google.ical">
+			<revision name="20110304" status="release" pubdate="20160303061039" resolver="liferay-public" artresolver="default" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="0">
+				<license name="LGPL 2.1" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"/>
+				<metadata-artifact status="no" details="" size="2690" time="0" location="/home/perennial/IdeaProjects/sambash-project/sambaash/code/sambaash.platform.005/liferay-plugins-sdk-6.2/.ivy/cache/com.liferay/com.google.ical/ivy-20110304.xml" searched="false" original-local-location="/home/perennial/IdeaProjects/sambash-project/sambaash/code/sambaash.platform.005/liferay-plugins-sdk-6.2/.ivy/cache/com.liferay/com.google.ical/ivy-20110304.xml.original" origin-is-local="false" origin-location="https://repository.liferay.com/nexus/content/groups/public/com/liferay/com.google.ical/20110304/com.google.ical-20110304.pom"/>
+				<caller organisation="com.liferay" name="calendar-portlet" conf="default" rev="20110304" rev-constraint-default="20110304" rev-constraint-dynamic="20110304" callerrev="working@pere-T56"/>
+				<artifacts>
+					<artifact name="com.google.ical" type="jar" ext="jar" status="no" details="" size="158488" time="0" location="/home/perennial/IdeaProjects/sambash-project/sambaash/code/sambaash.platform.005/liferay-plugins-sdk-6.2/.ivy/cache/com.liferay/com.google.ical/jars/com.google.ical-20110304.jar">
+						<origin-location is-local="false" location="https://repository.liferay.com/nexus/content/groups/public/com/liferay/com.google.ical/20110304/com.google.ical-20110304.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="joda-time" name="joda-time">
+			<revision name="1.5.2" status="release" pubdate="20080128161802" resolver="liferay-public" artresolver="default" homepage="http://joda-time.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="1">
+				<license name="Apache 2" url="http://www.apache.org/licenses/"/>
+				<metadata-artifact status="no" details="" size="2647" time="0" location="/home/perennial/IdeaProjects/sambash-project/sambaash/code/sambaash.platform.005/liferay-plugins-sdk-6.2/.ivy/cache/joda-time/joda-time/ivy-1.5.2.xml" searched="false" original-local-location="/home/perennial/IdeaProjects/sambash-project/sambaash/code/sambaash.platform.005/liferay-plugins-sdk-6.2/.ivy/cache/joda-time/joda-time/ivy-1.5.2.xml.original" origin-is-local="false" origin-location="https://repository.liferay.com/nexus/content/groups/public/joda-time/joda-time/1.5.2/joda-time-1.5.2.pom"/>
+				<caller organisation="com.liferay" name="com.google.ical" conf="default, compile, runtime, master" rev="1.5.2" rev-constraint-default="1.5.2" rev-constraint-dynamic="1.5.2" callerrev="20110304"/>
+				<artifacts>
+					<artifact name="joda-time" type="jar" ext="jar" status="no" details="" size="531326" time="0" location="/home/perennial/IdeaProjects/sambash-project/sambaash/code/sambaash.platform.005/liferay-plugins-sdk-6.2/.ivy/cache/joda-time/joda-time/jars/joda-time-1.5.2.jar">
+						<origin-location is-local="false" location="https://repository.liferay.com/nexus/content/groups/public/joda-time/joda-time/1.5.2/joda-time-1.5.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

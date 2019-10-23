@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 6.2.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_6_2_0.dtd">
+
+<resource-action-mapping>
+    <portlet-resource>
+        <portlet-name>Product</portlet-name>
+        <permissions>
+            <supports>
+                <action-key>LIST_VIEW</action-key>
+                <action-key>EXPORT</action-key>
+                <action-key>ADD</action-key>
+                <action-key>UPDATE</action-key>
+                <action-key>DELETE</action-key>
+                <action-key>PUBLISH</action-key>
+                <action-key>SEARCH</action-key>
+                <action-key>ANALYTICS</action-key>
+                <action-key>VIEW</action-key>
+                <action-key>PRODUCT_PREVIEW</action-key>
+            </supports>
+            <site-member-defaults>
+            </site-member-defaults>
+            <guest-defaults>
+            </guest-defaults>
+            <guest-unsupported>
+           		<action-key>EXPORTS</action-key>
+                <action-key>ADD</action-key>
+                <action-key>UPDATE</action-key>
+                <action-key>DELETE</action-key>
+                <action-key>PUBLISH</action-key>
+                <action-key>SEARCH</action-key>
+                <action-key>ANALYTICS</action-key>
+                <action-key>ADD_TO_PAGE</action-key>
+                <action-key>EDIT</action-key>
+                <action-key>HELP</action-key>
+                <action-key>ABOUT</action-key>
+                <action-key>CONFIGURATION</action-key>
+                <action-key>EDIT_DEFAULTS</action-key>
+                <action-key>GUEST_PREFERENCES</action-key>
+                <action-key>PREVIEW</action-key>
+                <action-key>PRINT</action-key>
+                <action-key>PERMISSIONS</action-key>
+                <action-key>PREFERENCES</action-key>
+                <action-key>PRODUCT_PREVIEW</action-key>
+            </guest-unsupported>
+        </permissions>
+    </portlet-resource>
+</resource-action-mapping>

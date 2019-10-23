@@ -1,0 +1,210 @@
+.red-star {
+  color: red !important; }
+
+#loadingDiv {
+  width: 100%;
+  height: 100%;
+  background: #b8b9bf40;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  display: none; }
+
+.m-blockui {
+  border-radius: 4px;
+  display: table;
+  table-layout: fixed; }
+
+.m-blockui > span {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-weight: 400; }
+
+.m-blockui > span > .m-loader,
+.m-blockui > span > .m-spinner {
+  margin-right: 10px; }
+
+.m-blockui {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+  box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1); }
+
+.m-blockui.m-blockui-no-shadow {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.m-blockui > span {
+  color: #6f727d; }
+
+.m-blockui.m-blockui--skin-dark {
+  background: #2c2e3e;
+  -webkit-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.5);
+  box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.5); }
+
+.m-blockui.m-blockui--skin-dark.m-blockui-no-shadow {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.m-blockui.m-blockui--skin-dark > span {
+  color: #9093ac; }
+
+.m-loader.m-loader--brand:before {
+  border-top-color: #716aca;
+  margin-left: 34px; }
+
+.m-loader:before {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-top: -0.7rem;
+  margin-left: -0.7rem;
+  border-top-width: 2px !important;
+  border-right-width: 2px !important; }
+
+.m-loader:before {
+  content: '';
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-top: 2px solid #07d;
+  border-right: 2px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: m-loader-rotate 0.6s linear infinite;
+  animation: spin 800ms linear infinite !important; }
+
+select {
+  -webkit-appearance: menulist-button !important; }
+
+.formStatus {
+  width: 90px;
+  padding: 2px 10px;
+  text-align: center;
+  border-radius: 15px;
+  float: right;
+  top: -25px;
+  right: 0;
+  font-family: "Work Sans",sans-serif;
+  font-size: 15px; }
+
+.statusLabel {
+  width: 90px;
+  padding: 2px 10px;
+  text-align: center;
+  border-radius: 15px;
+  float: right;
+  top: -25px;
+  right: 0;
+  font-family: "Work Sans",sans-serif;
+  font-size: 15px; }
+
+.form_active {
+  background: #8bdb7c; }
+
+.form_inactive {
+  background: #ffc48b; }
+
+.form_draft {
+  background: #dfe3e8; }
+
+.form_blacklist {
+  background: black;
+  color: white; }
+
+.dashed-box {
+  border: 1px dashed #d9e1f0;
+  padding: 30px;
+  border-radius: 10px;
+  background: #f7f9fe; }
+
+.aui .subScheme h3 {
+  color: #2d4eab;
+  background: #fff;
+  border-left: 4px solid #4f67aa;
+  border-top-left-radius: 5px;
+  padding: 10px 20px !important;
+  font-size: 18px; }
+
+.aui .subScheme .subSchemeContainer {
+  border-radius: 5px; }
+
+.aui .subScheme .subSchemeContainer .subSchemeContent {
+  padding: 20px 30px;
+  box-shadow: inset 0 12px 20px 0 rgba(37, 38, 94, 0.07);
+  background: #fff;
+  width: 100%; }
+
+.aui .subScheme .subSchemeContainer .nav {
+  float: right;
+  margin-bottom: 0;
+  padding-top: 0;
+  height: 100%; }
+
+.aui .subScheme .subSchemeContainer .nav li {
+  display: inline-block;
+  margin-left: 15px; }
+
+.aui .subScheme .subSchemeContainer .nav {
+  padding-top: 6px;
+  padding-right: 12px; }
+
+.aui .subScheme .subSchemeContainer .subSchemeContent .row-fluid {
+  padding-top: 12px !important; }
+
+.aui .subScheme select {
+  background: none !important; }
+
+.sectionHeaderDiv {
+  height: 35px;
+  width: 200px;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  vertical-align: middle;
+  box-shadow: 0px 1px 3px 1px #e1e3ec;
+  position: relative;
+  margin: 0 auto;
+  top: 17px;
+  background-color: white; }
+
+.sectionHeaderLabel {
+  position: relative;
+  top: 9px;
+  color: #2222bf !important; }
+
+.removeIcon {
+  background: url(../images/close.png) no-repeat;
+  width: 17px;
+  height: 18px;
+  text-indent: 1000px;
+  overflow: hidden;
+  position: relative;
+  top: -4px; }
+
+.includeTaxLabel {
+  padding-top: 30px !important; }
+
+.includeTax {
+  padding-right: 10px !important;
+  margin-top: 1px !important;
+  opacity: 1 !important;
+  display: block !important; }
+
+.headerText {
+  display: inline-block !important;
+  max-width: 500px !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important; }
+
+.gradeLable {
+  margin-left: 8% !important; }
+
+.gradeType {
+  margin-left: 4% !important; }
+
+.awardHeading {
+  color: cadetblue !important; }
+

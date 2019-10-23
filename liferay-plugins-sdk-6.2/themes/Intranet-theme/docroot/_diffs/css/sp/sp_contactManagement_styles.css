@@ -1,0 +1,369 @@
+body {
+  background-color: #fafafa; }
+
+.cmHeaderBg {
+  background-image: linear-gradient(95deg, #0c2359, #47348c); }
+
+.cmHeader h2 {
+  font-size: 28px;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  text-transform: lowercase;
+  text-align: center; }
+  .cmHeader h2:first-letter {
+    text-transform: uppercase; }
+
+.cmHeader p {
+  font-size: 10px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 400; }
+
+.cmBorder {
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: solid 1px #dce0e4; }
+
+.cmBorderBottom {
+  border-bottom: solid 1px #dce0e4; }
+
+.cmBorderTop {
+  border-top: solid 1px #dce0e4; }
+
+.cmBgGradient {
+  background-image: linear-gradient(to bottom, #ffffff, #eef1f5); }
+
+.cmProfileDetail h2 {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: #333333; }
+  .cmProfileDetail h2:first-letter {
+    text-transform: uppercase; }
+
+.cmProfileDetail .Roletag {
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 20px;
+  background-color: #46b90c; }
+
+.cmProfileDetail .RoleName {
+  font-size: 15px;
+  text-align: center;
+  color: #555555; }
+
+.cmBLK blockquote {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left;
+  color: #555555;
+  border-left: 0px; }
+
+.cmBLK p {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left;
+  color: #555555;
+  border-left: 0px; }
+  .cmBLK p:first-letter {
+    text-transform: uppercase; }
+
+.cmContactDetails .cmContactContent p {
+  font-size: 15px;
+  text-align: left;
+  color: #555555;
+  font-weight: 400;
+  line-height: normal; }
+  .cmContactDetails .cmContactContent p span {
+    line-height: normal;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase; }
+
+.keyHeading {
+  border-bottom: solid 1px #d9dce3; }
+  .keyHeading h2 {
+    font-size: 12px;
+    color: #555555;
+    line-height: normal;
+    font-weight: 600; }
+
+.keyDataContent .kdDetailWrap p {
+  font-size: 12px;
+  color: #555555;
+  line-height: normal; }
+  .keyDataContent .kdDetailWrap p a {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #054e93;
+    text-decoration: none; }
+.keyDataContent .kdDetailWrap span {
+  font-size: 10px;
+  color: #343434;
+  line-height: normal; }
+
+.keyDataContent .kdIconWrap {
+  background-color: #eeeeee; }
+  .keyDataContent .kdIconWrap.bgDoc {
+    background-color: #43d0b0; }
+  .keyDataContent .kdIconWrap.bgConv {
+    background-color: #d33a4d; }
+  .keyDataContent .kdIconWrap.bgCall {
+    background-color: #39a6c8; }
+  .keyDataContent .kdIconWrap.bgEmail {
+    background-color: #8c55b1; }
+  .keyDataContent .kdIconWrap.bgInteraction {
+    background-color: #4853a5; }
+
+.cmLetsChat a {
+  border-radius: 4px;
+  background-color: #005eb8;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none; }
+  .cmLetsChat a:before {
+    background-color: #38dc21;
+    border-radius: 50%; }
+
+.cmConnectionWrapper .cmConnectionContent.friendRole:nth-child(even) {
+  background-color: #f2f5fa; }
+
+.cmConnectionContent .cmCDetailWrap a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  color: #054e93;
+  text-decoration: none; }
+
+.cmConnectionContent .cmCDetailWrap span {
+  font-size: 12px;
+  color: #343434;
+  line-height: normal; }
+
+.seeMoreWrap a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  color: #054e93;
+  text-align: center;
+  background-color: #f8f9fb; }
+  .seeMoreWrap a:hover {
+    background-color: #e9eef9; }
+
+.cmHeader .ExportSec a {
+  text-align: center;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px; }
+  .cmHeader .ExportSec a:hover {
+    background-color: #eeeeee; }
+
+.NetworkDataContent .ndDetailWrap a {
+  line-height: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #054e93;
+  word-break: break-word; }
+  .NetworkDataContent .ndDetailWrap a:hover {
+    color: #1083f1; }
+.NetworkDataContent .ndDetailWrap span {
+  font-size: 12px;
+  color: #555555;
+  line-height: normal;
+  font-weight: 600; }
+
+.WorkExpContent h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #545454;
+  line-height: normal; }
+
+.WorkExpContent .workExpTag .workExpTagName {
+  font-size: 12px;
+  color: #555555;
+  line-height: normal;
+  font-weight: 600;
+  word-break: break-word; }
+  .WorkExpContent .workExpTag .workExpTagName:after {
+    background-color: #555555; }
+
+.WorkExpContent .workExpDate .workexpDateContent {
+  font-size: 11px;
+  color: #343434;
+  font-weight: 600;
+  line-height: normal; }
+
+.WorkExpContent .workExpDesc p {
+  font-size: 15px;
+  color: #555555;
+  font-weight: 400;
+  line-height: normal;
+  word-break: break-word; }
+.WorkExpContent .workExpDesc ul li {
+  font-size: 12px;
+  line-height: normal;
+  color: #333333;
+  font-weight: 400;
+  list-style-type: decimal; }
+
+a.ActivityTag {
+  border-radius: 10px;
+  background-color: #0c2359;
+  text-decoration: none; }
+  a.ActivityTag p {
+    line-height: normal;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 400; }
+    a.ActivityTag p span {
+      line-height: normal;
+      font-size: 12px;
+      color: #ffffff;
+      font-weight: 700; }
+
+a.EventTag {
+  text-decoration: none; }
+  a.EventTag p {
+    line-height: normal;
+    font-size: 14px;
+    color: #8b95ae;
+    font-weight: 400; }
+  a.EventTag.is-active {
+    border-bottom: 1px solid #054e93; }
+    a.EventTag.is-active p {
+      color: #054e93;
+      font-weight: 600; }
+
+.TagBottom {
+  border-radius: 10px;
+  background-color: #0c2359;
+  text-decoration: none; }
+  .TagBottom p {
+    line-height: normal;
+    font-size: 9px;
+    color: #ffffff;
+    font-weight: 400; }
+
+a.ActivityTag.statusGold {
+  background-image: radial-gradient(circle at 50% 50%, #f9c70a, #e59224); }
+a.ActivityTag.statusSilver {
+  background-image: radial-gradient(circle at 50% 50%, #ababab, #919191); }
+a.ActivityTag.statusBronze {
+  background-image: radial-gradient(circle at 50% 50%, #ed933a, #ce6735); }
+a.ActivityTag.opened {
+  background-color: #8748a5; }
+a.ActivityTag.statusInteraction {
+  background-color: #4853a5; }
+a.ActivityTag.statusDoc {
+  background-color: #2cc5a2; }
+a.ActivityTag.statusCall {
+  background-color: #39a6c8; }
+a.ActivityTag.statusEmail {
+  background-color: #8c55b1; }
+a.ActivityTag.statusConversation {
+  background-color: #cf4859; }
+
+.TagBottom.statusGold {
+  background-image: radial-gradient(circle at 50% 50%, #f9c70a, #e59224); }
+.TagBottom.statusSilver {
+  background-image: radial-gradient(circle at 50% 50%, #ababab, #919191); }
+.TagBottom.statusBronze {
+  background-image: radial-gradient(circle at 50% 50%, #ed933a, #ce6735); }
+
+.leadsContent .leadsDetailWrap a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #054e93;
+  text-decoration: none;
+  word-break: break-all; }
+.leadsContent .leadsDetailWrap p {
+  font-size: 12px;
+  color: #555555;
+  line-height: normal;
+  font-weight: 600;
+  word-break: break-all; }
+.leadsContent .leadsDetailWrap span {
+  font-size: 11px;
+  color: #343434;
+  font-weight: 600;
+  line-height: normal;
+  word-break: break-all; }
+
+.completePerc {
+  border-radius: 50%;
+  border: 0px solid #2c3942;
+  background-color: #000; }
+
+.radial-inner-bg {
+  border-radius: 50%;
+  background: #FFF;
+  font-size: 12px;
+  line-height: 2.3;
+  font-weight: 400;
+  color: #00ae76;
+  text-align: center; }
+
+.compaignTable th,
+.compaignTable td {
+  text-align: left; }
+
+.compaignTable th {
+  font-size: 12px;
+  color: #555555;
+  font-weight: 600;
+  border-bottom: 1px solid #d9dce3; }
+
+.compaignTable td {
+  font-size: 12px;
+  color: #555555;
+  font-weight: 400; }
+  .compaignTable td a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    color: #054e93;
+    text-decoration: none; }
+  .compaignTable td p {
+    line-height: normal;
+    font-size: 10px;
+    color: #343434; }
+
+.cmAccordionHeader a {
+  background-color: #ffffff;
+  border: solid 1px #dce0e4;
+  font-size: 12pt;
+  font-weight: 600;
+  line-height: normal;
+  color: #333333; }
+.cmAccordionHeader.toggler-header-expanded:after {
+  content: '-';
+  font-size: 12pt;
+  font-weight: 700;
+  line-height: normal;
+  color: #961f63; }
+.cmAccordionHeader.toggler-header-collapsed {
+  font-weight: 700; }
+  .cmAccordionHeader.toggler-header-collapsed:after {
+    content: '+';
+    font-size: 12pt;
+    font-weight: 600;
+    line-height: normal; }
+
+@media screen and (max-width: 800px) {
+  table.compaignTable tr {
+    border: 1px solid #d9dce3; }
+  table.compaignTable td,
+  table.compaignTable th {
+    border: 0.5px solid #d9dce3; } }
+
+/*# sourceMappingURL=sp_contactManagement_styles.css.map */

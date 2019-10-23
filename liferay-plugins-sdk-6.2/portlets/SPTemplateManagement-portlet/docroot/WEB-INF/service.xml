@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.template">
+	<author>WattabyteIT</author>
+	<namespace>SPTemplateManagement</namespace>
+
+	<entity name="SPTemplate" table="SPTemplate" uuid="true" uuid-accessor="true" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spTemplateId" type="long" primary="true" ></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="createBy" type="long"></column>
+        <column name="modifiedBy" type="long"></column>
+        <column name="classNameId" type="long"></column>
+        <column name="classPK" type="long"></column>
+        <column name="templateName" type="String"></column>
+        <column name="status" type="int"></column>
+        
+        
+        <finder name="TemplateName" return-type="Collection">
+            <finder-column name="templateName"></finder-column>
+        </finder>
+        
+	</entity>
+	<entity name="SPComponentTemplate" table="SPComponentTemplate" uuid="true"
+		uuid-accessor="true" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<!-- Group instance -->
+
+		<!-- Audit fields -->
+
+
+		<!-- PK fields -->
+
+		<!-- Group instance -->
+
+		<!-- Audit fields -->
+
+
+		<!-- PK fields -->
+
+		<column name="spComponentTemplateId" type="long"
+			primary="true">
+		</column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+        <column name="createBy" type="long"></column>
+        <column name="modifiedBy" type="long"></column>
+        <column name="spTemplateId" type="long"></column>
+        <column name="level0ClassNameId" type="long"></column>
+        <column name="level0FormId" type="long"></column>
+        <column name="level1ClassNameId" type="long"></column>
+        <column name="level1FormId" type="long"></column>
+        <column name="level2ClassNameId" type="long"></column>
+        <column name="level2FormId" type="long"></column>
+        <column name="level3ClassNameId" type="long"></column>
+        <column name="level3FormId" type="long"></column>
+        <column name="level4ClassNameId" type="long"></column>
+        <column name="level4FormId" type="long"></column>
+        <column name="level5ClassNameId" type="long"></column>
+        <column name="level5FormId" type="long"></column>
+        <column name="level6ClassNameId" type="long"></column>
+        <column name="level6FormId" type="long"></column>
+        <column name="level7ClassNameId" type="long"></column>
+        <column name="level7FormId" type="long"></column>
+        <column name="level8ClassNameId" type="long"></column>
+        <column name="level8FormId" type="long"></column>
+        <column name="level9ClassNameId" type="long"></column>
+        <column name="level9FormId" type="long"></column>
+        <column name="level10ClassNameId" type="long"></column>
+        <column name="level10FormId" type="long"></column>
+        <column name="status" type="int"></column>
+        <finder name="TemplateId" return-type="Collection">
+            <finder-column name="spTemplateId"></finder-column>
+        </finder>
+	</entity>
+</service-builder>

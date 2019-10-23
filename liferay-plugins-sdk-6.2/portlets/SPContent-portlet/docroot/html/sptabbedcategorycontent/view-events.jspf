@@ -1,0 +1,52 @@
+<%@page import="com.sambaash.platform.util.SambaashUtil"%>
+<%@page import="com.liferay.compat.portal.kernel.util.HttpUtil"%>
+<%@page import="com.liferay.portal.kernel.util.Validator"%>
+<%@include file="/html/sptabbedcategorycontent/init.jsp" %>
+
+	<%
+		List<Document> eventContentList = (List<Document>) request.getAttribute(WebKeys.EVENT_CONTENT_LIST);
+	%>
+				
+	<c:if test="${eventContentList != null && eventContentList.size()>0}">
+		<%
+			for (Document ec: eventContentList) {
+				String imgUrls = ec.get("fileUrls");
+				String imgUrl = Validator.isNull(imgUrls) ? "/SPContent-portlet/images/default_event_image.jpeg" : HttpUtil.decodeURL(imgUrls).split("\\s+")[0];
+				String desc = ec.get("description");
+				if (Validator.isNotNull(desc)) {
+					desc = HtmlUtil.stripHtml(desc);
+				}
+				String detailType = SambaashUtil.getParameter("event.details.type", themeDisplay.getScopeGroupId());
+				String eventLinkFormat;
+				if ("SPEvent".equalsIgnoreCase(detailType)) {
+					eventLinkFormat = "/event-details/-/event/view_event/%s?flagDetail=false";
+				} else {
+					eventLinkFormat = "/event-details?eventId=%s";
+				}
+				String eventLink = String.format(eventLinkFormat, ec.get("calendarBookingId"));
+		%>
+			<div class="col">
+		        <div class="padding-row _item">         
+		            <div class="single-idea">
+		                <div class="image-section">
+		                    <img src="<%=imgUrl%>" alt="Event-image">
+		                </div>
+		                <div class="idea-content">
+		                    <div class="small-title"><%= ec.get("_ui_title") %></div>
+		                	<div class="normal-title"><%=ec.get("title")%></div>
+		                	<a href="<%=eventLink%>" class="launch-button">DETAILS</a> 
+	                        <div class="accordionItem close">
+	                            <h2 class="accordionItemHeading"></h2>
+	                            <div class="accordionItemContent">
+	                                <p><%=desc%></p>
+	                            </div>
+	                        </div>
+		            	</div>
+	            	</div>            
+	        	</div>
+			</div>
+		<%		
+			}
+			eventContentList.clear();
+		%>
+	</c:if>

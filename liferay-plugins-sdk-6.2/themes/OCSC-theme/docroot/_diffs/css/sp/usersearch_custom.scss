@@ -1,0 +1,245 @@
+@import "sp_custom_variables";
+@import "sp_mixins";
+@import "sp_media-queries";
+
+ .usersearch-max-width {
+     max-width: $screen-max-width;
+ }
+
+ .max-width {
+     max-width: $screen-max-width;
+ }
+
+ .usersearch-listingsection {
+     &.top {
+         .usersearch-search-filters {
+             .usersearcha-contentarea {
+                 //styles
+                 background-color: #fff;
+                 border: solid 1px #e0e0e0;
+             }
+         }
+     }
+ }
+
+ a.usersearch-button {
+     @include border-radius(4px);
+     //styles
+     color: #fff;
+     font-size: 10pt;
+     font-weight: 400;
+     background: #0066b3;
+     border: 0;
+ }
+
+ .btnFilters {
+     button {
+         border: none;
+         &.Blue {
+             @include border-radius(4px);
+         }
+         &.Green {
+             @include border-radius(4px);
+         }
+         &.Yellow {
+             @include border-radius(0);
+         }
+     }
+ }
+
+ .usersearcha-right-country {
+     p {
+         font-size: 10px;
+         color: #343434;
+         line-height: normal;
+         text-transform: uppercase;
+     }
+ }
+
+ .usersearch-search-filters {
+     .usersearcha-contentarea {
+         @include border-radius(5px);
+         //styles
+         background-color: #fff;
+         border: solid 1px #e0e0e0;
+         .usersearcha-section {
+             .usersearcha-section-title {
+                 text-transform: uppercase;
+             }
+             .FilterLink-text {
+                 a {
+                     text-decoration: none;
+                     outline: none;
+                 }
+             }
+             .usersearcha-section-item {
+                 &.all-categories {
+                     a {
+                         color: #888888;
+                         font-size: 10pt;
+                         font-weight: 300;
+                         line-height: normal;
+                         letter-spacing: normal;
+                         text-transform: uppercase;
+                         &:hover {
+                             color: #0066b3;
+                         }
+                     }
+                 }
+                 a {
+                     //styles
+                     color: #555;
+                     font-size: 10pt;
+                     font-weight: 400;
+                     line-height: normal;
+                     text-decoration: none;
+                 }
+             }
+         }
+     }
+ }
+
+ //Filter Content section
+
+ .usersearchw-search-results {
+     .usersearch-content-wrapper {
+         border-radius: 5px;
+         //styles
+         background-color: #fff;
+         border: solid 1px #e0e0e0;
+         .usersearch-image-wrap {
+             &.usersearch-img-full {
+                 background-image: radial-gradient(circle at 50% 50%, #ffffff, #e0f1ff);
+             }
+             .pi_button {
+                 button {
+                     background-color: #F2F5F8;
+                     text-transform: none;
+                     &:hover {
+                         background-color: #f0f0f0;
+                     }
+                 }
+             }
+         }
+         .usersearch-inner-content {
+             .usersearch-inner-title {
+                 //styles
+                 color: #555;
+                 font-size: 12pt;
+                 font-weight: 700;
+             }
+             .usersearch-inner-postarea {
+                 .us-postarea-content {
+                     font-size: 13px;
+                     font-weight: 500;
+                     color: #333333;
+                     &:after {
+                         border-radius: 50%;
+                         background-color: #989898;
+                     }
+                     span {
+                         font-size: 13px;
+                         font-weight: 500;
+                         color: #333333;
+                     }
+                 }
+             }
+             .usersearch-inner-contact {
+                 .us-contact-content {
+                     a {
+                         font-size: 13px;
+                         font-weight: 400;
+                         color: #005eb8;
+                         text-decoration: none;
+                         line-height: normal;
+
+                         span {
+                             font-size: 13px;
+                             font-weight: 400;
+                             color: #005eb8;
+                             text-decoration: none;
+                             line-height: normal;
+
+                         }
+                     }
+                 }
+             }
+             .usersearch-button-wrap {
+                 a.usersearch-button {
+                     //styles
+                     color: #fff;
+                     font-size: 10pt;
+                     font-weight: 400;
+                     background: #0066b3;
+                     border: 0;
+                 }
+             }
+         }
+     }
+ }
+
+ //MOBILE VIEW
+ @include screen (320px, 480px) {
+     .usersearch-coverImg {
+         img {
+             border-radius: 50%;
+             border: 10px solid rgba(255, 255, 255, 0.22);
+         }
+     }
+     .usersearch-search-filters {
+         border-top: 4px solid #ffc830;
+         background: #f3f3f3;
+     }
+     //LEFT FILTER SECTION END
+     //SEARCH
+     .usersearch-sort-filter {
+         background-color: #f9fafb;
+         border: solid 1px #e0e7ee;
+         @include border-radius(5px);
+         .usersearch-sort-filterwrap {
+             .usersearch-mobile-filtericon {
+                 a {
+                     @include border-radius(3px);
+                 }
+             }
+         }
+     }
+     //SEARCH END
+ }
+
+ @include screen (481px, 766px) {
+
+     .usersearch-coverImg {
+         img {
+             border-radius: 50%;
+             border: 10px solid rgba(255, 255, 255, 0.22);
+         }
+     }
+
+     .usersearch-search-filters {
+         border-top: 4px solid #ffc830;
+         background: #f3f3f3;
+     }
+ }
+
+
+ @include screen (767px, 1024px, portrait) {
+
+     .usersearch-search-filters {
+         border-top: 4px solid #ffc830;
+         background: #f3f3f3;
+         .usersearcha-contentarea {
+             @include border-radius(5px);
+         }
+     }
+     //SEARCH
+     .usersearch-sort-filter {
+             .usersearch-mobile-filtericon {
+                 a {
+                     border-radius: 3px;
+                 }
+             }
+         }
+              //SEARCH END
+     }
+

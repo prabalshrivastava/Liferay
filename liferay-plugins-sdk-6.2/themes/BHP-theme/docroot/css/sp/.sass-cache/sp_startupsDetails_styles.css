@@ -1,0 +1,1026 @@
+/** profile_form_navigation -- additional text **/
+/** sp_custom.scss **/
+/** main wrapper bg color -- declared as variable in sp_custom.scss **/
+/** main navigation list bg & on hover color **/
+/** signed in menu list on hover bg color & aui-dialog - header bg color **/
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** profile_form_navigation -- additional text **/
+/** sp_custom.scss **/
+/** main wrapper bg color -- declared as variable in sp_custom.scss **/
+/** main navigation list bg & on hover color **/
+/** signed in menu list on hover bg color & aui-dialog - header bg color **/
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** SP Mixins **/
+/* FONT MIXINS */
+/*********************
+
+RESPONSIVE BREAKPOINT
+**********************/
+.aui .addChallenge .formTextField h2 {
+  font-size: 12pt;
+  font-weight: 500;
+  text-transform: none;
+  color: #555555; }
+
+.slider {
+  cursor: pointer;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  /* Rounded sliders */ }
+
+.slider:before {
+  content: "";
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s; }
+
+.slider.round {
+  border-radius: 34px; }
+
+.slider.round:before {
+  border-radius: 50%; }
+
+.g-detail-banner-container {
+  background-image: linear-gradient(282deg, #00b388, #0085ca 50%, #005eb8);
+  background-image: -webkit-linear-gradient(192deg, #00b388, #0085ca 50%, #005eb8);
+  background-image: -o-linear-gradient(192deg, #00b388, #0085ca 50%, #005eb8);
+  background-image: linear-gradient(282deg, #00b388, #0085ca 50%, #005eb8); }
+
+.switch input {
+  display: none; }
+
+.switch input:checked + .slider {
+  background-color: #2196F3; }
+
+.switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); }
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3; }
+
+address {
+  font-style: normal; }
+
+.auto-fields-border {
+  border: 2px dashed #bfbfbf !important;
+  color: #999 !important; }
+
+#video-url-fields .lfr-form-row:hover,
+#projects-auto-fields .lfr-form-row:hover {
+  background-color: #1e8bc3;
+  border-color: #1e8bc3; }
+
+#video-url-fields .lfr-form-row:hover label,
+#projects-auto-fields .lfr-form-row:hover label {
+  color: white; }
+
+#video-url-fields .btn-icon,
+#projects-auto-fields .btn-icon {
+  color: #555555;
+  background-color: transparent; }
+
+.screen-max-width {
+  max-width: 1280px; }
+
+.margin-40 {
+  margin: 40px; }
+
+.margin-bot-10 {
+  margin-bottom: 10px; }
+
+.margin-bot-20 {
+  margin-bottom: 20px; }
+
+.margin-bot-28 {
+  margin-bottom: 28px; }
+
+.ie .gdb-content-section .gdb-title {
+  text-align: center; }
+
+.startup-tagsdiv .st-tags {
+  border: none;
+  color: #ffffff;
+  font-size: 10pt;
+  font-weight: 300;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #015fb8; }
+
+.startup-tagsdiv .st-tags.small {
+  font-size: 9pt; }
+
+.startup-tagsdiv .st-tags.sse_tagbg {
+  background-color: #69a631; }
+
+.startup-tagsdiv .st-tags.et_tagbg {
+  background-color: #8b1662; }
+
+.startup-tagsdiv .st-tags.pi_tagbg {
+  background-color: #fabb00; }
+
+.startup-tagsdiv .st-tags.mae_tagbg {
+  background-color: #dc270a; }
+
+.startup-tagsdiv .st-tags.cmi_tagbg {
+  background-color: #ef8b00; }
+
+.startup-tagsdiv .st-tags.methodology_tagbg {
+  background-color: #0066b3;
+  color: #ffffff; }
+
+.startup-tagsdiv .st-tags.brands_tagbg {
+  background-color: #0066b3;
+  color: #ffffff; }
+
+.startup-tagsdiv .st-tags.tags_bg {
+  background-color: #0066b3;
+  color: #ffffff; }
+
+.btnDetails button {
+  border: none;
+  cursor: pointer;
+  transition: all 0.8s;
+  transition-timing: ease-in-out; }
+
+.btnDetails button.Blue {
+  background-color: #f59807;
+  color: #ffffff;
+  font-size: 10pt;
+  font-weight: 400;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px; }
+
+.btnDetails button.Blue:hover {
+  background-color: #ff7517;
+  color: #ffffff; }
+
+.btnDetails button.Green {
+  background-color: #13b288;
+  color: #ffffff;
+  font-size: 10pt;
+  font-weight: 400;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px; }
+
+.btnDetails button.Green:hover {
+  background-color: #2eeab9;
+  color: #ffffff; }
+
+.btnDetails button.Yellow {
+  background-color: #ffc72c;
+  color: #000000;
+  font-size: 10pt;
+  font-weight: 600;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0; }
+
+.btnDetails button.Yellow:hover {
+  background-color: #FFEB3B;
+  color: #000000; }
+
+#startupratingsection.gdb-ratings .g-detail-rating .sp_ratings .ratingsSection_wrap {
+  background: transparent;
+  border: none;
+  border-radius: 0px;
+  max-width: 1280px; }
+
+#startupratingsection.gdb-ratings .g-detail-rating .sp_ratings .ratingsSection_wrap .rs_container {
+  background: transparent; }
+
+#startupratingsection.gdb-ratings .g-detail-rating .sp_ratings .ratingsSection_wrap .rs_container .rs_ave {
+  background: transparent; }
+
+#startupratingsection.gdb-ratings .g-detail-rating .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .aveRating .rs_cta {
+  background: transparent;
+  border-top: 0px solid #0085ca; }
+
+#startupratingsection.gdb-ratings .g-detail-rating .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .aveRating .rs_cta a {
+  text-transform: uppercase;
+  color: #0085ca;
+  text-decoration: none;
+  font-size: 9pt; }
+
+#startupratingsection.gdb-ratings .g-detail-rating .sp_ratings .ratingsSection_wrap .rs_container .rs_ave a {
+  text-decoration: none;
+  border-right: 1px solid #fed02f; }
+
+#startupratingsection.gdb-ratings .g-detail-rating .sp_ratings .ratingsSection_wrap .rs_container .rs_ave a:last-child {
+  border-right: 0; }
+
+.startup-detail-banner-container {
+  background-size: cover; }
+
+.gdb-content-section {
+  text-align: center;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000); }
+
+.gdb-content-section .gdb-image img {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+  object-fit: contain;
+  background-color: #FFF;
+  border: 1px solid #d8d8d8; }
+
+.gdb-content-section .gdb-title {
+  text-align: center;
+  color: #f4f4f4;
+  font-size: 14pt;
+  font-weight: 500;
+  text-shadow: 1px 1px #555; }
+
+.gdb-content-section .gdb-social-icon ul li {
+  line-height: normal; }
+
+.gdb-content-section .gdb-social-icon ul li a img {
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.gdb-content-section .gdb-social-icon ul li a img:hover {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2); }
+
+.gdb-content-section .gdb-description ul li p {
+  line-height: 1.29;
+  font-size: 10pt;
+  font-weight: 400;
+  color: #ffffff; }
+
+.gdb-content-section .gdb-description ul li.separated:before {
+  content: '';
+  background-color: #fed02f;
+  border-radius: 49px; }
+
+.gdb-navlink {
+  text-align: center;
+  background-color: #252525; }
+
+.gdb-navlink ul:after {
+  content: ''; }
+
+.gdb-navlink ul li {
+  line-height: normal; }
+
+.gdb-navlink ul li a {
+  line-height: 1.29;
+  font-size: 10pt;
+  transition: all 0.8s;
+  transition-timing: ease-in-out;
+  color: #ffffff; }
+
+.gdb-navlink ul li a:hover {
+  color: #e65400; }
+
+.gdb-navlink ul li a.is-active {
+  text-decoration: none;
+  color: #e65400; }
+
+.gdb-navlink ul li.separated:after {
+  content: '';
+  background-color: #e65400;
+  border-radius: 50px;
+  border: none; }
+
+.gdb-navlink ul li:last-child.separated:after {
+  content: '';
+  border-radius: 30px;
+  background-color: #000;
+  border: none; }
+
+.video-container {
+  object-fit: contain; }
+
+.video-container video {
+  object-fit: cover;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px; }
+
+.gdb-box-sec {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: solid 1px #ececec; }
+
+.detail-content-wrap iframe {
+  border: solid 1px #979797; }
+
+.sponser-logo-img {
+  object-fit: contain; }
+
+.detailed-title {
+  color: #555555;
+  font-size: 14pt;
+  font-weight: 700;
+  text-align: left; }
+
+h2.detailed-title {
+  color: #555555;
+  font-size: 14pt;
+  font-weight: 700;
+  text-align: left; }
+
+.detailed-title-big {
+  color: #555555;
+  font-size: 16pt;
+  font-weight: 700;
+  text-align: left; }
+
+h2.detailed-title-big {
+  color: #555555;
+  font-size: 16pt;
+  font-weight: 700;
+  text-align: left; }
+
+.detailed-description {
+  color: #555555;
+  font-size: 11pt;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left; }
+
+.detailed-title-small {
+  color: #555555;
+  font-size: 10pt;
+  font-weight: 400;
+  text-align: left; }
+
+.detailed-title-small-bold {
+  color: #555555;
+  font-size: 10pt;
+  font-weight: 700;
+  text-align: left; }
+
+.detail-content-small {
+  text-align: left;
+  cursor: pointer; }
+
+.detail-content-small img {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px;
+  transition: all 1s;
+  transition-timing: ease-in-out; }
+
+.detail-content-small .dcs-row {
+  padding: 0 20px; }
+
+.detail-content-small .dcs-row .dcs-title {
+  color: #1a5aa5;
+  font-size: 10pt;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.8s;
+  transition-timing: ease-in-out; }
+
+.detail-content-small:hover .dcs-row .dcs-title {
+  color: #fec92f;
+  font-size: 10pt;
+  font-weight: 500; }
+
+.detail-content-team img {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px;
+  transition: all 0.8s;
+  transition-timing: ease-in-out; }
+
+.detail-content-team:hover img {
+  transform: scale(1.2);
+  border: 1.8px solid #fec92f;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; }
+
+.detail-content-team:hover .dcs-row .dcs-title {
+  color: #fec92f;
+  font-size: 10pt;
+  font-weight: 500; }
+
+.detail-content-team .dcs-row .dcs-title {
+  color: #1a5aa5;
+  font-size: 10pt;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+.detail-content-team .dcs-row a {
+  color: #1a5aa5;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease; }
+
+.detail-content-team .dcs-row a:hover {
+  color: #fec92f; }
+
+ul.detail-list {
+  list-style-type: none; }
+
+ul.detail-list li {
+  font-size: 15px;
+  font-weight: 400;
+  color: #555555;
+  counter-increment: step-counter; }
+
+ul.detail-list li:before {
+  content: counter(step-counter) "."; }
+
+ul.schedule-list {
+  list-style-type: none; }
+
+ul.schedule-list li {
+  color: #555555;
+  font-size: 11pt;
+  font-weight: 400;
+  line-height: normal; }
+
+.g-detail-paragraph {
+  color: #555555;
+  font-size: 9pt;
+  font-weight: 400; }
+
+.icon-share {
+  border: none; }
+
+.icon-share a img {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0; }
+
+.icon-share a img:hover {
+  border: none;
+  -webkit-border-radius: 0%;
+  -moz-border-radius: 0%;
+  -ms-border-radius: 0%;
+  border-radius: 0%; }
+
+.icon-print-fav ul li {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  background-color: #ffffff; }
+
+.icon-print-fav ul li a {
+  line-height: 2.3em; }
+
+.icon-print-fav ul li a img {
+  border-radius: 0; }
+
+.icon-print-fav ul li:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: 0.5px solid #5a5a5a; }
+
+.icon-print-fav ul li:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px; }
+
+.box-section {
+  text-align: center; }
+
+.box-section .layout-30 .img-icon {
+  transition: all 0.8s;
+  transition-timing: ease-in-out; }
+
+.box-section .layout-30 .cont-desc {
+  font-size: 11pt;
+  font-weight: 500;
+  line-height: 1.29;
+  text-align: center;
+  color: #DD5900;
+  word-break: break-all; }
+
+.box-section .layout-30 a {
+  color: #1a5aa5;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease; }
+
+.box-section .layout-30:hover a {
+  color: #fec92f; }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .icon-print-fav ul li a img {
+    border-radius: 0; }
+
+  .icon-print-fav ul li:first-child {
+    border-radius: 4px; }
+
+  .gdb-content-section .gdb-description ul li.separated:before {
+    content: '';
+    background-color: #e65400;
+    border-radius: 30px;
+    border: none; }
+
+  .gdb-content-section .gdb-description ul li p {
+    font-size: 10pt;
+    font-weight: 400;
+    color: #ffffff; }
+
+  .detail-content-team {
+    text-align: center; }
+
+  .detail-content-team img {
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px; }
+
+  .detail-content-team .dcs-row .dcs-title {
+    color: #1a5aa5;
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase; } }
+@media screen and (min-width: 360px) and (max-width: 640px) {
+  .icon-print-fav ul li a img {
+    border-radius: 0; }
+
+  .icon-print-fav ul li:first-child {
+    border-radius: 4px; }
+
+  .gdb-content-section .gdb-description ul li p {
+    line-height: normal; }
+
+  .gdb-content-section .gdb-description ul li.separated:before {
+    content: '';
+    background-color: #e65400;
+    border-radius: 30px;
+    border: none; }
+
+  .detail-content-team {
+    text-align: center; }
+
+  .detail-content-team img {
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px; }
+
+  .detail-content-team .dcs-row .dcs-title {
+    color: #1a5aa5;
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase; } }
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .icon-print-fav ul li a img {
+    border-radius: 0; }
+
+  .icon-print-fav ul li:first-child {
+    border-radius: 4px; }
+
+  .gdb-content-section .gdb-description ul li p {
+    line-height: normal; }
+
+  .gdb-content-section .gdb-description ul li.separated:before {
+    content: '';
+    background-color: #e65400;
+    border-radius: 30px;
+    border: none; }
+
+  .detail-content-team {
+    text-align: center; }
+
+  .detail-content-team img {
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px; }
+
+  .detail-content-team .dcs-row .dcs-title {
+    color: #1a5aa5;
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase; } }
+.aui .btn.startupbtn {
+  line-height: 19px;
+  border-radius: 55px;
+  font-size: 14px;
+  background-color: #f1f1f1; }
+
+.yui3-aclist-item {
+  cursor: pointer;
+  list-style: none;
+  font-size: 11pt; }
+
+/*# sourceMappingURL=sp_startupsDetails_styles.css.map */
+

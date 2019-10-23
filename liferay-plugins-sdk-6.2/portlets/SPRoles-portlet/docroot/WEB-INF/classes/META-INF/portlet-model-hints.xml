@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.roles.model.SPCategoriesMapping">
+		<field name="uuid" type="String" />
+		<field name="spCategoryMappingId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="createdVocabularyId" type="long" />
+		<field name="mainCategoryId" type="long" />
+		<field name="subCategoryId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.roles.model.SPRoles">
+		<field name="uuid" type="String" />
+		<field name="spRoleId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="roleId" type="long" />
+		<field name="categoryId1" type="long" />
+		<field name="categoryId2" type="long" />
+		<field name="countryCategoryId" type="long" />
+		<field name="departmentCategoryId" type="long" />
+	</model>
+</model-hints>

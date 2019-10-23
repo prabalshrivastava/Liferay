@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="13px" height="17px" viewBox="0 0 13 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: sketchtool 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>Login</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Lithan---Header-NEW-(Desktop)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-Menu---SignIn-n-SignUp---Option-02" sketch:type="MSArtboardGroup" transform="translate(-1000.000000, -87.000000)" stroke="#961F63" stroke-width="0.8">
+            <g id="Nav-/-Desktop-03" sketch:type="MSLayerGroup">
+                <g id="Login-+-Signup-Menu" transform="translate(981.000000, 62.000000)" sketch:type="MSShapeGroup">
+                    <g id="Login" transform="translate(19.000000, 25.000000)">
+                        <path d="M6.5,11.328 L3.672,8.5 L6.5,5.672" id="Path"></path>
+                        <path d="M4.0858,8.5 L10.9378,8.5" id="Stroke-3"></path>
+                        <path d="M12.5,4.5 L12.5,1.5093689 C12.5,0.951909848 12.044239,0.5 11.4975267,0.5 L1.50247329,0.5 C0.948822582,0.5 0.5,0.944630861 0.5,1.50087166 L0.5,15.4991283 C0.5,16.0518945 0.955760956,16.5 1.50247329,16.5 L11.4975267,16.5 C12.0511774,16.5 12.5,16.0566468 12.5,15.4906311 L12.5,12.5" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

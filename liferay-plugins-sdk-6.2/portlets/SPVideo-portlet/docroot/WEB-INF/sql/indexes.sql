@@ -1,0 +1,1 @@
+create index IX_9AB09964 on SPVideoFileEntry (fileEntryId, fileVersionId);

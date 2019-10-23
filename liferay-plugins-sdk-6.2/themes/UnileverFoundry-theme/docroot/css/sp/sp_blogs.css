@@ -1,0 +1,588 @@
+/** profile_form_navigation -- additional text **/
+/** sp_custom.scss **/
+/** main wrapper bg color -- declared as variable in sp_custom.scss **/
+/** main navigation list bg & on hover color **/
+/** signed in menu list on hover bg color & aui-dialog - header bg color **/
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** profile_form_navigation -- additional text **/
+/** sp_custom.scss **/
+/** main wrapper bg color -- declared as variable in sp_custom.scss **/
+/** main navigation list bg & on hover color **/
+/** signed in menu list on hover bg color & aui-dialog - header bg color **/
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** SP Mixins **/
+.portlet-blogs .accordion-inner {
+  border: 1px solid #e0e0e0 !important; }
+
+.spblogs-stream-container {
+  background-color: #ffffff; }
+
+.taglib-social-bookmarks li {
+  float: none !important;
+  line-height: normal !important;
+  margin-right: 2px;
+  display: inline-block; }
+
+li.taglib-social-bookmark-facebook {
+  vertical-align: top; }
+
+#spblogs-stream {
+  height: 100%; }
+
+.taglib-social-bookmarks {
+  margin-top: 1.5em;
+  background-color: #fff;
+  margin-bottom: 1.5em; }
+
+.spblogs-portlet {
+  background-color: #f1f1f1; }
+  .spblogs-portlet .spblogs-stream .theme-bg-2 {
+    background-color: #0066B3;
+    color: #FFF;
+    font-size: 11pt;
+    font-weight: 400; }
+  .spblogs-portlet .spblogs-stream #spblogs-stream-switcher {
+    background-color: #e3e4e9; }
+  .spblogs-portlet .spblogs-stream #spblogs-stream-list ul li {
+    border-top: 1px solid rgba(217, 224, 226, 0.4); }
+    .spblogs-portlet .spblogs-stream #spblogs-stream-list ul li:first-child {
+      border-top: none; }
+    .spblogs-portlet .spblogs-stream #spblogs-stream-list ul li.active {
+      background-color: #dce0e4;
+      border-top-color: #0085ca; }
+      .spblogs-portlet .spblogs-stream #spblogs-stream-list ul li.active a {
+        color: #0085ca !important;
+        font-size: 10pt; }
+    .spblogs-portlet .spblogs-stream #spblogs-stream-list ul li .spblogs-thumb a {
+      line-height: 0; }
+    .spblogs-portlet .spblogs-stream #spblogs-stream-list ul li .spblogs-body a {
+      font-weight: 400; }
+    .spblogs-portlet .spblogs-stream #spblogs-stream-list ul li .spblogs-body .spblogs-date {
+      font-size: 9pt;
+      color: #555555; }
+  .spblogs-portlet .spblogs-stream .spblogs-stream-load-more {
+    font-weight: 10pt; }
+  .spblogs-portlet .spblogs-content-title {
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 14pt; }
+  .spblogs-portlet .spblogs-content-right-title {
+    font-weight: 500;
+    line-height: normal;
+    font-size: 12pt; }
+  .spblogs-portlet .spblogs-article-author-name a {
+    font-size: 10pt !important; }
+  .spblogs-portlet .spblogs-article-title {
+    color: #333333;
+    font-size: 24pt;
+    font-weight: 700;
+    line-height: normal;
+    font-family: inherit;
+    margin-bottom: 15px; }
+  .spblogs-portlet #spblogs-content {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: 20px; }
+    .spblogs-portlet #spblogs-content .spblogs-hilight-loadmore-container .spblogs-horizontal {
+      -webkit-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+      -ms-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+      -moz-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+      -o-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+      transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s; }
+      .spblogs-portlet #spblogs-content .spblogs-hilight-loadmore-container .spblogs-horizontal li {
+        background-color: #ffffff;
+        -webkit-column-break-inside: avoid;
+        -moz-column-break-inside: avoid;
+        column-break-inside: avoid;
+        page-break-inside: avoid;
+        border: 1px solid #a9a9a9;
+        -webkit-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+        -ms-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+        -moz-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+        -o-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+        transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+        -webkit-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -o-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box; }
+        .spblogs-portlet #spblogs-content .spblogs-hilight-loadmore-container .spblogs-horizontal li .spblogs-main-content-head {
+          -webkit-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          box-sizing: border-box; }
+          .spblogs-portlet #spblogs-content .spblogs-hilight-loadmore-container .spblogs-horizontal li .spblogs-main-content-head a {
+            font-size: 11pt; }
+          .spblogs-portlet #spblogs-content .spblogs-hilight-loadmore-container .spblogs-horizontal li .spblogs-main-content-head > a {
+            line-height: normal; }
+    .spblogs-portlet #spblogs-content .view-more-link {
+      background-color: transparent;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 11pt; }
+      .spblogs-portlet #spblogs-content .view-more-link a {
+        color: #333; }
+      .spblogs-portlet #spblogs-content .view-more-link:hover {
+        background-color: #e2e2e2; }
+  .spblogs-portlet .spblogs-main-article {
+    width: 65.5%; }
+    .spblogs-portlet .spblogs-main-article .spblogs-main-content {
+      -webkit-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      background-color: #ffffff;
+      border: 1px solid #a9a9a9; }
+      .spblogs-portlet .spblogs-main-article .spblogs-main-content .spblogs-main-content-image a {
+        font-size: 0; }
+      .spblogs-portlet .spblogs-main-article .spblogs-main-content .spblogs-main-content-head > a {
+        font-size: 20pt; }
+      .spblogs-portlet .spblogs-main-article .spblogs-main-content .main-content-excerpt p a {
+        color: #005EB8; }
+        .spblogs-portlet .spblogs-main-article .spblogs-main-content .main-content-excerpt p a::hover {
+          color: #0e0e9a; }
+  .spblogs-portlet .spblogs-main-content-right .spblogs-main {
+    border: 1px solid #a9a9a9;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px; }
+    .spblogs-portlet .spblogs-main-content-right .spblogs-main .spblogs-main-image {
+      line-height: 0; }
+    .spblogs-portlet .spblogs-main-content-right .spblogs-main .spblogs-main-content-head {
+      background-color: #ffffff; }
+      .spblogs-portlet .spblogs-main-content-right .spblogs-main .spblogs-main-content-head a {
+        font-size: 11pt;
+        text-transform: none; }
+      .spblogs-portlet .spblogs-main-content-right .spblogs-main .spblogs-main-content-head > a {
+        font-size: 11pt; }
+  .spblogs-portlet .spblogs-content-author {
+    font-weight: 10pt; }
+  .spblogs-portlet #spblogs-article-wrapper .spblogs-article {
+    border: 1px solid rgba(217, 224, 226, 0.4);
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px; }
+    .spblogs-portlet #spblogs-article-wrapper .spblogs-article .spblogs-nav-buttons {
+      border-top: 1px solid rgba(217, 224, 226, 0.4);
+      border-bottom: 1px solid rgba(217, 224, 226, 0.4); }
+    .spblogs-portlet #spblogs-article-wrapper .spblogs-article * {
+      -webkit-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+      -ms-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+      -moz-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+      -o-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+      transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s; }
+  .spblogs-portlet #spblogs-article-wrapper .spblogs-article-more .loopPostWrap {
+    -webkit-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+    -ms-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+    -moz-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+    -o-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+    transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s; }
+    .spblogs-portlet #spblogs-article-wrapper .spblogs-article-more .loopPostWrap .spblogs-loop-post {
+      min-width: 280px;
+      background-color: #ffffff;
+      -webkit-column-break-inside: avoid;
+      -moz-column-break-inside: avoid;
+      column-break-inside: avoid;
+      page-break-inside: avoid;
+      border: 1px solid #a9a9a9;
+      -webkit-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+      -ms-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+      -moz-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+      -o-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+      transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+      -webkit-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box; }
+      .spblogs-portlet #spblogs-article-wrapper .spblogs-article-more .loopPostWrap .spblogs-loop-post .spblogs-loop-post-content .spblogs-loop-post-image {
+        line-height: 0; }
+      .spblogs-portlet #spblogs-article-wrapper .spblogs-article-more .loopPostWrap .spblogs-loop-post .spblogs-loop-post-content h2 {
+        line-height: 16pt;
+        font-size: 12pt;
+        -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box; }
+  .spblogs-portlet #spblogs-article-wrapper .spblogs-article-more h3 {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+
+.botomMargin {
+  margin-bottom: 80px !important; }
+
+.blog_container .capitalize {
+  font-size: 25pt; }
+.blog_container .quotedFrom {
+  color: #0085ca; }
+.blog_container .quoteText_r {
+  float: right;
+  color: #0085ca;
+  font-size: 16pt;
+  line-height: 20pt;
+  font-weight: 300; }
+.blog_container .quoteText_l {
+  color: #0085ca; }
+.blog_container .blog_img_title {
+  font-size: 18pt;
+  color: #0085ca; }
+.blog_container .blog_wrap .blog_headerImage {
+  line-height: 0; }
+.blog_container .blog_wrap .blog_contents .blog_content_head {
+  color: #0085ca;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+.blog_container .blog_wrap .blog_contents .blog_content_text {
+  font-size: 11pt;
+  line-height: 18pt;
+  font-weight: 300; }
+.blog_container .blog_wrap .blog_contents .fLeft {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+.blog_container .blog_wrap .blog_contents .fRight {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+.blog_container .blog_wrap .blog_contents figure.figure {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #ffffff; }
+  .blog_container .blog_wrap .blog_contents figure.figure figcaption {
+    font-size: 8pt;
+    color: #000000; }
+.blog_container .blog_wrap .blog_contents .emphaText {
+  color: #0085ca; }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .spblogs-portlet #spblogs-article-wrapper .spblogs-main-content-right .spblogs-main {
+    border: 1px solid #a9a9a9;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px; }
+    .spblogs-portlet #spblogs-article-wrapper .spblogs-main-content-right .spblogs-main .spblogs-main-image {
+      line-height: 0; }
+    .spblogs-portlet #spblogs-article-wrapper .spblogs-main-content-right .spblogs-main .spblogs-main-content-head {
+      background-color: #ffffff; }
+      .spblogs-portlet #spblogs-article-wrapper .spblogs-main-content-right .spblogs-main .spblogs-main-content-head a {
+        font-size: 11pt; }
+      .spblogs-portlet #spblogs-article-wrapper .spblogs-main-content-right .spblogs-main .spblogs-main-content-head > a {
+        font-size: 12pt; } }
+
+/*# sourceMappingURL=sp_blogs.css.map */

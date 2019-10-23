@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.spdashboard.model.SPAnalyticsConfig">
+		<field name="spAnalyticsConfigId" type="long" />
+		<field name="name" type="String" />
+		<field name="config" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="type" type="int" />
+		<field name="query" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="warId" type="String" />
+	</model>
+</model-hints>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.spdynamicforms">
+	<author>glenn</author>
+	<namespace>SPDynamicForms</namespace>
+
+	<entity name="SPFormStorage" table="SPFormStorage" local-service="true"
+		remote-service="false" uuid="false">
+		<!-- PK fields -->
+		<column name="formStorageId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+
+		<!-- data fields -->
+		<column name="applicationId" type="String"></column>
+		<column name="content" type="String"></column>
+		<column name="htmlFormId" type="long"></column>
+		<column name="status" type="String"></column>
+	</entity>
+	<entity name="SPFormAttachments" table="SPFormAttachments" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+		<column name="spFormAttachmentsId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<!-- data fields -->
+        <column name="formStorageId" type="long"></column>
+		<column name="dataKey" type="String"></column>
+		<column name="name" type="String"></column>
+		<column name="url" type="String"></column>
+		<column name="version" type="String"></column>
+	</entity>
+
+	<entity name="SPDynamicForms" local-service="true" remote-service="true">
+	</entity>
+
+</service-builder>

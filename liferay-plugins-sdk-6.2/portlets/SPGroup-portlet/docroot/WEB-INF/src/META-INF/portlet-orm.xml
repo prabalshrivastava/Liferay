@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.spgroup.model.impl.SPGroupModelImpl">
+		<attributes>
+			<id name="spGroupId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="title" />
+			<basic name="urlTitle" />
+			<basic name="description" />
+			<basic name="imageId" />
+			<basic name="type">
+				<column name="TYPE_" />
+			</basic>
+			<basic name="status" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spgroup.model.impl.SPGroupPrefModelImpl">
+		<attributes>
+			<id name="spGroupPrefId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dIn" />
+			<basic name="dGoogle" />
+			<basic name="dFb" />
+			<basic name="dTw" />
+			<basic name="cIn" />
+			<basic name="cGoogle" />
+			<basic name="cFb" />
+			<basic name="cTw" />
+			<basic name="enableSubscribeToComments" />
+			<basic name="enableGroupUpdateNotification" />
+			<basic name="enableMemberUpdate" />
+			<basic name="enableDiscussionUpdate" />
+			<basic name="updateFrequency" />
+			<transient name="CFb" />
+			<transient name="CGoogle" />
+			<transient name="CIn" />
+			<transient name="CTw" />
+			<transient name="DFb" />
+			<transient name="DGoogle" />
+			<transient name="DIn" />
+			<transient name="DTw" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spgroup.model.impl.SPGroupUserModelImpl">
+		<id-class class="com.sambaash.platform.srv.spgroup.service.persistence.SPGroupUserPK" />
+		<attributes>
+			<id name="spGroupId" />
+			<id name="userId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="joinDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="role" />
+			<basic name="status" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.spgroup.model.impl.SPGroupImpl" name="SPGroup">
+		<table name="SPGroup" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spgroup.model.impl.SPGroupPrefImpl" name="SPGroupPref">
+		<table name="SPGroupPref" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spgroup.model.impl.SPGroupUserImpl" name="SPGroupUser">
+		<table name="SPGroupUser" />
+		<attributes />
+	</entity>
+</entity-mappings>

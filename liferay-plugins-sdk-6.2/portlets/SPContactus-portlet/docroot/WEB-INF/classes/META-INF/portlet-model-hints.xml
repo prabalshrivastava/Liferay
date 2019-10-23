@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.contactus.model.SPContactUs">
+		<field name="spContactUsId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="lastName" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="category" type="String" />
+		<field name="comment" type="String" />
+		<field name="countryName" type="String" />
+		<field name="contactNumber" type="long" />
+		<field name="company" type="String" />
+		<field name="jobTitle" type="String" />
+		<field name="companyUrl" type="String" />
+		<field name="noOfEmployee" type="long" />
+		<field name="rate" type="String" />
+		<field name="typeOfEnquiry" type="String" />
+		<field name="location" type="String" />
+	</model>
+</model-hints>

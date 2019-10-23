@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.legalandcontract.model.Agency">
+		<field name="uuid" type="String" />
+		<field name="spAgencyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="number" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="country" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="name" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="reference" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="startDate" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="endDate" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="address" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="remarks" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="status" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="customField1" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="customField2" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="customField3" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="customDate1" type="Date" />
+		<field name="customDate2" type="Date" />
+		<field name="customDate3" type="Date" />
+		<field name="version" type="String" />
+		<field name="rootSpAgencyId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.legalandcontract.model.ClassMaster">
+		<field name="uuid" type="String" />
+		<field name="spClassId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="code" type="String" />
+		<field name="country" type="String" />
+		<field name="filedBy" type="String" />
+		<field name="customField1" type="String" />
+		<field name="customField2" type="String" />
+		<field name="customDate1" type="Date" />
+		<field name="customDate2" type="Date" />
+		<field name="version" type="String" />
+		<field name="rootSpClassId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.legalandcontract.model.Litigation">
+		<field name="uuid" type="String" />
+		<field name="spLitigationId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="country" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="filedBy" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="filedOn" type="Date" />
+		<field name="filedAtCountry" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="claimsRemarks" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="responseDeadline" type="Date" />
+		<field name="actualResponseDate" type="Date" />
+		<field name="status" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="customField1" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="customField2" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="customField3" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="customDate1" type="Date" />
+		<field name="customDate2" type="Date" />
+		<field name="customDate3" type="Date" />
+		<field name="legalConfRemarks" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="version" type="String" />
+		<field name="spTrademarksId" type="long" />
+		<field name="rootSpLitigationId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.legalandcontract.model.RDL">
+		<field name="uuid" type="String" />
+		<field name="spRdlId" type="long" />
+		<field name="spLitigationId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="responseDeadline" type="Date" />
+		<field name="claimsRemarks" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="alertBefore" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.legalandcontract.model.Trademarks">
+		<field name="uuid" type="String" />
+		<field name="spTrademarksId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="registrationNumber" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="applicationNo" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="country" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="trademark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="trademarkLocalized" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="registeredOwner" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="applicationDate" type="Date" />
+		<field name="firstRegistrationDate" type="Date" />
+		<field name="renewalDate" type="Date" />
+		<field name="goodsServices" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="pendingComments" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="spAgencyId" type="long" />
+		<field name="classDescription" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="legalConfRemarks" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="workflowStatus" type="long" />
+		<field name="customField1" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="customField2" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="customField3" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="customDate1" type="Date" />
+		<field name="customDate2" type="Date" />
+		<field name="customDate3" type="Date" />
+		<field name="classCodes" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="version" type="String" />
+		<field name="trademarkType" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="rootSpTrademarksId" type="long" />
+	</model>
+</model-hints>

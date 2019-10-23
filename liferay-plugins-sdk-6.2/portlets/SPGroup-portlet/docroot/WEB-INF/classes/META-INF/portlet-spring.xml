@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.spgroup.service.SPGroupLocalService" class="com.sambaash.platform.srv.spgroup.service.impl.SPGroupLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spgroup.service.persistence.SPGroupPersistence" class="com.sambaash.platform.srv.spgroup.service.persistence.SPGroupPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spgroup.service.SPGroupPrefLocalService" class="com.sambaash.platform.srv.spgroup.service.impl.SPGroupPrefLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spgroup.service.persistence.SPGroupPrefPersistence" class="com.sambaash.platform.srv.spgroup.service.persistence.SPGroupPrefPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spgroup.service.SPGroupUserLocalService" class="com.sambaash.platform.srv.spgroup.service.impl.SPGroupUserLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spgroup.service.persistence.SPGroupUserPersistence" class="com.sambaash.platform.srv.spgroup.service.persistence.SPGroupUserPersistenceImpl" parent="basePersistence" />
+</beans>

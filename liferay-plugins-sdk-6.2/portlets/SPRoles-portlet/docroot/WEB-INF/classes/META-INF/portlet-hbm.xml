@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.roles.model.SPCategoriesMapping" />
+	<import class="com.sambaash.platform.srv.roles.model.SPRoles" />
+	<class name="com.sambaash.platform.srv.roles.model.impl.SPCategoriesMappingImpl" table="SPCategoriesMapping">
+		<cache usage="read-write" />
+		<id name="spCategoryMappingId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdVocabularyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="mainCategoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="subCategoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.roles.model.impl.SPRolesImpl" table="SPRoles">
+		<cache usage="read-write" />
+		<id name="spRoleId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="roleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryId1" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryId2" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="countryCategoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="departmentCategoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

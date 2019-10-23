@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 6.2.0//EN" "http://www.liferay.com/dtd/liferay-display_6_2_0.dtd">
+
+<display>
+	<category name="Sambaash">
+		<portlet id="SPProcessEngine" />
+		<portlet id="process-state-listing"></portlet>
+		<portlet id="pe-process-register-action"></portlet>
+		<portlet id="rules-repository"></portlet>
+		<portlet id="forms-repository"></portlet>
+		<portlet id="process-builder-action"></portlet>
+		<portlet id="pe-data-patching"></portlet>
+		<portlet id="pe dummy entity"></portlet>
+	</category>
+	<category name="category.sample">
+		<portlet id="pe-guest-page"></portlet>
+	</category>
+</display>

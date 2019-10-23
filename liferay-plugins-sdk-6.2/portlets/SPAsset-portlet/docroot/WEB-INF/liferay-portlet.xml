@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_2_0.dtd">
+
+<liferay-portlet-app>
+	
+	<portlet>
+		<portlet-name>SPAssetType</portlet-name>
+		<icon>/icon.png</icon>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>spassettype-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>SPAssetEntry</portlet-name>
+		<icon>/icon.png</icon>
+		<indexer-class>com.sambaash.platform.util.SPAssetIndexer</indexer-class>
+		<open-search-class>com.sambaash.platform.util.SPAssetOpenSearchImpl</open-search-class>
+		<social-activity-interpreter-class>com.sambaash.platform.util.SPAssetEntryActivityInterpreter</social-activity-interpreter-class>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>spassetentry-portlet</css-class-wrapper>
+	</portlet>
+
+	<portlet>
+		<portlet-name>spassetdetailview</portlet-name>
+		<icon>/icon.png</icon>
+		<friendly-url-mapper-class>com.liferay.portal.kernel.portlet.DefaultFriendlyURLMapper</friendly-url-mapper-class>
+		<friendly-url-mapping>assetdetails</friendly-url-mapping>
+		<friendly-url-routes>com/sambaash/platform/portlet/spasset/routes/spasset-details-routes.xml</friendly-url-routes>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<header-portlet-javascript>/js/detailView.js</header-portlet-javascript>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>spassetdetailview-portlet</css-class-wrapper>
+	</portlet>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>guest</role-name>
+		<role-link>Guest</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>power-user</role-name>
+		<role-link>Power User</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>user</role-name>
+		<role-link>User</role-link>
+	</role-mapper>
+</liferay-portlet-app>

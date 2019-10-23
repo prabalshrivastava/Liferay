@@ -1,0 +1,89 @@
+<%@ page trimDirectiveWhitespaces="true" %>
+<%@ page import="com.sambaash.platform.startupprofile.helper.StartupProfileHelper"%>
+<%@ page import="com.liferay.portal.kernel.language.LanguageUtil"%>
+<%@ page import="com.sambaash.platform.startupprofile.helper.StartupFormHelper"%>
+<%@ page import="com.sambaash.platform.util.FormHelper"%>
+<%@ page import="com.sambaash.platform.util.SambaashUtil"%>
+<%@ page import="com.liferay.portal.security.auth.AuthTokenUtil"%>
+
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+<%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
+
+<portlet:defineObjects />
+<liferay-theme:defineObjects />
+
+<portlet:actionURL var="addStartupActionURL" name="addStartup" />
+<portlet:resourceURL var="resourceURL" />
+<script>
+
+var submitError = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.error.submit")%>';
+var successMsg = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.success")%>';
+var errorMsg = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.error")%>';
+var sessionTimeOut = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.session.timed.out")%>';
+var thankUMsg = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.thankyou.create.account")%>';
+var startupSaveFail = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.fail.save.information.startup")%>';
+var nameLogo = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.add.name.logo")%>';
+var warningLabel = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.warning")%>';
+var deleteConfirm = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.are.you.sure.want.to.delete.it")%>';
+var removeError = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.error.remove")%>';
+var removeSuccess = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.successfully.removed")%>';
+var removeFailrefresh = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.failed.remove.refresh.page")%>';
+var errorAddingUser = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.error.adding.user")%>';
+var maxAllowedChars = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.allowed.maximimum.tags")%>';
+var duplicateTag = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.duplicate.tag")%>';
+</script>
+<script src="/StartupProfile-portlet/js/main.js" type="text/javascript"></script>
+<script src="/StartupProfile-portlet/js/script.js" type="text/javascript"></script>
+
+<div class="startup_signup_container">
+	<div class="sp_profile max-width padding-left-75 padding-right-75 box-sizing-border full-width block">	
+		<section class="profile_content" style="display:inherit;">
+			<div class="profile_forms_wrap" id = "profile_forms_wrap">
+              <aui:form name="addStartup" action="<%=addStartupActionURL%>" cssClass="profile_form smartForm" enctype="multipart/form-data" style="margin: 0 auto;">
+              		<%@ include file="/html/managestartupprofile/profileSignupForm.jspf" %>	
+			  </aui:form>
+			</div>
+		</section>
+	</div>
+</div>
+
+<script type="text/javascript">
+var namespace = '<portlet:namespace/>';
+var op = 'addStartup';
+var organization = <%=renderRequest.getAttribute("organization")%>;
+var hq = <%=renderRequest.getAttribute("hq")%>;
+var dynaSectionCounters = {};
+var displayURL = '<%=StartupProfileHelper.displayStartupDetailsFriendlyURL(themeDisplay.getScopeGroupId())%>';
+var logoObj = <%=renderRequest.getAttribute("logoObj")%>;
+var coverObj = <%=renderRequest.getAttribute("coverObj")%>;
+var othersObj = <%=renderRequest.getAttribute("othersObj")%>;
+var fillBy = <%=renderRequest.getAttribute("fillBy") %>;
+var lowerVBrowser = '<%=renderRequest.getAttribute("lowerVBrowser") %>';
+var logoError = '<%=renderRequest.getAttribute("logoError") %>';
+var dashBoardUrl = null;
+var defaultDashBoardUrl = '<%=SambaashUtil.getDashboardUrl(themeDisplay.getScopeGroupId(), themeDisplay.getUserId())%>';
+var submitError = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.error.submit")%>';
+
+AUI().use(
+		'aui-node',
+		'aui-base',
+		'aui-io-request',
+		function(A){
+	initialize('<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.missing.information")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.profile.save.success")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.success")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.error.submit")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.error")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.failed.get.user.info.refresh.page")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.session.timed.out")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.are.you.sure.want.to.delete.it")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.successfully.removed")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.error.remove")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.failed.remove.refresh.page")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.thankyou.create.account")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.fail.save.information.startup")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.view.briefs")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.go.to.profile")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.ok")%>','<%=resourceURL%>', true, true);
+});
+function cancel(){
+	if(dashBoardUrl)
+	    document.location.href = dashBoardUrl;
+	else 
+		document.location.href = defaultDashBoardUrl;
+}
+function initDynamicSections(deleteConfirmMsg,removeSuccessMsg,removeFailedMsg,removeFailRefreshMsg,successMessage,errorMessage,errorMessage3) {
+	
+}
+// tabs for fileuploader
+// initTabs();
+// handleScroll(170.5, 2000);
+// try{initAllFormElmntsChangeListeners();}catch(error){}
+</script>

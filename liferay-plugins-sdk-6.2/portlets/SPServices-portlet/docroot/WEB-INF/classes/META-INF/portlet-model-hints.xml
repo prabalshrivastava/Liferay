@@ -1,0 +1,555 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.spservices.model.MembershipPackage">
+		<field name="mpId" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="status" type="String" />
+		<field name="type" type="String" />
+		<field name="version" type="String" />
+		<field name="cost" type="float" />
+		<field name="costCurrency" type="String" />
+		<field name="costPeriod" type="String" />
+		<field name="costPeriodType" type="String" />
+		<field name="promotionCode" type="String" />
+		<field name="promotionFrom" type="Date" />
+		<field name="promotionTo" type="Date" />
+		<field name="discount" type="String" />
+		<field name="dateAdded" type="Date" />
+		<field name="dateModified" type="Date" />
+		<field name="createdBy" type="String" />
+		<field name="modifiedBy" type="String" />
+		<field name="extra1" type="String" />
+		<field name="extra2" type="String" />
+		<field name="extra3" type="String" />
+		<field name="extra4" type="String" />
+		<field name="extra5" type="Date" />
+		<field name="extra6" type="Date" />
+		<field name="extra7" type="String" />
+		<field name="extra8" type="String" />
+		<field name="extra9" type="String" />
+		<field name="extra10" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.MembershipPackageAddonServices">
+		<field name="mpAddonId" type="long" />
+		<field name="scId" type="String" />
+		<field name="scName" type="String" />
+		<field name="paramType" type="String" />
+		<field name="paramFrom" type="String" />
+		<field name="paramUpto" type="String" />
+		<field name="duration" type="String" />
+		<field name="durationType" type="String" />
+		<field name="serviceCharges" type="float" />
+		<field name="serviceChargesCurrency" type="String" />
+		<field name="serviceChargesPeriod" type="String" />
+		<field name="serviceChargesPeriodType" type="String" />
+		<field name="status" type="String" />
+		<field name="description" type="String" />
+		<field name="dateAdded" type="Date" />
+		<field name="dateModified" type="Date" />
+		<field name="createdBy" type="String" />
+		<field name="modifiedBy" type="String" />
+		<field name="extra1" type="String" />
+		<field name="extra2" type="String" />
+		<field name="extra3" type="String" />
+		<field name="extra4" type="String" />
+		<field name="extra5" type="Date" />
+		<field name="extra6" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.MembershipPackageGrpServices">
+		<field name="mpgsscId" type="long" />
+		<field name="mpId" type="long" />
+		<field name="scorder" type="int" />
+		<field name="scgId" type="String" />
+		<field name="scId" type="String" />
+		<field name="paramType" type="String" />
+		<field name="paramFrom" type="String" />
+		<field name="paramUpto" type="String" />
+		<field name="duration" type="String" />
+		<field name="durationType" type="String" />
+		<field name="status" type="String" />
+		<field name="description" type="String" />
+		<field name="dateAdded" type="Date" />
+		<field name="dateModified" type="Date" />
+		<field name="createdBy" type="String" />
+		<field name="modifiedBy" type="String" />
+		<field name="extra1" type="String" />
+		<field name="extra2" type="String" />
+		<field name="extra3" type="String" />
+		<field name="extra4" type="String" />
+		<field name="extra5" type="Date" />
+		<field name="extra6" type="Date" />
+		<field name="serviceCharges" type="float" />
+		<field name="costCurrency" type="String" />
+		<field name="costPeriod" type="String" />
+		<field name="costPeriodType" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.MembershipPackageIndServices">
+		<field name="mpgsscId" type="long" />
+		<field name="mpId" type="long" />
+		<field name="scorder" type="String" />
+		<field name="scgId" type="String" />
+		<field name="scId" type="String" />
+		<field name="paramType" type="String" />
+		<field name="paramFrom" type="String" />
+		<field name="paramUpto" type="String" />
+		<field name="duration" type="String" />
+		<field name="durationType" type="String" />
+		<field name="status" type="String" />
+		<field name="description" type="String" />
+		<field name="dateAdded" type="Date" />
+		<field name="dateModified" type="Date" />
+		<field name="createdBy" type="String" />
+		<field name="modifiedBy" type="String" />
+		<field name="extra1" type="String" />
+		<field name="extra2" type="String" />
+		<field name="extra3" type="String" />
+		<field name="extra4" type="String" />
+		<field name="extra5" type="Date" />
+		<field name="extra6" type="Date" />
+		<field name="serviceCharges" type="float" />
+		<field name="costCurrency" type="String" />
+		<field name="costPeriod" type="String" />
+		<field name="costPeriodType" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.MembershipPackagePromotionCode">
+		<field name="promotionCode_id" type="long" />
+		<field name="membershipPackage_id" type="long" />
+		<field name="promotionCode" type="String" />
+		<field name="promotionFrom" type="Date" />
+		<field name="promotionTo" type="Date" />
+		<field name="discount" type="String" />
+		<field name="extra1" type="String" />
+		<field name="extra2" type="String" />
+		<field name="extra3" type="String" />
+		<field name="extra4" type="String" />
+		<field name="extra5" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.MembershipPackageServicesRoles">
+		<field name="mpgsrlId" type="long" />
+		<field name="mpId" type="long" />
+		<field name="serviceId" type="long" />
+		<field name="classNameId" type="long" />
+		<field name="roleId" type="long" />
+		<field name="extra1" type="String" />
+		<field name="extra2" type="String" />
+		<field name="extra3" type="String" />
+		<field name="extra4" type="String" />
+		<field name="extra5" type="Date" />
+		<field name="extra6" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.MembershipSubscribedServices">
+		<field name="mssId" type="long" />
+		<field name="userid" type="long" />
+		<field name="companyId" type="long" />
+		<field name="scId" type="String" />
+		<field name="scName" type="String" />
+		<field name="count" type="String" />
+		<field name="status" type="String" />
+		<field name="description" type="String" />
+		<field name="dateAdded" type="Date" />
+		<field name="dateModified" type="Date" />
+		<field name="createdBy" type="String" />
+		<field name="modifiedBy" type="String" />
+		<field name="effectiveFromDate" type="Date" />
+		<field name="effectiveToDate" type="Date" />
+		<field name="paramFrom" type="String" />
+		<field name="paramUpto" type="String" />
+		<field name="duration" type="String" />
+		<field name="durationType" type="String" />
+		<field name="serviceCharges" type="float" />
+		<field name="serviceChargesCurrency" type="String" />
+		<field name="serviceChargesPeriod" type="String" />
+		<field name="serviceChargesPeriodType" type="String" />
+		<field name="extra1" type="String" />
+		<field name="extra2" type="String" />
+		<field name="extra3" type="String" />
+		<field name="extra4" type="String" />
+		<field name="extra5" type="Date" />
+		<field name="extra6" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.MembershipSubscription">
+		<field name="msId" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="mporder_1" type="String" />
+		<field name="mpId_1" type="String" />
+		<field name="mpName_1" type="String" />
+		<field name="mpQty_1" type="int" />
+		<field name="mpPrice_1" type="float" />
+		<field name="mpPriceCurrency_1" type="String" />
+		<field name="mporder_2" type="String" />
+		<field name="mpId_2" type="String" />
+		<field name="mpName_2" type="String" />
+		<field name="mpQty_2" type="int" />
+		<field name="mpPrice_2" type="float" />
+		<field name="mpPriceCurrency_2" type="String" />
+		<field name="mporder_3" type="String" />
+		<field name="mpId_3" type="String" />
+		<field name="mpName_3" type="String" />
+		<field name="mpQty_3" type="int" />
+		<field name="mpPrice_3" type="float" />
+		<field name="mpPriceCurrency_3" type="String" />
+		<field name="mporder_4" type="String" />
+		<field name="mpId_4" type="String" />
+		<field name="mpName_4" type="String" />
+		<field name="mpQty_4" type="int" />
+		<field name="mpPrice_4" type="float" />
+		<field name="mpPriceCurrency_4" type="String" />
+		<field name="mpSubtotal" type="float" />
+		<field name="mpSubtotalCurrency" type="String" />
+		<field name="addOnSubtotal" type="float" />
+		<field name="addOnSubtotalCurrency" type="String" />
+		<field name="tax" type="float" />
+		<field name="comments" type="String" />
+		<field name="promotionCode" type="String" />
+		<field name="promotionFrom" type="Date" />
+		<field name="promotionTo" type="Date" />
+		<field name="discount" type="String" />
+		<field name="nettotal" type="float" />
+		<field name="nettotalCurrency" type="String" />
+		<field name="ppTxnId" type="String" />
+		<field name="ppPaymentStatus" type="String" />
+		<field name="ppPaymentGross" type="float" />
+		<field name="ppReceiverEmail" type="String" />
+		<field name="ppPayerEmail" type="String" />
+		<field name="sendOrderEmail" type="String" />
+		<field name="sendShippingEmail" type="String" />
+		<field name="effectiveFromDate" type="Date" />
+		<field name="effectiveToDate" type="Date" />
+		<field name="altShipping" type="int" />
+		<field name="shipping" type="double" />
+		<field name="requiresShipping" type="boolean" />
+		<field name="insure" type="boolean" />
+		<field name="insurance" type="double" />
+		<field name="billingFirstName" type="String" />
+		<field name="billingLastName" type="String" />
+		<field name="billingEmailAddress" type="String" />
+		<field name="billingCompany" type="String" />
+		<field name="billingStreet" type="String" />
+		<field name="billingCity" type="String" />
+		<field name="billingState" type="String" />
+		<field name="billingZip" type="String" />
+		<field name="billingCountry" type="String" />
+		<field name="billingPhone" type="String" />
+		<field name="shipToBilling" type="boolean" />
+		<field name="shippingFirstName" type="String" />
+		<field name="shippingLastName" type="String" />
+		<field name="shippingEmailAddress" type="String" />
+		<field name="shippingCompany" type="String" />
+		<field name="shippingStreet" type="String" />
+		<field name="shippingCity" type="String" />
+		<field name="shippingState" type="String" />
+		<field name="shippingZip" type="String" />
+		<field name="shippingCountry" type="String" />
+		<field name="shippingPhone" type="String" />
+		<field name="ccName" type="String" />
+		<field name="ccType" type="String" />
+		<field name="ccNumber" type="String" />
+		<field name="ccExpMonth" type="int" />
+		<field name="ccExpYear" type="int" />
+		<field name="ccVerNumber" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.MembershipSubscriptionAddonServices">
+		<field name="msAddonId" type="long" />
+		<field name="msId" type="long" />
+		<field name="scId" type="String" />
+		<field name="scName" type="String" />
+		<field name="paramType" type="String" />
+		<field name="paramFrom" type="String" />
+		<field name="paramUpto" type="String" />
+		<field name="duration" type="String" />
+		<field name="durationType" type="String" />
+		<field name="serviceCharges" type="float" />
+		<field name="serviceChargesCurrency" type="String" />
+		<field name="serviceChargesPeriod" type="String" />
+		<field name="serviceChargesPeriodType" type="String" />
+		<field name="status" type="String" />
+		<field name="description" type="String" />
+		<field name="effectiveFromDate" type="Date" />
+		<field name="effectiveToDate" type="Date" />
+		<field name="dateAdded" type="Date" />
+		<field name="dateModified" type="Date" />
+		<field name="createdBy" type="String" />
+		<field name="modifiedBy" type="String" />
+		<field name="extra1" type="String" />
+		<field name="extra2" type="String" />
+		<field name="extra3" type="String" />
+		<field name="extra4" type="String" />
+		<field name="extra5" type="Date" />
+		<field name="extra6" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.ServiceComponentGroup">
+		<field name="scgId" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="phase" type="String" />
+		<field name="status" type="String" />
+		<field name="version" type="String" />
+		<field name="deploymentCluster" type="String" />
+		<field name="community" type="String" />
+		<field name="dateAdded" type="Date" />
+		<field name="dateModified" type="Date" />
+		<field name="author" type="String" />
+		<field name="extra1" type="String" />
+		<field name="extra2" type="String" />
+		<field name="extra3" type="String" />
+		<field name="extra4" type="String" />
+		<field name="extra5" type="Date" />
+		<field name="extra6" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.ServiceComponents">
+		<field name="scId" type="long" />
+		<field name="scgId" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="technologyComponent" type="String" />
+		<field name="phase" type="String" />
+		<field name="status" type="String" />
+		<field name="version" type="String" />
+		<field name="serviceType" type="String" />
+		<field name="ServiceExposureType" type="String" />
+		<field name="userType" type="String" />
+		<field name="platformType" type="String" />
+		<field name="islaCarteService" type="boolean" />
+		<field name="isExternal" type="boolean" />
+		<field name="tag" type="String" />
+		<field name="webserviceURL" type="String" />
+		<field name="deploymentCluster" type="String" />
+		<field name="deploymentLocation" type="String" />
+		<field name="channelID" type="String" />
+		<field name="testPlan" type="String" />
+		<field name="performanceProfile" type="String" />
+		<field name="usageStatistics" type="String" />
+		<field name="dateAdded" type="Date" />
+		<field name="dateModified" type="Date" />
+		<field name="author" type="String" />
+		<field name="extra1" type="String" />
+		<field name="extra2" type="String" />
+		<field name="extra3" type="String" />
+		<field name="extra4" type="String" />
+		<field name="extra5" type="Date" />
+		<field name="extra6" type="Date" />
+		<field name="serviceCharges" type="float" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.SPApiAuditLogs">
+		<field name="uuid" type="String" />
+		<field name="spApiAuditLogsId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="apiName" type="String" />
+		<field name="parameters" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="result" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.SPAudit">
+		<field name="uuid" type="String" />
+		<field name="SPAuditId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="doneByUserId" type="long" />
+		<field name="entityClassNameId" type="long" />
+		<field name="entityId" type="long" />
+		<field name="action" type="String" />
+		<field name="field1Str" type="String" />
+		<field name="field1Long" type="long" />
+		<field name="field2Str" type="String" />
+		<field name="field2Long" type="long" />
+		<field name="data1" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="data2" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.SPIPGeoLocation">
+		<field name="uuid" type="String" />
+		<field name="spIPGeoLocationId" type="long" />
+		<field name="ipPrefix" type="String" />
+		<field name="country" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.SPLdapMapping">
+		<field name="spLdapMappingId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="countryId" type="long" />
+		<field name="departmentId" type="long" />
+		<field name="countryDepartmentId" type="long" />
+		<field name="ldapCountry" type="String" />
+		<field name="ldapDepartment" type="String" />
+		<field name="ldapCompany" type="String" />
+		<field name="defaultRoleId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.SPLdapProfile">
+		<field name="spLdapProfileId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="userId" type="long" />
+		<field name="countryId" type="long" />
+		<field name="departmentId" type="long" />
+		<field name="givenName" type="String" />
+		<field name="sn" type="String" />
+		<field name="displayName" type="String" />
+		<field name="company" type="String" />
+		<field name="division" type="String" />
+		<field name="title" type="String" />
+		<field name="mail" type="String" />
+		<field name="samAccountName" type="String" />
+		<field name="employeeId" type="String" />
+		<field name="manager" type="String" />
+		<field name="telephoneNumber" type="String" />
+		<field name="mobile" type="String" />
+		<field name="facsimileTelephoneNumber" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.SPLikes">
+		<field name="uuid" type="String" />
+		<field name="spLikesId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="layoutSetId" type="long" />
+		<field name="action" type="String" />
+		<field name="actorUserId" type="long" />
+		<field name="classId" type="long" />
+		<field name="className" type="String" />
+		<field name="classPK" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.SPListType">
+		<field name="uuid" type="String" />
+		<field name="spListTypeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="itemKey" type="String" />
+		<field name="itemValue" type="String" />
+		<field name="displayName" type="String" />
+		<field name="displayOrder" type="int" />
+		<field name="categoryId" type="long" />
+		<field name="modeldata" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.SPParameter">
+		<field name="uuid" type="String" />
+		<field name="spParameterId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="category" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="name" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="value" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.SPSite">
+		<field name="uuid" type="String" />
+		<field name="spSiteId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="virtualHostId" type="long" />
+		<field name="layoutSetId" type="long" />
+		<field name="authAccessId" type="long" />
+		<field name="loginType" type="long" />
+		<field name="password" type="String" />
+		<field name="active" type="boolean" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.SPSiteSetup">
+		<field name="uuid" type="String" />
+		<field name="spSiteSetupId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="productId" type="long" />
+		<field name="productName" type="String" />
+		<field name="subProductId" type="long" />
+		<field name="subProductName" type="String" />
+		<field name="virtualHostId" type="long" />
+		<field name="backOfficeVirtualHostId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedBy" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.SPUserType">
+		<field name="uuid" type="String" />
+		<field name="spUserTypeId" type="long" />
+		<field name="spSiteId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userTypeId" type="long" />
+		<field name="userStatusId" type="long" />
+		<field name="declarationCompleted" type="boolean" />
+		<field name="declarationDate" type="long" />
+		<field name="declarationStorageId" type="long" />
+		<field name="pdpaCompleted" type="boolean" />
+		<field name="pdpaCompletionDate" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedBy" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spservices.model.SPUserTypeConfig">
+		<field name="uuid" type="String" />
+		<field name="spUserTypeConfigId" type="long" />
+		<field name="userType" type="String" />
+		<field name="userTypeId" type="long" />
+		<field name="virtualHostId" type="long" />
+		<field name="declarationId" type="long" />
+		<field name="declarationYearly" type="boolean" />
+		<field name="declarationFixedDate" type="Date" />
+		<field name="pdpaId" type="long" />
+		<field name="accountCreationTemplateName" type="String" />
+		<field name="welcomeTemplateName" type="String" />
+		<field name="passwordChangeTemplateName" type="String" />
+		<field name="passwordResetTemplateName" type="String" />
+		<field name="emailVerificationTemplateName" type="String" />
+		<field name="defauleRoleIds" type="String" />
+		<field name="validations" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedBy" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+</model-hints>

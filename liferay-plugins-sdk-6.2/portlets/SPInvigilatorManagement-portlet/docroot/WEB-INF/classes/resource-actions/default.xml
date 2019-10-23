@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 6.2.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_6_2_0.dtd">
+
+<resource-action-mapping>
+    <resource file="resource-actions/update-appointment.xml" />
+    <resource file="resource-actions/invigilator-application.xml" />
+    <resource file="resource-actions/update-invigilation-dates.xml" />
+    <resource file="resource-actions/optout-request.xml" />
+    <resource file="resource-actions/manage-appointment.xml" />
+    <resource file="resource-actions/appoint-invigilator.xml" />
+    <resource file="resource-actions/invigilator-appointment-report.xml" />
+    <resource file="resource-actions/invigilator-listing.xml" />
+    <resource file="resource-actions/manage-evaluation.xml" />
+    <resource file="resource-actions/evaluation-matrix-setup.xml" />
+    <resource file="resource-actions/notify-appointment.xml" />
+</resource-action-mapping>

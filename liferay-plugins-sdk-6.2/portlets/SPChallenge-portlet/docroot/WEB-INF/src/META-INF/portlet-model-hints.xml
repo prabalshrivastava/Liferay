@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.spchallenge.model.SPChallenge">
+		<field name="uuid" type="String" />
+		<field name="spChallengeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="openTo" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="type" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="background" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="description" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="scope" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="benefits" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="budget" type="String">
+			<hint name="max-length">50</hint>
+		</field>
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="applyBy" type="Date" />
+		<field name="extras" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="active" type="boolean" />
+		<field name="notifyTo" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="scout" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="logoId" type="long" />
+		<field name="draft" type="boolean" />
+		<field name="budgetCcySign" type="String">
+			<hint name="max-length">4</hint>
+		</field>
+		<field name="brand" type="long" />
+		<field name="vpApprover" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="budgetApprover" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.spchallenge.model.SPChallengeApplicant">
+		<field name="uuid" type="String" />
+		<field name="spChallengeApplicantId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="applicantRefId" type="long" />
+		<field name="applicantType" type="String" />
+		<field name="spChallengeId" type="long" />
+		<field name="q1" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q2" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q3" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q4" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q5" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q6" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q7" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q8" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q9" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q10" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q11" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q12" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q13" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q14" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q15" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q16" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q17" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q18" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q19" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="q20" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="customStatus1" type="boolean" />
+		<field name="customStatus2" type="boolean" />
+		<field name="active" type="boolean" />
+		<field name="applicationStatus" type="int" />
+		<field name="notificationStatus" type="int" />
+	</model>
+</model-hints>

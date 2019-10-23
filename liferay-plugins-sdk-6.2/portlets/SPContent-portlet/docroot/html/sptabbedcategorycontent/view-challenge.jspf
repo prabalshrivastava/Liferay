@@ -1,0 +1,45 @@
+<%@page import="com.liferay.compat.portal.kernel.util.LocaleUtil"%>
+<%@page import="com.liferay.portal.kernel.util.DateFormatFactoryUtil"%>
+<%@page import="com.liferay.portal.kernel.util.GetterUtil"%>
+<%@page import="com.sambaash.platform.srv.spchallenge.service.SPChallengeLocalServiceUtil"%>
+<%@page import="com.sambaash.platform.util.SambaashUtil"%>
+<%@ include file="/html/sptabbedcategorycontent/init.jsp" %>
+
+	<%
+		List<Document> challengeContentList = (List<Document>) request.getAttribute(WebKeys.CHALLENGE_CONTENT_LIST);
+	%>
+				
+	<c:if test="${challengeContentList != null && challengeContentList.size()>0}">
+		<%
+			for (Document document: challengeContentList) {
+				long challengeId = GetterUtil.getLong(document.get("entryClassPK"),0);
+				String url = SPChallengeLocalServiceUtil.displayChallengeFriendlyURL(themeDisplay, challengeId);
+				String logoUrl = SambaashUtil.getDLFileIconUrl(renderRequest, GetterUtil.getLong(document.get("fileEntryId"),0));
+// 				String applyBy = DateFormatFactoryUtil.getSimpleDateFormat("EEE MMM dd, yyyy", LocaleUtil.getDefault()).format(document.getDate("endDate"));
+		%>
+			<div class="col">				
+		        <div class="padding-row _item">         
+		            <div class="single-idea">
+		                <div class="image-section">
+		                    <img src="<%= logoUrl %>" alt="challenge-image" title="challenge">
+		                </div>
+		                <div class="idea-content">
+		                    <div class="small-title"><%= document.get("_ui_title") %></div>
+		                	<div class="normal-title"><%= document.get("name") %></div>
+		                	<a href="<%= url %>" class="launch-button">APPLY</a> 
+	                        <div class="accordionItem close">
+	                            <h2 class="accordionItemHeading"></h2>
+	                            <div class="accordionItemContent">
+<%-- 	                           		<p>Apply By <%= applyBy %></p> --%>
+	                                <p><%= document.get("background")%></p>
+	                            </div>
+	                        </div>
+		            	</div>
+	            	</div>            
+	        	</div>				
+			</div>
+		<%		
+			}
+			challengeContentList.clear();
+		%>
+	</c:if>

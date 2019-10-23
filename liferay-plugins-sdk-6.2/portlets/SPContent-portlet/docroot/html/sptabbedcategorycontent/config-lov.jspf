@@ -1,0 +1,100 @@
+<%@page import="com.liferay.portal.kernel.util.Validator"%>
+<%@page import="java.util.Map"%>
+<%@page import="com.liferay.portal.kernel.dao.orm.QueryUtil"%>
+<%@page import="com.liferay.portlet.asset.service.AssetCategoryLocalServiceUtil"%>
+<%@page import="com.liferay.portlet.asset.model.AssetCategory"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="com.liferay.portlet.asset.model.AssetVocabulary"%>
+<%@page import="com.liferay.portlet.asset.service.AssetVocabularyLocalServiceUtil"%>
+<%@page import="com.liferay.portal.kernel.portlet.DefaultConfigurationAction"%>
+<%@page import="com.liferay.portal.kernel.util.StringPool"%>
+
+<%@include file="/html/sptabbedcategorycontent/init.jsp"%>
+
+<%
+	String parentVocabularyName = ActionUtil.generatePreferenceName(Constant.CONTENT_PARENT_VOCABULARY);
+	String parentVocabulary = ActionUtil.getPreferenceValue(portletPreferences, Constant.CONTENT_PARENT_VOCABULARY, "");
+
+	String parentCategoryName = ActionUtil.generatePreferenceName(Constant.CONTENT_PARENT_CATEGORY);
+	String parentCategory = ActionUtil.getPreferenceValue(portletPreferences, Constant.CONTENT_PARENT_CATEGORY, "");
+	
+	List<AssetVocabulary> vocabularies = AssetVocabularyLocalServiceUtil.getGroupVocabularies(themeDisplay.getScopeGroupId());
+	HashMap<Long, String> categoryMap = new HashMap<Long, String>();
+	long initialVocabularyId = -1;
+%>
+	<aui:row>
+		<aui:col span="6">
+			<aui:select name="<%=parentVocabularyName%>" id="<%=parentVocabularyName%>" required="true" label="<%=Constant.CONTENT_PARENT_VOCABULARY%>">
+			<%
+				for(AssetVocabulary vocabulary: vocabularies) {
+			%>
+				<aui:option value="<%=vocabulary.getVocabularyId() %>"><%=vocabulary.getName()%></aui:option>			
+			<%		
+					StringBuilder catSb = new StringBuilder(100).append("[");
+					List<AssetCategory> vocabCategories = AssetCategoryLocalServiceUtil.getVocabularyCategories(vocabulary.getVocabularyId(), QueryUtil.ALL_POS, QueryUtil.ALL_POS, null);
+					if (vocabCategories.isEmpty()) continue;
+					for (AssetCategory category: vocabCategories) {
+						catSb.append(String.format("{ \"categoryId\": %d, \"name\": \"%s\" },", category.getCategoryId(), category.getName().replace("'", "\\'")));
+					}
+					catSb.setLength(catSb.length()-1); // remove last comma
+					catSb.append("]");
+					categoryMap.put(vocabulary.getVocabularyId(), catSb.toString());
+					if (initialVocabularyId<0) {
+						initialVocabularyId = vocabulary.getVocabularyId();
+					}
+				}
+			%>
+			</aui:select>
+		</aui:col>
+		<aui:col span="6">
+			<aui:select name="<%=parentCategoryName%>" id="<%=parentCategoryName%>" required="true" label="<%=Constant.CONTENT_PARENT_CATEGORY%>"></aui:select>
+		</aui:col>
+	</aui:row>
+	
+	<script type="text/javascript">
+	    var vocabCatMap = {};
+	<%
+		for (Map.Entry<Long, String> entry: categoryMap.entrySet()) {
+	%>
+		vocabCatMap["<%=entry.getKey()%>"] = JSON.parse('<%=entry.getValue()%>');
+	<%		
+		}
+	%>
+	</script>
+		
+	<aui:script>
+		AUI().use('aui-base','aui-node', function(A){
+			var vocabLov = A.one("#<portlet:namespace/><%=parentVocabularyName%>");
+			var catLov = A.one('#<portlet:namespace /><%=parentCategoryName%>');
+
+			function vocabChanged(){
+			    var selectedVocab = vocabLov.val();
+				catLov.empty();
+				var categoryList = vocabCatMap[selectedVocab];
+				for(var i in categoryList){
+                   catLov.append("<option    value='"+ categoryList[i].categoryId +"' >"+categoryList[i].name+"</option> "); 
+                }
+			<%
+				if (Validator.isNotNull(parentCategory)) {
+			%>
+				console.log("catLov="+catLov);
+				catLov.val(<%=parentCategory%>);
+			<%
+				}
+			%>
+			};
+			vocabChanged(); // populate initially loaded vocabulary categories
+			vocabLov.on('change',vocabChanged);
+			
+			<%
+				if (Validator.isNotNull(parentVocabulary)) {
+			%>
+				console.log("vocabLov="+vocabLov);
+				vocabLov.val(<%=parentVocabulary%>);
+				vocabChanged();
+			<%
+				}
+			%>
+		});
+	</aui:script>		
+	

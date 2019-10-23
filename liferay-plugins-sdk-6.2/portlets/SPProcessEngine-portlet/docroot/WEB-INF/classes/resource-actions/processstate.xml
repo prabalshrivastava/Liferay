@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 6.2.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_6_2_0.dtd">
+
+<resource-action-mapping>
+    <portlet-resource>
+        <portlet-name>process-state-listing</portlet-name>
+        <permissions>
+            <supports>
+                <action-key>EXPORT_SUBMSSIONS</action-key>
+                <action-key>VIEW</action-key>
+                <action-key>ASSIGN</action-key>
+                <action-key>STAGE_CLOSE</action-key>
+                <action-key>STATUS_CHANGE</action-key>
+                <action-key>SEARCH_SECTION</action-key>
+                <action-key>BULK_UPLOAD</action-key>
+            </supports>
+            <site-member-defaults>
+            </site-member-defaults>
+            <guest-defaults>
+            </guest-defaults>
+            <guest-unsupported>
+                <action-key>EXPORT_SUBMSSIONS</action-key>
+                <action-key>ADD_TO_PAGE</action-key>
+                <action-key>VIEW</action-key>
+                <action-key>EDIT</action-key>
+                <action-key>HELP</action-key>
+                <action-key>ABOUT</action-key>
+                <action-key>CONFIGURATION</action-key>
+                <action-key>EDIT_DEFAULTS</action-key>
+                <action-key>GUEST_PREFERENCES</action-key>
+                <action-key>PREVIEW</action-key>
+                <action-key>PRINT</action-key>
+                <action-key>PERMISSIONS</action-key>
+                <action-key>PREFERENCES</action-key>
+                <action-key>ASSIGN</action-key>
+                <action-key>STAGE_CHANGE</action-key>
+            </guest-unsupported>
+        </permissions>
+    </portlet-resource>
+</resource-action-mapping>

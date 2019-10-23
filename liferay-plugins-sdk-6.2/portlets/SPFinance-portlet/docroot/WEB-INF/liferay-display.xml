@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 6.2.0//EN" "http://www.liferay.com/dtd/liferay-display_6_2_0.dtd">
+
+<display>
+	<category name="Finance">
+		<portlet id="profit-centre"></portlet>
+		<portlet id="chart-of-accounts"></portlet>
+		<portlet id="accounting-table"></portlet>
+		<portlet id="division"></portlet>
+		<portlet id="finance-parameter"></portlet>
+		<portlet id="transaction-document"></portlet>
+		<portlet id="reference-number"></portlet>
+		<portlet id="transaction"></portlet>
+		<portlet id="cashier-counter"></portlet>
+		<portlet id="invigilator-claim"></portlet>
+		<portlet id="credit-balance"></portlet>
+		<portlet id="pay-online"></portlet>
+		<portlet id="my-wallet"></portlet>
+		<portlet id="lor-report"></portlet>
+		<portlet id="dcc-report"></portlet>
+	</category>
+</display>

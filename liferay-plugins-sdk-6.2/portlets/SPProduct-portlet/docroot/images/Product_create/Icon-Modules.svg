@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="45px" height="52px" viewBox="0 0 45 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon - Modules</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Lithan---Product---Create/Edit-(Desktop)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00---Product-(Create)---Intro" transform="translate(-489.000000, -501.000000)">
+            <g id="Content-/-Basic-Data" transform="translate(-1.000000, 0.000000)">
+                <g id="Dropdown" transform="translate(427.000000, 246.000000)">
+                    <g id="Group-4" transform="translate(0.000000, 209.767055)">
+                        <g id="Icon---Modules" transform="translate(63.000000, 46.000000)">
+                            <path d="M11.25,43.1972354 L11.25,18.1428389 L32.8846154,5.18366825" id="Path-1836" stroke="#979797"></path>
+                            <path d="M12.1153846,43.1972354 L12.1153846,18.1428389 L32.8846154,6.04761295" id="Path-1836" stroke="#979797" transform="translate(22.500000, 24.622424) scale(-1, 1) translate(-22.500000, -24.622424) "></path>
+                            <path d="M0.865384615,24.1904518 L22.5,36.2856777 L44.1346154,24.1904518" id="Path-1838" stroke="#979797"></path>
+                            <path d="M1.73076923,12.0952259 L22.5,24.1904518 L22.5,49.2448483" id="Line" stroke="#F59807" stroke-linecap="square"></path>
+                            <path d="M22.5,12.0952259 L43.2692308,24.1904518 L43.2692308,47.5169589" id="Line" stroke="#F59807" stroke-linecap="square" transform="translate(32.884615, 29.806092) scale(-1, 1) translate(-32.884615, -29.806092) "></path>
+                            <path d="M0.865384615,12.0952259 L0.865384615,37.1496224 L22.5,50.108793 L44.1346154,36.2856777 L44.1346154,12.0952259 L22.5,0 L0.865384615,12.0952259 Z" id="Path-1826" stroke="#656565"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

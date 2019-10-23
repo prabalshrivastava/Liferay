@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="21" viewBox="0 0 19 21">
+  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+    <path stroke="#002F76" d="M1.8859375,0 C0.85,0 0,0.75 0,1.6640625 L0,17.3359375 C0,18.25 0.85,19 1.8859375,19 L15.1140625,19 C16.15,19 17,18.25 17,17.3359375 L17,1.6640625 C17,0.75 16.15,0 15.1140625,0 L1.8859375,0 Z"/>
+    <text fill="#002F76" font-family="DINPro-Bold, DINPro" font-size="7" font-weight="bold" letter-spacing=".2">
+      <tspan x="4" y="7">B</tspan> <tspan x="8.806" y="7">D</tspan>
+    </text>
+    <path stroke="#002F76" stroke-linecap="square" d="M5.5,11.5 L14.5,11.5"/>
+    <circle cx="3.5" cy="11.5" r="1" fill="#002F76"/>
+    <path stroke="#002F76" stroke-linecap="square" d="M5.5,13.5 L14.5,13.5"/>
+    <circle cx="3.5" cy="13.5" r="1" fill="#002F76"/>
+    <path stroke="#002F76" stroke-linecap="square" d="M5.5,15.5 L14.5,15.5"/>
+    <circle cx="3.5" cy="15.5" r="1" fill="#002F76"/>
+    <path stroke="#002F76" stroke-linecap="square" d="M2.5,8.5 L14.5,8.5"/>
+  </g>
+</svg>

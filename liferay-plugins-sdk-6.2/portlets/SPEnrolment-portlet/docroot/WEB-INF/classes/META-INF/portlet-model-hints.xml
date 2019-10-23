@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.enrolment.model.EnrollBatchUpload">
+		<field name="uploadStatId" type="long" />
+		<field name="uploadTransactId" type="String" />
+		<field name="errorField" type="String" />
+		<field name="errorReason" type="String" />
+		<field name="uploadedRecId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.enrolment.model.EnrollUploadedTempRecords">
+		<field name="uploadedRecId" type="long" />
+		<field name="uploadTransactId" type="String" />
+		<field name="sprCode" type="String" />
+		<field name="title" type="String" />
+		<field name="fullOfficialName" type="String" />
+		<field name="gender" type="String" />
+		<field name="dateofBirth" type="String" />
+		<field name="email" type="String" />
+		<field name="userId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+</model-hints>

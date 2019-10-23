@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m2="http://ant.apache.org/ivy/maven" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+	<info organisation="com.liferay" module="com.liferay.liferay.plugins.sdk" revision="working@DESKTOP-HCVF7FU" status="integration" publication="20190916140724">
+		<extends extendType="configurations,description,info" location="C:/sambaash/code/sambaash.platform.005/liferay-plugins-sdk-6.2/ivy.xml" module="com.liferay.sdk" organisation="com.liferay" revision="latest.integration"/>
+	</info>
+
+	<dependencies defaultconf="default">
+		<dependency name="commons-codec" org="commons-codec" rev="1.7"/>
+		<dependency name="jackson-annotations" org="com.fasterxml.jackson.core" rev="2.4.2"/>
+		<dependency name="jackson-core" org="com.fasterxml.jackson.core" rev="2.4.2"/>
+		<dependency name="jackson-databind" org="com.fasterxml.jackson.core" rev="2.4.2"/>
+		<dependency name="httpclient" org="org.apache.httpcomponents" rev="4.3.3"/>
+		<dependency name="httpcore" org="org.apache.httpcomponents" rev="4.3.2"/>
+		<dependency name="slf4j-api" org="org.slf4j" rev="1.7.2"/>
+	</dependencies>
+</ivy-module>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.spgroup">
+	<author>harini</author>
+	<namespace>SPGroup</namespace>
+
+	<entity name="SPGroup" table="SPGroup" local-service="true" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spGroupId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="title" type="String"></column>
+		<column name="urlTitle" type="String"></column>
+		<column name="description" type="String"></column>
+		<column name="imageId" type="long"></column>
+		<column name="type" db-name="type_" type="int"></column>
+		<column name="status" type="int"></column>
+
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="createDate"></order-column>
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="UserId" return-type="Collection">
+			<finder-column name="userId" />
+		</finder>
+
+		<finder name="UserIdAndStatus" return-type="Collection">
+			<finder-column name="userId" />
+			<finder-column name="status" />
+		</finder>
+
+		<finder name="URLTitleAndGroupId" return-type="SPGroup" unique="true">
+			<finder-column name="groupId" />
+			<finder-column name="urlTitle" />
+		</finder>
+
+		<finder name="TypeAndStatus" return-type="Collection">
+			<finder-column name="type" />
+			<finder-column name="status" />
+		</finder>
+
+		<!-- References -->
+
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="Image" />
+		<reference package-path="com.liferay.portal" entity="PortletPreferences" />
+		<reference package-path="com.liferay.portal" entity="Subscription" />
+		<reference package-path="com.liferay.portal" entity="WorkflowInstanceLink" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetLink" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetCategory"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetTag"></reference>
+		<reference package-path="com.liferay.portlet.expando" entity="ExpandoValue" />
+		<reference package-path="com.liferay.portlet.messageboards" entity="MBMessage" />
+	</entity>
+
+	<entity name="SPGroupUser" table="SPGroupUser" local-service="true" remote-service="false" uuid="false">
+
+		<!-- PK fields -->
+
+		<column name="spGroupId" type="long" primary="true"></column>
+		<column name="userId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="joinDate" type="Date" />
+		<column name="role" type="int"></column>
+		<column name="status" type="int"></column>
+
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="joinDate"></order-column>
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="SPGroupId" return-type="Collection">
+			<finder-column name="spGroupId" />
+		</finder>
+
+		<finder name="SPGroupIdAndStatus" return-type="Collection">
+			<finder-column name="spGroupId" />
+			<finder-column name="status" />
+		</finder>
+
+		<finder name="UserId" return-type="Collection">
+			<finder-column name="userId" />
+		</finder>
+
+		<finder name="UserIdAndStatus" return-type="Collection">
+			<finder-column name="userId" />
+			<finder-column name="status" />
+		</finder>
+
+		<finder name="SPGroupIdAndRole" return-type="Collection">
+			<finder-column name="spGroupId" />
+			<finder-column name="role" />
+		</finder>
+
+		<finder name="UserIdAndGroupIdAndStatus" return-type="SPGroupUser" unique="true">
+			<finder-column name="userId" />
+			<finder-column name="spGroupId" />
+			<finder-column name="status" />
+		</finder>
+
+	</entity>
+
+	<entity name="SPGroupPref" table="SPGroupPref" local-service="true" remote-service="false" uuid="false">
+
+		<!-- PK fields -->
+
+		<column name="spGroupPrefId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="dIn" type="boolean" />
+		<column name="dGoogle" type="boolean"></column>
+		<column name="dFb" type="boolean"></column>
+		<column name="dTw" type="boolean"></column>
+
+		<column name="cIn" type="boolean" />
+		<column name="cGoogle" type="boolean"></column>
+		<column name="cFb" type="boolean"></column>
+		<column name="cTw" type="boolean"></column>
+
+		<column name="enableSubscribeToComments" type="boolean"></column>
+		<column name="enableGroupUpdateNotification" type="boolean"></column>
+		<column name="enableMemberUpdate" type="boolean"></column>
+		<column name="enableDiscussionUpdate" type="boolean"></column>
+		<column name="updateFrequency" type="String"></column>
+
+	</entity>
+
+	<exceptions>
+		<exception>SPGroupTitle</exception>
+		<exception>SPGroupDescription</exception>
+		<exception>SPGroupImageName</exception>
+		<exception>SPGroupImageSize</exception>
+		<exception>SPGroupImageType</exception>
+		<exception>SPGroupImageName</exception>
+		<exception>NoSuchUser</exception>
+		<exception>NoSuchSPGroup</exception>
+		<exception>NoSuchPref</exception>
+	</exceptions>
+
+</service-builder>

@@ -1,0 +1,189 @@
+.screen-max-width {
+  width: 100%;
+  margin: 0 auto; }
+
+.margin-bot-10 {
+  margin-bottom: 10px; }
+
+.margin-bot-20 {
+  margin-bottom: 20px; }
+
+.margin-bot-28 {
+  margin-bottom: 28px; }
+
+.btnDetails button {
+  padding: 10px 20px;
+  margin: 0 0 10px 0; }
+  .btnDetails button.small {
+    padding: 10px 20px;
+    margin: 0 0 0 0; }
+  .btnDetails button.medium {
+    padding: 15px 30px;
+    margin: 0 0 10px 0; }
+
+.apply-popupoverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden; }
+
+.apply-popupoverlay:target {
+  visibility: visible; }
+
+.popup-details-page {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 100; }
+  .popup-details-page .pop-content-wrapper {
+    padding: 40px;
+    margin: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: left;
+    -ms-flex-align: left;
+    -webkit-align-items: left;
+    -moz-align-items: left;
+    align-items: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .popup-details-page .pop-content-wrapper p {
+      margin: 0;
+      padding: 15px 0; }
+    .popup-details-page .pop-content-wrapper button {
+      margin-right: 10px; }
+  .popup-details-page .close-popup a {
+    position: absolute;
+    right: 20px;
+    top: 15px; }
+    .popup-details-page .close-popup a img {
+      width: 11px;
+      height: 11px; }
+
+.signin-detail-page {
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  display: block; }
+  .signin-detail-page .bg-imageapply {
+    width: 100%;
+    height: 100vh;
+    min-height: 800px;
+    display: block;
+    position: relative; }
+
+.signin-container {
+  width: 36.698%;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.signin-container .box {
+  padding: 40px; }
+  .signin-container .box p {
+    margin: 0;
+    padding: 15px 0; }
+  .signin-container .box button {
+    margin-right: 10px; }
+
+.signinbg {
+  height: auto;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.detail-signin-header {
+  width: 100%;
+  height: 155px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .detail-signin-header h2 {
+    max-width: 80%; }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .signin-container {
+    width: 90%;
+    height: 600px; }
+
+  .overlay-image {
+    min-height: 100%; }
+
+  .detail-signin-header h2 {
+    max-width: 90%; }
+
+  .popup-details-page {
+    width: 300px;
+    height: 300px; }
+    .popup-details-page .pop-content-wrapper {
+      padding: 40px 20px; }
+      .popup-details-page .pop-content-wrapper p {
+        padding: 10px 0; }
+      .popup-details-page .pop-content-wrapper button {
+        margin-right: 2px;
+        padding: 10px; } }
+@media screen and (min-width: 360px) and (max-width: 640px) {
+  .signin-container {
+    width: 90%;
+    height: 600px; }
+
+  .popup-details-page {
+    width: 320px;
+    height: 320px; }
+    .popup-details-page .pop-content-wrapper {
+      padding: 40px 20px; }
+      .popup-details-page .pop-content-wrapper p {
+        padding: 10px 0; }
+      .popup-details-page .pop-content-wrapper button {
+        margin-right: 2px;
+        padding: 10px; } }
+@media screen and (min-width: 360px) and (max-width: 640px) and (orientation: landscape) {
+  .signin-container {
+    width: 90%;
+    height: 600px; } }
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .signin-container {
+    width: 90%;
+    height: 600px; } }
+@media screen and (min-width: 767px) and (max-width: 1024px) and (orientation: landscape) {
+  .signin-container {
+    width: 50%;
+    height: 600px; } }
+
+/*# sourceMappingURL=apply_popup.css.map */

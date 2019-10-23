@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<globalConfiguration>
+		<parameter name="adminPassword" value="admin" />
+		<parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl" />
+		<parameter name="sendXsiTypes" value="true" />
+		<parameter name="sendMultiRefs" value="true" />
+		<parameter name="sendXMLDeclaration" value="true" />
+		<parameter name="axis.sendMinimizedElements" value="true" />
+		<requestFlow>
+			<handler type="java:org.apache.axis.handlers.JWSHandler">
+				<parameter name="scope" value="session" />
+			</handler>
+			<handler type="java:org.apache.axis.handlers.JWSHandler">
+				<parameter name="scope" value="request" />
+				<parameter name="extension" value=".jwr" />
+			</handler>
+		</requestFlow>
+	</globalConfiguration>
+	<handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder" />
+	<handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper" />
+	<handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler" />
+	<transport name="http">
+		<requestFlow>
+			<handler type="URLMapper" />
+			<handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler" />
+		</requestFlow>
+	</transport>
+	<transport name="local">
+		<responseFlow>
+			<handler type="LocalResponder" />
+		</responseFlow>
+	</transport>
+	<service name="Plugin_SPNeoforj_SPNeoforjService" provider="java:RPC" style="rpc" use="encoded">
+		<typeMapping xmlns:ns="http://form.spneo4j.model.platform.sambaash.com" qname="ns:BaseGraphForm" type="java:com.sambaash.platform.model.spneo4j.form.BaseGraphForm" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></typeMapping>
+		<typeMapping xmlns:ns="http://form.spneo4j.model.platform.sambaash.com" qname="ns:JoinGraphForm" type="java:com.sambaash.platform.model.spneo4j.form.JoinGraphForm" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></typeMapping>
+		<operation xmlns:operNS="urn:http.service.graph.srv.platform.sambaash.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="findUsersWhoLikeCount" qname="operNS:findUsersWhoLikeCount" returnQName="findUsersWhoLikeCountReturn" returnType="rtns:int" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="companyId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="layoutSetId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityClassName" type="tns:string"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.graph.srv.platform.sambaash.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="follow" qname="operNS:follow" returnQName="followReturn" returnType="rtns:string" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="companyId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="layoutSetId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="action" type="tns:string"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="startUserId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityClassName" type="tns:string"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.graph.srv.platform.sambaash.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="isFollowing" qname="operNS:isFollowing" returnQName="isFollowingReturn" returnType="rtns:boolean" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="companyId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="layoutSetId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="startUserId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityClassName" type="tns:string"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.graph.srv.platform.sambaash.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="isJoined" qname="operNS:isJoined" returnQName="isJoinedReturn" returnType="rtns:boolean" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="companyId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="layoutSetId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="startUserId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityClassName" type="tns:string"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityClassPK" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.graph.srv.platform.sambaash.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="isLiking" qname="operNS:isLiking" returnQName="isLikingReturn" returnType="rtns:boolean" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="companyId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="layoutSetId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="startUserId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityClassName" type="tns:string"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.graph.srv.platform.sambaash.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="join" qname="operNS:join" returnQName="joinReturn" returnType="rtns:string" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="action" type="tns:string"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="startUserId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityClassName" type="tns:string"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityClassPK" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="type" type="tns:int"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="status" type="tns:int"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="companyId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="layoutSetId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.graph.srv.platform.sambaash.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="like" qname="operNS:like" returnQName="likeReturn" returnType="rtns:string" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="companyId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="groupId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="layoutSetId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="action" type="tns:string"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="startUserId" type="tns:long"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityClassName" type="tns:string"></parameter>
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="endEntityId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.graph.srv.platform.sambaash.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="updateJoinGraph" qname="operNS:updateJoinGraph" returnQName="updateJoinGraphReturn" returnType="rtns:string" soapAction="">
+			<parameter xmlns:tns="http://form.spneo4j.model.platform.sambaash.com" qname="joinGraphForm" type="tns:JoinGraphForm"></parameter>
+		</operation>
+		<parameter name="allowedMethods" value="findUsersWhoLikeCount follow isFollowing isJoined isLiking join like updateJoinGraph" />
+		<parameter name="className" value="com.sambaash.platform.srv.graph.service.http.SPNeoforjServiceSoap" />
+		<parameter name="schemaUnqualified" value="http://form.spneo4j.model.platform.sambaash.com" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="SPNeoforjServiceSoap" />
+		<parameter name="wsdlServiceElement" value="SPNeoforjServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_SPNeoforj_SPNeoforjService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.graph.srv.platform.sambaash.com" />
+	</service>
+</deployment>

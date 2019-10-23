@@ -1,0 +1,1727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv">
+	<author>gauravvijayvergia</author>
+	<namespace>SPProduct</namespace>
+
+	<entity name="Framework" table="SPFramework" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spFrameworkId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="countryId" type="long" />
+		<column name="frameworkCode" type="String" />
+		<column name="frameworkName" type="String" />
+		<column name="frameworkImageId" type="Long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="frameworkName" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CountryIdAndGroupId" return-type="Collection">
+			<finder-column name="countryId" />
+			<finder-column name="groupId" />
+		</finder>
+		
+		<finder name="NameAndGroupId" return-type="Framework">
+			<finder-column name="frameworkName" case-sensitive="false"/>
+			<finder-column name="groupId" />
+		</finder>
+		
+		<finder return-type="Framework" name="FrameworkCode">
+			<finder-column name="frameworkCode" case-sensitive="false"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="CompetencyUnit" table="SPCompetencyUnit"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spCompetencyUnitId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="countryId" type="long" />
+		<column name="spFrameworkId" type="long" />
+		<column name="competencyUnitCode" type="String" />
+		<column name="competencyUnitDesc" type="String" />
+		<column name="jobFamily" type="long" />
+		<column name="competencyLevel" type="long" />
+		<column name="creditValue" type="long" />
+
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="competencyUnitCode" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CountryIdAndGroupId" return-type="Collection">
+			<finder-column name="countryId" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CountryIdAndGroupIdAndFrameworkId" return-type="Collection">
+			<finder-column name="countryId" />
+			<finder-column name="groupId" />
+			<finder-column name="spFrameworkId" />
+		</finder>
+		
+		<finder return-type="CompetencyUnit" name="CompetencyUnitCode">
+			<finder-column name="competencyUnitCode" case-sensitive="false"></finder-column>
+		</finder>
+
+	</entity>
+
+	<entity name="Outcome" table="SPOutcome" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spOutcomeId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="countryId" type="long" />
+		<column name="outcomeCode" type="String" />
+		<column name="outcomeDesc" type="String" />
+		<column name="outcomeType" type="long" />
+		<column name="outcomeFolderId" type="long" />
+		<column name="spCompetencyUnitId" type="long" />
+
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="outcomeCode" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CountryIdAndGroupId" return-type="Collection">
+			<finder-column name="countryId" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CountryIdAndGroupIdAndCompetencyUnitId"
+			return-type="Collection">
+			<finder-column name="countryId" />
+			<finder-column name="groupId" />
+			<finder-column name="spCompetencyUnitId" />
+		</finder>
+
+		<finder name="GroupIdAndCompetencyUnitId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="spCompetencyUnitId" />
+		</finder>
+
+	</entity>
+
+	<entity name="Outline" table="SPOutline" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spOutlineId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spCompetencyUnitId" type="long" />
+		<column name="outlineType" type="long" />
+		<column name="outlineDesc" type="String" />
+
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="outlineType" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="GroupIdAndOutlineType" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="outlineType" />
+		</finder>
+
+		<finder name="GroupIdAndCompetencyUnitId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="spCompetencyUnitId" />
+		</finder>
+
+	</entity>
+
+	<entity name="Assessment" table="SPAssessment" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spAssessmentId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spModuleId" type="long" />
+		<column name="assessmentDesc" type="String" />
+		<column name="assessmentType" type="long" />
+		<column name="assessmentMethod" type="long" />
+		<column name="assessmentMode" type="long" />
+		<column name="locationType" type="long" />
+		<column name="eligibility" type="String" />
+		<column name="gradingType" type="long" />
+		<column name="maximumMarks" type="String" />
+		<column name="passingMarks" type="String" />
+
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="assessmentDesc" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="GroupIdAndModuleId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="spModuleId" />
+		</finder>
+
+	</entity>
+
+	<entity name="Certificate" table="SPCertificate" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spCertificatetId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="countryId" type="long" />
+		<column name="certificateCode" type="String" />
+		<column name="certificateType" type="long" />
+		<column name="title" type="String" />
+		<column name="description" type="String" />
+		<column name="level" type="long" />
+		<column name="attachmentFolderId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="title" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CountryIdAndGroupId" return-type="Collection">
+			<finder-column name="countryId" />
+			<finder-column name="groupId" />
+		</finder>
+		
+		<finder return-type="Collection" name="certificateCode">
+			<finder-column name="certificateCode" case-sensitive="false"></finder-column>
+		</finder>
+		
+		<finder name="CertificateNameAndGroupId" return-type="Certificate">
+			<finder-column name="title" case-sensitive="false"/>
+			<finder-column name="groupId" />
+		</finder>
+
+	</entity>
+
+
+	<entity name="Schedule" table="SPSchedule" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spScheduleId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spModuleId" type="long" />
+		<column name="sessionNumber" type="String" />
+		<column name="description" type="String" />
+		<column name="sessionType" type="long" />
+		<column name="sessionDuration" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spScheduleId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="GroupIdAndModuleId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="spModuleId" />
+		</finder>
+
+	</entity>
+
+	<entity name="Activity" table="SPActivity" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spActivityId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spModuleId" type="long" />
+		<column name="spScheduleId" type="long" />
+		<column name="description" type="String" />
+		<column name="activityTiming" type="String" />
+		<column name="activityPerformer" type="String" />
+		<column name="activityDuration" type="String" />
+
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spActivityId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="GroupIdAndModuleId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="spModuleId" />
+		</finder>
+
+		<finder name="GroupIdAndScheduleId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="spScheduleId" />
+		</finder>
+
+	</entity>
+
+	<entity name="Module" table="SPModule" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spModuleId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="countryId" type="long" />
+		<column name="moduleCode" type="String" />
+		<column name="moduleName" type="String" />
+		<column name="moduleDesc" type="String" />
+		<column name="moduleType" type="long" />
+		<column name="creditValue" type="long" />
+		<column name="moduleDuration" type="String" />
+		<column name="noOfSessions" type="long" />
+		<column name="generalDesc" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="moduleCode" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CountryIdAndGroupId" return-type="Collection">
+			<finder-column name="countryId" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CountryIdAndGroupIdAndModuleCode" return-type="Collection">
+			<finder-column name="countryId" />
+			<finder-column name="groupId" />
+			<finder-column name="moduleCode" />
+		</finder>
+		<finder return-type="Module" name="ModuleCode">
+			<finder-column name="moduleCode" case-sensitive="false"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="ModuleFramework" table="SPModuleFramework"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spModuleFrameworkId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spModuleId" type="long" />
+		<column name="spFrameworkId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spModuleId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="ModuleIdAndGroupId" return-type="Collection">
+			<finder-column name="spModuleId" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="FrameworkIdAndGroupId" return-type="Collection">
+			<finder-column name="spFrameworkId" />
+			<finder-column name="groupId" />
+		</finder>
+
+	</entity>
+
+	<entity name="ModuleCompetencyUnit" table="SPModuleCompetencyUnit"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spModuleCompetencyUnitId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spModuleId" type="long" />
+		<column name="spCompetencyUnitId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spModuleId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="ModuleIdAndGroupId" return-type="Collection">
+			<finder-column name="spModuleId" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CompetencyUnitIdAndGroupId" return-type="Collection">
+			<finder-column name="spCompetencyUnitId" />
+			<finder-column name="groupId" />
+		</finder>
+
+	</entity>
+
+	<entity name="ModuleCertificate" table="SPModuleCertificate"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spModuleCertificateId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spModuleId" type="long" />
+		<column name="spCertificatetId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spModuleId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="ModuleIdAndGroupId" return-type="Collection">
+			<finder-column name="spModuleId" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CertificateIdAndGroupId" return-type="Collection">
+			<finder-column name="spCertificatetId" />
+			<finder-column name="groupId" />
+		</finder>
+
+	</entity>
+
+	<entity name="Course" table="SPCourse" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spCourseId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="countryId" type="String" />
+		<column name="courseCode" type="String" />
+		<column name="courseName" type="String" />
+		<column name="displayCourseName" type="boolean" />
+		<column name="courseDesc" type="String" />
+		<column name="courseDurationFullTime" type="String" />
+		<column name="learningDurationFullTime" type="String" />
+		<column name="courseDurationPartTime" type="String" />
+		<column name="learningDurationPartTime" type="String" />
+		<column name="complexityLevel" type="String" />
+		<column name="courseType" type="long" />
+		<column name="frameworkApprovalStatus" type="boolean" />
+		<column name="graduationCriteriaDesc" type="String" />
+		<column name="fundingDescPre" type="String" />
+		<column name="fundingDescPost" type="String" />
+		<column name="feeDetailsDesc" type="String" />
+		<column name="testLink" type="String" />
+		<column name="courseOutcomeTitle" type="String" />
+		<column name="courseOutcomeDesc" type="String" />
+		<column name="personaDesc" type="String" />
+		<column name="certificateTitle" type="String" />
+		<column name="awardingBodyId" type="long" />
+		<column name="courseLevel" type="long" />
+		<column name="miscFeeDesc" type="String" />
+		<column name="courseDeveloperId" type="long" />
+		
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="courseName" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CountryId" return-type="Collection">
+			<finder-column name="countryId" />
+		</finder>
+		<finder return-type="Course" name="CourseCode">
+			<finder-column name="courseCode" case-sensitive="false"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="CourseModule" table="SPCourseModule"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spCourseModuleId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spCourseId" type="long" />
+		<column name="spModuleId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spCourseId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="ModuleIdAndGroupId" return-type="Collection">
+			<finder-column name="spModuleId" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CourseIdAndGroupId" return-type="Collection">
+			<finder-column name="spCourseId" />
+			<finder-column name="groupId" />
+		</finder>
+
+	</entity>
+
+	<entity name="CourseCertificate" table="SPCourseCertificate"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spCourseCertificateId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spCourseId" type="long" />
+		<column name="spCertificatetId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spCourseId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CourseIdAndGroupId" return-type="Collection">
+			<finder-column name="spCourseId" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CertificateIdAndGroupId" return-type="Collection">
+			<finder-column name="spCertificatetId" />
+			<finder-column name="groupId" />
+		</finder>
+
+	</entity>
+
+	<entity name="CourseOutcome" table="SPCourseOutcome"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spCourseOutcomeId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spCourseId" type="long" />
+		<column name="outcomeId" type="long" />
+		<column name="outcomeDesc" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spCourseId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CourseIdAndGroupId" return-type="Collection">
+			<finder-column name="spCourseId" />
+			<finder-column name="groupId" />
+		</finder>
+
+	</entity>
+
+
+	<entity name="Persona" table="SPPersona" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spPersonaId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="personaType" type="long" />
+		<column name="ageGroup" type="String" />
+		<column name="personaDesc" type="String" />
+		<column name="personaImageId" type="long" />
+		<column name="spCourseId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spCourseId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CourseIdAndGroupId" return-type="Collection">
+			<finder-column name="spCourseId" />
+			<finder-column name="groupId" />
+		</finder>
+	</entity>
+
+	<entity name="PersonaAttendee" table="SPPersonaAttendee"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spPersonaAttendeeId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="description" type="String" />
+		<column name="imageId" type="long" />
+		<column name="spPersonaId" type="long" />
+		<column name="spCourseId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spPersonaId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="PersonaIdAndGroupId" return-type="Collection">
+			<finder-column name="spPersonaId" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CourseIdAndGroupId" return-type="Collection">
+			<finder-column name="spCourseId" />
+			<finder-column name="groupId" />
+		</finder>
+	</entity>
+
+	<entity name="FeeDetails" table="SPFeeDetails" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spFeeDetailsId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="feeType" type="long" />
+		<column name="feeDesc" type="String" />
+		<column name="calculationBase" type="String" />
+		<column name="amount" type="String" />
+		<column name="displayOrder" type="long" />
+		<column name="fundId" type="long" />
+		<column name="spCourseId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="displayOrder" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+		
+		<finder name="FundIdAndSpCourseId" return-type="Collection">
+			<finder-column name="fundId" />
+			<finder-column name="spCourseId" />
+		</finder>
+		<finder name="FundId" return-type="Collection">
+			<finder-column name="fundId" />
+		</finder>
+
+		<finder name="CourseIdAndGroupId" return-type="Collection">
+			<finder-column name="spCourseId" />
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="FeeTypeAndCourseId" return-type="Collection">
+			<finder-column name="feeType" />
+			<finder-column name="spCourseId" />
+		</finder>
+		<finder name="fundIdFeeType" return-type="FeeDetails">
+			<finder-column name="fundId" />
+			<finder-column name="feeType" />
+		</finder>
+		<finder name="courseIdFundIdFeeType" return-type="FeeDetails">
+			<finder-column name="spCourseId" />
+			<finder-column name="fundId" />
+			<finder-column name="feeType" />
+		</finder>
+	</entity>
+	
+	<entity name="FeeType" table="SPFeeType" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spFeeTypeId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="feeType" type="String" />
+		<column name="feeTypeName" type="String" />
+		<column name="feeTypeDesc" type="String" />
+		<column name="misc" type="boolean" />
+		
+		<finder name="Misc" return-type="Collection">
+			<finder-column name="misc" />
+		</finder>
+		<finder name="FeeTypeName" return-type="FeeType">
+			<finder-column name="feeTypeName" />
+		</finder>
+		
+
+	</entity>
+	
+	<entity name="MiscellaneousFees" table="SPMiscellaneousFees" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spMiscFeesId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="miscFeeType" type="long" />
+		<column name="amount" type="double" />
+		<column name="payable" type="long" />
+		<column name="spCourseId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spCourseId" />
+		</order>
+		
+		<finder name="CourseIdAndGroupId" return-type="Collection">
+			<finder-column name="spCourseId" />
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="CourseIdFeeType" return-type="MiscellaneousFees">
+			<finder-column name="spCourseId" />
+			<finder-column name="miscFeeType" />
+		</finder>
+		
+
+	</entity>
+	
+
+	<entity name="Funding" table="SPFunding" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spFundingId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="courseType" type="long" />
+		<column name="fundingDesc" type="String" />
+		<column name="fundingCriteria" type="String" />
+		<column name="fundOrder" type="long" />
+		<column name="sponsoredBy" type="long" />
+		<column name="residenceStatus" type="String" />
+		<column name="ageOperator" type="String" />
+		<column name="age" type="double" />
+		<column name="earningStatus" type="String" />
+		<column name="salaryOperator" type="String" />
+		<column name="salary" type="double" />
+		<column name="fundingHour" type="String" />
+		<column name="fundingAmount" type="double" />
+		<column name="netFees" type="double" />
+		<column name="absenteePayroll" type="String" />
+		<column name="fundingCourseFee" type="String" />
+		<column name="spCourseId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="fundOrder" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CourseIdAndGroupId" return-type="Collection">
+			<finder-column name="spCourseId" />
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="CourseId" return-type="Collection">
+			<finder-column name="spCourseId" />
+		</finder>
+		<finder name="SponsorByCourseId" return-type="Collection">
+			<finder-column name="spCourseId" />
+			<finder-column name="sponsoredBy" />
+		</finder>
+	</entity>
+
+	<entity name="GraduationCriteria" table="SPGraduationCriteria"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spGraduationCriteriaId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+
+		<column name="criteriaType" type="long" />
+		<column name="criteriaLevel" type="long" />
+		<column name="criteriaValueRange" type="String" />
+		<column name="criteriaDesc" type="String" />
+		<column name="spCourseId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spCourseId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CourseIdAndGroupId" return-type="Collection">
+			<finder-column name="spCourseId" />
+			<finder-column name="groupId" />
+		</finder>
+	</entity>
+
+	<entity name="ProgressionPath" table="SPProgressionPath"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spProgressionPathId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+
+		<column name="careerLevel" type="long" />
+		<column name="level" type="int" />
+		<!--<column name="sequence" type="int" />-->
+		<column name="progressionType" type="long" />
+		<column name="progressionCategory" type="long" />
+		<column name="startMonth" type="String" />
+		<column name="endMonth" type="String" />
+		<column name="duration" type="String" />
+		<column name="optionalMandatory" type="String" />
+		<column name="spCourseId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spCourseId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CourseIdAndGroupId" return-type="Collection">
+			<finder-column name="spCourseId" />
+			<finder-column name="groupId" />
+		</finder>
+	</entity>
+
+	<entity name="Product" table="SPProduct" local-service="true"
+		remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spProductId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="countryId" type="String" />
+		<column name="productCode" type="String" />
+		<column name="productName" type="String" />
+		<column name="productDesc" type="String" />
+		<column name="productImageId" type="long" />
+		<column name="spCourseId" type="long" />
+		<column name="productBrochuresFolderId" type="long" />
+		<column name="productVideoFolderId" type="long" />
+		<column name="status" type="int" />
+		<column name="creditValues" type="long" />
+		<column name="PEProcessId" type="long" />
+		<column name="productTemplateName" type="String" />
+		<column name="productTemplateLanguage" type="String" />
+		<column name="registrationEnabled" type="String" />
+		<column name="samePageRegistration" type="String" />
+		<column name="productFormImageId" type="long" />
+		<column name="productFormName" type="String" />
+		<column name="productFormButtonName" type="String" />
+		<column name="productFormUrl" type="String" />
+		<column name="productBannerImageId" type="long" />
+		<column name="hasInventory" type="boolean" />
+		<column name="bannerDetailsEnabled" type="String" />
+
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="productName" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CountryId" return-type="Collection">
+			<finder-column name="countryId" />
+		</finder>
+
+		<finder name="GroupIdAndCountryId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="countryId" />
+		</finder>
+		<finder return-type="Product" name="ProductNameCounryId">
+			<finder-column name="productName" case-sensitive="false"></finder-column>
+			<finder-column name="countryId" case-sensitive="false"></finder-column>
+		</finder>
+		
+		<finder name="Status" return-type="Collection" where="status = 1">
+			<finder-column name="status" />
+		</finder>
+		<finder name="productIds" return-type="Collection">
+			<finder-column name="spProductId" arrayable-operator="OR"/>
+		</finder>
+		<finder name="GroupIdAndCourseId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="spCourseId" />
+		</finder>
+
+	</entity>
+
+	<entity name="ProductCourse" table="SPProductCourse"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spProductCourseId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spProductId" type="long" />
+		<column name="spCourseId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spProductId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="ProductIdAndGroupId" return-type="ProductCourse">
+			<finder-column name="spProductId" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CourseIdAndGroupId" return-type="Collection">
+			<finder-column name="spCourseId" />
+			<finder-column name="groupId" />
+		</finder>
+
+	</entity>
+	<entity name="CourseLearning" table="SPCourseLearning"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spCourseLearningId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spCourseId" type="long" />
+		<column name="intro" type="String" />
+		<column name="optionTitle" type="String" />
+		<column name="option1" type="String" />
+		<column name="option2" type="String" />
+		<column name="note" type="String" />
+		
+		
+		<finder return-type="CourseLearning" name="CourseId"><!--  only one learning object exists corresponds to one course -->
+			<finder-column name="spCourseId"></finder-column>
+		</finder>
+
+	</entity>
+	<entity name="CourseDuration" table="SPCourseDuration"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spCourseDurationId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spCourseId" type="long" />
+		<column name="spCourseLearningId" type="long" />
+		<column name="title" type="String" />
+		
+		<finder return-type="CourseDuration" name="CourseId"><!--  only one duration object exists corresponds to one course -->
+			<finder-column name="spCourseId"></finder-column>
+		</finder>
+
+	</entity>
+	<entity name="CourseDurationType" table="SPCourseDurationType"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spCourseDurationTypeId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spCourseDurationId" type="long" />
+		<column name="spCourseId" type="long" />
+		
+		<column name="title1" type="String" />
+		<column name="duration1" type="String" />
+		<column name="title2" type="String" />
+		<column name="duration2" type="String" />
+
+		<finder return-type="Collection" name="CourseId">
+			<finder-column name="spCourseId"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="CourseDurationId">
+			<finder-column name="spCourseDurationId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="CourseCareer" table="SPCourseCareer"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spCourseCareerId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spCourseId" type="long" />
+		<column name="intro" type="String" />
+
+		<finder return-type="CourseCareer" name="CourseId">
+			<finder-column name="spCourseId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="StudyOption" table="SPCourseStudyOption"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spStudyOptionId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spCourseId" type="long" />
+		
+		<column name="title" type="String" />
+		<column name="desc" type="String" />
+		<column name="coverImageFileEntryId" type="long" />
+		
+
+		<finder return-type="Collection" name="CourseId">
+			<finder-column name="spCourseId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="CourseEnrollContract" table="SPCourseEnrollContract"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spCourseContractId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="countryId" type="String" />
+		<column name="courseType" type="long" />
+		<column name="docType" type="String" />
+		<column name="seqNo" type="int" />
+		<column name="contractTemplateFileEntryId" type="long" />
+		<column name="dataTemplateFileEntryId" type="long" />
+		<column name="extraInfo" type="String" />
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="seqNo" />
+		</order>
+		
+		<finder return-type="Collection" name="countryIdCourseType">
+			<finder-column name="countryId"></finder-column>
+			<finder-column name="courseType"></finder-column>
+		</finder>
+		<finder return-type="CourseEnrollContract" name="countryIdCourseTypeDocType">
+			<finder-column name="countryId"></finder-column>
+			<finder-column name="courseType"></finder-column>
+			<finder-column name="docType"></finder-column>
+		</finder>
+	</entity>
+	<entity name="CourseEnrollEsignInfo" table="SPCourseEnrollEsignInfo"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spEsignInfoId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="signerId" type="String" />
+		<column name="packageId" type="String" />
+		<column name="documentId" type="String" />
+		<column name="lastGeneratedUrl" type="String" />
+		<column name="spPEProcessStateId" type="long" />
+		<column name="extraInfo" type="String" />
+
+		<finder return-type="CourseEnrollEsignInfo" name="SignerId">
+			<finder-column name="signerId"></finder-column>
+		</finder>
+		<finder return-type="CourseEnrollEsignInfo" name="PackageId">
+			<finder-column name="packageId"></finder-column>
+		</finder>
+		<finder return-type="CourseEnrollEsignInfo" name="DocumentId">
+			<finder-column name="documentId"></finder-column>
+		</finder>
+		<finder return-type="CourseEnrollEsignInfo" name="ProcessStateId">
+			<finder-column name="spPEProcessStateId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="StudentCourseFee" table="SPStudentCourseFee"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spStudentCourseFeeId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spPEProcessStateId" type="long" />
+		<column name="feeType" type="String" />
+		<column name="amount" type="String" />
+		<column name="order" type="int" />
+		<column name="formula" type="String" />
+		<column name="label" type="String" />
+
+		<finder return-type="Collection" name="processStateId">
+			<finder-column name="spPEProcessStateId"></finder-column>
+		</finder>
+		<finder return-type="StudentCourseFee" name="processStateIdFeeType">
+			<finder-column name="spPEProcessStateId"></finder-column>
+			<finder-column name="feeType"></finder-column>
+		</finder>
+	</entity>
+	<!-- dont change table name  . check impl class -->
+	<entity name="StudentCourseFeeInstmnt" table="SPStudentCourseFeeInstmnt"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spStudentCourseFeeInstmntId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spPEProcessStateId" type="long" />
+		<!--  dont change column name insmntNo. If you change here, change in impl class also  (OrderByComparator)-->
+		<column name="insmntNo" type="int" />
+		<column name="amount" type="String" />
+		<column name="date" type="Date" />
+
+		<finder return-type="Collection" name="processStateId">
+			<finder-column name="spPEProcessStateId"></finder-column>
+		</finder>
+		<finder return-type="StudentCourseFeeInstmnt" name="processStateIdInsmntNo">
+			<finder-column name="spPEProcessStateId"></finder-column>
+			<finder-column name="insmntNo"></finder-column>
+		</finder>
+	</entity>
+	<entity name="ProductSupervisor" table="SPProductSupervisor"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spProductSupervisorId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+	    <!-- Dont change column names. Check impl class. It has dynamic query running on these names -->
+		<column name="countryName" type="String" />
+		<column name="countryId" type="long" />
+		<column name="productId" type="long" />
+		<column name="supervisorId" type="long" />
+		
+	</entity>
+
+</service-builder>

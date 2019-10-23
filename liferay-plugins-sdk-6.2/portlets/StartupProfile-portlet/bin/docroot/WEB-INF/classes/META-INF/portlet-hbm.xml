@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.startupprofile.model.Address" />
+	<import class="com.sambaash.platform.srv.startupprofile.model.FundingRound" />
+	<import class="com.sambaash.platform.srv.startupprofile.model.Organization" />
+	<import class="com.sambaash.platform.srv.startupprofile.model.Person" />
+	<import class="com.sambaash.platform.srv.startupprofile.model.Questionnaire" />
+	<import class="com.sambaash.platform.srv.startupprofile.model.Relationship" />
+	<class name="com.sambaash.platform.srv.startupprofile.model.impl.AddressImpl" table="SPAddress">
+		<cache usage="read-write" />
+		<id name="addressId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="organizationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="street1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="street2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="city" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="region" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="country" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="postalCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hq" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="active_" />
+	</class>
+	<class name="com.sambaash.platform.srv.startupprofile.model.impl.FundingRoundImpl" table="SPFundingRounds">
+		<cache usage="read-write" />
+		<id name="fundingRoundId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="organizationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="apiPath" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="imageUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="announcedOn" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="moneyRaisedInUsd" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fundingType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="active_" />
+	</class>
+	<class name="com.sambaash.platform.srv.startupprofile.model.impl.OrganizationImpl" table="SPOrganization">
+		<cache usage="read-write" />
+		<id name="organizationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="apiPath" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="categories" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="foundedOn" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="noOfEmployees" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="emailId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="website" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="facebook" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="twitter" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="linkedIn" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="crunchbase" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="mobile" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="totalFunds" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="shortPitch" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lifecycleStage" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="capitalRaised" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="isIncorporated" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="stockSymbol" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="imageUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="videos" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="profileOutline" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="raisingFunds" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="extras" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="uniqueDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="links" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="isBaseOrg" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="completeness" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="active_" />
+		<property name="logoId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="methodologyType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="methodologySubType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="stage" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="feedback" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="videoLinks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="projectsWorkedOn" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="showInBlackbook" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="faxNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="contactName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="contactDesignation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pipelineStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="businessDevManager" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="prevBusinessDevManager" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.sambaash.platform.srv.startupprofile.model.impl.PersonImpl" table="SPPerson">
+		<cache usage="read-write" />
+		<id name="personId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="apiPath" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="imageUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="mobile" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="skype" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="memberUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="extras" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="active_" />
+	</class>
+	<class name="com.sambaash.platform.srv.startupprofile.model.impl.QuestionnaireImpl" table="SPQuestionnaire">
+		<cache usage="read-write" />
+		<id name="questionnaireId" column="spQuestionnaireId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="entryClassPK" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entryClassName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answer1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answer2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answer3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answer4" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answer5" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answer6" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answer7" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answer8" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answer9" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="answer10" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sambaash.platform.srv.startupprofile.model.impl.RelationshipImpl" table="SPRelationships">
+		<cache usage="read-write" />
+		<id name="relationshipId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="organizationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="refId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="refTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="relation" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="active_" />
+	</class>
+</hibernate-mapping>

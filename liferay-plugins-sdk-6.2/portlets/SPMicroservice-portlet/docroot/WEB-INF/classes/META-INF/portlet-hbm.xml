@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.spmicroservice.model.CandidateMicroservice" />
+	<import class="com.sambaash.platform.srv.spmicroservice.model.EnrolmentMicroservice" />
+	<import class="com.sambaash.platform.srv.spmicroservice.model.FormsMicroservice" />
+	<import class="com.sambaash.platform.srv.spmicroservice.model.PricingMicroservice" />
+	<import class="com.sambaash.platform.srv.spmicroservice.model.RulesMicroservice" />
+	<import class="com.sambaash.platform.srv.spmicroservice.model.SPMicroservice" />
+	<import class="com.sambaash.platform.srv.spmicroservice.model.SystemSetupMicroservice" />
+</hibernate-mapping>

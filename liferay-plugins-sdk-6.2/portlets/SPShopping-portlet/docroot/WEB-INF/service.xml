@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.spshopping">
+	<author>pradeep</author>
+	<namespace>SPShopping</namespace>
+
+	<entity name="SPSellingItem" table="SPSellingItem"
+		local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="spSellingItemId" type="long" primary="true"></column>
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+		<column name="title" type="String"></column>
+		<column name="itemCode" type="String"></column>
+		<column name="entityClassPk" type="long"></column>
+		<column name="entityClassNameId" type="long"></column>
+		<column name="entityClassName" type="String"></column>
+		<column name="shortDescription" type="String"></column>
+		<column name="longDescription" type="String"></column>
+		<column name="active" type="boolean"></column>
+		
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<finder return-type="Collection" name="active">
+			<finder-column name="active"></finder-column>
+		</finder>
+        <finder name="EntityClassNameIdAndEntityClassPk" return-type="SPSellingItem">
+            <finder-column name="entityClassNameId"></finder-column>
+            <finder-column name="entityClassPk"></finder-column>
+        </finder>
+	</entity>
+
+	<entity name="SPSellingPackage" table="SPSellingPackage"
+		local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="spSellingPackageId" type="long" primary="true"></column>
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+		
+		<column name="title" type="String"></column>
+		<column name="pkgCode" type="String"></column>
+		<column name="shortDescription" type="String"></column>
+		<column name="longDescription" type="String"></column>
+		<column name="currencyCode" type="String"></column>
+		<column name="startDate" type="Date"></column>
+		<column name="endDate" type="Date"></column>
+		<column name="notify" type="String"></column>
+		<column name="needsPayment" type="boolean"></column>
+
+		<column name="orderPage" type="String"></column>
+		<column name="orderSequence" type="String"></column>
+		<column name="active" type="boolean"></column>
+		
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<finder return-type="Collection" name="active">
+			<finder-column name="active"></finder-column>
+		</finder>
+	</entity>
+	
+	<entity name="SPPackageItems" table="SPPackageItems"
+		local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="spPackageItemsId" type="long" primary="true"></column>
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+		
+		<column name="packageId" type="long"></column>
+		<column name="itemId" type="long"></column>
+		<column name="quantity" type="int"></column>
+		
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<finder return-type="Collection" name="packageId">
+			<finder-column name="packageId"></finder-column>
+		</finder>
+        <finder name="ItemId" return-type="Collection">
+            <finder-column name="itemId"></finder-column>
+        </finder>
+	</entity>
+	
+	<entity name="SPSellingPrice" table="SPSellingPrice"
+		local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="spSellingPriceId" type="long" primary="true"></column>
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+		
+		<column name="priceRefId" type="long"></column>
+		<column name="priceRefTypeId" type="long"></column>
+		<!-- Amount fields as String, but override in Impl class to BigDecimal -->
+		<column name="currencyCode" type="String"></column>
+		<column name="basePrice" type="String"></column>
+		<column name="taxName" type="String"></column>
+		<column name="taxValue" type="String"></column>
+		<column name="totalPrice" type="String"></column>
+		
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<finder return-type="Collection" name="sellingItemId" where="priceRefTypeId = 1">
+			<finder-column name="priceRefId"/>
+		</finder>
+		
+		<finder return-type="SPSellingPrice" name="sellingPackageId" where="priceRefTypeId = 2">
+			<finder-column name="priceRefId"/>
+		</finder>
+		
+	</entity>
+
+	<entity name="SPDiscount" table="SPDiscount" local-service="true"
+		remote-service="false">
+		<!-- PK fields -->
+		<column name="spDiscountId" type="long" primary="true"></column>
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+		
+		<!-- Amount fields as String, but override in Impl class to BigDecimal -->
+		<column name="title" type="String"></column>
+		<column name="percent" type="boolean"></column>
+		<column name="packageId" type="long"></column>
+		<column name="value" type="String"></column>
+		<column name="couponCode" type="String"></column>
+		<column name="description" type="String"></column>
+		<column name="startDate" type="Date"></column>
+		<column name="endDate" type="Date"></column>
+		<column name="minQuantity" type="int"></column>
+		<column name="maxQuantity" type="int"></column>
+		<column name="active" type="boolean"></column>
+		
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<finder return-type="Collection" name="packageId" where=" active = 1 ">
+			<finder-column name="packageId"/>
+		</finder>
+		
+		<finder return-type="Collection" name="active">
+			<finder-column name="active"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="SPCart" table="SPCart" local-service="true"
+		remote-service="false">
+		<!-- PK fields -->
+		<column name="spCartId" type="long" primary="true"></column>
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+
+		<!-- Amount fields as String, but override in Impl class to BigDecimal -->
+		<column name="discount" type="String"></column>
+		<column name="totalPrice" type="String"></column>
+		<column name="userRemarks" type="String"></column>
+		<column name="status" type="int"></column>
+		<column name="transactionDetails" type="String"></column>
+		<column name="orderPage" type="String"></column>
+		
+		<!-- future use -->
+		<column name="rsvpDetailId" type="long"></column>
+		
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+	</entity>
+
+	<entity name="SPCartPackage" table="SPCartPackage"
+		local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="spCartPackageId" type="long"
+			primary="true">
+		</column>
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+		
+		<!-- Amount fields as String, but override in Impl class to BigDecimal -->
+		<column name="cartId" type="long"></column>
+		<column name="packageId" type="long"></column>
+		<column name="selectedCurrency" type="String"></column>
+		<column name="usedDiscountRefId" type="long"></column>
+		<column name="usedDiscountRefPCId" type="long"></column>
+		<column name="discount" type="String"></column>
+		<column name="initialPrice" type="String"></column>
+		<column name="totalPrice" type="String"></column>
+		<column name="remarks" type="String"></column>
+		
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<finder return-type="Collection" name="cartId">
+			<finder-column name="cartId"/>
+		</finder>
+		
+        <finder name="PackageId" return-type="Collection">
+            <finder-column name="packageId"></finder-column>
+        </finder>
+		
+	</entity>
+	
+	<entity name="SPCartPackageItem" table="SPCartPackageItem"
+		local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="spCartPackageItemId" type="long" primary="true"></column>
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+		
+		<!-- Amount fields as String, but override in Impl class to BigDecimal -->
+		<column name="spCartPackageId" type="long"></column>
+		<column name="title" type="String"></column>
+		<column name="itemCode" type="String"></column>
+		<column name="quantity" type="int"></column>
+		<column name="entityClassPk" type="long"></column>
+		<column name="entityClassName" type="String"></column>
+		<column name="totalPrice" type="String"></column>
+		
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+
+        <finder name="SPCartPackageId" return-type="Collection">
+            <finder-column name="spCartPackageId"></finder-column>
+        </finder>
+		
+	</entity>
+	
+	<entity name="SPTax" table="SPTax"
+		local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="spTaxId" type="long"
+			primary="true"/>
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+		
+		<column name="currencyCode" type="String"></column>
+		<column name="taxName" type="String"></column>
+		<column name="taxValue" type="long"></column>
+		
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<finder return-type="SPTax" name="currencyCode">
+			<finder-column name="currencyCode"/>
+		</finder>
+		
+	</entity>
+
+	<entity name="SPShopping" local-service="true" remote-service="true">
+	</entity>
+</service-builder>

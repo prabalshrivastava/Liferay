@@ -1,0 +1,6 @@
+firstName,lastName,passport,nirc,telephone1,telephone2,email,gender,currentPrograme,Salutation,enrolmentStatus,programSemester,dueDate,scheduleCode,feeType,programmeCode,subjectList,priceSchemeCode,priceSubSchemeCode
+rahul,saksena,G608774RT,G643R24R2,68159594,81288820,one1@gmail.com,male,MCA,Mr.,pending,Sem-1,1-1-2020,UOL:2019(3)||PMS-CEFIM01|,sponsor,PMS-CEFIM01,FMM329-01;FMM300-01,PSC001,PSSC101
+rahul,saksena,G608774RT,G643R24R3,68159595,81288821,one3@gmail.com ,male,MCA,Mr.,pending,Sem-2,1-1-2021,UOL:2019(3)||PMS-CEFIM01|,sponsor,PMS-CEFIM01,FMM329-01;FMM300-01,PSC001,PSSC101
+rahul,saksena,G608774RT,G643R24R4,68159596,81288822,one2@gmail.com ,male,MCA,Mr.,pending,Sem-3,1-1-2022,UOL:2019(3)||PMS-CEFIM01|,sponsor,PMS-CEFIM01,FMM329-01;FMM300-01,PSC001,PSSC101
+rahul,saksena,G608774RT,G643R24R5,68159597,81288823,one4@gmail.com ,male,MCA,Mr.,pending,Sem-4,1-1-2023,UOL:2019(3)||PMS-CEFIM01|,sponsor,PMS-CEFIM01,FMM329-01;FMM300-01,PSC001,PSSC101
+rahul,saksena,G608774RT,G643R24R6,68159598,81288824,one5@gmail.com ,male,MCA,Mr.,pending,Sem-5,1-1-2024,UOL:2019(3)||PMS-CEFIM01|,sponsor,PMS-CEFIM01,FMM329-01;FMM300-01,PSC001,PSSC101

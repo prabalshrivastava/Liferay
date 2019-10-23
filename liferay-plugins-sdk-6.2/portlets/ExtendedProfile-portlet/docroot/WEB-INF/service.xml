@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.extendedprofile">
+	<author>harini</author>
+	<namespace>ExtendedProfile</namespace>
+
+	<entity name="SPJobRole" local-service="true" remote-service="false"
+		table="SPJobRole">
+
+		<!-- PK fields -->
+
+		<column name="spJobRoleId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="functionalGroupId" type="long" />
+		<column name="JobLevelId" type="long" />
+		<column name="careerPathId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="userId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="JobRole" return-type="JobRole">
+			<finder-column name="userId" />
+		</finder>
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="User" />
+
+	</entity>
+
+	<entity name="SPCompetency" local-service="true" remote-service="false"
+		table="SPCompetency">
+
+		<column name="classpk" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="categoryId" type="long" />
+		<column name="competencyId" type="long" />
+		<column name="competencyLevelId" type="long" />
+		<column name="belongsToJobRole" type="long" />
+		<column name="publicView" type="boolean" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="userId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="CompetencyListByJobRole" return-type="Collection"
+			db-index="false">
+			<finder-column name="belongsToJobRole" />
+		</finder>
+
+		<finder name="CompetencyList" return-type="Collection"
+			db-index="false" where="belongsToJobRole = 0">
+			<finder-column name="userId" />
+		</finder>
+
+		<finder name="CategoryIdAndCompetencyId" return-type="Competency"
+			unique="true" db-index="false">
+			<finder-column name="userId" />
+			<finder-column name="categoryId" />
+			<finder-column name="competencyId" />
+		</finder>
+
+		<finder name="CategoryId" return-type="Collection" db-index="false">
+			<finder-column name="userId" />
+			<finder-column name="categoryId" />
+		</finder>
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="User" />
+
+	</entity>
+
+	<entity name="SPCertification" local-service="true"
+		remote-service="false" table="SPCertification">
+
+		<column name="classPk" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="certificationId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="modifiedDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="UserIdAndCertificationId" return-type="Certification"
+			unique="true" db-index="false">
+			<finder-column name="userId" />
+			<finder-column name="certificationId" />
+		</finder>
+
+		<finder name="UserId" return-type="Collection" db-index="false">
+			<finder-column name="userId" />
+		</finder>
+
+	</entity>
+
+</service-builder>

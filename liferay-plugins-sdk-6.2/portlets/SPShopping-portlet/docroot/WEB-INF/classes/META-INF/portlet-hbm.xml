@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.spshopping.model.SPCart" />
+	<import class="com.sambaash.platform.srv.spshopping.model.SPCartPackage" />
+	<import class="com.sambaash.platform.srv.spshopping.model.SPCartPackageItem" />
+	<import class="com.sambaash.platform.srv.spshopping.model.SPDiscount" />
+	<import class="com.sambaash.platform.srv.spshopping.model.SPPackageItems" />
+	<import class="com.sambaash.platform.srv.spshopping.model.SPSellingItem" />
+	<import class="com.sambaash.platform.srv.spshopping.model.SPSellingPackage" />
+	<import class="com.sambaash.platform.srv.spshopping.model.SPSellingPrice" />
+	<import class="com.sambaash.platform.srv.spshopping.model.SPShopping" />
+	<import class="com.sambaash.platform.srv.spshopping.model.SPTax" />
+	<class name="com.sambaash.platform.srv.spshopping.model.impl.SPCartImpl" table="SPCart">
+		<cache usage="read-write" />
+		<id name="spCartId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="discount" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="totalPrice" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userRemarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="transactionDetails" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="orderPage" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="rsvpDetailId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spshopping.model.impl.SPCartPackageImpl" table="SPCartPackage">
+		<cache usage="read-write" />
+		<id name="spCartPackageId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="cartId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="packageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="selectedCurrency" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="usedDiscountRefId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="usedDiscountRefPCId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="discount" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="initialPrice" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="totalPrice" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="remarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spshopping.model.impl.SPCartPackageItemImpl" table="SPCartPackageItem">
+		<cache usage="read-write" />
+		<id name="spCartPackageItemId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spCartPackageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="itemCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="quantity" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="entityClassPk" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entityClassName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="totalPrice" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spshopping.model.impl.SPDiscountImpl" table="SPDiscount">
+		<cache usage="read-write" />
+		<id name="spDiscountId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="percent" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="packageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="value" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="couponCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startDate" type="org.hibernate.type.TimestampType" />
+		<property name="endDate" type="org.hibernate.type.TimestampType" />
+		<property name="minQuantity" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="maxQuantity" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="active_" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spshopping.model.impl.SPPackageItemsImpl" table="SPPackageItems">
+		<cache usage="read-write" />
+		<id name="spPackageItemsId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="packageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="itemId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="quantity" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spshopping.model.impl.SPSellingItemImpl" table="SPSellingItem">
+		<cache usage="read-write" />
+		<id name="spSellingItemId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="itemCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="entityClassPk" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entityClassNameId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entityClassName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="shortDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="longDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="active_" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spshopping.model.impl.SPSellingPackageImpl" table="SPSellingPackage">
+		<cache usage="read-write" />
+		<id name="spSellingPackageId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pkgCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="shortDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="longDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="currencyCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startDate" type="org.hibernate.type.TimestampType" />
+		<property name="endDate" type="org.hibernate.type.TimestampType" />
+		<property name="notify" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="needsPayment" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="orderPage" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="orderSequence" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="active_" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spshopping.model.impl.SPSellingPriceImpl" table="SPSellingPrice">
+		<cache usage="read-write" />
+		<id name="spSellingPriceId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="priceRefId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="priceRefTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="currencyCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="basePrice" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="taxName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="taxValue" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="totalPrice" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spshopping.model.impl.SPTaxImpl" table="SPTax">
+		<cache usage="read-write" />
+		<id name="spTaxId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="currencyCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="taxName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="taxValue" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

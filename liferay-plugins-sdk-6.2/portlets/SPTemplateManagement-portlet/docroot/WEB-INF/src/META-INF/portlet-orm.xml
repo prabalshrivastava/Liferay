@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.template.model.impl.SPComponentTemplateModelImpl">
+		<attributes>
+			<id name="spComponentTemplateId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createBy" />
+			<basic name="modifiedBy" />
+			<basic name="spTemplateId" />
+			<basic name="level0ClassNameId" />
+			<basic name="level0FormId" />
+			<basic name="level1ClassNameId" />
+			<basic name="level1FormId" />
+			<basic name="level2ClassNameId" />
+			<basic name="level2FormId" />
+			<basic name="level3ClassNameId" />
+			<basic name="level3FormId" />
+			<basic name="level4ClassNameId" />
+			<basic name="level4FormId" />
+			<basic name="level5ClassNameId" />
+			<basic name="level5FormId" />
+			<basic name="level6ClassNameId" />
+			<basic name="level6FormId" />
+			<basic name="level7ClassNameId" />
+			<basic name="level7FormId" />
+			<basic name="level8ClassNameId" />
+			<basic name="level8FormId" />
+			<basic name="level9ClassNameId" />
+			<basic name="level9FormId" />
+			<basic name="level10ClassNameId" />
+			<basic name="level10FormId" />
+			<basic name="status" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.template.model.impl.SPTemplateModelImpl">
+		<attributes>
+			<id name="spTemplateId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createBy" />
+			<basic name="modifiedBy" />
+			<basic name="classNameId" />
+			<basic name="classPK" />
+			<basic name="templateName" />
+			<basic name="status" />
+			<transient name="className" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.template.model.impl.SPComponentTemplateImpl" name="SPComponentTemplate">
+		<table name="SPComponentTemplate" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.template.model.impl.SPTemplateImpl" name="SPTemplate">
+		<table name="SPTemplate" />
+		<attributes />
+	</entity>
+</entity-mappings>

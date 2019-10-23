@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.spinbox.model.IBMessage">
+		<field name="uuid" type="String" />
+		<field name="messageId" type="long" />
+		<field name="parentMessageId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="subject" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="content" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="from" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="to" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="allowOpen" type="boolean" />
+		<field name="sendDate" type="Date" />
+		<field name="createDate" type="Date" />
+		<field name="createBy" type="String" />
+		<field name="createByUserId" type="String" />
+		<field name="draft" type="boolean" />
+		<field name="deleteStatus" type="boolean" />
+		<field name="draftStatus" type="String" />
+		<field name="sentMeCopy" type="boolean" />
+		<field name="belongToGroupDetailId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.spinbox.model.IBMessageDetail">
+		<field name="ibMsgDetailId" type="long" />
+		<field name="receiverId" type="long" />
+		<field name="messageId" type="long" />
+		<field name="receiverMsgStatus" type="String" />
+		<field name="senderMsgStatus" type="String" />
+		<field name="status" type="String" />
+		<field name="receiveDate" type="Date" />
+		<field name="receiveBy" type="String" />
+		<field name="archived" type="boolean" />
+		<field name="updateDate" type="Date" />
+		<field name="updateBy" type="String" />
+		<field name="category" type="String" />
+		<field name="processId" type="long" />
+		<field name="corpProfileId" type="long" />
+	</model>
+</model-hints>

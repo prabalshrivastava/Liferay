@@ -1,0 +1,1512 @@
+     @import "sp_mixins";
+     @import "sp_media-queries"; //Display & position
+     $display-inlineblock:inline-block;
+     $display-block:block;
+     $display-none:none;
+     $position-relative:relative;
+     $position-absolute:absolute;
+     $position-fixed:fixed;
+     $position-static:static;
+
+     .aui 
+     {
+        &.firefox
+        {
+            .gs-sort-filter .gs-sort-filterwrap .gs-sort-sortingdiv
+            {
+                max-width: 125px;
+            }
+        }
+         &.safari
+        {
+            .gs-sort-filter .gs-sort-filterwrap .gs-sort-sortingdiv
+            {
+                max-width: 125px;
+            }
+        }
+    }
+
+     .portlet-column-content.empty {
+         display: none;
+     } //sp_startups
+     body.noScroll {
+         /* ...or body.dialogShowing */
+         overflow: hidden;
+     }
+
+     body.ScrollActive {
+         /* ...or body.dialogShowing */
+         overflow-y: scroll;
+     }
+
+     .generic-search-container {
+         position: relative;
+         .generic-search-row {
+             position: relative;
+         }
+     } //added by aishwarya
+     button#update2 {
+         position: absolute;
+         right: 0;
+         top: 0;
+         margin-right: 20px;
+         margin-top: 10px;
+     }
+
+
+     .margin-40 {
+         margin: 40px;
+     }
+
+     .gs-margin-bottom10 {
+         margin-bottom: 10px !important;
+     }
+
+     .StatisticsSection {
+         position: $position-relative;
+         @include margin(0 0 20px);
+     }
+
+     .show-more-on {
+         .gsf-section-wrapper {
+             height: 230px !important;
+             overflow: hidden;
+         }
+     }
+
+     .show-more-off {
+         .gsf-section-wrapper {
+             height: auto;
+             overflow: initial;
+         }
+     }
+
+     .section-show-more {
+         text-align: right;
+         .seeall,
+         .hideall {
+             cursor: pointer;
+         }
+     }
+
+     .genericTags {
+         display: block;
+         width: 100%;
+         margin: 0;
+         @include padding(8px 0 8px 40px);
+         ul {
+             margin: 0;
+             padding: 0;
+             @include flexbox();
+             @include margin(0 0 5px 5px);
+             @include flex-wrap(wrap);
+             li {
+                 width: auto;
+                 padding: 5px 20px 5px 10px;
+                 @include margin(2px);
+                 position: relative;
+                 a.closeTag {
+                     width: 10px;
+                     margin: 0;
+                     padding: 0;
+                     position: absolute;
+                     top: 50%;
+                     right: 4px;
+                     margin-top: -9px;
+                     img {
+                         width: 6px;
+                     }
+                 }
+             }
+         }
+     }
+
+     .gsf-countries {
+         .gsf-country-entries {
+             height: 132px;
+             overflow-y: scroll;
+             overflow-x: hidden;
+         }
+         .label-wrapper {
+             margin-bottom: 3px;
+             label {
+                 display: none;
+             }
+             .country-filter {
+                 padding: 5px 10px;
+             }
+         }
+     }
+
+     .gs-listingsection {
+         position: $position-relative;
+         @include margin(0);
+         @include flexbox();
+         &.left {
+             flex-direction: row;
+         }
+         &.top {
+             flex-direction: column;
+             .generic-search-filters {
+                 width: 100%;
+                 .gsf-contentarea {
+                     @include flexbox();
+                     @include flex-wrap(wrap);
+                     @include justify-content(flex-start);
+                     height: 365px;
+                     overflow-y: scroll;
+                     .gsf-section {
+                         display: inline-block;
+                         width: 20%;
+                         height: auto;
+                         position: relative;
+                         box-sizing: border-box;
+                     }
+                 }
+             }
+             .generic-search-results-wrapper {
+                 width: 100%;
+                 margin: 0;
+             }
+         }
+     }
+
+     .startup-header {
+         .StatisticTitle {
+             @include margin(0);
+             @include padding(10px 0);
+             width: 30%;
+             display: $display-inlineblock;
+         }
+     }
+
+     a.gs-button {
+         @include padding(10px 25px);
+         @include margin(0);
+     }
+
+     .gsf-rating-item {
+         zoom: 0.7 !important;
+         li {
+             width: 32px;
+             height: 32px;
+             display: inline-block;
+             vertical-align: middle;
+             -ms-transform: scale(0.7, 0.7);
+             -webkit-transform: scale(0.7, 0.7);
+             transform: scale(0.7, 0.7);
+         }
+     }
+
+     .btnFilters {
+         button {
+             @include padding(8px 10px);
+             @include margin(0);
+             cursor: pointer;
+         }
+     }
+
+     .callOut-btn-small {
+         button {
+             @include padding(5px 10px);
+             @include margin(0);
+         }
+     }
+
+     .callOut-btn-medium {
+         button {
+             @include padding(10px 25px);
+             @include margin(0);
+         }
+     }
+
+     .callOut-btn-large {
+         button {
+             @include padding(15px 30px);
+             @include margin(0);
+         }
+     }
+
+     .Pull-Left {
+         float: left;
+     }
+
+     .Pull-Right {
+         float: right;
+     }
+
+     .Abs-right-top {
+         position: absolute;
+         top: 25px;
+         right: 25px;
+     }
+
+     .Abs-left-bot {
+         position: absolute;
+         left: 20px;
+         bottom: 20px;
+     }
+
+     .Right-Logo {
+         width: 100px;
+         img {
+             width: 100%;
+             height: 45px;
+         }
+     }
+
+     .Four-Box-Containar {
+         @include box-sizing(border-box);
+         position: $position-relative;
+         display: $display-block;
+         width: 100%;
+         .Box-row {
+             position: $position-relative;
+             @include flexbox();
+             width: 100%;
+             @include margin(0 0 10px 0);
+             .Box {
+                 width: 23.2%;
+                 position: $position-relative;
+                 display: $display-inlineblock;
+                 margin-right: 30px;
+                 @include box-sizing(border-box);
+                 .StatisticsDiv {
+                     width: 100%;
+                     display: $display-block;
+
+                     @include box-sizing(border-box);
+                     @include padding(30px 20px);
+                     .CounterNo {
+                         @include margin(0);
+                         @include padding(0 0 5px);
+                     }
+                     .CounterTitle {
+                         @include margin(0);
+                         @include padding(0);
+                     }
+                 }
+                 .CounterLink {
+                     width: 100%;
+                     display: $display-inlineblock;
+
+                     @include box-sizing(border-box);
+                     .CounterLink-btn {
+
+                         width: 80px;
+                         display: $display-block;
+                         @include margin(0 auto);
+                         @include padding(40px 0);
+                     }
+                 }
+                 &:last-child {
+                     margin-right: 0;
+                 }
+             }
+         }
+     }
+
+     .toggler-header-expanded {
+         margin-bottom: 5px;
+         padding-bottom: 5px;
+         cursor: pointer;
+         &:after {
+             content: '-';
+             float: right;
+         }
+     }
+
+     .toggler-header-collapsed {
+         margin-bottom: 5px;
+         padding-bottom: 5px;
+         cursor: pointer;
+         &:after {
+             content: '+';
+             float: right;
+         }
+     }
+
+     .gsf-right-logo {
+         width: 100px;
+         height: 45px;
+         img {
+             width: 100%;
+         }
+     }
+
+     .generic-search-filters {
+         width: 23.2%;
+         position: $position-relative;
+         display: $display-inlineblock;
+         margin-right: 30px;
+         @include box-sizing(border-box);
+         vertical-align: top;
+         height: 100%;
+         .gsf-clear {
+             float: right;
+         }
+         .gsf-title {
+             @include margin(0);
+             @include padding(10px 0 30px);
+             width: 100%;
+             display: none;
+         }
+         .gsf-contentarea {
+             @include padding(20px 30px);
+             position: $position-relative;
+             width: 100%;
+             @include box-sizing(border-box);
+             .gsf-header-title {
+                 width: 100%;
+                 display: $display-inlineblock;
+                 @include margin(0);
+                 @include padding(0 0 20px);
+             }
+             .gsf-section {
+                 position: $position-relative;
+                 @include box-sizing(border-box);
+                 @include margin(0 0 20px);
+                 .gsf-section-title {
+                     width: 100%;
+                     display: $display-inlineblock;
+                     @include margin(0);
+                     @include padding(0 0 10px);
+                 }
+                 .FilterLink-text {
+                     position: $position-relative;
+                     @include box-sizing(border-box);
+                     text-align: right;
+                 }
+                 .gsf-section-item {
+                     position: $position-relative;
+                     @include padding(0 0 10px 0);
+                     &.all-categories {
+                         @include padding(0);
+                         width: 100%;
+                         display: inline-block;
+                         margin: 0;
+                         a {
+                             padding: 10px 0 10px 0px;
+                             display: block;
+                             width: 100%;
+                             margin-bottom: 0px;
+                         }
+                     }
+                     label {
+                         vertical-align: top;
+                         display: inline-block;
+                         margin-bottom: 0;
+                         padding-left: 20px;
+                     }
+                     input {
+                         position: relative;
+                         margin-top: 3px;
+                         margin-left: -20px;
+                     }
+                     .control-group {
+                         margin-bottom: 0px;
+                     }
+                     a {
+                         padding: 5px 0 5px 20px;
+                         display: block;
+                         width: 100%;
+                         margin-bottom: 9px;
+                     }
+                 }
+             }
+         }
+     } //Filter Content section
+     .generic-search-results-wrapper {
+         width: 75%;
+         position: $position-relative;
+         display: $display-inlineblock;
+         height: auto;
+         @include box-sizing(border-box);
+         @include margin(0);
+     }
+
+     .gs-sort-filter {
+         position: $position-relative;
+         width: 100%;
+         @include box-sizing(border-box);
+         display: $display-inlineblock;
+         height: auto;
+         padding: 10px;
+         margin-bottom: 10px;
+         .gs-sort-filterwrap {
+             position: $position-relative;
+             width: 100%;
+             @include box-sizing(border-box);
+             display: inline-block;
+             @include margin(0);
+             @include flexbox();
+             @include justify-content(flex-end);
+             .gs-sort-searchdiv {
+                 position: $position-relative;
+                 display: $display-inlineblock;
+                 width: 100%;
+                 input[type=text] {
+                     @include padding(10px 30px 10px 40px);
+                     width: 100%;
+                     margin-bottom: 0px;
+                 }
+                 .gs-text-search-icon {
+                     position: absolute;
+                     left: 0;
+                     bottom: 0;
+                     margin-top: 0px;
+                     margin-bottom: 9px;
+                     margin-left: 15px;
+                     cursor: pointer;
+                     width: 15px;
+                     img {
+                         width: 15px;
+                     }
+                 }
+             }
+             .gs-mobile-filtericon {
+                 display: none;
+             }
+             .gs-sort-datediv {
+                 position: $position-relative;
+                 display: $display-inlineblock;
+                 width: 100%;
+                 height: 40px;
+                 max-width: 157px;
+                 margin-right: 15px;
+                 @include justify-content(flex-start);
+                 input[type=text] {
+                     @include padding(10px 10px 10px 45px);
+                     width: 100%;
+                     height: 100%;
+                 }
+                 .gs-text-date-icon {
+                     position: absolute;
+                     left: 0;
+                     top: 0;
+                     margin-left: 0;
+                     cursor: pointer;
+                     width: 36px;
+                     height: 38px;
+                     @include flexbox();
+                     @include align-items(center);
+                     @include justify-content(center);
+                     img {
+                         width: 11px;
+                         height: 13px;
+                     }
+                 }
+             }
+             .gs-sort-sortingdiv {
+                 position: $position-relative;
+                 @include flexbox();
+                 width: 100%;
+                 height: 40px;
+                 @include justify-content(flex-end);
+                 max-width: 100px;
+                 label {
+                     @include padding(10px 15px);
+                     width: 35%;
+                     text-align: right;
+                     display: inline;
+                     display: none;
+                 }
+                 select {
+                     @include padding(10px 15px);
+                     width: 100%;
+                 }
+             }
+             .St-Link {
+                 position: $position-relative;
+                 display: $display-inlineblock;
+                 width: 15%;
+                 margin-left: 20px;
+                 button {
+                     @include padding(10px 15px);
+                     width: 100%;
+                 }
+             }
+         }
+     }
+
+     .generic-search-results {
+         display: $display-inlineblock;
+         min-width: 100%;
+         .gs-content-wrapper {
+             @include padding(0);
+             @include margin(0 0 10px 0);
+             display: $display-inlineblock;
+             @include box-sizing(border-box);
+             width: 100%;
+             .gs-image-wrap {
+                 display: $display-inlineblock;
+                 @include padding(0);
+                 vertical-align: top;
+                 text-align: center;
+                 &.gs-img-half {
+                     width: 25%;
+                     @include box-sizing(border-box);
+                     @include padding(20px);
+                     display: $display-inlineblock;
+                     img {
+                         width: 162px;
+                         height: 162px;
+                     }
+                 }
+                 &.gs-img-full {
+                     width: 30%;
+                     height: 230px;
+                     @include box-sizing(border-box);
+                     display: $display-inlineblock;
+                     img {
+                         width: 100%;
+                         height: 230px;
+                     }
+                 }
+                 .pi_button {
+                     .pis_tag {
+                         margin-top: 10px;
+                         padding: 5px;
+                         width: 100%;
+                         max-width: 75px;
+                         margin: 0 auto;
+                     }
+                 }
+             }
+             .gs-inner-content {
+                 display: $display-inlineblock;
+                 @include margin(0);
+                 @include padding(0);
+                 vertical-align: top;
+                 height: 100%;
+                 min-height: 230px;
+                 &.gs-full-content {
+                     width: 69%;
+                     @include padding(20px);
+                     @include box-sizing(border-box);
+                     position: $position-relative;
+                 }
+                 &.gs-half-content {
+                     width: 74%;
+                     @include padding(20px 20px 20px 30px);
+                     @include box-sizing(border-box);
+                     position: $position-relative;
+                 }
+                 .gs-inner-title {
+                     width: 80%;
+                 }
+                 .gs-inner-ratings {
+                     @include padding(5px 0);
+                 }
+                 .gs-inner-postarea {
+                     @include padding(5px 0);
+                 }
+                 .gs-inner-description {
+                     @include padding(5px 0 20px);
+                     display: $display-inlineblock;
+                     p {
+                         @include padding(0);
+                         @include margin(0);
+                     }
+                 }
+                 .gs-button-wrap {
+                     position: absolute;
+                     bottom: 20px;
+                     right: 20px;
+                     @include padding(0);
+                     a.gs-button {
+                         @include padding(10px 25px);
+                         @include margin(0);
+                     }
+                 }
+             }
+             .SF-Callout {
+                 display: inline-block;
+                 vertical-align: top;
+                 position: relative;
+                 width: 100%;
+                 @include padding(10px 20px 10px 40px);
+             }
+         }
+     } //GENERIC NAV LINKS
+     .gs-navlinks {
+         width: 100%;
+         @include flexbox;
+         @include align-items(center);
+         @include justify-content(flex-end);
+         @include flex-direction(row);
+         .gs-navlinks-content {
+             padding: 15px;
+             a {
+                 text-decoration: none;
+                 img {
+                     width: 20px;
+                     margin-top: -2px;
+                     margin-right: 5px;
+                 }
+             }
+         }
+     } //ADD TO FAV
+     .adfDropdown {
+         display: inline-block;
+         position: relative;
+         width: 100%;
+         max-width: 225px;
+         margin-left: 15px;
+     }
+
+     .adfDropdown-button {
+
+         box-sizing: border-box;
+         padding: 10px 15px;
+
+         position: relative;
+     }
+
+
+
+     .adfDropdown .triangle {
+         font-size: 50%;
+         position: absolute;
+         right: 5px;
+         top: 0;
+         /* bottom: 0; */
+         margin-top: 11px;
+         /* margin-bottom: auto; */
+         height: 5px;
+     }
+
+     .adfDropdown ul.active {
+         visibility: visible;
+         transition: all .3s ease;
+         transform: scaleY(1);
+     }
+
+     .adfDropdown ul {
+         visibility: hidden;
+         overflow: hidden;
+
+         transform-origin: top;
+         padding: 0;
+
+         transform: scaleY(0);
+
+         position: absolute;
+         left: 0;
+         z-index: 1;
+         top: 40px;
+         min-width: 100%;
+     }
+
+     .adfDropdown ul li {
+
+         padding: 8px 10px 8px 15px !important;
+         box-sizing: border-box;
+
+         position: relative;
+
+         span {
+
+             margin-bottom: 10px;
+             width: 100%;
+             display: block;
+         }
+     }
+
+
+
+
+
+     .createNewBut {
+         padding: 15px !important;
+         margin: 0;
+
+         a {
+
+             padding: 6px 10px !important;
+         }
+     }
+
+     .adfSearchList {
+         padding: 15px !important;
+         margin: 0;
+     }
+
+     .adfListSec {
+         @include flexbox();
+         @include align-items(center);
+         width: 100%;
+         margin-bottom: 5px;
+         padding-left: 10px;
+         .adfavname {
+             width: 50%;
+         }
+         button.adfUpdateBtn {
+             width: 25%;
+
+             padding: 2px 5px;
+         }
+         .adFavicon {
+             width: 25%;
+             @include flexbox();
+             @include align-items(center);
+             padding-left: 10px;
+             position: absolute;
+             right: 0;
+             a {
+                 margin: 0;
+                 padding: 0;
+
+                 width: 50%;
+
+                 img {
+                     width: 10px;
+                     height: 10px;
+                 }
+             }
+         }
+     } //MODAL FOR ADD TO FAV
+     .adfPopupOverlay {
+         position: fixed;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+
+         visibility: hidden;
+         opacity: 0;
+     }
+
+     .adfPopupOverlay:target {
+         visibility: visible;
+         opacity: 1;
+         z-index: 99999;
+     }
+
+     .adfPopupSec {
+         margin: 70px auto;
+         padding: 20px;
+
+         width: 30%;
+         position: relative;
+     }
+
+     .adfPopupSec h2 {
+         margin-top: 0;
+
+         padding: 0 0 15px !important;
+     }
+
+
+
+     .adfPopupSec .adfContent {
+         padding: 20px 0 0;
+     }
+
+     .adfPopupSec .adfContent {
+         button {
+
+             margin-right: 10px;
+             padding: 10px 20px;
+         }
+         a.adfClose {
+
+             margin-right: 10px;
+             padding: 13px 20px;
+         }
+         input[type="text"] {
+
+             padding: 12px 20px;
+             margin-bottom: 20px;
+             margin-top: 20px;
+         }
+     } //SWITCH BUTTON
+     .adFavSwitch {
+         position: relative;
+         display: inline-block;
+         width: 60px;
+         height: 34px;
+     }
+
+     .adFavSwitch input {
+         display: none;
+     }
+
+     .adFavslider {
+         position: absolute;
+         cursor: pointer;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+     }
+
+     .adFavslider:before {
+         position: absolute;
+         content: "";
+         height: 26px;
+         width: 26px;
+         left: 4px;
+         bottom: 4px;
+     }
+
+
+
+
+
+     input:checked+.adFavslider:before {
+         -webkit-transform: translateX(26px);
+         -ms-transform: translateX(26px);
+         transform: translateX(26px);
+     }
+     /* Rounded adFavsliders */
+
+     .swithAd2fav {
+         @include flexbox();
+         width: 100%;
+         @include flex-direction(row);
+         @include align-items(center);
+         padding-bottom: 20px;
+         p {
+
+             margin-bottom: 0;
+             padding: 0 10px;
+         }
+     }
+
+
+
+     .adPvtgGbl {
+         position: relative;
+         width: 64px;
+         height: 34px;
+     }
+
+     @media screen and (max-width: 700px) {
+         .adfPopupSec {
+             width: 70%;
+         }
+     } //MOBILE VIEW 
+     @media (max-width: 320px) {
+         .gs-sort-filter .gs-sort-filterwrap .gs-sort-sortingdiv {
+             width: 40% !important;
+             max-width: 40% !important;
+         }
+     }
+
+     @include screen (320px, 767px) {
+
+         
+
+         .adfDropdown .triangle {
+             margin-top: 10px;
+         }
+         .gs-sort-filter .gs-sort-filterwrap .gs-sort-datediv {
+             width: 50%;
+             max-width: 49%;
+             margin-right: 2px;
+             margin-bottom: 10px;
+             &:nth-child(2) {
+                 margin-right: 0px;
+             }
+         }
+         .show-more-on {
+             .gsf-section-wrapper {
+                 height: 160px !important;
+                 overflow: hidden;
+             }
+         }
+         .StatisticsSection {
+             display: none;
+         } //button
+         .btnFilters {
+             button {
+                 @include padding(2px 6px);
+                 @include margin(0);
+             }
+         } ////BOX-CONTAINER END
+         .outer {
+             display: block !important;
+             position: absolute;
+             margin: 15px 20px 0 0;
+             right: 0;
+         } //LEFT FILTER SECTION
+         .gs-listingsection {
+             &.top {
+                 .generic-search-filters {
+                     .gsf-contentarea {
+                         height: auto;
+                         overflow-y: hidden;
+                         .gsf-section {
+                             width: 100%;
+                         }
+                     }
+                 }
+                 .generic-search-results-wrapper {
+                     width: 100%;
+                 }
+             }
+         }
+         .generic-search-filters {
+             width: 100%;
+             display: none;
+             position: fixed;
+             z-index: 99;
+             left: 0;
+             top: 0;
+             margin-top: 62px;
+             @include box-sizing(border-box);
+             padding: 10px 20px;
+             height: 100vh;
+             overflow: hidden;
+             -webkit-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) .4s;
+             -ms-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) .4s;
+             -moz-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) .4s;
+             -o-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) .4s;
+             transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) .4s;
+             .gsf-title {
+                 @include padding(10px 0 10px);
+                 display: none;
+             }
+             .gsf-contentarea {
+                 @include padding(20px 30px);
+                 position: $position-relative;
+                 width: 100%;
+                 height: 70vh;
+                 overflow: scroll;
+                 @include box-sizing(border-box);
+             }
+         } //LEFT FILTER SECTION END
+         //SEARCH
+         .aui .gs-export.progress-button {
+             position: relative;
+             display: inline-block;
+             text-align: center;
+             width: 20%;
+             min-width: 100px;
+             margin: 3px 5px 10px 0;
+         }
+         .gs-sort-filter {
+             position: $position-relative;
+             width: 100%;
+             height: auto;
+             padding: 12px;
+             margin-bottom: 10px;
+             .gs-sort-filterwrap {
+                 position: $position-relative;
+                 width: 100%;
+                 @include flexbox();
+                 @include justify-content(space-between);
+                 @include flex-direction(row);
+                 @include flex-wrap(wrap);
+                 .gs-sort-searchdiv {
+                     width: 100%;
+                     margin-right: 0;
+                 }
+                 .gs-mobile-filtericon {
+                     display: inline-block;
+                     width: 38px;
+                     height: 38px;
+                     @include flexbox();
+                     @include justify-content(center);
+                     @include align-items(center);
+
+                     position: relative;
+                     margin: 0;
+                     margin-top: 3px;
+                     a {
+                         width: 38px;
+                         height: 100%;
+                         position: absolute;
+                         @include flexbox();
+                         top: 0;
+                         right: 0;
+                         @include align-items(center);
+                         @include justify-content(center);
+                         img {
+                             width: 15px;
+                             height: 15px;
+                         }
+                     }
+                 }
+                 .gs-sort-sortingdiv {
+                     display: block;
+                     width: 49%;
+                     max-width: 49%;
+                     margin-bottom: 10px;
+                     margin-right: 5px;
+                 }
+                 .St-Link {
+                     display: none;
+                 }
+             }
+         } //SEARCH END
+         //RIGHT CONTENT SECTION
+         .generic-search-results-wrapper {
+             width: 100%;
+             margin: 0;
+         }
+         .generic-search-results {
+             display: block;
+             .gs-content-wrapper {
+                 display: inline-block;
+                 .gs-image-wrap {
+                     display: $display-inlineblock;
+                     @include padding(0);
+                     &.gs-img-half {
+                         width: 100%;
+                         @include padding(10px);
+                         img {
+                             width: 130px;
+                             height: 100%;
+                         }
+                     }
+                     &.gs-img-full {
+                         width: 100%;
+                         height: 230px;
+                         img {
+                             width: 100%;
+                             height: 230px;
+                         }
+                     }
+                 }
+                 .gs-inner-content {
+                     @include margin(0);
+                     @include padding(0);
+                     height: auto;
+                     min-height: auto;
+                     &.gs-full-content {
+                         width: 100%;
+                         @include padding(10px);
+                     }
+                     &.gs-half-content {
+                         width: 100%;
+                         @include padding(20px);
+                     }
+                     .gs-inner-title {
+                         width: 100%;
+                     }
+                     .gs-inner-ratings {
+                         @include padding(0);
+                     }
+                     .gs-inner-postarea {
+                         @include padding(2px 0);
+                     }
+                     .gs-inner-description {
+                         @include padding(5px 0 20px);
+                         display: $display-inlineblock;
+                         position: $position-relative;
+                         width: 100%;
+                         p {
+                             @include padding(0);
+                             @include margin(0);
+                             width: 100%;
+                             display: inline;
+                             word-wrap: break-word;
+                         }
+                     }
+                     .gs-button-wrap {
+                         position: relative;
+                         bottom: 0;
+                         @include padding(10px 5px);
+                         left: 0;
+                         a.gs-button {
+                             @include padding(10px 25px);
+                             @include margin(0);
+                             color:#fff;
+                         }
+                     }
+                 }
+                 .SF-Callout {
+                     width: 100%;
+                     @include padding(10px 20px 10px 40px);
+                 }
+                 .callOut-btn-medium {
+                     button {
+                         padding: 5px 10px;
+                     }
+                 }
+                 .btnFilters.Abs-right-top {
+                     float: none;
+                     position: relative;
+                     @include padding(3px 0);
+                     top: 0;
+                     right: 0;
+                 }
+             }
+         } //RIGHT CONTENT SECTION END
+         .gs-navlinks {
+             width: 100%;
+             @include flex-direction(column);
+         } //DROPDOWN
+         .adfDropdown {
+             width: 100%;
+             max-width: 100%;
+             margin-left: 0px;
+         }
+     }
+
+
+
+     @include screen (768px, 1024px) {
+         .show-more-on {
+             .gsf-section-wrapper {
+                 height: 170px !important;
+                 overflow: hidden;
+             }
+         }
+         .generic-search-filters {
+             width: 32%;
+         }
+         .generic-search-results-wrapper {
+             width: 77%;
+         }
+         .generic-search-results {
+             .gs-content-wrapper {
+                 &.gs-image-wrap.gs-img-half {
+                     width: 35%;
+                 }
+             }
+         }
+         .generic-search-results {
+             .gs-content-wrapper {
+                 .gs-inner-content {
+                     &.gs-full-content {
+                         width: 69%;
+                     }
+                     .gs-inner-title {
+                         width: 80%;
+                     }
+                 }
+             }
+         } //SEARCH
+         .gs-sort-filter {
+             position: $position-relative;
+             width: 100%;
+             @include flexbox();
+             .gs-sort-filterwrap {
+                 position: $position-relative;
+                 width: 100%;
+                 @include flex-wrap(wrap);
+                 .gs-sort-searchdiv {
+                     width: 100%;
+                 }
+                 .gs-sort-datediv {
+                     max-width: 32%;
+                     margin-right: 15px;
+                     margin-bottom: 10px;
+                 }
+                 .gs-sort-sortingdiv {
+                     width: 100%;
+                     max-width: 32%;
+                     @include flexbox();
+                     @include justify-content(flex-end);
+                 }
+                 .St-Link {
+                     width: 100%;
+                     margin-left: 0px;
+                 }
+             }
+             .adfDropdown {
+                 width: 70%;
+             }
+             .aui .progress-button {
+                 width: 15%;
+                 min-width: 100px;
+             }
+         } //SEARCH END
+         //added by karthik AUG11
+     }
+
+     @include screen (767px, 1024px, portrait) {
+         .show-more-on {
+             .gsf-section-wrapper {
+                 height: 170px !important;
+                 overflow: hidden;
+             }
+         }
+         .outer {
+             display: block !important;
+             position: absolute;
+             margin: 15px 20px 0 0;
+             right: 0;
+         }
+         .gs-listingsection {
+             &.top {
+                 .generic-search-filters {
+                     .gsf-contentarea {
+                         height: auto;
+                         overflow-y: hidden;
+                         .gsf-section {
+                             width: 100%;
+                         }
+                     }
+                 }
+                 .generic-search-results-wrapper {
+                     width: 100%;
+                 }
+             }
+         }
+         .generic-search-filters {
+             width: 100%;
+             display: none;
+             position: fixed;
+             z-index: 99999;
+             left: 0;
+             top: 0;
+             margin-top: 62px;
+             @include box-sizing(border-box);
+             padding: 10px 20px;
+             height: 100vh;
+             overflow: hidden;
+             -webkit-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) .4s;
+             -ms-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) .4s;
+             -moz-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) .4s;
+             -o-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) .4s;
+             transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) .4s;
+             .gsf-title {
+                 @include padding(10px 0 10px);
+             }
+             .gsf-contentarea {
+                 @include padding(20px 30px);
+                 position: $position-relative;
+                 width: 100%;
+                 height: 70vh;
+                 overflow: scroll;
+                 @include box-sizing(border-box);
+             }
+         }
+         .generic-search-results-wrapper {
+             width: 100%;
+         } //SEARCH
+         .gs-sort-filter {
+             position: $position-relative;
+             width: 100%;
+             @include flexbox();
+             @include flex-wrap(wrap);
+             .gs-sort-filterwrap {
+                 position: $position-relative;
+                 width: 100%;
+                 .gs-sort-searchdiv {
+                     width: 100%;
+                 }
+                 .gs-mobile-filtericon {
+                     display: inline-block;
+                     width: 10%;
+                     position: relative;
+                     a {
+                         padding: 7px 15px 10px 15px;
+                         width: auto;
+                         position: absolute;
+                         right: 0;
+                         img {
+                             width: 15px;
+                             height: 15px;
+                         }
+                     }
+                 }
+
+                 .St-Link {
+                     display: none;
+                 }
+             }
+         } //SEARCH END
+     }
+
+     @include screen (360px, 767px, landscape) {
+         .gs-sort-filter .gs-sort-filterwrap .gs-sort-sortingdiv {
+             width: 70%;
+             max-width: 70%;
+         }
+         .gs-sort-filter .gs-sort-filterwrap .gs-sort-datediv:nth-child(2) {
+             margin-right: 0px;
+         }
+     }
+
+     @include screen (767px, 1024px, portrait) {
+
+         .gs-sort-filter .gs-sort-filterwrap .gs-sort-datediv:nth-child(2) {
+             margin-right: 0px;
+         }
+         .gs-sort-filter .gs-sort-filterwrap .gs-sort-sortingdiv {
+             margin-left: 10px;
+         }
+     }
+
+     @include screen (767px, 1024px, landscape) {
+
+         .gs-sort-filter .gs-sort-filterwrap .gs-sort-datediv:nth-child(2) {
+             margin-right: 0px;
+         }
+     }
+
+
+     @include screen (768px, 1024px, landscape) {
+         .show-more-on {
+             .gsf-section-wrapper {
+                 height: 170px !important;
+                 overflow: hidden;
+             }
+         }
+         .generic-search-filters {
+             width: 32%;
+         }
+         .generic-search-results-wrapper {
+             width: 77%;
+         }
+         .generic-search-results {
+             .gs-content-wrapper {
+                 &.gs-image-wrap.gs-img-half {
+                     width: 35%;
+                 }
+             }
+         }
+         .generic-search-results {
+             .gs-content-wrapper {
+                 .gs-inner-content {
+                     &.gs-full-content {
+                         width: 69%;
+                     }
+                     .gs-inner-title {
+                         width: 80%;
+                     }
+                 }
+             }
+         } //SEARCH
+         .gs-sort-filter {
+             position: $position-relative;
+             width: 100%;
+             @include flexbox();
+             @include flex-direction(column);
+             .gs-sort-filterwrap {
+                 position: $position-relative;
+                 width: 100%;
+                 @include flex-wrap(wrap);
+                 .gs-sort-searchdiv {
+                     width: 100%;
+                 }
+                 .gs-sort-datediv {
+                     max-width: 32%;
+                     margin-right: 15px;
+                     margin-bottom: 10px;
+                 }
+                 .gs-sort-sortingdiv {
+                     width: 100%;
+                     max-width: 32%;
+                     @include flexbox();
+                     @include justify-content(flex-end);
+                 }
+                 .St-Link {
+                     width: 100%;
+                     margin-left: 0px;
+                 }
+             }
+             .adfDropdown {
+                 width: 70%;
+             }
+             .aui .progress-button {
+                 width: 15%;
+                 min-width: 100px;
+             }
+         } //SEARCH END
+         //added by karthik AUG11
+     } //CLOSE ICON
+     .outer {
+         width: 20px;
+         height: 20px;
+         cursor: pointer;
+         display: none;
+         margin-bottom: 10px;
+         right: 20px;
+         z-index: 10;
+         top: 0;
+     }
+
+     .inner {
+         width: inherit;
+         text-align: center;
+         img {
+             width: 15px;
+             height: 15px;
+         }
+     }
+     /*  PROGRESS BUTTON */
+     /* Button container */
+
+     .aui {
+         .progress-button {
+             position: relative;
+             display: inline-block;
+             text-align: center;
+             width: 10%;
+             min-width: 100px;
+             margin: 0 0 0 20px;
+         }
+         /* Button style */
+         .progress-button button {
+             display: block;
+             margin: 0 auto;
+             padding: 0;
+             width: 100px;
+             height: 40px;
+             -webkit-tap-highlight-color: transparent;
+             -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+             transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+         }
+         /* Text (transition for when returning to initial state) */
+         .progress-button button span {
+             -webkit-transition: opacity 0.3s 0.1s;
+             transition: opacity 0.3s 0.1s;
+         }
+         /* Common style of SVGs */
+         .progress-button svg {
+             position: absolute;
+             top: 0;
+             left: 50%;
+             -webkit-transform: translateX(-50%);
+             transform: translateX(-50%);
+             pointer-events: none;
+         }
+         /* exportloading, success and error effects */
+         .exportloading.progress-button button {
+             width: 40px;
+         }
+         .exportloading.progress-button span {
+             -webkit-transition: opacity 0.15s;
+             transition: opacity 0.15s;
+         }
+         .success.progress-button button,
+         .error.progress-button button {
+             -webkit-transition: background-color 0.3s, width 0.3s, border-width 0.3s;
+             transition: background-color 0.3s, width 0.3s, border-width 0.3s;
+         }
+         /* Optional elastic effect for the width of the button */
+         .elastic.progress-button button {
+             -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1), border-width 0.3s, border-color 0.3s;
+             -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1.6), border-width 0.3s, border-color 0.3s;
+             transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1.6), border-width 0.3s, border-color 0.3s;
+         }
+         .exportloading.elastic.progress-button button {
+             -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, 0, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
+             -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
+             transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
+         }
+     }
+
+     .lfr-add-panel.lfr-admin-panel .toggler-header-collapsed:after {
+         display: none;
+     }
+
+     .lfr-add-panel.lfr-admin-panel .toggler-header-expanded:before {
+         display: none;
+     }
+
+     @media screen and (max-width: 1024px) and (min-width: 320px) and (orientation: landscape) {
+
+         .aui.mobile.ios .generic-search-results .gs-content-wrapper .gs-inner-content {
+             min-height: 300px;
+         }
+         .aui.mobile .generic-search-results .gs-content-wrapper .gs-inner-content {
+             min-height: 200px;
+         }
+     }

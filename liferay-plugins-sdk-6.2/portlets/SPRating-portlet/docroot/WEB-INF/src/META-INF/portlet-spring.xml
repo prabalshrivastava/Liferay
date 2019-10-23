@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.sprating.service.AttrRateLocalService" class="com.sambaash.platform.srv.sprating.service.impl.AttrRateLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.sprating.service.persistence.AttrRatePersistence" class="com.sambaash.platform.srv.sprating.service.persistence.AttrRatePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.sprating.service.RatingAttrLocalService" class="com.sambaash.platform.srv.sprating.service.impl.RatingAttrLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.sprating.service.persistence.RatingAttrPersistence" class="com.sambaash.platform.srv.sprating.service.persistence.RatingAttrPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.sprating.service.RatingComponentLocalService" class="com.sambaash.platform.srv.sprating.service.impl.RatingComponentLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.sprating.service.persistence.RatingComponentPersistence" class="com.sambaash.platform.srv.sprating.service.persistence.RatingComponentPersistenceImpl" parent="basePersistence" />
+</beans>

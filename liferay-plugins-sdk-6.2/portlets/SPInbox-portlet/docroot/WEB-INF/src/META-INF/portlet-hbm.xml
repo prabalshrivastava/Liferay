@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.spinbox.model.IBMessage" />
+	<import class="com.sambaash.platform.srv.spinbox.model.IBMessageDetail" />
+	<class name="com.sambaash.platform.srv.spinbox.model.impl.IBMessageImpl" table="SPInboxMessage">
+		<cache usage="read-write" />
+		<id name="messageId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="parentMessageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="subject" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="from" type="com.liferay.portal.dao.orm.hibernate.StringType" column="from_" />
+		<property name="to" type="com.liferay.portal.dao.orm.hibernate.StringType" column="to_" />
+		<property name="allowOpen" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="sendDate" type="org.hibernate.type.TimestampType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="createBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createByUserId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="draft" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="deleteStatus" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="draftStatus" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sentMeCopy" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="belongToGroupDetailId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spinbox.model.impl.IBMessageDetailImpl" table="SPInboxMessageDetail">
+		<cache usage="read-write" />
+		<id name="ibMsgDetailId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="receiverId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="messageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="receiverMsgStatus" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="senderMsgStatus" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="receiveDate" type="org.hibernate.type.TimestampType" />
+		<property name="receiveBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="archived" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="updateDate" type="org.hibernate.type.TimestampType" />
+		<property name="updateBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="category" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="processId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="corpProfileId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

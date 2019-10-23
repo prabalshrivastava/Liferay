@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 6.0.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_6_0_0.dtd">
+<routes>
+    <route>
+        <pattern>/packages</pattern>
+        <implicit-parameter name="actionp">packages</implicit-parameter>
+    </route>
+    <route>
+        <pattern>/items</pattern>
+        <implicit-parameter name="actionp">items</implicit-parameter>
+    </route>
+    <route>
+        <pattern>/discounts</pattern>
+        <implicit-parameter name="actionp">discounts</implicit-parameter>
+    </route>
+    <route>
+        <pattern>/settings</pattern>
+        <implicit-parameter name="actionp">settings</implicit-parameter>
+    </route>
+    <route>
+        <pattern>/create/discount</pattern>
+        <implicit-parameter name="actionp">creatediscount</implicit-parameter>
+    </route>
+    <route>
+        <pattern>/create/item</pattern>
+        <implicit-parameter name="actionp">createitem</implicit-parameter>
+    </route>
+    <route>
+        <pattern>/create/package</pattern>
+        <implicit-parameter name="actionp">createpackage</implicit-parameter>
+    </route>
+    <route>
+        <pattern>/selectItems</pattern>
+        <implicit-parameter name="actionp">selectItems</implicit-parameter>
+    </route>
+    <route>
+        <pattern>/view/package/{id}</pattern>
+        <implicit-parameter name="actionp">viewpackage</implicit-parameter>
+    </route>
+    <route>
+        <pattern>/view/package/{id}</pattern>
+        <implicit-parameter name="actionp">viewpackage</implicit-parameter>
+    </route>
+    <route>
+        <pattern>/view/package/{id}</pattern>
+        <implicit-parameter name="actionp">viewpackage</implicit-parameter>
+    </route>
+</routes>

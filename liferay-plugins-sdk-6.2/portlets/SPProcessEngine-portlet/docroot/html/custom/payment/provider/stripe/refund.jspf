@@ -1,0 +1,20 @@
+	  <aui:input name="paymentAction" type="hidden" value="refund" >
+	  </aui:input>
+
+	  <aui:input name="<%=PaymentProvider.PAY_CHARGE_ID %>" type="hidden" value="<%=payChargeRefId%>" >
+	  </aui:input>
+	  <aui:input name="<%=PaymentProvider.PAY_REFUND_AMOUNT_FIELD %>" type="hidden" value="<%=payAmount%>">
+	  </aui:input>
+
+      <div class="msg">
+          You are refunding the payment with reference code <%=payChargeRefId%>
+      </div>  
+
+      <div>
+		  <span class="msg">Reason </span>
+          <textarea rows="10" cols="100" name="<%=PaymentProvider.PAY_REFUND_REASON_FIELD %>" placeholder="Optional Refund Reason"></textarea>
+      </div>
+
+	  <aui:button-row>
+		<aui:button name="refundButton" type="submit" value="Refund" />
+	  </aui:button-row>

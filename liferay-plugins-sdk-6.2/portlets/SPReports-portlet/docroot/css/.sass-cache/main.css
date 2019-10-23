@@ -1,0 +1,10 @@
+#reportFilters select {
+  width: 250px; }
+
+.spreportshighchart-portlet {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 40px; }
+  .spreportshighchart-portlet .rsvpbox-title {
+    text-align: center; }
+

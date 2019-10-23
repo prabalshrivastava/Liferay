@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.spjob.model.SPJob">
+		<field name="uuid" type="String" />
+		<field name="spJobId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="updatedBy" type="long" />
+		<field name="yearsOfExperience" type="String" />
+		<field name="corporateName" type="String" />
+		<field name="corporateId" type="long" />
+		<field name="jobTitle" type="String" />
+		<field name="jobType" type="String" />
+		<field name="jobLocation" type="String" />
+		<field name="jobDescription" type="String" />
+		<field name="status" type="String" />
+		<field name="autoMatch" type="boolean" />
+		<field name="currency" type="String" />
+		<field name="salary" type="double" />
+		<field name="rate" type="String" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="closingDate" type="Date" />
+		<field name="extra1" type="String" />
+		<field name="extra2" type="String" />
+		<field name="extra3" type="String" />
+		<field name="extra4" type="String" />
+		<field name="extra5" type="String" />
+		<field name="notefto" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.spjob.model.SPJobApplicants">
+		<field name="spJobApplicantsId" type="long" />
+		<field name="jobId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="updatedBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="contactNumber" type="String" />
+		<field name="yearsOfExperience" type="String" />
+		<field name="resume" type="String" />
+		<field name="coverLetter" type="String" />
+		<field name="briefInfos" type="String" />
+		<field name="extra1" type="String" />
+		<field name="extra2" type="String" />
+		<field name="extra3" type="String" />
+		<field name="extra4" type="String" />
+		<field name="extra5" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.spjob.model.SPJobApplicantsPortfolio">
+		<field name="jobApplyId" type="long" />
+		<field name="porfolioId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="updatedBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="extra1" type="String" />
+		<field name="extra2" type="String" />
+	</model>
+</model-hints>

@@ -1,0 +1,935 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.MembershipPackageModelImpl">
+		<attributes>
+			<id name="mpId" />
+			<basic name="name" />
+			<basic name="description" />
+			<basic name="status" />
+			<basic name="type">
+				<column name="TYPE_" />
+			</basic>
+			<basic name="version" />
+			<basic name="cost" />
+			<basic name="costCurrency" />
+			<basic name="costPeriod" />
+			<basic name="costPeriodType" />
+			<basic name="promotionCode" />
+			<basic name="promotionFrom">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="promotionTo">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="discount" />
+			<basic name="dateAdded">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateModified">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="modifiedBy" />
+			<basic name="extra1" />
+			<basic name="extra2" />
+			<basic name="extra3" />
+			<basic name="extra4" />
+			<basic name="extra5">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="extra6">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="extra7" />
+			<basic name="extra8" />
+			<basic name="extra9" />
+			<basic name="extra10" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.MembershipPackageAddonServicesModelImpl">
+		<attributes>
+			<id name="mpAddonId" />
+			<basic name="scId" />
+			<basic name="scName" />
+			<basic name="paramType" />
+			<basic name="paramFrom" />
+			<basic name="paramUpto" />
+			<basic name="duration" />
+			<basic name="durationType" />
+			<basic name="serviceCharges" />
+			<basic name="serviceChargesCurrency" />
+			<basic name="serviceChargesPeriod" />
+			<basic name="serviceChargesPeriodType" />
+			<basic name="status" />
+			<basic name="description" />
+			<basic name="dateAdded">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateModified">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="modifiedBy" />
+			<basic name="extra1" />
+			<basic name="extra2" />
+			<basic name="extra3" />
+			<basic name="extra4" />
+			<basic name="extra5">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="extra6">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.MembershipPackageGrpServicesModelImpl">
+		<attributes>
+			<id name="mpgsscId" />
+			<basic name="mpId" />
+			<basic name="scorder" />
+			<basic name="scgId" />
+			<basic name="scId" />
+			<basic name="paramType" />
+			<basic name="paramFrom" />
+			<basic name="paramUpto" />
+			<basic name="duration" />
+			<basic name="durationType" />
+			<basic name="status" />
+			<basic name="description" />
+			<basic name="dateAdded">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateModified">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="modifiedBy" />
+			<basic name="extra1" />
+			<basic name="extra2" />
+			<basic name="extra3" />
+			<basic name="extra4" />
+			<basic name="extra5">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="extra6">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="serviceCharges" />
+			<basic name="costCurrency" />
+			<basic name="costPeriod" />
+			<basic name="costPeriodType" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.MembershipPackageIndServicesModelImpl">
+		<attributes>
+			<id name="mpgsscId" />
+			<basic name="mpId" />
+			<basic name="scorder" />
+			<basic name="scgId" />
+			<basic name="scId" />
+			<basic name="paramType" />
+			<basic name="paramFrom" />
+			<basic name="paramUpto" />
+			<basic name="duration" />
+			<basic name="durationType" />
+			<basic name="status" />
+			<basic name="description" />
+			<basic name="dateAdded">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateModified">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="modifiedBy" />
+			<basic name="extra1" />
+			<basic name="extra2" />
+			<basic name="extra3" />
+			<basic name="extra4" />
+			<basic name="extra5">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="extra6">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="serviceCharges" />
+			<basic name="costCurrency" />
+			<basic name="costPeriod" />
+			<basic name="costPeriodType" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.MembershipPackagePromotionCodeModelImpl">
+		<attributes>
+			<id name="promotionCode_id" />
+			<basic name="membershipPackage_id" />
+			<basic name="promotionCode" />
+			<basic name="promotionFrom">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="promotionTo">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="discount" />
+			<basic name="extra1" />
+			<basic name="extra2" />
+			<basic name="extra3" />
+			<basic name="extra4" />
+			<basic name="extra5" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.MembershipPackageServicesRolesModelImpl">
+		<attributes>
+			<id name="mpgsrlId" />
+			<basic name="mpId" />
+			<basic name="serviceId" />
+			<basic name="classNameId" />
+			<basic name="roleId" />
+			<basic name="extra1" />
+			<basic name="extra2" />
+			<basic name="extra3" />
+			<basic name="extra4" />
+			<basic name="extra5">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="extra6">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="className" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.MembershipSubscribedServicesModelImpl">
+		<attributes>
+			<id name="mssId" />
+			<basic name="userid" />
+			<basic name="companyId" />
+			<basic name="scId" />
+			<basic name="scName" />
+			<basic name="count" />
+			<basic name="status" />
+			<basic name="description" />
+			<basic name="dateAdded">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateModified">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="modifiedBy" />
+			<basic name="effectiveFromDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="effectiveToDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="paramFrom" />
+			<basic name="paramUpto" />
+			<basic name="duration" />
+			<basic name="durationType" />
+			<basic name="serviceCharges" />
+			<basic name="serviceChargesCurrency" />
+			<basic name="serviceChargesPeriod" />
+			<basic name="serviceChargesPeriodType" />
+			<basic name="extra1" />
+			<basic name="extra2" />
+			<basic name="extra3" />
+			<basic name="extra4" />
+			<basic name="extra5">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="extra6">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.MembershipSubscriptionModelImpl">
+		<attributes>
+			<id name="msId" />
+			<basic name="name" />
+			<basic name="description" />
+			<basic name="mporder_1" />
+			<basic name="mpId_1" />
+			<basic name="mpName_1" />
+			<basic name="mpQty_1" />
+			<basic name="mpPrice_1" />
+			<basic name="mpPriceCurrency_1" />
+			<basic name="mporder_2" />
+			<basic name="mpId_2" />
+			<basic name="mpName_2" />
+			<basic name="mpQty_2" />
+			<basic name="mpPrice_2" />
+			<basic name="mpPriceCurrency_2" />
+			<basic name="mporder_3" />
+			<basic name="mpId_3" />
+			<basic name="mpName_3" />
+			<basic name="mpQty_3" />
+			<basic name="mpPrice_3" />
+			<basic name="mpPriceCurrency_3" />
+			<basic name="mporder_4" />
+			<basic name="mpId_4" />
+			<basic name="mpName_4" />
+			<basic name="mpQty_4" />
+			<basic name="mpPrice_4" />
+			<basic name="mpPriceCurrency_4" />
+			<basic name="mpSubtotal" />
+			<basic name="mpSubtotalCurrency" />
+			<basic name="addOnSubtotal" />
+			<basic name="addOnSubtotalCurrency" />
+			<basic name="tax" />
+			<basic name="comments" />
+			<basic name="promotionCode" />
+			<basic name="promotionFrom">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="promotionTo">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="discount" />
+			<basic name="nettotal" />
+			<basic name="nettotalCurrency" />
+			<basic name="ppTxnId" />
+			<basic name="ppPaymentStatus" />
+			<basic name="ppPaymentGross" />
+			<basic name="ppReceiverEmail" />
+			<basic name="ppPayerEmail" />
+			<basic name="sendOrderEmail" />
+			<basic name="sendShippingEmail" />
+			<basic name="effectiveFromDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="effectiveToDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="altShipping" />
+			<basic name="shipping" />
+			<basic name="requiresShipping" />
+			<basic name="insure" />
+			<basic name="insurance" />
+			<basic name="billingFirstName" />
+			<basic name="billingLastName" />
+			<basic name="billingEmailAddress" />
+			<basic name="billingCompany" />
+			<basic name="billingStreet" />
+			<basic name="billingCity" />
+			<basic name="billingState" />
+			<basic name="billingZip" />
+			<basic name="billingCountry" />
+			<basic name="billingPhone" />
+			<basic name="shipToBilling" />
+			<basic name="shippingFirstName" />
+			<basic name="shippingLastName" />
+			<basic name="shippingEmailAddress" />
+			<basic name="shippingCompany" />
+			<basic name="shippingStreet" />
+			<basic name="shippingCity" />
+			<basic name="shippingState" />
+			<basic name="shippingZip" />
+			<basic name="shippingCountry" />
+			<basic name="shippingPhone" />
+			<basic name="ccName" />
+			<basic name="ccType" />
+			<basic name="ccNumber" />
+			<basic name="ccExpMonth" />
+			<basic name="ccExpYear" />
+			<basic name="ccVerNumber" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.MembershipSubscriptionAddonServicesModelImpl">
+		<attributes>
+			<id name="msAddonId" />
+			<basic name="msId" />
+			<basic name="scId" />
+			<basic name="scName" />
+			<basic name="paramType" />
+			<basic name="paramFrom" />
+			<basic name="paramUpto" />
+			<basic name="duration" />
+			<basic name="durationType" />
+			<basic name="serviceCharges" />
+			<basic name="serviceChargesCurrency" />
+			<basic name="serviceChargesPeriod" />
+			<basic name="serviceChargesPeriodType" />
+			<basic name="status" />
+			<basic name="description" />
+			<basic name="effectiveFromDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="effectiveToDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateAdded">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateModified">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="modifiedBy" />
+			<basic name="extra1" />
+			<basic name="extra2" />
+			<basic name="extra3" />
+			<basic name="extra4" />
+			<basic name="extra5">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="extra6">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.ServiceComponentGroupModelImpl">
+		<attributes>
+			<id name="scgId" />
+			<basic name="name" />
+			<basic name="description" />
+			<basic name="phase" />
+			<basic name="status" />
+			<basic name="version" />
+			<basic name="deploymentCluster" />
+			<basic name="community" />
+			<basic name="dateAdded">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateModified">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="author" />
+			<basic name="extra1" />
+			<basic name="extra2" />
+			<basic name="extra3" />
+			<basic name="extra4" />
+			<basic name="extra5">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="extra6">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.ServiceComponentsModelImpl">
+		<attributes>
+			<id name="scId" />
+			<basic name="scgId" />
+			<basic name="name" />
+			<basic name="description" />
+			<basic name="technologyComponent" />
+			<basic name="phase" />
+			<basic name="status" />
+			<basic name="version" />
+			<basic name="serviceType" />
+			<basic name="ServiceExposureType" />
+			<basic name="userType" />
+			<basic name="platformType" />
+			<basic name="islaCarteService" />
+			<basic name="isExternal" />
+			<basic name="tag" />
+			<basic name="webserviceURL" />
+			<basic name="deploymentCluster" />
+			<basic name="deploymentLocation" />
+			<basic name="channelID" />
+			<basic name="testPlan" />
+			<basic name="performanceProfile" />
+			<basic name="usageStatistics" />
+			<basic name="dateAdded">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateModified">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="author" />
+			<basic name="extra1" />
+			<basic name="extra2" />
+			<basic name="extra3" />
+			<basic name="extra4" />
+			<basic name="extra5">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="extra6">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="serviceCharges" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.SPApiAuditLogsModelImpl">
+		<attributes>
+			<id name="spApiAuditLogsId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="apiName" />
+			<basic name="parameters" />
+			<basic name="result" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.SPAuditModelImpl">
+		<attributes>
+			<id name="SPAuditId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="doneByUserId" />
+			<basic name="entityClassNameId" />
+			<basic name="entityId" />
+			<basic name="action" />
+			<basic name="field1Str" />
+			<basic name="field1Long" />
+			<basic name="field2Str" />
+			<basic name="field2Long" />
+			<basic name="data1" />
+			<basic name="data2" />
+			<transient name="doneByUserUuid" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.SPIPGeoLocationModelImpl">
+		<attributes>
+			<id name="spIPGeoLocationId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="ipPrefix" />
+			<basic name="country" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.SPLdapMappingModelImpl">
+		<attributes>
+			<id name="spLdapMappingId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="countryId" />
+			<basic name="departmentId" />
+			<basic name="countryDepartmentId" />
+			<basic name="ldapCountry" />
+			<basic name="ldapDepartment" />
+			<basic name="ldapCompany" />
+			<basic name="defaultRoleId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.SPLdapProfileModelImpl">
+		<attributes>
+			<id name="spLdapProfileId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="userId" />
+			<basic name="countryId" />
+			<basic name="departmentId" />
+			<basic name="givenName" />
+			<basic name="sn" />
+			<basic name="displayName" />
+			<basic name="company" />
+			<basic name="division" />
+			<basic name="title" />
+			<basic name="mail" />
+			<basic name="samAccountName" />
+			<basic name="employeeId" />
+			<basic name="manager" />
+			<basic name="telephoneNumber" />
+			<basic name="mobile" />
+			<basic name="facsimileTelephoneNumber" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.SPLikesModelImpl">
+		<attributes>
+			<id name="spLikesId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="layoutSetId" />
+			<basic name="action" />
+			<basic name="actorUserId" />
+			<basic name="classId" />
+			<basic name="className" />
+			<basic name="classPK" />
+			<transient name="actorUserUuid" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.SPListTypeModelImpl">
+		<attributes>
+			<id name="spListTypeId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="itemKey" />
+			<basic name="itemValue" />
+			<basic name="displayName" />
+			<basic name="displayOrder" />
+			<basic name="categoryId" />
+			<basic name="modeldata" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.SPParameterModelImpl">
+		<attributes>
+			<id name="spParameterId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="category" />
+			<basic name="description" />
+			<basic name="name" />
+			<basic name="value" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.SPSiteModelImpl">
+		<attributes>
+			<id name="spSiteId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="virtualHostId" />
+			<basic name="layoutSetId" />
+			<basic name="authAccessId" />
+			<basic name="loginType" />
+			<basic name="password">
+				<column name="PASSWORD_" />
+			</basic>
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.SPSiteSetupModelImpl">
+		<attributes>
+			<id name="spSiteSetupId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="productId" />
+			<basic name="productName" />
+			<basic name="subProductId" />
+			<basic name="subProductName" />
+			<basic name="virtualHostId" />
+			<basic name="backOfficeVirtualHostId" />
+			<basic name="companyId" />
+			<basic name="createdBy" />
+			<basic name="modifiedBy" />
+			<basic name="createdDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.SPUserTypeModelImpl">
+		<attributes>
+			<id name="spUserTypeId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="spSiteId" />
+			<basic name="userId" />
+			<basic name="userTypeId" />
+			<basic name="userStatusId" />
+			<basic name="declarationCompleted" />
+			<basic name="declarationDate" />
+			<basic name="declarationStorageId" />
+			<basic name="pdpaCompleted" />
+			<basic name="pdpaCompletionDate" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="createdBy" />
+			<basic name="modifiedBy" />
+			<basic name="createdDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spservices.model.impl.SPUserTypeConfigModelImpl">
+		<attributes>
+			<id name="spUserTypeConfigId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="userType" />
+			<basic name="userTypeId" />
+			<basic name="virtualHostId" />
+			<basic name="declarationId" />
+			<basic name="declarationYearly" />
+			<basic name="declarationFixedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="pdpaId" />
+			<basic name="accountCreationTemplateName" />
+			<basic name="welcomeTemplateName" />
+			<basic name="passwordChangeTemplateName" />
+			<basic name="passwordResetTemplateName" />
+			<basic name="emailVerificationTemplateName" />
+			<basic name="defauleRoleIds" />
+			<basic name="validations" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="createdBy" />
+			<basic name="modifiedBy" />
+			<basic name="createdDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.MembershipPackageImpl" name="MembershipPackage">
+		<table name="SPMembershipPackage" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.MembershipPackageAddonServicesImpl" name="MembershipPackageAddonServices">
+		<table name="SPMembershipPackageAddonServices" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.MembershipPackageGrpServicesImpl" name="MembershipPackageGrpServices">
+		<table name="SPMembershipPackageGrpServices" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.MembershipPackageIndServicesImpl" name="MembershipPackageIndServices">
+		<table name="SPMembershipPackageIndServices" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.MembershipPackagePromotionCodeImpl" name="MembershipPackagePromotionCode">
+		<table name="SPMembershipPackagePromotionCode" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.MembershipPackageServicesRolesImpl" name="MembershipPackageServicesRoles">
+		<table name="SPMembershipPackageServicesRoles" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.MembershipSubscribedServicesImpl" name="MembershipSubscribedServices">
+		<table name="SPMembershipSubscribedServices" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.MembershipSubscriptionImpl" name="MembershipSubscription">
+		<table name="SPMembershipSubscription" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.MembershipSubscriptionAddonServicesImpl" name="MembershipSubscriptionAddonServices">
+		<table name="SPMembershipSubscriptionAddonServices" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.ServiceComponentGroupImpl" name="ServiceComponentGroup">
+		<table name="SPServiceComponentGroup" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.ServiceComponentsImpl" name="ServiceComponents">
+		<table name="SPServiceComponents" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.SPApiAuditLogsImpl" name="SPApiAuditLogs">
+		<table name="SPApiAuditLogs" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.SPAuditImpl" name="SPAudit">
+		<table name="SPAudit" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.SPIPGeoLocationImpl" name="SPIPGeoLocation">
+		<table name="SPIPGeoLocation" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.SPLdapMappingImpl" name="SPLdapMapping">
+		<table name="SPLdapMapping" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.SPLdapProfileImpl" name="SPLdapProfile">
+		<table name="SPLdapProfile" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.SPLikesImpl" name="SPLikes">
+		<table name="SPLikes" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.SPListTypeImpl" name="SPListType">
+		<table name="SPListType" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.SPParameterImpl" name="SPParameter">
+		<table name="SPParameter" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.SPSiteImpl" name="SPSite">
+		<table name="SPSite" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.SPSiteSetupImpl" name="SPSiteSetup">
+		<table name="SPSiteSetup" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.SPUserTypeImpl" name="SPUserType">
+		<table name="SPUserType" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spservices.model.impl.SPUserTypeConfigImpl" name="SPUserTypeConfig">
+		<table name="SPUserConfig" />
+		<attributes />
+	</entity>
+</entity-mappings>

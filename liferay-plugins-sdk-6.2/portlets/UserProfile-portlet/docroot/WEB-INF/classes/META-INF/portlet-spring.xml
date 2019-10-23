@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.ExamBodyUserLocalService" class="com.sambaash.platform.srv.spsocialprofile.service.impl.ExamBodyUserLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.persistence.ExamBodyUserPersistence" class="com.sambaash.platform.srv.spsocialprofile.service.persistence.ExamBodyUserPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.SocialProfileLocalService" class="com.sambaash.platform.srv.spsocialprofile.service.impl.SocialProfileLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.SocialProfileService" class="com.sambaash.platform.srv.spsocialprofile.service.impl.SocialProfileServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfilePersistence" class="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfilePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfileFinder" class="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfileFinderImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.SocialProfileDetailLocalService" class="com.sambaash.platform.srv.spsocialprofile.service.impl.SocialProfileDetailLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfileDetailPersistence" class="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfileDetailPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.SocialProfileFriendsLocalService" class="com.sambaash.platform.srv.spsocialprofile.service.impl.SocialProfileFriendsLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfileFriendsPersistence" class="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfileFriendsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.SocialProfileLikeLocalService" class="com.sambaash.platform.srv.spsocialprofile.service.impl.SocialProfileLikeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfileLikePersistence" class="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfileLikePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.SocialProfilePullAuditLocalService" class="com.sambaash.platform.srv.spsocialprofile.service.impl.SocialProfilePullAuditLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfilePullAuditPersistence" class="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfilePullAuditPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.SocialProfileViewAuditLocalService" class="com.sambaash.platform.srv.spsocialprofile.service.impl.SocialProfileViewAuditLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfileViewAuditPersistence" class="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfileViewAuditPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.UserAvailabilityCalendarLocalService" class="com.sambaash.platform.srv.spsocialprofile.service.impl.UserAvailabilityCalendarLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spsocialprofile.service.persistence.UserAvailabilityCalendarPersistence" class="com.sambaash.platform.srv.spsocialprofile.service.persistence.UserAvailabilityCalendarPersistenceImpl" parent="basePersistence" />
+</beans>

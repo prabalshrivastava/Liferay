@@ -1,0 +1,72 @@
+
+.seatPlan .ui-selecting {
+	background: #FECA40;
+}
+
+.seatPlan .ui-selected {
+	background: #F39814;
+	color: white;
+}
+
+.actualSeat {
+	margin-top: 6px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: #eeeeee;
+}
+
+.seatPlan td {
+	width: 65px;
+	height: 65px;
+}
+
+label.deskNo {
+	font-size: 10px;
+}
+
+span[assignMarker="red"] {
+	background: red;
+}
+
+span[assignMarker="green"] {
+	background: #8bdb7c;
+}
+
+span[assignMarker="blue"] {
+	background: blue;
+}
+
+span[assignMarker="yellow"] {
+	background: yellow;
+}
+
+span[assignMarker="gray"] {
+	background: #eee;
+}
+
+.aui table td:first-child {
+	white-space: inherit;
+}
+
+.seatingSetup {
+	overflow-y: auto;
+}
+
+.aui table tr {
+	border-bottom: none;
+}
+
+.seatSelectByInput {
+	width: 45% !important;
+}
+
+.aui .newPortlets .formio-form{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+label.deskNo {
+	height: 15px;
+}
+

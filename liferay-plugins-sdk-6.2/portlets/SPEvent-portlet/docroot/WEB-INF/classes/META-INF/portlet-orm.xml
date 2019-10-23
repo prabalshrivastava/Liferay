@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.rsvp.model.impl.RsvpModelImpl">
+		<attributes>
+			<id name="rsvpId">
+				<column name="SPRSVPID" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="title" />
+			<basic name="description" />
+			<basic name="eventId" />
+			<basic name="spAssetTypeId" />
+			<basic name="status" />
+			<basic name="rsvpUrl" />
+			<basic name="processing" />
+			<basic name="price" />
+			<basic name="currency">
+				<column name="CURRENCY_" />
+			</basic>
+			<basic name="tax" />
+			<basic name="accountId" />
+			<basic name="paymentFlag" />
+			<basic name="registerFlag" />
+			<basic name="ticketFlag" />
+			<basic name="dynamicSectionName" />
+			<basic name="ccEmail" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.rsvp.model.impl.RsvpCoParticipantDetailModelImpl">
+		<attributes>
+			<id name="rsvpCoParticipantDetailId">
+				<column name="SPRSVPCOPARTICIPANTDETAILID" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="rsvpDetailId">
+				<column name="SPRSVPDETAILID" />
+			</basic>
+			<basic name="rsvpPaymentId">
+				<column name="SPRSVPPAYMENTID" />
+			</basic>
+			<basic name="userId" />
+			<basic name="firstName" />
+			<basic name="lastName" />
+			<basic name="nric" />
+			<basic name="identificationType" />
+			<basic name="emailAddress" />
+			<basic name="rsvpStatus" />
+			<basic name="attendance" />
+			<basic name="attendanceBy" />
+			<basic name="attendanceDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ticketNumber" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.rsvp.model.impl.RsvpDetailModelImpl">
+		<attributes>
+			<id name="rsvpDetailId">
+				<column name="SPRSVPDETAILID" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="rsvpId">
+				<column name="SPRSVPID" />
+			</basic>
+			<basic name="userId" />
+			<basic name="firstName" />
+			<basic name="lastName" />
+			<basic name="identifiactionType" />
+			<basic name="nric" />
+			<basic name="emailAddress" />
+			<basic name="rsvpStatus" />
+			<basic name="source" />
+			<basic name="attendance" />
+			<basic name="attendanceBy" />
+			<basic name="attendanceDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="rsvpStatusDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="rsvpStatusBy" />
+			<basic name="numberOfPeople" />
+			<basic name="streetAddress1" />
+			<basic name="streetAddress2" />
+			<basic name="postalCode" />
+			<basic name="city" />
+			<basic name="country" />
+			<basic name="state">
+				<column name="STATE_" />
+			</basic>
+			<basic name="gender" />
+			<basic name="phoneNumber1" />
+			<basic name="phoneNumber2" />
+			<basic name="hearAboutUs" />
+			<basic name="attendedWebinar" />
+			<basic name="ageGroup" />
+			<basic name="termsOfUse" />
+			<basic name="ageRestriction" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.rsvp.model.impl.RsvpDiscountModelImpl">
+		<attributes>
+			<id name="rsvpDiscountId">
+				<column name="SPRSVPDISCOUNTID" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="rsvpId">
+				<column name="SPRSVPID" />
+			</basic>
+			<basic name="rsvpTicketId">
+				<column name="SPRSVPTICKETID" />
+			</basic>
+			<basic name="fromDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="toDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="noOfTickets" />
+			<basic name="discount" />
+			<basic name="modifiedBy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.rsvp.model.impl.RsvpPaymentModelImpl">
+		<attributes>
+			<id name="rsvpPaymentId">
+				<column name="SPRSVPPAYMENTID" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="rsvpDetailId">
+				<column name="SPRSVPDETAILID" />
+			</basic>
+			<basic name="rsvpId">
+				<column name="SPRSVPID" />
+			</basic>
+			<basic name="rsvpTicketId">
+				<column name="SPRSVPTICKETID" />
+			</basic>
+			<basic name="rsvpDiscountId">
+				<column name="SPRSVPDISCOUNTID" />
+			</basic>
+			<basic name="rsvpPromoCodeId">
+				<column name="SPRSVPPROMOCODEID" />
+			</basic>
+			<basic name="price" />
+			<basic name="numberOfPeople" />
+			<basic name="discount" />
+			<basic name="netTotal" />
+			<basic name="ticketNumber" />
+			<basic name="payerEmailAddress" />
+			<basic name="receiverEmailAddress" />
+			<basic name="transactionId" />
+			<basic name="transactionStatus" />
+			<basic name="transactionAmount" />
+			<basic name="transactionDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="emailStatus" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.rsvp.model.impl.RsvpPromoCodeModelImpl">
+		<attributes>
+			<id name="rsvpPromoCodeId">
+				<column name="SPRSVPPROMOCODEID" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="rsvpId">
+				<column name="SPRSVPID" />
+			</basic>
+			<basic name="rsvpTicketId">
+				<column name="SPRSVPTICKETID" />
+			</basic>
+			<basic name="promoCode" />
+			<basic name="fromDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="toDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="noOfTickets" />
+			<basic name="discount" />
+			<basic name="modifiedBy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.rsvp.model.impl.RsvpTicketModelImpl">
+		<attributes>
+			<id name="rsvpTicketId">
+				<column name="SPRSVPTICKETID" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="rsvpId">
+				<column name="SPRSVPID" />
+			</basic>
+			<basic name="price" />
+			<basic name="quantity" />
+			<basic name="soldQuantity" />
+			<basic name="ticketSequence" />
+			<basic name="lastSequenceNumber" />
+			<basic name="sequencePrefix" />
+			<basic name="sequenceSuffix" />
+			<basic name="ticketTemplateUrl" />
+			<basic name="modifiedBy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.rsvp.model.impl.RsvpImpl" name="Rsvp">
+		<table name="SPRsvp" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.rsvp.model.impl.RsvpCoParticipantDetailImpl" name="RsvpCoParticipantDetail">
+		<table name="SPRsvpCoParticipantDetail" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.rsvp.model.impl.RsvpDetailImpl" name="RsvpDetail">
+		<table name="SPRsvpDetail" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.rsvp.model.impl.RsvpDiscountImpl" name="RsvpDiscount">
+		<table name="SPRsvpDiscount" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.rsvp.model.impl.RsvpPaymentImpl" name="RsvpPayment">
+		<table name="SPRsvpPayment" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.rsvp.model.impl.RsvpPromoCodeImpl" name="RsvpPromoCode">
+		<table name="SPRsvpPromoCode" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.rsvp.model.impl.RsvpTicketImpl" name="RsvpTicket">
+		<table name="SPRsvpTicket" />
+		<attributes />
+	</entity>
+</entity-mappings>

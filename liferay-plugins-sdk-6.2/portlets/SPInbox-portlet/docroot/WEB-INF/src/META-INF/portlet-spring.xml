@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.spinbox.service.IBMessageLocalService" class="com.sambaash.platform.srv.spinbox.service.impl.IBMessageLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spinbox.service.IBMessageService" class="com.sambaash.platform.srv.spinbox.service.impl.IBMessageServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spinbox.service.persistence.IBMessagePersistence" class="com.sambaash.platform.srv.spinbox.service.persistence.IBMessagePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spinbox.service.IBMessageDetailLocalService" class="com.sambaash.platform.srv.spinbox.service.impl.IBMessageDetailLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spinbox.service.IBMessageDetailService" class="com.sambaash.platform.srv.spinbox.service.impl.IBMessageDetailServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spinbox.service.persistence.IBMessageDetailPersistence" class="com.sambaash.platform.srv.spinbox.service.persistence.IBMessageDetailPersistenceImpl" parent="basePersistence" />
+</beans>

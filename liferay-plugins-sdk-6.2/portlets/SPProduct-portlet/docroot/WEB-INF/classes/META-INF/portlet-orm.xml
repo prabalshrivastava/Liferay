@@ -1,0 +1,1067 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.ActivityModelImpl">
+		<attributes>
+			<id name="spActivityId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spModuleId" />
+			<basic name="spScheduleId" />
+			<basic name="description" />
+			<basic name="activityTiming" />
+			<basic name="activityPerformer" />
+			<basic name="activityDuration" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.AssessmentModelImpl">
+		<attributes>
+			<id name="spAssessmentId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spModuleId" />
+			<basic name="assessmentDesc" />
+			<basic name="assessmentType" />
+			<basic name="assessmentMethod" />
+			<basic name="assessmentMode" />
+			<basic name="locationType" />
+			<basic name="eligibility" />
+			<basic name="gradingType" />
+			<basic name="maximumMarks" />
+			<basic name="passingMarks" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.CertificateModelImpl">
+		<attributes>
+			<id name="spCertificatetId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="countryId" />
+			<basic name="certificateCode" />
+			<basic name="certificateType" />
+			<basic name="title" />
+			<basic name="description" />
+			<basic name="level" />
+			<basic name="attachmentFolderId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.CompetencyUnitModelImpl">
+		<attributes>
+			<id name="spCompetencyUnitId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="countryId" />
+			<basic name="spFrameworkId" />
+			<basic name="competencyUnitCode" />
+			<basic name="competencyUnitDesc" />
+			<basic name="jobFamily" />
+			<basic name="competencyLevel" />
+			<basic name="creditValue" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.CourseModelImpl">
+		<attributes>
+			<id name="spCourseId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="countryId" />
+			<basic name="courseCode" />
+			<basic name="courseName" />
+			<basic name="displayCourseName" />
+			<basic name="courseDesc" />
+			<basic name="courseDurationFullTime" />
+			<basic name="learningDurationFullTime" />
+			<basic name="courseDurationPartTime" />
+			<basic name="learningDurationPartTime" />
+			<basic name="complexityLevel" />
+			<basic name="courseType" />
+			<basic name="frameworkApprovalStatus" />
+			<basic name="graduationCriteriaDesc" />
+			<basic name="fundingDescPre" />
+			<basic name="fundingDescPost" />
+			<basic name="feeDetailsDesc" />
+			<basic name="testLink" />
+			<basic name="courseOutcomeTitle" />
+			<basic name="courseOutcomeDesc" />
+			<basic name="personaDesc" />
+			<basic name="certificateTitle" />
+			<basic name="awardingBodyId" />
+			<basic name="courseLevel" />
+			<basic name="miscFeeDesc" />
+			<basic name="courseDeveloperId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.CourseCareerModelImpl">
+		<attributes>
+			<id name="spCourseCareerId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spCourseId" />
+			<basic name="intro" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.CourseCertificateModelImpl">
+		<attributes>
+			<id name="spCourseCertificateId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spCourseId" />
+			<basic name="spCertificatetId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.CourseDurationModelImpl">
+		<attributes>
+			<id name="spCourseDurationId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spCourseId" />
+			<basic name="spCourseLearningId" />
+			<basic name="title" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.CourseDurationTypeModelImpl">
+		<attributes>
+			<id name="spCourseDurationTypeId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spCourseDurationId" />
+			<basic name="spCourseId" />
+			<basic name="title1" />
+			<basic name="duration1" />
+			<basic name="title2" />
+			<basic name="duration2" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.CourseEnrollContractModelImpl">
+		<attributes>
+			<id name="spCourseContractId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="countryId" />
+			<basic name="courseType" />
+			<basic name="docType" />
+			<basic name="seqNo" />
+			<basic name="contractTemplateFileEntryId" />
+			<basic name="dataTemplateFileEntryId" />
+			<basic name="extraInfo" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.CourseEnrollEsignInfoModelImpl">
+		<attributes>
+			<id name="spEsignInfoId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="signerId" />
+			<basic name="packageId" />
+			<basic name="documentId" />
+			<basic name="lastGeneratedUrl" />
+			<basic name="spPEProcessStateId" />
+			<basic name="extraInfo" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.CourseLearningModelImpl">
+		<attributes>
+			<id name="spCourseLearningId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spCourseId" />
+			<basic name="intro" />
+			<basic name="optionTitle" />
+			<basic name="option1" />
+			<basic name="option2" />
+			<basic name="note" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.CourseModuleModelImpl">
+		<attributes>
+			<id name="spCourseModuleId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spCourseId" />
+			<basic name="spModuleId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.CourseOutcomeModelImpl">
+		<attributes>
+			<id name="spCourseOutcomeId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spCourseId" />
+			<basic name="outcomeId" />
+			<basic name="outcomeDesc" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.FeeDetailsModelImpl">
+		<attributes>
+			<id name="spFeeDetailsId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="feeType" />
+			<basic name="feeDesc" />
+			<basic name="calculationBase" />
+			<basic name="amount" />
+			<basic name="displayOrder" />
+			<basic name="fundId" />
+			<basic name="spCourseId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.FeeTypeModelImpl">
+		<attributes>
+			<id name="spFeeTypeId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="feeType" />
+			<basic name="feeTypeName" />
+			<basic name="feeTypeDesc" />
+			<basic name="misc" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.FrameworkModelImpl">
+		<attributes>
+			<id name="spFrameworkId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="countryId" />
+			<basic name="frameworkCode" />
+			<basic name="frameworkName" />
+			<basic name="frameworkImageId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.FundingModelImpl">
+		<attributes>
+			<id name="spFundingId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="courseType" />
+			<basic name="fundingDesc" />
+			<basic name="fundingCriteria" />
+			<basic name="fundOrder" />
+			<basic name="sponsoredBy" />
+			<basic name="residenceStatus" />
+			<basic name="ageOperator" />
+			<basic name="age" />
+			<basic name="earningStatus" />
+			<basic name="salaryOperator" />
+			<basic name="salary" />
+			<basic name="fundingHour" />
+			<basic name="fundingAmount" />
+			<basic name="netFees" />
+			<basic name="absenteePayroll" />
+			<basic name="fundingCourseFee" />
+			<basic name="spCourseId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.GraduationCriteriaModelImpl">
+		<attributes>
+			<id name="spGraduationCriteriaId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="criteriaType" />
+			<basic name="criteriaLevel" />
+			<basic name="criteriaValueRange" />
+			<basic name="criteriaDesc" />
+			<basic name="spCourseId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.MiscellaneousFeesModelImpl">
+		<attributes>
+			<id name="spMiscFeesId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="miscFeeType" />
+			<basic name="amount" />
+			<basic name="payable" />
+			<basic name="spCourseId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.ModuleModelImpl">
+		<attributes>
+			<id name="spModuleId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="countryId" />
+			<basic name="moduleCode" />
+			<basic name="moduleName" />
+			<basic name="moduleDesc" />
+			<basic name="moduleType" />
+			<basic name="creditValue" />
+			<basic name="moduleDuration" />
+			<basic name="noOfSessions" />
+			<basic name="generalDesc" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.ModuleCertificateModelImpl">
+		<attributes>
+			<id name="spModuleCertificateId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spModuleId" />
+			<basic name="spCertificatetId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.ModuleCompetencyUnitModelImpl">
+		<attributes>
+			<id name="spModuleCompetencyUnitId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spModuleId" />
+			<basic name="spCompetencyUnitId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.ModuleFrameworkModelImpl">
+		<attributes>
+			<id name="spModuleFrameworkId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spModuleId" />
+			<basic name="spFrameworkId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.OutcomeModelImpl">
+		<attributes>
+			<id name="spOutcomeId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="countryId" />
+			<basic name="outcomeCode" />
+			<basic name="outcomeDesc" />
+			<basic name="outcomeType" />
+			<basic name="outcomeFolderId" />
+			<basic name="spCompetencyUnitId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.OutlineModelImpl">
+		<attributes>
+			<id name="spOutlineId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spCompetencyUnitId" />
+			<basic name="outlineType" />
+			<basic name="outlineDesc" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.PersonaModelImpl">
+		<attributes>
+			<id name="spPersonaId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="personaType" />
+			<basic name="ageGroup" />
+			<basic name="personaDesc" />
+			<basic name="personaImageId" />
+			<basic name="spCourseId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.PersonaAttendeeModelImpl">
+		<attributes>
+			<id name="spPersonaAttendeeId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="description" />
+			<basic name="imageId" />
+			<basic name="spPersonaId" />
+			<basic name="spCourseId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.ProductModelImpl">
+		<attributes>
+			<id name="spProductId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="countryId" />
+			<basic name="productCode" />
+			<basic name="productName" />
+			<basic name="productDesc" />
+			<basic name="productImageId" />
+			<basic name="spCourseId" />
+			<basic name="productBrochuresFolderId" />
+			<basic name="productVideoFolderId" />
+			<basic name="status" />
+			<basic name="creditValues" />
+			<basic name="PEProcessId" />
+			<basic name="productTemplateName" />
+			<basic name="productTemplateLanguage" />
+			<basic name="registrationEnabled" />
+			<basic name="samePageRegistration" />
+			<basic name="productFormImageId" />
+			<basic name="productFormName" />
+			<basic name="productFormButtonName" />
+			<basic name="productFormUrl" />
+			<basic name="productBannerImageId" />
+			<basic name="hasInventory" />
+			<basic name="bannerDetailsEnabled" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.ProductCourseModelImpl">
+		<attributes>
+			<id name="spProductCourseId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spProductId" />
+			<basic name="spCourseId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.ProductSupervisorModelImpl">
+		<attributes>
+			<id name="spProductSupervisorId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="countryName" />
+			<basic name="countryId" />
+			<basic name="productId" />
+			<basic name="supervisorId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.ProgressionPathModelImpl">
+		<attributes>
+			<id name="spProgressionPathId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="careerLevel" />
+			<basic name="level" />
+			<basic name="progressionType" />
+			<basic name="progressionCategory" />
+			<basic name="startMonth" />
+			<basic name="endMonth" />
+			<basic name="duration" />
+			<basic name="optionalMandatory" />
+			<basic name="spCourseId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.ScheduleModelImpl">
+		<attributes>
+			<id name="spScheduleId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spModuleId" />
+			<basic name="sessionNumber" />
+			<basic name="description" />
+			<basic name="sessionType" />
+			<basic name="sessionDuration" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.StudentCourseFeeModelImpl">
+		<attributes>
+			<id name="spStudentCourseFeeId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spPEProcessStateId" />
+			<basic name="feeType" />
+			<basic name="amount" />
+			<basic name="order">
+				<column name="ORDER_" />
+			</basic>
+			<basic name="formula" />
+			<basic name="label" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.StudentCourseFeeInstmntModelImpl">
+		<attributes>
+			<id name="spStudentCourseFeeInstmntId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spPEProcessStateId" />
+			<basic name="insmntNo" />
+			<basic name="amount" />
+			<basic name="date">
+				<column name="DATE_" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.model.impl.StudyOptionModelImpl">
+		<attributes>
+			<id name="spStudyOptionId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spCourseId" />
+			<basic name="title" />
+			<basic name="desc">
+				<column name="DESC_" />
+			</basic>
+			<basic name="coverImageFileEntryId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.model.impl.ActivityImpl" name="Activity">
+		<table name="SPActivity" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.AssessmentImpl" name="Assessment">
+		<table name="SPAssessment" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.CertificateImpl" name="Certificate">
+		<table name="SPCertificate" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.CompetencyUnitImpl" name="CompetencyUnit">
+		<table name="SPCompetencyUnit" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.CourseImpl" name="Course">
+		<table name="SPCourse" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.CourseCareerImpl" name="CourseCareer">
+		<table name="SPCourseCareer" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.CourseCertificateImpl" name="CourseCertificate">
+		<table name="SPCourseCertificate" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.CourseDurationImpl" name="CourseDuration">
+		<table name="SPCourseDuration" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.CourseDurationTypeImpl" name="CourseDurationType">
+		<table name="SPCourseDurationType" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.CourseEnrollContractImpl" name="CourseEnrollContract">
+		<table name="SPCourseEnrollContract" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.CourseEnrollEsignInfoImpl" name="CourseEnrollEsignInfo">
+		<table name="SPCourseEnrollEsignInfo" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.CourseLearningImpl" name="CourseLearning">
+		<table name="SPCourseLearning" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.CourseModuleImpl" name="CourseModule">
+		<table name="SPCourseModule" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.CourseOutcomeImpl" name="CourseOutcome">
+		<table name="SPCourseOutcome" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.FeeDetailsImpl" name="FeeDetails">
+		<table name="SPFeeDetails" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.FeeTypeImpl" name="FeeType">
+		<table name="SPFeeType" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.FrameworkImpl" name="Framework">
+		<table name="SPFramework" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.FundingImpl" name="Funding">
+		<table name="SPFunding" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.GraduationCriteriaImpl" name="GraduationCriteria">
+		<table name="SPGraduationCriteria" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.MiscellaneousFeesImpl" name="MiscellaneousFees">
+		<table name="SPMiscellaneousFees" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.ModuleImpl" name="Module">
+		<table name="SPModule" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.ModuleCertificateImpl" name="ModuleCertificate">
+		<table name="SPModuleCertificate" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.ModuleCompetencyUnitImpl" name="ModuleCompetencyUnit">
+		<table name="SPModuleCompetencyUnit" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.ModuleFrameworkImpl" name="ModuleFramework">
+		<table name="SPModuleFramework" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.OutcomeImpl" name="Outcome">
+		<table name="SPOutcome" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.OutlineImpl" name="Outline">
+		<table name="SPOutline" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.PersonaImpl" name="Persona">
+		<table name="SPPersona" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.PersonaAttendeeImpl" name="PersonaAttendee">
+		<table name="SPPersonaAttendee" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.ProductImpl" name="Product">
+		<table name="SPProduct" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.ProductCourseImpl" name="ProductCourse">
+		<table name="SPProductCourse" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.ProductSupervisorImpl" name="ProductSupervisor">
+		<table name="SPProductSupervisor" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.ProgressionPathImpl" name="ProgressionPath">
+		<table name="SPProgressionPath" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.ScheduleImpl" name="Schedule">
+		<table name="SPSchedule" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.StudentCourseFeeImpl" name="StudentCourseFee">
+		<table name="SPStudentCourseFee" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.StudentCourseFeeInstmntImpl" name="StudentCourseFeeInstmnt">
+		<table name="SPStudentCourseFeeInstmnt" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.model.impl.StudyOptionImpl" name="StudyOption">
+		<table name="SPCourseStudyOption" />
+		<attributes />
+	</entity>
+</entity-mappings>

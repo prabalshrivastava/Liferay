@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE user-notification-definitions PUBLIC "-//Liferay//DTD User Notification Definitions 6.2.0//EN" "http://www.liferay.com/dtd/liferay-user-notification-definitions_6_2_0.dtd">
+<user-notification-definitions>
+	<definition>
+		<notification-type>${com.sambaash.platform.portlet.spgroup.util.SPGroupConstants.NOTIFICATION_TYPE_USER_JOINED}</notification-type>
+		<description>Receive a notification when a user joins the group</description>
+		<delivery-type>
+			<name>website</name>
+			<type>${com.liferay.portal.model.UserNotificationDeliveryConstants.TYPE_WEBSITE}</type>
+			<default>true</default>
+			<modifiable>true</modifiable>
+		</delivery-type>
+	</definition>
+	<definition>
+		<notification-type>${com.sambaash.platform.portlet.spgroup.util.SPGroupConstants.NOTIFICATION_TYPE_USER_COMMENT}</notification-type>
+		<description>Receive a notification when someone comments on a discussion</description>
+		<delivery-type>
+			<name>website</name>
+			<type>${com.liferay.portal.model.UserNotificationDeliveryConstants.TYPE_WEBSITE}</type>
+			<default>true</default>
+			<modifiable>true</modifiable>
+		</delivery-type>
+	</definition>
+	<definition>
+		<notification-type>${com.sambaash.platform.portlet.spgroup.util.SPGroupConstants.NOTIFICATION_TYPE_NEW_DICUSSION}</notification-type>
+		<description>Receive a notification when someone adds a new discussion</description>
+		<delivery-type>
+			<name>website</name>
+			<type>${com.liferay.portal.model.UserNotificationDeliveryConstants.TYPE_WEBSITE}</type>
+			<default>true</default>
+			<modifiable>true</modifiable>
+		</delivery-type>
+	</definition>
+	<definition>
+		<notification-type>${com.sambaash.platform.portlet.spgroup.util.SPGroupConstants.NOTIFICATION_TYPE_APPROVE_JOINER}</notification-type>
+		<description>Receive a approval notification when someone requests to join a group</description>
+		<delivery-type>
+			<name>website</name>
+			<type>${com.liferay.portal.model.UserNotificationDeliveryConstants.TYPE_WEBSITE}</type>
+			<default>true</default>
+			<modifiable>true</modifiable>
+		</delivery-type>
+	</definition>
+	<definition>
+		<notification-type>${com.sambaash.platform.portlet.spgroup.util.SPGroupConstants.NOTIFICATION_TYPE_APPROVE_INVITE_REQUEST}</notification-type>
+		<description>Receive a approval notification when an admin/owner invites the user to a group</description>
+		<delivery-type>
+			<name>website</name>
+			<type>${com.liferay.portal.model.UserNotificationDeliveryConstants.TYPE_WEBSITE}</type>
+			<default>true</default>
+			<modifiable>true</modifiable>
+		</delivery-type>
+	</definition>
+	<definition>
+		<notification-type>${com.sambaash.platform.portlet.spgroup.util.SPGroupConstants.NOTIFICATION_TYPE_JOIN_REQUEST_APPROVED}</notification-type>
+		<description>Receive a notification when an group joining request is approved</description>
+		<delivery-type>
+			<name>website</name>
+			<type>${com.liferay.portal.model.UserNotificationDeliveryConstants.TYPE_WEBSITE}</type>
+			<default>true</default>
+			<modifiable>true</modifiable>
+		</delivery-type>
+	</definition>
+	<definition>
+		<notification-type>${com.sambaash.platform.portlet.spgroup.util.SPGroupConstants.NOTIFICATION_TYPE_JOIN_REQUEST_REJECTED}</notification-type>
+		<description>Receive a notification when an group joining request is rejected</description>
+		<delivery-type>
+			<name>website</name>
+			<type>${com.liferay.portal.model.UserNotificationDeliveryConstants.TYPE_WEBSITE}</type>
+			<default>true</default>
+			<modifiable>true</modifiable>
+		</delivery-type>
+	</definition>
+</user-notification-definitions>

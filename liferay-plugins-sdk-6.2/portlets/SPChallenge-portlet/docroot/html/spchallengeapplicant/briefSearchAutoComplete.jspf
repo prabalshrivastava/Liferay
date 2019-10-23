@@ -1,0 +1,68 @@
+<%@page import="org.apache.commons.lang.StringUtils"%>
+<%
+        String challengeId = (String) request.getAttribute("searchChallenge");
+        if (StringUtils.isEmpty(challengeId)) {
+                challengeId = "0";
+        }
+%>
+
+				<aui:input name="searchChallenge" id="searchChallenge" type="hidden" />
+				<p><%=LabelUtil.getLabel(pageContext, themeDisplay,"search-challenge")%></p>
+				<aui:input name="searchChallengeInput" ondrop="return false;" onpaste="return false;" label='' placeholder='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.type.search")%>' cssClass="full-width">
+				</aui:input>
+
+				<aui:script>
+					var briefList = [];
+					var brief;
+					var challengeIdParam = <%=challengeId%>;
+					var challengeNameParam;
+					var exportResultsURL = '${exportResultsURL}';
+					var actKey = '_action=exportResults';
+					var actIdx = exportResultsURL.indexOf(actKey);
+					exportResultsURL = exportResultsURL.substr(0, actIdx + actKey.length); 					
+					<%
+						List<Document> documents = (List<Document>)renderRequest.getAttribute(SPChallengeConstants.ATTRIB_CHALLENGES);
+						if (documents != null) {
+							for (Document doc: documents) {
+					%>
+								brief = {};
+								brief.challengeId = <%=doc.get(Field.ENTRY_CLASS_PK)%>;
+								brief.name = "<%=doc.get(SPChallengeConstants.NAME)%>";		
+								briefList.push(brief);
+								if (brief.challengeId===challengeIdParam) {
+									challengeNameParam = brief.name;
+								}
+					<%
+							}							
+						}
+					%>				
+				AUI().use('autocomplete-list', 'aui-base', 'aui-io-request', 'autocomplete-filters','autocomplete-highlighters',
+				function (A) {					
+					var challengeSearchDataNode = A.one('#<portlet:namespace />searchChallenge');
+					var challengeSearchInputNode = A.one('#<portlet:namespace />searchChallengeInput');
+					var exportResultsBtn = A.one('#<portlet:namespace />exportResultsBtn');
+					var ns = '<portlet:namespace />';
+					var ac = new A.AutoCompleteList(
+					{
+						allowBrowserAutocomplete : 'true',
+						activateFirstItem : 'true',
+						inputNode : challengeSearchInputNode,
+						resultTextLocator : 'name',
+						render : 'true',
+						resultHighlighter : 'phraseMatch',
+						resultFilters : [ 'phraseMatch' ],
+						source : briefList
+					});		
+					if (ac) {
+						ac.after('select', function (e) {
+						    challengeSearchDataNode.val(e.result.raw.challengeId);
+						});
+					}
+					if (challengeIdParam) {
+						challengeSearchDataNode.val(challengeIdParam);
+						challengeSearchInputNode.val(challengeNameParam);
+						exportResultsBtn.setAttribute('href',exportResultsURL+'&'+ns+'challengeId='+challengeIdParam);
+					}					
+				});	
+				</aui:script>
+				

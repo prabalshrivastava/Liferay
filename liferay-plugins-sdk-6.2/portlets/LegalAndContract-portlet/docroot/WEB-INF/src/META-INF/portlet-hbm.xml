@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.legalandcontract.model.Agency" />
+	<import class="com.sambaash.platform.srv.legalandcontract.model.ClassMaster" />
+	<import class="com.sambaash.platform.srv.legalandcontract.model.Litigation" />
+	<import class="com.sambaash.platform.srv.legalandcontract.model.RDL" />
+	<import class="com.sambaash.platform.srv.legalandcontract.model.Trademarks" />
+	<class name="com.sambaash.platform.srv.legalandcontract.model.impl.AgencyImpl" table="SPAgency">
+		<cache usage="read-write" />
+		<id name="spAgencyId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="number" type="com.liferay.portal.dao.orm.hibernate.StringType" column="number_" />
+		<property name="country" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="reference" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startDate" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="endDate" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="remarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customField1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customField2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customField3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customDate1" type="org.hibernate.type.TimestampType" />
+		<property name="customDate2" type="org.hibernate.type.TimestampType" />
+		<property name="customDate3" type="org.hibernate.type.TimestampType" />
+		<property name="version" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="rootSpAgencyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.legalandcontract.model.impl.ClassMasterImpl" table="SPClassMaster">
+		<cache usage="read-write" />
+		<id name="spClassId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="code" type="com.liferay.portal.dao.orm.hibernate.StringType" column="code_" />
+		<property name="country" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="filedBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customField1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customField2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customDate1" type="org.hibernate.type.TimestampType" />
+		<property name="customDate2" type="org.hibernate.type.TimestampType" />
+		<property name="version" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="rootSpClassId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.legalandcontract.model.impl.LitigationImpl" table="SPLitigationDetails">
+		<cache usage="read-write" />
+		<id name="spLitigationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="country" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="filedBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="filedOn" type="org.hibernate.type.TimestampType" />
+		<property name="filedAtCountry" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="claimsRemarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="responseDeadline" type="org.hibernate.type.TimestampType" />
+		<property name="actualResponseDate" type="org.hibernate.type.TimestampType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customField1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customField2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customField3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customDate1" type="org.hibernate.type.TimestampType" />
+		<property name="customDate2" type="org.hibernate.type.TimestampType" />
+		<property name="customDate3" type="org.hibernate.type.TimestampType" />
+		<property name="legalConfRemarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="version" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="spTrademarksId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="rootSpLitigationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.legalandcontract.model.impl.RDLImpl" table="SPLitigationRDL">
+		<cache usage="read-write" />
+		<id name="spRdlId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="spLitigationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="responseDeadline" type="org.hibernate.type.TimestampType" />
+		<property name="claimsRemarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="alertBefore" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.legalandcontract.model.impl.TrademarksImpl" table="SPTrademarksMaster">
+		<cache usage="read-write" />
+		<id name="spTrademarksId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="registrationNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="applicationNo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="country" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="trademark" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="trademarkLocalized" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="registeredOwner" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="applicationDate" type="org.hibernate.type.TimestampType" />
+		<property name="firstRegistrationDate" type="org.hibernate.type.TimestampType" />
+		<property name="renewalDate" type="org.hibernate.type.TimestampType" />
+		<property name="goodsServices" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pendingComments" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="spAgencyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="classDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="legalConfRemarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="workflowStatus" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="customField1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customField2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customField3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="customDate1" type="org.hibernate.type.TimestampType" />
+		<property name="customDate2" type="org.hibernate.type.TimestampType" />
+		<property name="customDate3" type="org.hibernate.type.TimestampType" />
+		<property name="classCodes" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="version" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="trademarkType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="rootSpTrademarksId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

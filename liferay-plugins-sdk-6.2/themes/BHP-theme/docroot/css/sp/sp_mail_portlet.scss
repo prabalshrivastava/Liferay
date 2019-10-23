@@ -1,0 +1,85 @@
+@import "sp_custom_variables";
+@import "sp_mixins";
+@import "sp_media-queries";
+
+/** campaign & template css **/
+
+#rsvpDiv {
+    font-size: $fontSize-standard;
+}
+
+.rsvp-filter-details {
+    border: 1px solid black;
+}
+
+.rsvp-list-label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#rsvpDetails table tr td {
+    border: 1px solid black;
+}
+
+#successMsgTemplate {
+    color: green;
+    font-weight: bold;
+}
+
+.template-list {
+    font-weight: bold;
+    background: none repeat scroll 0 0 #f2f2f2;
+    color: #000000;
+    font-size: 16px;
+   border: 1px solid #CCCCCC;
+}
+
+.mailtemplate-list-title {
+    border: 1px solid #CCCCCC;
+}
+
+.left-creatediv {
+    color: #666666;
+    font-weight: bold;
+}
+
+.mailtemplate-subtitle {
+    background: none repeat scroll 0 0 #F2F2F2;
+    color: #666666;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.campaign-mainTitle {
+    border: 1px solid #c5c5c5;
+    background: #f2f2f2;
+}
+
+.campaign-Title {
+    font-weight: bold;
+    color: #666666;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.campaign-detail-div {
+    background: none repeat scroll 0% 0% transparent;
+}
+
+.black_overlay {
+    background-color: black;
+}
+
+.white_content {
+    border: 3px solid #696969;
+    background-color: white;
+}
+
+.rsvp-maindiv {
+    border: 1px solid #C4C4C4;
+}
+
+.rsvpbox-title {
+    font-weight: 300 !important;
+    font-size: 31.5px;
+}

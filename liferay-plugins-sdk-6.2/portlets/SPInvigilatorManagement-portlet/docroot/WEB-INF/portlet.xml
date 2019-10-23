@@ -1,0 +1,610 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	version="2.0">
+
+	<portlet>
+		<portlet-name>update-appointment</portlet-name>
+		<display-name>Update Appointment</display-name>
+		<portlet-class>
+			com.sambaash.platform.invigilatormanagement.updateappointment.UpdateAppointmentPortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/updateappointment/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Update Appointment</title>
+			<short-title>Update Appointment</short-title>
+			<keywords />
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+
+	<portlet>
+		<portlet-name>evaluation-matrix-setup</portlet-name>
+		<display-name>Evaluation Matrix Setup</display-name>
+		<portlet-class>com.sambaash.platform.invigilatormanagement.evaluationmatrixsetup.EvaulationMatrixSetupPortlet</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/evaluationmatrixsetup/list.jsp</value>
+		</init-param>
+		<init-param>
+			<name>update-template</name>
+			<value>/html/evaluationmatrixsetup/edit.jsp</value>
+		</init-param>
+		<init-param>
+			<name>detail-template</name>
+			<value>/html/evaluationmatrixsetup/view.jsp</value>
+		</init-param>
+
+		<init-param>
+			<name>copy-template</name>
+			<value>/html/evaluationmatrixsetup/copy.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/evaluationmatrixsetup/config.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+
+		</supports>
+		<portlet-info>
+			<title>Evaluation Matrix Setup</title>
+			<short-title>Evaluation Matrix Setup</short-title>
+			<keywords />
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+
+	<portlet>
+		<portlet-name>invigilator-application</portlet-name>
+		<display-name>Invigilator Application</display-name>
+		<portlet-class>
+			com.sambaash.platform.invigilatormanagement.application.InvigilatorApplicationPortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/invigilatorapplication/edit.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/invigilatorapplication/config.jsp</value>
+		</init-param>
+
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Invigilator Application</title>
+			<short-title>Invigilator Application</short-title>
+			<keywords />
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+
+
+
+	<portlet>
+		<portlet-name>optin-request</portlet-name>
+		<display-name>Optin Request</display-name>
+		<portlet-class>
+			com.sambaash.platform.invigilatormanagement.optinrequest.OptinRequestPortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/optinrequest/list.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/optinrequest/config.jsp</value>
+		</init-param>
+		<init-param>
+			<name>update-template</name>
+			<value>/html/optinrequest/edit.jsp</value>
+		</init-param>
+		<init-param>
+			<name>copy-template</name>
+			<value>/html/optinrequest/copy.jsp</value>
+		</init-param>
+		<init-param>
+			<name>detail-template</name>
+			<value>/html/optinrequest/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Optin Request</title>
+			<short-title>Optin Request</short-title>
+			<keywords />
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+
+
+	<portlet>
+		<portlet-name>optout-request</portlet-name>
+		<display-name>Optout Request</display-name>
+		<portlet-class>
+			com.sambaash.platform.invigilatormanagement.optoutrequest.OptoutRequestPortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/optoutrequest/list.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/optoutrequest/config.jsp</value>
+		</init-param>
+		<init-param>
+			<name>update-template</name>
+			<value>/html/optoutrequest/edit.jsp</value>
+		</init-param>
+		<init-param>
+			<name>copy-template</name>
+			<value>/html/optoutrequest/copy.jsp</value>
+		</init-param>
+		<init-param>
+			<name>detail-template</name>
+			<value>/html/optoutrequest/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Optout Request</title>
+			<short-title>Optout Request</short-title>
+			<keywords />
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>appoint-invigilators</portlet-name>
+		<display-name>Appoint Invigilators</display-name>
+		<portlet-class>
+			com.sambaash.platform.invigilatormanagement.appointinvigilators.AppointInvigilators
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/appointinvigilators/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/appointinvigilators/config.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Appoint Invigilators</title>
+			<short-title>Appoint Invigilators</short-title>
+			<keywords />
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>Manage-Evaluation</portlet-name>
+		<display-name>Manage Evaluation</display-name>
+		<portlet-class>
+			com.sambaash.platform.invigilatormanagement.manageevaluation.ManageEvaluation
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/manageevaluation/list.jsp</value>
+		</init-param>
+		<init-param>
+			<name>update-template</name>
+			<value>/html/manageevaluation/edit.jsp</value>
+		</init-param>
+		<init-param>
+			<name>detail-template</name>
+			<value>/html/manageevaluation/view.jsp</value>
+		</init-param>
+
+		<init-param>
+			<name>copy-template</name>
+			<value>/html/manageevaluation/copy.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/manageevaluation/config.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Manage Evaluation</title>
+			<short-title>Manage Evaluation</short-title>
+			<keywords />
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+
+	<portlet>
+		<portlet-name>update-invigilation-dates</portlet-name>
+		<display-name>Update Invigilation Dates</display-name>
+		<portlet-class>
+			com.sambaash.platform.invigilatormanagement.updateinvigilationdates.UpdateinvigilationDatePortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/updateinvigilationdates/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/updateinvigilationdates/config.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>Update Invigilation Dates</title>
+			<short-title>Update Invigilation Dates</short-title>
+			<keywords />
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>invigilator-listing</portlet-name>
+		<display-name>Invigilator Listing</display-name>
+		<portlet-class>
+			com.sambaash.platform.invigilatormanagement.listing.InvigilatorListingPortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/invigilatorlisting/list.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/invigilatorlisting/config.jsp</value>
+		</init-param>
+
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+			<portlet-mode>edit_defaults</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Invigilator Listing</title>
+			<short-title>Invigilator Listing</short-title>
+			<keywords />
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>manage-appointment</portlet-name>
+		<display-name>Manage Appointment</display-name>
+		<portlet-class>
+			com.sambaash.platform.invigilatormanagement.manageappointment.ManageAppointmentPortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/manageappointment/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/manageappointment/config.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Manage Appointment</title>
+			<short-title>Manage Appointment</short-title>
+			<keywords />
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>past-appointment</portlet-name>
+		<display-name>Past Appointment</display-name>
+		<portlet-class>
+			com.sambaash.platform.invigilatormanagement.pastappointment.PastAppointmentPortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/pastappointment/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Past Appointment</title>
+			<short-title>Past Appointment</short-title>
+			<keywords />
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>notify-appointment</portlet-name>
+		<display-name>Notify Appointment</display-name>
+		<portlet-class>
+			com.sambaash.platform.invigilatormanagement.notifyappointment.NotifyAppointment
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/notifyappointment/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/notifyappointment/config.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Notify Appointment</title>
+			<short-title>Notify Appointment</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+		<portlet>
+			<portlet-name>invigilator-appointment-report</portlet-name>
+			<display-name>Invigilator Appointment Report</display-name>
+			<portlet-class>
+				com.sambaash.platform.invigilatormanagement.report.InvigilatorAppointmentReportPortlet
+			</portlet-class>
+			<init-param>
+				<name>view-template</name>
+				<value>/html/report/view.jsp</value>
+			</init-param>
+			<init-param>
+			<name>edit-template</name>
+			<value>/html/report/config.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+
+		</supports>
+			<portlet-info>
+				<title>Invigilator Appointment Report</title>
+				<short-title>
+					Invigilator Appointment Report
+				</short-title>
+				<keywords></keywords>
+			</portlet-info>
+			<security-role-ref>
+				<role-name>administrator</role-name>
+			</security-role-ref>
+			<security-role-ref>
+				<role-name>guest</role-name>
+			</security-role-ref>
+			<security-role-ref>
+				<role-name>power-user</role-name>
+			</security-role-ref>
+			<security-role-ref>
+				<role-name>user</role-name>
+			</security-role-ref>
+		</portlet>
+		<portlet>
+			<portlet-name>view-appointments</portlet-name>
+			<display-name>View Appointments</display-name>
+			<portlet-class>
+				com.sambaash.platform.invigilatormanagement.viewappointments.ViewAppointments
+			</portlet-class>
+			<init-param>
+				<name>view-template</name>
+				<value>/html/viewappointments/view.jsp</value>
+			</init-param>
+			<init-param>
+			<name>edit-template</name>
+			<value>/html/viewappointments/config.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+
+		</supports>
+			<portlet-info>
+				<title>View Appointments</title>
+				<short-title>View Appointments</short-title>
+				<keywords></keywords>
+			</portlet-info>
+			<security-role-ref>
+				<role-name>administrator</role-name>
+			</security-role-ref>
+			<security-role-ref>
+				<role-name>guest</role-name>
+			</security-role-ref>
+			<security-role-ref>
+				<role-name>power-user</role-name>
+			</security-role-ref>
+			<security-role-ref>
+				<role-name>user</role-name>
+			</security-role-ref>
+		</portlet>
+</portlet-app>

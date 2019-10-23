@@ -1,0 +1,308 @@
+ <%@page import="org.apache.commons.lang.StringUtils"%>
+<%@page import="com.liferay.portal.model.PasswordPolicy"%>
+<%@page import="com.sambaash.platform.startupprofile.StartupSignupUtil"%>
+<%@page import="com.liferay.portal.model.User"%>
+<%@page import="com.sambaash.platform.util.LabelUtil"%>
+
+<portlet:resourceURL var="resourceURL" />
+<style>
+.fwWidth50
+{
+    width:50%;
+}
+@media screen and (max-width: 667px) and (min-width: 320px)
+{
+.fwWidth50
+{
+    width:100%;
+}
+    
+}
+</style>
+
+<%
+	PasswordPolicy policy = themeDisplay.getUser().getPasswordPolicy();
+	StringBuilder policyBuilder = new StringBuilder("Password must have: ");
+	if (policy.getMinLength()>0) {
+		policyBuilder.append(String.format("minimum length of %d, ", policy.getMinLength()));
+	}
+	if (policy.getMinAlphanumeric()>0) {
+		policyBuilder.append(String.format("minimum %d alphanumeric, ", policy.getMinAlphanumeric()));
+	}
+	if (policy.getMinLowerCase()>0) {
+		policyBuilder.append(String.format("minimum %d lower case, ", policy.getMinLowerCase()));
+	}
+	if (policy.getMinUpperCase()>0) {
+		policyBuilder.append(String.format("minimum %d upper case, ", policy.getMinUpperCase()));
+	}
+	if (policy.getMinNumbers()>0) {
+		policyBuilder.append(String.format("minimum %d numbers, ", policy.getMinNumbers()));
+	}
+	if (policy.getMinSymbols()>0) {
+		policyBuilder.append(String.format("minimum %d symbols, ", policy.getMinSymbols()));
+	}
+	if (StringUtils.isNotEmpty(policy.getRegex())) {
+		policyBuilder.append(String.format("must follow the regular expression: %s", policy.getRegex()));
+	}
+	String policyText = policyBuilder.toString().trim();
+	if (policyText.endsWith(",")) {
+		policyText = policyText.substring(0, policyText.length()-1);
+	}
+%>
+
+<script>
+
+var submitError = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.error.submit")%>';
+var successMsg = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.success")%>';
+var errorMsg = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.error")%>';
+var sessionTimeOut = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.session.timed.out")%>';
+var thankUMsg = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.thankyou.create.account")%>';
+var startupSaveFail = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.fail.save.information.startup")%>';
+var nameLogo = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.add.name.logo")%>';
+var warningLabel = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.warning")%>';
+var deleteConfirm = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.are.you.sure.want.to.delete.it")%>';
+var removeError = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.error.remove")%>';
+var removeSuccess = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.successfully.removed")%>';
+var removeFailrefresh = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.failed.remove.refresh.page")%>';
+var errorAddingUser = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.error.adding.user")%>';
+var maxAllowedChars = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.allowed.maximimum.tags")%>';
+var duplicateTag = '<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.duplicate.tag")%>';
+</script>
+<script src="/StartupProfile-portlet/js/main.js" type="text/javascript"></script>
+<script src="/StartupProfile-portlet/js/script.js" type="text/javascript"></script>
+<script src="/StartupProfile-portlet/js/filedrag.js" type="text/javascript"></script>
+<section class="form form_1 active" form-name="form_1">
+	<span class="formTitle"><liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.page.1")%>' /></span>
+	<p><liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.page.1.details")%>' /></p>
+    <div class="formContent" >
+
+        <div class="formTextField fw">
+            <div id="orgNameError"></div>
+            <aui:input name="organization_name" label='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.company")%>'>
+                <aui:validator name="custom" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"error.q1")%>'>
+                    function (val, fieldNode, ruleValue) { if(val.length > 100) return false; return checkOrgName('<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.failed.get.user.info.refresh.page")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.session.timed.out")%>'); }
+                </aui:validator>
+                <aui:validator name="required" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"error.mandatory")%>' />
+            </aui:input>
+        </div>
+
+        <div class="formGroupfield fw">
+            <div class="formGroupTitle"><span><p><liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.companyContact")%>' /></p></span>
+            </div>
+            <div class="formTextField">
+                <aui:input name="org_contact_fname" label='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.firstname")%>'>
+                    <aui:validator name="maxLength">100</aui:validator>
+                    <aui:validator name="required" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"error.mandatory")%>' />
+                </aui:input>
+            </div>
+
+            <div class="formTextField">
+                <aui:input name="org_contact_lname" label='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.lastname")%>'>
+                    <aui:validator name="maxLength">100</aui:validator>
+                    <aui:validator name="required" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"error.mandatory")%>' />
+                </aui:input>
+            </div>
+        </div>
+        
+        <div class="formTextField fw">
+            <aui:input name="organization_emailId" label='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.companyEmail1")%>'>
+            	<aui:validator name="required" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"error.mandatory")%>' />
+                <aui:validator name="email" />
+                <aui:validator name="custom" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"error.q13")%>'>
+                    function (val, fieldNode, ruleValue) { return checkEmailAddress('<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.failed.get.user.info.refresh.page")%>','<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.session.timed.out")%>'); }
+                </aui:validator>
+            </aui:input>
+        </div>
+        
+        <div class="formTextField fw" style="display:none;">
+            <aui:input name="organization_emailId2" label='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.companyEmail2")%>'>
+<!--                 <aui:validator name="email" /> -->
+<!--                 <aui:validator name="equalTo">'#<portlet:namespace />organization_emailId'</aui:validator> -->
+            </aui:input>
+        </div>
+        
+        <div class="formTextField fw">
+            <aui:input name="login_pwd1" label='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.password1")%>' type="password">
+            	<aui:validator name="required" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"error.password.error.10")%>' />
+				<aui:validator name="custom" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.dummy.message")%>'>
+					function (val, fieldNode, ruleValue) { return checkPassword(fieldNode,'<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.failed.validate.password.info.refresh.page")%>'); }
+				</aui:validator>            
+            </aui:input>
+        </div>
+        
+        <div class="formTextField fw">
+            <aui:input name="login_pwd2" label='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.password2")%>' type="password">
+            	<aui:validator name="required" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"error.mandatory")%>' />
+                <aui:validator name="equalTo" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"error.password.error.10")%>'>'#<portlet:namespace />login_pwd1'</aui:validator>
+				<aui:validator name="custom" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.dummy.message")%>'>
+					function (val, fieldNode, ruleValue) { return checkPassword(fieldNode,'<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.failed.validate.password.info.refresh.page")%>'); }
+				</aui:validator>            
+            </aui:input>
+        </div>
+    </div>
+    <div class="formCTA fw">
+        <input type="button" value="<liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.proceed")%>' />" class="proceed" customAction="signup" />
+        <input type="button" value="<liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.cancel")%>' />" class="cancel" onclick="cancel()" />
+    </div>
+
+</section>
+
+
+<section class="form form_2" form-name="form_2"> 
+	<span class="formTitle"><p><liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.page.2")%>' /></p></span>
+	<p><liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.page.2.details")%>' /></p>
+    <div class="formContent">
+     <div class="formTextField">
+                <aui:input name="hq_city" label='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.city")%>'>
+                    <aui:validator name="required" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"error.mandatory")%>'></aui:validator>
+                    <aui:validator name="maxLength">100</aui:validator>
+                </aui:input>
+            </div>
+            <div class="formTextField">
+            <aui:select name="hq_country" label='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.hq")%>' showEmptyOption="true" required="false" >
+                <% FormHelper.createCountryDDOptions( "", renderRequest, out);%>
+            </aui:select>
+        </div>
+        <div class="formTextField fw">
+           <section class="sp_tab sp_tab_1 animated active" form-name="sp_tab_1">
+                <div id="logoMainDiv-EditPage">
+                    <aui:input type="file" name="startupLogo" accept="image/*" label="startup-profile-logo">
+                        <aui:validator name="custom" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"please-upload-logo")%>'>
+                            function (val, fieldNode, ruleValue) { var hasImg = false; AUI().use('aui-node','aui-base', function(A){ var src = A.one("#logoImg").getAttribute("src"); if(src != "") { hasImg = true; } }); if (hasImg || val.length != 0) { return true; } else { return false; } }
+                        </aui:validator>
+                    </aui:input>
+                    <aui:input type='hidden' name='orgId'></aui:input>
+                    <div id='logoDiv'>
+                        <div id="filedraglogo" class="fd_container">
+                            <div class="fdWrap">
+                                <liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"or-drop-image")%>' />
+                            </div>
+                            <div class='imageContainer'>
+                                <img id="logoImg" src="${logoUrl}" style='max-width: 100%; max-height: 300px' alt="logo"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="removoLogoDiv">
+                        <a href="javascript:deleteFileEntry(0, 'logo');" id="removeLogoLink" class="h6" style="float: right">
+                            <liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"remove-logo")%>' />
+                        </a>
+                        <aui:input name="removeLogo" type="hidden"></aui:input>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+        <div class="formTextField">
+            <aui:input name="organization_website" label='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.q11")%>'>
+                <aui:validator name="custom" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"error.q11")%>'>
+                    function (val, fieldNode, ruleValue) { if(val.length == 0) return true; if(val.length > 50) return false; return isValidURL(val); }
+                </aui:validator>
+                <aui:validator name="required" errorMessage='<%=LabelUtil.getLabel(pageContext, themeDisplay,"error.mandatory")%>'></aui:validator>
+            </aui:input>
+        </div>
+        <div class="formSelectField">
+
+            <aui:select id="multiSelectCategory" name="asset_orgCategoryList" label='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.catFocus")%>' showEmptyOption="false" multiple="true" required="true"> 
+            	<% FormHelper.createDropDownOptions( "orgCategoryList", "cats", renderRequest, out);%>
+            </aui:select>
+        </div>
+        
+        <div class="formTextField fw">
+            <aui:input name="organization_description" type="textarea" label='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.description")%>' rows="6">
+                <aui:validator name="maxLength">500</aui:validator>
+            </aui:input>
+            <label class="textarea-counter" style="float:right">0/500</label>
+        </div>
+        
+<!--         tags -->
+        <div class="formTextField">
+            <aui:input id="tagSearch" name="" label='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.signup.tags")%>' placeholder="Type & search">
+                <aui:validator name="maxLength">20</aui:validator>
+            </aui:input>
+            <span class="btn-icon icon icon-plus" id="addTagBtn" style="display:none;"></span>
+            
+            <div id="tagsDropDown" class="hide">
+				
+			</div>
+            <aui:input name="startupTag_tagIdList" type="hidden"></aui:input>
+        </div>
+        
+        <div class="formGroupfield fwwidth50" id="startupTagContainer" >
+			<div class="formGroupfieldDummy formGroupfield  fw hide" id="startupTag" data-identifier="tagId" style="padding: 0 20px 0px 20px; margin: 4px 0;background-color: #0066b3;color: #FFF;border-radius: 50px;">
+				<div class="formSubTitle">
+					<div>
+						<span class="tagDisplayName" style="padding: 0 0 0 10px;     color: #FFF;  vertical-align: middle;"></span>
+						<aui:input class="tagName" name="startupTag_tagName" type="hidden" value="-1"></aui:input>
+					</div>
+					<div class="multipleCTA">
+						<a href="javascript:;" class="removeButton" style="padding: 6px; color: #fff;border-color: #fff;">x</a>
+					</div>
+				</div>
+				
+				<aui:input name="startupTag_tagId" type="hidden"></aui:input>
+			</div>
+		</div>
+
+    </div>
+    <div class="formCTA fw">
+        <input type="button" value='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.submit")%>' class="submit" customAction="signup" />
+        <input type="button" value="<liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.cancel")%>' />" class="cancel" onclick="cancel()" />
+    </div>
+
+</section>
+
+<script type="text/javascript">
+<!--
+var passwordPolicyText = '<%= policyText %>';
+var passwordErrorMap = {};
+passwordErrorMap['1']='<liferay-ui:message key="error.password.error.1" />';
+passwordErrorMap['2']='<liferay-ui:message key="error.password.error.2" />';
+passwordErrorMap['3']='<liferay-ui:message key="error.password.error.3" />'+passwordPolicyText;
+passwordErrorMap['4']='<liferay-ui:message key="error.password.error.4" />';
+passwordErrorMap['5']='<liferay-ui:message key="error.password.error.5" />'+'\n'+passwordPolicyText;
+passwordErrorMap['6']='<liferay-ui:message key="error.password.error.6" />';
+passwordErrorMap['8']=passwordPolicyText;
+passwordErrorMap['9']='<liferay-ui:message key="error.password.error.9" />';
+passwordErrorMap['10']='<liferay-ui:message key="error.password.error.10" />';
+try {
+	passwordErrorMap['4']=passwordErrorMap['4'].replace('{}','<%=StartupSignupUtil.getPasswordPolicy(themeDisplay).getMinLength()%>');	
+} catch(e) {
+	if (console) console.log(e);
+}
+//-->
+</script>
+<aui:script use="aui-base">
+AUI().ready(function(A){
+	AUI().use('autocomplete-list','aui-base','aui-io-request-deprecated','autocomplete-filters','autocomplete-highlighters',function (A) {
+		var tagInputNode = A.one('#'+namespace+'tagSearch');
+		var tagInputNodeId = tagInputNode._node.id;
+		initAutoCompleteFormField(A, tagInputNodeId, 'get_tags', 
+			function (e) {
+				addAssetTag(e.result.raw.categoryId+":"+e.result.raw.name);
+				tagInputNode.val('');
+				toggleFormDirty(true);
+			}
+		);
+		var addTagBtnNode = A.one('#addTagBtn');
+		addTagBtnNode.on('click', function(e) {
+			console.log('adding new tag');
+			var newTag = tagInputNode.val();
+			if (newTag && newTag !== '') {
+				addAssetTag(newTag+":"+newTag);
+				tagInputNode.val('');
+				toggleFormDirty(true);
+			}
+		  });
+
+		A.all('select option[value=""]').html('<liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.select.one.option")%>' />');
+		
+		var descField = A.one('#'+namespace+'organization_description');
+		descField.on('keyup',function(e){
+			A.one('.textarea-counter').html(''+ this.val().length +'/500');			
+		});
+	});
+	A.one('#'+namespace+'multiSelectCategory').setAttribute('onmouseover', "Liferay.Portal.ToolTip.show(this, '<liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.select.multiple.tooltip")%>' />')");
+	A.one('#'+namespace+'organization_description').setAttribute('onmouseover', "Liferay.Portal.ToolTip.show(this, '<liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.description.tooltip")%>' />')");
+try{initImageDragDiv("logo", namespace,'<%=resourceURL%>');}catch(error){}
+});
+</aui:script>

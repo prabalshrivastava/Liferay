@@ -1,0 +1,171 @@
+.newPortlets {
+  font-family: "Century Gothic !important"; }
+
+.title-container {
+  display: flex;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  clear: both; }
+
+.pt-5 {
+  padding-top: 3rem !important; }
+
+.px-3 {
+  padding: 0 1rem 0 1rem !important; }
+
+.mb-4 {
+  margin-bottom: 1.5rem !important; }
+
+.mb-3 {
+  margin-bottom: 1rem !important; }
+
+.fee-container {
+  max-width: 90%;
+  margin: 0 auto; }
+
+.w-100 {
+  width: 100%; }
+
+.li-bg:hover {
+  background-color: #f5f7fb; }
+
+.li-bg {
+  cursor: pointer;
+  padding: 1rem; }
+
+.reason-textarea {
+  resize: none;
+  border-radius: 3px;
+  border: solid 1px #b1bed7;
+  background-color: #f9fafc; }
+
+.w-90 {
+  width: 90% !important; }
+
+.m-0 {
+  margin: 0; }
+
+.p-0 {
+  padding: 0; }
+
+.w-10 {
+  width: 10%; }
+
+.portlet-content {
+  background: #f7f9fc; }
+
+.justify-content-around {
+  justify-content: space-around; }
+
+.entitylinkBox {
+  background: #f7f9fc !important; }
+
+.icon-arrow-right {
+  background: #b1bed7 !important;
+  border-radius: 50% !important;
+  padding: 0.15rem !important;
+  color: white !important; }
+
+.mt-5 {
+  margin-top: 3rem !important; }
+
+.horizontal-line {
+  height: 2px;
+  border: solid 1px #dfe3eb;
+  align-self: center;
+  flex: 1 1 auto;
+  margin-left: 0.5rem; }
+
+.title {
+  color: #333333;
+  font-weight: 500;
+  margin: 0;
+  padding-left: 4px;
+  font-weight: bold;
+  vertical-align: middle; }
+
+.shadow-md {
+  box-shadow: 0 0 30px 0 #e1e6eb; }
+
+.text-center {
+  text-align: center; }
+
+.title-icon {
+  width: 30px;
+  object-fit: contain; }
+
+.w-33 {
+  width: 33% !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.mx-auto {
+  margin: 0 auto 0 auto !important; }
+
+.py-5 {
+  padding: 3rem 0; }
+
+.text-bold {
+  font-weight: 500 !important; }
+
+.text-bolder {
+  font-weight: bold !important; }
+
+.badge-success {
+  border-radius: 100px;
+  background-color: #8bdb7c !important;
+  font-weight: 500;
+  color: #115a03;
+  margin: 0 0.8rem;
+  font-size: 0.9rem;
+  padding: 0 0.5rem; }
+
+.btn-default {
+  font-weight: 500 !important;
+  border: none !important;
+  box-shadow: 0 2px 2px 0 #d0d9e7 !important; }
+
+input[type="radio"] {
+  vertical-align: middle;
+  margin: 0; }
+
+.total-fees-table {
+  table-layout: fixed; }
+
+.total-fees-table th {
+  width: 118px;
+  padding: 12px 10px 12px 10px !important;
+  white-space: normal !important; }
+
+.total-fees-table td {
+  padding: 12px 10px 12px 10px !important; }
+
+.standardFeeContent {
+  margin: 25px; }
+
+.standardFeeContent table {
+  margin: 0px !important; }
+
+.miscellaneousFeesContent {
+  margin: 25px; }
+
+.miscellaneousFeesContent table {
+  margin: 0px !important; }
+
+.right-padding {
+  padding-right: 20px; }
+
+.small-col {
+  width: 90px !important; }
+
+.credit-fees {
+  margin-bottom: 40px !important; }
+
+#availableSubjects .pull-right.icon-arrow-right:before {
+  float: left;
+  content: "\f060"; }
+
+#availableSubjects .pull-right.icon-arrow-right {
+  position: absolute; }
+

@@ -1,0 +1,36 @@
+				        	<span style="font-size:12px">Mail Template</span>
+				            <select id="mailTemplateOptions"></select><br>
+				            <!-- <textarea id="mailInputHelpText" name="messageInput" cols="50" rows="5" required="required" placeholder="Enter message"></textarea><br /> -->
+				            <span style="font-size:12px">Recipient User Type</span>
+				            <select id="recipient" >
+				            	<option value="user">Applicant</option>
+				            	<option value="assignedSalesAgent">Assigned Sales Agent</option>
+				            	<option value="assignedSupervisor">Assigned Supervisor</option>
+				            	<option value="salesAgentRole">Sales Agent Roles</option>
+				            	<option value="supervisorRole">Supervisor Roles</option>
+				            	<option value="allStatusTypesApprovers">Global Approver Roles</option>
+				            	<option value="officer">Officer</option>
+				            	<option value="trainingPrincipalRole">Training Principal (Choose if ATO Process otherwise it will be ignored)</option>
+				            	<option value="secondaryContactRole">Secondary Contact (Choose if ATO Process otherwise it will be ignored)</option>
+				            	<option value="mentorRole">Mentor (Choose if ATO Process otherwise it will be ignored)</option>
+				            </select><br>
+				            <div id="mailRoleDiv" style="font-size:12px">Roles
+				            	<select id="officerRoleIds" multiple></select><br>
+				            </div>
+				            <div id="ccOptions">
+				            <span style="font-size:12px">CC User Type</span>
+				            <select id="cc" >
+				            	<option value="select">Select</option>
+				            	<option value="ccAssignedSalesAgent">Assigned Sales Agent</option>
+				            	<option value="ccAssignedSupervisor">Assigned Supervisor</option>
+				            	<option value="trainingPrincipalRole">Training Principal (Choose if ATO Process otherwise it will be ignored)</option>
+				            	<option value="secondaryContactRole">Secondary Contact (Choose if ATO Process otherwise it will be ignored)</option>
+				            	<option value="mentorRole">Mentor (Choose if ATO Process otherwise it will be ignored)</option>
+				            	<option value="ccEmailAddress">Enter Email Address</option>
+				            </select><br>
+				            </div>
+				            
+				            <div id="mailAddressDiv" >
+				            <span style="font-size:12px">Email Address </span>
+			    			<input type="text" class="ccEmailAddressText" id="ccEmailAddressText" required="required" placeholder="Enter the Email Address" >
+				         	</div>	

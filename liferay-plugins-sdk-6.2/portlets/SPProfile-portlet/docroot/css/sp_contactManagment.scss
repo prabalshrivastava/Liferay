@@ -1,0 +1,1478 @@
+    @import "cm_mixin";
+    @import "media_queries";
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+//ADDED BY HARINI
+    .SPProfile-portlet .ps-pref-container {
+        padding: 40px;
+    }
+
+    section.cmContentAccordion {
+        margin: 0px;
+    }
+
+    .cm-maxWidth {
+        width: 100%;
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .cm-profileView .margin-half {
+        margin-top: 40px;
+    }
+
+    .cm_bgwrapper {
+        margin: 0;
+        padding: 0;
+    } //Header
+    .cmHeader {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        min-height: 140px;
+        height: 100%;
+        position: relative;
+        box-sizing: border-box;
+        h2 {
+            margin: 0;
+            padding: 0;
+            line-height: normal;
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 0;
+            padding: 5px 0 10px 0;
+            line-height: normal;
+        }
+    }
+
+    .cmHeader .ExportSec {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 20px;
+        a {
+
+            width: 30px;
+            height: 30px;
+
+
+            display: flex;
+            justify-content: center;
+
+            padding: 5px;
+        }
+    }
+
+    .cmHeader-profileimg {
+        width: 94px;
+        height: 94px;
+        position: relative;
+        margin-bottom: -65px;
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        &.center-Profile {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .cmWrapper {
+        padding: 20px 0;
+        @include flexbox();
+        width: 100%;
+        box-sizing: border-box;
+        @include flex-direction(row);
+    }
+
+    .cmMaincontent {
+        width: 50%;
+        margin-right: 10px;
+        box-sizing: border-box;
+    }
+
+    .cmRightcontent {
+        width: 27%;
+    }
+
+    .cmMarginBottom10 {
+        margin-bottom: 10px;
+    }
+
+    .cmProfileDetail {
+        width: 100%;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        padding: 20px 0;
+        box-sizing: border-box;
+        h2 {
+            margin: 0 0 5px 0;
+            padding: 0;
+        }
+    }
+
+    .cmProfileDetail .Roletag {
+        padding: 5px 10px;
+        margin: 0 5px;
+    }
+
+    .cmProfileDetail .RoleName {
+        padding: 5px;
+    }
+
+    .cmBLK blockquote {
+        padding: 20px;
+        margin: 0px;
+    }
+
+    .cmBLK p {
+        padding: 20px;
+        margin: 0px;
+    }
+
+    .cmContactDetails {
+        padding: 20px;
+        width: 100%;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(flex-start);
+        box-sizing: border-box;
+        .cmContactContent {
+            @include flexbox();
+            @include flex-direction(row);
+            @include justify-content(flex-start);
+            @include align-items(flex-start);
+            margin-bottom: 10px;
+        }
+    }
+
+    .cmContactDetails .cmContactContent {
+        p {
+            margin: 0;
+            padding: 0;
+            span {
+                padding: 0;
+                margin: 0;
+            }
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    } //key updates
+    .keyHeading {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        h2 {
+            padding: 10px 10px;
+            margin: 0;
+        }
+    }
+
+    .keyDataWrapper {
+        padding: 20px;
+        .keyDataContent {
+            width: 100%;
+            @include flexbox();
+            @include flex-direction(row);
+            @include justify-content(flex-start);
+            @include align-items(center);
+            margin: 0 0 20px 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .keyDataContent .kdIconWrap {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        box-sizing: border-box;
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .keyDataContent .kdDetailWrap {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        padding: 0;
+        width: 80%;
+        box-sizing: border-box;
+        p {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            a {
+                margin: 0;
+                padding: 0 0 0 5px;
+            }
+        }
+        span {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+    }
+
+    .keyDataContent .navIcon {
+        width: 16px;
+        a {
+            width: 100%;
+            box-sizing: border-box;
+            img {
+                width: 100%;
+            }
+        }
+    } //Network Info
+    .NetworkDataWrapper {
+        padding: 20px;
+        .NetworkDataContent {
+            width: 100%;
+            @include flexbox();
+            @include flex-direction(row);
+            @include justify-content(flex-start);
+            @include align-items(center);
+            margin: 0 0 20px 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .NetworkDataContent .ndIconWrap {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        box-sizing: border-box;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .NetworkDataContent .ndDetailWrap {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(flex-start);
+        padding: 0;
+        width: 80%;
+        box-sizing: border-box;
+        a {
+            margin: 0;
+            padding: 0 0 0 5px;
+            word-break: break-all;
+        }
+        span {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            padding: 0 0 0 5px;
+        }
+    } //Work Experience
+    .WorkExpWrapper {
+    	padding:20px;
+        .WorkExpContent {
+            width: 100%;
+            padding: 20px;
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(flex-start);
+            @include align-items(flex-start);
+            margin: 0 0 0 0;
+            box-sizing: border-box;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .WorkExpContent .WorkRole {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        @include flexbox();
+        @include flex-direction(row);
+        @include justify-content(flex-start);
+        @include align-items(flex-start);
+        margin: 0 0 3px 0;
+        box-sizing: border-box;
+        position: relative;
+        h2 {
+            margin: 0 0 0 0;
+            padding: 0;
+        }
+        img {
+            width: 35px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .WorkExpContent .workExpTag {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        @include flexbox();
+        @include flex-direction(row);
+        @include justify-content(flex-start);
+        @include align-items(flex-start);
+        margin: 0 0 3px 0;
+        box-sizing: border-box;
+        .workExpTagName {
+            padding: 0 15px;
+            position: relative;
+            &:first-child {
+                padding-left: 0px;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                margin-top: -5px;
+                width: 1px;
+                height: 10px;
+            }
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .WorkExpContent .workExpDate {
+        .workexpDateContent {
+            margin: 0 0 15px 0;
+            padding: 0;
+        }
+    }
+
+    .WorkExpContent .workExpDesc {
+        width: 100%;
+        p {
+            margin: 0 0 15px 0;
+            padding: 0;
+        }
+        ul {
+            margin: 0;
+            padding: 0 20px;
+            width: 100%;
+            box-sizing: border-box;
+            li {
+                margin: 0 0 5px;
+                padding: 0;
+            }
+        }
+    } 
+    //TRANSACTION HISTORY
+    .TransactionHistoryWrapper {
+        .TransactionHistoryContent {
+            width: 100%;
+            padding: 20px;
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(flex-start);
+            @include align-items(flex-start);
+            margin: 0 0 0 0;
+            border-top: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    .TransactionHistoryContent .TransactionId {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        @include flexbox();
+        @include flex-direction(row);
+        @include justify-content(flex-start);
+        @include align-items(flex-start);
+        margin: 0 0 3px 0;
+        box-sizing: border-box;
+        position: relative;
+        h2 {
+            margin: 0 0 0 0;
+            padding: 0;
+            width: 86px;
+  			height: 24px;
+ 		  	font-size: 18px;
+  			font-weight: bold;
+  			color: #545454;
+        }
+    }
+    
+    
+    .TransactionHistoryContent .TransactionType {
+        font-size: 10px;
+    	background-color: #750cb9;
+    	margin-top: 10px;
+    	width: 68px;
+    	border-radius: 12px;
+    	font-weight: bold;
+    	line-height: 2;
+    	text-align: center;
+    	color: #ffffff;
+    	text-transform: uppercase;
+    }
+    
+     .TransactionHistoryContent .TransactionDetail {
+        font-size: 13px;
+    	color: #555555;
+    	margin-top: 5px;
+    	width: 100%;
+    	&.textRight{
+    		text-align: right;
+    		color: #9fadb8;
+    	}
+    	
+    	.TransactionDetailSpan {
+    	font-weight: bold;
+    	}
+    }
+    
+    
+    
+    //ACTIVITY LOG
+    .FilterWrap {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0 0 10px 0;
+    }
+
+    .ActivityTagWrap {
+        @include flexbox();
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        padding: 15px;
+        &.ActivityTabFunc {
+            +section.cmTabContent {
+                display: block;
+            }
+        }
+    }
+
+    a.ActivityTag {
+        padding: 3px 9px;
+        margin: 0;
+        margin-right: 5px;
+        margin-bottom: 2px;
+        display: block;
+        &:last-child {
+            margin-right: 0px;
+        }
+        p {
+            padding: 0;
+            margin: 0;
+            span {
+                padding: 0;
+                margin: 0;
+                margin-right: 3px;
+            }
+        }
+    }
+
+    .EventTabWrap {
+        @include flexbox();
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        padding: 0;
+        &.ActivityTabFunc {
+            +section.cmTabContent {
+                display: block;
+            }
+        }
+    }
+
+    a.EventTag {
+        padding: 15px;
+        margin: 0;
+        margin-right: 5px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+        p {
+            padding: 0;
+            margin: 0;
+            margin-right: 3px;
+        }
+    } //LEADS
+    //key updates
+    .leadsWrapper {
+        padding: 20px;
+        .leadsContent {
+            width: 100%;
+            @include flexbox();
+            @include flex-direction(row);
+            @include justify-content(flex-start);
+            @include align-items(flex-start);
+            @include flex-wrap(wrap);
+            margin: 0 0 20px 0;
+            position: relative;
+            box-sizing: border-box;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .leadsContent .leadsIconWrap {
+        width: 15%;
+        height: auto;
+        border-radius: 50%;
+        margin-right: 10px;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        box-sizing: border-box;
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .leadsContent .leadsDetailWrap {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(flex-start);
+        padding: 0;
+        width: 70%;
+        box-sizing: border-box;
+        padding-left: 5px;
+        &.lDWidth80 {
+            width: 75%;
+        }
+        a {
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        span {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+    }
+
+    .leadsContent .navIcon {
+        width: 16px;
+        margin-top: 15px;
+        a {
+            width: 100%;
+            box-sizing: border-box;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .detailviewIcon {
+        width: 35px;
+        a {
+            width: 100%;
+            box-sizing: border-box;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .LeadTagWrap {
+        @include flexbox();
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        padding: 0;
+        width: 100%;
+    }
+
+    .leadsContent .TagBottom {
+        padding: 3px 9px;
+        margin: 0;
+        margin-left: 15px;
+        margin-top: 5px;
+        p {
+            padding: 0;
+            margin: 0;
+        }
+    } //social wrap
+    .cmSocialWrap {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .cmLinkSec {
+        @include flexbox();
+        @include flex-direction(row);
+        @include justify-content(center);
+        @include align-items(center);
+        a {
+            margin-right: 10px;
+            padding: 0;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    .cmLetsChat {
+        margin: 0;
+        padding: 20px 0 10px;
+        a {
+            padding: 10px 20px;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 5px;
+                height: 5px;
+                margin-top: -3px;
+                margin-left: 8px;
+            }
+        }
+    } //connection wrap
+    .cmConnectionWrapper {
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+        .cmConnectionContent {
+            width: 100%;
+            @include flexbox();
+            @include flex-direction(row);
+            @include justify-content(flex-start);
+            @include align-items(center);
+            width: 100%;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            border-bottom: solid 1px #e0e2e8;
+            &:last-child {
+                border-bottom: 0px;
+            }
+        }
+    }
+
+    .cmConnectionContent .cmCIconWrap {
+        width: 20%;
+        margin-right: 10px;
+        img {
+            width: 100%;
+        }
+    }
+
+    .cmConnectionContent .cmCDetailWrap {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        padding: 0;
+        width: 80%;
+        a {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        span {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+    } //seemore Wrap
+    .seeMoreWrap {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        @include flexbox();
+
+        a {
+            padding: 15px;
+            margin: 0;
+            width: 100%;
+            display: block;
+        }
+    } //PROGRESS PERCNTAGE
+    .completePerc {
+        margin-top: 8px;
+        position: relative;
+        width: 32px;
+        height: 32px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .radial-inner-bg {
+        width: 26px;
+        height: 26px;
+        top: 0;
+        left: 0;
+        margin-top: 3px;
+        margin-left: 3px;
+        position: absolute;
+    }
+
+    .cmAccordionHeader {
+        display: none;
+    } //Compaigns Table
+    .compaignTable {
+        margin: 0;
+        min-width: 100%;
+        width: 100%;
+
+        th {
+            display: none;
+        }
+        td {
+            display: block;
+            &:first-child {
+                padding-top: .5em;
+            }
+            &:last-child {
+                padding-bottom: .5em;
+            }
+            &:before {
+                content: attr(data-th) ": ";
+                font-weight: bold;
+                width: 50%;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+        th,
+        td {
+            text-align: left;
+        }
+
+        overflow: hidden;
+
+        th,
+        td {
+            margin: .5em 1em;
+        }
+    }
+
+    @media (min-width: 480px) {
+        .compaignTable td:before {
+            display: none;
+        }
+    }
+
+    @media (min-width: 480px) {
+        .compaignTable {
+            th,
+            td {
+                display: table-cell;
+                padding: .25em .5em;
+            }
+            th:first-child,
+            td:first-child {
+                padding-left: 1em !important;
+                width: 50%;
+            }
+            th:nth-child(2),
+            td:nth-child(2) {
+                padding-left: 0;
+                width: 20%;
+            }
+            th:last-child,
+            td:last-child {
+                padding-right: 0;
+                width: 50px;
+                padding-left: 0 !important;
+            }
+        }
+    }
+
+    @media (min-width: 480px) {
+        .compaignTable {
+            th,
+            td {
+                padding: 1em 0!important;
+            }
+        }
+        .compaignTable td a {
+            width: 50%;
+
+            display: inline-block;
+        }
+    } //MOBILE VIEW
+    .aui .cmContentAccordion.toggler-content-collapsed {
+        display: block;
+    }
+
+    @include screen (320px, 480px) {
+        .compaignTable td p {
+            display: block;
+            margin: 0 0 0 auto;
+            width: 50%;
+        }
+        .compaignTable td a {
+            display: inline-block;
+            width: 50%;
+        }
+        
+    }
+    @include screen (320px, 480px, landscape) {
+        .compaignTable td p {
+            display: block;
+            margin: 0 0 0 0;
+            width: 100%;
+        }
+        .compaignTable td a {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+@include screen (320px, 768px) {
+ .cm_bgwrapper {
+    margin: 30px 0;
+        }
+}   
+    @include screen (320px, 767px) {
+        section.cmContentAccordion {
+            margin: 20px;
+        }
+
+
+        .main-content {
+            margin-top: 62px;
+        }
+        .aui .dockbar-ready .main-content {
+            margin-top: 19px;
+        }
+        .keyHeading {
+            display: none;
+        }
+        .cmHeader {
+            min-height: 200px;
+            h2 {
+                max-width: 78%;
+            }
+        }
+        .cmHeader-profileimg {
+            margin-bottom: 0px;
+        }
+        .cmWrapper {
+            @include flex-direction(column);
+            padding: 0;
+        }
+        .spNav-sidebar {
+            display: none;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .cmMaincontent {
+            width: 100%;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div.cmSideContent {
+            padding: 0;
+            display: block !important;
+            &.toggler-content-expanded {
+                display: block !important;
+            }
+        }
+        .cmRightcontent {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .cmHeader .ExportSec {
+            margin-right: 10px;
+        }
+        .leadsContent .leadsDetailWrap {
+            width: 70%;
+        }
+        .leadsWrapper .leadsContent {
+            @include align-items(flex-start);
+        }
+        .leadsContent .leadsDetailWrap.lDWidth80 {
+            width: 72%;
+        }
+        .LeadTagWrap {
+            @include justify-content(flex-start);
+            margin-top: 0;
+        }
+        .WorkExpContent .workExpTag {
+            @include flex-direction(column);
+            .workExpTagName {
+                padding: 0px 0 0 10px;
+                &:after {
+                    left: 0;
+                }
+                &:first-child {
+                    padding-left: 10px;
+                }
+                &:last-child {
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+        } //Accordion 
+        .cmAccordionHeader {
+            display: block;
+            position: relative;
+            a {
+                padding: 15px 20px;
+                width: 100%;
+                display: block;
+
+                position: relative;
+            }
+            &.toggler-header-expanded {
+                &:after {
+                    position: absolute;
+
+                    top: 50%;
+                    margin-top: -12px;
+                    right: 0;
+                    margin-right: 20px;
+                }
+            }
+            &.toggler-header-collapsed {
+
+                &:after {
+                    position: absolute;
+
+                    top: 50%;
+                    margin-top: -10px;
+                    right: 0;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .aui .cmContentAccordion.toggler-content-collapsed {
+            display: none;
+        }
+        .leadsContent .navIcon {
+            width: 15px;
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+        .leadsContent .TagBottom {
+            margin-top: 5px!important;
+            margin-left: 0!important;
+        }
+        section#all-opportunities {
+            margin: 20px;
+        }
+        .detailviewIcon {
+            display: inline-block;
+            width: 20px;
+        }
+        section#status {
+            margin: 20px;
+        }
+    }
+
+    @include screen (320px, 767px, landscape) {
+        section.cmContentAccordion {
+            margin: 20px;
+        }
+        .main-content {
+            margin-top: 62px;
+        }
+        .aui .dockbar-ready .main-content {
+            margin-top: 19px;
+        }
+        .keyHeading {
+            display: none;
+        }
+        .cmHeader {
+            min-height: 200px;
+            h2 {
+                max-width: 78%;
+            }
+        }
+        .cmHeader-profileimg {
+            margin-bottom: 0px;
+        }
+        .cmWrapper {
+            @include flex-direction(column);
+            padding: 0;
+        }
+        .spNav-sidebar {
+            display: none;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .cmMaincontent {
+            width: 100%;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div.cmSideContent {
+            padding: 0;
+            display: block !important;
+            &.toggler-content-expanded {
+                display: block !important;
+            }
+        }
+        .cmRightcontent {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .cmHeader .ExportSec {
+            margin-right: 10px;
+        }
+        .leadsContent .leadsDetailWrap {
+            width: 70%;
+        }
+        .leadsWrapper .leadsContent {
+            @include align-items(flex-start);
+        }
+        .leadsContent .leadsDetailWrap.lDWidth80 {
+            width: 72%;
+        }
+        .LeadTagWrap {
+            @include justify-content(flex-start);
+            margin-top: 0;
+        }
+        .WorkExpContent .workExpTag {
+            @include flex-direction(column);
+            .workExpTagName {
+                padding: 0px 0 0 10px;
+                &:after {
+                    left: 0;
+                }
+                &:first-child {
+                    padding-left: 10px;
+                }
+                &:last-child {
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+        } //Accordion 
+        .cmAccordionHeader {
+            display: block;
+            position: relative;
+            a {
+                padding: 15px 20px;
+                width: 100%;
+                display: block;
+
+                position: relative;
+            }
+            &.toggler-header-expanded {
+                &:after {
+                    position: absolute;
+
+                    top: 50%;
+                    margin-top: -12px;
+                    right: 0;
+                    margin-right: 20px;
+                }
+            }
+            &.toggler-header-collapsed {
+
+                &:after {
+                    position: absolute;
+
+                    top: 50%;
+                    margin-top: -10px;
+                    right: 0;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .aui .cmContentAccordion.toggler-content-collapsed {
+            display: none;
+        }
+        .leadsContent .navIcon {
+            width: 15px;
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+        .leadsContent .TagBottom {
+            margin-top: 5px!important;
+            margin-left: 0!important;
+        }
+        section#all-opportunities {
+            margin: 20px;
+        }
+        .detailviewIcon {
+            display: inline-block;
+            width: 35px;
+        }
+    }
+
+    @include screen (768px, 1024px, portrait) {
+        section.cmContentAccordion {
+            margin: 20px;
+        }
+        .main-content {
+            margin-top: 62px;
+        }
+        .aui .dockbar-ready .main-content {
+            margin-top: 19px;
+        }
+        .main-content {
+            margin-top: 62px;
+        }
+        .aui .docbar-ready .main-content {
+            margin-top: 62px;
+        }
+        .keyHeading {
+            display: none;
+        }
+        .cmHeader {
+            min-height: 200px;
+            h2 {
+                max-width: 78%;
+            }
+        }
+        .cmHeader-profileimg {
+            margin-bottom: 0px;
+        }
+        .cmWrapper {
+            @include flex-direction(column);
+            padding: 0;
+        }
+        .spNav-sidebar {
+            display: none;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .cmMaincontent {
+            width: 100%;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div.cmSideContent {
+            padding: 0;
+            display: block !important;
+            &.toggler-content-expanded {
+                display: block !important;
+            }
+        }
+        .cmRightcontent {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .cmHeader .ExportSec {
+            margin-right: 0;
+            right: 20px;
+        }
+        .leadsContent .leadsDetailWrap {
+            width: 70%;
+        }
+        .leadsWrapper .leadsContent {
+            @include align-items(flex-start);
+        }
+        .leadsContent .leadsDetailWrap.lDWidth80 {
+            width: 72%;
+        }
+        .LeadTagWrap {
+            @include justify-content(flex-start);
+            margin-top: 0;
+        }
+        .WorkExpContent .workExpTag {
+            @include flex-direction(column);
+            .workExpTagName {
+                padding: 0px 0 0 10px;
+                &:after {
+                    left: 0;
+                }
+                &:first-child {
+                    padding-left: 10px;
+                }
+                &:last-child {
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+        } //Accordion 
+        .cmAccordionHeader {
+            display: block;
+            position: relative;
+            a {
+                padding: 15px 20px;
+                width: 100%;
+                display: block;
+
+                position: relative;
+            }
+            &.toggler-header-expanded {
+                &:after {
+                    position: absolute;
+
+                    top: 50%;
+                    margin-top: -12px;
+                    right: 0;
+                    margin-right: 20px;
+                }
+            }
+            &.toggler-header-collapsed {
+
+                &:after {
+                    position: absolute;
+
+                    top: 50%;
+                    margin-top: -10px;
+                    right: 0;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .aui .cmContentAccordion.toggler-content-collapsed {
+            display: none;
+        }
+
+        .leadsContent .navIcon {
+            width: 15px;
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+        section#all-opportunities {
+            margin: 20px;
+        }
+        section#status {
+            margin: 20px;
+        }
+
+        .leadsContent .TagBottom {
+            margin-top: 5px!important;
+            margin-left: 0!important;
+        }
+    }
+
+    @include screen (768px, 1024px, landscape) {
+        .cmWrapper {
+            padding: 20px 40px;
+        }
+        .main-content {
+            margin-top: 62px;
+        }
+        .aui .dockbar-ready .main-content {
+            margin-top: 61px;
+        }
+        .cmHeader .ExportSec {
+            right: 40px;
+        }
+    } //tabs
+    section.cmTabContent {
+        display: none;
+        html.no-js & {
+            display: block;
+        }
+    }
+
+    div.cmSideContent {
+        display: none;
+        html.no-js & {
+            display: block;
+        }
+    } //IEEdge, IE11, IE10, Firefox
+    .aui.chrome .spNav-sidebar-heading h2 {
+        padding: 15px 20px !important;
+    }
+
+    .aui.ie .spNav-sidebar-heading h2 {
+        padding: 15px 20px !important;
+    }
+
+    .aui.firefox .spNav-sidebar-heading h2 {
+        padding: 15px 20px !important;
+    }
+
+    .aui.safari .spNav-sidebar-heading h2 {
+        padding: 15px 20px !important;
+    }
+
+    .aui.chrome .spNav-sidebarnav h3 {
+        padding: 5px 0 10px 0;
+    }
+
+    .aui.ie .spNav-sidebarnav h3 {
+        padding: 5px 0 10px 0;
+    }
+
+    .aui.safari .spNav-sidebarnav h3 {
+        padding: 5px 0 10px 0;
+    }
+
+    .aui.firefox .spNav-sidebarnav h3 {
+        padding: 5px 0 10px 0;
+    }
+
+    .aui.chrome .keyHeading h2 {
+        padding: 10px 10px;
+    }
+
+    .aui.ie .keyHeading h2 {
+        padding: 10px 10px;
+    }
+
+    .aui.safari .keyHeading h2 {
+        padding: 10px 10px;
+    }
+
+    .aui.firefox .keyHeading h2 {
+        padding: 10px 10px;
+    }
+
+    .aui.ie10 body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .aui.ie .leadsContent .leadsIconWrap img {
+        height: 57px;
+    }
+    
+    
+    
+    .aui .rightSide {
+  .contactInfo {
+    li a {
+      display: block;
+      margin-left: 24px;
+      margin-top: 5px;
+    }
+    .contactNumber a {
+      cursor: none;
+      color: #333;
+      font-weight: 700;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .WorkExpWrapper .WorkExpContent {
+    background: #f6f7fb;
+    border-bottom: 0;
+    margin-top: 10px;
+    position: relative;
+    h2 {
+      background: url(../images/single-doc.png) no-repeat;
+      padding-left: 25px;
+    }
+    .size-date, .WorkRole {
+      display: block;
+    }
+    span {
+      color: #59647b;
+      font-size: 12px;
+      font-weight: 300;
+      margin-right: 20px;
+      margin-top: 10px;
+    }
+    a {
+      background: url(../images/download.png) no-repeat;
+      width: 11px;
+      height: 11px;
+      position: absolute;
+      top: 20px;
+      right: 0;
+    }
+  }
+  #sponsor-details-wrapper {
+    padding: 5px 20px 20px 20px;
+  }
+  .Sponsor {
+    h2 {
+      color: #59647b;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .WorkRole ul li {
+      &:first-child {
+        width: 30%;
+      }
+      &:last-child {
+        width: 68%;
+      }
+      display: inline-block;
+      font-size: 14px;
+      color: #333;
+    }
+  }
+  .WorkExpContent {
+  	.WorkRole{
+  		.invi-img{
+  			background:url(../images/invigilator-new.png) no-repeat;
+  			width:18px;
+  			height:18px;
+  			margin-top:38px;
+  			float:left;
+  		}
+  		.designation{
+  			float:left;
+  			margin-left:40px;
+  			strong{
+  				text-transform:uppercase;
+  			}
+  			h2{
+  				background:none;
+  				padding-left:0;
+  				margin-bottom:13px;
+  			}
+  		}
+  		ul{
+  			margin-top:10px;
+  			li{
+  				display: inline-block;
+  			}
+  		}
+  	}
+  }
+}

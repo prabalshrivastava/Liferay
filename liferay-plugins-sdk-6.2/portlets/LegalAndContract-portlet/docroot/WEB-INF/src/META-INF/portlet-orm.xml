@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.legalandcontract.model.impl.AgencyModelImpl">
+		<attributes>
+			<id name="spAgencyId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="number">
+				<column name="NUMBER_" />
+			</basic>
+			<basic name="country" />
+			<basic name="name" />
+			<basic name="reference" />
+			<basic name="startDate" />
+			<basic name="endDate" />
+			<basic name="address" />
+			<basic name="remarks" />
+			<basic name="status" />
+			<basic name="customField1" />
+			<basic name="customField2" />
+			<basic name="customField3" />
+			<basic name="customDate1">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="customDate2">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="customDate3">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="version" />
+			<basic name="rootSpAgencyId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.legalandcontract.model.impl.ClassMasterModelImpl">
+		<attributes>
+			<id name="spClassId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="code">
+				<column name="CODE_" />
+			</basic>
+			<basic name="country" />
+			<basic name="filedBy" />
+			<basic name="customField1" />
+			<basic name="customField2" />
+			<basic name="customDate1">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="customDate2">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="version" />
+			<basic name="rootSpClassId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.legalandcontract.model.impl.LitigationModelImpl">
+		<attributes>
+			<id name="spLitigationId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="country" />
+			<basic name="filedBy" />
+			<basic name="filedOn">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="filedAtCountry" />
+			<basic name="claimsRemarks" />
+			<basic name="responseDeadline">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="actualResponseDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="status" />
+			<basic name="customField1" />
+			<basic name="customField2" />
+			<basic name="customField3" />
+			<basic name="customDate1">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="customDate2">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="customDate3">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="legalConfRemarks" />
+			<basic name="version" />
+			<basic name="spTrademarksId" />
+			<basic name="rootSpLitigationId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.legalandcontract.model.impl.RDLModelImpl">
+		<attributes>
+			<id name="spRdlId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="spLitigationId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="responseDeadline">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="claimsRemarks" />
+			<basic name="alertBefore" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.legalandcontract.model.impl.TrademarksModelImpl">
+		<attributes>
+			<id name="spTrademarksId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="registrationNumber" />
+			<basic name="applicationNo" />
+			<basic name="country" />
+			<basic name="trademark" />
+			<basic name="trademarkLocalized" />
+			<basic name="registeredOwner" />
+			<basic name="applicationDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="firstRegistrationDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="renewalDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="goodsServices" />
+			<basic name="pendingComments" />
+			<basic name="spAgencyId" />
+			<basic name="classDescription" />
+			<basic name="legalConfRemarks" />
+			<basic name="workflowStatus" />
+			<basic name="customField1" />
+			<basic name="customField2" />
+			<basic name="customField3" />
+			<basic name="customDate1">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="customDate2">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="customDate3">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="classCodes" />
+			<basic name="version" />
+			<basic name="trademarkType" />
+			<basic name="rootSpTrademarksId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.legalandcontract.model.impl.AgencyImpl" name="Agency">
+		<table name="SPAgency" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.legalandcontract.model.impl.ClassMasterImpl" name="ClassMaster">
+		<table name="SPClassMaster" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.legalandcontract.model.impl.LitigationImpl" name="Litigation">
+		<table name="SPLitigationDetails" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.legalandcontract.model.impl.RDLImpl" name="RDL">
+		<table name="SPLitigationRDL" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.legalandcontract.model.impl.TrademarksImpl" name="Trademarks">
+		<table name="SPTrademarksMaster" />
+		<attributes />
+	</entity>
+</entity-mappings>

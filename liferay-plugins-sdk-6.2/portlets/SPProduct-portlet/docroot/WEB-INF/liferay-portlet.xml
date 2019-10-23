@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_2_0.dtd">
+
+<liferay-portlet-app>
+	<portlet>
+		<portlet-name>Product</portlet-name>
+		<icon>/icon.png</icon>
+		<configuration-action-class>com.liferay.portal.kernel.portlet.DefaultConfigurationAction</configuration-action-class>
+		<indexer-class>com.sambaash.platform.product.indexer.FeeTypeIndexer</indexer-class>
+		<indexer-class>com.sambaash.platform.product.indexer.ProductIndexer</indexer-class>
+		<indexer-class>com.sambaash.platform.product.indexer.ModuleIndexer</indexer-class>
+		<indexer-class>com.sambaash.platform.product.indexer.CourseIndexer</indexer-class>
+		<indexer-class>com.sambaash.platform.product.indexer.CertificateIndexer</indexer-class>
+		<indexer-class>com.sambaash.platform.product.indexer.OutlineIndexer</indexer-class>
+		<indexer-class>com.sambaash.platform.product.indexer.CompetencyIndexer</indexer-class>
+		<indexer-class>com.sambaash.platform.product.indexer.FrameworkIndexer</indexer-class>
+		<friendly-url-mapper-class>com.liferay.portal.kernel.portlet.DefaultFriendlyURLMapper</friendly-url-mapper-class>
+		<friendly-url-mapping>product</friendly-url-mapping>
+		<friendly-url-routes>com/sambaash/platform/routes/product-routes.xml</friendly-url-routes>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<header-portlet-javascript>
+			/js/productSearch.js
+		</header-portlet-javascript>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>product-portlet</css-class-wrapper>
+	</portlet>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>guest</role-name>
+		<role-link>Guest</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>power-user</role-name>
+		<role-link>Power User</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>user</role-name>
+		<role-link>User</role-link>
+	</role-mapper>
+</liferay-portlet-app>

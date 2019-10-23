@@ -1,0 +1,462 @@
+.yui3-widget-bd, .yui3-panel {
+  position: relative !important; }
+
+@media (min-width: 1200px) {
+  .aui .row-fluid .span4 {
+    width: 33%; } }
+.aui .single-input.tooltip {
+  opacity: 1; }
+
+.userprofile-portlet {
+  margin: 40px 0; }
+  .userprofile-portlet .portlet-content {
+    padding-left: 0; }
+  .userprofile-portlet .yui3-panel-content {
+    overflow: hidden;
+    padding: 15px; }
+  .userprofile-portlet .yui3-widget {
+    height: auto; }
+  .userprofile-portlet .yui3-widget-hd {
+    text-align: right;
+    padding: 0 !important; }
+  .userprofile-portlet .yui3-widget-bd {
+    height: auto;
+    overflow-y: auto; }
+    .userprofile-portlet .yui3-widget-bd > div input {
+      width: 100%;
+      padding: 10px 15px;
+      height: auto; }
+    .userprofile-portlet .yui3-widget-bd input[type="checkbox"] {
+      width: 80%; }
+    .userprofile-portlet .yui3-widget-bd input[type="radio"] {
+      width: auto; }
+  .userprofile-portlet .yui3-widget-buttons {
+    display: none; }
+  .userprofile-portlet .userprofile-add-link {
+    text-decoration: none;
+    background: url("../images/add-icon.png");
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    position: absolute;
+    top: 2px;
+    right: 3px; }
+  .userprofile-portlet .userprofile-edit-link {
+    text-decoration: none;
+    background: url("../images/edit-icon.png");
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    margin-left: 5px; }
+  .userprofile-portlet .userprofile-delete-link {
+    text-decoration: none;
+    background: url("../images/delete-icon.png");
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    margin-left: 5px; }
+  .userprofile-portlet .content-title {
+    clear: both;
+    overflow: hidden;
+    padding: 2px 0;
+    display: block;
+    margin: 0;
+    max-height: 21px;
+    min-height: 21px;
+    position: relative; }
+  .userprofile-portlet .datepicker-select-wrapper select {
+    background-position: right 0 center !important;
+    width: 29% !important;
+    margin-left: 2px; }
+  .userprofile-portlet .datepicker-button-wrapper .buttonitem {
+    width: 30px;
+    vertical-align: text-top; }
+  .userprofile-portlet .textedit-input {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 5px 5px 0; }
+  .userprofile-portlet .single-input, .userprofile-portlet .single-input-div {
+    word-wrap: break-word;
+    text-align: justify; }
+  .userprofile-portlet .single-input, .userprofile-portlet .single-input-div, .userprofile-portlet .multiple-input {
+    float: left;
+    margin: 0;
+    width: 100%;
+    padding: 5px !important;
+    line-height: 12pt;
+    vertical-align: middle; }
+  .userprofile-portlet select, .userprofile-portlet .aui-field-input-select, .userprofile-portlet .aui-datepicker-select-wrapper select {
+    background-position: right 9px center !important; }
+
+.update-button {
+  background: url("../images/save-icon.png") no-repeat scroll 0 0/contain;
+  float: right;
+  height: 5px;
+  width: 15px;
+  border: none;
+  vertical-align: top; }
+
+.available_undo, .undo_button {
+  display: inherit;
+  width: 6%;
+  float: right;
+  margin-top: 10px; }
+
+.undo_button, .undo-button {
+  background: url("../images/undo.png") no-repeat scroll left top transparent !important;
+  float: left;
+  width: 20px;
+  border: none; }
+
+.webkit select {
+  height: 35px !important;
+  width: auto; }
+
+.msg_tooltip {
+  display: inline;
+  width: 5%;
+  padding-right: 6px;
+  float: right; }
+
+.userProfileCTA {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  padding: 40px;
+  text-align: center; }
+  .userProfileCTA span.ctaText {
+    margin-bottom: 10px;
+    display: block; }
+  .userProfileCTA a.genCTA {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin: 0 !important; }
+
+.tick, .cross, .loading {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  background-size: 100% 100%;
+  background-origin: content-box;
+  background-clip: content-box;
+  margin-right: 5px; }
+
+.tick {
+  background: url("../images/tick.png") no-repeat scroll left top transparent;
+  float: left; }
+
+.cross {
+  background: url("../images/error.png") no-repeat scroll left top transparent;
+  float: left;
+  margin-right: 0px;
+  width: 16px; }
+
+.loading {
+  background: url("../images/loading_indicator.gif") no-repeat scroll left top transparent;
+  float: left; }
+
+.aui-datepicker-select-wrapper select {
+  width: auto !important; }
+
+.textedit-input-hide {
+  display: none !important; }
+
+.ckeditor_alignRight {
+  display: inline-block; }
+
+.save_button {
+  display: inline-block;
+  float: right;
+  width: 10%;
+  margin-top: 10px; }
+
+.overlay {
+  position: absolute; }
+
+.yui3-calendar {
+  position: absolute;
+  display: inline-block; }
+
+/* .userprofile-portlet input{
+	border: 1px solid #bfbfbf!important;
+    background: #fafafa!important;
+} */
+#workhistory_details {
+  padding-top: 0; }
+
+.workHistory-startDate {
+  display: inline-block;
+  width: 35%;
+  border-right: 1px solid; }
+
+.workHistory-endDate {
+  display: inline-block;
+  margin-left: 35px;
+  width: 40%; }
+
+.workhistory_editAlign {
+  text-align: right; }
+
+#workhistory_add {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  text-align: right;
+  width: 100%; }
+  #workhistory_add a.userprofile-add-link {
+    position: relative !important;
+    top: 0; }
+
+#workHistory {
+  position: relative;
+  width: 93%; }
+  #workHistory .aui-panel-hd {
+    border-style: hidden;
+    border-width: 0; }
+  #workHistory .workhistory-horizontalspacing {
+    margin-bottom: 15px; }
+  #workHistory .workhistory-jobtitle {
+    margin-bottom: 15px; }
+  #workHistory .workhistory-savedata {
+    display: inline-block !important;
+    *display: inline;
+    zoom: 1;
+    width: 20px !important;
+    right: 38px;
+    position: absolute;
+    text-align: right; }
+  #workHistory .workhistory-savedatabutton {
+    display: block;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 67px; }
+    #workHistory .workhistory-savedatabutton .available-saveinfo {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      padding: 0 5px;
+      line-height: 0; }
+      #workHistory .workhistory-savedatabutton .available-saveinfo a {
+        background: url("../images/save-icon.png");
+        width: 14px;
+        height: 14px;
+        background-size: contain; }
+    #workHistory .workhistory-savedatabutton .available_undo {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      padding: 0 10px;
+      line-height: 0; }
+      #workHistory .workhistory-savedatabutton .available_undo a {
+        background: url("../images/undo.png");
+        width: 14px;
+        height: 14px;
+        background-size: contain; }
+    #workHistory .workhistory-savedatabutton a {
+      float: none !important;
+      display: inline-block;
+      *display: inline;
+      zoom: 1; }
+  #workHistory .workhistory-buttonalign {
+    display: none; }
+  #workHistory .workhistory-inputtemp {
+    width: 100%; }
+
+.userjobdetails-input-height {
+  width: 100%;
+  margin-top: 15px;
+  display: inline-block; }
+
+/** Basic Info **/
+#basicInfo .maindivpersonalInfo {
+  display: block;
+  zoom: 1;
+  vertical-align: top; }
+
+.userpersonaldetails-value-full-width {
+  width: 100%; }
+
+.userpersonaldetails-value-Leftfull-width {
+  width: 100%;
+  height: 35px; }
+  .userpersonaldetails-value-Leftfull-width select {
+    background: #f9f9f9; }
+
+.otherBasicInfo .single-input, .otherBasicInfo .single-input-div, .otherBasicInfo .multiple-input {
+  width: 90%; }
+
+#personalInfo, #basicInfo, #webInfo {
+  width: 100%; }
+
+.webkit select {
+  height: 35px !important;
+  padding: 5px;
+  margin-bottom: 5px; }
+
+/** webinfo **/
+.networkinformation-webinfobutton {
+  display: inline-block; }
+
+.networkinformation-webinforpadding {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+#webInfo .groupWidth {
+  margin-bottom: 25px;
+  display: block;
+  width: 100%; }
+  #webInfo .groupWidth div {
+    float: none !important; }
+  #webInfo .groupWidth .content-title div {
+    float: none !important; }
+#webInfo .networkinformation-value {
+  display: inline-block;
+  zoom: 1;
+  width: 80%;
+  vertical-align: middle;
+  padding-bottom: 5px;
+  overflow: auto;
+  white-space: normal;
+  padding-left: 0;
+  padding-top: 5px;
+  word-wrap: break-word; }
+  #webInfo .networkinformation-value a {
+    /* color: $custom-color-95; */
+    text-decoration: none; }
+#webInfo .networkinformation-button {
+  display: inline-block;
+  zoom: 1;
+  width: 18.6%;
+  vertical-align: middle;
+  text-align: right;
+  padding-top: 4px; }
+#webInfo .workhistory-inputuserprofileaction {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  position: relative;
+  vertical-align: middle;
+  width: 80%;
+  padding: 5px 0; }
+  #webInfo .workhistory-inputuserprofileaction input {
+    margin-bottom: 0;
+    width: 100% !important; }
+  #webInfo .workhistory-inputuserprofileaction a {
+    text-decoration: none;
+    background: url("../images/save-icon.png");
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+    position: absolute;
+    top: 15px;
+    left: 119%; }
+  #webInfo .workhistory-inputuserprofileaction .networkinfo-inputfield {
+    display: none; }
+#webInfo .workhistory-inputuserprofile-delete-link {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+  width: 18%;
+  text-align: right; }
+
+/** contact info **/
+#contactInfo {
+  width: 93%; }
+  #contactInfo .yui3-widget-hd {
+    margin-bottom: 5px; }
+  #contactInfo .available_undo {
+    margin: 0; }
+    #contactInfo .available_undo a {
+      text-decoration: none; }
+  #contactInfo .userjobdetails-input-right-align input, #contactInfo .userjobdetails-input-right-align select {
+    opacity: 1;
+    position: inherit; }
+
+.contact_info-savedatabutton {
+  margin-bottom: 7px; }
+
+#contact_info_save {
+  height: 14px;
+  width: 14px;
+  text-decoration: none; }
+
+.contact_info_editAlign {
+  width: 100%;
+  clear: both;
+  float: right; }
+
+.contact-phonedetails-span {
+  display: none !important; }
+
+.usercontactdetails-inputbox-height {
+  clear: both;
+  height: 35px;
+  padding-left: 10px;
+  width: 100%;
+  margin-bottom: 10px; }
+
+/** personal info **/
+.maindivpersonalInfo {
+  margin-bottom: 13px;
+  overflow: hidden;
+  padding-left: 0;
+  padding-top: 0;
+  display: block;
+  zoom: 1;
+  vertical-align: top; }
+
+#location_input {
+  padding-left: 8px; }
+
+#cke_about_container .save_button {
+  width: 5%; }
+
+.personal_info_textarea {
+  width: 81%;
+  height: 12em;
+  margin-right: 10px;
+  float: left;
+  vertical-align: middle;
+  resize: none;
+  padding-left: 8px; }
+
+.personal_info_update_button, .personal_info_input, .personal_info_textarea, .personal_info_combox {
+  vertical-align: middle; }
+
+#about_container a {
+  color: #FFF; }
+
+#about_iconstatus {
+  float: right; }
+
+#about_submit_button {
+  border: none;
+  padding: 5px 12px 5px 5px;
+  margin-left: 8px; }
+
+.available_undo, .undo_button {
+  display: inherit;
+  width: 6%;
+  float: right;
+  margin-top: 10px; }
+
+#gender_text {
+  display: none; }
+

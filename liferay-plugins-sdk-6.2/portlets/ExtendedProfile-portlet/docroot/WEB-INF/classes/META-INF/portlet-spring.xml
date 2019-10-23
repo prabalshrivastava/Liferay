@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.extendedprofile.service.SPCertificationLocalService" class="com.sambaash.platform.srv.extendedprofile.service.impl.SPCertificationLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.extendedprofile.service.persistence.SPCertificationPersistence" class="com.sambaash.platform.srv.extendedprofile.service.persistence.SPCertificationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.extendedprofile.service.SPCompetencyLocalService" class="com.sambaash.platform.srv.extendedprofile.service.impl.SPCompetencyLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.extendedprofile.service.persistence.SPCompetencyPersistence" class="com.sambaash.platform.srv.extendedprofile.service.persistence.SPCompetencyPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.extendedprofile.service.SPJobRoleLocalService" class="com.sambaash.platform.srv.extendedprofile.service.impl.SPJobRoleLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.extendedprofile.service.persistence.SPJobRolePersistence" class="com.sambaash.platform.srv.extendedprofile.service.persistence.SPJobRolePersistenceImpl" parent="basePersistence" />
+</beans>

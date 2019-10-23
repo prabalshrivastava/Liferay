@@ -1,0 +1,362 @@
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package com.sambaash.platform.srv.spservices.service;
+
+import com.liferay.portal.service.ServiceWrapper;
+
+/**
+ * Provides a wrapper for {@link MembershipPackageLocalService}.
+ *
+ * @author gauravvijayvergia
+ * @see MembershipPackageLocalService
+ * @generated
+ */
+public class MembershipPackageLocalServiceWrapper
+	implements MembershipPackageLocalService,
+		ServiceWrapper<MembershipPackageLocalService> {
+	public MembershipPackageLocalServiceWrapper(
+		MembershipPackageLocalService membershipPackageLocalService) {
+		_membershipPackageLocalService = membershipPackageLocalService;
+	}
+
+	/**
+	* Adds the membership package to the database. Also notifies the appropriate model listeners.
+	*
+	* @param membershipPackage the membership package
+	* @return the membership package that was added
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	public com.sambaash.platform.srv.spservices.model.MembershipPackage addMembershipPackage(
+		com.sambaash.platform.srv.spservices.model.MembershipPackage membershipPackage)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.addMembershipPackage(membershipPackage);
+	}
+
+	/**
+	* Creates a new membership package with the primary key. Does not add the membership package to the database.
+	*
+	* @param mpId the primary key for the new membership package
+	* @return the new membership package
+	*/
+	@Override
+	public com.sambaash.platform.srv.spservices.model.MembershipPackage createMembershipPackage(
+		long mpId) {
+		return _membershipPackageLocalService.createMembershipPackage(mpId);
+	}
+
+	/**
+	* Deletes the membership package with the primary key from the database. Also notifies the appropriate model listeners.
+	*
+	* @param mpId the primary key of the membership package
+	* @return the membership package that was removed
+	* @throws PortalException if a membership package with the primary key could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	public com.sambaash.platform.srv.spservices.model.MembershipPackage deleteMembershipPackage(
+		long mpId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.deleteMembershipPackage(mpId);
+	}
+
+	/**
+	* Deletes the membership package from the database. Also notifies the appropriate model listeners.
+	*
+	* @param membershipPackage the membership package
+	* @return the membership package that was removed
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	public com.sambaash.platform.srv.spservices.model.MembershipPackage deleteMembershipPackage(
+		com.sambaash.platform.srv.spservices.model.MembershipPackage membershipPackage)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.deleteMembershipPackage(membershipPackage);
+	}
+
+	@Override
+	public com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery() {
+		return _membershipPackageLocalService.dynamicQuery();
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns the matching rows.
+	*
+	* @param dynamicQuery the dynamic query
+	* @return the matching rows
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	@SuppressWarnings("rawtypes")
+	public java.util.List dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.dynamicQuery(dynamicQuery);
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns a range of the matching rows.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link com.sambaash.platform.srv.spservices.model.impl.MembershipPackageModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param dynamicQuery the dynamic query
+	* @param start the lower bound of the range of model instances
+	* @param end the upper bound of the range of model instances (not inclusive)
+	* @return the range of matching rows
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	@SuppressWarnings("rawtypes")
+	public java.util.List dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery, int start,
+		int end) throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.dynamicQuery(dynamicQuery, start,
+			end);
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns an ordered range of the matching rows.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link com.sambaash.platform.srv.spservices.model.impl.MembershipPackageModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param dynamicQuery the dynamic query
+	* @param start the lower bound of the range of model instances
+	* @param end the upper bound of the range of model instances (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching rows
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	@SuppressWarnings("rawtypes")
+	public java.util.List dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery, int start,
+		int end,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.dynamicQuery(dynamicQuery, start,
+			end, orderByComparator);
+	}
+
+	/**
+	* Returns the number of rows that match the dynamic query.
+	*
+	* @param dynamicQuery the dynamic query
+	* @return the number of rows that match the dynamic query
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	public long dynamicQueryCount(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.dynamicQueryCount(dynamicQuery);
+	}
+
+	/**
+	* Returns the number of rows that match the dynamic query.
+	*
+	* @param dynamicQuery the dynamic query
+	* @param projection the projection to apply to the query
+	* @return the number of rows that match the dynamic query
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	public long dynamicQueryCount(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery,
+		com.liferay.portal.kernel.dao.orm.Projection projection)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.dynamicQueryCount(dynamicQuery,
+			projection);
+	}
+
+	@Override
+	public com.sambaash.platform.srv.spservices.model.MembershipPackage fetchMembershipPackage(
+		long mpId) throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.fetchMembershipPackage(mpId);
+	}
+
+	/**
+	* Returns the membership package with the primary key.
+	*
+	* @param mpId the primary key of the membership package
+	* @return the membership package
+	* @throws PortalException if a membership package with the primary key could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	public com.sambaash.platform.srv.spservices.model.MembershipPackage getMembershipPackage(
+		long mpId)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.getMembershipPackage(mpId);
+	}
+
+	@Override
+	public com.liferay.portal.model.PersistedModel getPersistedModel(
+		java.io.Serializable primaryKeyObj)
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.getPersistedModel(primaryKeyObj);
+	}
+
+	/**
+	* Returns a range of all the membership packages.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link com.sambaash.platform.srv.spservices.model.impl.MembershipPackageModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param start the lower bound of the range of membership packages
+	* @param end the upper bound of the range of membership packages (not inclusive)
+	* @return the range of membership packages
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	public java.util.List<com.sambaash.platform.srv.spservices.model.MembershipPackage> getMembershipPackages(
+		int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.getMembershipPackages(start, end);
+	}
+
+	/**
+	* Returns the number of membership packages.
+	*
+	* @return the number of membership packages
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	public int getMembershipPackagesCount()
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.getMembershipPackagesCount();
+	}
+
+	/**
+	* Updates the membership package in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
+	*
+	* @param membershipPackage the membership package
+	* @return the membership package that was updated
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	public com.sambaash.platform.srv.spservices.model.MembershipPackage updateMembershipPackage(
+		com.sambaash.platform.srv.spservices.model.MembershipPackage membershipPackage)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.updateMembershipPackage(membershipPackage);
+	}
+
+	/**
+	* Returns the Spring bean ID for this bean.
+	*
+	* @return the Spring bean ID for this bean
+	*/
+	@Override
+	public java.lang.String getBeanIdentifier() {
+		return _membershipPackageLocalService.getBeanIdentifier();
+	}
+
+	/**
+	* Sets the Spring bean ID for this bean.
+	*
+	* @param beanIdentifier the Spring bean ID for this bean
+	*/
+	@Override
+	public void setBeanIdentifier(java.lang.String beanIdentifier) {
+		_membershipPackageLocalService.setBeanIdentifier(beanIdentifier);
+	}
+
+	@Override
+	public java.lang.Object invokeMethod(java.lang.String name,
+		java.lang.String[] parameterTypes, java.lang.Object[] arguments)
+		throws java.lang.Throwable {
+		return _membershipPackageLocalService.invokeMethod(name,
+			parameterTypes, arguments);
+	}
+
+	@Override
+	public java.util.List<com.sambaash.platform.srv.spservices.model.MembershipPackage> findByMembershipPackageName(
+		java.lang.String name)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.findByMembershipPackageName(name);
+	}
+
+	@Override
+	public java.util.List<com.sambaash.platform.srv.spservices.model.MembershipPackage> findByMembershipPackageName(
+		java.lang.String name, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.findByMembershipPackageName(name,
+			start, end);
+	}
+
+	@Override
+	public java.util.List<com.sambaash.platform.srv.spservices.model.MembershipPackage> findByRoleId(
+		java.lang.String extra1)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.findByRoleId(extra1);
+	}
+
+	@Override
+	public java.util.List<com.sambaash.platform.srv.spservices.model.MembershipPackage> findByRoleId(
+		java.lang.String extra1, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.findByRoleId(extra1, start, end);
+	}
+
+	@Override
+	public java.util.List<com.sambaash.platform.srv.spservices.model.MembershipPackage> findByMembershipPackageType(
+		java.lang.String type)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.findByMembershipPackageType(type);
+	}
+
+	@Override
+	public java.util.List<com.sambaash.platform.srv.spservices.model.MembershipPackage> findByMembershipPackageType(
+		java.lang.String type, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _membershipPackageLocalService.findByMembershipPackageType(type,
+			start, end);
+	}
+
+	/**
+	 * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
+	 */
+	public MembershipPackageLocalService getWrappedMembershipPackageLocalService() {
+		return _membershipPackageLocalService;
+	}
+
+	/**
+	 * @deprecated As of 6.1.0, replaced by {@link #setWrappedService}
+	 */
+	public void setWrappedMembershipPackageLocalService(
+		MembershipPackageLocalService membershipPackageLocalService) {
+		_membershipPackageLocalService = membershipPackageLocalService;
+	}
+
+	@Override
+	public MembershipPackageLocalService getWrappedService() {
+		return _membershipPackageLocalService;
+	}
+
+	@Override
+	public void setWrappedService(
+		MembershipPackageLocalService membershipPackageLocalService) {
+		_membershipPackageLocalService = membershipPackageLocalService;
+	}
+
+	private MembershipPackageLocalService _membershipPackageLocalService;
+}

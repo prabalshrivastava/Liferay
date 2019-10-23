@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.extendedprofile.model.SPCertification">
+		<field name="classPk" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="certificationId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.extendedprofile.model.SPCompetency">
+		<field name="classpk" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="categoryId" type="long" />
+		<field name="competencyId" type="long" />
+		<field name="competencyLevelId" type="long" />
+		<field name="belongsToJobRole" type="long" />
+		<field name="publicView" type="boolean" />
+	</model>
+	<model name="com.sambaash.platform.srv.extendedprofile.model.SPJobRole">
+		<field name="spJobRoleId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="functionalGroupId" type="long" />
+		<field name="JobLevelId" type="long" />
+		<field name="careerPathId" type="long" />
+	</model>
+</model-hints>

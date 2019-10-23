@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.spsocialprofile.model.impl.ExamBodyUserModelImpl">
+		<attributes>
+			<id name="examBodyUserId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="emailAddress" />
+			<basic name="examBody" />
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<transient name="examBodyUserUuid" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spsocialprofile.model.impl.SocialProfileModelImpl">
+		<attributes>
+			<id name="userId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="userType" />
+			<basic name="memberPackage" />
+			<basic name="userRegistrationStatus" />
+			<basic name="classPK" />
+			<basic name="location" />
+			<basic name="profileViewCount" />
+			<basic name="interest" />
+			<basic name="honors" />
+			<basic name="groupAssociation" />
+			<basic name="skillsQualification" />
+			<basic name="title" />
+			<basic name="trainingEducation" />
+			<basic name="about" />
+			<basic name="documentId" />
+			<basic name="userInfo" />
+			<basic name="status" />
+			<basic name="twitterId" />
+			<basic name="linkedinId" />
+			<basic name="yahooId" />
+			<basic name="googleId" />
+			<basic name="facebookAuthToken" />
+			<basic name="openIdAuthToken" />
+			<basic name="twitterAuthToken" />
+			<basic name="linkedinAuthToken" />
+			<basic name="yahooAuthToken" />
+			<basic name="googleAuthToken" />
+			<basic name="facebookAuthSecret" />
+			<basic name="openIdAuthSecret" />
+			<basic name="twitterAuthSecret" />
+			<basic name="linkedinAuthSecret" />
+			<basic name="yahooAuthSecret" />
+			<basic name="googleAuthSecret" />
+			<basic name="loginCount" />
+			<basic name="updateInterestsStatus" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spsocialprofile.model.impl.SocialProfileDetailModelImpl">
+		<attributes>
+			<id name="socialProfileDetailId">
+				<column name="SPSOCIALPROFILEDETAILID" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="userJobId" />
+			<basic name="companyName" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spsocialprofile.model.impl.SocialProfileFriendsModelImpl">
+		<attributes>
+			<id name="socialProfileFriendsId">
+				<column name="SPSOCIALPROFILEFRIENDSID" />
+			</id>
+			<basic name="companyId" />
+			<basic name="belongsToUserId" />
+			<basic name="socialNetworkProfileId" />
+			<basic name="firstName" />
+			<basic name="lastName" />
+			<basic name="birthday" />
+			<basic name="location" />
+			<basic name="pictureUrl" />
+			<basic name="userName" />
+			<basic name="gender" />
+			<basic name="socialNetworkType" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="belongsToUserUuid" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spsocialprofile.model.impl.SocialProfileLikeModelImpl">
+		<attributes>
+			<id name="socialProfileLikeId">
+				<column name="SPSOCIALPROFILELIKEID" />
+			</id>
+			<basic name="socialNetworkProfileId" />
+			<basic name="name" />
+			<basic name="category" />
+			<basic name="socialNetworkLikeId" />
+			<basic name="socialNetworkType" />
+			<basic name="socialNetworkCreateDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spsocialprofile.model.impl.SocialProfilePullAuditModelImpl">
+		<id-class class="com.sambaash.platform.srv.spsocialprofile.service.persistence.SocialProfilePullAuditPK" />
+		<attributes>
+			<id name="userId" />
+			<id name="socialNetworkProfileId" />
+			<basic name="companyId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="lastQueriedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spsocialprofile.model.impl.SocialProfileViewAuditModelImpl">
+		<attributes>
+			<id name="socialProfileViewAuditId">
+				<column name="SPSOCIALPROFILEVIEWAUDITID" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="loggedInUserId" />
+			<basic name="profileUserId" />
+			<basic name="lastViewDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="loggedInUserUuid" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="profileUserUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spsocialprofile.model.impl.UserAvailabilityCalendarModelImpl">
+		<attributes>
+			<id name="userAvailabilityCalendarId">
+				<column name="SPUSERAVAILABILITYCALENDARID" />
+			</id>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="userId" />
+			<basic name="availableFor" />
+			<basic name="startDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="endDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.spsocialprofile.model.impl.ExamBodyUserImpl" name="ExamBodyUser">
+		<table name="SPExamBodyUser" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spsocialprofile.model.impl.SocialProfileImpl" name="SocialProfile">
+		<table name="SPSocialProfile" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spsocialprofile.model.impl.SocialProfileDetailImpl" name="SocialProfileDetail">
+		<table name="SPSocialProfileDetail" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spsocialprofile.model.impl.SocialProfileFriendsImpl" name="SocialProfileFriends">
+		<table name="SPSocialProfileFriends" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spsocialprofile.model.impl.SocialProfileLikeImpl" name="SocialProfileLike">
+		<table name="SPSocialProfileLike" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spsocialprofile.model.impl.SocialProfilePullAuditImpl" name="SocialProfilePullAudit">
+		<table name="SPSocialProfilePullAudit" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spsocialprofile.model.impl.SocialProfileViewAuditImpl" name="SocialProfileViewAudit">
+		<table name="SPSocialProfileViewAudit" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spsocialprofile.model.impl.UserAvailabilityCalendarImpl" name="UserAvailabilityCalendar">
+		<table name="SPUserAvailabilityCalendar" />
+		<attributes />
+	</entity>
+</entity-mappings>

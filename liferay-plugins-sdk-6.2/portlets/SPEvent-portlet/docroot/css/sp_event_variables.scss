@@ -1,0 +1,38 @@
+//STARTUPLIST VARIABLES
+//text-align
+$textcenter:center;
+$textleft:left;
+$textright:right;
+$textjustify:justify;
+//Display & position
+$display-inlineblock:inline-block;
+$display-block:block;
+$display-none:none;
+$position-relative:relative;
+$position-absolute:absolute;
+$position-fixed:fixed;
+$position-static:static;
+//screen-sizes
+$mobile-small: 240px;
+$mobile-large: 320px;
+$tablet-small: 480px;
+$tablet-large: 768px;
+$screen-small: 1024px;
+$screen-large: 1280px;
+//LANDING PAGE
+$font-xsmall:8pt;
+$font-mdLanding:16pt;
+$font-lg1Landing:22pt;
+$font-lgLanding:30pt;
+$sun-yellow:#fed02f;
+$landingPage-color1:#fed02f;
+$landingPage-color2:#1a5aa5;
+$landingPage-color3:#00b388;
+$landingPage-color4:#00a8ff;
+$landing-textShadow:rgba(88, 88, 88, 0.87);
+//**********************NAVIGATION VARIABLES **********************/
+$link-color:white;
+$link-hover:#00aedb;
+$link-vertical-padding:30px; //Controls Menu top & bottom padding
+$link-horizontal-padding:20px; //Contols Menu left & right padding
+$menu-background:#353535;

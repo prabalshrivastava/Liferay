@@ -1,0 +1,494 @@
+<process>
+<startNodeId>2000</startNodeId>
+<forms>
+	  <form>
+		 <nodeId>2000</nodeId>
+		 <help>First Node - Interest Registration</help>
+		 <rulesetId>347901</rulesetId>
+		 <outcomes>
+		  <outcome>
+				<ruleId>-1</ruleId>
+				<help>defaultcase, next node is account creation</help>
+				<nextNodeId>1</nextNodeId>
+		  </outcome>
+		 </outcomes>
+		 <dataMapping>
+			<mappingElement>
+			  <fieldId>qualification_4</fieldId>
+			  <processFieldId>qualification</processFieldId>
+			</mappingElement>
+		 </dataMapping>
+	  </form>
+	  <form>
+		 <nodeId>2001</nodeId>
+		 <rulesetId>2</rulesetId>
+		 <help>Form More Details where cv also uploaded</help>
+
+		 <outcomes>
+		  <outcome>
+				<ruleId>-1</ruleId>
+				<help>Default case, next node is Status change to Application Review</help>
+				<nextNodeId>1002</nextNodeId>
+		  </outcome>
+		 </outcomes>
+
+	 </form>
+
+
+	 <form>
+		 <nodeId>2002</nodeId>
+		 <rulesetId>4</rulesetId>
+		 <help>form-3-submit-docs-wsq-modular</help>
+		 <outcomes>
+		  <outcome>
+				<ruleId>-1</ruleId>
+				<help>default case, change status to docs review pending</help>
+				<nextNodeId>1003</nextNodeId>
+		  </outcome>
+		 </outcomes>
+
+	 </form>
+	  <form>
+		 <nodeId>2003</nodeId>
+		 <rulesetId>10</rulesetId>
+		 <help>form-4-precounsling-acknw</help>
+
+		 <outcomes>
+		  <outcome>
+				<ruleId>-1</ruleId>
+				<help>Default, next will be status change precounseling pending</help>
+				<nextNodeId>1004</nextNodeId>
+		  </outcome>
+		 </outcomes>
+
+	 </form>
+
+</forms>
+<jsps>
+
+	   <jsp>
+		 <nodeId>4000</nodeId>
+		 <help>JSP-2-contractDetails</help>
+		  <rulesetId>11</rulesetId>
+
+		 <outcomes>
+			<outcome>
+				  <ruleId>-1</ruleId>
+				  <help>default case</help>
+				  <nextNodeId>1005</nextNodeId>
+			</outcome>
+		 </outcomes>
+	  </jsp>
+	  <jsp>
+		 <nodeId>4001</nodeId>
+		 <help>payment page, yet to discuss</help>
+		 <rulesetId>12</rulesetId>
+		 <outcomes>
+			<outcome>
+				  <ruleId>-1</ruleId>
+				  <help>Sign In by desktop</help>
+				  <nextNodeId></nextNodeId>
+			</outcome>
+
+		 </outcomes>
+	  </jsp>
+	   <jsp>
+		 <nodeId>4002</nodeId>
+		 <help>Entrance test link display</help>
+		  <rulesetId>13</rulesetId>
+
+		 <outcomes>
+			<outcome>
+				  <ruleId>-1</ruleId>
+				  <help>next node will be process node to check entrance test passed</help>
+				  <nextNodeId>3006</nextNodeId>
+			</outcome>
+
+		 </outcomes>
+	  </jsp>
+</jsps>
+<processes>
+
+	<process>
+		 <nodeId>3000</nodeId>
+		 <rulesetId>348412</rulesetId>
+		 <config>
+
+			  <help>process-ruleset-1</help>
+		 </config>
+
+		 <outcomes>
+		  <outcome>
+				<ruleId>348413</ruleId>
+				<help>Sign In User, next is check if he is elgible</help>
+				<nextNodeId>3001</nextNodeId>
+		  </outcome>
+		   <outcome>
+				<ruleId>-1</ruleId>
+				<help>Guest, next is send msg about account creation and login</help>
+				<nextNodeId>1200</nextNodeId>
+		  </outcome>
+
+		 </outcomes>
+
+	</process>
+	<process>
+		 <nodeId>3001</nodeId>
+		 <rulesetId>348501</rulesetId>
+		 <config>
+
+			  <help>process-ruleset-2-eligibility-checking</help>
+		 </config>
+
+		 <outcomes>
+		   <outcome>
+				  <ruleId>348502</ruleId>
+				  <help>Eligible</help>
+				  <nextNodeId>1001</nextNodeId>
+			</outcome>
+			<outcome>
+				  <ruleId>-1</ruleId>
+				  <help>default case, Application rejected</help>
+				  <nextNodeId>1201</nextNodeId>
+			</outcome>
+		 </outcomes>
+
+	 </process>
+	 <process>
+		 <nodeId>3002</nodeId>
+		 <rulesetId>3</rulesetId>
+		 <config>
+
+			  <help>process-form-3-checks-if-application-approved</help>
+		 </config>
+
+		 <outcomes>
+		   <outcome>
+				  <ruleId>1</ruleId>
+				  <help>rule-1-approved-no-entrance-test,next is collecting docs</help>
+				  <nextNodeId>2002</nextNodeId>
+			</outcome>
+			<outcome>
+				  <ruleId>3</ruleId>
+				  <help>rule-1-approved-required-entrance-test, status changes to entrance test pending</help>
+				  <nextNodeId>1006</nextNodeId>
+			</outcome>
+			<outcome>
+				  <ruleId>4</ruleId>
+				  <help>rule-2-pending</help>
+				  <nextNodeId>7</nextNodeId>
+			</outcome>
+			<outcome>
+				  <ruleId>-1</ruleId>
+				  <help>default case, Application rejected</help>
+				  <nextNodeId>1201</nextNodeId>
+			</outcome>
+		 </outcomes>
+
+	 </process>
+	  <process>
+		 <nodeId>3003</nodeId>
+		 <rulesetId>4</rulesetId>
+		 <config>
+
+			  <help>process-ruleset-3</help>
+		 </config>
+
+		 <outcomes>
+		  <outcome>
+				<ruleId>5</ruleId>
+				<help>Docs-Approved, next will be pre-counseling form</help>
+				<nextNodeId>2003</nextNodeId>
+		  </outcome>
+		  <outcome>
+				<ruleId>6</ruleId>
+				<help>Docs-pending, display same msg that docs review in pending</help>
+				<nextNodeId>1203</nextNodeId>
+		  </outcome>
+		  <outcome>
+				<ruleId>-1</ruleId>
+				<help>default case,application rejected</help>
+				<nextNodeId>1201</nextNodeId>
+		  </outcome>
+		 </outcomes>
+
+	 </process>
+	 <process>
+		 <nodeId>3004</nodeId>
+		 <rulesetId>11</rulesetId>
+		 <config>
+
+			  <help>process-form-3</help>
+		 </config>
+
+		 <outcomes>
+		  <outcome>
+				<ruleId>1</ruleId>
+				<help>precounsiling-approved, show contract page</help>
+				<nextNodeId>4000</nextNodeId>
+		  </outcome>
+		  <outcome>
+				<ruleId>2</ruleId>
+				<help>precounsiling-pending, display msg saying precounsiling pending</help>
+				<nextNodeId>1204</nextNodeId>
+		  </outcome>
+		  <outcome>
+				<ruleId>-1</ruleId>
+				<help>default case,display msg</help>
+				<nextNodeId>1201</nextNodeId>
+		  </outcome>
+		 </outcomes>
+
+	 </process>
+	  <process>
+		 <nodeId>3005</nodeId>
+		 <rulesetId>12</rulesetId>
+		 <config>
+
+			  <help>process-form-3</help>
+		 </config>
+
+		 <outcomes>
+		  <outcome>
+				<ruleId>1</ruleId>
+				<help>contract-approved, show payment page</help>
+				<nextNodeId>4001</nextNodeId>
+		  </outcome>
+		  <outcome>
+				<ruleId>2</ruleId>
+				<help>contract-approval-pending, display msg saying contract approval pending</help>
+				<nextNodeId>1205</nextNodeId>
+		  </outcome>
+		  <outcome>
+				<ruleId>-1</ruleId>
+				<help>default case,display msg</help>
+				<nextNodeId>1201</nextNodeId>
+		  </outcome>
+		 </outcomes>
+
+	 </process>
+	 <process>
+		 <nodeId>3006</nodeId>
+		 <rulesetId>13</rulesetId>
+		 <config>
+
+			  <help>process-form-4</help>
+		 </config>
+
+		 <outcomes>
+		  <outcome>
+				<ruleId>1</ruleId>
+				<help>entrance-test-approved, next step will be form that collects docs</help>
+				<nextNodeId>2002</nextNodeId>
+		  </outcome>
+		  <outcome>
+				<ruleId>2</ruleId>
+				<help>entrance-test-pending, message</help>
+				<nextNodeId>1206</nextNodeId>
+		  </outcome>
+		  <outcome>
+				<ruleId>-1</ruleId>
+				<help>default cases</help>
+				<nextNodeId>21</nextNodeId>
+		  </outcome>
+		 </outcomes>
+
+	 </process>
+
+</processes>
+
+<pages>
+	  <page>
+		<nodeId></nodeId>
+		<nextNodeId></nextNodeId>
+		<config>
+		  <name></name>
+		</config>
+	  </page>
+</pages>
+
+<msgs>
+		<msg>
+		  <nodeId>1200</nodeId>
+		  <nextNodeId>3001</nextNodeId>
+		  <html>You are successfully Registered. Activation link has been send to your registered email address. </html>
+		</msg>
+		<msg>
+		<nodeId>1201</nodeId>
+		  <html>Sorry, You are not eligible to take this course.</html>
+		</msg>
+		 <msg>
+		  <nodeId>1202</nodeId>
+		  <nextNodeId>3002</nextNodeId>
+		  <help>Next node will be process node to check status</help>
+		  <html>Application submitted for review.</html>
+		</msg>
+		 <msg>
+		  <nodeId>1203</nodeId>
+		  <nextNodeId>3003</nextNodeId>
+		  <help>Next node will be process node to check status</help>
+		  <html>Documents submitted for review.</html>
+		</msg>
+
+		<msg>
+		  <nodeId>1204</nodeId>
+		  <nextNodeId>3004</nextNodeId>
+		  <help>Next node will be process node to check status</help>
+		  <html>Precounsling checklist submitted for review.</html>
+		</msg>
+		<msg>
+		  <nodeId>1205</nodeId>
+		  <nextNodeId>3005</nextNodeId>
+		  <help>Next node will be process node to check status</help>
+		  <html>Contract submitted for review.</html>
+		</msg>
+		<msg>
+		  <nodeId>1206</nodeId>
+		  <nextNodeId>3006</nextNodeId>
+		  <help>Next node will be process node to check status</help>
+		  <html>Entrance test is in pending</html>
+		</msg>
+
+
+		 <msg>
+		  <nodeId>1210</nodeId>
+		  <html>Application rejected. Try browsing other courses (ink for other course )</html>
+		</msg>
+
+</msgs>
+
+<actions>
+	 <mails>
+		<mail>
+		  <nodeId>1100</nodeId>
+		  <templateId>407</templateId>
+		  <nextNodeId>3000</nextNodeId>
+		  <toRoleIds></toRoleIds>
+		  <toEmailIds></toEmailIds>
+		  <help>Mail to admin officers about student registration, next node is to check if user is guest or logged in user</help>
+		</mail>
+		 <mail>
+		  <nodeId>1101</nodeId>
+		  <templateId></templateId>
+		  <nextNodeId>1202</nextNodeId>
+		  <toRoleIds></toRoleIds>
+		  <toEmailIds></toEmailIds>
+		  <help>Mail to admin officers about application review</help>
+		</mail>
+		  <mail>
+		  <nodeId>1102</nodeId>
+		  <templateId></templateId>
+		  <nextNodeId>1203</nextNodeId>
+		  <toRoleIds></toRoleIds>
+		  <toEmailIds></toEmailIds>
+		  <help>Mail to admin officers about docs review, next node will be msg to user</help>
+		</mail>
+		<mail>
+		  <nodeId>1103</nodeId>
+		  <templateId></templateId>
+		  <nextNodeId>1204</nextNodeId>
+		  <toRoleIds></toRoleIds>
+		  <toEmailIds></toEmailIds>
+		  <help>Mail to admin officers about precounsling, next node will be msg to user</help>
+		</mail>
+		 <mail>
+		  <nodeId>1104</nodeId>
+		  <templateId></templateId>
+		  <nextNodeId>1205</nextNodeId>
+		  <toRoleIds></toRoleIds>
+		  <toEmailIds></toEmailIds>
+		  <help>Mail to admin officers about contract sign, next node will be msg to user</help>
+		</mail>
+		 <mail>
+		  <nodeId>1105</nodeId>
+		  <templateId></templateId>
+		  <nextNodeId>4002</nextNodeId>
+		  <toRoleIds></toRoleIds>
+		  <toEmailIds></toEmailIds>
+		  <help>Mail to admin officers about entrance test, next node will be jsp that displays entrance test link</help>
+		</mail>
+	 </mails>
+	  <statuses>
+
+		 <status>
+		  <nodeId>1000</nodeId>
+		  <nextNodeId>1100</nextNodeId>
+		  <actionId>2</actionId>
+		  <statusTypeId>1</statusTypeId>
+		  <status>Pending</status>
+
+		  <help>Status change to Interest Registration, Pending will become approve if he is eligible next is send mail to officer </help>
+		</status>
+		<status>
+		  <nodeId>1001</nodeId>
+		  <nextNodeId>2001</nextNodeId>
+		  <actionId>2</actionId>
+		  <statusTypeId>1</statusTypeId>
+		  <status>Approved</status>
+
+		  <help>Interest approved as he is eligible. Next node is, to collect more info including cv</help>
+		</status>
+		 <status>
+		  <nodeId>1002</nodeId>
+		  <nextNodeId>1101</nextNodeId>
+		  <actionId>2</actionId>
+		  <statusTypeId>2</statusTypeId>
+		  <status>Pending</status>
+
+		  <help>Status changed to Applciation Review Pending,next is to send mail to admin officer</help>
+		</status>
+		 <status>
+		  <nodeId>1003</nodeId>
+		  <nextNodeId>1102</nextNodeId>
+		  <actionId>2</actionId>
+		  <statusTypeId>3</statusTypeId>
+		  <status>Pending</status>
+
+		  <help>Status changed to Docs Review Pending,next is to send mail to admin officer</help>
+		</status>
+		 <status>
+		  <nodeId>1004</nodeId>
+		  <nextNodeId>1103</nextNodeId>
+		  <actionId>2</actionId>
+		  <statusTypeId>4</statusTypeId>
+		  <status>Pending</status>
+
+		  <help>Status changed to Precounseling Pending,next is to send mail to admin officer</help>
+		</status>
+		<status>
+		  <nodeId>1005</nodeId>
+		  <nextNodeId>1104</nextNodeId>
+		  <actionId>2</actionId>
+		  <statusTypeId>4</statusTypeId>
+		  <status>Pending</status>
+
+		  <help>Status changed to contract Pending,next is to send mail to admin officer</help>
+		</status>
+
+		<status>
+		  <nodeId>1006</nodeId>
+		  <nextNodeId>1105</nextNodeId>
+		  <actionId>2</actionId>
+		  <statusTypeId>4</statusTypeId>
+		  <status>Pending</status>
+
+		  <help>Status changed to entrance test Pending,next is to send mail to admin officer</help>
+		</status>
+
+	 </statuses>
+
+
+
+
+	   <createAccount>
+		   <nodeId>1</nodeId>
+		   <help>It will create account only if user is guest or user is agent and registering for student </help>
+		   <nextNodeId>1000</nextNodeId>
+		   <actionId>1</actionId>
+		   <help>createAccount, next node is status change</help>
+	   </createAccount>
+
+</actions>
+
+
+</process>

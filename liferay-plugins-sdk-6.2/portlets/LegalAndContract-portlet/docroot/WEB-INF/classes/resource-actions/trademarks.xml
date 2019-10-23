@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 6.2.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_6_2_0.dtd">
+
+<resource-action-mapping>
+    <portlet-resource>
+        <portlet-name>trade-marks-master</portlet-name>
+        <permissions>
+            <supports>
+                <action-key>ADD_TRADEMARK</action-key>
+                <action-key>EDIT_TRADEMARK</action-key>
+                <action-key>DELETE_TRADEMARK</action-key>
+                <action-key>BULKUPLOAD_TRADEMARK</action-key>
+                <action-key>VIEW</action-key>
+                <action-key>DOWNLOAD_FILE</action-key>
+            </supports>
+            <site-member-defaults>
+            </site-member-defaults>
+            <guest-defaults>
+            </guest-defaults>
+            <guest-unsupported>
+                <action-key>ADD_TRADEMARK</action-key>
+                <action-key>EDIT_TRADEMARK</action-key>
+                <action-key>DELETE_TRADEMARK</action-key>
+                <action-key>BULKUPLOAD_TRADEMARK</action-key>
+                <action-key>DOWNLOAD_FILE</action-key>
+                <action-key>ADD_TO_PAGE</action-key>
+                <action-key>VIEW</action-key>
+                <action-key>EDIT</action-key>
+                <action-key>HELP</action-key>
+                <action-key>ABOUT</action-key>
+                <action-key>CONFIGURATION</action-key>
+                <action-key>EDIT_DEFAULTS</action-key>
+                <action-key>GUEST_PREFERENCES</action-key>
+                <action-key>PREVIEW</action-key>
+                <action-key>PRINT</action-key>
+                <action-key>PERMISSIONS</action-key>
+                <action-key>PREFERENCES</action-key>
+            </guest-unsupported>
+        </permissions>
+    </portlet-resource>
+</resource-action-mapping>

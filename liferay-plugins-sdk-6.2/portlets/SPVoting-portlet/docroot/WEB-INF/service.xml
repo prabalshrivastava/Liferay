@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.spvoting">
+	<author>harini</author>
+	<namespace>SPVoting</namespace>
+
+	<entity name="SPVoting" table="SPVoting" local-service="true" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spVotingId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="className" type="String" />
+		<column name="classPK" type="long" />
+		<column name="ip" type="String" />
+
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="createDate"></order-column>
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="EntryAndUserId" return-type="Voting">
+			<finder-column name="className" />
+			<finder-column name="classPK" />
+			<finder-column name="userId" />
+		</finder>
+
+		<finder name="EntryAndIp" return-type="Voting">
+			<finder-column name="className" />
+			<finder-column name="classPK" />
+			<finder-column name="ip" />
+		</finder>
+
+		<finder name="Entry" return-type="Collection" >
+			<finder-column name="className" />
+			<finder-column name="classPK" />
+		</finder>
+
+		<!-- References -->
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+
+	</entity>
+
+	<exceptions>
+		<exception>AlreadyVoted</exception>
+	</exceptions>
+
+</service-builder>

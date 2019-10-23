@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.5"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>Esign Notification Servlet</servlet-name>
+		<servlet-class>com.sambaash.platform.pe.esign.servlet.EsignNotificationServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Process Servlet</servlet-name>
+		<servlet-class>com.sambaash.platform.pe.servlet.ProcessServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Lead Servlet</servlet-name>
+		<servlet-class>com.sambaash.platform.pe.servlet.LeadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Esign Notification Servlet</servlet-name>
+		<url-pattern>/esignlive</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Process Servlet</servlet-name>
+		<url-pattern>/process</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Lead Servlet</servlet-name>
+		<url-pattern>/lead</url-pattern>
+	</servlet-mapping>
+</web-app>

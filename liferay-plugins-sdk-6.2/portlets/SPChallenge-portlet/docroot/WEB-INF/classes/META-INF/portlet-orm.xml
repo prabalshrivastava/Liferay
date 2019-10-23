@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.spchallenge.model.impl.SPChallengeModelImpl">
+		<attributes>
+			<id name="spChallengeId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="name" />
+			<basic name="openTo" />
+			<basic name="type">
+				<column name="TYPE_" />
+			</basic>
+			<basic name="background" />
+			<basic name="description" />
+			<basic name="scope" />
+			<basic name="benefits" />
+			<basic name="budget" />
+			<basic name="startDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="endDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="applyBy">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="extras" />
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<basic name="notifyTo" />
+			<basic name="scout" />
+			<basic name="logoId" />
+			<basic name="draft" />
+			<basic name="budgetCcySign" />
+			<basic name="brand" />
+			<basic name="vpApprover" />
+			<basic name="budgetApprover" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spchallenge.model.impl.SPChallengeApplicantModelImpl">
+		<attributes>
+			<id name="spChallengeApplicantId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="applicantRefId" />
+			<basic name="applicantType" />
+			<basic name="spChallengeId" />
+			<basic name="q1" />
+			<basic name="q2" />
+			<basic name="q3" />
+			<basic name="q4" />
+			<basic name="q5" />
+			<basic name="q6" />
+			<basic name="q7" />
+			<basic name="q8" />
+			<basic name="q9" />
+			<basic name="q10" />
+			<basic name="q11" />
+			<basic name="q12" />
+			<basic name="q13" />
+			<basic name="q14" />
+			<basic name="q15" />
+			<basic name="q16" />
+			<basic name="q17" />
+			<basic name="q18" />
+			<basic name="q19" />
+			<basic name="q20" />
+			<basic name="customStatus1" />
+			<basic name="customStatus2" />
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<basic name="applicationStatus" />
+			<basic name="notificationStatus" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.spchallenge.model.impl.SPChallengeImpl" name="SPChallenge">
+		<table name="SPChallenge" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spchallenge.model.impl.SPChallengeApplicantImpl" name="SPChallengeApplicant">
+		<table name="SPChallengeApplicant" />
+		<attributes />
+	</entity>
+</entity-mappings>

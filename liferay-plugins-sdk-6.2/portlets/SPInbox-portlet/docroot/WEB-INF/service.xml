@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder
+	package-path="com.sambaash.platform.srv.spinbox">
+	<author>nareshchebolu</author>
+	<namespace>SpInbox</namespace>
+	<entity name="IBMessage" table="SPInboxMessage" uuid="true" local-service="true" remote-service="true">
+		<column name="messageId"  type="long" primary="true"/>
+		<column name="parentMessageId"  type="long"/>
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="subject" type="String" />
+		<column name="content"  type="String" />
+		<column name="from"  type="String" />
+		<column name="to"  type="String" />
+		<column name="allowOpen" type="boolean" />
+		<column name="sendDate" type="Date" />
+		<column name="createDate" type="Date" />
+		<column name="createBy" type="String" />
+		<column name="createByUserId" type="String" />
+		<column name="draft" type="boolean" />
+		<column name="deleteStatus" type="boolean" />
+		<column name="draftStatus" type="String" />
+		<column name="sentMeCopy" type="boolean" />
+		<column name="belongToGroupDetailId" type="long" />
+		
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="createDate" />
+		</order>
+		
+		<finder return-type="Collection" name="CreateUserId">
+			<finder-column name="createByUserId" />
+			<finder-column name="deleteStatus" />
+		</finder>
+		
+		<finder return-type="Collection" name="CreateUserIdAndDraft">
+			<finder-column name="createByUserId" />
+			<finder-column name="deleteStatus" />
+			<finder-column name="draft" />
+		</finder>
+		
+		<finder return-type="Collection" name="CreatorName">
+			<finder-column name="createBy" />
+			<finder-column name="deleteStatus" />
+		</finder>
+		
+		<finder return-type="Collection" name="CreatorNameAndDraft">
+			<finder-column name="createBy" />
+			<finder-column name="deleteStatus" />
+			<finder-column name="draft" />
+		</finder>
+		
+	</entity>
+	
+	<entity name="IBMessageDetail" table="SPInboxMessageDetail" local-service="true" remote-service="true">
+		<column name="ibMsgDetailId" type="long" primary="true"/>
+		<column name="receiverId" type="long"/>
+		<column name="messageId" type="long" />
+		<column name="receiverMsgStatus" type="String" />
+		<column name="senderMsgStatus" type="String" />
+		<column name="status" type="String" />
+		<column name="receiveDate" type="Date" />
+		<column name="receiveBy"  type="String" />
+		<column name="archived"  type="boolean" />
+		<column name="updateDate" type="Date" />
+		<column name="updateBy" type="String" />
+		<column name="category" type="String" />
+		<column name="processId"  type="long" />
+		<column name="corpProfileId" type="long" />
+		
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="receiveDate" />
+		</order>
+		
+		<finder return-type="Collection" name="MessageId">
+			<finder-column name="messageId" />
+		</finder>
+		
+		<!-- for individual user -->
+		<finder return-type="Collection" name="ReceId">
+			<finder-column name="receiverId" />
+			<finder-column name="archived" />
+		</finder>
+		
+		<finder return-type="Collection" name="ReceIdAndRms">
+			<finder-column name="receiverId" />
+			<finder-column name="archived" />
+			<finder-column name="receiverMsgStatus" />
+		</finder>
+		
+		<finder return-type="Collection" name="ReceIdAndSms">
+			<finder-column name="receiverId" />
+			<finder-column name="archived" />
+			<finder-column name="senderMsgStatus" />
+		</finder>
+		
+		<finder return-type="Collection" name="ReceIdRmsAndSms">
+			<finder-column name="receiverId" />
+			<finder-column name="archived" />
+			<finder-column name="receiverMsgStatus" />
+			<finder-column name="senderMsgStatus" />
+		</finder>
+		
+		<finder return-type="Collection" name="ReceIdAndCty">
+			<finder-column name="receiverId" />
+			<finder-column name="archived" />
+			<finder-column name="category" />
+		</finder>
+		
+		<finder return-type="Collection" name="ReceIdCtyAndRms">
+			<finder-column name="receiverId" />
+			<finder-column name="archived" />
+			<finder-column name="category" />
+			<finder-column name="receiverMsgStatus" />
+		</finder>
+		
+		<finder return-type="Collection" name="ReceIdCtyAndSms">
+			<finder-column name="receiverId" />
+			<finder-column name="archived" />
+			<finder-column name="category" />
+			<finder-column name="senderMsgStatus" />
+		</finder>
+
+		<finder return-type="Collection" name="ReceIdCtyRmsAndSms">
+			<finder-column name="receiverId" />
+			<finder-column name="archived" />
+			<finder-column name="category" />
+			<finder-column name="receiverMsgStatus" />
+			<finder-column name="senderMsgStatus" />
+		</finder>
+		
+		<finder return-type="IBMessageDetail" name="ReceiverIdmessageId">
+			<finder-column name="receiverId" />
+			<finder-column name="messageId" />
+		</finder>
+		
+		<!-- for corporate user -->
+		<finder return-type="Collection" name="CorpId">
+			<finder-column name="corpProfileId" />
+			<finder-column name="archived" />
+		</finder>
+		
+		<finder return-type="Collection" name="CorpIdAndRms">
+			<finder-column name="corpProfileId" />
+			<finder-column name="archived" />
+			<finder-column name="receiverMsgStatus" />
+		</finder>
+		
+		<finder return-type="Collection" name="CorpIdAndSms">
+			<finder-column name="corpProfileId" />
+			<finder-column name="archived" />
+			<finder-column name="senderMsgStatus" />
+		</finder>
+		
+		<finder return-type="Collection" name="CorpIdRmsAndSms">
+			<finder-column name="corpProfileId" />
+			<finder-column name="archived" />
+			<finder-column name="receiverMsgStatus" />
+			<finder-column name="senderMsgStatus" />
+		</finder>
+		
+		<finder return-type="Collection" name="CorpIdAndCty">
+			<finder-column name="corpProfileId" />
+			<finder-column name="archived" />
+			<finder-column name="category" />
+		</finder>
+		
+		<finder return-type="Collection" name="CorpIdCtyAndRms">
+			<finder-column name="corpProfileId" />
+			<finder-column name="archived" />
+			<finder-column name="category" />
+			<finder-column name="receiverMsgStatus" />
+		</finder>
+		
+		<finder return-type="Collection" name="CorpIdCtyAndSms">
+			<finder-column name="corpProfileId" />
+			<finder-column name="archived" />
+			<finder-column name="category" />
+			<finder-column name="senderMsgStatus" />
+		</finder>
+		
+		<finder return-type="Collection" name="CorpIdCtyRmsAndSms">
+			<finder-column name="corpProfileId" />
+			<finder-column name="archived" />
+			<finder-column name="category" />
+			<finder-column name="receiverMsgStatus" />
+			<finder-column name="senderMsgStatus" />
+		</finder>
+	</entity>
+</service-builder>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 6.2.0//EN" "http://www.liferay.com/dtd/liferay-hook_6_2_0.dtd">
+
+<hook>
+	<portal-properties>portal.properties</portal-properties>
+	<language-properties>content/Language.properties</language-properties>
+	<language-properties>content/Language-portal.properties</language-properties>
+	<custom-jsp-dir>/custom_jsps</custom-jsp-dir>
+	<struts-action>
+		<struts-action-path>/portal/google_social_login</struts-action-path>
+		<struts-action-impl>com.sambaash.platform.sociallogin.action.GoogleOAuthAction</struts-action-impl>
+	</struts-action>
+	<struts-action>
+		<struts-action-path>/portal/facebook_social_login</struts-action-path>
+		<struts-action-impl>com.sambaash.platform.sociallogin.action.FacebookOAuthAction</struts-action-impl>
+	</struts-action>
+	<struts-action>
+		<struts-action-path>/portal/linkedin_social_login</struts-action-path>
+		<struts-action-impl>com.sambaash.platform.sociallogin.action.LinkedinOAuthAction</struts-action-impl>
+	</struts-action>
+	<struts-action>
+		<struts-action-path>/portal/twitter_social_login</struts-action-path>
+		<struts-action-impl>com.sambaash.platform.sociallogin.action.TwitterOAuthAction</struts-action-impl>
+	</struts-action>
+	<struts-action>
+		<struts-action-path>/portal/microsoft_social_login_cmd</struts-action-path>
+		<struts-action-impl>com.sambaash.platform.sociallogin.action.MicrosoftOAuthActionCmd</struts-action-impl>
+	</struts-action>
+	<struts-action>
+		<struts-action-path>/portal/microsoft_social_login_token</struts-action-path>
+		<struts-action-impl>com.sambaash.platform.sociallogin.action.MicrosoftOAuthActionToken</struts-action-impl>
+	</struts-action>
+	<struts-action>
+		<struts-action-path>/login/create_account</struts-action-path>
+		<struts-action-impl>com.sambaash.platform.sociallogin.action.CreateAccountAction</struts-action-impl>
+	</struts-action>
+</hook>

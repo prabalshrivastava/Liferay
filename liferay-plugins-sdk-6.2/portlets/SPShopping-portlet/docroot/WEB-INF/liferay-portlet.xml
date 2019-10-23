@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_2_0.dtd">
+
+<liferay-portlet-app>
+	
+	<portlet>
+		<portlet-name>shopping-catalog</portlet-name>
+		<icon>/icon.png</icon>
+		<indexer-class>com.sambaash.platform.spshopping.indexer.SPSellingItemIndexer</indexer-class>
+		<indexer-class>com.sambaash.platform.spshopping.indexer.SPDiscountIndexer</indexer-class>
+		<indexer-class>com.sambaash.platform.spshopping.indexer.SPSellingPackageIndexer</indexer-class>
+		<open-search-class>com.sambaash.platform.spshopping.indexer.SPSellingPackageOpenSearchImpl</open-search-class>
+		<friendly-url-mapper-class>com.liferay.portal.kernel.portlet.DefaultFriendlyURLMapper</friendly-url-mapper-class>
+		<friendly-url-mapping>spshopping</friendly-url-mapping>
+		<friendly-url-routes>com/sambaash/platform/spshopping/routes/routes.xml</friendly-url-routes>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<header-portlet-javascript>/js/main.js</header-portlet-javascript>
+		<css-class-wrapper>shopping-catalog-portlet</css-class-wrapper>
+	</portlet>
+	<portlet>
+		<portlet-name>shopping-cart</portlet-name>
+		<icon>/icon.png</icon>
+		<requires-namespaced-parameters>false</requires-namespaced-parameters>
+		<header-portlet-css>/css/main.css</header-portlet-css>
+		<footer-portlet-javascript>
+			/js/main.js
+		</footer-portlet-javascript>
+		<css-class-wrapper>shopping-package-portlet</css-class-wrapper>
+	</portlet>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>guest</role-name>
+		<role-link>Guest</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>power-user</role-name>
+		<role-link>Power User</role-link>
+	</role-mapper>
+	<role-mapper>
+		<role-name>user</role-name>
+		<role-link>User</role-link>
+	</role-mapper>
+</liferay-portlet-app>

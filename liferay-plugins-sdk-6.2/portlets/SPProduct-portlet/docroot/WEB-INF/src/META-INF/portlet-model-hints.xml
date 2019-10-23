@@ -1,0 +1,654 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.model.Activity">
+		<field name="spActivityId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spModuleId" type="long" />
+		<field name="spScheduleId" type="long" />
+		<field name="description" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="activityTiming" type="String">
+			<hint name="max-length">400</hint>
+		</field>
+		<field name="activityPerformer" type="String">
+			<hint name="max-length">400</hint>
+		</field>
+		<field name="activityDuration" type="String">
+			<hint name="max-length">400</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.model.Assessment">
+		<field name="spAssessmentId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spModuleId" type="long" />
+		<field name="assessmentDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="assessmentType" type="long" />
+		<field name="assessmentMethod" type="long" />
+		<field name="assessmentMode" type="long" />
+		<field name="locationType" type="long" />
+		<field name="eligibility" type="String" />
+		<field name="gradingType" type="long" />
+		<field name="maximumMarks" type="String" />
+		<field name="passingMarks" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.Certificate">
+		<field name="spCertificatetId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="countryId" type="long" />
+		<field name="certificateCode" type="String" />
+		<field name="certificateType" type="long" />
+		<field name="title" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="description" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="level" type="long" />
+		<field name="attachmentFolderId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.CompetencyUnit">
+		<field name="spCompetencyUnitId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="countryId" type="long" />
+		<field name="spFrameworkId" type="long" />
+		<field name="competencyUnitCode" type="String" />
+		<field name="competencyUnitDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="jobFamily" type="long" />
+		<field name="competencyLevel" type="long" />
+		<field name="creditValue" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.Course">
+		<field name="spCourseId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="countryId" type="String" />
+		<field name="courseCode" type="String" />
+		<field name="courseName" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="displayCourseName" type="boolean" />
+		<field name="courseDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="courseDurationFullTime" type="String" />
+		<field name="learningDurationFullTime" type="String" />
+		<field name="courseDurationPartTime" type="String" />
+		<field name="learningDurationPartTime" type="String" />
+		<field name="complexityLevel" type="String" />
+		<field name="courseType" type="long" />
+		<field name="frameworkApprovalStatus" type="boolean" />
+		<field name="graduationCriteriaDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="fundingDescPre" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="fundingDescPost" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="feeDetailsDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="testLink" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="courseOutcomeTitle" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="courseOutcomeDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="personaDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="certificateTitle" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="awardingBodyId" type="long" />
+		<field name="courseLevel" type="long" />
+		<field name="miscFeeDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="courseDeveloperId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.CourseCareer">
+		<field name="spCourseCareerId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spCourseId" type="long" />
+		<field name="intro" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.model.CourseCertificate">
+		<field name="spCourseCertificateId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spCourseId" type="long" />
+		<field name="spCertificatetId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.CourseDuration">
+		<field name="spCourseDurationId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spCourseId" type="long" />
+		<field name="spCourseLearningId" type="long" />
+		<field name="title" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.model.CourseDurationType">
+		<field name="spCourseDurationTypeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spCourseDurationId" type="long" />
+		<field name="spCourseId" type="long" />
+		<field name="title1" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="duration1" type="String" />
+		<field name="title2" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="duration2" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.CourseEnrollContract">
+		<field name="spCourseContractId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="countryId" type="String" />
+		<field name="courseType" type="long" />
+		<field name="docType" type="String" />
+		<field name="seqNo" type="int" />
+		<field name="contractTemplateFileEntryId" type="long" />
+		<field name="dataTemplateFileEntryId" type="long" />
+		<field name="extraInfo" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.model.CourseEnrollEsignInfo">
+		<field name="spEsignInfoId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="signerId" type="String" />
+		<field name="packageId" type="String" />
+		<field name="documentId" type="String" />
+		<field name="lastGeneratedUrl" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="spPEProcessStateId" type="long" />
+		<field name="extraInfo" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.model.CourseLearning">
+		<field name="spCourseLearningId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spCourseId" type="long" />
+		<field name="intro" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="optionTitle" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="option1" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="option2" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="note" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.model.CourseModule">
+		<field name="spCourseModuleId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spCourseId" type="long" />
+		<field name="spModuleId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.CourseOutcome">
+		<field name="spCourseOutcomeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spCourseId" type="long" />
+		<field name="outcomeId" type="long" />
+		<field name="outcomeDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.model.FeeDetails">
+		<field name="spFeeDetailsId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="feeType" type="long" />
+		<field name="feeDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="calculationBase" type="String" />
+		<field name="amount" type="String" />
+		<field name="displayOrder" type="long" />
+		<field name="fundId" type="long" />
+		<field name="spCourseId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.FeeType">
+		<field name="spFeeTypeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="feeType" type="String" />
+		<field name="feeTypeName" type="String" />
+		<field name="feeTypeDesc" type="String" />
+		<field name="misc" type="boolean" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.Framework">
+		<field name="spFrameworkId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="countryId" type="long" />
+		<field name="frameworkCode" type="String" />
+		<field name="frameworkName" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="frameworkImageId" type="Long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.Funding">
+		<field name="spFundingId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="courseType" type="long" />
+		<field name="fundingDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="fundingCriteria" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="fundOrder" type="long" />
+		<field name="sponsoredBy" type="long" />
+		<field name="residenceStatus" type="String" />
+		<field name="ageOperator" type="String" />
+		<field name="age" type="double" />
+		<field name="earningStatus" type="String" />
+		<field name="salaryOperator" type="String" />
+		<field name="salary" type="double" />
+		<field name="fundingHour" type="String" />
+		<field name="fundingAmount" type="double" />
+		<field name="netFees" type="double" />
+		<field name="absenteePayroll" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="fundingCourseFee" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="spCourseId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.GraduationCriteria">
+		<field name="spGraduationCriteriaId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="criteriaType" type="long" />
+		<field name="criteriaLevel" type="long" />
+		<field name="criteriaValueRange" type="String" />
+		<field name="criteriaDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="spCourseId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.MiscellaneousFees">
+		<field name="spMiscFeesId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="miscFeeType" type="long" />
+		<field name="amount" type="double" />
+		<field name="payable" type="long" />
+		<field name="spCourseId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.Module">
+		<field name="spModuleId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="countryId" type="long" />
+		<field name="moduleCode" type="String" />
+		<field name="moduleName" type="String">
+			<hint name="max-length">250</hint>
+		</field>
+		<field name="moduleDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="moduleType" type="long" />
+		<field name="creditValue" type="long" />
+		<field name="moduleDuration" type="String" />
+		<field name="noOfSessions" type="long" />
+		<field name="generalDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.model.ModuleCertificate">
+		<field name="spModuleCertificateId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spModuleId" type="long" />
+		<field name="spCertificatetId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.ModuleCompetencyUnit">
+		<field name="spModuleCompetencyUnitId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spModuleId" type="long" />
+		<field name="spCompetencyUnitId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.ModuleFramework">
+		<field name="spModuleFrameworkId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spModuleId" type="long" />
+		<field name="spFrameworkId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.Outcome">
+		<field name="spOutcomeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="countryId" type="long" />
+		<field name="outcomeCode" type="String" />
+		<field name="outcomeDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="outcomeType" type="long" />
+		<field name="outcomeFolderId" type="long" />
+		<field name="spCompetencyUnitId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.Outline">
+		<field name="spOutlineId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spCompetencyUnitId" type="long" />
+		<field name="outlineType" type="long" />
+		<field name="outlineDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.model.Persona">
+		<field name="spPersonaId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="personaType" type="long" />
+		<field name="ageGroup" type="String" />
+		<field name="personaDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="personaImageId" type="long" />
+		<field name="spCourseId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.PersonaAttendee">
+		<field name="spPersonaAttendeeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="description" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="imageId" type="long" />
+		<field name="spPersonaId" type="long" />
+		<field name="spCourseId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.Product">
+		<field name="spProductId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="countryId" type="String" />
+		<field name="productCode" type="String" />
+		<field name="productName" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="productDesc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="productImageId" type="long" />
+		<field name="spCourseId" type="long" />
+		<field name="productBrochuresFolderId" type="long" />
+		<field name="productVideoFolderId" type="long" />
+		<field name="status" type="int" />
+		<field name="creditValues" type="long" />
+		<field name="PEProcessId" type="long" />
+		<field name="productTemplateName" type="String" />
+		<field name="productTemplateLanguage" type="String" />
+		<field name="registrationEnabled" type="String" />
+		<field name="samePageRegistration" type="String" />
+		<field name="productFormImageId" type="long" />
+		<field name="productFormName" type="String" />
+		<field name="productFormButtonName" type="String" />
+		<field name="productFormUrl" type="String" />
+		<field name="productBannerImageId" type="long" />
+		<field name="hasInventory" type="boolean" />
+		<field name="bannerDetailsEnabled" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.ProductCourse">
+		<field name="spProductCourseId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spProductId" type="long" />
+		<field name="spCourseId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.ProductSupervisor">
+		<field name="spProductSupervisorId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="countryName" type="String" />
+		<field name="countryId" type="long" />
+		<field name="productId" type="long" />
+		<field name="supervisorId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.ProgressionPath">
+		<field name="spProgressionPathId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="careerLevel" type="long" />
+		<field name="level" type="int" />
+		<field name="progressionType" type="long" />
+		<field name="progressionCategory" type="long" />
+		<field name="startMonth" type="String" />
+		<field name="endMonth" type="String" />
+		<field name="duration" type="String" />
+		<field name="optionalMandatory" type="String" />
+		<field name="spCourseId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.Schedule">
+		<field name="spScheduleId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spModuleId" type="long" />
+		<field name="sessionNumber" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="sessionType" type="long" />
+		<field name="sessionDuration" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.StudentCourseFee">
+		<field name="spStudentCourseFeeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spPEProcessStateId" type="long" />
+		<field name="feeType" type="String" />
+		<field name="amount" type="String" />
+		<field name="order" type="int" />
+		<field name="formula" type="String" />
+		<field name="label" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.StudentCourseFeeInstmnt">
+		<field name="spStudentCourseFeeInstmntId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spPEProcessStateId" type="long" />
+		<field name="insmntNo" type="int" />
+		<field name="amount" type="String" />
+		<field name="date" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.StudyOption">
+		<field name="spStudyOptionId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spCourseId" type="long" />
+		<field name="title" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="desc" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="coverImageFileEntryId" type="long" />
+	</model>
+</model-hints>

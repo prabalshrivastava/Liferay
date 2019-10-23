@@ -1,0 +1,18 @@
+<%@ include file="/html/sptabbedcategorycontent/init.jsp" %>
+
+	<%
+		List<Document> userContentList = (List<Document>) request.getAttribute(WebKeys.USER_CONTENT_LIST);
+	%>
+				
+	<c:if test="${userContentList != null && userContentList.size()>0}">
+		<aui:row cssClass="sp-tab-cat-content-list">
+		<c:forEach items="${userContentList}" var="uc">
+			<aui:col width="<%= 30 %>">
+				<div>${uc.get("screenName")} -> ${uc.get("fullName")} </div>
+			</aui:col>
+		</c:forEach>
+		</aui:row>
+		<% 
+		userContentList.clear();
+		%>
+	</c:if>

@@ -1,0 +1,21 @@
+create table SPSharing (
+	spSharingId BIGINT(20) not null primary key,
+	groupId BIGINT(20),
+	companyId BIGINT(20),
+	createdBy BIGINT(20),
+	userName VARCHAR(75) null,
+	createDate DATETIME null,
+	modifiedDate DATETIME null,
+	userId BIGINT(20),
+	emailAddress VARCHAR(75) null,
+	classNameId BIGINT(20),
+	classPK BIGINT(20),
+	duration INTEGER,
+	startDate DATETIME null,
+	endDate DATETIME null,
+	url VARCHAR(75) null,
+	expired BOOLEAN,
+	internalShare BOOLEAN,
+	writePermission BOOLEAN,
+	viewCount INTEGER
+);

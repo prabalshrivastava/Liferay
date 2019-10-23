@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.mail.model.SPEMailAudit" />
+	<import class="com.sambaash.platform.srv.mail.model.SPMail" />
+	<import class="com.sambaash.platform.srv.mail.model.SPMailBlackList" />
+	<import class="com.sambaash.platform.srv.mail.model.SPMailCampaign" />
+	<import class="com.sambaash.platform.srv.mail.model.SPMailCampaignEDM" />
+	<import class="com.sambaash.platform.srv.mail.model.SPMailCampaignSubscribers" />
+	<import class="com.sambaash.platform.srv.mail.model.SPMailLinkTracking" />
+	<import class="com.sambaash.platform.srv.mail.model.SPMailSubscriberUserAgent" />
+	<import class="com.sambaash.platform.srv.mail.model.SPMailTemplate" />
+	<import class="com.sambaash.platform.srv.mail.model.SPMailTemplateAttachment" />
+	<import class="com.sambaash.platform.srv.mail.model.SPMailUnsubscribe" />
+	<class name="com.sambaash.platform.srv.mail.model.impl.SPEMailAuditImpl" table="SPEMailAudit">
+		<cache usage="read-write" />
+		<id name="spEMailAudit" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sentTo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bcc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="category" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="subject" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sentDate" type="org.hibernate.type.TimestampType" />
+		<property name="messasgeId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="orgId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="processStateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="nodeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.mail.model.impl.SPMailBlackListImpl" table="SPMailBlackList">
+		<cache usage="read-write" />
+		<id name="spMailBlackListId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="spMailCampaignId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bounced" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="bounce_soft" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="complain" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="message" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="messageId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.mail.model.impl.SPMailCampaignImpl" table="SPMailCampaign">
+		<cache usage="read-write" />
+		<id name="spMailCampaignId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="campaignName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="mainTempalteId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="rem1TempalteId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="rem2TempalteId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="rem3TempalteId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="thankyouTempalteId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="missedyouTempalteId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="mainScheduledDate" type="org.hibernate.type.TimestampType" />
+		<property name="rem1ScheduledDate" type="org.hibernate.type.TimestampType" />
+		<property name="rem2ScheduledDate" type="org.hibernate.type.TimestampType" />
+		<property name="rem3ScheduledDate" type="org.hibernate.type.TimestampType" />
+		<property name="thankYouScheduledDate" type="org.hibernate.type.TimestampType" />
+		<property name="missedyouScheduledDate" type="org.hibernate.type.TimestampType" />
+		<property name="rsvpId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="dlFileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sentBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sentDate" type="org.hibernate.type.TimestampType" />
+		<property name="createBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="archive" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="campaignType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.mail.model.impl.SPMailCampaignEDMImpl" table="SPMailCampaignEDM">
+		<cache usage="read-write" />
+		<id name="spMailCampaignEDMId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="spMailCampaignId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spMailTemplateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="seqNo" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="dayOfWeek" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="dayOfMonth" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="delayUnit" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="delayAmount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="croneType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nextScheduleDateTime" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sambaash.platform.srv.mail.model.impl.SPMailCampaignSubscribersImpl" table="SPMailCampaignSubscribers">
+		<cache usage="read-write" />
+		<id name="spMailCampaignSubscribersId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="spMailCampaignId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="parentSubscriberId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="firstName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="spMailType" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="messageId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="opened" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="countryName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="city" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="regionName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="areaCode" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="latitude" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="longitude" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ipAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="webVersion" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="openedDate" type="org.hibernate.type.TimestampType" />
+		<property name="createBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.sambaash.platform.srv.mail.model.impl.SPMailLinkTrackingImpl" table="SPMailLinkTracking">
+		<cache usage="read-write" />
+		<id name="spMailLinkTrackingId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="spMailCampaignId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spMailCampaignEDMId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spMailCampaignSubscribersId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="label" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="link" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="encryptedlink" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="openedDate" type="org.hibernate.type.TimestampType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sambaash.platform.srv.mail.model.impl.SPMailSubscriberUserAgentImpl" table="SPMailSubscriberUserAgent">
+		<cache usage="read-write" />
+		<id name="spMailSubscriberUserAgentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="spMailCampaignSubscribersId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spMailCampaignId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="typeName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="deviceCategory" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="family" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="operatingSystem" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="versionNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userAgent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.mail.model.impl.SPMailTemplateImpl" table="SPMailTemplate">
+		<cache usage="read-write" />
+		<id name="spMailTemplateId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="productTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="subProductTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="templateName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="subject" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="htmlContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="textContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="htmlUpload" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="createBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="parentTempalteId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="versionNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fromAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fromName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.mail.model.impl.SPMailTemplateAttachmentImpl" table="SPMailTemplateAttachment">
+		<cache usage="read-write" />
+		<id name="spTemplateAttachmentId" column="spRsvpTemplateId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="templateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="rsvpId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.mail.model.impl.SPMailUnsubscribeImpl" table="SPMailUnsubscribe">
+		<cache usage="read-write" />
+		<id name="spMailUnsubscribeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="unsubscribeDate" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

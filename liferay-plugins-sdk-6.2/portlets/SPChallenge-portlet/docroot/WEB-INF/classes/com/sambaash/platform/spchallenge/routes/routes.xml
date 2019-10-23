@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 6.2.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_6_2_0.dtd">
+
+<routes>
+	<!-- not used..but having this as a backup incase the index isnt sent -->
+	<route>
+		<pattern>/view/challenge/{spChallengeId}</pattern>
+		<implicit-parameter name="actionp">displayChallenge</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/view/challenge/{spChallengeId}/{posIndex}</pattern>
+		<implicit-parameter name="actionp">displayChallenge</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/apply/challenge/{spChallengeId}</pattern>
+		<implicit-parameter name="actionp">applyToChallenge</implicit-parameter>
+		<implicit-parameter name="type">internal</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/apply/challenge/ext/{spChallengeId}</pattern>
+		<implicit-parameter name="actionp">applyToChallenge</implicit-parameter>
+		<implicit-parameter name="type">external</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/create/challenge</pattern>
+		<implicit-parameter name="actionp">createChallenge</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/edit/challenge/{spChallengeId}</pattern>
+		<implicit-parameter name="actionp">editChallenge</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/create/applicant/{spChallengeId}/{orgId}</pattern>
+		<implicit-parameter name="actionp">applyChallenge</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/view/applicant/{spChallengeApplicantId}</pattern>
+		<implicit-parameter name="actionp">viewApplication</implicit-parameter>
+	</route>
+	<route>
+		<pattern>/edit/applicant/{spChallengeApplicantId}</pattern>
+		<implicit-parameter name="actionp">editApplication</implicit-parameter>
+	</route>
+</routes>

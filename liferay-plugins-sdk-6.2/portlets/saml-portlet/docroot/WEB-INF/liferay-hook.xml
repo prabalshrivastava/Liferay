@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 6.2.0//EN" "http://www.liferay.com/dtd/liferay-hook_6_2_0.dtd">
+
+<hook>
+	<portal-properties>portal.properties</portal-properties>
+	<language-properties>content/Language.properties</language-properties>
+	<language-properties>content/Language_ar.properties</language-properties>
+	<language-properties>content/Language_bg.properties</language-properties>
+	<language-properties>content/Language_ca.properties</language-properties>
+	<language-properties>content/Language_cs.properties</language-properties>
+	<language-properties>content/Language_da.properties</language-properties>
+	<language-properties>content/Language_de.properties</language-properties>
+	<language-properties>content/Language_el.properties</language-properties>
+	<language-properties>content/Language_en.properties</language-properties>
+	<language-properties>content/Language_es.properties</language-properties>
+	<language-properties>content/Language_et.properties</language-properties>
+	<language-properties>content/Language_eu.properties</language-properties>
+	<language-properties>content/Language_fa.properties</language-properties>
+	<language-properties>content/Language_fi.properties</language-properties>
+	<language-properties>content/Language_fr.properties</language-properties>
+	<language-properties>content/Language_gl.properties</language-properties>
+	<language-properties>content/Language_hi_IN.properties</language-properties>
+	<language-properties>content/Language_hr.properties</language-properties>
+	<language-properties>content/Language_hu.properties</language-properties>
+	<language-properties>content/Language_in.properties</language-properties>
+	<language-properties>content/Language_it.properties</language-properties>
+	<language-properties>content/Language_iw.properties</language-properties>
+	<language-properties>content/Language_ja.properties</language-properties>
+	<language-properties>content/Language_ko.properties</language-properties>
+	<language-properties>content/Language_lo.properties</language-properties>
+	<language-properties>content/Language_lt.properties</language-properties>
+	<language-properties>content/Language_nb.properties</language-properties>
+	<language-properties>content/Language_nl.properties</language-properties>
+	<language-properties>content/Language_nl_BE.properties</language-properties>
+	<language-properties>content/Language_pl.properties</language-properties>
+	<language-properties>content/Language_pt_BR.properties</language-properties>
+	<language-properties>content/Language_pt_PT.properties</language-properties>
+	<language-properties>content/Language_ro.properties</language-properties>
+	<language-properties>content/Language_ru.properties</language-properties>
+	<language-properties>content/Language_sk.properties</language-properties>
+	<language-properties>content/Language_sl.properties</language-properties>
+	<language-properties>content/Language_sr_RS.properties</language-properties>
+	<language-properties>content/Language_sr_RS_latin.properties</language-properties>
+	<language-properties>content/Language_sv.properties</language-properties>
+	<language-properties>content/Language_tr.properties</language-properties>
+	<language-properties>content/Language_uk.properties</language-properties>
+	<language-properties>content/Language_vi.properties</language-properties>
+	<language-properties>content/Language_zh_CN.properties</language-properties>
+	<language-properties>content/Language_zh_TW.properties</language-properties>
+	<custom-jsp-dir>/META-INF/custom_jsps</custom-jsp-dir>
+	<servlet-filter>
+		<servlet-filter-name>SSO SAML IdP Filter</servlet-filter-name>
+		<servlet-filter-impl>com.liferay.saml.hook.filter.SamlIdpSsoFilter</servlet-filter-impl>
+	</servlet-filter>
+	<servlet-filter>
+		<servlet-filter-name>SSO SAML SP Filter</servlet-filter-name>
+		<servlet-filter-impl>com.liferay.saml.hook.filter.SamlSpSsoFilter</servlet-filter-impl>
+		<init-param>
+			<param-name>url-regex-ignore-pattern</param-name>
+			<param-value>^/html/.+\.(css|gif|html|ico|jpg|js|png)(\?.*)?$</param-value>
+		</init-param>
+	</servlet-filter>
+	<servlet-filter>
+		<servlet-filter-name>ACS Filter</servlet-filter-name>
+		<servlet-filter-impl>com.liferay.saml.hook.filter.AssertionConsumerServiceFilter</servlet-filter-impl>
+	</servlet-filter>
+	<servlet-filter>
+		<servlet-filter-name>Single Logout Filter</servlet-filter-name>
+		<servlet-filter-impl>com.liferay.saml.hook.filter.SingleLogoutFilter</servlet-filter-impl>
+	</servlet-filter>
+	<servlet-filter>
+		<servlet-filter-name>Status Filter</servlet-filter-name>
+		<servlet-filter-impl>com.liferay.saml.hook.filter.StatusFilter</servlet-filter-impl>
+	</servlet-filter>
+	<servlet-filter-mapping>
+		<servlet-filter-name>Auto Login Filter</servlet-filter-name>
+		<url-pattern>/c/portal/saml/auth_redirect</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</servlet-filter-mapping>
+	<servlet-filter-mapping>
+		<servlet-filter-name>SSO SAML IdP Filter</servlet-filter-name>
+		<before-filter>SSO CAS Filter</before-filter>
+		<url-pattern>/c/portal/logout</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</servlet-filter-mapping>
+	<servlet-filter-mapping>
+		<servlet-filter-name>SSO SAML SP Filter</servlet-filter-name>
+		<before-filter>SSO CAS Filter</before-filter>
+		<url-pattern>/c/portal/login</url-pattern>
+        <url-pattern>/c/portal/logout</url-pattern>
+<!-- 
+		<url-pattern>/*</url-pattern>
+-->
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</servlet-filter-mapping>
+	<servlet-filter-mapping>
+		<servlet-filter-name>ACS Filter</servlet-filter-name>
+		<before-filter>SSO CAS</before-filter>
+		<url-pattern>/c/portal/saml/acs/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</servlet-filter-mapping>
+	<servlet-filter-mapping>
+		<servlet-filter-name>Single Logout Filter</servlet-filter-name>
+		<before-filter>SSO CAS</before-filter>
+		<url-pattern>/c/portal/saml/slo_soap/*</url-pattern>
+		<url-pattern>/c/portal/saml/slo_redirect/*</url-pattern>
+		<url-pattern>/c/portal/saml/slo_logout/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</servlet-filter-mapping>
+	<servlet-filter-mapping>
+		<servlet-filter-name>Status Filter</servlet-filter-name>
+        <after-filter>URL Rewrite Filter</after-filter>
+		<url-pattern>/c/portal/status</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</servlet-filter-mapping>
+<!--
+	<struts-action>
+		<struts-action-path>/portal/saml/acs</struts-action-path>
+		<struts-action-impl>com.liferay.saml.hook.action.AssertionConsumerServiceAction</struts-action-impl>
+	</struts-action>
+-->
+	<struts-action>
+		<struts-action-path>/portal/saml/auth_redirect</struts-action-path>
+		<struts-action-impl>com.liferay.saml.hook.action.AuthRedirectAction</struts-action-impl>
+	</struts-action>
+	<struts-action>
+		<struts-action-path>/portal/saml/keep_alive</struts-action-path>
+		<struts-action-impl>com.liferay.saml.hook.action.SessionKeepAliveAction</struts-action-impl>
+	</struts-action>
+	<struts-action>
+		<struts-action-path>/portal/saml/metadata</struts-action-path>
+		<struts-action-impl>com.liferay.saml.hook.action.MetadataAction</struts-action-impl>
+	</struts-action>
+<!-- 	
+	<struts-action>
+		<struts-action-path>/portal/saml/slo_logout</struts-action-path>
+		<struts-action-impl>com.liferay.saml.hook.action.SingleLogoutAction</struts-action-impl>
+	</struts-action>
+	<struts-action>
+		<struts-action-path>/portal/saml/slo_redirect</struts-action-path>
+		<struts-action-impl>com.liferay.saml.hook.action.SingleLogoutAction</struts-action-impl>
+	</struts-action>
+	<struts-action>
+		<struts-action-path>/portal/saml/slo_soap</struts-action-path>
+		<struts-action-impl>com.liferay.saml.hook.action.SingleLogoutAction</struts-action-impl>
+	</struts-action>
+-->
+	<struts-action>
+		<struts-action-path>/portal/saml/sso</struts-action-path>
+		<struts-action-impl>com.liferay.saml.hook.action.WebSsoAction</struts-action-impl>
+	</struts-action>
+</hook>

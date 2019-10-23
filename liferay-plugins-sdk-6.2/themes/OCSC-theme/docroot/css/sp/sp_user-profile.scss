@@ -1,0 +1,521 @@
+@import "sp_custom_variables";
+@import "sp_mixins";
+@import "sp_media-queries";
+
+
+$profile_head_height: 650px;
+$profile_list_height: 162px;
+$profile_formNav_height: 400px;
+$profile_formWrap_height: 700px;
+
+/** Mixins**/
+
+.yui3-widget-bd{
+	position: relative;
+}
+
+#column-2 .userprofile-portlet, #column-3 .userprofile-portlet {
+    margin-left: 20px;
+}
+
+#column-1 .userprofile-portlet{
+	margin-left:40px;
+}
+/** USER-PROFILE **/
+
+.userprofile-portlet{
+
+	.yui3-panel-content{
+		box-shadow:none!important;
+		border: 1px solid $custom-color-31!important;
+		background: $white!important;
+	}
+
+	.yui3-widget-content {
+	    .header-pretitle, .header-posttitle {
+		    font-size: $fontSize;
+		    font-weight: $fontWeight-medium;
+			color: $medium-gray;
+		}
+	}
+
+	.yui3-widget-hd {
+		background: none!important;
+	    border: none!important;
+	    text-shadow: none!important;
+		color: $themeColor!important;
+	}
+
+	.yui3-widget-bd{
+		height: auto;
+		overflow-y: auto;
+		padding: 0!important;
+		&>div input {
+			background: $custom-color-28;
+			-webkit-border-radius: 3px;
+		    -ms-border-radius: 3px;
+		    -moz-border-radius: 3px;
+		    -o-border-radius: 3px;
+			border-radius: 3px;
+			border: none!important;
+			font-size: $fontSize;
+			font-weight: $fontWeight-regular;
+			}
+	}
+
+	.content-title {
+	    font-size: $fontSize-normal;
+	    text-transform: none;
+	    color: $custom-color-30;
+	    font-weight: 400;
+	    line-height: 1;
+	}
+
+	.textedit-input {
+		color: $dark-gray!important;
+	    font-size: $fontSize;
+	}
+
+	.seperatedline{
+		background:none;
+	}
+}
+
+.webkit select {
+    font-size: $fontSize-normal;
+}
+
+/** workhistory **/
+
+.workHistory-startDate {
+	border-right: 1px solid $custom-color-23;
+}
+
+#workHistory {
+
+	.workhistory-horizontalspacing {
+		font-size: $fontSize;
+		a {
+			font-size: $fontSize-normal;
+			text-decoration : none;
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+.workHistory-startDate {
+	border-right-color: $custom-color-23;
+}
+
+#webInfo {
+	.networkinformation-value {
+		font-size: $fontSize-normal;
+	}
+}
+
+#contact_info_details {
+    font-size: $fontSize;
+}
+/** simpleprofileimage **/
+
+
+
+.userProfileCTA{
+	background: $white;
+	@include vendor-prefix(box-sizing,border-box);
+	border-radius: 4px;
+    @include vendor-prefix(border-radius,4px);
+	border:1px solid $custom-color-31;
+	border-left: 0;
+	@include vendor-prefix(border-bottom-left-radius,0);
+	@include vendor-prefix(border-top-left-radius,0);
+
+		span.ctaText{
+			font-size: 12pt;
+			font-style: italic;
+			line-height: 18pt;
+			color: $black;
+		}
+}
+
+.aui-w25#column-3{
+	display: none !important;
+}
+.aui-w25#column-3{
+			.portlet-content{
+				padding-left: 0;
+			}
+			.journal-content-article{
+				display: table;
+				height: 202px;
+			}
+		}
+
+/** END USER-PROFILE **/
+
+.no_height{
+		height: 0 !important;
+		@include vendor-prefix(transition, height ease-in-out 1s);
+}
+
+.w_height{
+
+	@include vendor-prefix(transition, height ease-in-out 1s);
+}
+
+.mobileNavSelect{
+	display: none;
+}
+
+.single-input-focus{
+  border:1px solid #999999 !important;
+  border-top-color: #000 !important;
+  background: #FFF;
+  border: 1px solid #FFCC00;
+}
+
+.focus{
+  border-color:#B2B2B2 !important;
+}
+
+
+
+/** Mobile **/
+
+
+@include screen(320px, 767px){
+
+	input[type="text"],
+	input[type="password"],
+	input[type="file"],
+	select,
+	textarea,
+	.textarea{
+		width: 100% !important;
+	}
+
+	.Column_25_50_25{
+		.aui-w33{
+			width: 100%;
+		}
+	}
+	.UserProfile-portlet {
+		.aui-panel{
+			padding: 0;
+		}
+
+		.aui-panel-content{
+			padding: 15px 10px;
+		}
+	}
+
+	#webInfo .networkinformation-value{
+		    word-wrap: break-word;
+	}
+
+	#basicInfo{
+		.maindivpersonalInfo{
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			vertical-align: top;
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	.simpleprofileimage-portlet{
+		padding:20px;
+		.portlet-content{
+			width:100%;
+			height:inherit;
+		}
+		.portlet-body{
+			  /* border: 1px solid $custom-color-66; */
+			  border-bottom: 0;
+
+			  border-bottom-right-radius: 0;
+			  border-bottom-left-radius: 0;
+		}
+
+	}
+
+	.aui-w50 {
+	}
+
+	.aui-w25#column-3{
+		.portlet-content{
+			padding: 20px 0;
+			padding-top: 0;
+		}
+		.journal-content-article{
+			height: 210px;
+		}
+	}
+
+	.userProfileCTA{
+
+	}
+
+	.portlet-column{
+		display: block;
+		width:100%;
+	}
+
+	.portlet-layout{
+		display: block;
+	}
+
+	.userProfile-portlet{
+		#webInfo{
+			.groupWidth{
+				div{
+					word-break: break-all;
+  					font-size: 8pt;
+				}
+			}
+			.networkinformation-button{
+				width: 18%;
+			}
+		}
+	}
+}
+@include screen(768px,1100px, portrait){
+
+	input[type="text"],
+	input[type="password"],
+	input[type="file"],
+	select,
+	textarea,
+	.textarea{
+		width: 100% !important;
+	}
+
+	.Column_25_50_25{
+		.aui-w33{
+			width: 100%;
+		}
+	}
+	.UserProfile-portlet {
+		.aui-panel{
+			padding: 0;
+		}
+
+		.aui-panel-content{
+			padding: 15px 10px;
+		}
+	}
+
+
+	#basicInfo{
+		.maindivpersonalInfo{
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			vertical-align: top;
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	.simpleprofileimage-portlet{
+		padding: 20px;
+		.portlet-content{
+			width:100%;
+			height:inherit;
+		}
+		.portlet-body{
+			  /* border: 1px solid $custom-color-66; */
+			  border-bottom: 0;
+
+			  border-bottom-right-radius: 0;
+			  border-bottom-left-radius: 0;
+		}
+
+	}
+
+	.aui-w50 {
+		.UserProfile-portlet{
+			.aui-panel{
+				padding: 20px 0;
+				padding-top: 0;
+				padding-bottom:0;
+				height: auto;
+
+				.aui-panel-content{
+					/* border: 1px solid $custom-color-66; */
+					  border-top: 0;
+ 					  border-bottom: 0;
+ 					  padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.aui-w25#column-3{
+		.portlet-content{
+			padding: 20px 0;
+			padding-top: 0;
+		}
+		.journal-content-article{
+			height: 210px;
+		}
+	}
+
+	.portlet-column{
+		display: block;
+		width:100%;
+	}
+
+	.portlet-layout{
+		display: block;
+	}
+
+	.userProfile-portlet{
+		#webInfo{
+			.groupWidth{
+				div{
+					word-break: break-all;
+  					font-size: 8pt;
+				}
+			}
+			.networkinformation-button{
+				width: 18%;
+			}
+		}
+	}
+}
+
+.postal-code-display, .address_title {
+    display: none;
+}
+
+#contactInfo {
+	.userjobdetails-input-right-align {
+		input, select{
+			font-size:$fontSize;
+		}
+	}
+}
+
+/** school information dynamic - form **/
+
+#school_information {
+	.userjobdetails-input-height{
+		min-height:50px;
+		    margin-top: 10px;
+	}
+	.userjobdetails-input-right-align input{
+		opacity:1;
+	}
+	.availability-horizontalspacing{
+		margin-bottom:10px;
+	}
+	.school_information_editAlign{
+		text-align:right;
+	}
+}
+
+
+/** simple profile image portlet **/
+
+.simpleprofileimage-portlet{
+	background: $white;
+	border-radius: 4px;
+	@include vendor-prefix(border-radius,4px);
+	border:1px solid $custom-color-23;
+	@include vendor-prefix(border-bottom-right-radius,0);
+	@include vendor-prefix(border-top-right-radius,0);
+
+	 .portlet-body{
+
+	 	  background: $white;
+		  border-radius: 4px;
+		  @include vendor-prefix(border-radius,4px);
+		  border:1px solid $custom-color-23;
+		  @include vendor-prefix(border-bottom-right-radius,0);
+		  @include vendor-prefix(border-top-right-radius,0);
+
+	 }
+
+	 .pi-portrait-img{
+		 @include vendor-prefix( border-radius,50%);
+		 border: 2px solid $custom-color-23;
+	}
+}
+
+.profile-image-container .sp-mbl {
+    font-size: 20pt;
+}
+.profileimagewrapper {
+    background: #eee;
+}
+.profileimagewrapper > section {
+      -webkit-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size: 12pt;
+}
+.profileimagewrapper > section:last-child {
+        border-left: 1px solid #333;
+}
+
+.profile-currimg-container .profile-currimg-content {
+          -webkit-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+        .profile-currimg-text {
+            font-size: 20pt;
+            font-weight: 400;
+			color:#000;
+		}
+
+.profile-currimg-content img {
+            border: 2px solid #fff;
+}
+
+.upload-top-content h3 {
+            font-size:20pt;
+            font-weight: 400;
+			color:#000;
+}
+
+ .pi-or-hr {
+        border: none;
+ }
+.pi-or-hr:before {
+          background: none;
+          color: #B5B5B5;
+font-size: 12pt;
+  }
+
+ .pi-drop-zone {
+        background: #fff;
+margin-bottom:20px;}
+ .pi-drop-text {
+        border-radius: 5px 5px 5px 5px;
+        text-shadow: none;
+        color: #B5B5B5;
+        font-weight: 400;
+        -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        background: url(@theme_image_path@/icons/dragdroparea.png);
+        background-position: center center;
+        background-size: 50px 50px;
+        background-repeat: no-repeat; }
+
+.profileimagewrapper  input[type="file"] {
+    background: #fff;
+}
+
+/** ---- **/

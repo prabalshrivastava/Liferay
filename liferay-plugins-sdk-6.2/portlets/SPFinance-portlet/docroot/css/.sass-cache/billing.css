@@ -1,0 +1,258 @@
+input[type="file"] {
+  display: none; }
+
+#fileUploadLabel {
+  padding: 6px !important;
+  font-weight: bold;
+  padding-top: 13px !important;
+  background: #eff4fb !important;
+  display: table;
+  color: #0f349f;
+  right: 0;
+  top: 24px;
+  position: absolute;
+  z-index: 1000; }
+
+#fileUploadLabel:hover {
+  background: #e2eeff !important; }
+
+.dashed-box {
+  border: 1px dashed #d9e1f0;
+  padding: 30px;
+  border-radius: 10px;
+  background: #f7f9fe; }
+
+.aui .children h3 {
+  color: #2d4eab;
+  background: #fff;
+  border-left: 4px solid #4f67aa;
+  border-top-left-radius: 5px;
+  padding: 10px 20px !important;
+  font-size: 18px; }
+
+.aui .children .childrenContainer {
+  border-radius: 5px; }
+
+.aui .children .childrenContainer .childrenContent {
+  padding: 20px 30px;
+  box-shadow: inset 0 12px 20px 0 rgba(37, 38, 94, 0.07);
+  background: #fff;
+  width: 100%; }
+
+.aui .children .childrenContainer .nav {
+  float: right;
+  margin-bottom: 0;
+  padding-top: 0;
+  height: 100%; }
+
+.aui .children .childrenContainer .nav li {
+  display: inline-block;
+  margin-left: 15px; }
+
+.aui .children .childrenContainer .nav {
+  padding-top: 6px;
+  padding-right: 12px; }
+
+.aui .children .childrenContainer .childrenContent .row-fluid {
+  padding-top: 12px !important; }
+
+.aui .children select {
+  background: none !important; }
+
+.sectionHeaderDiv {
+  height: 35px;
+  width: 200px;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  vertical-align: middle;
+  box-shadow: 0px 1px 3px 1px #e1e3ec;
+  position: relative;
+  margin: 0 auto;
+  top: 17px;
+  background-color: white; }
+
+.sectionHeaderLabel {
+  position: relative;
+  top: 9px;
+  color: #2222bf !important; }
+
+.removeIcon {
+  background: url(../images/close.png) no-repeat;
+  width: 17px;
+  height: 18px;
+  text-indent: 1000px;
+  overflow: hidden;
+  position: relative;
+  top: -4px; }
+
+.includeTaxLabel {
+  padding-top: 30px !important; }
+
+.includeTax {
+  padding-right: 10px !important;
+  margin-top: 1px !important;
+  opacity: 1 !important;
+  display: block !important; }
+
+.headerText {
+  display: inline-block !important;
+  max-width: 500px !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important; }
+
+.bullet {
+  background: #7ea6f7;
+  border-radius: 45px;
+  height: 25px;
+  width: 25px;
+  margin-top: 29px; }
+
+.bulletDiv {
+  width: 25px !important; }
+
+.invoiceDetailsFormDiv .form-group label {
+  line-height: 40px !important;
+  padding-right: 10px !important; }
+
+.invoiceDetailsFormDiv .formio-form {
+  padding-top: 40px !important;
+  padding-bottom: 14px !important; }
+
+.remarksHeader {
+  margin-top: 0px;
+  background: #f7f9fc;
+  box-shadow: none;
+  height: 50px;
+  width: 100%;
+  z-index: 9;
+  position: relative; }
+
+.remarksHeader .container {
+  background: #eaf0fc;
+  height: 100%;
+  padding-left: 160px;
+  padding-right: 160px;
+  padding-top: 15px;
+  position: relative; }
+
+.invoiceRemarksDiv .formio-form {
+  background: #f7f9fc;
+  height: 250px;
+  overflow-y: scroll;
+  padding-top: 40px !important;
+  padding-bottom: 14px !important; }
+
+.invoiceDetailsButtonDiv .formio-form {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important; }
+
+.remarksText {
+  padding-top: 8px;
+  padding-bottom: 25px; }
+
+.remarksAction {
+  float: left; }
+
+.remarksTime {
+  float: right; }
+
+.invoiceDetailsFormDiv .amount {
+  font-size: 20px !important;
+  font-weight: bold !important; }
+
+.edit-invoice-button {
+  width: 100px !important;
+  border: 1px solid orange !important;
+  background: #fff5e4 !important; }
+
+.submit-invoice-button {
+  width: 235px !important; }
+
+.void-invoice-button {
+  width: 235px !important; }
+
+.cancel-invoice-button {
+  width: 100px !important; }
+
+.aui .newPortlets .invoice-action-dialog .Pop-Action a {
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  display: block !important; }
+
+.aui .newPortlets .invoice-action-dialog .modalpopupBox.modal .modal-content h3:before {
+  background: #6666f9 !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 45px !important; }
+
+.aui .newPortlets .invoice-action-dialog #column-1 .modal-content {
+  border-radius: 15px !important;
+  box-shadow: 2px 3px #cec9c9 !important;
+  padding: 30px !important; }
+
+.aui .newPortlets .invoice-action-dialog .modalpopupBox.modal .modal-content .close {
+  display: none !important; }
+
+.aui .newPortlets .invoice-feedback-action-dialog .modalpopupBox.modal .modal-content .close {
+  display: none !important; }
+
+.invoiceDetailsButtonDiv button {
+  float: left !important; }
+
+.buttonContainer {
+  display: -webkit-flex  !important;
+  /* Safari */
+  -webkit-align-items: center  !important;
+  /* Safari 7.0+ */
+  display: flex  !important;
+  align-items: center  !important; }
+
+.popup-submit-action {
+  margin: 20px 10px 0px 0px !important;
+  padding: 8px 12px !important;
+  height: 40px !important; }
+
+.popup-cancel-action {
+  margin: 20px 0px 0px 10px !important;
+  padding: 8px 12px !important;
+  width: 150px !important;
+  border-radius: 3px !important;
+  font-weight: bold !important;
+  height: 40px; }
+
+.lor-dialog h3 {
+  font-size: 20px;
+  line-height: normal;
+  padding-top: 16px;
+  padding-bottom: 16px; }
+
+.lor-dialog .modal-header {
+  display: none; }
+
+.lor-dialog textarea {
+  background: #f9fafc;
+  height: 97px; }
+
+.lor-dialog .action_title_container {
+  width: 257px;
+  margin: 0 auto; }
+
+.workflow-submit-for-approval {
+  width: 222px !important; }
+
+.workflow-return-for-amendments {
+  width: 241px !important; }
+
+.message-failed-dialog p {
+  font-size: 15px !important;
+  padding-bottom: 17px; }
+
+.message-failed-dialog h3:before {
+  background: url(../images/warning.png) no-repeat !important; }
+
+.message-failed-dialog h3 {
+  line-height: 63px; }
+

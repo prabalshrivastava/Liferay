@@ -1,0 +1,183 @@
+{
+	"programmePath":[
+		{
+			"type": "programme",
+			"title": "Ethics & Professionalism - Online Modules",
+			"data": [
+				{
+					"subTitle": "Semester 01 (JAN 2019 INTAKE)",
+					"records": [
+						{
+							"SubjectTitle": "Module 1",
+							"enrolDate": "28/02/2019",
+							"latestExamSched": "",
+							"attempts": 0,
+							"grade" : "",
+							"status": "Completed"
+						},
+						{
+							"SubjectTitle": "Module 2",
+							"enrolDate": "07/03/2019",
+							"latestExamSched": "",
+							"attempts": 0,
+							"grade" : "",
+							"status": "Enrolled"
+						}						
+					]
+				}
+			]
+		},
+		{
+			"type": "rpec",
+			"title": "Ethics & Professionalism - Online Modules",
+			"data": [
+				{
+					"subTitle": "Record of Practical Experience and Competency",
+					"summaryUrl": "/rpec/summary",
+					"records": [
+						{
+							"name": "Review 01",
+							"submittedOn": "12/03/2019",
+							"mentor": "Sophia Harmon",
+							"reviewedOn": "15/03/2019"
+						},
+						{
+							"name": "Review 02",
+							"submittedOn": "17/06/2019",
+							"mentor": "Sophia Harmon",
+							"reviewedOn": "21/06/2019"
+						}						
+					]
+				}
+			]
+		},
+		{
+			"type": "programme",
+			"title": "Foundation Programme - Core Modules",
+			"data": [
+				{
+					"subTitle": "Semester 04 (JUL 2020 INTAKE)",
+					"records": [
+						{
+							"SubjectTitle": "Principles of Financial Reporting",
+							"enrolDate": "07/02/2019",
+							"latestExamSched": "06/06/2019, 14:00 - 17:15",
+							"attempts": 1,
+							"grade" : "Pass (M)",
+							"status": "Completed"
+						},
+						{
+							"SubjectTitle": "Principles of Financial Reporting",
+							"enrolDate": "",
+							"latestExamSched": "",
+							"attempts": 0,
+							"grade" : "",
+							"status": "Exempted"
+						}					
+					]
+				},
+				{
+					"subTitle": "Semester 02 (JUL 2019 INTAKE)",
+					"records": [
+						{
+							"SubjectTitle": "Advanced Financial Reporting",
+							"enrolDate": "07/02/2019",
+							"latestExamSched": "06/06/2019, 14:00 - 17:15",
+							"attempts": 1,
+							"grade" : "Pass (M)",
+							"status": "Completed"
+						},
+						{
+							"SubjectTitle": "Financial Management",
+							"enrolDate": "07/02/2019",
+							"latestExamSched": "06/06/2019, 14:00 - 17:15",
+							"attempts": 1,
+							"grade" : "Fail",
+							"status": "Failed"
+						}					
+					]
+				}				
+			]
+		},
+		{
+			"type": "programme",
+			"title": "Professional Programme - Technical & Capstone Modules",
+			"data": [
+				{
+					"subTitle": "Semester 04 (JUL 2019 INTAKE)",
+					"records": [
+						{
+							"SubjectTitle": "Financial Reporting (FR)",
+							"enrolDate": "07/02/2019",
+							"latestExamSched": "06/06/2019, 14:00 - 17:15",
+							"attempts": 1,
+							"grade" : "Pass (M)",
+							"status": "Completed"
+						},
+						{
+							"SubjectTitle": "Assurance (AS)",
+							"enrolDate": "",
+							"latestExamSched": "",
+							"attempts": 0,
+							"grade" : "",
+							"status": "Exempted"
+						},
+						{
+							"SubjectTitle": "Business Value, Governance & Risk (BG)",
+							"enrolDate": "07/02/2019",
+							"latestExamSched": "06/06/2019, 14:00 - 17:15",
+							"attempts": 1,
+							"grade" : "Pass (M)",
+							"status": "Completed"
+						},
+						{
+							"SubjectTitle": "Taxation",
+							"enrolDate": "07/02/2019",
+							"latestExamSched": "06/06/2019, 14:00 - 17:15",
+							"attempts": 1,
+							"grade" : "Pass (M)",
+							"status": "Completed"
+						}											
+					]
+				},
+				{
+					"subTitle": "Semester 05 (JAN 2021 INTAKE)",
+					"records": [
+						{
+							"SubjectTitle": "Integrative Business Solutions (IB)",
+							"enrolDate": "07/02/2021",
+							"latestExamSched": "",
+							"attempts": 0,
+							"grade" : "",
+							"status": "Enrolled"
+						}					
+					]
+				}				
+			]
+		},
+		{
+			"type": "awards",
+			"title": "Awards",
+			"data": [
+				{
+					"subTitle": "Record of Practical Experience and Competency",
+					"summaryUrl": "/rpec/summary",
+					"records": [
+						{
+							"programme": "Foundation Programme (FP)",
+							"completionDate": "06/02/2017",
+							"grade": "Pass (M)",
+							"reviewedOn": "Completed"
+						},
+						{
+							"programme": "Professional Programme (PP)",
+							"completionDate": "10/02/2019",
+							"grade": "Pass (M)",
+							"reviewedOn": "Completed"
+						}						
+					]
+				}
+			]
+		}
+	]
+}

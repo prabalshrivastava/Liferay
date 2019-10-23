@@ -1,0 +1,186 @@
+        @import "sp_custom_variables";
+        @import "sp_mixins";
+         @import "sp_media-queries";
+       
+        
+
+       //POPUP
+        .apply-popupoverlay {
+             
+            background: rgba(255, 255, 255, 0.94);
+            transition: opacity 500ms;
+            
+            opacity: 0;
+            z-index: 99999;
+        }
+
+        .apply-popupoverlay:target {
+             
+            opacity: 1;
+        }
+
+        .popup-details-page {
+             
+            background-color: #ffffff;
+            
+            border-top: 6px solid $landingPage-color3;
+            border-bottom: 6px solid $landingPage-color4;
+            
+            background-position: 0 0, 100% 0;
+            background-repeat: no-repeat;
+            -webkit-background-size: 6px 100%;
+            -moz-background-size: 6px 100%;
+            background-size: 6px 100%;
+            background-image: -webkit-linear-gradient(top, $landingPage-color3 0%, $landingPage-color4 100%), -webkit-linear-gradient(top, $landingPage-color3 0%, $landingPage-color4 100%);
+            background-image: -moz-linear-gradient(top, $landingPage-color3 0%, $landingPage-color4 100%), -moz-linear-gradient(top, $landingPage-color3 0%, $landingPage-color4 100%);
+            background-image: -o-linear-gradient(top, $landingPage-color3 0%, $landingPage-color4 100%), -o-linear-gradient(top, $landingPage-color3 0%, $landingPage-color4 100%);
+            background-image: linear-gradient(to bottom, $landingPage-color3 0%, $landingPage-color4 100%), linear-gradient(to bottom, $landingPage-color3 0%, $landingPage-color4 100%);
+            z-index: 100;
+            .pop-content-wrapper {
+                 
+                h1 {
+                    font-size: 40px;
+                    font-weight: 700;
+                    letter-spacing: -0.5px;
+                    color: #343434;
+                    line-height: normal;
+                }
+                p {
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 1.29;
+                    color: #606060;
+                   
+                }
+                button {
+                    
+                    font-weight: 700;
+                }
+            }
+            
+        } //SIGNIN DETAIL PAGE
+        .signin-detail-page {
+            @include full-image('../images/popup-bg.png');
+          
+            .bg-imageapply {
+                background-color: rgba(255, 255, 255, 0.96);
+            
+            }
+        }
+
+        .signin-container {
+                         object-fit: contain;
+            border-radius: 10px;
+            background-color: #ffffff;
+            border: solid 1px #dcdcdc;
+           
+        }
+
+        .signin-container {
+            .box {
+                
+                h1 {
+                    font-size: 40px;
+                    font-weight: 700;
+                    letter-spacing: -0.5px;
+                    color: #343434;
+                    line-height: normal;
+                }
+                p {
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 1.29;
+                    color: #606060;
+                    
+                }
+                button {
+                    
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .signinbg {
+            background-image: url('../images/popup-headerbg.jpg');
+            object-fit: cover;
+          
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            
+        }
+
+        .detail-signin-header {
+            
+            vertical-align: top;
+            
+            background-color: rgba(0, 94, 184, 0.87);
+            
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+           
+            h2 {
+                font-size: 28px;
+                font-weight: 700;
+                color: #ffffff;
+                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+                text-align: left;
+                            }
+        } //signin detail mobile view
+        @include screen (320px,
+        480px) {
+           
+            .detail-signin-header {
+                h2 {
+                    font-size: 22px;
+                   
+                }
+            }
+            .popup-details-page {
+               
+                .pop-content-wrapper {
+                 
+                    h1 {
+                        font-size: 24px;
+                        line-height: 32px;
+                    }
+                    p {
+                        font-size: 12px;
+                    
+                    }
+                    button {
+                        border-radius: 3px;
+                      
+                    }
+                }
+            }
+        }
+
+        @include screen (360px,
+        640px) {
+           
+            .popup-details-page {
+                width: 320px;
+                height: 320px;
+                .pop-content-wrapper {
+                   
+                    h1 {
+                        font-size: 28px;
+                        line-height: 32px;
+                    }
+                    p {
+                        font-size: 14px;
+                        
+                    }
+                    button {
+                        border-radius: 3px;
+                        
+                    }
+                }
+            }
+        }
+
+        

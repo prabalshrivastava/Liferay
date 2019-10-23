@@ -1,0 +1,750 @@
+        @import "sp_custom_variables";
+        @import "sp_mixins";
+        @import "sp_media-queries";
+
+        .max-width {
+            max-width: 1067px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .bg-white {
+            background-color: #ffffff;
+        }
+
+        .border {
+            border: 1px solid #000;
+        }
+
+        .marginTop80 {
+            margin-top: 42%;
+            margin-bottom: 40px;
+        }
+
+
+        .section2Conatiner {
+            margin-bottom: 40px;
+        }
+
+        .sectionHeading {
+            font-size: $fontSize-medium;
+            font-weight: $fontWeight-semibold;
+            letter-spacing: -0.5px;
+            text-align: center;
+            color: $themeColor;
+        }
+
+        .sectionSubHeading {
+            font-size: $fontSize;
+            font-weight: $fontWeight-medium;
+            color: $dark-gray;
+            margin-top: 10px;
+        }
+
+        .sectionDescription {
+            font-size: 22px;
+            color: $dark-gray;
+            line-height: 1.27;
+            font-weight: $fontWeight-medium;
+            text-align: left;
+            margin: 20px 0 15px 0;
+        }
+
+        .sectionPara {
+            font-size: $fontSize;
+            line-height: 1.38;
+            letter-spacing: -0.2px;
+            color: $dark-gray;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .sectionImages {
+            width: 50%;
+            height: 230px;
+            display: inline-flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            margin: 40px 40px 0 0;
+            img {
+                object-fit: contain;
+            }
+        }
+
+        .achievementBox {
+            width: 20%;
+            height: 135px;
+            border: solid 1px $themeColor;
+            display: inline-block;
+            margin: 20px 50px 0 0;
+            padding: 35px 15px;
+        }
+
+        .achNum {
+            font-size: $fontSize-big;
+            font-weight: $fontWeight-black;
+            text-align: center;
+            color: $themeColor;
+            margin-bottom: 15px;
+        }
+
+        .achArea {
+            font-size: $fontSize-normal;
+            font-weight: $fontWeight-medium;
+            text-align: center;
+            color: $themeColor;
+        }
+
+        .HomeWrapper.panel2 {
+            display: block;
+            background: #bed6ee;
+            padding-top: 40px;
+        }
+
+        .panelContents {
+            display: inline-flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            padding-left: 10px;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .panel2Content {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 610px;
+            width: 29%;
+            border: 1px solid #e9f4ff;
+            margin-right: 20px;
+            display: flex;
+        }
+
+
+
+        .captionText {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            font-weight: $fontWeight-semibold;
+        }
+
+        .yellowDot {
+            width: 6px;
+            height: 6px;
+            background-color: #f8e81c;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            border-radius: 5px;
+            margin: 0 10px 0 30px;
+            vertical-align: middle;
+            &:last-child {
+                display: none;
+            }
+        }
+
+        .sectionImageContainer {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .contentHeading {
+            font-size: $fontSize;
+            font-weight: $fontWeight-semibold;
+            text-align: center;
+            color: $dark-gray;
+            margin-top: 20px;
+        }
+
+        .buttonWrapper {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            margin: 20px 0;
+            a {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .buttonContainer {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 33%;
+            height: 100px;
+        }
+
+        .buttonWrapperContainer {
+            display: inline-flex;
+        }
+
+        .btnIconWrap,
+        .btnContentWrap {
+            display: inline-flex;
+            justify-content: left;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .btnIconWrap {
+            margin-right: 20px;
+            img {
+                width: 50px;
+                height: 50px;
+                mix-blend-mode: luminosity;
+                border-radius: 50%;
+            }
+        }
+
+        .btnContentWrap {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: -0.2px;
+            color: #ffffff;
+            text-align: left;
+        }
+
+
+        #feature_wrapper.stuck {
+            position: relative;
+        }
+
+        #home_middlepath {
+            margin: /* 700px 0 */
+            0;
+            overflow: hidden;
+
+            padding: 700px 0 75px 0;
+            -webkit-backface-visibility: hidden;
+            /* backface-visibility: hidden; */
+        }
+
+        #home_middlepath .contentRow {
+            background: #fff;
+
+            padding: 40px 40px;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        #HomeWrapper {
+            position: fixed;
+        }
+
+        #HomeWrapper.ready {
+            opacity: 1;
+            transition: opacity 0.5s linear;
+        }
+
+        #HomeWrapper {
+
+            position: fixed;
+        }
+
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-position: center !important;
+            background-size: cover !important;
+            top: 0;
+            left: 0;
+            cursor: default;
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                object-fit: cover;
+                top: 0;
+                left: 0;
+            }
+        }
+        /* Fading animation */
+
+        .faderelc {
+            -webkit-animation-name: faderelc;
+            -webkit-animation-duration: 1s;
+            animation-name: faderelc;
+            animation-duration: 1s;
+        }
+
+        @-webkit-keyframes faderelc {
+            from {
+                opacity: .6
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes faderelc {
+            from {
+                opacity: .6
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+
+        #home_features {
+            opacity: 0;
+            position: fixed;
+            top: 210px;
+            transition: opacity 0.5s linear;
+            z-index: 0;
+            -webkit-backface-visibility: hidden;
+            /* backface-visibility: hidden; */
+        }
+        /* Visit http://www.menucool.com/responsive-slider for instructions */
+
+        #HomeWrapper {
+            position: fixed;
+        }
+
+        #HomeWrapper.ready {
+            opacity: 1;
+            transition: opacity 0.5s linear;
+        }
+
+        #HomeWrapper.ready.fixed {
+            position: fixed !important;
+        }
+
+
+
+        #HomeWrapper {
+
+            position: fixed;
+            top: 0;
+        }
+
+        #HomeWrapper .contentWrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 0 0 0;
+            flex-direction: column;
+            max-width: 1280px;
+            margin: 0 auto !important;
+            top: 50%;
+            /* left: 50%; */
+            margin-top: -50px !important;
+            position: relative;
+        }
+        /*---------- Captions -------------------*/
+
+        #HomeWrapper .caption {
+            font-size: 60px;
+            position: relative;
+            width: 100%;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 40px;
+            background: transparent;
+            border: none;
+            display: inline-block;
+        }
+
+        #HomeWrapper .ns-button {
+            width: 100%;
+            max-width: 150px;
+            padding: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            display: block;
+            position: relative;
+            background-color: #f44336;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        #HomeWrapper .description {
+            font-size: 30px;
+            position: relative;
+            width: 62%;
+            text-align: center;
+            line-height: 1.27;
+            color: #ffffff;
+
+            background: transparent;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .captionText {
+            font-weight: 600;
+        }
+
+        .buttonContainer_1,
+        .buttonContainer_2,
+        .buttonContainer_3 {
+            display: inline-flex;
+            justify-content: left;
+            align-items: center;
+            flex-direction: row;
+            width: 33%;
+            height: 100px;
+        }
+
+        .paddingLeftRight20 {
+            padding: 0 20px;
+        }
+
+        .btnIconWrap {
+            width: 28%;
+            margin-right: 10px;
+        }
+
+        .btnContentWrap {
+            width: 70%;
+            font-size: 17px;
+        }
+
+        .aui .portlet-dockbar {
+            z-index: 100000;
+        }
+
+        .sectionImages img {
+            object-fit: cover;
+            width: 100%;
+            height: 230px;
+        }
+
+        .HomeWrapper.panel2 {
+            background: #eff7ff;
+            padding: 40px 0;
+            margin-top: 0;
+        }
+
+        .panel2Content {
+            background: #fff;
+            border: 1px solid #bed6ee;
+        }
+
+        footer.footer {
+            margin-top: 0;
+        }
+
+        .achNum {
+            margin-bottom: 15px;
+        }
+
+        .sectionImageContainer div:last-child {
+            margin-right: 0;
+        }
+
+        .achievementBox {
+            margin: 20px 20px 0 0;
+        }
+
+        .section2Conatiner div.achievementBox:last-child {
+            margin-right: 0;
+        }
+
+        .Children {
+            display: none;
+        }
+
+        @media screen and (max-width: 1024px) and (min-width: 320px) {
+            .buttonContainer_1,
+            .buttonContainer_2,
+            .buttonContainer_3 {
+                width: 100%!important;
+                margin-bottom: 2px;
+            }
+        }
+
+        @include screen(318px, 1024px) {
+
+
+            #HomeWrapper {
+
+                .description {
+                    width: 100%;
+                    text-align: center;
+
+                    padding: 20px;
+                }
+                .captionText {
+                    display: block;
+                }
+
+                &.fixed {
+                    position: relative;
+                }
+            }
+
+
+            .sectionHeading {
+                text-align: left;
+            }
+            .sectionSubHeading {
+                text-align: left;
+                margin-bottom: 20px;
+            }
+            .sectionImages {
+                margin: 20px 20px 0 0;
+                height: auto;
+            }
+            .achievementBox {
+                width: 109px;
+                height: 109px;
+                display: inline-flex;
+                margin: 20px 0 0 0;
+                padding: 35px 15px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .achNum {
+                font-size: 30px;
+            }
+            .achArea {
+                font-size: 14px;
+            }
+            .panelContents {
+                display: inline-flex;
+                padding-left: 0;
+                width: 100%;
+                margin: 0 auto;
+                flex-direction: column;
+            }
+            .HomeWrapper.panel2 {
+                background: #e9f4ff;
+                padding: 20px;
+                margin: 0;
+                .sectionHeading {
+                    text-align: left;
+                    margin: 0 0 20px 0px;
+                }
+            }
+            .panel2Content {
+                margin-right: 0;
+                width: 100%;
+                background: $white;
+                margin-bottom: 10px;
+                &:nth-child(2) {
+                    height: auto;
+                    iframe {
+                        height: 400px;
+                    }
+                }
+                &:nth-child(3) {
+                    height: auto;
+                    iframe {
+                        height: 400px;
+                    }
+                }
+            }
+
+            .buttonContainer {
+                width: 100%;
+                margin-bottom: 2px;
+            }
+
+            .buttonWrapper {
+                flex-direction: column;
+            }
+            #HomeWrapper.ready {
+                position: relative!important;
+                top: 0;
+                height: 80vh!important;
+            }
+            #HomeWrapper.ready.fixed {
+                position: relative!important;
+                top: 0;
+                height: 80vh!important;
+            }
+            .aui .dockbar-ready .main-content {
+                margin-top: 0;
+            }
+            #HomeWrapper .caption {
+                margin-bottom: 0;
+            }
+            .captionText {
+                font-weight: 600;
+                font-size: 42px;
+                margin-bottom: 5px;
+            }
+            #HomeWrapper .contentWrapper {
+                margin-top: -150px !important;
+            }
+            #HomeWrapper .description {
+                font-size: 18px;
+                margin-bottom: 0;
+                width: 100%;
+            }
+            #home_middlepath {
+
+                padding-top: 0 !important;
+            }
+            #home_middlepath .contentRow {
+                padding: 20px;
+                border-radius: 0;
+                width: 100%;
+            }
+            .yellowDot {
+                margin: -13px 10px 0 13px;
+            }
+            #HomeWrapper .ns-button {
+                margin-left: 0px;
+            }
+            .section2Conatiner {
+                margin-bottom: 0px;
+            }
+            .achievementBox {
+                width: 140px;
+                height: 140px;
+                margin: 5px 0;
+            }
+            .sectionImages {
+                margin: 20px 0;
+                height: auto;
+                padding: 7px;
+                width: 50%;
+            }
+            .sectionImages img {
+                object-fit: cover;
+                width: 100%;
+                height: 100px;
+            }
+            #home_middlepath {
+
+                padding: 0;
+            }
+        }
+
+        @include screen(318px, 768px, landscape) {
+
+            #HomeWrapper .contentWrapper {
+                margin-top: -150px !important;
+            }
+            #HomeWrapper.ready.fixed {
+                position: relative !important;
+                top: 0;
+                height: 100vh !important;
+            }
+        }
+
+        @include screen(767px, 1024px, portrait) {
+            .aui .bannerCoverWrapper {
+                margin-top: 62px;
+                padding: 0 40px;
+            }
+        }
+
+        @include screen(767px, 1024px, landscape) {
+            .buttonWrapper {
+                flex-direction: row;
+            }
+            .sectionImages img {
+                height: 250px;
+            }
+            .aui .bannerCoverWrapper {
+                margin-top: 25px;
+                padding: 0 20px;
+            }
+        } //Business Partler section
+        .businessPartWrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .bPcontainer {
+            width: 100%;
+            max-width: 70%;
+            padding: 0;
+            margin: 0 auto;
+            @include flexbox();
+            @include flex-direction(row);
+        }
+
+        .bPInnerrow {
+            width: 50%;
+            padding: 0 40px;
+            margin: 10px 0;
+
+            @include flexbox();
+            @include flex-direction(row);
+            &:first-child {
+                border-right: solid 1px #aeaeae;
+            }
+            a.bPInnerrowWrapLeft {
+                width: 100%;
+                display: block;
+                padding: 0;
+                margin: 0;
+                line-height: normal;
+                text-decoration: none;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            a.bPInnerrowWrapRight {
+                width: 33%;
+                display: block;
+                padding: 20px;
+                margin: 0;
+                line-height: normal;
+                text-decoration: none;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        @include screen(318px, 768px) {
+            .bPcontainer {
+                @include flex-direction(column);
+            }
+            .bPInnerrow {
+                width: 100%;
+                &:first-child {
+                    border-right: 0px;
+                   
+                }
+            }
+            .bPInnerrow a.bPInnerrowWrapRight
+            {
+                padding: 10px;
+            }
+            .businessPartWrapper
+            {
+                    border-top: 1px solid #eeeeee;
+            }
+        }

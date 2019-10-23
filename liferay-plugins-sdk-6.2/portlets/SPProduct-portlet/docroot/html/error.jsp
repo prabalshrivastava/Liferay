@@ -1,0 +1,1 @@
+<div class="alert alert-error"> <%=LabelUtil.getLabel(pageContext, themeDisplay,"label.product.error.message")%></div>

@@ -1,0 +1,1061 @@
+/**
+$bgColor-activeState			: $custom-color-4;
+
+$bgColor-body					: $light-gray;
+$bgColor-header					: rgba(255,255,255,0.9);
+$bgColor-section				: rgba(255,255,255,1);
+$bgColor-mark					: #71c5e8;
+$bgColor-link					: #f5f5f1;
+$bgColor-badge					: $tertiary-color;
+$bgColor-field					: #fafafa;
+$bgColor-tHead					: #e3e4e9;
+$bgColor-tCell					: $light-gray;
+
+
+$bgColor-btn-primary			: $light-gray;
+$bgColor-btn-primary-hover		: #e2e2e2;
+$bgColor-btn-primary-active		: $light-gray;
+$bgColor-btn-callout			: $secondary-color;
+$bgColor-btn-callout-hover		: $tertiary-color;
+$bgColor-btn-disabled			: #eef4f7;
+$bgColor-btn-icon				: $secondary-color;
+$bgColor-btn-icon-hover			: $tertiary-color;
+$bgColor-btn-link-bar			: $light-gray;
+$bgColor-btn-link-bar-hover		: #e7e7e7;
+$bgColor-btn-link-bar-active	: $light-gray;
+$bgColor-btn-social-icon		: $secondary-color;
+$bgColor-btn-social-icon-hover	: $tertiary-color;
+$bgColor-btn-group-item			: $light-gray;
+$bgColor-btn-group-item-hover	: $white;
+$bgColor-btn-group-item-active	: $light-gray;
+$bgColor-btn-dropdown			: $light-gray;
+$bgColor-btn-dropdown-hover		: $white;
+$bgColor-btn-dropdown-active	: $light-gray;
+$bgColor-btn-text-icon			: $light-gray;
+$bgColor-btn-text-icon-hover	: $white;
+$bgColor-btn-text-icon-active	: $light-gray;
+
+
+$color-feature					: #67747c;
+$color-caption					: #67747c;
+$color-small					: $bodyColor;
+$color-mark						: $bodyColor;
+$color-blockquote				: #757575;
+$color-cite						: #757575;
+$color-link						: $secondary-color;
+$color-link-hover				: $tertiary-color;
+$color-link-disabled			: #cbd9e4;
+$color-tooltip					: #999999;
+$color-badge					: #FFFFFF;
+$color-dropdown					: $bodyColor;
+$color-border					: #bfbfbf;
+$color-tagline					: #a5a5a5;
+
+
+$color-btn-callout				: $white;
+$color-btn-disabled				: #d8e2e8;
+$color-btn-icon					: $white;
+$color-btn-link-bar				: $bodyColor;
+$color-btn-social-icon			: $white;
+$color-btn-group-item			: $bodyColor;
+$color-btn-dropdown				: $bodyColor;
+$color-btn-text-icon			: $bodyColor;
+
+$color-facebook					: #4c66a4;
+$color-googleplus				: #dd4b39;
+$color-pinterest				: #cb2027;
+$color-twitter					: #2fc2ef;
+$color-youtube					: #de332b;
+$color-tumbler					: #35465c;
+
+
+
+$notice    						: #f9d17c;
+$notice-hl 						: #fcbd36;
+$error							: #b94a48;
+$success   						: #468847;
+$warning     					: #c09853;
+$info							: #3a87ad;
+
+
+$max-width						: 1280px;
+$max-height						: 100%;
+
+
+$section-padding				: 5%;
+$button-padding-big				: 15px;
+$button-padding-medium			: 10px;
+$button-padding-small			: 8px;
+$button-padding-smaller			: 5px;
+
+
+$radius-round					: 50%;
+$radius-big						: 10px;
+$radius-medium					: 5px;
+$radius-small					: 3px;
+$radius-smaller					: 2px;
+
+**/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/*startupprofile*/
+/**
+$bgColor-activeState			: $custom-color-4;
+
+$bgColor-body					: $light-gray;
+$bgColor-header					: rgba(255,255,255,0.9);
+$bgColor-section				: rgba(255,255,255,1);
+$bgColor-mark					: #71c5e8;
+$bgColor-link					: #f5f5f1;
+$bgColor-badge					: $tertiary-color;
+$bgColor-field					: #fafafa;
+$bgColor-tHead					: #e3e4e9;
+$bgColor-tCell					: $light-gray;
+
+
+$bgColor-btn-primary			: $light-gray;
+$bgColor-btn-primary-hover		: #e2e2e2;
+$bgColor-btn-primary-active		: $light-gray;
+$bgColor-btn-callout			: $secondary-color;
+$bgColor-btn-callout-hover		: $tertiary-color;
+$bgColor-btn-disabled			: #eef4f7;
+$bgColor-btn-icon				: $secondary-color;
+$bgColor-btn-icon-hover			: $tertiary-color;
+$bgColor-btn-link-bar			: $light-gray;
+$bgColor-btn-link-bar-hover		: #e7e7e7;
+$bgColor-btn-link-bar-active	: $light-gray;
+$bgColor-btn-social-icon		: $secondary-color;
+$bgColor-btn-social-icon-hover	: $tertiary-color;
+$bgColor-btn-group-item			: $light-gray;
+$bgColor-btn-group-item-hover	: $white;
+$bgColor-btn-group-item-active	: $light-gray;
+$bgColor-btn-dropdown			: $light-gray;
+$bgColor-btn-dropdown-hover		: $white;
+$bgColor-btn-dropdown-active	: $light-gray;
+$bgColor-btn-text-icon			: $light-gray;
+$bgColor-btn-text-icon-hover	: $white;
+$bgColor-btn-text-icon-active	: $light-gray;
+
+
+$color-feature					: #67747c;
+$color-caption					: #67747c;
+$color-small					: $bodyColor;
+$color-mark						: $bodyColor;
+$color-blockquote				: #757575;
+$color-cite						: #757575;
+$color-link						: $secondary-color;
+$color-link-hover				: $tertiary-color;
+$color-link-disabled			: #cbd9e4;
+$color-tooltip					: #999999;
+$color-badge					: #FFFFFF;
+$color-dropdown					: $bodyColor;
+$color-border					: #bfbfbf;
+$color-tagline					: #a5a5a5;
+
+
+$color-btn-callout				: $white;
+$color-btn-disabled				: #d8e2e8;
+$color-btn-icon					: $white;
+$color-btn-link-bar				: $bodyColor;
+$color-btn-social-icon			: $white;
+$color-btn-group-item			: $bodyColor;
+$color-btn-dropdown				: $bodyColor;
+$color-btn-text-icon			: $bodyColor;
+
+$color-facebook					: #4c66a4;
+$color-googleplus				: #dd4b39;
+$color-pinterest				: #cb2027;
+$color-twitter					: #2fc2ef;
+$color-youtube					: #de332b;
+$color-tumbler					: #35465c;
+
+
+
+$notice    						: #f9d17c;
+$notice-hl 						: #fcbd36;
+$error							: #b94a48;
+$success   						: #468847;
+$warning     					: #c09853;
+$info							: #3a87ad;
+
+
+$max-width						: 1280px;
+$max-height						: 100%;
+
+
+$section-padding				: 5%;
+$button-padding-big				: 15px;
+$button-padding-medium			: 10px;
+$button-padding-small			: 8px;
+$button-padding-smaller			: 5px;
+
+
+$radius-round					: 50%;
+$radius-big						: 10px;
+$radius-medium					: 5px;
+$radius-small					: 3px;
+$radius-smaller					: 2px;
+
+**/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/*startupprofile*/
+/** Button css **/
+/* FONT MIXINS */
+/*********************
+
+RESPONSIVE BREAKPOINT
+**********************/
+[contenteditable="false"] {
+  color: #555; }
+
+.search_filters .search-criteria-row p {
+  font-weight: 600; }
+
+.applicantStartup p, .applicantChallenge p {
+  font-weight: 600;
+  color: #3d4249; }
+  .applicantStartup p:hover, .applicantChallenge p:hover {
+    color: #dfe0e4;
+    text-decoration: none; }
+
+.aui .page_headTitle h1 {
+  font-size: 24pt;
+  font-weight: normal; }
+
+/* Diffecrent theme nav bar we need to change top we can keep this styles in theme itself  */
+.stick {
+  top: 43px; }
+
+.aui .dockbar-ready .stick {
+  top: 105px; }
+
+.aui .header-circle .light {
+  background: #ffffff; }
+
+.aui .my-challenges-action-portlet .section_box {
+  height: auto !important;
+  max-height: 100% !important;
+  min-height: 100%; }
+
+.challenge_applicants .table-cell.last .lfr-icon-menu .dropdown-toggle > img,
+.table-cell.last .lfr-icon-menu .dropdown-toggle .lfr-icon-menu-text {
+  display: block; }
+
+.sp_filter .filterButtonSet .toggleButton:hover,
+.sp_filter .filterButtonSet .toggleButton.active {
+  background: #dce0e4;
+  color: #555; }
+
+.sp_filter .filterButtonSet .toggleButton:hover,
+.sp_filter .filterButtonSet .toggleButton:hover {
+  background: #dce0e4;
+  color: #555; }
+
+.aui .commonForm input[type="file"] {
+  outline: none;
+  border: 1px solid #bfbfbf;
+  background: #e5e5e5;
+  zoom: 1;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.Down-arrow-pos {
+  cursor: pointer;
+  z-index: 20; }
+
+.stick {
+  z-index: 10; }
+
+/* CHALLENGES */
+/* COMMON FORM & PAGE TITLE */
+.hqWrap {
+  border: 1px solid #b0b0b0; }
+
+.page_headTitle {
+  text-align: center; }
+  .page_headTitle i {
+    zoom: 1;
+    vertical-align: middle;
+    line-height: 0; }
+  .page_headTitle span {
+    zoom: 1;
+    font-size: 24pt;
+    vertical-align: middle; }
+  .page_headTitle .superTitle span {
+    font-size: 20pt;
+    font-family: "Open Sans";
+    text-transform: none; }
+    .page_headTitle .superTitle span.superTitleVal {
+      font-weight: bold;
+      color: #961f63;
+      text-transform: uppercase; }
+
+.commonForm {
+  zoom: 1;
+  font-size: 0;
+  text-align: left; }
+  .commonForm .form .formTitle {
+    border-bottom: 1px solid #7f255e;
+    font-size: 16pt;
+    font-weight: 300;
+    color: #961f63;
+    text-transform: uppercase; }
+  .commonForm .form .formSubTitle {
+    border-bottom: none; }
+    .commonForm .form .formSubTitle span {
+      zoom: 1;
+      font-size: 11pt;
+      font-weight: 300;
+      text-align: left;
+      color: #333333;
+      text-transform: uppercase; }
+  .commonForm .form .aui-form-validator-error-container .aui-field-element {
+    background: none !important; }
+  .commonForm .form .aui-form-validator-error-container .aui-form-validator-error {
+    border-color: #4a2d3f !important; }
+  .commonForm .form .formGroupTitle {
+    border-bottom: 1px solid #7f255e; }
+    .commonForm .form .formGroupTitle span {
+      zoom: 1;
+      font-size: 12pt;
+      font-weight: 300;
+      text-align: left;
+      color: #333333;
+      text-transform: uppercase; }
+  .commonForm .formTextField,
+  .commonForm .formTextArea,
+  .commonForm formSelect,
+  .commonForm .formRadio,
+  .commonForm .formCTA,
+  .commonForm .formSelectField {
+    zoom: 1;
+    vertical-align: top;
+    font-size: 12pt; }
+    .commonForm .formTextField .aui-form-validator-message,
+    .commonForm .formTextArea .aui-form-validator-message,
+    .commonForm formSelect .aui-form-validator-message,
+    .commonForm .formRadio .aui-form-validator-message,
+    .commonForm .formCTA .aui-form-validator-message,
+    .commonForm .formSelectField .aui-form-validator-message {
+      font-size: 7pt;
+      font-style: italic;
+      font-weight: 500; }
+  .commonForm .formGroupfield {
+    zoom: 1;
+    vertical-align: middle;
+    font-size: 12pt; }
+    .commonForm .formGroupfield .formGroupfield {
+      border: 1px solid #b0b0b0; }
+  .commonForm .formCTA {
+    text-align: center; }
+  .commonForm .fw {
+    font-size: 0; }
+  .commonForm label,
+  .commonForm .aui-field-label {
+    text-align: left;
+    font-weight: 400; }
+  .commonForm input,
+  .commonForm textarea {
+    -webkit-border-radius: 2px !important;
+    -ms-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+    -o-border-radius: 2px !important;
+    border-radius: 2px !important;
+    -webkit-transition: all ease-in-out 0.3s !important;
+    -ms-transition: all ease-in-out 0.3s !important;
+    -moz-transition: all ease-in-out 0.3s !important;
+    -o-transition: all ease-in-out 0.3s !important;
+    transition: all ease-in-out 0.3s !important;
+    font-size: 10pt !important;
+    letter-spacing: 1px !important;
+    font-family: "Open Sans"; }
+  .commonForm input[type="Submit"] {
+    zoom: 1;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font: 10pt "Open Sans" !important;
+    font-family: "Open Sans"; }
+  .commonForm input[type="Button"] {
+    zoom: 1;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font: 10pt "Open Sans" !important;
+    font-family: "Open Sans"; }
+  .commonForm input[type="Cancel"] {
+    zoom: 1;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font: 10pt "Open Sans" !important; }
+  .commonForm input[type="Submit"]:hover {
+    background: #ffffff;
+    color: #961f63;
+    border: 1px solid #961f63; }
+  .commonForm input[type="Cancel"]:hover {
+    background: #ffffff;
+    color: #961f63;
+    border: 1px solid #961f63; }
+  .commonForm input[type="Button"]:hover {
+    background: #ffffff;
+    color: #961f63;
+    border: 1px solid #961f63; }
+  .commonForm input[type=text],
+  .commonForm textarea {
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    border: 1px solid #f5f5f5;
+    background: #ffffff;
+    font-family: "Open Sans"; }
+  .commonForm input[type=text]:focus,
+  .commonForm textarea:focus,
+  .commonForm input[type=text]:hover,
+  .commonForm textarea:hover {
+    box-shadow: 0px 0 0px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8) !important; }
+  .commonForm .multipleCTA {
+    zoom: 1;
+    font-size: 0;
+    text-align: right; }
+    .commonForm .multipleCTA a {
+      zoom: 1;
+      -webkit-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      border: 1px solid #961f63;
+      color: #961f63;
+      background: transparent;
+      font-size: 10pt;
+      line-height: 6pt;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      -webkit-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+    .commonForm .multipleCTA a:hover {
+      background: #961f63;
+      color: #ffffff; }
+  .commonForm .form_review input[type=text]:focus,
+  .commonForm .form_review textarea:focus,
+  .commonForm .form_disabled input[type=text]:focus,
+  .commonForm .form_disabled textarea:focus,
+  .commonForm .normal_view input[type=text]:focus,
+  .commonForm .normal_view textarea:focus {
+    box-shadow: 0 !important;
+    border: 0 !important; }
+  .commonForm .form_review input,
+  .commonForm .form_review textarea,
+  .commonForm .form_disabled input,
+  .commonForm .form_disabled textarea,
+  .commonForm .normal_view input,
+  .commonForm .normal_view textarea {
+    -webkit-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    border-radius: 5px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #272626 !important;
+    -webkit-transition: all ease-in-out 0.3s !important;
+    -ms-transition: all ease-in-out 0.3s !important;
+    -moz-transition: all ease-in-out 0.3s !important;
+    -o-transition: all ease-in-out 0.3s !important;
+    transition: all ease-in-out 0.3s !important;
+    font-size: 10pt !important;
+    letter-spacing: 1px !important; }
+    .commonForm .form_review input:hover,
+    .commonForm .form_review textarea:hover,
+    .commonForm .form_disabled input:hover,
+    .commonForm .form_disabled textarea:hover,
+    .commonForm .normal_view input:hover,
+    .commonForm .normal_view textarea:hover {
+      box-shadow: 0 !important;
+      border: 0 !important;
+      border-bottom: 1px solid #272626 !important; }
+  .commonForm .form_review select,
+  .commonForm .form_disabled select,
+  .commonForm .normal_view select {
+    -webkit-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    border-radius: 5px !important;
+    color: #f0f0f0;
+    font-size: 10pt !important;
+    letter-spacing: 1px !important;
+    background: transparent !important;
+    border: 0;
+    font-family: "Open Sans"; }
+  .commonForm .form_review input[type="Submit"],
+  .commonForm .form_disabled input[type="Submit"],
+  .commonForm .normal_view input[type="Submit"] {
+    zoom: 1;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: "Open Sans"; }
+  .commonForm .form_review input[type="Button"],
+  .commonForm .form_disabled input[type="Button"],
+  .commonForm .normal_view input[type="Button"] {
+    zoom: 1;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: "Open Sans"; }
+  .commonForm .form_review input[type="Cancel"],
+  .commonForm .form_disabled input[type="Cancel"],
+  .commonForm .normal_view input[type="Cancel"] {
+    zoom: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    cursor: pointer; }
+  .commonForm .form_review .formFields_data .form_section span.form_section_title,
+  .commonForm .form_disabled .formFields_data .form_section span.form_section_title,
+  .commonForm .normal_view .formFields_data .form_section span.form_section_title {
+    color: #961f63;
+    font-size: 9pt;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 1px solid #961f63; }
+  .commonForm .form_review .formFields_data .form_section .form_section_content,
+  .commonForm .form_disabled .formFields_data .form_section .form_section_content,
+  .commonForm .normal_view .formFields_data .form_section .form_section_content {
+    font-size: 0; }
+    .commonForm .form_review .formFields_data .form_section .form_section_content .fieldName,
+    .commonForm .form_disabled .formFields_data .form_section .form_section_content .fieldName,
+    .commonForm .normal_view .formFields_data .form_section .form_section_content .fieldName {
+      zoom: 1;
+      font-size: 12pt;
+      font-weight: 500;
+      color: #000000;
+      text-transform: uppercase;
+      background: #b0b0b0;
+      border-bottom: 1px solid #b0b0b0;
+      vertical-align: top; }
+    .commonForm .form_review .formFields_data .form_section .form_section_content .fieldContent,
+    .commonForm .form_disabled .formFields_data .form_section .form_section_content .fieldContent,
+    .commonForm .normal_view .formFields_data .form_section .form_section_content .fieldContent {
+      zoom: 1;
+      font-size: 12pt;
+      font-weight: 300;
+      font-style: italic;
+      color: #000000;
+      border-bottom: 1px solid #b0b0b0;
+      vertical-align: top; }
+
+/* COMMON FORM & PAGE TITLE */
+.sp-challenge-applicant-action-portlet {
+  max-width: 1220px; }
+
+.sp-challenge-action-portlet .portlet-content-container {
+  background-color: transparent; }
+.sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si {
+  background-color: #dce0e4;
+  vertical-align: middle;
+  color: #b94a48; }
+  .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib {
+    font-size: 10pt;
+    vertical-align: middle;
+    font-weight: bold; }
+  .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib:last-child,
+  .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib.x-button {
+    vertical-align: middle;
+    line-height: 7pt;
+    cursor: pointer; }
+    .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib:last-child .sp-group-ui-dib .ip-si-x,
+    .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib.x-button .sp-group-ui-dib .ip-si-x {
+      font-size: 8pt;
+      color: #999;
+      font-weight: bold; }
+.sp-challenge-action-portlet .ip-sb .ip-sb-options .ip-sb-option:hover, .sp-challenge-action-portlet .ip-sb .ip-sb-options .ip-sb-option.hover {
+  background: rgba(0, 0, 0, 0.05); }
+.sp-challenge-action-portlet .ip-sb .ip-sb-options .ip-sb-option .sp-group-lfloat {
+  zoom: 1;
+  vertical-align: middle; }
+.sp-challenge-action-portlet .ip-sb .ip-sb-options .ip-sb-option .sp-group-ui-oh {
+  font-size: 10pt;
+  vertical-align: middle; }
+.sp-challenge-action-portlet .innerPage_header {
+  background-size: cover; }
+  .sp-challenge-action-portlet .innerPage_header .innerPage_header_content {
+    z-index: 2; }
+  .sp-challenge-action-portlet .innerPage_header .header-circle {
+    border-radius: 0;
+    border-color: rgba(100, 100, 100, 0.2);
+    border-width: 0.7vw;
+    border-style: solid;
+    background-color: white;
+    color: black; }
+    .sp-challenge-action-portlet .innerPage_header .header-circle .header-circle-title {
+      font-size: 10pt; }
+    .sp-challenge-action-portlet .innerPage_header .header-circle .header-circle-content {
+      font-weight: 500;
+      font-size: 11pt; }
+  .sp-challenge-action-portlet .innerPage_header .innerPage_header_social_cta {
+    text-align: left;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.9));
+    z-index: 1; }
+.sp-challenge-action-portlet .header-cta-band {
+  background: -moz-linear-gradient(top, #0d1821 0%, #22313e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0d1821), color-stop(100%, #22313e));
+  background: -webkit-linear-gradient(top, #0d1821 0%, #22313e 100%);
+  background: -o-linear-gradient(top, #0d1821 0%, #22313e 100%);
+  background: -ms-linear-gradient(top, #0d1821 0%, #22313e 100%);
+  background: linear-gradient(to bottom, #0d1821 0%, #22313e 100%);
+  background: linear-gradient(0deg, #0d1821, #22313e);
+  min-height: 150px; }
+  .sp-challenge-action-portlet .header-cta-band .h3 {
+    color: white; }
+  .sp-challenge-action-portlet .header-cta-band .header_page_infobar .header-circle {
+    border-radius: 0;
+    border-color: rgba(100, 100, 100, 0.2);
+    border-width: 5px;
+    border-style: solid;
+    background-color: white;
+    color: black;
+    vertical-align: top; }
+.sp-challenge-action-portlet .navBar {
+  font-size: 10pt;
+  color: #ffffff;
+  background: #961f63; }
+  .sp-challenge-action-portlet .navBar ul li {
+    font-size: 12pt;
+    cursor: pointer; }
+  .sp-challenge-action-portlet .navBar ul li.active {
+    border-bottom: 2px solid #f59807;
+    font-weight: 500;
+    color: #ffffff; }
+.sp-challenge-action-portlet .sp_profile .profile_form_navigation {
+  background-color: #ffffff; }
+  .sp-challenge-action-portlet .sp_profile .profile_form_navigation .profile_form_navigation_wrap .filterButtonSet .toggleButton {
+    outline: none !important; }
+    .sp-challenge-action-portlet .sp_profile .profile_form_navigation .profile_form_navigation_wrap .filterButtonSet .toggleButton span {
+      text-align: left; }
+    .sp-challenge-action-portlet .sp_profile .profile_form_navigation .profile_form_navigation_wrap .filterButtonSet .toggleButton .additionalText {
+      text-align: left;
+      font-size: 8pt;
+      line-height: 9pt;
+      color: #dfe0e4; }
+.sp-challenge-action-portlet .sp_profile.apply-challenge .profile_form_navigation {
+  background-color: transparent; }
+.sp-challenge-action-portlet .sp_profile.sp_filter .filterButtonSet .toggleButton span {
+  font-size: 11pt;
+  line-height: 13.25pt; }
+  .sp-challenge-action-portlet .sp_profile.sp_filter .filterButtonSet .toggleButton span:first-child {
+    font-size: 11pt; }
+  .sp-challenge-action-portlet .sp_profile.sp_filter .filterButtonSet .toggleButton span.additionalText {
+    zoom: 1;
+    color: inherit;
+    font-size: 8pt !important; }
+.sp-challenge-action-portlet .display_view .col_section.col_section_80 {
+  border-right: 1px solid #3f1d32; }
+.sp-challenge-action-portlet .display_view .col_section input:hover, .sp-challenge-action-portlet .display_view .col_section input:focus {
+  border: 0 !important; }
+.sp-challenge-action-portlet .display_view .col_section input[type="text"], .sp-challenge-action-portlet .display_view .col_section input[type="password"], .sp-challenge-action-portlet .display_view .col_section input[type="file"],
+.sp-challenge-action-portlet .display_view .col_section input select,
+.sp-challenge-action-portlet .display_view .col_section input textarea,
+.sp-challenge-action-portlet .display_view .col_section input .textarea {
+  font-size: 11pt !important;
+  letter-spacing: 0 !important;
+  color: #333333;
+  border-bottom: none !important;
+  letter-spacing: 0px;
+  font-weight: 400; }
+.sp-challenge-action-portlet .display_view .col_section select:hover, .sp-challenge-action-portlet .display_view .col_section select:focus {
+  border: 0 !important; }
+.sp-challenge-action-portlet .display_view .col_section textarea:hover, .sp-challenge-action-portlet .display_view .col_section textarea:focus,
+.sp-challenge-action-portlet .display_view .col_section .textarea:hover,
+.sp-challenge-action-portlet .display_view .col_section .textarea:focus {
+  border: 0 !important; }
+.sp-challenge-action-portlet .display_view .col_section .formTextField {
+  border-bottom: none; }
+  .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group .control-label {
+    color: #555555;
+    font-size: 12pt;
+    text-align: left; }
+  .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group .field {
+    vertical-align: top;
+    border: none !important;
+    cursor: auto;
+    font-size: 11pt !important;
+    font-weight: 300;
+    letter-spacing: 0 !important;
+    color: #000 !important;
+    opacity: 1; }
+    .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group .field textarea {
+      color: #3b3b3b; }
+.sp-challenge-action-portlet .display_view .display_view {
+  font-size: 0; }
+.sp-challenge-action-portlet .display_view .col_section .col_section_title {
+  padding-bottom: 20px; }
+.sp-challenge-action-portlet .display_view .col_section.col_section_20 .col_section_item .col_applyItem span {
+  zoom: 1; }
+.sp-challenge-action-portlet .display_view .col_section.col_section_20 .col_section_item .col_applyItem a.genCTA {
+  zoom: 1;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+.sp-challenge-action-portlet .form_review select,
+.sp-challenge-action-portlet .form_disabled select,
+.sp-challenge-action-portlet .normal_view select,
+.sp-challenge-action-portlet .display_view select {
+  color: #333333; }
+.sp-challenge-action-portlet #toggler .toggler_item .toggler_content ul li a {
+  font-weight: 400;
+  color: #333333; }
+  .sp-challenge-action-portlet #toggler .toggler_item .toggler_content ul li a:hover {
+    color: #0085ca; }
+.sp-challenge-action-portlet #toggler .toggler_item span b {
+  font-weight: 600; }
+.sp-challenge-action-portlet .sp_filter .profile_form {
+  text-align: center; }
+.sp-challenge-action-portlet .loadMoreWrap #loadMore,
+.sp-challenge-action-portlet .loadMoreWrap #loadPrev {
+  font-size: 10pt;
+  letter-spacing: 1px;
+  background: #e2e2e2 !important;
+  border: none;
+  box-shadow: none; }
+
+.table-last-header {
+  text-align: center; }
+
+.challenge_applicants .btn-group {
+  background-color: transparent; }
+.challenge_applicants .lfr-pagination-buttons {
+  font-size: 10pt; }
+
+.page_headTitle h2 {
+  font-weight: 300 !important; }
+
+@media only screen and (max-width: 360px) {
+  .sp-challenge-action-portlet .sp-group-column .ip-to ul li.ip-si .sp-group-ui-dib {
+    font-size: 8pt;
+    font-weight: bold; } }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .sp_results_wrap {
+    text-align: center; }
+
+  /* COPIED FROM Ul_lp Challenges page*/
+  .sp-challenge-action-portlet .innerPage_header {
+    background-size: cover; }
+
+  .sp-challenge-action-portlet .innerPage_header.big-banner {
+    background-attachment: inherit; }
+
+  .sp-challenge-action-portlet .header-cta-band .h3 {
+    color: white; }
+
+  html.aui .sp-challenge-action-portlet .header-cta-band .header_page_infobar .header-circle {
+    border-width: 4px; }
+
+  .sp-challenge-action-portlet .navBar ul li {
+    font-size: 12pt;
+    cursor: pointer; }
+
+  .aui .col_section .col_section_title h2 {
+    font-size: 18pt;
+    font-weight: 400;
+    text-transform: none;
+    color: #555555;
+    text-align: center;
+    border-bottom: 1px solid #005EB8; }
+
+  /* COPIED FROM Ul_lp */
+  .sp-challenge-action-portlet .display_view .col_section.col_section_80 {
+    border-right: none; }
+
+  .mcts1 li div.slidebox {
+    background: #fff none repeat scroll 0 0;
+    color: #333;
+    zoom: 1;
+    vertical-align: top; }
+
+  .portlet-content-container {
+    font-size: 12pt; }
+
+  html.aui .sp-challenge-action-portlet .header-cta-band .header_page_infobar .header-circle {
+    font-size: 10pt; }
+    html.aui .sp-challenge-action-portlet .header-cta-band .header_page_infobar .header-circle div .font-med {
+      font-size: 11pt; }
+  html.aui .sp-challenge-action-portlet .header-cta-band .header_page_infobar .apply-cta {
+    text-align: center; }
+  html.aui .sp-challenge-action-portlet .innerPage_header .header_page_name span {
+    font-size: 20pt; }
+    html.aui .sp-challenge-action-portlet .innerPage_header .header_page_name span.header_page_name_text {
+      font-size: 32pt; }
+  html.aui .sp-challenge-action-portlet .innerPage_header .header_cta {
+    text-align: right; }
+  html.aui .sp-challenge-action-portlet .sp_profile .profile_content .profile_forms_wrap .profile_form_navigation {
+    background: #ffffff; }
+    html.aui .sp-challenge-action-portlet .sp_profile .profile_content .profile_forms_wrap .profile_form_navigation .mobile_form_nav_btn img {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg); }
+  html.aui .sp-challenge-action-portlet .sp_profile.apply-challenge section.profile_content .profile_forms_wrap .profile_form {
+    margin-left: 0; }
+  html.aui .sp-challenge-action-portlet .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation {
+    background-color: #ffffff !important; }
+  html.aui .sp-challenge-action-portlet .sp_filter .profile_content .profile_forms_wrap .profile_form .result_item span {
+    font-size: 10pt;
+    line-height: 9pt; }
+  html.aui .sp-challenge-action-portlet .sp_filter .filterButtonSet .toggleButton span.additionalText {
+    font-size: 2.2vw; }
+  html.aui .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group .control-label {
+    text-align: left !important; } }
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  html.aui .mcts1 li div.slidebox {
+    background: #fff none repeat scroll 0 0;
+    color: #333;
+    zoom: 1;
+    vertical-align: top; }
+  html.aui .sp-challenge-action-portlet .sp_filter .profile_form {
+    text-align: center; }
+  html.aui .aui .col_section.col_section_20 {
+    font-size: 12pt; }
+  html.aui .sp-challenge-action-portlet .header-cta-band .h3 {
+    text-align: center; }
+  html.aui .sp-challenge-action-portlet .aui-dialog .aui-dialog-content .aui-dialog-bd p {
+    font-size: 10pt; } }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .stick {
+    z-index: 10; }
+
+  html.aui .sp-challenge-action-portlet .sp_filter .profile_form {
+    text-align: center; }
+
+  .aui .col_section.col_section_20 {
+    font-size: 12pt; } }
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  html.aui .sp-challenge-action-portlet .sp_filter .profile_form {
+    text-align: center; }
+    html.aui .sp-challenge-action-portlet .sp_filter .profile_form .filterButtonSet .toggleButton span:first-child {
+      font-size: 2.2vw; }
+    html.aui .sp-challenge-action-portlet .sp_filter .profile_form .filterButtonSet .toggleButton span.additionalText {
+      font-size: 2.2vw !important; }
+  html.aui .sp-challenge-action-portlet .header-cta-band .header_page_infobar .header-circle {
+    border-width: 7px; }
+    html.aui .sp-challenge-action-portlet .header-cta-band .header_page_infobar .header-circle div .font-med {
+      font-size: 9pt; }
+
+  html.aui.vp1 .sp-challenge-action-portlet .innerPage_header .header_page_name span {
+    font-size: 20pt; }
+    html.aui.vp1 .sp-challenge-action-portlet .innerPage_header .header_page_name span.header_page_name_text {
+      font-size: 24pt; }
+  html.aui.vp1 .sp-challenge-action-portlet .innerPage_header .header_cta {
+    text-align: right; }
+  html.aui.vp1 .sp-challenge-action-portlet .sp_profile .profile_content .profile_forms_wrap .profile_form_navigation {
+    background: #ffffff; }
+    html.aui.vp1 .sp-challenge-action-portlet .sp_profile .profile_content .profile_forms_wrap .profile_form_navigation .mobile_form_nav_btn img {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg); }
+  html.aui.vp1 .sp-challenge-action-portlet .sp_profile .profile_content .profile_forms_wrap .profile_form .result_item span {
+    font-size: 10pt;
+    line-height: 9pt; }
+  html.aui.vp1 .sp-challenge-action-portlet .sp_profile.apply-challenge section.profile_content .profile_forms_wrap .profile_form {
+    margin-left: 0; }
+  html.aui.vp1 .sp-challenge-action-portlet .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation {
+    background-color: #ffffff !important; }
+  html.aui.vp1 .sp-challenge-action-portlet .aui-dialog .aui-dialog-content .aui-dialog-bd p {
+    font-size: 10pt; }
+  html.aui.vp1 .sp-challenge-action-portlet .display_view .col_section .formTextField .control-group .control-label {
+    text-align: left !important; }
+
+  html.aui.vp2 .sp-challenge-action-portlet .sp_filter .filterButtonSet .toggleButton span {
+    font-size: 1vw; }
+    html.aui.vp2 .sp-challenge-action-portlet .sp_filter .filterButtonSet .toggleButton span:first-child {
+      font-size: 1vw; }
+    html.aui.vp2 .sp-challenge-action-portlet .sp_filter .filterButtonSet .toggleButton span.additionalText {
+      font-size: 1vw !important; } }
+@media screen and (min-width: 1101px) and (max-width: 1280px) {
+  html.aui.gecko .sp-challenge-action-portlet .sp_filter .filterButtonSet .toggleButton span {
+    font-size: 10pt; }
+
+  .sp-challenge-action-portlet .sp_filter .profile_form {
+    text-align: center; }
+
+  .stick {
+    z-index: 10; } }
+@media screen and (min-width: 770px) and (max-width: 440px) {
+  html.aui .sp-challenge-action-portlet .sp_filter .profile_form {
+    text-align: center; } }
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .stick {
+    z-index: 10; } }
+.aui .sp-challenge-action-portlet .display_applicant.sp_profile section.profile_content .profile_forms_wrap {
+  text-align: left; }
+
+.aui .sp-challenge-action-portlet .display_applicant.sp_profile .profile_forms_wrap .profile_form_navigation {
+  background: none; }
+
+.aui .sp_profile.apply-challenge section.profile_content .profile_forms_wrap {
+  font-size: 0;
+  text-align: center; }
+
+/*# sourceMappingURL=sp_challenges.css.map */

@@ -1,0 +1,231 @@
+.tint-Overlay {
+  max-width: 1280px;
+  height: 100%;
+  box-shadow: 0 0 30px 0 #e1e6eb;
+  background-color: #f7f9fc; }
+
+.base-wrapper {
+  width: 100% !important;
+  margin-top: 45px !important;
+  border-radius: 5px !important;
+  border: solid 1px #d5d9e4 !important;
+  background-color: #ffffff !important; }
+
+.w-100 {
+  width: 100%; }
+
+.bottom-container {
+  border-top: 1px dashed #b4c5dc;
+  background-color: #f1f4fc;
+  position: relative; }
+
+.Rectangle {
+  margin: 34px 0 36px 34px; }
+
+.w-60 {
+  width: 60%; }
+
+.image-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px 0 rgba(200, 205, 222, 0.46);
+  border: solid 0.5px #d5d9e4;
+  background-color: #ffffff; }
+
+.upload-btn {
+  width: 150px !important;
+  height: 30px !important;
+  border-radius: 15px !important;
+  box-shadow: 0 0 4px 0 #e4eaf5 !important;
+  background-color: #ffffff !important;
+  border: none !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: 1.29 !important;
+  position: absolute !important;
+  letter-spacing: 0.2px !important;
+  top: -15px !important;
+  color: #0f349f !important; }
+
+.Rectangle-4:focus {
+  border-radius: 15px; }
+
+.file-name {
+  width: 100%;
+  vertical-align: top;
+  height: 16px;
+  font-family: 'Work Sans';
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.6;
+  letter-spacing: normal;
+  color: #265ba1;
+  padding-bottom: 5px;
+  border-bottom: solid 1px #b4c5dc; }
+
+.kb {
+  width: 37px;
+  height: 16px;
+  font-family: 'Work Sans';
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  align-self: flex-start;
+  margin-bottom: 0;
+  vertical-align: bottom;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #646464 !important; }
+
+.stat-label {
+  width: 100% !important;
+  text-align: center !important;
+  height: 18px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: 1.38 !important;
+  letter-spacing: normal !important;
+  color: #59647b !important; }
+
+.file-name-wrapper {
+  margin-left: 15px !important; }
+
+.records {
+  margin: 70px 0 79px 0 !important;
+  width: 100% !important; }
+
+.Excel {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important; }
+
+.total {
+  width: 100%;
+  height: 24px !important;
+  font-size: 30px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: 0.8 !important;
+  letter-spacing: normal !important;
+  text-align: center !important;
+  margin-top: 5px !important;
+  color: #333333 !important; }
+
+.error-summary {
+  margin-top: 40px !important;
+  color: #0f349f !important;
+  margin-bottom: 20px !important; }
+
+.v-line {
+  width: 2px;
+  height: 50px;
+  border: solid 1px #c9cde0 !important; }
+
+.successful {
+  width: 100% !important;
+  height: 24px !important;
+  font-size: 30px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: 0.8 !important;
+  letter-spacing: normal !important;
+  text-align: center !important;
+  margin-top: 5px !important;
+  color: #37ad17 !important; }
+
+.failed {
+  width: 100% !important;
+  height: 24px !important;
+  font-size: 30px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: 0.8 !important;
+  letter-spacing: normal !important;
+  text-align: center !important;
+  color: #c14756 !important; }
+
+.table {
+  width: 720px;
+  height: 48px;
+  border: solid 1px #dfe3e6;
+  background-color: #f5f7fa;
+  text-align: center; }
+
+th,
+td {
+  text-align: center; }
+
+td {
+  background-color: white; }
+
+.top-container {
+  min-height: 146px; }
+
+.base-button {
+  width: 130px !important;
+  height: 30px !important;
+  border-radius: 15px !important;
+  vertical-align: middle !important;
+  border: solid 1px #0f349f !important;
+  background-color: white !important;
+  color: #0f349f !important;
+  padding: 4px 15px; }
+
+.download-btn {
+  width: 220px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #0f349f;
+  font-family: 'Work Sans';
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.58;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  margin-top: 61px; }
+
+.download-btn:hover {
+  color: white;
+  background-color: #0a4a9e; }
+
+.center {
+  margin: auto;
+  width: 50% !important;
+  transform: translate(25%) !important; }
+
+/* Custom */
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto; }
+
+.d-flex {
+  display: flex;
+  align-items: center; }
+
+.flex-column {
+  flex-direction: column; }
+
+.justify-content-center {
+  justify-content: center; }
+
+.justify-content-between {
+  justify-content: space-between; }
+
+.justify-content-around {
+  justify-content: space-around; }
+

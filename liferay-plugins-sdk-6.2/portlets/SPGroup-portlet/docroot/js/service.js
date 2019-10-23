@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.SPGroup", "sambaash.platform.portlet.group.service", "SPGroup-portlet");

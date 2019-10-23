@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="14px" viewBox="0 0 22 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon Flag / Myanmar</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Lithan---Header-NEW-(Mobile)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Mobile-Portrait---Countries" sketch:type="MSArtboardGroup" transform="translate(-123.000000, -130.000000)">
+            <g id="Countries-Sub-Menu" sketch:type="MSLayerGroup" transform="translate(123.000000, 82.000000)">
+                <g id="MYANMAR" transform="translate(0.000000, 44.000000)" sketch:type="MSShapeGroup">
+                    <g id="Icon-Flag-/-Myanmar" transform="translate(0.000000, 4.000000)">
+                        <path d="M0,14 L22,14 L22,0 L0,0 L0,14 Z" id="Fill-15" fill="#494949"></path>
+                        <path d="M1,13.020874 L21.0439453,13.020874 L21.0439453,9.04244303 L1,9.04244303 L1,13.020874 Z" id="Fill-1" fill="#EB2839"></path>
+                        <path d="M1,9.00270205 L21.0439453,9.00270205 L21.0439453,5.02122151 L1,5.02122151 L1,9.00270205 Z" id="Fill-2" fill="#34B233"></path>
+                        <path d="M1,4.98087063 L21.0439453,4.98087063 L21.0439453,1 L1,1 L1,4.98087063 Z" id="Fill-3" fill="#FECB00"></path>
+                        <path d="M7,6.14186507 L10.071984,6.14186507 L11.0162854,3.22420764 L11.9656467,6.14186507 L15.0319384,6.14186507 L12.5544911,7.94191992 L13.4987925,10.8545175 L11.0162854,9.05383012 L8.53883818,10.8545175 L9.48250713,7.94191992 L7,6.14186507 Z" id="Fill-4" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

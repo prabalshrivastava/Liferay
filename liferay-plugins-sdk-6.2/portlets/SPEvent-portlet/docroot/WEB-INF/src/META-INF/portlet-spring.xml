@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.rsvp.service.RsvpLocalService" class="com.sambaash.platform.srv.rsvp.service.impl.RsvpLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.persistence.RsvpPersistence" class="com.sambaash.platform.srv.rsvp.service.persistence.RsvpPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.RsvpCoParticipantDetailLocalService" class="com.sambaash.platform.srv.rsvp.service.impl.RsvpCoParticipantDetailLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.persistence.RsvpCoParticipantDetailPersistence" class="com.sambaash.platform.srv.rsvp.service.persistence.RsvpCoParticipantDetailPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.RsvpDetailLocalService" class="com.sambaash.platform.srv.rsvp.service.impl.RsvpDetailLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.persistence.RsvpDetailPersistence" class="com.sambaash.platform.srv.rsvp.service.persistence.RsvpDetailPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.persistence.RsvpDetailFinder" class="com.sambaash.platform.srv.rsvp.service.persistence.RsvpDetailFinderImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.RsvpDiscountLocalService" class="com.sambaash.platform.srv.rsvp.service.impl.RsvpDiscountLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.persistence.RsvpDiscountPersistence" class="com.sambaash.platform.srv.rsvp.service.persistence.RsvpDiscountPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.RsvpPaymentLocalService" class="com.sambaash.platform.srv.rsvp.service.impl.RsvpPaymentLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.persistence.RsvpPaymentPersistence" class="com.sambaash.platform.srv.rsvp.service.persistence.RsvpPaymentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.RsvpPromoCodeLocalService" class="com.sambaash.platform.srv.rsvp.service.impl.RsvpPromoCodeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.persistence.RsvpPromoCodePersistence" class="com.sambaash.platform.srv.rsvp.service.persistence.RsvpPromoCodePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.RsvpTicketLocalService" class="com.sambaash.platform.srv.rsvp.service.impl.RsvpTicketLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.rsvp.service.persistence.RsvpTicketPersistence" class="com.sambaash.platform.srv.rsvp.service.persistence.RsvpTicketPersistenceImpl" parent="basePersistence" />
+</beans>

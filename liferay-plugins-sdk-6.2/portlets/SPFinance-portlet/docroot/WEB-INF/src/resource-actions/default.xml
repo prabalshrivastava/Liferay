@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 6.2.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_6_2_0.dtd">
+
+<resource-action-mapping>
+	<resource file="resource-actions/accounting-table.xml" />
+	<resource file="resource-actions/cashier-counter.xml" />
+	<resource file="resource-actions/chart-of-accounts.xml" />
+	<resource file="resource-actions/division.xml" />
+	<resource file="resource-actions/finance-parameter.xml" />
+	<resource file="resource-actions/invigilator-claim.xml" />
+	<resource file="resource-actions/lor-report.xml" />
+	<resource file="resource-actions/my-wallet.xml" />
+	<resource file="resource-actions/pay-online.xml" />
+	<resource file="resource-actions/profit-centre.xml" />
+    <resource file="resource-actions/reference-number.xml" />
+    <resource file="resource-actions/transaction-document.xml" />
+    <resource file="resource-actions/transaction.xml" />
+    <resource file="resource-actions/credit-balance.xml" />
+</resource-action-mapping>

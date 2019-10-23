@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.spprofile.model.ProfilePreferences">
+		<field name="proferenceId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="layoutId" type="String" />
+		<field name="portletId" type="String" />
+		<field name="preferenceName" type="String" />
+		<field name="portletPreferences" type="String" />
+	</model>
+</model-hints>

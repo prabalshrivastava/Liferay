@@ -1,0 +1,258 @@
+.yui3-widget-bd,.yui3-panel{
+	position: relative!important;
+}
+
+@media (min-width: 1200px){
+	.aui .row-fluid .span4 {
+	    width: 33%;
+	}
+}
+
+.aui .single-input.tooltip{
+	opacity:1;
+}
+
+.userprofile-portlet{
+	margin:40px 0;
+	.portlet-content{
+		padding-left: 0;
+	}
+	
+	.yui3-panel-content{
+		overflow: hidden;
+		padding: 15px;
+	}
+	.yui3-widget{
+		height: auto;
+	}
+		
+		.yui3-widget-hd {
+		    text-align: right;
+		    padding: 0!important;
+		}	
+		.yui3-widget-bd{
+			height: auto;
+			overflow-y: auto;
+			&>div input {
+			    width: 100%;
+			    padding:10px 15px;
+			    height:auto;
+			}
+			
+			input[type="checkbox"] {
+				width: 80%;
+			}
+			
+			input[type="radio"] {
+			    width: auto;
+			}
+		}
+	.yui3-widget-buttons{
+	    display: none;
+	}
+	
+	.userprofile-add-link {
+	    text-decoration: none;
+	    background: url("../images/add-icon.png");
+	    width: 14px;
+	    height: 14px;
+	    background-size: contain;
+	    display: inline-block;
+	    zoom: 1;
+	    vertical-align: middle;
+	    position: absolute;
+	    top: 2px;
+	    right: 3px;
+	}
+	
+	.userprofile-edit-link {
+	    text-decoration: none;
+	    background: url("../images/edit-icon.png");
+	    width: 14px;
+	    height: 14px;
+	    background-size: contain;
+	    display: inline-block;
+	    zoom: 1;
+	    vertical-align: middle;
+	    margin-left: 5px;
+	}
+	
+	.userprofile-delete-link {
+	    text-decoration: none;
+	    background: url("../images/delete-icon.png");
+	    width: 14px;
+	    height: 14px;
+	    background-size: contain;
+	    display: inline-block;
+	    zoom: 1;
+	    vertical-align: middle;
+	    margin-left: 5px;
+	}
+	
+	.content-title {
+	    clear: both;
+	    overflow: hidden;
+	    padding: 2px 0;
+	    display: block;
+	    margin: 0;
+	    max-height: 21px;
+	    min-height: 21px;
+	    position: relative;
+	}	
+	
+	.datepicker-select-wrapper select {
+	    background-position: right 0 center!important;
+	    width: 29%!important;
+	    margin-left: 2px;
+	}
+	
+	.datepicker-button-wrapper{
+		.buttonitem{
+			width: 30px;
+    		vertical-align: text-top;
+		}
+	}
+	
+	.textedit-input {
+	    cursor: pointer;
+	    display: inline-block;
+	    padding: 5px 5px 5px 0;
+	}
+	
+	.single-input, .single-input-div {
+		word-wrap: break-word;
+		text-align: justify;
+	}
+	
+	.single-input, .single-input-div, .multiple-input {
+		float: left;
+		margin: 0;
+		width: 100%;
+		padding: 5px!important;
+		line-height: 12pt;
+		vertical-align: middle;
+	}
+	
+	select, .aui-field-input-select, .aui-datepicker-select-wrapper select{
+		background-position: right 9px center!important;
+	}
+}
+
+.update-button {
+    background: url("../images/save-icon.png") no-repeat scroll 0 0/contain;
+    float: right;
+    height: 5px;
+    width: 15px;
+    border: none;
+    vertical-align: top;
+}
+
+.available_undo, .undo_button {
+    display: inherit;
+    width: 6%;
+    float: right;
+    margin-top: 10px;
+}
+
+.undo_button,.undo-button {
+    background: url("../images/undo.png") no-repeat scroll left top transparent!important;
+    float: left;
+    width: 20px;
+    border: none;
+}
+
+.webkit select {
+    height: 35px!important;
+    width:auto;
+}
+
+.msg_tooltip {
+    display: inline;
+    width: 5%;
+    padding-right: 6px;
+    float: right;
+}
+
+.userProfileCTA{
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	padding: 40px;
+	text-align: center;
+
+		span.ctaText{
+			margin-bottom:10px;
+			display: block;
+		}
+
+		a.genCTA{
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			margin: 0 !important;
+		}
+}
+
+.tick, .cross, .loading{
+   	width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-size: 100% 100%;
+    background-origin: content-box;
+    background-clip: content-box;
+    margin-right: 5px;
+}
+
+.tick {
+  	background: url("../images/tick.png") no-repeat scroll left top transparent;
+  	float: left;
+}
+
+.cross{
+    background: url("../images/error.png") no-repeat scroll left top transparent;
+    float: left;
+    margin-right:0px;
+    width:16px;
+}
+
+.loading{
+  	background: url("../images/loading_indicator.gif") no-repeat scroll left top transparent;
+    float: left;
+}
+
+.aui-datepicker-select-wrapper select {
+	width:auto!important;
+}
+
+.textedit-input-hide {
+	display:none !important;
+}
+
+.ckeditor_alignRight {
+    display: inline-block;
+}
+
+.save_button {
+    display: inline-block;
+    float: right;
+    width: 10%;
+    margin-top: 10px;
+}
+
+.overlay {
+    position: absolute;
+}
+
+.yui3-calendar{
+	position: absolute;
+	display:inline-block;
+}
+
+/* .userprofile-portlet input{
+	border: 1px solid #bfbfbf!important;
+    background: #fafafa!important;
+} */
+
+
+@import "user-profile";

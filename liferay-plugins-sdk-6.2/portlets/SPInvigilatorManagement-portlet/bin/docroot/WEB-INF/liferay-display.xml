@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 6.2.0//EN" "http://www.liferay.com/dtd/liferay-display_6_2_0.dtd">
+
+<display>
+	
+	<category name="category.sample">
+		<portlet id="update-appointment"></portlet>
+
+		<portlet id="evaluation-matrix-setup"></portlet>
+		<portlet id="invigilator-application"></portlet>
+		<portlet id="appoint-invigilators"></portlet>
+		<portlet id="optin-request"></portlet>
+		<portlet id="optout-request"></portlet>
+		<portlet id="update-invigilation-dates"></portlet>
+		<portlet id="invigilator-listing"></portlet>
+		<portlet id="view-appointments"></portlet> 
+		<portlet id="invigilator-appointment-report"></portlet>
+		<portlet id="manage-appointment"></portlet>
+		<portlet id="notify-appointment"></portlet>
+	</category>
+</display>

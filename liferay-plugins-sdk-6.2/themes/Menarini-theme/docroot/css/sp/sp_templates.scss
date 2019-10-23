@@ -1,0 +1,195 @@
+@import "_sp_custom_variables";
+@import "sp_media-queries";
+@import "_sp_mixins";
+
+/** company-news -- ESN Dashboard - News Section -- 128285 **/
+
+.companyNews ul li .newsHead figure{
+        width: 35%;}
+        
+.companyNews .sectionUpdatesTitle {
+    background-color: $secondary-color;
+}
+
+.companyNews .sectionUpdatesTitle {
+    background-color: #ef4135;
+}
+
+.companyNews ul li .newsHead .newsTitle{
+    width: 65%;
+}
+
+.companyNews ul li{
+    overflow: hidden;
+    clear: both;
+}
+
+.companyNews .newsCTA a:last-child{
+    padding-right: 0;
+}
+
+#dashboardHeroSlider-prev, #dashboardHeroSlider-next,#newsTickerSlider-prev,#newsTickerSlider-next,#newsTickerSlider-pager{
+	display:none;
+}
+
+.portlet-announcements .entry-type-general{
+	font-size:10pt;
+}
+
+.portlet-announcements .entry-type-general p {
+    word-wrap: break-word;
+}
+
+@include screen(320px, 767px) {
+    .rsvp-maindiv {
+        margin: 20px;
+    }
+    
+    #newsTickerSlider{
+    margin-top:60px;
+    }
+    //Welcome Page
+    .companyNews ul li .newsHead figure {
+        width: 100%;
+        text-align: center;
+    }
+    .companyNews ul li .newsHead .newsTitle {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    .dashboardHeroSlider ul li .dashboardHeroSliderContent {
+        height: auto;
+    	max-height: initial;
+    }
+    
+    .dashboardHeroSliderContent .heroSliderImage {
+	    width: 100%;
+	}
+	
+	.dashboardHeroSlider ul li .dashboardHeroSliderContent .heroSliderDetails {
+    	width: 100%;
+    	margin-top: 10px;
+	}
+	
+	.heroSliderTitle{
+		margin-top:15px;
+	}
+	
+	.dashboardHeroSlider ul li .dashboardHeroSliderContent .heroSliderImage{
+		height: auto;
+	    max-height: inherit;
+	    width: 100%;
+	    margin-bottom: 20px;
+	}
+	
+	.dashboardHeroSlider ul li .dashboardHeroSliderContent .heroSliderDetails{}
+    //DOCUMENT LIBRARY
+    #_20_documentLibraryContainer .span2 {
+        width: 100%;
+    }
+    #_20_documentLibraryContainer .span10 {
+        margin-left: 0 !important;
+        width: 100% !important;
+        border: 0px solid #bfbfbf;
+    }
+    #_20_documentLibraryContainer .app-view-entry-taglib.entry-display-style.display-icon {
+        display: inline-block;
+        /* float: left; */
+        margin: 10px auto;
+        padding: 0;
+        width: 210px;
+        height: inherit;
+    }
+    //Article Content
+    .articleContent {
+        font-size: 10pt;
+        text-align: justify;
+        padding: 20px 0;
+    }
+    //Media Library
+    .galleryListing .style2 .search-stream-mosaic-block-description {
+        height: auto!important;
+        min-height: auto!important;
+        margin-bottom: 10px!important;
+        text-align: justify !important;
+    }
+    .coverImageDiv.img-tn-large {
+        height: auto;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .width {
+        &-30 {
+            width: 100%;
+        }
+        &-65 {
+            width: 100%;
+        }
+    }
+    .aui-w65,
+    .vp480 .aui-w35,
+    .vp480 .aui-w50,
+    .vp480 .aui-w80,
+    .vp480 .aui-w20 {
+        float: none !important;
+        display: block !important;
+        clear: both !important;
+        width: 100% !important;
+    }
+}
+
+@include screen(768px, 1100px) {
+    .columns1_3 .row-fluid .span3 {
+        width: 100%;
+    }
+    .content {
+        min-height: 840px;
+    }
+    .companyNews ul li .newsHead figure {
+        float: left;
+        margin-right: 20px;
+    }
+    .companyNews ul li .newsHead .newsTitle {
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+    .newsBody {
+        display: none;
+    }
+    .newsHead .newsBody {
+        display: block;
+    }
+    .esn_searchSection_wrap {
+        margin: 10px 0;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        background: #e0e0e0;
+        overflow: hidden;
+        display: inline-block;
+        zoom: 1;
+        width: 100%;
+    }
+}
+
+@include screen(1920px, 1280px) {
+    .companyNews ul li .newsHead figure {
+        float: left;
+        margin-right: 20px;
+    }
+    .companyNews ul li .newsHead .newsTitle {
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+    .newsBody {
+        display: none;
+    }
+    .newsHead .newsBody {
+        display: block;
+    }
+}

@@ -1,0 +1,198 @@
+@import "_sp_custom_variables";
+@import "_sp_mixins";
+@import "sp_media-queries";
+.portlet-login {
+    min-height: 100vh;
+    .portlet {
+        background-color: transparent;
+    }
+    .portlet-content {
+        border: none;
+    }
+    .sp-social-login-wrap {
+        display: table;
+        text-align: center;
+        vertical-align: middle;
+        width: 100%;
+        height: 100vh;
+        padding-top: 20px;
+        background-color: transparent;
+        min-height: 800px;
+        &.sp-social-login-create {
+            .sp-social-login-content {
+                .control-group {
+                    margin-bottom: 5px !important;
+                }
+                .sp-soclog {
+                    height: 1050px;
+                }
+            }
+        }
+        &.forgot-password {
+            height: 714px;
+            .sp-social-login-content {
+                .sp-social-login-section {
+                    height: 714px;
+                }
+                .sp-soclog {
+                    height: 100%;
+                }
+            }
+        }
+        .sp-social-login-content {
+            display: table-cell;
+            vertical-align: top;
+            .control-group {
+                input {
+                    &[type="text"] {
+                        max-width: 100% !important;
+                    }
+                }
+            }
+            .sp-soclog {
+                display: block;
+                max-width: 500px;
+                height: 500px;
+                margin: 0 auto;
+            }
+            .sp-social-login-section {
+                width: 100%;
+                height: auto;
+                vertical-align: top;
+                padding: 20px 40px;
+                &-left {
+                    background-color: $white;
+                    text-align: left;
+                    border-top-left-radius: 3px;
+                    border-top-right-radius: 3px;
+                    border-top: 1px solid #CCC;
+                    border-left: 1px solid #CCC;
+                    border-right: 1px solid #CCC;
+                    .button-holder {
+                        text-align: center;
+                    }
+                    .remember-me {
+                        .control-group {
+                            margin-bottom: 0;
+                        }
+                    }
+                    .sl-login-wrap {
+                        display: table;
+                        width: 100%;
+                        height: auto;
+                        vertical-align: middle;
+                        .sl-login-content {
+                            display: table-cell;
+                            height: 100%;
+                            width: 100%;
+                            vertical-align: middle;
+                            .sl-login-title {
+                                font-size: 21pt;
+                                text-align: center;
+                                padding-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+                &-right {
+                    background-color: $light-gray;
+                    border-bottom-left-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                    border-top: 1px solid #CCC;
+                    border-bottom: 1px solid #CCC;
+                    border-left: 1px solid #CCC;
+                    border-right: 1px solid #CCC;
+                }
+            }
+        }
+    }
+    .navigation {
+        background: transparent;
+        border-top: none;
+        ul {
+            text-align: center;
+            li {
+                padding-right: 20px;
+                float: none;
+                display: inline-block;
+                &last-child {
+                    padding-right: 0;
+                }
+                
+                img {
+                	width: 45px;
+				    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .sp-login-header {
+        font-size: 24pt;
+        font-weight: 300;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .sp-login-calloutText {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .sp-login-callout {
+        padding: 0 20px;
+        .btn-callout {
+            margin-top: 20px;
+        }
+    }
+  
+   
+}
+
+@include screen(320px, 767px) {
+    .portlet-login {
+        .sp-social-login-wrap {
+            height: auto !important;
+            .sp-social-login-content {
+                height: auto !important;
+                .sp-social-login-section {
+                    width: 100%;
+                    height: auto !important;
+                    padding: 40px 40px 40px 40px; //changes done by karthik
+                }
+                .sp-soclog {
+                    width: 100%;
+                    height: auto !important;
+                }
+            }
+        }
+        //Changes Done by karthik
+        .sp-login-header {
+            font-size: 24pt;
+            font-weight: 300;
+            display: block;
+            margin-bottom: 10px;
+            line-height: 35px;
+        }
+    }
+    .aui .btn {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+@include screen(768px, 1100px, portrait) {
+    .portlet-login {
+        .sp-social-login-wrap {
+            height: auto !important;
+            .sp-social-login-content {
+                height: auto !important;
+                .sp-social-login-section {
+                    width: 100%;
+                    height: auto !important;
+                }
+                .sp-soclog {
+                    width: 100%;
+                    height: auto !important;
+                }
+            }
+        }
+    }
+}

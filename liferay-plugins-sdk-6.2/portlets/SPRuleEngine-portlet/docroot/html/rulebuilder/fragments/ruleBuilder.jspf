@@ -1,0 +1,69 @@
+<link rel='stylesheet'
+	href='/html/css/sp/formio.full.min.css?minifierType=css'>
+<link rel='stylesheet' href='/html/css/hook.css?minifierType=css'>
+<div class="newPortlets">
+<div class="subHeader">
+		<div class="container">
+			<div class="inner-container">
+				<aui:row>
+					<aui:col span="10" cssClass="text-center">
+						<h2><span>Rule Set Definition</span></h2>
+					</aui:col>
+					<aui:col span="2" cssClass="text-right">
+						<a href="#link" title="Back to Home">Back to Home</a>
+					</aui:col>
+				</aui:row>
+			</div>
+		</div>
+	</div>
+
+	<div class="formRoot">
+		<div class="innerFormRoot">
+			<div class="container" id="ruleBuilder">
+	
+	<div class="alert alert-" role="alert" id="alert_msg" style="display:none">  </div>
+	<aui:form cssClass="formContainer formPadding container  formio-form">
+		<aui:row cssClass="row">
+		<aui:col span="12">
+			<input id="ruleSetId"  type="hidden" class="RuleSetDto" value="0"></input>
+			
+			<div class="control-group form-group formio-component-textfield"> 
+				<label class="control-label" for="ruleSetName"> Rule Set Name </label> 
+				<input class="field RuleSetDto form-control" id="ruleSetName" type="text"> 
+			</div>
+			</aui:col>
+		</aui:row>
+		<aui:row cssClass="row">
+		<aui:col span="12">
+		<div class="control-group choices form-group formio-choices">
+			<label class="control-label" for="ruleSetTypeId"> Rule Set Type </label> 
+			<select class="aui-field-select RuleSetDto form-control" id="ruleSetTypeId" onchange="builder.initRuleSetType(this);">
+				<option value="0">Select Component Type</option>
+			</select>
+		</div>
+		</aui:col>
+</aui:row>
+<aui:row cssClass="row">
+<aui:col span="12">
+		<div id="componentIdContainer" class="control-group">
+		</div>
+
+		<div class="control-group">
+			<label>Rules</label>
+			<div id="rulesContainer">	
+			</div>
+		</div>
+		<aui:button-row>
+			<aui:button value="+ Add New Rule" name="addnewrule"
+				onclick="builder.addNewRuleRow();"></aui:button>
+			<br />
+			<aui:button value="Submit" name="submit" onClick="builder.validateAndSubmit()"></aui:button>
+			<aui:button type="cancel" value="Cancel" name="cancel" onClick="builder.cancelEdit()" cssClass="hide"></aui:button>
+		</aui:button-row>
+		</aui:col>
+		</aui:row>
+	</aui:form>
+	</div>
+	</div>
+</div>
+</div>

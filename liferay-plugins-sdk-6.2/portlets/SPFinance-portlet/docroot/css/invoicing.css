@@ -1,0 +1,66 @@
+.aui table td {
+    font-size: 13px!important;
+    padding: 9px 10px!important;
+}
+
+.aui input[type="text"] {
+	padding: 3px 5px!important;
+    font-size: 13px!important;
+    margin-bottom: 0px!important;
+}
+
+.aui input[type="number"]{
+	padding: 3px 5px!important;
+    font-size: 13px!important;
+    margin-bottom: 0px!important;
+}
+
+span > button > .btn-custom {
+    
+    margin-left: 5px!important;
+    margin-right: 0px!important;
+}
+
+.miscFees {
+	height : 107px !important;
+	background : none !important
+}
+
+.action .closeIcon {
+	width: 20px !important;
+    height: 20px !important;
+    border-radius: 69px !important;
+    padding: 0px 2px 0px 1px !important;
+    background: red !important;
+    color: white !important;
+    margin: 6px !important;
+    font-size: 12px !important;
+}
+
+.custom-checkbox-label {
+	font-size: 12px!important;
+}
+
+.custom-checkbox {
+	padding-right: 10px !important;
+    margin-top: 1px !important;
+    opacity : 1 !important;
+    display: block !important;
+}
+
+.amount {
+	    text-align: right !important
+}
+
+.text-center {
+    text-align: center;	
+}
+
+textarea {
+   resize: none;
+}
+
+/* .aui .table-bordered {
+    border-left: 1px solid #ddd !important;
+    box-shadow: 0 0 0 0 #e1e6eb !important;
+} */

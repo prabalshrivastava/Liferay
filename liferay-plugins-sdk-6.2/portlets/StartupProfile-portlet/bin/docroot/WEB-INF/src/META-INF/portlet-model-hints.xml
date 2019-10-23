@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.startupprofile.model.Address">
+		<field name="uuid" type="String" />
+		<field name="addressId" type="long" />
+		<field name="organizationId" type="long" />
+		<field name="name" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="street1" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="street2" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="city" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="region" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="country" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="postalCode" type="String">
+			<hint name="max-length">16</hint>
+		</field>
+		<field name="hq" type="boolean" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="active" type="boolean" />
+	</model>
+	<model name="com.sambaash.platform.srv.startupprofile.model.FundingRound">
+		<field name="uuid" type="String" />
+		<field name="fundingRoundId" type="long" />
+		<field name="organizationId" type="long" />
+		<field name="name" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="apiPath" type="String">
+			<hint name="max-length">120</hint>
+		</field>
+		<field name="imageUrl" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="announcedOn" type="String">
+			<hint name="max-length">15</hint>
+		</field>
+		<field name="moneyRaisedInUsd" type="String">
+			<hint name="max-length">20</hint>
+		</field>
+		<field name="fundingType" type="String">
+			<hint name="max-length">50</hint>
+		</field>
+		<field name="description" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="active" type="boolean" />
+	</model>
+	<model name="com.sambaash.platform.srv.startupprofile.model.Organization">
+		<field name="uuid" type="String" />
+		<field name="organizationId" type="long" />
+		<field name="name" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="apiPath" type="String">
+			<hint name="max-length">120</hint>
+		</field>
+		<field name="categories" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="foundedOn" type="String">
+			<hint name="max-length">15</hint>
+		</field>
+		<field name="noOfEmployees" type="int" />
+		<field name="emailId" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="website" type="String">
+			<hint name="max-length">450</hint>
+		</field>
+		<field name="facebook" type="String">
+			<hint name="max-length">450</hint>
+		</field>
+		<field name="twitter" type="String">
+			<hint name="max-length">450</hint>
+		</field>
+		<field name="linkedIn" type="String">
+			<hint name="max-length">450</hint>
+		</field>
+		<field name="crunchbase" type="String">
+			<hint name="max-length">450</hint>
+		</field>
+		<field name="mobile" type="String">
+			<hint name="max-length">25</hint>
+		</field>
+		<field name="totalFunds" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="description" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="shortPitch" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="lifecycleStage" type="String">
+			<hint name="max-length">20</hint>
+		</field>
+		<field name="capitalRaised" type="String">
+			<hint name="max-length">20</hint>
+		</field>
+		<field name="isIncorporated" type="boolean" />
+		<field name="stockSymbol" type="String">
+			<hint name="max-length">20</hint>
+		</field>
+		<field name="imageUrl" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="videos" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="profileOutline" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="raisingFunds" type="String">
+			<hint name="max-length">20</hint>
+		</field>
+		<field name="extras" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="uniqueDesc" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="links" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="isBaseOrg" type="boolean" />
+		<field name="completeness" type="boolean" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="active" type="boolean" />
+		<field name="logoId" type="long" />
+		<field name="methodologyType" type="long" />
+		<field name="methodologySubType" type="long" />
+		<field name="stage" type="int" />
+		<field name="feedback" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="videoLinks" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="projectsWorkedOn" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="showInBlackbook" type="boolean" />
+		<field name="faxNumber" type="String" />
+		<field name="contactName" type="String" />
+		<field name="contactDesignation" type="String" />
+		<field name="pipelineStatus" type="int" />
+		<field name="businessDevManager" type="int" />
+		<field name="prevBusinessDevManager" type="int" />
+	</model>
+	<model name="com.sambaash.platform.srv.startupprofile.model.Person">
+		<field name="uuid" type="String" />
+		<field name="personId" type="long" />
+		<field name="name" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="title" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="apiPath" type="String">
+			<hint name="max-length">120</hint>
+		</field>
+		<field name="emailId" type="String">
+			<hint name="max-length">100</hint>
+		</field>
+		<field name="description" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="imageUrl" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="mobile" type="String">
+			<hint name="max-length">25</hint>
+		</field>
+		<field name="skype" type="String">
+			<hint name="max-length">50</hint>
+		</field>
+		<field name="memberUserId" type="long" />
+		<field name="extras" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="active" type="boolean" />
+	</model>
+	<model name="com.sambaash.platform.srv.startupprofile.model.Questionnaire">
+		<field name="questionnaireId" type="long" />
+		<field name="entryClassPK" type="long" />
+		<field name="entryClassName" type="String" />
+		<field name="answer1" type="String">
+			<hint name="max-length">6000</hint>
+		</field>
+		<field name="answer2" type="String">
+			<hint name="max-length">6000</hint>
+		</field>
+		<field name="answer3" type="String">
+			<hint name="max-length">6000</hint>
+		</field>
+		<field name="answer4" type="String">
+			<hint name="max-length">6000</hint>
+		</field>
+		<field name="answer5" type="String">
+			<hint name="max-length">6000</hint>
+		</field>
+		<field name="answer6" type="String">
+			<hint name="max-length">6000</hint>
+		</field>
+		<field name="answer7" type="String">
+			<hint name="max-length">6000</hint>
+		</field>
+		<field name="answer8" type="String">
+			<hint name="max-length">6000</hint>
+		</field>
+		<field name="answer9" type="String">
+			<hint name="max-length">6000</hint>
+		</field>
+		<field name="answer10" type="String">
+			<hint name="max-length">6000</hint>
+		</field>
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.startupprofile.model.Relationship">
+		<field name="relationshipId" type="long" />
+		<field name="organizationId" type="long" />
+		<field name="refId" type="long" />
+		<field name="refTypeId" type="long" />
+		<field name="relation" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="active" type="boolean" />
+	</model>
+</model-hints>

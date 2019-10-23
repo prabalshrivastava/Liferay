@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.spdashboard">
+	<author>pradeep</author>
+	<namespace>spdashboard</namespace>
+
+	<entity name="SPAnalyticsConfig" local-service="true" remote-service="false" table="SPAnalyticsConfig">
+
+		<column name="spAnalyticsConfigId" type="long" primary="true" />
+		<column name="name" type="String"/>
+		<column name="config" type="String"/>
+		<column name="type" type="int"/>
+		<column name="query" type="String"/>
+		<column name="warId" type="String"/>
+
+		<finder name="WarIdAndType" return-type="Collection">
+			<finder-column name="warId" />
+			<finder-column name="type" />
+		</finder>
+		<finder name="WarId" return-type="Collection">
+			<finder-column name="warId" />
+		</finder>
+	</entity>
+</service-builder>

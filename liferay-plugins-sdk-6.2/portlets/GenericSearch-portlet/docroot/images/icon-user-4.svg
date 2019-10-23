@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="49" viewBox="0 0 37 49">
+    <defs>
+        <path id="a" d="M18.5 49H37c0-8.375-8.283-15.164-18.5-15.164S0 40.626 0 49h18.5z"/>
+        <ellipse id="b" cx="18.67" cy="39.211" rx="7.321" ry="7.299"/>
+        <path id="c" d="M5.448 12.561C5.448 5.75 10.976.226 17.778.226h1.331c6.81 0 12.33 5.521 12.33 12.335v12.335H5.448V12.561z"/>
+        <path id="d" d="M15.209 34.57a4.9 4.9 0 0 0-1.476 3.51 4.93 4.93 0 0 0 4.937 4.922 4.93 4.93 0 0 0 4.937-4.922c0-1.43-.612-2.719-1.589-3.618V23.538h-6.81V34.57z"/>
+        <ellipse id="e" cx="6.356" cy="17.654" rx="3.064" ry="3.055"/>
+        <ellipse id="f" cx="30.758" cy="17.654" rx="3.064" ry="3.055"/>
+        <rect id="g" width="23.153" height="30.102" x="6.81" y="2.037" rx="11.577"/>
+        <ellipse id="h" cx="17.422" cy="7.582" rx="10.385" ry="6.111"/>
+        <ellipse id="i" cx="18.273" cy="5.432" rx="9.193" ry="5.432"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <use fill="#7CB83C" xlink:href="#a"/>
+            <path stroke="#000" d="M.51 48.5c.324-7.845 8.236-14.164 17.99-14.164 9.754 0 17.666 6.32 17.99 14.164H.509.51z"/>
+        </g>
+        <g>
+            <use fill="#9B9B9B" xlink:href="#b"/>
+            <ellipse cx="18.67" cy="39.211" stroke="#000" rx="6.821" ry="6.799"/>
+        </g>
+        <g>
+            <use fill="#5A4146" xlink:href="#c"/>
+            <path stroke="#000" d="M30.939 24.396H5.948V12.561c0-6.533 5.301-11.835 11.83-11.835h1.331c6.534 0 11.83 5.298 11.83 11.835v11.835z"/>
+        </g>
+        <g>
+            <use fill="#FDCF98" xlink:href="#d"/>
+            <path stroke="#000" d="M15.709 24.038h5.81v10.644l.16.148a4.402 4.402 0 0 1 1.428 3.25 4.43 4.43 0 0 1-4.437 4.422 4.43 4.43 0 0 1-4.437-4.422 4.4 4.4 0 0 1 1.326-3.153l.15-.147V24.038z"/>
+        </g>
+        <g>
+            <use fill="#FDCF98" xlink:href="#e"/>
+            <ellipse cx="6.356" cy="17.654" stroke="#000" rx="2.564" ry="2.555"/>
+        </g>
+        <g>
+            <use fill="#FDCF98" xlink:href="#f"/>
+            <ellipse cx="30.758" cy="17.654" stroke="#000" rx="2.564" ry="2.555"/>
+        </g>
+        <g>
+            <use fill="#FDCF98" xlink:href="#g"/>
+            <rect width="22.153" height="29.102" x="7.31" y="2.537" stroke="#000" rx="11.077"/>
+        </g>
+        <path fill="#231F20" d="M20 24v-1h-2v-4h-1v4.253c0 .44.357.747.797.747H20z"/>
+        <g>
+            <use fill="#5A4146" xlink:href="#h"/>
+            <ellipse cx="17.422" cy="7.582" stroke="#000" rx="9.885" ry="5.611"/>
+        </g>
+        <g>
+            <use fill="#7F5A46" xlink:href="#i"/>
+            <ellipse cx="18.273" cy="5.432" stroke="#000" rx="8.693" ry="4.932"/>
+        </g>
+    </g>
+</svg>

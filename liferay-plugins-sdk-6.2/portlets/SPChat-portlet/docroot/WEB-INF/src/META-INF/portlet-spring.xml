@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.spchat.service.EntryLocalService" class="com.sambaash.platform.srv.spchat.service.impl.EntryLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spchat.service.persistence.EntryPersistence" class="com.sambaash.platform.srv.spchat.service.persistence.EntryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spchat.service.persistence.EntryFinder" class="com.sambaash.platform.srv.spchat.service.persistence.EntryFinderImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spchat.service.StatusLocalService" class="com.sambaash.platform.srv.spchat.service.impl.StatusLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spchat.service.persistence.StatusPersistence" class="com.sambaash.platform.srv.spchat.service.persistence.StatusPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spchat.service.persistence.StatusFinder" class="com.sambaash.platform.srv.spchat.service.persistence.StatusFinderImpl" parent="basePersistence" />
+</beans>

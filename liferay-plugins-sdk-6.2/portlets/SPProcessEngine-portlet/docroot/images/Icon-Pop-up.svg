@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="23px" height="20px" viewBox="0 0 23 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon-Pop-up</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M2.33378125,19.125 C1.04721875,19.125 4.12647694e-12,18.0777812 4.12647694e-12,16.7912187 L-9.46040789e-07,2.35184766 C-9.46040789e-07,1.06528516 1.0472178,0.0180664062 2.3337803,0.0180664062 L20.6662178,0.0180664062 C21.9527803,0.0180664062 22.9999991,1.06528516 22.9999991,2.35184766 L23,16.7912187 C23,18.0777812 21.9527813,19.125 20.6662188,19.125 L2.33378125,19.125 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23.0000009" height="19.1069336" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M7.11615571,16.1561647 C6.50084324,16.1561647 5.99999951,15.655321 5.99999951,15.0400085 L5.99999905,8.13422261 C5.99999905,7.51891014 6.50084278,7.01806641 7.11615526,7.01806641 L15.8838424,7.01806641 C16.4991549,7.01806641 16.9999986,7.51891014 16.9999986,8.13422261 L16.9999991,15.0400085 C16.9999991,15.655321 16.4991553,16.1561647 15.8838428,16.1561647 L7.11615571,16.1561647 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="11" height="9.1380983" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Process-Builder" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="16" transform="translate(-282.000000, -329.000000)">
+            <g id="Content-/-Basic-Data" transform="translate(0.000000, 49.000000)">
+                <g id="Tabs-/-Vertical" transform="translate(120.000000, 107.000000)">
+                    <g id="Icon-Pop-up" transform="translate(162.000000, 173.000000)">
+                        <use id="Fill-1" stroke="#656565" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                        <use id="Fill-1" stroke="#F59807" mask="url(#mask-4)" stroke-width="2" xlink:href="#path-3"></use>
+                        <polygon id="Fill-3" fill="#656565" points="1 5 22 5 22 4 1 4"></polygon>
+                        <polygon id="Fill-3" fill="#F59807" points="7 10 16 10 16 9 7 9"></polygon>
+                        <polygon id="Fill-3" fill="#656565" points="2 3 3 3 3 2 2 2"></polygon>
+                        <polygon id="Fill-3" fill="#656565" points="4 3 5 3 5 2 4 2"></polygon>
+                        <polygon id="Fill-3" fill="#656565" points="6 3 7 3 7 2 6 2"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

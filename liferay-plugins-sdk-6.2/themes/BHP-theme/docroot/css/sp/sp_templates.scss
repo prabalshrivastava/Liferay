@@ -1,0 +1,361 @@
+@import "_sp_custom_variables";
+@import "sp_media-queries";
+@import "_sp_mixins";
+
+/** company-news -- ESN Dashboard - News Section -- 128285 **/
+.mentors-list ul li{
+    width: 24%;
+}
+
+
+@include screen(320px, 767px) {
+	
+	//mentors List
+
+.mentors-list ul li{
+   width: 100% !important;
+    margin: 1% 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+}
+
+.vp2 .mentors-list ul li{
+    width: 49%;
+}
+
+.mentors-list ul li figure{
+    height: auto;
+}
+
+.headCTA {
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    padding: 10px !important;
+}
+    
+    //About US
+    
+    .ab-us .slide .mobileimg img{
+    display: none;
+}
+
+.ab-us #bgvid1{
+  background: url(/documents/12788/13212/AboutUs_BG_04.jpg?t=1434360586271);
+  background-size: cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -ms-background-size:cover;
+  
+}
+
+.ab-us .casestudy{
+    text-align: center;
+}
+
+.slide{
+    min-height: initial !important;
+}
+
+.mainCS {
+  margin: 0px;
+  width: 100%;
+  padding: 2%;
+}
+
+.videodts{
+  width: 100%;
+  padding: 25px;
+}
+
+.share {
+  margin-top: 10%;
+  text-align: left;
+}   
+
+.videothumb1 {
+  width: 100%;
+}
+
+.video {
+  left: 50%;
+}
+
+.slider-list {
+  margin: 0;
+}
+
+.item {
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+.CTAButton:after{
+display:none;
+}
+
+.graybox{
+    margin-left: 5px;
+} 
+
+.mobileSlider {
+    display: block;
+}
+.slider-list {
+    margin: 0;
+}
+
+.mcts1 .slidebox {
+    width: 100%;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+    //Media Library
+    .galleryListing .style2 .search-stream-mosaic-block-description {
+        height: auto!important;
+        min-height: auto!important;
+        margin-bottom: 10px!important;
+        text-align: justify !important;
+    }
+    .coverImageDiv.img-tn-large {
+        height: auto;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .width {
+        &-30 {
+            width: 100%;
+        }
+        &-35 {
+            width: 100%;
+        }
+        &-65 {
+            width: 100%;
+        }
+    }
+    .aui-w65,
+    .aui-w35,
+    .aui-w50,
+    .aui-w80,
+    .aui-w20 {
+        float: none !important;
+        display: block !important;
+        clear: both !important;
+        width: 100% !important;
+    }
+    
+    .video-list ul{
+    	-webkit-column-count: 1;
+    	column-count: 1;
+    	-moz-column-count: 1;
+    }
+    
+    .colRight {
+    width: 100% !important;
+    overflow: auto !important;
+}
+
+.colLeft {
+    width: 100% !important;
+    padding: 20px !important;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.eventCTALinks {
+    margin-left: 0;
+}
+
+sliderView {
+    display: none;
+}
+.slider-list {
+    margin: 0;
+}
+   
+.mcts1 .slidebox{
+    width: 100%;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}    
+
+.upcomingEventsCTALinks {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.fv-content {
+    max-height: 100%;
+}
+
+.fv-details {
+    width: 100%;
+    padding: 20px;
+}
+
+.fv-video {
+    width: 100%;
+}
+
+.video-list ul {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+}
+}
+
+@include screen(768px, 1100px) {
+    .columns1_3 .row-fluid .span3 {
+        width: 100%;
+    }
+    .aui .dockbar-ready #wrapper {
+    margin-top: 0;
+    padding-top: 62px;
+}
+ .mentors-list ul li .mentor-details{
+    height: 129px;
+    max-height: 129px;
+}
+
+.vp1 .mentors-list ul li{
+        width: 48%;
+        margin: 1% 0.5%;
+        height: auto;
+}
+.mentors-list ul li{
+        height: auto;
+}
+
+.mentors-list ul li figure {
+    height: auto;
+}
+
+.vp2 .mentors-list ul li figure{
+   height: 230px; 
+}
+
+.vp1 .mentors-list ul li figure{
+    height: 340px;
+}
+
+.vp1 .headCTA {
+    position: relative;
+    right: auto;
+    top: auto;
+    padding: 10px;
+}
+
+.descriptive-list li {
+   width: 100% !important;
+    padding: 20px !important;
+    margin: 1% auto !important;
+    height: auto !important;
+    max-height: 100% !important;
+    word-break: break-word;
+}
+
+.cta-section-content {
+    text-align: center;
+}
+
+.cta-section-content a {
+    display: inline-block;
+    margin-left: 0;
+}
+
+.investment-brands ul li {
+    width: 100% !important;
+    min-height: auto !important;
+    margin: 1% 0;
+}
+
+.event_wrapper {
+    width: 100%;
+    padding: 2%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+}
+    
+    //about us
+    
+    .vp1.ab-us .slide .mobileimg img{
+    display: none;
+}
+
+.vp1.ab-us #bgvid1, .vp2.ab-us #bgvid1{
+  background: url(/documents/12788/13212/AboutUs_BG_04.jpg?t=1434360586271);
+  background-size: cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -ms-background-size:cover;
+  
+}
+
+.vp2.ab-us .bg8{
+height: 100vh;
+padding-bottom: 50px;
+}
+.vp2.ab-us .slide.plx{
+
+background-attachment: scroll !important;
+}
+
+.vp1.ab-us .casestudy{
+    text-align: center;
+}
+
+.slide{
+    min-height: initial !important;
+}
+.vp2 #bgvid1{
+  display: block;
+  background-image: url("/UnileverFoundry-theme/images/videos/UnileverMobileBGVideoLandscape.gif");
+  background-attachment: fixed;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+    
+    .event_wrapper {
+    width: 100%;
+    padding: 2%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+}
+
+.vp1 .mcts1 .slidebox {
+    width: 100%;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}   
+.graybox {
+    margin-left: 5px;
+} 
+
+.mcts1 .slidebox {
+    width: 100%;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+}
+
+
+
+@include screen(1920px, 1280px) {
+   
+}
+
+
+

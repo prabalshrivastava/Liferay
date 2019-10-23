@@ -1,0 +1,749 @@
+/** SPAsset - Gallery **/
+.spassetentry-portlet form {
+  margin: 40px; }
+.spassetentry-portlet input, .spassetentry-portlet textarea {
+  width: 100%;
+  padding: 4px 0 !important;
+  height: 100px; }
+.spassetentry-portlet textarea {
+  height: 100px; }
+.spassetentry-portlet input[type="file"] {
+  height: auto !important;
+  zoom: 1.5; }
+.spassetentry-portlet input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden; }
+.spassetentry-portlet input[type="file"]:before {
+  content: 'Choose image files / drop folders';
+  display: inline-block;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer; }
+.spassetentry-portlet input[type="file"]:hover:before {
+  /*border-color: $black;*/ }
+.spassetentry-portlet section {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%; }
+.spassetentry-portlet #droparea {
+  margin-bottom: 100px; }
+
+#editIconsAlignment, #voting {
+  height: auto; }
+
+#search_formBtn {
+  vertical-align: inherit; }
+
+/** create screen **/
+#drag_footer {
+  display: inline-table !important; }
+
+.centerall {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center; }
+
+.ascolumn {
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column; }
+
+[dropzone],
+[webkitdropzone] {
+  height: 150px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative; }
+
+[draggable] {
+  -moz-user-drag: element;
+  -webkit-user-drag: element;
+  user-drag: element;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
+
+:-webkit-any(#droparea, #fileinput) .arrow {
+  opacity: 0; }
+
+:-webkit-any(#droparea, #fileinput):hover .arrow {
+  opacity: 1; }
+
+.arrow {
+  position: absolute; }
+
+.arrow.left {
+  top: 0px; }
+
+.arrow span {
+  width: 225px;
+  margin-top: 1.5em;
+  text-align: center; }
+
+#fileinput {
+  text-align: left; }
+
+#fileinput .arrow span {
+  margin: 0;
+  position: relative;
+  left: 224px;
+  bottom: 52px; }
+
+#fileinput .arrow {
+  left: 170px;
+  top: 80px; }
+
+.separator {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1; }
+
+.separator:after {
+  display: block;
+  height: 70px;
+  width: 100px;
+  position: absolute;
+  margin: 0 -50px;
+  left: 50%;
+  top: -35px;
+  z-index: -1; }
+
+aside {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 3px 0;
+  width: 500px;
+  text-align: center;
+  margin: auto -250px; }
+
+#drag_footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1em;
+  cursor: pointer; }
+
+#drag_footer img {
+  height: 100px;
+  width: 100px;
+  margin: 0 5px;
+  display: block; }
+
+#drag_footer div {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  padding: 10px; }
+
+#drag_footer div.slim {
+  width: 0;
+  height: 0;
+  overflow: hidden; }
+
+#drag_footer > span {
+  margin: 0 10px 10px 10px; }
+
+#drag_footer div > span {
+  text-align: left;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+#drag_footer .close {
+  padding: 0px 5px 0px 0px;
+  text-align: left;
+  float: left; }
+
+#drag_footer .prgsbwidth {
+  max-width: 330px; }
+
+#drag_footer .errormsg {
+  text-align: left;
+  float: left; }
+
+.ascolumn #fileinput input {
+  height: 42px;
+  margin: 15px 0 23px 0; }
+
+.img_class {
+  float: left;
+  margin-right: 10px; }
+
+.existingFile-list {
+  display: block;
+  margin: 0.3em 0 !important;
+  overflow: hidden;
+  padding: 5px !important;
+  padding-left: 45px !important;
+  position: relative;
+  border-radius: 5px; }
+  .existingFile-list .delete-button {
+    height: 16px;
+    margin-top: -8px;
+    padding: 0;
+    position: absolute;
+    right: 5px;
+    text-indent: -9999em;
+    top: 50%;
+    width: 16px; }
+
+/** spAssetType **/
+#myForm th, #myForm td {
+  padding: 20px; }
+
+.spassettype-portlet .main {
+  margin-left: 30px; }
+.spassettype-portlet .thumb_display {
+  float: left;
+  margin: 10px;
+  min-height: 155px;
+  width: 130px; }
+.spassettype-portlet .thumb_outer {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 600px; }
+.spassettype-portlet .thumb_pic {
+  min-height: 128px;
+  position: relative; }
+.spassettype-portlet .thumb_pic img {
+  bottom: 0;
+  position: absolute; }
+.spassettype-portlet checkbox {
+  vertical-align: text-top; }
+
+/** Landing page **/
+#search_form {
+  text-align: right;
+  margin-top: 15px; }
+
+#galleryList .search-stream-mosaic-block-author1 {
+  text-align: left; }
+
+.galleryListing {
+  margin: auto 20px;
+  text-align: center; }
+  .galleryListing .style1 .search-stream-mosaic-block {
+    width: auto;
+    padding: 5px; }
+  .galleryListing .content-title {
+    min-height: 18px;
+    height: auto;
+    max-height: 49px;
+    margin: 10px 0;
+    text-align: left;
+    padding-bottom: 2px; }
+  .galleryListing .search-stream-mosaic-block-description {
+    min-height: 25px;
+    max-height: 102px;
+    overflow: hidden;
+    text-align: left; }
+
+.galleryListing {
+  margin: auto 30px;
+  text-align: center; }
+  .galleryListing .style2 .content-title a {
+    line-height: 1.1em; }
+  .galleryListing .style2 .search-stream-mosaic-block {
+    width: 100%;
+    padding: 10px; }
+  .galleryListing .style2 .search-stream-mosaic-block-description {
+    height: auto;
+    min-height: auto;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-top: 5px; }
+  .galleryListing .style2 .img-tn-medium-container {
+    width: 100% !important; }
+  .galleryListing .style2 .img-tn-medium {
+    width: 100%;
+    height: auto; }
+
+#add-galleryBtn {
+  width: 100%;
+  padding: 4px 12px !important; }
+
+.thumb_display {
+  display: inline-block; }
+
+.img-tn-medium img {
+  width: 100%; }
+
+.isEditIconOnTop {
+  position: absolute;
+  top: 5px;
+  right: 5px; }
+
+.isEditIconOnBottom {
+  position: absolute;
+  top: 152px;
+  width: 100%; }
+
+.icon-download {
+  width: 32px;
+  height: 32px; }
+
+.icon-trash {
+  width: 32px;
+  height: 32px; }
+
+.icon-edit {
+  width: 32px;
+  height: 32px; }
+
+.tagsList, .catgList {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+  max-width: 580px; }
+
+/** detail page **/
+.spAssetLongLine {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important; }
+
+.img-tn-large img {
+  width: 100%; }
+
+.circle-border {
+  height: 39px;
+  width: 39px; }
+
+.gallery-header {
+  min-height: 170px;
+  padding: 20px;
+  margin-top: 25px; }
+
+.galleryMainView .back-icon-link {
+  float: right;
+  margin-right: 100px;
+  top: 20px; }
+.galleryMainView .user-image {
+  vertical-align: sub;
+  margin-right: 20px;
+  margin-top: 20px; }
+.galleryMainView .float-right {
+  float: right; }
+.galleryMainView .vr {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  display: inline-block;
+  vertical-align: middle; }
+.galleryMainView .img-tn-large {
+  width: 40% !important;
+  height: auto !important; }
+
+#galleryTagsSection .width-8 {
+  width: 75px;
+  display: inline-block; }
+
+#galleryCatgsSection .width-8 {
+  width: 75px;
+  display: inline-block; }
+
+#tagsSection .width-8 {
+  width: 85px;
+  display: inline-block;
+  vertical-align: middle; }
+
+#catgsSection .width-8 {
+  width: 85px;
+  display: inline-block; }
+
+#gallerySocialBookmarksDiv .width-8 {
+  width: 75px;
+  display: inline-block; }
+
+#socialBookmarksDiv .width-8 {
+  width: 85px;
+  display: inline-block; }
+
+.thumbnailsDiv {
+  padding: 20px 0;
+  margin: 30px; }
+
+.commentsDiv {
+  margin: 30px; }
+
+.commentBox {
+  display: inline-block;
+  min-height: 30px;
+  width: 83%; }
+
+.commentTemplate {
+  position: relative;
+  padding-left: 40px;
+  padding-right: 20px; }
+
+.commentDeleteIconDiv {
+  position: absolute;
+  top: 0px;
+  right: 0px; }
+
+.commentTemplate .userImgDiv {
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+.commentTemplate .userImg {
+  width: 32px;
+  height: 32px;
+  vertical-align: sub;
+  border-radius: 25px; }
+
+.writeCommentMainDiv {
+  position: relative; }
+
+.replyCommentMainDiv {
+  position: relative; }
+
+.replyCommentSubDiv {
+  padding: 15px 30px 70px;
+  position: relative;
+  bottom: 30px;
+  left: 40px;
+  word-break: break-all; }
+
+.writeCommentsubDiv {
+  left: 50px;
+  position: relative;
+  top: -30px;
+  word-break: break-all;
+  width: 50%; }
+
+.selfImgCB {
+  width: 32px;
+  height: 32px;
+  border-radius: 25px; }
+
+.noCommentMsg {
+  margin-bottom: 20px; }
+  .noCommentMsg .vr {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 20px; }
+
+.replyCommentButton {
+  float: right; }
+
+.galleryListing-add {
+  text-align: right;
+  margin: 40px; }
+  .galleryListing-add form {
+    margin: 0;
+    display: inline-block;
+    vertical-align: top; }
+
+.galleryFileViewer {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  height: 100%; }
+  .galleryFileViewer .tags, .galleryFileViewer .catgs {
+    width: 230px;
+    vertical-align: middle;
+    padding-left: 10px; }
+  .galleryFileViewer .commentsDiv {
+    margin: 20px 0 0 0;
+    width: 100%;
+    padding: 20px 20px 0 20px;
+    max-height: 142px;
+    overflow: scroll;
+    height: 142px; }
+  .galleryFileViewer .replyCommentButton {
+    margin-top: 0; }
+  .galleryFileViewer .commentBox {
+    width: 80%; }
+  .galleryFileViewer .writeCommentsubDiv {
+    width: 90%;
+    left: 50px;
+    padding: 0; }
+  .galleryFileViewer .vr {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle; }
+
+.header-title {
+  margin-left: 3%; }
+
+.galleryFileViewer-popup {
+  height: 100%;
+  text-align: center;
+  margin: 0 auto; }
+
+.galleryFileViewer-content {
+  width: 100%;
+  height: 88%;
+  display: inline-flex; }
+  .galleryFileViewer-content .commentsContainer {
+    width: 100% !important; }
+
+.galleryFileViewer:target {
+  opacity: 1;
+  pointer-events: auto; }
+
+.galleryFileViewer-content > div {
+  position: relative; }
+
+.backTogalleryListing {
+  display: inline-block;
+  margin-right: 5px; }
+
+#videoDiv, #imageDiv, #pdfDiv, #documentDiv {
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  margin: auto; }
+
+.video-js {
+  width: 100%;
+  height: 100%; }
+
+.video-js .vjs-tech {
+  position: relative !important; }
+
+.closegalleryFileViewer {
+  display: inline-block;
+  right: -16px !important;
+  top: 0px;
+  padding: 10px !important;
+  cursor: pointer; }
+
+.closegalleryFileViewer span {
+  padding: 5px; }
+
+.fileSection {
+  display: inline-flex;
+  vertical-align: middle;
+  width: 65%;
+  text-align: center;
+  height: 100%; }
+
+.infoSection {
+  vertical-align: top;
+  padding: 40px 20px;
+  height: 58%;
+  max-height: 420px;
+  overflow: auto; }
+  .infoSection .p {
+    text-align: justify; }
+
+.infoSectionMainDiv {
+  display: inline-block;
+  width: 34%;
+  vertical-align: top;
+  height: 100%;
+  padding-left: 0 !important;
+  text-align: left; }
+
+.hidden {
+  display: none; }
+
+.showViewer {
+  display: block; }
+
+#fileDiv {
+  margin: 0 auto;
+  display: inline-flex;
+  vertical-align: middle;
+  width: 100%; }
+
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  font-size: 20pt;
+  cursor: pointer; }
+
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  font-size: 20pt;
+  cursor: pointer; }
+
+.coverImageBtnDiv {
+  bottom: 0;
+  position: absolute;
+  padding: 20px 40px;
+  width: 100%;
+  text-align: right;
+  left: 0; }
+
+.uploaderName {
+  margin-left: 5px;
+  margin-right: 5px; }
+
+.galleryCoverDiv {
+  margin: 30px; }
+
+.coverImage {
+  max-height: 300px;
+  max-width: 500px; }
+
+.coverImageDiv {
+  display: inline-block; }
+
+.uploadedTime {
+  margin-left: 5px; }
+
+.galleryInfo {
+  display: inline-block;
+  /* somehow  galleryInfo container not aligning to 0,0 position. setting postion:absolute worked.*/
+  /* position: absolute; */
+  /** removed the same as the description was going beyond the given width -- Harini**/
+  margin: 0 0 0 30px;
+  width: 57%;
+  text-align: justify;
+  vertical-align: top; }
+
+.tags li {
+  float: left;
+  margin-right: 15px !important;
+  padding-left: 20px !important; }
+
+.catgs li {
+  float: left;
+  margin-right: 15px !important; }
+
+.tags, .catgs {
+  overflow: hidden; }
+
+.galleryDescriptionDiv {
+  margin-bottom: 10x; }
+
+.thumbnailTemplate {
+  display: inline-block;
+  margin: 10px;
+  max-height: 80px;
+  max-width: 130px;
+  min-height: 80px; }
+
+.thumbnail {
+  max-width: 130px;
+  max-height: 80px; }
+
+.uploaderImg {
+  width: 40px;
+  height: 40px; }
+
+.gallerySocialBookmarksList {
+  display: inline-block;
+  margin-left: 40px; }
+  .gallerySocialBookmarksList img {
+    width: 20px; }
+
+.galleryFileViewer-nav {
+  margin: 10px 12px 10px 0;
+  padding: 0;
+  text-align: right; }
+
+.galleryTitle {
+  width: 85%; }
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .separator {
+    margin: 0; }
+
+  #search_formBtn {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 10px; }
+
+  #add-galleryBtn {
+    width: 100%; }
+
+  .galleryListing-add {
+    margin: 0;
+    text-align: center; }
+
+  .gallery-header {
+    height: auto; }
+
+  .copy-caption {
+    margin-top: 0; }
+
+  .galleryMainView .float-right {
+    float: none;
+    padding-top: 10px; }
+
+  .writeCommentsubDiv {
+    left: 20px;
+    margin-left: 20px; }
+
+  .replyCommentButton {
+    float: left; }
+
+  .galleryListing {
+    margin: auto 10px; }
+
+  .coverImageDiv {
+    width: 100%;
+    height: auto;
+    max-width: 280px; }
+
+  .galleryInfo {
+    position: relative;
+    margin-left: 0px;
+    width: 100%; }
+
+  .commentsDiv {
+    width: 100%;
+    height: auto;
+    overflow: visible; }
+
+  .copy-caption {
+    margin-top: 15px; }
+
+  .gallery-header-nav {
+    display: none; }
+
+  .fileSection {
+    width: 100%;
+    height: auto; }
+
+  .infoSectionMainDiv {
+    width: 100%;
+    height: auto;
+    padding: 0 !important; }
+
+  .infoSection {
+    height: auto;
+    margin: 20px; }
+
+  .coverImageDiv {
+    text-align: center; }
+
+  .galleryFileViewer-content {
+    display: inline-block; } }
+.as-stream-loadmore {
+  padding: 10px;
+  margin: 20px 40px;
+  cursor: pointer;
+  text-align: center; }
+
+/*# sourceMappingURL=sp_asset.css.map */

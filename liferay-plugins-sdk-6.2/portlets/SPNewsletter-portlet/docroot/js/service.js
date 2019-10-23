@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.Newsletter", "sambaash.platform.portlet.newsletter.service", "Newsletter-portlet");

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.spjob">
+	<author>harini</author>
+	<namespace>SPJob</namespace>
+
+	<entity name="SPJob" table="SPJob" local-service="true"
+		remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spJobId" db-name="jobId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" db-name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" db-name="companyId" type="long"></column>
+		<column name="userId" db-name="userId" type="long"></column>
+		<column name="createdBy" db-name="createdBy" type="long"></column>
+		<column name="createDate" db-name="createDate" type="Date"></column>
+		<column name="modifiedDate" db-name="modifiedDate" type="Date"></column>
+		<column name="updatedBy" db-name="updatedBy" type="long"></column>
+
+		<!-- Other fields -->
+		<!-- Company Name would be auto populated with user's company name. A user 
+			can belong to more than one company we would store company name which he 
+			is posting the job in this table -->
+		<column name="yearsOfExperience" db-name="experience" type="String"></column>
+		<column name="corporateName" db-name="corporateName" type="String"></column>
+		<column name="corporateId" db-name="corporateId" type="long"></column>
+		<column name="jobTitle" db-name="jobTitle" type="String"></column>
+		<!-- job type comes from SP_LISTTYPE -->
+		<column name="jobType" db-name="jobType" type="String"></column>
+		<!-- Below comes from Country Model -->
+		<column name="jobLocation" db-name="jobLocation" type="String"></column>
+		<column name="jobDescription" db-name="jobDescription" type="String"></column>
+		<column name="status" db-name="status" type="String"></column>
+		<column name="autoMatch" type="boolean"></column>
+		<column name="currency" db-name="currency" type="String"></column>
+		<column name="salary" db-name="salary" type="double"></column>
+		<column name="rate" db-name="rate" type="String"></column>
+		<column name="startDate" db-name="startDate" type="Date"></column>
+		<column name="endDate" db-name="endDate" type="Date"></column>
+		<column name="closingDate" db-name="closingDate" type="Date"></column>
+		<column name="extra1" db-name="extra1" type="String"></column>
+		<column name="extra2" db-name="extra2" type="String"></column>
+		<column name="extra3" db-name="extra3" type="String"></column>
+		<column name="extra4" db-name="extra4" type="String"></column>
+		<column name="extra5" db-name="extra5" type="String"></column>
+		<column name="notefto" db-name="notefto" type="String"></column>
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="modifiedDate"></order-column>
+		</order>
+		<!-- Finder methods -->
+		<finder name="AllJobsByCommunityId" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		<finder name="AllJobsByTitle" return-type="Collection">
+			<finder-column name="jobTitle"></finder-column>
+		</finder>
+		<finder name="AllJobsByType" return-type="Collection">
+			<finder-column name="jobType"></finder-column>
+		</finder>
+		<finder name="AllJobsByLocation" return-type="Collection">
+			<finder-column name="jobLocation"></finder-column>
+		</finder>
+		<finder name="AllJobsByJobStatus" return-type="Collection">
+			<finder-column name="status"></finder-column>
+		</finder>
+		<finder name="AllJobsByCompanyName" return-type="Collection">
+			<finder-column name="corporateName"></finder-column>
+		</finder>
+		<finder name="AllJobsByUserId" return-type="Collection">
+			<finder-column name="createdBy"></finder-column>
+		</finder>
+		<finder name="AllJobsByCorporateId" return-type="Collection">
+			<finder-column name="corporateId"></finder-column>
+		</finder>
+
+		<!-- References -->
+
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="Image" />
+		<reference package-path="com.liferay.portal" entity="PortletPreferences" />
+		<reference package-path="com.liferay.portal" entity="Subscription" />
+		<reference package-path="com.liferay.portal" entity="WorkflowInstanceLink" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetLink" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetCategory"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetTag"></reference>
+		<reference package-path="com.liferay.portlet.expando"
+			entity="ExpandoValue" />
+		<reference package-path="com.liferay.portlet.messageboards"
+			entity="MBMessage" />
+
+	</entity>
+
+	<entity name="SPJobApplicants" table="SPJobApplicants"
+		local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="spJobApplicantsId" type="long" primary="true"></column>
+		<!-- FK fields -->
+		<column name="jobId" type="long"></column>
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="updatedBy" type="long"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<!-- Other fields -->
+		<column name="firstName" type="String"></column>
+		<column name="lastName" type="String"></column>
+		<column name="emailAddress" type="String"></column>
+		<column name="contactNumber" type="String"></column>
+		<column name="yearsOfExperience" db-name="experience" type="String"></column>
+		<column name="resume" type="String"></column>
+		<column name="coverLetter" type="String"></column>
+
+		<column name="briefInfos" type="String"></column>
+
+		<column name="extra1" type="String"></column>
+		<column name="extra2" type="String"></column>
+		<column name="extra3" type="String"></column>
+		<column name="extra4" type="String"></column>
+		<column name="extra5" type="String"></column>
+		<!-- Finder methods -->
+		<finder name="AllAppliedJobsByJobId" return-type="Collection">
+			<finder-column name="jobId"></finder-column>
+		</finder>
+		<finder name="AllAppliedJobsByUserId" return-type="Collection">
+			<finder-column name="userId"></finder-column>
+		</finder>
+		<finder name="AllAppliedJobsByCommunity" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+
+		<!-- References -->
+
+		<reference package-path="com.liferay.portal" entity="Company" />
+		<reference package-path="com.liferay.portal" entity="Group" />
+		<reference package-path="com.liferay.portal" entity="Image" />
+		<reference package-path="com.liferay.portal" entity="PortletPreferences" />
+		<reference package-path="com.liferay.portal" entity="Subscription" />
+		<reference package-path="com.liferay.portal" entity="WorkflowInstanceLink" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetLink" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetCategory"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetTag"></reference>
+		<reference package-path="com.liferay.portlet.expando"
+			entity="ExpandoValue" />
+		<reference package-path="com.liferay.portlet.messageboards"
+			entity="MBMessage" />
+
+	</entity>
+
+	<entity name="SPJobApplicantsPortfolio" table="SPJobApplicantsCustomizedPortfolio"
+		local-service="true" remote-service="false">
+		<!-- FK fields Composite key -->
+		<column name="jobApplyId" type="long" primary="true"></column>
+		<column name="porfolioId" type="long" primary="true"></column>
+		<!-- Audit fields -->
+		<column name="userId" type="long"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="updatedBy" type="long"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<!-- Other fields -->
+		<column name="extra1" type="String"></column>
+		<column name="extra2" type="String"></column>
+		<!-- Finder methods -->
+		<finder name="AllPortfolioIdsForJobApplyId" return-type="Collection">
+			<finder-column name="jobApplyId"></finder-column>
+		</finder>
+	</entity>
+
+	<exceptions>
+		<exception>SPJobName</exception>
+		<exception>SPJobDescription</exception>
+		<exception>SPJobType</exception>
+		<exception>SPJobLocation</exception>
+		<exception>SPJobTags</exception>
+		<exception>SPJobCategories</exception>
+		<exception>SPJobImageName</exception>
+		<exception>SPJobImageSize</exception>
+		<exception>SPJobImageType</exception>
+	</exceptions>
+
+</service-builder>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder
+	package-path="com.sambaash.platform.srv.genericsearch">
+	<author>nareshchebolu</author>
+	<namespace>genericsearch</namespace>
+
+	<entity name="GSFavourite" local-service="true" remote-service="false" table="SPGSFavourite">
+
+		<!-- PK fields -->
+
+		<column name="SPGSFavouriteId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="name" type="String" />
+		<column name="createdBy" type="long" />
+		<column name="layoutId" type="long" />
+		<column name="portletInstanceId" type="String" />
+		<column name="config" type="String" />
+		<column name="permissionType" type="int" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="name" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="createdBy" return-type="Collection">
+			<finder-column name="createdBy" />
+		</finder>
+		<finder name="createdByLayoutIdPermissionType" return-type="Collection">
+			<finder-column name="createdBy" />
+			<finder-column name="layoutId" />
+			<finder-column name="permissionType" />
+		</finder>
+		<finder name="LayoutIdPermissionType" return-type="Collection">
+			<finder-column name="layoutId" />
+			<finder-column name="permissionType" />
+		</finder>
+	</entity>
+</service-builder>

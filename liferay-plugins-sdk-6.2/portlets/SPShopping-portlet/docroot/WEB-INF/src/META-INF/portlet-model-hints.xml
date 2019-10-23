@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.spshopping.model.SPCart">
+		<field name="spCartId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="discount" type="String" />
+		<field name="totalPrice" type="String" />
+		<field name="userRemarks" type="String" />
+		<field name="status" type="int" />
+		<field name="transactionDetails" type="String" />
+		<field name="orderPage" type="String" />
+		<field name="rsvpDetailId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spshopping.model.SPCartPackage">
+		<field name="spCartPackageId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="cartId" type="long" />
+		<field name="packageId" type="long" />
+		<field name="selectedCurrency" type="String" />
+		<field name="usedDiscountRefId" type="long" />
+		<field name="usedDiscountRefPCId" type="long" />
+		<field name="discount" type="String" />
+		<field name="initialPrice" type="String" />
+		<field name="totalPrice" type="String" />
+		<field name="remarks" type="String" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spshopping.model.SPCartPackageItem">
+		<field name="spCartPackageItemId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="spCartPackageId" type="long" />
+		<field name="title" type="String" />
+		<field name="itemCode" type="String" />
+		<field name="quantity" type="int" />
+		<field name="entityClassPk" type="long" />
+		<field name="entityClassName" type="String" />
+		<field name="totalPrice" type="String" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spshopping.model.SPDiscount">
+		<field name="spDiscountId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="title" type="String" />
+		<field name="percent" type="boolean" />
+		<field name="packageId" type="long" />
+		<field name="value" type="String" />
+		<field name="couponCode" type="String" />
+		<field name="description" type="String" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="minQuantity" type="int" />
+		<field name="maxQuantity" type="int" />
+		<field name="active" type="boolean" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spshopping.model.SPPackageItems">
+		<field name="spPackageItemsId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="packageId" type="long" />
+		<field name="itemId" type="long" />
+		<field name="quantity" type="int" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spshopping.model.SPSellingItem">
+		<field name="spSellingItemId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="title" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="itemCode" type="String" />
+		<field name="entityClassPk" type="long" />
+		<field name="entityClassNameId" type="long" />
+		<field name="entityClassName" type="String" />
+		<field name="shortDescription" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="longDescription" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="active" type="boolean" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spshopping.model.SPSellingPackage">
+		<field name="spSellingPackageId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="title" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="pkgCode" type="String" />
+		<field name="shortDescription" type="String">
+			<hint name="max-length">500</hint>
+		</field>
+		<field name="longDescription" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="currencyCode" type="String" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="notify" type="String" />
+		<field name="needsPayment" type="boolean" />
+		<field name="orderPage" type="String" />
+		<field name="orderSequence" type="String" />
+		<field name="active" type="boolean" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spshopping.model.SPSellingPrice">
+		<field name="spSellingPriceId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="priceRefId" type="long" />
+		<field name="priceRefTypeId" type="long" />
+		<field name="currencyCode" type="String" />
+		<field name="basePrice" type="String" />
+		<field name="taxName" type="String" />
+		<field name="taxValue" type="String" />
+		<field name="totalPrice" type="String" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spshopping.model.SPTax">
+		<field name="spTaxId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="currencyCode" type="String" />
+		<field name="taxName" type="String" />
+		<field name="taxValue" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+</model-hints>

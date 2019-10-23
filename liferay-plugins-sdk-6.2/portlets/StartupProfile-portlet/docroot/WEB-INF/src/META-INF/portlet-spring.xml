@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.startupprofile.service.AccreditationLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.AccreditationLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.AccreditationPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.AccreditationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.AddressLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.AddressLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.AddressPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.AddressPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.ApprovedMentorsLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.ApprovedMentorsLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.ApprovedMentorsPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.ApprovedMentorsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.ATODocumentLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.ATODocumentLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.ATODocumentPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.ATODocumentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.EmployeeInfoLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.EmployeeInfoLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.EmployeeInfoPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.EmployeeInfoPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.FundingRoundLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.FundingRoundLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.FundingRoundPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.FundingRoundPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.GuidelinesLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.GuidelinesLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.GuidelinesPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.GuidelinesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.OrganisationRemarksLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.OrganisationRemarksLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.OrganisationRemarksPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.OrganisationRemarksPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.OrganizationLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.OrganizationLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.OrganizationService" class="com.sambaash.platform.srv.startupprofile.service.impl.OrganizationServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.OrganizationPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.OrganizationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.PersonLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.PersonLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.PersonPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.PersonPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.PrinciplesLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.PrinciplesLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.PrinciplesPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.PrinciplesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.QuestionnaireLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.QuestionnaireLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.QuestionnairePersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.QuestionnairePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.ReAccreditationLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.ReAccreditationLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.ReAccreditationPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.ReAccreditationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.RelationshipLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.RelationshipLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.RelationshipPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.RelationshipPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.SPATOContactsLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.SPATOContactsLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.SPATOContactsPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.SPATOContactsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.SPOrgContactUsLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.SPOrgContactUsLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.persistence.SPOrgContactUsPersistence" class="com.sambaash.platform.srv.startupprofile.service.persistence.SPOrgContactUsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.StartupProfileLocalService" class="com.sambaash.platform.srv.startupprofile.service.impl.StartupProfileLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.startupprofile.service.StartupProfileService" class="com.sambaash.platform.srv.startupprofile.service.impl.StartupProfileServiceImpl" />
+</beans>

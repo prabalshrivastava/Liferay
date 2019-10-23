@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.spservices">
+	<author>gauravvijayvergia</author>
+	<namespace>SPServices</namespace>
+
+	<entity name="SPParameter" table="SPParameter" uuid="true"
+		local-service="true" remote-service="false">
+		<column name="spParameterId" db-name="spParameterId" type="long"
+			primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="category" db-name="category" type="String" />
+		<column name="description" db-name="description" type="String" />
+		<column name="name" db-name="name" type="String" />
+		<column name="value" db-name="value" type="String" />
+
+		<!-- Finder methods -->
+		<finder name="SPParameterGroupIdAndName" return-type="SPParameter"
+			unique="true">
+			<finder-column name="groupId" />
+			<finder-column name="name" />
+		</finder>
+
+	</entity>
+
+	<entity name="SPApiAuditLogs" uuid="true" table="SPApiAuditLogs"
+		local-service="true" remote-service="false">
+		<column name="spApiAuditLogsId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="apiName" type="String" />
+		<column name="parameters" type="String" />
+		<column name="result" type="String" />
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+
+	</entity>
+
+	<entity name="SPListType" table="SPListType" uuid="true"
+		local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="spListTypeId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="itemKey" type="String" />
+		<column name="itemValue" type="String" />
+		<column name="displayName" type="String" />
+		<column name="displayOrder" type="int" />
+		<column name="categoryId" type="long" />
+		<column name="modeldata" type="String" />
+
+		<order by="asc">
+			<order-column name="displayOrder" order-by="asc" />
+			<order-column name="itemValue" order-by="asc" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="ItemKeys" return-type="Collection">
+			<finder-column name="itemKey" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="ItemValues" return-type="Collection">
+			<finder-column name="itemValue" />
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="CategoryIdGroupId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="categoryId" />
+		</finder>
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+
+	</entity>
+
+	<entity name="SPLdapMapping" table="SPLdapMapping"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spLdapMappingId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="countryId" type="long" />
+		<column name="departmentId" type="long" />
+		<column name="countryDepartmentId" type="long" />
+		<column name="ldapCountry" type="String" />
+		<column name="ldapDepartment" type="String" />
+		<column name="ldapCompany" type="String" />
+		<column name="defaultRoleId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spLdapMappingId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="CountryDepartmentAndLegalEntity" return-type="SPLdapMapping">
+			<finder-column name="ldapCountry" />
+			<finder-column name="ldapDepartment" />
+			<finder-column name="ldapCompany" />
+		</finder>
+
+	</entity>
+
+	<entity name="SPLdapProfile" table="SPLdapProfile"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spLdapProfileId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="userId" type="long" />
+		<column name="countryId" type="long" />
+		<column name="departmentId" type="long" />
+		<column name="givenName" type="String" />
+		<column name="sn" type="String" />
+		<column name="displayName" type="String" />
+		<column name="company" type="String" />
+		<column name="division" type="String" />
+		<column name="title" type="String" />
+		<column name="mail" type="String" />
+		<column name="samAccountName" type="String" />
+		<column name="employeeId" type="String" />
+		<column name="manager" type="String" />
+		<column name="telephoneNumber" type="String" />
+		<column name="mobile" type="String" />
+		<column name="facsimileTelephoneNumber" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="spLdapProfileId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="UserId" return-type="SPLdapProfile">
+			<finder-column name="userId" />
+		</finder>
+
+	</entity>
+
+
+	<entity name="MembershipPackage" table="SPMembershipPackage"
+		local-service="true" remote-service="false">
+		<column name="mpId" type="long" primary="true" />
+		<column name="name" type="String" />
+		<column name="description" type="String" />
+		<column name="status" type="String" />
+		<column name="type" type="String" />
+		<column name="version" type="String" />
+		<column name="cost" type="float" />
+		<column name="costCurrency" type="String" />
+		<column name="costPeriod" type="String" />
+		<column name="costPeriodType" type="String" />
+		<column name="promotionCode" type="String" />
+		<column name="promotionFrom" type="Date" />
+		<column name="promotionTo" type="Date" />
+		<column name="discount" type="String" />
+		<column name="dateAdded" type="Date" />
+		<column name="dateModified" type="Date" />
+		<column name="createdBy" type="String" />
+		<column name="modifiedBy" type="String" />
+		<column name="extra1" type="String" />
+		<column name="extra2" type="String" />
+		<column name="extra3" type="String" />
+		<column name="extra4" type="String" />
+		<column name="extra5" type="Date" />
+		<column name="extra6" type="Date" />
+		<column name="extra7" type="String" />
+		<column name="extra8" type="String" />
+		<column name="extra9" type="String" />
+		<column name="extra10" type="String" />
+		<column name="groupServices" type="Collection"
+			entity="MembershipPackageGrpServices" />
+
+
+		<column name="indServices" type="Collection" entity="MembershipPackageIndServices" />
+
+		<order by="asc">
+			<order-column name="name" />
+		</order>
+
+		<finder name="MembershipPackageName" return-type="Collection">
+			<finder-column name="name" />
+		</finder>
+
+		<finder name="RoleId" return-type="Collection">
+			<finder-column name="extra1" />
+		</finder>
+
+		<finder name="MembershipPackageType" return-type="Collection">
+			<finder-column name="type" />
+		</finder>
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+	</entity>
+
+	<entity name="MembershipPackageGrpServices" table="SPMembershipPackageGrpServices"
+		local-service="true" remote-service="false">
+		<column name="mpgsscId" type="long" primary="true" />
+		<column name="mpId" type="long" />
+		<column name="scorder" type="int" />
+		<column name="scgId" type="String" />
+		<column name="scId" type="String" />
+		<column name="paramType" type="String" />
+		<column name="paramFrom" type="String" />
+		<column name="paramUpto" type="String" />
+		<column name="duration" type="String" />
+		<column name="durationType" type="String" />
+		<column name="status" type="String" />
+		<column name="description" type="String" />
+		<column name="dateAdded" type="Date" />
+		<column name="dateModified" type="Date" />
+		<column name="createdBy" type="String" />
+		<column name="modifiedBy" type="String" />
+		<column name="extra1" type="String" />
+		<column name="extra2" type="String" />
+		<column name="extra3" type="String" />
+		<column name="extra4" type="String" />
+		<column name="extra5" type="Date" />
+		<column name="extra6" type="Date" />
+		<column name="serviceCharges" type="float" />
+		<column name="costCurrency" type="String" />
+		<column name="costPeriod" type="String" />
+		<column name="costPeriodType" type="String" />
+		<order by="asc">
+			<order-column name="scgId" />
+			<order-column name="scorder" />
+		</order>
+		<finder name="MembershipPackageGrpServicesScgId" return-type="Collection">
+			<finder-column name="scgId" />
+		</finder>
+
+		<finder name="MembershipPackageGrpServicesScId" return-type="Collection">
+			<finder-column name="scId" />
+		</finder>
+
+		<finder name="MembershipPackageGrpServicesMpId" return-type="Collection">
+			<finder-column name="mpId" />
+		</finder>
+		<finder name="ServiceNameMpId" return-type="Collection">
+			<finder-column name="mpId" />
+			<finder-column name="extra2" />
+		</finder>
+
+	</entity>
+	<entity name="MembershipPackageIndServices" table="SPMembershipPackageIndServices"
+		local-service="true" remote-service="false">
+		<column name="mpgsscId" type="long" primary="true" />
+		<column name="mpId" type="long" />
+		<column name="scorder" type="String" />
+		<column name="scgId" type="String" />
+		<column name="scId" type="String" />
+		<column name="paramType" type="String" />
+		<column name="paramFrom" type="String" />
+		<column name="paramUpto" type="String" />
+		<column name="duration" type="String" />
+		<column name="durationType" type="String" />
+		<column name="status" type="String" />
+		<column name="description" type="String" />
+		<column name="dateAdded" type="Date" />
+		<column name="dateModified" type="Date" />
+		<column name="createdBy" type="String" />
+		<column name="modifiedBy" type="String" />
+		<column name="extra1" type="String" />
+		<column name="extra2" type="String" />
+		<column name="extra3" type="String" />
+		<column name="extra4" type="String" />
+		<column name="extra5" type="Date" />
+		<column name="extra6" type="Date" />
+		<column name="serviceCharges" type="float" />
+		<column name="costCurrency" type="String" />
+		<column name="costPeriod" type="String" />
+		<column name="costPeriodType" type="String" />
+		<order by="asc">
+			<order-column name="scorder" />
+			<order-column name="scId" />
+		</order>
+		<finder name="MembershipPackageIndServicesScId" return-type="Collection">
+			<finder-column name="scId" />
+		</finder>
+		<finder name="MembershipPackageIndServicesMpId" return-type="Collection">
+			<finder-column name="mpId" />
+		</finder>
+		<finder name="ServiceNameMpId" return-type="Collection">
+			<finder-column name="mpId" />
+			<finder-column name="extra1" />
+		</finder>
+
+	</entity>
+
+	<entity name="MembershipPackageAddonServices" table="SPMembershipPackageAddonServices"
+		local-service="true" remote-service="false">
+		<column name="mpAddonId" type="long" primary="true" />
+		<column name="scId" type="String" />
+		<column name="scName" type="String" />
+		<column name="paramType" type="String" />
+		<column name="paramFrom" type="String" />
+		<column name="paramUpto" type="String" />
+		<column name="duration" type="String" />
+		<column name="durationType" type="String" />
+		<column name="serviceCharges" type="float" />
+		<column name="serviceChargesCurrency" type="String" />
+		<column name="serviceChargesPeriod" type="String" />
+		<column name="serviceChargesPeriodType" type="String" />
+		<column name="status" type="String" />
+		<column name="description" type="String" />
+		<column name="dateAdded" type="Date" />
+		<column name="dateModified" type="Date" />
+		<column name="createdBy" type="String" />
+		<column name="modifiedBy" type="String" />
+		<column name="extra1" type="String" />
+		<column name="extra2" type="String" />
+		<column name="extra3" type="String" />
+		<column name="extra4" type="String" />
+		<column name="extra5" type="Date" />
+		<column name="extra6" type="Date" />
+		<order by="asc">
+			<order-column name="scName" />
+		</order>
+		<finder name="MembershipPackageAddonServicesScId" return-type="Collection">
+			<finder-column name="scId" />
+		</finder>
+		<finder name="ServiceNameMpId" return-type="Collection">
+			<finder-column name="extra1" />
+			<finder-column name="scName" />
+		</finder>
+	</entity>
+
+	<entity name="MembershipPackageServicesRoles" table="SPMembershipPackageServicesRoles"
+		local-service="true" remote-service="false">
+		<column name="mpgsrlId" type="long" primary="true" />
+		<column name="mpId" type="long" />
+		<column name="serviceId" type="long" />
+		<column name="classNameId" type="long" />
+		<column name="roleId" type="long" />
+		<column name="extra1" type="String" />
+		<column name="extra2" type="String" />
+		<column name="extra3" type="String" />
+		<column name="extra4" type="String" />
+		<column name="extra5" type="Date" />
+		<column name="extra6" type="Date" />
+		<order by="asc">
+			<order-column name="mpgsrlId" />
+			<order-column name="mpId" />
+		</order>
+		<finder name="ClassName" return-type="Collection">
+			<finder-column name="mpId" />
+			<finder-column name="classNameId" />
+		</finder>
+		<finder name="mpIdClassNameIdSvcId" return-type="Collection">
+			<finder-column name="mpId" />
+			<finder-column name="classNameId" />
+			<finder-column name="serviceId" />
+		</finder>
+		<finder name="mpId" return-type="Collection">
+			<finder-column name="mpId" />
+		</finder>
+		<finder name="MembershipPackageAndRole" return-type="Collection">
+			<finder-column name="mpId" />
+			<finder-column name="roleId" />
+		</finder>
+		<finder name="RoleId" return-type="Collection">
+			<finder-column name="roleId" />
+		</finder>
+		<finder name="ServiceId" return-type="Collection">
+			<finder-column name="serviceId" />
+		</finder>
+		<finder name="ServiceNameMpId" return-type="Collection">
+			<finder-column name="mpId" />
+			<finder-column name="extra1" />
+		</finder>
+	</entity>
+
+	<entity name="MembershipPackagePromotionCode" table="SPMembershipPackagePromotionCode"
+		local-service="true" remote-service="false">
+		<column name="promotionCode_id" type="long" primary="true" />
+		<column name="membershipPackage_id" type="long" />
+		<column name="promotionCode" type="String" />
+		<column name="promotionFrom" type="Date" />
+		<column name="promotionTo" type="Date" />
+		<column name="discount" type="String" />
+		<column name="extra1" type="String" />
+		<column name="extra2" type="String" />
+		<column name="extra3" type="String" />
+		<column name="extra4" type="String" />
+		<column name="extra5" type="String" />
+
+		<finder name="membershipPackage_Id" return-type="Collection">
+			<finder-column name="membershipPackage_id" />
+		</finder>
+		<finder name="promotionCode" return-type="Collection">
+			<finder-column name="promotionCode" />
+		</finder>
+
+	</entity>
+
+	<entity name="MembershipSubscription" table="SPMembershipSubscription"
+		local-service="true" remote-service="false">
+		<column name="msId" type="long" primary="true" />
+		<column name="name" type="String" />
+		<column name="description" type="String" />
+		<column name="mporder_1" type="String" />
+		<column name="mpId_1" type="String" />
+		<column name="mpName_1" type="String" />
+		<column name="mpQty_1" type="int" />
+		<column name="mpPrice_1" type="float" />
+		<column name="mpPriceCurrency_1" type="String" />
+		<column name="mporder_2" type="String" />
+		<column name="mpId_2" type="String" />
+		<column name="mpName_2" type="String" />
+		<column name="mpQty_2" type="int" />
+		<column name="mpPrice_2" type="float" />
+		<column name="mpPriceCurrency_2" type="String" />
+		<column name="mporder_3" type="String" />
+		<column name="mpId_3" type="String" />
+		<column name="mpName_3" type="String" />
+		<column name="mpQty_3" type="int" />
+		<column name="mpPrice_3" type="float" />
+		<column name="mpPriceCurrency_3" type="String" />
+		<column name="mporder_4" type="String" />
+		<column name="mpId_4" type="String" />
+		<column name="mpName_4" type="String" />
+		<column name="mpQty_4" type="int" />
+		<column name="mpPrice_4" type="float" />
+		<column name="mpPriceCurrency_4" type="String" />
+		<column name="mpSubtotal" type="float" />
+		<column name="mpSubtotalCurrency" type="String" />
+		<column name="addOnSubtotal" type="float" />
+		<column name="addOnSubtotalCurrency" type="String" />
+		<column name="tax" type="float" />
+		<column name="comments" type="String" />
+		<column name="promotionCode" type="String" />
+		<column name="promotionFrom" type="Date" />
+		<column name="promotionTo" type="Date" />
+		<column name="discount" type="String" />
+		<column name="nettotal" type="float" />
+		<column name="nettotalCurrency" type="String" />
+		<column name="ppTxnId" type="String" />
+		<column name="ppPaymentStatus" type="String" />
+		<column name="ppPaymentGross" type="float" />
+		<column name="ppReceiverEmail" type="String" />
+		<column name="ppPayerEmail" type="String" />
+		<column name="sendOrderEmail" type="String" />
+		<column name="sendShippingEmail" type="String" />
+		<column name="effectiveFromDate" type="Date" />
+		<column name="effectiveToDate" type="Date" />
+		<column name="altShipping" type="int" />
+		<column name="shipping" type="double" />
+		<column name="requiresShipping" type="boolean" />
+		<column name="insure" type="boolean" />
+		<column name="insurance" type="double" />
+		<column name="billingFirstName" type="String" />
+		<column name="billingLastName" type="String" />
+		<column name="billingEmailAddress" type="String" />
+		<column name="billingCompany" type="String" />
+		<column name="billingStreet" type="String" />
+		<column name="billingCity" type="String" />
+		<column name="billingState" type="String" />
+		<column name="billingZip" type="String" />
+		<column name="billingCountry" type="String" />
+		<column name="billingPhone" type="String" />
+		<column name="shipToBilling" type="boolean" />
+		<column name="shippingFirstName" type="String" />
+		<column name="shippingLastName" type="String" />
+		<column name="shippingEmailAddress" type="String" />
+		<column name="shippingCompany" type="String" />
+		<column name="shippingStreet" type="String" />
+		<column name="shippingCity" type="String" />
+		<column name="shippingState" type="String" />
+		<column name="shippingZip" type="String" />
+		<column name="shippingCountry" type="String" />
+		<column name="shippingPhone" type="String" />
+		<column name="ccName" type="String" />
+		<column name="ccType" type="String" />
+		<column name="ccNumber" type="String" />
+		<column name="ccExpMonth" type="int" />
+		<column name="ccExpYear" type="int" />
+		<column name="ccVerNumber" type="String" />
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<finder name="MembershipSubscriptionName" return-type="Collection">
+			<finder-column name="name" />
+		</finder>
+		<finder name="MembershipSubscriptionGroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="MembershipSubscriptionUserId" return-type="Collection">
+			<finder-column name="userId" />
+		</finder>
+
+		<finder name="MembershipSubscriptionMpId_1" return-type="Collection">
+			<finder-column name="mpId_1" />
+		</finder>
+
+		<finder name="MembershipSubscriptionSessionId" return-type="Collection">
+			<finder-column name="userName" />
+		</finder>
+
+		<finder name="MembershipSubscriptionPpPaymentStatus"
+			return-type="Collection" db-index="false">
+			<finder-column name="ppPaymentStatus" />
+		</finder>
+
+		<finder name="MembershipSubscriptionShippingEmailAddressAndNettotal"
+			return-type="Collection" db-index="false">
+			<finder-column name="shippingEmailAddress" />
+			<finder-column name="nettotal" />
+		</finder>
+
+		<finder name="MembershipSubscriptionShippingEmailAddress"
+			return-type="Collection">
+			<finder-column name="shippingEmailAddress" />
+		</finder>
+
+		<finder name="MembershipSubscriptionPpPaymentStatusEmailAddressAndNettotal"
+			return-type="Collection" db-index="false">
+			<finder-column name="ppPaymentStatus" />
+			<finder-column name="shippingEmailAddress" />
+			<finder-column name="nettotal" />
+		</finder>
+
+		<reference package-path="com.liferay.counter" entity="Counter" />
+		<reference package-path="com.liferay.portal" entity="User" />
+	</entity>
+	<entity name="MembershipSubscriptionAddonServices" table="SPMembershipSubscriptionAddonServices"
+		local-service="true" remote-service="false">
+		<column name="msAddonId" type="long" primary="true" />
+		<column name="msId" type="long" />
+		<column name="scId" type="String" />
+		<column name="scName" type="String" />
+		<column name="paramType" type="String" />
+		<column name="paramFrom" type="String" />
+		<column name="paramUpto" type="String" />
+		<column name="duration" type="String" />
+		<column name="durationType" type="String" />
+		<column name="serviceCharges" type="float" />
+		<column name="serviceChargesCurrency" type="String" />
+		<column name="serviceChargesPeriod" type="String" />
+		<column name="serviceChargesPeriodType" type="String" />
+		<column name="status" type="String" />
+		<column name="description" type="String" />
+		<column name="effectiveFromDate" type="Date" />
+		<column name="effectiveToDate" type="Date" />
+		<column name="dateAdded" type="Date" />
+		<column name="dateModified" type="Date" />
+		<column name="createdBy" type="String" />
+		<column name="modifiedBy" type="String" />
+		<column name="extra1" type="String" />
+		<column name="extra2" type="String" />
+		<column name="extra3" type="String" />
+		<column name="extra4" type="String" />
+		<column name="extra5" type="Date" />
+		<column name="extra6" type="Date" />
+		<order by="asc">
+			<order-column name="scName" />
+		</order>
+		<finder name="MembershipSubscriptionAddonServicesScId"
+			return-type="Collection">
+			<finder-column name="scId" />
+		</finder>
+
+		<finder name="MembershipSubscriptionAddonServicesDescription"
+			return-type="Collection">
+			<finder-column name="description" />
+		</finder>
+
+		<finder name="MembershipSubscriptionAddonServicesUserId"
+			return-type="Collection">
+			<finder-column name="extra1" />
+		</finder>
+
+
+		<finder name="MembershipSubscriptionAddonServicesMsId"
+			return-type="Collection">
+			<finder-column name="msId" />
+		</finder>
+
+	</entity>
+
+
+	<entity name="MembershipSubscribedServices" table="SPMembershipSubscribedServices"
+		local-service="true" remote-service="false">
+		<column name="mssId" type="long" primary="true" />
+		<column name="userid" type="long" />
+		<column name="companyId" type="long" />
+		<column name="scId" type="String" />
+		<column name="scName" type="String" />
+		<column name="count" type="String" />
+		<column name="status" type="String" />
+		<column name="description" type="String" />
+		<column name="dateAdded" type="Date" />
+		<column name="dateModified" type="Date" />
+		<column name="createdBy" type="String" />
+		<column name="modifiedBy" type="String" />
+		<column name="effectiveFromDate" type="Date" />
+		<column name="effectiveToDate" type="Date" />
+		<column name="paramFrom" type="String" />
+		<column name="paramUpto" type="String" />
+		<column name="duration" type="String" />
+		<column name="durationType" type="String" />
+		<column name="serviceCharges" type="float" />
+		<column name="serviceChargesCurrency" type="String" />
+		<column name="serviceChargesPeriod" type="String" />
+		<column name="serviceChargesPeriodType" type="String" />
+		<column name="extra1" type="String" />
+		<column name="extra2" type="String" />
+		<column name="extra3" type="String" />
+		<column name="extra4" type="String" />
+		<column name="extra5" type="Date" />
+		<column name="extra6" type="Date" />
+		<order by="asc">
+			<order-column name="scName" />
+		</order>
+		<finder name="MembershipSubscribedServicesScId" return-type="Collection">
+			<finder-column name="scId" />
+		</finder>
+
+		<finder name="MembershipSubscribedServicesScIdAndCreatedBy"
+			return-type="Collection">
+			<finder-column name="scId" />
+			<finder-column name="createdBy" />
+		</finder>
+
+
+	</entity>
+
+	<entity name="ServiceComponentGroup" table="SPServiceComponentGroup"
+		local-service="true" remote-service="false">
+		<column name="scgId" type="long" primary="true" />
+		<column name="name" type="String" />
+		<column name="description" type="String" />
+		<column name="phase" type="String" />
+		<column name="status" type="String" />
+		<column name="version" type="String" />
+		<column name="deploymentCluster" type="String" />
+		<column name="community" type="String" />
+		<column name="dateAdded" type="Date" />
+		<column name="dateModified" type="Date" />
+		<column name="author" type="String" />
+		<column name="serviceComponents" type="Collection" entity="ServiceComponents" />
+		<column name="extra1" type="String" />
+		<column name="extra2" type="String" />
+		<column name="extra3" type="String" />
+		<column name="extra4" type="String" />
+		<column name="extra5" type="Date" />
+		<column name="extra6" type="Date" />
+		<order by="asc">
+			<order-column name="name" />
+		</order>
+
+		<finder name="ServiceComponentGroupName" return-type="Collection">
+			<finder-column name="name" />
+		</finder>
+
+		<finder name="ServiceComponentGroupExtra1Like" return-type="Collection"
+			db-index="false">
+			<finder-column name="extra1" comparator="LIKE" />
+		</finder>
+
+	</entity>
+	<entity name="ServiceComponents" table="SPServiceComponents"
+		local-service="true" remote-service="false">
+		<column name="scId" type="long" primary="true" />
+		<column name="scgId" type="long" />
+		<column name="name" type="String" />
+		<column name="description" type="String" />
+		<column name="technologyComponent" type="String" />
+		<column name="phase" type="String" />
+		<column name="status" type="String" />
+		<column name="version" type="String" />
+		<column name="serviceType" type="String" />
+		<column name="ServiceExposureType" type="String" />
+		<column name="userType" type="String" />
+		<column name="platformType" type="String" />
+		<column name="islaCarteService" type="boolean" />
+		<column name="isExternal" type="boolean" />
+		<column name="tag" type="String" />
+		<column name="webserviceURL" type="String" />
+		<column name="deploymentCluster" type="String" />
+		<column name="deploymentLocation" type="String" />
+		<column name="channelID" type="String" />
+		<column name="testPlan" type="String" />
+		<column name="performanceProfile" type="String" />
+		<column name="usageStatistics" type="String" />
+		<column name="dateAdded" type="Date" />
+		<column name="dateModified" type="Date" />
+		<column name="author" type="String" />
+		<column name="extra1" type="String" />
+		<column name="extra2" type="String" />
+		<column name="extra3" type="String" />
+		<column name="extra4" type="String" />
+		<column name="extra5" type="Date" />
+		<column name="extra6" type="Date" />
+		<column name="serviceCharges" type="float" />
+		<order by="asc">
+			<order-column name="scgId" />
+			<order-column name="name" />
+		</order>
+		<finder name="ServiceComponentsName" return-type="Collection">
+			<finder-column name="name" />
+		</finder>
+		<finder name="ServiceComponentsScgId" return-type="Collection">
+			<finder-column name="scgId" />
+		</finder>
+		<finder name="TechnologyComponent" return-type="Collection">
+			<finder-column name="technologyComponent" />
+		</finder>
+	</entity>
+	
+	<entity name="SPIPGeoLocation" table="SPIPGeoLocation" uuid="true"
+		local-service="true" remote-service="false">
+		<column name="spIPGeoLocationId" type="long" primary="true" />
+		<column name="ipPrefix" type="String" />
+		<column name="country" type="String" />
+
+		<!-- Finder methods -->
+		<finder name="ipPrefixLike" return-type="Collection">
+			<finder-column name="ipPrefix" comparator="LIKE" />
+		</finder>
+	</entity>
+
+	<entity name="SPLikes" table="SPLikes" uuid="true"
+		local-service="true" remote-service="false">
+		<column name="spLikesId" db-name="spLikesId" type="long"
+			primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="layoutSetId" type="long" />
+		<column name="action" type="String" />
+		<column name="actorUserId" type="long" />
+		<column name="classId" type="long" />
+		<column name="className" type="String" />
+		<column name="classPK" type="long" />
+
+		<!-- Finder methods -->
+		<finder name="ClassNameAndClassPK" return-type="Collection"
+			unique="false">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+			<finder-column name="className" />
+			<finder-column name="classPK" />
+		</finder>
+		<finder name="UserIdWithClassNameAndClassPK" return-type="SPLikes"
+			unique="true">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+			<finder-column name="userId" />
+			<finder-column name="className" />
+			<finder-column name="classPK" />
+		</finder>
+
+	</entity>
+	
+	
+	<entity name="SPAudit" table="SPAudit" uuid="true"
+		local-service="true" remote-service="false">
+		
+		<column name="SPAuditId" type="long"
+			primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<column name="doneByUserId" type="long" />
+		<column name="entityClassNameId" type="long" />
+		<column name="entityId" type="long" />
+		<column name="action" type="String" />
+
+		<column name="field1Str" type="String"></column>
+		<column name="field1Long" type="long"></column>
+
+		<column name="field2Str" type="String"></column>
+		<column name="field2Long" type="long"></column>
+
+		<column name="data1" type="String" />
+		<column name="data2" type="String" />
+		
+	</entity>
+	<entity name="SPSiteSetup" local-service="true" remote-service="false"
+		uuid="true" uuid-accessor="true" table="SPSiteSetup">
+		<!-- PK fields -->
+
+		<column name="spSiteSetupId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+		
+		<!-- Audit fields -->
+		
+		<column name="productId" type="long"></column>
+		<column name="productName" type="String"></column>
+		<column name="subProductId" type="long"></column>
+		<column name="subProductName" type="String"></column>
+
+		<column name="virtualHostId" type="long"></column>
+		<column name="backOfficeVirtualHostId" type="long"></column>
+
+		<column name="companyId" type="long"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="modifiedBy" type="long"></column>
+		<column name="createdDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<!-- Finder methods -->
+		<finder name="ProductId" return-type="Collection"
+			unique="false">
+			<finder-column name="productId" />
+		</finder>
+
+		<finder name="ProductName" return-type="Collection"
+			unique="false">
+			<finder-column name="productName" />
+		</finder>
+
+		<finder name="SubProductId" return-type="Collection"
+			unique="false">
+			<finder-column name="subProductId" />
+		</finder>
+		
+		<finder name="SubProductName" return-type="Collection"
+			unique="false">
+			<finder-column name="subProductName" />
+		</finder>
+
+		<finder name="ProductIdAndSubProductId" return-type="SPSiteSetup"
+			unique="true">
+			<finder-column name="productId" />
+			<finder-column name="subProductId" />
+		</finder>
+
+		<finder name="VirtualHostId" return-type="Collection"
+			unique="false">
+			<finder-column name="virtualHostId" />
+		</finder>
+
+		<finder name="BackOfficeVirtualHostId" return-type="Collection"
+			unique="false">
+			<finder-column name="backOfficeVirtualHostId" />
+		</finder>
+		
+	</entity>
+	
+	<entity name="SPUserTypeConfig" local-service="true" remote-service="false"
+		uuid="true" uuid-accessor="true" table="SPUserConfig">
+		<column name="spUserTypeConfigId" type="long" primary="true"></column>
+		<column name="userType" type="String"></column>
+		<column name="userTypeId" type="long"></column>
+		<column name="virtualHostId" type="long"></column>
+		<column name="declarationId" type="long"></column>
+		<column name="declarationYearly" type="boolean"></column>
+		<column name="declarationFixedDate" type="Date"></column>
+		<column name="pdpaId" type="long"></column>
+		<column name="accountCreationTemplateName" type="String"></column>
+		<column name="welcomeTemplateName" type="String"></column>
+		<column name="passwordChangeTemplateName" type="String"></column>
+		<column name="passwordResetTemplateName" type="String"></column>
+		<column name="emailVerificationTemplateName" type="String"></column>
+		<column name="defauleRoleIds" type="String"></column>
+		<column name="validations" type="String"></column>
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+		
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		
+		<column name="createdBy" type="long"></column>
+		<column name="modifiedBy" type="long"></column>
+		<column name="createdDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<finder name="UserTypeAndVirtualHostId" return-type="SPUserTypeConfig"
+			unique="true">
+			<finder-column name="userType" />
+			<finder-column name="virtualHostId" />
+		</finder>
+		
+		<finder name="UserTypeIdAndVirtualHostId" return-type="SPUserTypeConfig"
+			unique="true">
+			<finder-column name="userTypeId" />
+			<finder-column name="virtualHostId" />
+		</finder>
+		
+		<finder name="VirtualHostId" return-type="Collection"
+			unique="false">
+			<finder-column name="virtualHostId" />
+		</finder>
+		
+		<finder name="UserTypeId" return-type="Collection"
+			unique="false">
+			<finder-column name="userTypeId" />
+		</finder>
+		
+	</entity>
+			
+	<entity name="SPUserType" local-service="true" remote-service="true"
+		uuid="true" uuid-accessor="true" table="SPUserType">
+		<!-- PK fields -->
+
+		<column name="spUserTypeId" type="long" primary="true"></column>
+		
+		<column name="spSiteId" type="long"></column>
+		
+		<column name="userId" type="long"></column>
+		<column name="userTypeId" type="long"></column>
+		<column name="userStatusId" type="long"></column>
+		
+		<column name="declarationCompleted" type="boolean"></column>
+		<column name="declarationDate" type="long"></column>
+		<column name="declarationStorageId" type="long"></column>
+		
+		<column name="pdpaCompleted" type="boolean"></column>
+		<column name="pdpaCompletionDate" type="long"></column>
+		
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+		
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+
+		<column name="createdBy" type="long"></column>
+		<column name="modifiedBy" type="long"></column>
+		<column name="createdDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<!-- Finder methods -->
+		<finder name="SpSiteId" return-type="Collection"
+			unique="false">
+			<finder-column name="spSiteId" />
+		</finder>
+		
+		<finder name="SpSiteIdAndUserIdAndUserTypeId" return-type="SPUserType"
+			unique="true">
+			<finder-column name="spSiteId" />
+			<finder-column name="userId" />
+			<finder-column name="userTypeId" />
+		</finder>		
+		
+		<finder name="SpSiteIdAndUserId" return-type="Collection"
+			unique="false">
+			<finder-column name="spSiteId" />
+			<finder-column name="userId" />
+		</finder>	
+		
+		<finder name="SpSiteIdAndUserTypeId" return-type="Collection"
+			unique="false">
+			<finder-column name="spSiteId" />
+			<finder-column name="userTypeId" />
+		</finder>	
+		
+	</entity>	
+	
+	<entity name="SPSite" local-service="true" remote-service="false"
+		uuid="true" uuid-accessor="true" table="SPSite">
+
+		<!-- PK fields -->
+
+		<column name="spSiteId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<!-- table fields -->
+		<column name="virtualHostId" type="long"></column>
+		<column name="layoutSetId" type="long"></column>
+		<column name="authAccessId" type="long"></column>
+		<column name="loginType" type="long"></column>
+		<column name="password" type="String"></column>
+        <column name="active" type="boolean"></column>
+		        
+        <finder name="UserId" return-type="Collection">
+            <finder-column name="userId"></finder-column>
+        </finder>
+        <finder name="UserIdAndVirtualHostId" return-type="Collection">
+            <finder-column name="userId"></finder-column>
+            <finder-column name="virtualHostId"></finder-column>
+        </finder>
+        <finder name="UserIdAndAuthAccessId" return-type="Collection">
+            <finder-column name="userId"></finder-column>
+            <finder-column name="authAccessId"></finder-column>
+        </finder>
+	</entity>
+
+	<exceptions>
+		<exception>KeyNotFound</exception>
+		<exception>MPGrpServiceException</exception>
+		<exception>MembershipSubscriptionException</exception>
+		<exception>PromotionCodeNotMatch</exception>
+		<exception>PromotionCodePeriod</exception>
+		<exception>NoPromotionCodeForMembership</exception>
+		<exception>ServiceComponentsException</exception> 
+	</exceptions>
+
+</service-builder>

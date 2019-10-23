@@ -1,0 +1,258 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.mainWapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 0;
+  box-sizing: border-box;
+  display: flex;
+  background-color: #ebeff3; }
+
+.WizStepResult {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0px 40px 0px; }
+
+.wizardTracker {
+  width: 20%;
+  height: auto;
+  overflow-y: hidden; }
+  .wizardTracker:before {
+    content: '';
+    display: none;
+    position: absolute;
+    left: 22px;
+    top: 17px;
+    margin-left: 0;
+    background-color: #d5ddf2;
+    height: 50px;
+    width: 1px; }
+
+.wizard-progress {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* table-layout: fixed; */
+  flex-direction: column;
+  position: relative;
+  padding: 0px;
+  background-image: linear-gradient(to left, #f3f5f8, #f8fafd);
+  overflow-y: auto; }
+  .wizard-progress .step {
+    display: flex;
+    /* text-align: center; */
+    /* vertical-align: top; */
+    /* overflow: visible; */
+    position: relative;
+    font-size: 14px;
+    color: #FFF;
+    height: auto;
+    font-weight: 400; }
+    .wizard-progress .step:not(:last-child):before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 22px;
+      top: 17px;
+      margin-left: 0;
+      background-color: #d5ddf2;
+      height: 50px;
+      width: 1px; }
+    .wizard-progress .step a {
+      line-height: normal;
+      text-decoration: none;
+      width: 100%;
+      padding: 15px 15px;
+      z-index: 1; }
+      .wizard-progress .step a:hover {
+        text-decoration: none; }
+        .wizard-progress .step a:hover .wizardstepTitleprog {
+          text-decoration: none; }
+      .wizard-progress .step a .wizardstepTitleprog {
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.2px;
+        color: #bcc8ec;
+        margin-top: -18px;
+        margin-left: 25px;
+        transition: all 0.5s ease; }
+      .wizard-progress .step a .node {
+        display: inline-block;
+        border: 2px solid #d5ddf2;
+        background-color: #fff;
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        z-index: 1; }
+      .wizard-progress .step a.complete .wizardstepTitleprog {
+        color: #374c65; }
+      .wizard-progress .step a.complete .node {
+        border-color: #fff;
+        background-color: #ffffff;
+        color: #40bf45;
+        text-align: center; }
+        .wizard-progress .step a.complete .node:before {
+          font-family: FontAwesome;
+          content: "\f00c";
+          margin-left: 0px;
+          font-size: 12px;
+          font-weight: 400;
+          vertical-align: top; }
+      .wizard-progress .step a.current-step {
+        background-color: #fff4dc; }
+      .wizard-progress .step a.in-progress .node {
+        border-color: #fff124;
+        background-color: #ffd724; }
+      .wizard-progress .step a.in-progress .wizardstepTitleprog {
+        color: #0f349f; }
+      .wizard-progress .step a.active-progress {
+        background-color: #fff4dc; }
+        .wizard-progress .step a.active-progress .node {
+          border-color: #fff124;
+          background-color: #ffd724; }
+        .wizard-progress .step a.active-progress .wizardstepTitleprog {
+          color: #0f349f; }
+
+.aui .WizStepResult .container {
+  width: 100%;
+  padding: 0 !important; }
+.aui .WizStepResult .newPortlets .formContainer .border.panel .panel-heading {
+  margin-top: 0; }
+.aui .WizStepResult .newPortlets .formio-form {
+  padding: 0; }
+
+.aui .admin .WizStepResult .newPortlets {
+  margin-top: 0; }
+
+.aui .WizStepResult .newPortlets .formContainer .border.panel {
+  border: 0;
+  margin-bottom: 0; }
+
+/** form alignment **/
+.buton-centerAlign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px 10px; }
+
+.dateColumns div.input-group {
+  display: inline-flex; }
+
+.dateColumns label:first-child {
+  padding-bottom: 0 !important;
+  margin-bottom: -8px; }
+
+.dateColumns .input-group label {
+  margin-bottom: 6px; }
+
+.Enrollment-formfield label, .SearchBar-Container label, .enrollmentContainer .enrollmentRow label {
+  padding: 5px 5px 5px 0 !important; }
+
+.uploadFilesDisplay div ul li:nth-child(2) {
+  display: inline-flex;
+  width: 100%; }
+
+.uploadFilesDisplay div ul li:nth-child(2) div {
+  display: inline-flex;
+  padding-right: 0 !important; }
+
+.glyphicon {
+  top: 13px; }
+
+.uploadFilesDisplay div ul li:nth-child(1) {
+  display: none; }
+
+.uploadFilesDisplay {
+  margin-bottom: 10px; }
+
+.buttonCustomWidth {
+  text-align: right; }
+
+.aui .newPortlets .formContainer .formio-component-datetime .glyphicon.glyphicon-calendar {
+  top: 45px !important; }
+
+.requiredIcon h4::after {
+  content: "*";
+  color: red;
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 5px; }
+
+.hideRequiredIcon .field-required::after {
+  content: ""; }
+
+.hideRequiredIcon {
+  margin-bottom: 10px; }
+
+.hideRequiredIcon.marginBottom {
+  margin-bottom: 30px; }
+
+.formio-collapse-icon {
+  cursor: pointer;
+  color: #fff !important;
+  font-size: 0.5em;
+  border: 0 !important;
+  border-radius: 8px !important;
+  vertical-align: middle !important;
+  margin-right: 4px;
+  margin-top: 1px;
+  float: right;
+  width: 17px;
+  background: #2d4eab !important;
+  height: 16px; }
+
+.aui .glyphicon-plus::before {
+  content: "+" !important;
+  padding: 1px !important;
+  font-size: 8px !important; }
+
+.glyphicon.glyphicon-minus.formio-collapse-icon::after {
+  content: "\2212";
+  font-size: 8px;
+  padding: 0px !important; }
+
+.aui .newPortlets {
+  margin-top: 17px; }
+
+.aui .WizStepResult .newPortlets .formContainer .border.panel {
+  margin-bottom: 8px; }
+
+.enrollmentRow .mainWapper {
+  min-height: 600px; }
+
+.aui .rightSide {
+  min-height: 700px; }
+
+.enrollmentContainer .enrollmentRow .has-float-label.marginTop30 {
+  margin-top: 15%;
+  text-align: center; }
+
+.enrollmentContainer .enrollmentRow .has-float-label button.choose-btn, .enrollmentContainer .enrollmentRow .has-float-label button.choose-btn:hover, #exitButton button, #exitButton button:hover {
+  background: #2f4fae !important;
+  border-color: #2f4fae !important;
+  padding: 15px 20px !important;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 12pt !important;
+  font-weight: 700 !important;
+  border-radius: 3px !important;
+  text-transform: uppercase; }
+
+.termsAndConditionsTable table tr:nth-child(5) td .formio-errors {
+  margin-top: 24px; }
+
+.termsAndConditionsTable table tr:nth-child(5) td {
+  margin-bottom: 16px; }
+
+.offlinePaymentConfirmationButton {
+  margin-top: 20px;
+  text-align: center; }
+
+/*# sourceMappingURL=wizard-step.css.map */

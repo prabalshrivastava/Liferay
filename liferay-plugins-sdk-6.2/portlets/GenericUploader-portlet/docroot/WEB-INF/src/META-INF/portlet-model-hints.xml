@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.genericuploader.model.GUUploadLog">
+		<field name="SPGUUploadLogId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="successCount" type="int" />
+		<field name="errorCount" type="int" />
+		<field name="startTime" type="Date" />
+		<field name="endTime" type="Date" />
+		<field name="uploadedFileEntryId" type="long" />
+		<field name="errorFileEntryId" type="long" />
+		<field name="errors" type="String" />
+		<field name="msgs" type="String" />
+		<field name="status" type="String" />
+	</model>
+</model-hints>

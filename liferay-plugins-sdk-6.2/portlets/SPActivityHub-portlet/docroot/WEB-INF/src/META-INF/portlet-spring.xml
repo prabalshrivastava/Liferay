@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.service.ConversationLocalService" class="com.sambaash.platform.srv.service.impl.ConversationLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.ConversationPersistence" class="com.sambaash.platform.srv.service.persistence.ConversationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.ConversationUserLocalService" class="com.sambaash.platform.srv.service.impl.ConversationUserLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.ConversationUserPersistence" class="com.sambaash.platform.srv.service.persistence.ConversationUserPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.LogActivityLocalService" class="com.sambaash.platform.srv.service.impl.LogActivityLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.LogActivityPersistence" class="com.sambaash.platform.srv.service.persistence.LogActivityPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.NoteLocalService" class="com.sambaash.platform.srv.service.impl.NoteLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.NotePersistence" class="com.sambaash.platform.srv.service.persistence.NotePersistenceImpl" parent="basePersistence" />
+</beans>

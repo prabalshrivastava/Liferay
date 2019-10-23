@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder
+	package-path="com.sambaash.platform.srv.genericuploader">
+	<author>nareshchebolu</author>
+	<namespace>genericuploader</namespace>
+
+	<entity name="GUUploadLog" local-service="true" table="SPGUUploadLog">
+
+		<!-- PK fields -->
+
+		<column name="SPGUUploadLogId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="successCount" type="int" />
+		<column name="errorCount" type="int" />
+		<column name="startTime" type="Date" />
+		<column name="endTime" type="Date" />
+		<column name="uploadedFileEntryId" type="long" />
+		<column name="errorFileEntryId" type="long" />
+		<column name="errors" type="String" />
+		<column name="msgs" type="String" />
+		<column name="status" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="modifiedDate" />
+		</order>
+	</entity>
+</service-builder>

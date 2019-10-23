@@ -1,0 +1,7 @@
+#myTable td {
+    padding: 20px 5px 20px 15px !important;
+    text-align: left;
+}
+#myTable {
+	width: 100%;
+}

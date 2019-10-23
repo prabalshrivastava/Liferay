@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.sprating">
+	<author>harini</author>
+	<namespace>SPRating</namespace>
+
+	<entity name="RatingAttr" table="SPRatingAttr" local-service="true"
+		remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spRatingAttrId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="ratingComponentId" type="long" />
+		<column name="name" type="String" />
+		<column name="weight" type="double" />
+		<column name="visible" type="boolean" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="name" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="RatingComponentId_GetVisibleOnly" return-type="Collection"
+			where="visible=1">
+			<finder-column name="ratingComponentId" />
+		</finder>
+		<finder name="ratingComponentId" return-type="Collection">
+			<finder-column name="ratingComponentId" />
+		</finder>
+		<finder name="NameRatingComponentId" return-type="Collection">
+			<finder-column name="name" />
+			<finder-column name="ratingComponentId" />
+		</finder>
+
+	</entity>
+	<entity name="AttrRate" table="SPAttrRate" local-service="true"
+		remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spAttrRateId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="objId" type="String" />
+		<column name="classNameId" type="long" />
+		<column name="ratingAttrId" type="long" />
+		<column name="value" type="double" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="value" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="UserIdClassNameIdObjId" return-type="Collection">
+			<finder-column name="userId" />
+			<finder-column name="classNameId" />
+			<finder-column name="objId" />
+		</finder>
+		<finder name="UserIdClassNameIdRatingAttrIdObjId" return-type="AttrRate">
+			<finder-column name="userId" />
+			<finder-column name="classNameId" />
+			<finder-column name="ratingAttrId" />
+			<finder-column name="objId" />
+		</finder>
+		<finder name="UserIdRatingAttrIdObjId" return-type="AttrRate">
+			<finder-column name="userId" />
+			<finder-column name="ratingAttrId" />
+			<finder-column name="objId" />
+		</finder>
+		<finder name="RatingAttrIdObjId" return-type="Collection">
+			<finder-column name="ratingAttrId" />
+			<finder-column name="objId" />
+		</finder>
+		<finder name="RatingAttrId" return-type="Collection">
+			<finder-column name="ratingAttrId" />
+		</finder>
+	</entity>
+	<entity name="RatingComponent" table="SPRatingComponent"
+		local-service="true" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spRatingComponentId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="name" type="String" />
+		<column name="classNameId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="name" />
+		</order>
+		<finder name="Name" return-type="Collection">
+			<finder-column name="name" case-sensitive="false" />
+		</finder>
+	</entity>
+
+</service-builder>

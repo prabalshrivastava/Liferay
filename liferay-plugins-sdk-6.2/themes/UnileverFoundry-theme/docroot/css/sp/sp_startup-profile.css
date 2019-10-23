@@ -1,0 +1,1477 @@
+/** profile_form_navigation -- additional text **/
+/** sp_custom.scss **/
+/** main wrapper bg color -- declared as variable in sp_custom.scss **/
+/** main navigation list bg & on hover color **/
+/** signed in menu list on hover bg color & aui-dialog - header bg color **/
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** profile_form_navigation -- additional text **/
+/** sp_custom.scss **/
+/** main wrapper bg color -- declared as variable in sp_custom.scss **/
+/** main navigation list bg & on hover color **/
+/** signed in menu list on hover bg color & aui-dialog - header bg color **/
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** SP Mixins **/
+.hqWrap {
+  border: 1px solid #B0B0B0; }
+
+.aui {
+  /** SP-PROFILE **/
+  /* .startuplisting-portlet this should be in theme*/
+  /** SP-RATINGS **/
+  /** END SP-RATINGS **/
+  /** Drag Drop **/
+  /** Dashboard **/
+  /** End Dashboard **/ }
+  .aui .startuplisting-portlet {
+    max-width: 1280px;
+    display: block;
+    padding: 0 30px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+  .aui .startup-profiles .table-data {
+    font-size: 11pt;
+    font-weight: 400; }
+  .aui .manage-startup-profile-portlet {
+    margin: 0 auto; }
+    .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view {
+      /* only for startup display page.*/ }
+      .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .sp_ratings .ratingsSection_wrap {
+        background: none;
+        border: none;
+        border-radius: initial; }
+        .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .sp_ratings .ratingsSection_wrap .rs_container .rs_ave {
+          background: none; }
+          .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .rs_link a {
+            text-decoration: none; }
+          .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .aveRating.stars ul li {
+            zoom: 0.8; }
+          .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .rs_cta {
+            background: none;
+            border: none;
+            border-left: 1px solid;
+            font-size: 9pt;
+            text-transform: uppercase; }
+          .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .sp_ratings .ratingsSection_wrap .rs_container .rs_ave span.aveValue {
+            display: none; }
+          .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .ratings-pop-wrap .ratings-pop-content a:hover {
+            color: #0085ca; }
+      .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .ratings-pop-wrap {
+        background: rgba(0, 0, 0, 0.6); }
+        .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .ratings-pop-wrap .ratings-pop-content {
+          color: #272727; }
+          .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .ratings-pop-wrap .ratings-pop-content .ratings-pop-item {
+            text-align: left; }
+            .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .ratings-pop-wrap .ratings-pop-content .ratings-pop-item span span {
+              color: #555555;
+              font-size: 11.25pt;
+              font-weight: 400; }
+        .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .ratings-pop-wrap .rating-content a {
+          zoom: 1.6; }
+      .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .header-cta-band {
+        color: #ffffff;
+        background: #0085ca; }
+      .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .sp_tab_buttons {
+        font-size: 10pt; }
+        .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .sp_tab_buttons li:hover {
+          background: none;
+          font-weight: 600; }
+        .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .sp_tab_buttons li {
+          border-bottom: none;
+          font-size: 11.25pt;
+          font-weight: 600; }
+        .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .sp_tab_buttons li.active {
+          border-bottom: 0;
+          font-weight: 600;
+          font-size: 11.25pt;
+          font-weight: 600;
+          color: #0085ca; }
+        .aui .manage-startup-profile-portlet .sp_profile.sp_profile_view .sp_tab_buttons li.active:after {
+          content: "";
+          border: solid;
+          border-color: #393939 transparent;
+          border-width: 11px 11px 0 11px;
+          z-index: 1; }
+    .aui .manage-startup-profile-portlet .result_wrapper {
+      zoom: 1;
+      vertical-align: middle; }
+    .aui .manage-startup-profile-portlet .control-group .form-validator-stack {
+      font-size: 9pt; }
+  .aui .sp_tab_buttons {
+    font-size: 10pt; }
+    .aui .sp_tab_buttons li:hover {
+      background-color: #1e8bc3;
+      font-weight: 400;
+      color: #ffffff; }
+    .aui .sp_tab_buttons li {
+      border-bottom: 2px solid #dbe6ee;
+      background-color: #f2f4f6;
+      text-align: center;
+      cursor: pointer; }
+    .aui .sp_tab_buttons li.active {
+      background-color: #1e8bc3;
+      border-bottom: 2px solid #dbe6ee;
+      color: #ffffff; }
+  .aui .sp_tabs .sp_tab.active {
+    font-size: 18pt; }
+  .aui .sp_tabs .sp_tab .fileEntry {
+    font-size: 11pt; }
+    .aui .sp_tabs .sp_tab .fileEntry .fileEntryImg img {
+      border: 1px solid #bfbfbf; }
+  .aui .file-uploader {
+    font-size: 10pt; }
+  .aui .sp_profile .profile_avatar_wrap {
+    text-align: left; }
+    .aui .sp_profile .profile_avatar_wrap * {
+      -webkit-transition: all 0.7s ease-in-out;
+      -ms-transition: all 0.7s ease-in-out;
+      -moz-transition: all 0.7s ease-in-out;
+      -o-transition: all 0.7s ease-in-out;
+      transition: all 0.7s ease-in-out; }
+    .aui .sp_profile .profile_avatar_wrap .avatar_container {
+      -webkit-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      border: 1px dashed #ccc;
+      background: #f2f2f2;
+      zoom: 1; }
+      .aui .sp_profile .profile_avatar_wrap .avatar_container.ddImage {
+        -webkit-border-radius: 0;
+        -ms-border-radius: 0;
+        -moz-border-radius: 0;
+        -o-border-radius: 0;
+        border-radius: 0;
+        -webkit-box-shadow: 0;
+        -ms-box-shadow: 0;
+        -moz-box-shadow: 0;
+        -o-box-shadow: 0;
+        box-shadow: 0;
+        text-align: center; }
+        .aui .sp_profile .profile_avatar_wrap .avatar_container.ddImage .avatar_cta {
+          font-size: 0; }
+          .aui .sp_profile .profile_avatar_wrap .avatar_container.ddImage .avatar_cta input.avatarCTA {
+            zoom: 1;
+            text-align: center;
+            color: #ffffff;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: 0;
+            border-bottom: 3px solid #30a1f1 !important;
+            font-size: 10pt;
+            font-weight: 400; }
+            .aui .sp_profile .profile_avatar_wrap .avatar_container.ddImage .avatar_cta input.avatarCTA[type="button"].avatar_save {
+              background: #4dacf1 !important;
+              border-bottom: 3px solid #30a1f1 !important; }
+            .aui .sp_profile .profile_avatar_wrap .avatar_container.ddImage .avatar_cta input.avatarCTA[type="cancel"].avatar_cancel {
+              background: #8b4d20 !important;
+              border-bottom: 3px solid #8b3c20 !important; }
+      .aui .sp_profile .profile_avatar_wrap .avatar_container:before {
+        content: " ";
+        z-index: -1;
+        border: 4px solid #ffffff;
+        -webkit-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%; }
+  .aui .sp_profile section.head {
+    text-align: center;
+    font-weight: 300; }
+    .aui .sp_profile section.head .headText {
+      line-height: 18pt; }
+      .aui .sp_profile section.head .headText span {
+        line-height: 30pt; }
+    .aui .sp_profile section.head .cta_wrap {
+      font-size: 0; }
+      .aui .sp_profile section.head .cta_wrap .cta_item {
+        zoom: 1; }
+        .aui .sp_profile section.head .cta_wrap .cta_item a {
+          text-align: center;
+          font-size: 14pt;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: #ffffff;
+          -webkit-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -o-border-radius: 10px;
+          border-radius: 10px;
+          cursor: pointer;
+          -webkit-transition: all ease-in-out 0.3s;
+          -ms-transition: all ease-in-out 0.3s;
+          -moz-transition: all ease-in-out 0.3s;
+          -o-transition: all ease-in-out 0.3s;
+          transition: all ease-in-out 0.3s; }
+          .aui .sp_profile section.head .cta_wrap .cta_item a span {
+            color: #ffffff;
+            font-size: inherit;
+            zoom: 1;
+            vertical-align: middle; }
+          .aui .sp_profile section.head .cta_wrap .cta_item a i {
+            zoom: 1;
+            vertical-align: middle; }
+        .aui .sp_profile section.head .cta_wrap .cta_item .cta_item_desc {
+          font-size: 10pt;
+          font-style: italic;
+          color: #333333; }
+      .aui .sp_profile section.head .cta_wrap .cta_item.active a {
+        background: #4dacf1;
+        border-bottom: 3px solid #30a1f1; }
+      .aui .sp_profile section.head .cta_wrap .sep_line {
+        background: #D0D0D0; }
+        .aui .sp_profile section.head .cta_wrap .sep_line span {
+          background: #D0D0D0;
+          -webkit-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          overflow: hidden;
+          font-size: 14pt;
+          color: #ffffff;
+          text-transform: uppercase; }
+  .aui .sp_profile section.crunchbaseSelectList {
+    text-align: center;
+    background: #ffffff; }
+    .aui .sp_profile section.crunchbaseSelectList input {
+      -webkit-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      zoom: 1;
+      font-size: 10pt;
+      letter-spacing: 1px;
+      font-family: "DINPro"; }
+  .aui .sp_profile section.profile_content input[type="Button"][disabled] {
+    cursor: not-allowed;
+    background: #f2f2f2; }
+  .aui .sp_profile section.profile_content .profile_forms_wrap {
+    font-size: 0;
+    text-align: center; }
+    .aui .sp_profile section.profile_content .profile_forms_wrap .page_headTitle {
+      text-align: center;
+      opacity: 0; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .page_headTitle i {
+        zoom: 1;
+        vertical-align: middle;
+        line-height: 0; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .page_headTitle span {
+        zoom: 1;
+        font-size: 24pt;
+        vertical-align: middle;
+        text-transform: uppercase; }
+    .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation {
+      zoom: 1;
+      vertical-align: top;
+      z-index: 99;
+      -webkit-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: none;
+      transition: none;
+      font-size: 12pt;
+      border: solid 1px #dbe6ee;
+      border-radius: 5px; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation .formNavTitle {
+        padding: 14px 0 14px 26px;
+        font-weight: 600;
+        color: #606060;
+        text-align: left;
+        background-image: linear-gradient(to bottom, #ffffff, #f3f5f8);
+        border-bottom: solid 1px #dbe6ee; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul {
+        background-color: #ffffff; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li, .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li h2 {
+          text-align: left;
+          font-size: 9pt !important;
+          color: #333333;
+          font-weight: 600 !important;
+          cursor: pointer; }
+          .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li span, .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li h2 span {
+            zoom: 1;
+            vertical-align: middle;
+            line-height: normal;
+            text-align: left;
+            color: #333333;
+            -webkit-transition: all ease-in-out 0.2s;
+            -ms-transition: all ease-in-out 0.2s;
+            -moz-transition: all ease-in-out 0.2s;
+            -o-transition: all ease-in-out 0.2s;
+            transition: all ease-in-out 0.2s;
+            line-height: 16px; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li:hover span {
+          color: #333333; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li:hover span h2 {
+          color: #333333; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li.formDone span::after {
+          content: url(/StartupProfile-portlet/images/checkIcon_20.png);
+          zoom: 1;
+          vertical-align: middle; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li.active span {
+          color: #1a5aa5;
+          font-weight: bold; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li.active span::after {
+          ontent: '';
+          color: #1a5aa5;
+          font-size: 12pt;
+          zoom: 1;
+          vertical-align: middle;
+          line-height: 20px;
+          background: url(@theme_image_path@/startup-profile/right-arrow.svg);
+          background-size: 100% 100%;
+          background-repeat: no-repeat; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li.active span h2 {
+          color: #1a5aa5;
+          font-weight: bold; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li.active span h2::after {
+          ontent: '';
+          color: #1a5aa5;
+          font-size: 12pt;
+          zoom: 1;
+          vertical-align: middle;
+          line-height: 20px;
+          background: url(@theme_image_path@/startup-profile/right-arrow.svg);
+          background-size: 100% 100%;
+          background-repeat: no-repeat; }
+    .aui .sp_profile section.profile_content .profile_forms_wrap .ie .profile_form_navigation {
+      zoom: 1;
+      vertical-align: top;
+      z-index: 99;
+      -webkit-transition: none;
+      transition: none;
+      font-size: 12pt;
+      background-color: #ffffff;
+      border: solid 1px #dbe6ee; }
+    .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form {
+      zoom: 1;
+      vertical-align: top;
+      font-size: 0;
+      text-align: left;
+      background-color: #ffffff;
+      border: solid 1px #dbe6ee;
+      border-radius: 5px; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .formTitle {
+        border-bottom: 1px solid #B0B0B0;
+        font-size: 16pt;
+        font-weight: 500;
+        color: #555555;
+        text-transform: uppercase; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .formSubTitle {
+        border-bottom: none;
+        position: relative; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .formSubTitle span {
+          zoom: 1;
+          font-size: 11pt;
+          font-weight: 500;
+          text-align: left;
+          color: #333333;
+          text-transform: uppercase; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .aui-form-validator-error-container .aui-field-element {
+        background: none !important; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .aui-form-validator-error-container .aui-form-validator-error {
+        border-color: #E50E0E !important; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .formGroupTitle {
+        border-bottom: 1px solid #B0B0B0; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form .formGroupTitle span {
+          zoom: 1;
+          font-size: 12pt;
+          font-weight: 500;
+          text-align: left;
+          color: #333333; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form.active {
+        display: block; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formTextField,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formTextArea,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formSelect,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadio,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCTA,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formSelectField,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCheckField,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadioField {
+        zoom: 1;
+        vertical-align: top;
+        font-size: 12pt; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formTextField .form-validator-message,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formTextArea .form-validator-message,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formSelect .form-validator-message,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadio .form-validator-message,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCTA .form-validator-message,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formSelectField .form-validator-message,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCheckField .form-validator-message,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadioField .form-validator-message {
+          font-size: 7pt;
+          font-style: italic;
+          font-weight: 500; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCheckField .checkItem {
+        zoom: 1;
+        vertical-align: middle; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCheckField .checkItem label {
+          zoom: 1; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadioField .radioItem {
+        zoom: 1;
+        vertical-align: middle; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formRadioField .radioItem label {
+          zoom: 1; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formGroupfield {
+        zoom: 1;
+        vertical-align: middle;
+        font-size: 12pt; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formGroupfield .formGroupfield {
+          border: 1px solid #eee; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .formCTA {
+        text-align: center; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .fw {
+        font-size: 0; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form label,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .aui-field-label {
+        text-align: left;
+        font-weight: 500; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form input,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form textarea {
+        padding: 10px;
+        -webkit-border-radius: 2px !important;
+        -ms-border-radius: 2px !important;
+        -moz-border-radius: 2px !important;
+        -o-border-radius: 2px !important;
+        border-radius: 2px !important;
+        -webkit-transition: all ease-in-out 0.3s !important;
+        -ms-transition: all ease-in-out 0.3s !important;
+        -moz-transition: all ease-in-out 0.3s !important;
+        -o-transition: all ease-in-out 0.3s !important;
+        transition: all ease-in-out 0.3s !important;
+        font-size: 10pt !important;
+        letter-spacing: 1px !important; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form input[type="Submit"] {
+        zoom: 1;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: 0;
+        border-bottom: 3px solid #30a1f1 !important;
+        font: 10pt "DINPro" !important; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form input[type="Button"] {
+        zoom: 1;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: 0;
+        font-weight: 600;
+        border-radius: 3px !important;
+        background-image: linear-gradient(to bottom, #f4f4f4, #e5e5e5);
+        border: solid 1px #d0d0d0; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form input[type="Cancel"] {
+        zoom: 1;
+        text-align: center;
+        text-transform: uppercase;
+        border: 0;
+        cursor: pointer;
+        font: 10pt "DINPro" !important; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form input[type=text],
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form textarea {
+        -webkit-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        outline: none;
+        background: #ffffff; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form input[type=text]:focus,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form textarea:focus,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form input[type=text]:hover,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form textarea:hover {
+        box-shadow: 0px 0 0px rgba(0, 0, 0, 0.8); }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .multipleCTA {
+        zoom: 1;
+        font-size: 0;
+        text-align: right; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .multipleCTA a {
+          zoom: 1;
+          -webkit-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%;
+          border: 1px solid #0085ca;
+          color: #0085ca;
+          background: transparent;
+          font-size: 10pt;
+          line-height: 6pt;
+          text-decoration: none;
+          text-align: center;
+          cursor: pointer;
+          -webkit-transition: all 0.5s ease-in-out;
+          -ms-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .multipleCTA a:hover {
+          background: #0085ca;
+          color: #ffffff; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review input[type=text]:focus,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review textarea:focus,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled input[type=text]:focus,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled textarea:focus,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view input[type=text]:focus,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view textarea:focus {
+        box-shadow: 0 !important;
+        border: 0 !important; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review input,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review textarea,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled input,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled textarea,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view input,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view textarea {
+        -webkit-border-radius: 5px !important;
+        -ms-border-radius: 5px !important;
+        -moz-border-radius: 5px !important;
+        -o-border-radius: 5px !important;
+        border-radius: 5px !important;
+        border: 0 !important;
+        border-bottom: 1px solid #bfbfbf !important;
+        -webkit-transition: all ease-in-out 0.3s !important;
+        -ms-transition: all ease-in-out 0.3s !important;
+        -moz-transition: all ease-in-out 0.3s !important;
+        -o-transition: all ease-in-out 0.3s !important;
+        transition: all ease-in-out 0.3s !important;
+        font-size: 10pt !important;
+        letter-spacing: 1px !important; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review input:hover,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review textarea:hover,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled input:hover,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled textarea:hover,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view input:hover,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view textarea:hover {
+          box-shadow: 0 !important;
+          border: 0 !important;
+          border-bottom: 1px solid #bfbfbf !important; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review select,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled select,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view select {
+        margin: 0;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        -webkit-border-radius: 5px !important;
+        -ms-border-radius: 5px !important;
+        -moz-border-radius: 5px !important;
+        -o-border-radius: 5px !important;
+        border-radius: 5px !important;
+        font-size: 10pt !important;
+        letter-spacing: 1px !important;
+        background: transparent !important;
+        border: 0; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review input[type="Submit"],
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled input[type="Submit"],
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view input[type="Submit"] {
+        zoom: 1;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: 0; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review input[type="Button"],
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled input[type="Button"],
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view input[type="Button"] {
+        zoom: 1;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: 0; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review input[type="Cancel"],
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled input[type="Cancel"],
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view input[type="Cancel"] {
+        zoom: 1;
+        text-align: center;
+        text-transform: uppercase;
+        border: 0;
+        cursor: pointer; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review .formFields_data .form_section span.form_section_title,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled .formFields_data .form_section span.form_section_title,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view .formFields_data .form_section span.form_section_title {
+        color: #0085ca;
+        font-size: 14pt;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-bottom: 1px solid #0085ca; }
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review .formFields_data .form_section .form_section_content,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled .formFields_data .form_section .form_section_content,
+      .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view .formFields_data .form_section .form_section_content {
+        font-size: 0; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review .formFields_data .form_section .form_section_content .fieldName,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled .formFields_data .form_section .form_section_content .fieldName,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view .formFields_data .form_section .form_section_content .fieldName {
+          zoom: 1;
+          font-size: 12pt;
+          font-weight: 500;
+          color: #000000;
+          text-transform: uppercase;
+          background: #eee;
+          border-bottom: 1px solid #eee;
+          vertical-align: top; }
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_review .formFields_data .form_section .form_section_content .fieldContent,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .form_disabled .formFields_data .form_section .form_section_content .fieldContent,
+        .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form .normal_view .formFields_data .form_section .form_section_content .fieldContent {
+          zoom: 1;
+          font-size: 12pt;
+          font-weight: 300;
+          font-style: italic;
+          color: #000000;
+          border-bottom: 1px solid #eee;
+          vertical-align: top; }
+    .aui .sp_profile section.profile_content .profile_forms_wrap .profile_form.loadForm {
+      background: url("/StartupProfile-portlet/images/gears.svg");
+      background-position: center center;
+      background-repeat: no-repeat; }
+  .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form_navigation nav ul li span {
+    text-align: left; }
+  .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form {
+    vertical-align: top; }
+    .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .logoDiv-viewPage {
+      -webkit-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      border-collapse: initial; }
+      .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .logoDiv-viewPage .logoContent-viewPage {
+        line-height: 0;
+        vertical-align: middle;
+        background-color: #999; }
+    .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .formViewItem .formViewContent {
+      display: none; }
+    .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .formViewItem .formTitle {
+      cursor: pointer; }
+      .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .formViewItem .formTitle:after {
+        font-family: "Brandon Grotesque";
+        font-weight: 700;
+        content: "+";
+        font-size: 32pt;
+        line-height: 20pt;
+        color: #0085ca; }
+    .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form .form .formViewItem.active .formTitle:after {
+      zoom: 1;
+      content: "-"; }
+    .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form input[type=text],
+    .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form textarea,
+    .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form select {
+      background: #F7F7F7 !important;
+      border: 0 !important; }
+      .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form input[type=text]:hover, .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form input[type=text]:focus,
+      .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form textarea:hover,
+      .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form textarea:focus,
+      .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form select:hover,
+      .aui .sp_profile.sp_profile_view section.profile_content .profile_forms_wrap .profile_form select:focus {
+        border: 0 !important;
+        outline: none !important; }
+  .aui .tab_helpText {
+    background: #eaf3cf;
+    text-align: left; }
+    .aui .tab_helpText .icon_helpText span {
+      -webkit-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      border: 2px solid #bcd379;
+      font-weight: bold;
+      font-size: 11pt;
+      line-height: 0;
+      color: #a1bf49; }
+    .aui .tab_helpText .title_helpText span {
+      text-transform: uppercase;
+      font-size: 10pt;
+      color: #768a39; }
+    .aui .tab_helpText .content_helpText span {
+      font-size: 10pt;
+      color: #768a39; }
+    .aui .tab_helpText .arrow_helpText {
+      zoom: 1;
+      line-height: 0; }
+      .aui .tab_helpText .arrow_helpText:after {
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid #eaf3cf;
+        zoom: 1;
+        content: ""; }
+      .aui .tab_helpText .arrow_helpText:before {
+        border-top: 15px solid transparent;
+        border-left: 15px solid #eaf3cf;
+        zoom: 1;
+        content: ""; }
+  .aui .sp_ratings {
+    text-align: center; }
+    .aui .sp_ratings .ratingsSection_wrap {
+      background: #0085ca;
+      border: 1px solid #0085ca;
+      -webkit-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      zoom: 1; }
+      .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_link a {
+        text-transform: uppercase;
+        color: #0085ca;
+        text-decoration: underline;
+        font-size: 9pt; }
+      .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_cta {
+        background: rgba(255, 255, 255, 0.9);
+        border-top: 1px solid #0085ca; }
+      .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave {
+        background: rgba(255, 255, 255, 0.9);
+        text-align: center; }
+        .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave span.aveText {
+          font-size: 12pt;
+          font-weight: bold;
+          letter-spacing: 0;
+          color: #0085ca;
+          text-transform: uppercase; }
+        .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave span.aveValue {
+          font-size: 52pt;
+          line-height: 52pt;
+          color: #0085ca;
+          font-weight: 300;
+          letter-spacing: 0; }
+        .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave span.noRatingsYet {
+          font-size: 22pt;
+          line-height: 24pt;
+          color: #0085ca;
+          font-weight: 300;
+          letter-spacing: 0; }
+        .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .aveRating.stars ul li {
+          background: transparent url(../../images/rating.png) no-repeat scroll; }
+        .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .aveRating ul {
+          font-size: 0; }
+          .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .aveRating ul li {
+            zoom: 1;
+            vertical-align: middle;
+            background-position: 0 0; }
+            .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .aveRating ul li.r-on {
+              background-position: 0 -32px; }
+            .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .aveRating ul li.r-hover {
+              background-position: 0 -64px; }
+            .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .aveRating ul li.r-full {
+              background-position: 0 -32px; }
+            .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .aveRating ul li.r-half {
+              background-position: 0 -96px; }
+            .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .aveRating ul li.r-50 {
+              background-position: 0 -96px; }
+            .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .aveRating ul li.r-25 {
+              background-position: 0 -128px; }
+            .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_ave .aveRating ul li.r-75 {
+              background-position: 0 -160px; }
+      .aui .sp_ratings .ratingsSection_wrap .rs_container .rs_items {
+        background: rgba(255, 255, 255, 0.9); }
+  .aui .aui-rating .aui-rating-label-element {
+    text-align: center;
+    vertical-align: middle; }
+  .aui .aui-rating .aui-rating-element {
+    zoom: 1;
+    vertical-align: middle;
+    background: transparent url(../images/rating.png) no-repeat scroll 0 0; }
+    .aui .aui-rating .aui-rating-element.aui-rating-element-on {
+      background-position: 0 -32px; }
+    .aui .aui-rating .aui-rating-element.aui-rating-element-hover {
+      background-position: 0 -64px; }
+  .aui .ratings-pop-wrap {
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 5000; }
+    .aui .ratings-pop-wrap .closePop {
+      zoom: 1;
+      cursor: pointer; }
+    .aui .ratings-pop-wrap .ratings-pop-content {
+      zoom: 1;
+      background: #ffffff;
+      text-align: center;
+      -webkit-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+      -ms-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+      -o-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
+      .aui .ratings-pop-wrap .ratings-pop-content .ratings-pop-title {
+        font-size: 14pt;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700; }
+      .aui .ratings-pop-wrap .ratings-pop-content .ratings-pop-subtitle {
+        font-size: 10pt;
+        color: #555555;
+        font-size: 10pt;
+        font-weight: 400; }
+      .aui .ratings-pop-wrap .ratings-pop-content .ratings-pop-item {
+        zoom: 1;
+        vertical-align: middle; }
+    .aui .ratings-pop-wrap .aveRating {
+      zoom: 1;
+      vertical-align: middle; }
+  .aui .attr-def {
+    border-left: 2px solid #0085ca; }
+  .aui .show-inline {
+    zoom: 1; }
+  .aui .fd_container {
+    background: #ffffff;
+    font-size: 12pt;
+    border-collapse: initial;
+    border: 2px dashed #bfbfbf; }
+    .aui .fd_container.fd_hover {
+      border: 1px dashed #D74F4F; }
+      .aui .fd_container.fd_hover .fdWrap {
+        color: #ffffff; }
+    .aui .fd_container .fdWrap {
+      vertical-align: middle;
+      text-align: center;
+      z-index: 1;
+      font-size: 18pt;
+      text-transform: uppercase;
+      color: #999999; }
+      .aui .fd_container .fdWrap.hover {
+        box-shadow: inset 0 0px 6px 0px #909090;
+        cursor: default;
+        transition: all ease-in-out .5s;
+        -webkit-transition: all ease-in-out .5s;
+        color: white; }
+    .aui .fd_container .imageContainer {
+      z-index: 1;
+      text-align: center; }
+  .aui .display_view {
+    font-size: 0;
+    text-align: center; }
+    .aui .display_view .col_section input[type="text"],
+    .aui .display_view .col_section input[type="password"],
+    .aui .display_view .col_section input[type="file"],
+    .aui .display_view .col_section select,
+    .aui .display_view .col_section textarea,
+    .aui .display_view .col_section .textarea {
+      border: 0 !important;
+      background: none !important;
+      border-bottom: 1px solid #E4E2E2 !important; }
+      .aui .display_view .col_section input[type="text"]:hover, .aui .display_view .col_section input[type="text"]:focus,
+      .aui .display_view .col_section input[type="password"]:hover,
+      .aui .display_view .col_section input[type="password"]:focus,
+      .aui .display_view .col_section input[type="file"]:hover,
+      .aui .display_view .col_section input[type="file"]:focus,
+      .aui .display_view .col_section select:hover,
+      .aui .display_view .col_section select:focus,
+      .aui .display_view .col_section textarea:hover,
+      .aui .display_view .col_section textarea:focus,
+      .aui .display_view .col_section .textarea:hover,
+      .aui .display_view .col_section .textarea:focus {
+        border-bottom: 1px solid #E4E2E2 !important; }
+  .aui .col_section {
+    zoom: 1;
+    vertical-align: top;
+    text-align: left; }
+    .aui .col_section .col_section_title h2 {
+      font-size: 12pt;
+      font-weight: 500;
+      text-transform: none;
+      color: #555555; }
+    .aui .col_section.col_section_20 {
+      font-size: 12pt; }
+      .aui .col_section.col_section_20 .col_section_item .col_applyItem {
+        text-align: center;
+        position: relative; }
+        .aui .col_section.col_section_20 .col_section_item .col_applyItem.sepOr {
+          border-top: 1px solid #898989; }
+        .aui .col_section.col_section_20 .col_section_item .col_applyItem span {
+          font-weight: 300;
+          font-style: italic;
+          color: #000000;
+          zoom: 1;
+          font-size: 10pt; }
+        .aui .col_section.col_section_20 .col_section_item .col_applyItem a.genCTA {
+          zoom: 1;
+          -webkit-border-radius: 4px;
+          -ms-border-radius: 4px;
+          -moz-border-radius: 4px;
+          -o-border-radius: 4px;
+          border-radius: 4px; }
+          .aui .col_section.col_section_20 .col_section_item .col_applyItem a.genCTA span {
+            color: #ffffff;
+            font-style: normal;
+            text-transform: uppercase; }
+        .aui .col_section.col_section_20 .col_section_item .col_applyItem a.btn-callout span {
+          color: #ffffff;
+          font-style: normal; }
+  .aui .sepOr:before {
+    content: "OR";
+    font-size: 12pt;
+    text-transform: uppercase;
+    color: #898989;
+    background: #ffffff;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    zoom: 1;
+    vertical-align: middle; }
+  .aui #toggler {
+    background: #eee; }
+    .aui #toggler .toggler_item {
+      cursor: pointer;
+      background: #f1f1f1; }
+      .aui #toggler .toggler_item .toggler_content {
+        background: #ffffff; }
+        .aui #toggler .toggler_item .toggler_content ul {
+          font-size: 9pt; }
+          .aui #toggler .toggler_item .toggler_content ul li a {
+            color: #333333;
+            font-size: 10pt;
+            font-weight: 600; }
+            .aui #toggler .toggler_item .toggler_content ul li a:hover {
+              color: #0085ca; }
+      .aui #toggler .toggler_item span {
+        text-transform: uppercase;
+        font-size: 10pt;
+        font-weight: bold; }
+        .aui #toggler .toggler_item span b {
+          font-weight: 600; }
+      .aui #toggler .toggler_item.active {
+        background: #e2e2e2;
+        color: #333333;
+        font-weight: 600; }
+        .aui #toggler .toggler_item.active .toggler_content {
+          background: white; }
+  .aui .dockbar-ready .sp_profile_view .posFixed {
+    transition: 1s; }
+    .aui .dockbar-ready .sp_profile_view .posFixed.posFixed-scrolled {
+      transition: 0.5s; }
+  .aui .form_review input[type=text]:focus,
+  .aui .form_review textarea:focus,
+  .aui .form_disabled input[type=text]:focus,
+  .aui .form_disabled textarea:focus,
+  .aui .normal_view input[type=text]:focus,
+  .aui .normal_view textarea:focus,
+  .aui .display_view input[type=text]:focus,
+  .aui .display_view textarea:focus {
+    box-shadow: 0 !important;
+    border: 0 !important; }
+  .aui .form_review input,
+  .aui .form_review textarea,
+  .aui .form_disabled input,
+  .aui .form_disabled textarea,
+  .aui .normal_view input,
+  .aui .normal_view textarea,
+  .aui .display_view input,
+  .aui .display_view textarea {
+    -webkit-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    border-radius: 5px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #bfbfbf !important;
+    -webkit-transition: all ease-in-out 0.3s !important;
+    -ms-transition: all ease-in-out 0.3s !important;
+    -moz-transition: all ease-in-out 0.3s !important;
+    -o-transition: all ease-in-out 0.3s !important;
+    transition: all ease-in-out 0.3s !important;
+    font-size: 10pt !important;
+    letter-spacing: 1px !important; }
+    .aui .form_review input:hover,
+    .aui .form_review textarea:hover,
+    .aui .form_disabled input:hover,
+    .aui .form_disabled textarea:hover,
+    .aui .normal_view input:hover,
+    .aui .normal_view textarea:hover,
+    .aui .display_view input:hover,
+    .aui .display_view textarea:hover {
+      box-shadow: 0 !important;
+      border: 0 !important;
+      border-bottom: 1px solid #bfbfbf !important; }
+  .aui .form_review select,
+  .aui .form_disabled select,
+  .aui .normal_view select,
+  .aui .display_view select {
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    border-radius: 5px !important;
+    color: #a2a2a2;
+    font-size: 10pt !important;
+    letter-spacing: 1px !important;
+    background: transparent !important;
+    border: 0; }
+  .aui .form_review input[type="Submit"],
+  .aui .form_disabled input[type="Submit"],
+  .aui .normal_view input[type="Submit"],
+  .aui .display_view input[type="Submit"] {
+    zoom: 1;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 0; }
+  .aui .form_review input[type="Button"],
+  .aui .form_disabled input[type="Button"],
+  .aui .normal_view input[type="Button"],
+  .aui .display_view input[type="Button"] {
+    zoom: 1;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 0; }
+  .aui .form_review input[type="Cancel"],
+  .aui .form_disabled input[type="Cancel"],
+  .aui .normal_view input[type="Cancel"],
+  .aui .display_view input[type="Cancel"] {
+    zoom: 1;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer; }
+  .aui .form_review .formFields_data .form_section span.form_section_title,
+  .aui .form_disabled .formFields_data .form_section span.form_section_title,
+  .aui .normal_view .formFields_data .form_section span.form_section_title,
+  .aui .display_view .formFields_data .form_section span.form_section_title {
+    color: #0085ca;
+    font-size: 14pt;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 1px solid #0085ca; }
+  .aui .form_review .formFields_data .form_section .form_section_content,
+  .aui .form_disabled .formFields_data .form_section .form_section_content,
+  .aui .normal_view .formFields_data .form_section .form_section_content,
+  .aui .display_view .formFields_data .form_section .form_section_content {
+    font-size: 0; }
+    .aui .form_review .formFields_data .form_section .form_section_content .fieldName,
+    .aui .form_disabled .formFields_data .form_section .form_section_content .fieldName,
+    .aui .normal_view .formFields_data .form_section .form_section_content .fieldName,
+    .aui .display_view .formFields_data .form_section .form_section_content .fieldName {
+      zoom: 1;
+      font-size: 12pt;
+      font-weight: 500;
+      color: #000000;
+      text-transform: uppercase;
+      background: #eee;
+      border-bottom: 1px solid #eee;
+      vertical-align: top; }
+    .aui .form_review .formFields_data .form_section .form_section_content .fieldContent,
+    .aui .form_disabled .formFields_data .form_section .form_section_content .fieldContent,
+    .aui .normal_view .formFields_data .form_section .form_section_content .fieldContent,
+    .aui .display_view .formFields_data .form_section .form_section_content .fieldContent {
+      zoom: 1;
+      font-size: 12pt;
+      font-weight: 300;
+      font-style: italic;
+      color: #000000;
+      border-bottom: 1px solid #eee;
+      vertical-align: top; }
+  .aui .form_review .fd_container,
+  .aui .form_disabled .fd_container,
+  .aui .normal_view .fd_container,
+  .aui .display_view .fd_container {
+    background: transparent;
+    border: 0;
+    text-align: center; }
+    .aui .form_review .fd_container:hover,
+    .aui .form_disabled .fd_container:hover,
+    .aui .normal_view .fd_container:hover,
+    .aui .display_view .fd_container:hover {
+      background: transparent;
+      border: 0; }
+  .aui .animated .d_left {
+    -webkit-animation-delay: 0.3s;
+    -ms-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+    animation-delay: 0.3s; }
+  .aui .animated .d_right {
+    -webkit-animation-delay: 0.3s;
+    -ms-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+    animation-delay: 0.3s; }
+  .aui .animated .d_down {
+    -webkit-animation-delay: 0.4s;
+    -ms-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    animation-delay: 0.4s; }
+  .aui .sp-challenge-action-portlet .innerPage_header {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat; }
+  .aui .my-challenges-action-portlet h2 {
+    font-size: 14pt;
+    text-transform: uppercase;
+    line-height: 14pt; }
+  .aui .my-challenges-action-portlet .result_item {
+    text-align: left;
+    box-shadow: none;
+    border-bottom: 1px solid #eee;
+    background: #f1f1f1; }
+    .aui .my-challenges-action-portlet .result_item figure,
+    .aui .my-challenges-action-portlet .result_item .result_item_image {
+      zoom: 1; }
+    .aui .my-challenges-action-portlet .result_item .result_item_title {
+      zoom: 1;
+      background: none;
+      color: #000000;
+      font-size: 12pt;
+      text-transform: none;
+      text-align: left;
+      vertical-align: top; }
+      .aui .my-challenges-action-portlet .result_item .result_item_title span {
+        font-size: 14.5pt;
+        line-height: 16pt; }
+    .aui .my-challenges-action-portlet .result_item .result_item_author {
+      zoom: 1;
+      text-transform: uppercase; }
+  .aui .my-startups-portlet .myStartups {
+    border: 1px solid #e1e1e1;
+    background: #ffffff !important; }
+  .aui .my-startups-portlet h2 {
+    font-size: 14pt;
+    text-transform: uppercase;
+    line-height: 14pt;
+    font-weight: 500; }
+  .aui .my-startups-portlet .mystartup_content {
+    font-size: 11pt; }
+    .aui .my-startups-portlet .mystartup_content li {
+      position: relative; }
+      .aui .my-startups-portlet .mystartup_content li span {
+        zoom: 1;
+        vertical-align: middle; }
+        .aui .my-startups-portlet .mystartup_content li span.startup_logo {
+          vertical-align: middle;
+          line-height: 0; }
+        .aui .my-startups-portlet .mystartup_content li span a {
+          zoom: 1;
+          vertical-align: middle;
+          line-height: 0; }
+          .aui .my-startups-portlet .mystartup_content li span a img {
+            vertical-align: middle; }
+  .aui .no_height {
+    -webkit-transition: height ease-in-out 1s;
+    -ms-transition: height ease-in-out 1s;
+    -moz-transition: height ease-in-out 1s;
+    -o-transition: height ease-in-out 1s;
+    transition: height ease-in-out 1s; }
+  .aui .w_height {
+    -webkit-transition: height ease-in-out 1s;
+    -ms-transition: height ease-in-out 1s;
+    -moz-transition: height ease-in-out 1s;
+    -o-transition: height ease-in-out 1s;
+    transition: height ease-in-out 1s; }
+  .aui .posFixed {
+    -webkit-transition: top 0.5s, bottom 0.5s; }
+  .aui .section_title {
+    font-size: 14pt;
+    line-height: 18pt;
+    font-weight: 300; }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .productDiv {
+    text-align: center; }
+
+  .infoDiv .h4 {
+    text-align: center; } }
+/**Changes Done by karthik **/
+html.aui.lp-fh .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation,
+html.aui .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation,
+html.aui.ab-us .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation {
+  background: #ffffff;
+  border: 1px solid #bfbfbf;
+  -webkit-transition: all ease-in 0.5s;
+  -ms-transition: all ease-in 0.5s;
+  -moz-transition: all ease-in 0.5s;
+  -o-transition: all ease-in 0.5s;
+  transition: all ease-in 0.5s; }
+
+.aui .sp_profile section.profile_content .profile_forms_wrap .profile_form input[type="file"] {
+  outline: none;
+  border: 1px solid #bfbfbf;
+  background: #fafafa;
+  font-size: 10pt;
+  letter-spacing: 1px;
+  color: #333333;
+  text-transform: none;
+  -webkit-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+  -ms-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+  -moz-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+  -o-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+  transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px; }
+
+/*# sourceMappingURL=sp_startup-profile.css.map */

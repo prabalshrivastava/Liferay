@@ -1,0 +1,1393 @@
+.searchFieldValueDiv{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	
+	width: 470px;
+	max-width: 470px;
+	
+	
+}
+
+@media screen and (min-width: 767px) and (max-width: 1100px) and (orientation: landscape){
+	.searchFieldValueDiv{
+		width: 400px;
+		max-width: 400px;
+	}
+}	
+
+/** added by Harini -- for sp134 & sp198 **/
+#searchContainer{
+	margin-top:20px;
+}
+
+.trade-marks-master-portlet .btn, .litigation-action-portlet .btn, .createagency-portlet .btn{
+margin-left:10px;
+}
+
+
+/** --  **/
+#dateRangeSection{
+	padding: 0 15px;
+}
+.searchFieldCriteria{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: top;
+    width: 40px;
+    text-align: right;
+    margin-top:10px;
+}
+
+#searchCriteriaRow{
+	padding: 0;
+    padding-bottom: 5px;
+}
+
+
+#portlet_CreateAgency_WAR_LegalAndContractportlet .portlet-content-container, 
+#portlet_SPClass_WAR_LegalAndContractportlet .portlet-content-container,
+#portlet_trademarksmaster_WAR_LegalAndContractportlet .portlet-content-container,
+#portlet_litigationaction_WAR_LegalAndContractportlet .portlet-content-container{
+	padding: 20px 40px;
+}
+
+.form_field_logo{
+	width: 100%;
+	text-align: left;
+	padding: 15px 0;
+	
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	
+	line-height: 30pt;
+	font-size: 30pt;
+}
+
+.form_field_logo img{
+	min-width: 100px;
+	min-height: 100px;
+}
+
+.button-input-submit, .button-input-cancel, input[type="submit"].field-input, input[type="button"].field-input, input[type="reset"].field-input{
+	
+	font-family: "Open Sans" !important;
+	font-weight: 400 !important;
+	font-size: 12pt !important;
+	color: #fff !important;
+	letter-spacing: 2px !important;
+	
+	/*text-transform: uppercase !important;*/
+	
+	padding: 10px 15px !important;
+	
+	background: #4d5d63 !important;
+	
+	border-radius: 5px !important;
+	-webkit-border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	-ms-border-radius: 5px !important;
+	
+	border: 0 !important;
+	text-shadow: none !important; 
+	
+	transition:  all ease-out .5s;
+	-webkit-transition:  all ease-out .5s;
+	-moz-transition:  all ease-out .5s;
+	-moz-transition:  all ease-out .5s;
+	-o-transition:  all ease-out .5s;
+	
+}
+
+.button-input-submit:hover,  input[type="submit"].field-input:hover, input[type="button"].field-input:hover, input[type="reset"].field-input:hover{
+	background: #63777e !important;
+}
+
+.form_CTA_submit .button-input-submit:hover{
+	background: #63777e !important;
+}
+
+.form_CTA{
+	text-align: center;
+}
+
+.form_CTA .button-submit input{
+	background: #479e55 !important;
+}
+
+
+.form_CTA .button-submit input:hover{
+	background: #5cc76e !important;
+}
+
+
+.button-input-cancel{
+	background: #6e2a3d !important;
+}
+
+.button-input-cancel:hover{
+	background: #8d3850 !important;
+}
+
+.form_CTA_submit {
+	display: inline-block;
+	*diplay: inline;
+	zoom: 1;
+}
+
+#_CreateAgency_WAR_LegalAndContractportlet_submitSearch, 
+#_SPClass_WAR_LegalAndContractportlet_submitSearch,
+#_trademarksmaster_WAR_LegalAndContractportlet_submitSearch,
+#_litigationaction_WAR_LegalAndContractportlet_submitSearch, .form_CTA_submit .button-input-submit {
+
+}
+
+#_CreateAgency_WAR_LegalAndContractportlet_submitSearch:hover,
+#_SPClass_WAR_LegalAndContractportlet_submitSearch:hover,
+#_trademarksmaster_WAR_LegalAndContractportlet_submitSearch:hover,
+#_litigationaction_WAR_LegalAndContractportlet_submitSearch:hover{
+	background: #5cc76e !important;
+}
+
+.field-input-text{
+	border: 0 !important;
+	border-radius: 5px !important;
+	background: #fff !important;
+	width: 340px !important;
+	font-family: "Open Sans" !important;
+	font-size: 12pt !important;
+	font: 12pt "Open Sans" !important;
+	text-transform: none !important;
+	padding: 5px 10px !important;
+}
+
+
+textarea.field-input-text{
+	border: 1px solid #f2f0f0 !important;
+}
+
+input[type="file"]{
+	background: #e0e0e0;
+	background-image: none !important;
+	border: 0 !important;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	
+	color: #333;
+	
+	font-size: 12pt !important;
+	font-family: "Open Sans" !important;
+	
+	/*text-transform: uppercase !important;*/
+	padding: 10px !important;
+	
+	font: 12pt "Open Sans" !important ;
+}
+
+
+
+.field-input-text#_CreateAgency_WAR_LegalAndContractportlet_searchValue, 
+.field-input-text#_SPClass_WAR_LegalAndContractportlet_searchValue,
+.field-input-text#_trademarksmaster_WAR_LegalAndContractportlet_searchValue,
+.field-input-text#_litigationaction_WAR_LegalAndContractportlet_searchValue{
+	border: 0 !important;
+	border-radius: 5px !important;
+	background: #fff !important;
+	width: 340px !important;
+	
+	font-family: "Open Sans" !important;
+	font-size: 12pt !important;
+	font: 12pt "Open Sans" !important ;
+	
+	
+	padding: 5px 10px !important;
+}
+
+.field-label{
+	/*text-transform: uppercase;*/
+	font-family: "Open Sans";
+	letter-spacing: 1px;
+	font-size: 14pt;
+	margin: 10px 0 !important;
+	color: #333;
+	font-weight: bold;
+}
+
+
+.esn_searchSection_wrap{
+	margin: 10px 0;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	
+	background: #e0e0e0;
+	
+	overflow: hidden;
+	
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+.esn_searchSection{
+	height: 0;
+	overflow: hidden;
+}
+
+.esn_searchSection_content{
+	padding: 20px;
+	font-size: 0;
+	padding-top: 0;
+}
+
+.searchSection_title{
+	padding: 0 20px;
+}
+
+.searchSection_title a{
+	text-decoration: none;
+	position: relative;
+	display: block;
+	color: #333;
+}
+
+.searchSection_title a .field-label{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+.searchSection_title a::after{
+	position: absolute;
+	top: 20%;
+	right: 0%;
+	content: '+';
+	font-weight: bold;
+	font-size: 16pt;
+}
+
+.searchSection_title a.search_clicked::after{
+	content: '-';
+}
+
+#_CreateAgency_WAR_LegalAndContractportlet_searchValue, 
+#_SPClass_WAR_LegalAndContractportlet_searchValue,
+
+#_litigationaction_WAR_LegalAndContractportlet_searchValue{
+	display: block;
+}
+
+#_trademarksmaster_WAR_LegalAndContractportlet_searchValue{
+	display: block;
+}
+
+.searchText_active{
+	display: block;
+}
+
+.esn_searchSection .field, .searchFieldDd, .searchFieldText{
+	display: inline-block;
+	*display: inline !important;
+	zoom: 1 !important;
+	
+	vertical-align: middle;
+	
+	margin: 0px 5px;
+}
+
+
+
+
+.esn_searchSection .button{
+	margin: 0px 5px;
+}
+
+#portlet_CreateAgency_WAR_LegalAndContractportlet .results-grid, 
+#portlet_SPClass_WAR_LegalAndContractportlet .results-grid,
+#portlet_trademarksmaster_WAR_LegalAndContractportlet .results-grid,
+#portlet_litigationaction_WAR_LegalAndContractportlet .results-grid{
+	
+	margin: 0 auto;
+}
+
+.results-grid{
+	width: 100%;
+}
+
+.results-header th{
+	background: #4d5d63 !important;
+	border: 1px solid #333 !important;
+	color: #fff !important;
+	padding: 10px !important;
+	font-weight: 400 !important;
+	letter-spacing: 1px !important;
+	text-align: center !important;
+	/*text-transform: uppercase !important;*/
+	font-size: 10pt !important;
+}
+.results-row td{
+	font-weight: 400 !important;
+	letter-spacing: 1px !important;
+	text-align: center !important;
+	text-transform: none !important;
+	font-size: 10pt !important;
+	padding: 10px !important;
+}
+
+.trade-marks-master-portlet .table-cell a, .createagency-portlet .table-cell a, .litigation-action-portlet .table-cell a{
+	margin: 1px;
+	padding: 4px 12px;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	
+	text-decoration: none;
+	    text-transform: uppercase;
+	background: #f1f1f1;
+	color: #fff;	
+	border: 1px solid #bfbfbf;
+    color: #333333;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+
+}
+
+.results-row td a:hover {
+background: #63777e !important;
+}
+
+.taglib-page-iterator{
+	
+}
+
+.taglib-page-iterator .search-results{
+	float: left !important;
+	font-size: 9pt !important;
+	padding: 10px 2px !important;
+	/*text-transform: uppercase !important;*/
+	
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	
+	margin: 0 auto;
+}
+
+.search-pages{
+	float: left;
+}
+
+.search-pages label, .suffix, .page-links span, .page-links a{
+	font-size: 10pt;
+	/*text-transform: uppercase;*/
+	color: #333;
+	text-decoration: none;
+	
+}
+
+.esn_multiUpTrademark .control-group, .esn_multiUpAgency .control-group, .esn_multiUpLitigation .control-group{
+	    display: inline-block;
+}
+.esn_addAgency_wrap, 
+.esn_addClass_wrap, 
+.esn_addTrademark_wrap, 
+.esn_addLitigation_wrap{
+	position: relative;
+	
+}
+
+.esn_addAgency, 
+.esn_addClass, 
+.esn_addTrademark, 
+.esn_addLitigation{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	
+	position: absolute;
+	right: 0;
+	
+}
+.esn_searchSection .esn_searchSection_content a,
+.esn_addAgency a, 
+.esn_addClass a, 
+.esn_addTrademark a, 
+.esn_addLitigation a{
+	font-family: "Open Sans"!important;
+	font-weight: 400!important;
+	font-size: 14pt!important;
+	color: #fff!important;
+	letter-spacing: 1px!important;
+	padding: 6px 13px!important;
+	background: #4d5d63!important;
+	border-radius: 5px!important;
+	-webkit-border-radius: 5px!important;
+	-moz-border-radius: 5px!important;
+	-ms-border-radius: 5px!important;
+	border: 0!important;
+	text-shadow: none!important;
+	transition: all ease-out .5s;
+	-webkit-transition: all ease-out .5s;
+	-moz-transition: all ease-out .5s;
+	-moz-transition: all ease-out .5s;
+	-o-transition: all ease-out .5s;
+}
+
+
+.esn_multiUpAgency, 
+.esn_multiUpClass, 
+.esn_multiUpTrademark, 
+.esn_multiUpLitigation{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+.esn_multiUpAgency label, 
+.esn_multiUpClass label, 
+.esn_multiUpTrademark label, 
+.esn_multiUpLitigation label{
+	display: none;
+}
+.esn_multiUpAgency .field, 
+.esn_multiUpClass .field, 
+.esn_multiUpTrademark .field, 
+.esn_multiUpLitigation .field {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	
+	vertical-align: middle;
+}
+.esn_multiUpAgency .button, 
+.esn_multiUpClass .button, 
+.esn_multiUpTrademark .button, 
+.esn_multiUpLitigation .button{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	margin: 0 5px;
+	
+	vertical-align: middle;
+}
+
+.form-validator-error-container .field-element{
+	background: url(/MenariniESN-theme/images/messages/error.png) no-repeat scroll 100% 80% !important;
+	padding-right: 20px ;
+	width: auto !important;
+}
+
+
+.form-validator-stack-error{
+	display: block;
+	font-size: 8pt;
+	font-style: italic;
+}
+
+.form_Title{
+	font-family: "Open Sans";
+	font-size: 15pt;
+	font-weight: bold;
+	
+	letter-spacing: 2px;
+	color: #000;
+	/*text-transform: uppercase;*/
+}
+
+.form_dropD	.control-group{
+		margin-bottom:8px!important;
+	}
+.form_fieldset_wrap{
+	font-size: 0;	
+}
+
+.form_field, .form_dropD, .form_calendar, .form_calendar_wrap, .form_textA{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	margin: 5px 18px;
+	vertical-align: top;	
+}	
+
+.form_calendar_wrap{
+	margin: 5px 0;
+}
+
+.form_calendar_wrap .field-label{
+	margin-top: 0 !important;
+}
+
+.form_calendar{
+	margin: 10px 18px;
+}
+
+.form_customField_wrap, .form_customList_wrap, .form_customDate_wrap{
+	display: block !important;
+
+	margin: 5px 0;
+}
+
+.form_field .field-label,
+.form_dropD .field-label,
+.form_calendar .field-label,
+.form_calendar_wrap .field-label{
+	font-size: 11pt !important;
+}
+
+.form_CTA .button{
+	margin-left: 10px;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+
+
+.form_details{
+	
+	padding: 20px;
+	width: 100%;
+	margin:0 auto;
+	
+	display: block;
+	font-size: 0;
+	
+	text-align: left;
+	
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.form_details .form_Title{
+	margin: 10px 0;
+	display: block;
+}
+
+.form_details table{
+	
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: top;
+	
+	width: 50%;
+}
+
+.form_details table tr td{
+	background: #fff;
+	color: #04848c;
+	font-family: "Open Sans";
+	font-size: 12pt;
+	/*font-style: italic;
+	text-transform: uppercase;*/
+	letter-spacing: 1px;
+	padding: 10px 15px;
+	border: 1px solid #d8d8d8;
+	
+	width: 50%;
+	
+	vertical-align: top;
+	
+}
+
+.form_details table tr td:first-child{
+	background: #ebebeb;
+	color: #333;
+	
+	font-family: "Open Sans";
+	font-size: 12pt;
+	/*text-transform: uppercase;*/
+	
+	letter-spacing: 1px;
+	
+	padding: 10px 15px;
+	font-style: normal;  
+}
+
+
+.form_filesTable{
+	display: block;
+	text-align: center;
+}
+
+.form_filesTable_details{
+	padding: 20px;
+}
+
+.form_filesTable_details #filesTable {
+	width: auto;
+	font-size: 0;
+	padding: 0px 0 20px!important;
+	display: table;
+}
+
+.form_filesTable_details #filesTable tr {
+
+	display: table-row;
+}
+
+.form_filesTable_details #filesTable td {
+	width: auto;
+	display: table-cell;
+}
+
+.form_filesTable, .forms_fileDrag_wrap{
+	padding: 0 20px;
+	margin: 20px 0;
+}
+
+#filesTable{
+	display: table;
+	width: 100%;
+	padding: 0px 20px 20px 20px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.form_field #filesTable{
+	width: 100% !important;
+}
+
+.form_filesTable .form_field{
+	display: block;
+}
+
+ #filesTable tr{
+	width: 100%;
+	display: table-row;
+	background: #fff;
+}
+
+#filesTable tbody{
+	display: table;
+	width: 100%;
+	background: #fff;
+}
+
+
+
+.filesTable_head td{
+	/*text-transform: uppercase;*/
+	background: #ebebeb;
+	border: 1px solid #d8d8d8;
+	font-size: 10pt !important;
+	letter-spacing: 1px;
+}
+
+
+#filesTable tr{
+	border-bottom: 1px solid #d8d8d8;
+}
+
+.filesTable_head{
+	border-bottom: none !important;
+}
+
+#filesTable td{
+	font-family: "Open Sans";
+	font-size: 10pt;
+	color: #333;
+	
+	width: auto;
+	
+	display: table-cell;
+	
+	text-align: left;
+	padding: 15px;
+	
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	
+	word-wrap: break-word;
+	
+	
+	
+}
+
+#filesTable td span{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#filesTable td input, #filesTable td textarea{
+	max-width: 250px !important;
+	max-height: 80px !important;
+	font-size: 10pt !important;
+}
+
+#filesTable td a{
+	padding: 5px 10px;
+	display: inline-block;
+	zoom: 1;
+	text-decoration: none;
+	background: #2f4f62;
+	color: #fff;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+
+#filesTable td a:hover{
+background: #63777e !important;
+}
+
+.form_filesTable span{
+	/*text-transform: uppercase;*/
+	font-family: "Open Sans";
+	letter-spacing: 1px;
+	font-size: 9pt;
+	margin: 10px 0 !important;
+	color: #333;
+	font-weight: bold;
+
+	
+	display: block;
+}
+
+
+#preConfAttmntsTab , #preAttmntsTab{
+	display: table;
+	width: auto;
+	padding: 20px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	
+	margin: 0 auto;
+}
+ #preConfAttmntsTab tbody, #preConfAttmntsTab tr, #preAttmntsTab tbody, #preAttmntsTab tr{
+	width: 100%;
+	display: table-row;
+	background: #fff;
+}
+
+
+
+.filesTable_head td{
+	/*text-transform: uppercase;*/
+	background: #ebebeb;
+	border: 1px solid #d8d8d8;
+}
+
+
+#preConfAttmntsTab tr, #preAttmntsTab tr{
+	border-bottom: 1px solid #d8d8d8;
+	display: table-row;
+}
+
+.filesTable_head{
+	border-bottom: none !important;
+}
+
+#preConfAttmntsTab td, #preAttmntsTab td{
+	font-family: "Open Sans";
+	font-size: 9pt;
+	color: #333;
+	
+	
+	
+	display: table-cell;
+	
+	text-align: left;
+	padding: 15px;
+	
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	
+	
+	
+}
+
+#preConfAttmntsTab td a, #preAttmntsTab td a{
+	padding: 5px 10px;
+	display: inline-block;
+	zoom: 1;
+	text-decoration: none;
+	background: #2f4f62;
+	color: #fff;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+
+#preConfAttmntsTab td a:hover, #preAttmntsTab td a:hover{
+background: #63777e !important;
+}
+
+#preConfAttmntsTab td textarea{
+	width: 100% !important;
+	height: 80px !important;
+	
+	
+}
+
+#preConfAttmntsTab td  input[type="text"], #preConfAttmntsTab td  textarea,
+#preAttmntsTab td  input[type="text"], #preAttmntsTab td  textarea{
+	font-size: 9pt !important;
+}
+
+.form_filesTab{
+	width: 90%;
+}
+
+.form_filesTab tr{
+	display: table-row;
+}
+
+.form_filesTab tr td{
+	font-size: 10pt;
+	font-family: "Open Sans";
+	font-weight: 400;
+	padding: 5px;
+	
+	display: table-cell;
+	
+}
+
+.form_filesTab tr td input, .form_filesTab tr td textarea{
+	width: 100%;
+}
+
+
+.form_textA textarea{
+	width: 360px !important;
+	height: 150px !important;
+	
+}
+
+.fileAttachedWrap{
+	display: block;
+	font-size: 0;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.fileAttachedItem{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	
+	width: 50%;
+	
+	padding: 20px;
+	
+	border-bottom: 1px solid #d9d9d9;
+}
+
+
+.fileAttachedItem:nth-child(odd){
+	background: #f9f9f9;
+}
+
+.fileAttachedItem:nth-child(even){
+	background: #eeeeee;
+}
+
+.fileAttachedItem .fileAttachedItemRow{
+	width: 100%;
+	padding: 10px 0;
+	text-align: left;
+	display: block;
+	
+	font-size: 0;
+}
+
+.fileAttachedItemRow .fileAttachedLabel, .fileAttachedItemRow .fileAttachedData{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	
+	
+	
+	font-size: 12pt;
+	
+	text-align: left;
+	
+	vertical-align: top;
+	
+	
+}
+
+.fileAttachedItemRow .fileAttachedLabel{
+	width: 35%;
+	/*text-transform: uppercase;*/
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.fileAttachedItemRow .fileAttachedData{
+	width: 65%;	
+}
+
+.fileAttachedItemRow .fileAttachedData span{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.fileAttachedItemRow .fileAttachedData .field-input-text{
+	width: 100% !important;
+	max-height: 200px;
+}
+
+
+.fileAttachedData a{
+	font-family: "Open Sans" !important;
+	font-weight: 400 !important;
+	font-size: 12pt !important;
+	color: #fff !important;
+	letter-spacing: 2px !important;
+	/*text-transform: uppercase !important;*/
+	padding: 10px 15px !important;
+	background: #6e2a3d;
+	border-radius: 5px !important;
+	-webkit-border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	-ms-border-radius: 5px !important;
+	border: 0 !important;
+	text-shadow: none !important;
+	transition: all ease-out .5s;
+	-webkit-transition: all ease-out .5s;
+	-moz-transition: all ease-out .5s;
+	-moz-transition: all ease-out .5s;
+	-o-transition: all ease-out .5s;
+	margin: 0 5px;
+}
+
+
+.classDescription{
+	width: 100%;
+	display: block;
+	padding: 20px 0;
+}
+
+.classDescription .classDescriptionLabel{
+	
+	color: #333;
+	font-family: "Open Sans";
+	font-size: 11pt;
+	text-transform: uppercase !important;
+	letter-spacing: 1px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+
+.classDescription .classDescriptionContent{
+	
+	color: #333;
+	font-family: "Open Sans";
+	font-size: 11pt;
+	letter-spacing: 1px;
+	font-style: normal;
+	
+}
+
+.forms_fileDrag_wrap table{
+	 display: table;
+width: 100%;
+padding: 0px 20px 20px 20px;
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+}
+
+.forms_fileDrag_wrap table tr{
+	width: 100%;
+	display: table-row;
+	background: #fff;
+}
+
+
+.forms_fileDrag_wrap table tr td{
+	font-family: "Open Sans";
+	font-size: 10pt;
+	color: #333;
+	width: auto;
+	display: table-cell;
+	text-align: left;
+	padding: 15px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	word-wrap: break-word;
+	
+}
+
+.forms_fileDrag_wrap table .tableHead td{
+	/*text-transform: uppercase;*/
+background: #ebebeb;
+border: 1px solid #d8d8d8;
+font-size: 12pt !important;
+letter-spacing: 1px;
+}
+
+.forms_fileDrag_wrap table td input,.forms_fileDrag_wrap table td textarea{
+	max-width: 250px !important;
+max-height: 60px !important;
+font-size: 10pt !important;
+}
+
+
+.forms_fileDrag_wrap table td a{
+	padding: 5px 10px;
+	display: inline-block;
+	zoom: 1;
+	text-decoration: none;
+	background: #2f4f62;
+	color: #fff;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+
+.forms_fileDrag_wrap table td a:hover{
+background: #63777e !important;
+}
+
+.litigation-action-portlet .form_calendar_wrap{
+	    margin: -10px 0 0 0;
+}
+
+/** Mobile **/
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+	.searchFieldValueDiv{
+		width: 100%;
+	}
+	.esn_addTrademark{
+margin-top: 10px;}
+.esn_multiUpTrademark{
+ margin-top: 15px;}
+	
+	
+	.searchFieldCriteria {
+	    display: inline-block;
+	    zoom: 1;
+	    vertical-align: top;
+	    width: 40px;
+	    text-align: right;
+	    margin-top: 10px;
+	    right: 12%!important;
+	    margin-top: -8px!important;
+	    position: absolute;
+	}
+
+	#portlet_CreateAgency_WAR_LegalAndContractportlet .portlet-content-container, 
+	#portlet_SPClass_WAR_LegalAndContractportlet .portlet-content-container,
+	#portlet_trademarksmaster_WAR_LegalAndContractportlet .portlet-content-container,
+	#portlet_litigationaction_WAR_LegalAndContractportlet .portlet-content-container{
+		padding: 10px;
+	}
+	
+	.portlet-content{
+		padding: 0;
+	}
+	
+	.results-header th, .results-row td{
+		display: none;
+	}
+	
+	.results-header th.col-1,
+	.results-header th.col-2,
+	.results-header th.last{
+		display: table-cell !important;
+	}
+	
+	.results-row td.col-1,
+	.results-row td.col-2,
+	.results-row td.last{
+		display: table-cell !important;
+	}
+	
+	.esn_addAgency, 
+	.esn_addClass,
+	.esn_addTrademark, 
+	.esn_addLitigation{
+		position: relative;
+	}
+	
+	.esn_addAgency_wrap, 
+	.esn_addClass_wrap, 
+	.esn_addTrademark_wrap, 
+	.esn_addLitigation_wrap{
+		text-align: center;
+	}
+	
+	.esn_searchSection_wrap{
+		width: 100%;
+	}
+	
+	.field-input-text{
+		width: 100% !important;
+	}
+	
+	.taglib-search-iterator-page-iterator-top{
+		text-align: center;
+	}
+	
+	.form_details_mobile{
+		display: block;
+	}
+	.form_details_desktop{
+		display: none;
+	}
+	
+	  .form_filesTable_details #filesTable{
+	width: 100%;
+}
+
+  .form_field, 
+  .form_dropD, 
+  .form_calendar, 
+  .form_calendar_wrap{
+	margin: 5px 0;
+	display: block;
+	overflow: hidden;
+}
+
+
+
+  .form_field .field-input-text{
+	width: 100% !important;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	
+}
+
+  .form_CTA .button{
+	margin: 0 5px;
+}
+
+  .form_CTA .button.button-submit{
+	margin: 0 !important;
+}
+
+  #filesTable{
+	width: 100%;
+}
+
+  #filesTable td{
+	padding: 10px;
+	
+}
+
+  .form_fileDrag{
+	display: none !important;
+}
+
+  .form_details table{
+	width: 100%;
+}
+
+  .form_filesTable{
+	padding: 10px 0;
+}
+
+  .form_filesTable table{
+	padding: 10px 0 !important;
+}
+
+  #filesTable tr td:nth-last-child(2){
+	display: none;
+}
+
+  #filesTable tr td:nth-last-child(3){
+	display: none;
+}
+
+  .forms_fileDrag_wrap table tr td:nth-last-child(2){
+	display: none;
+}
+
+  .forms_fileDrag_wrap table tr td:nth-last-child(3){
+	display: none;
+}
+
+
+  #preConfAttmntsTab ,   #preAttmntsTab{
+	display: table;
+}
+
+  #preConfAttmntsTab tr td:nth-last-child(2),   #preAttmntsTab tr td:nth-last-child(2){
+	display: none;
+}
+
+
+ #preConfAttmntsTab tr td:nth-last-child(3),   #preAttmntsTab tr td:nth-last-child(3){
+	display: none;
+}
+}
+
+
+
+.form_details_desktop{
+	display: block;
+}
+.form_details_mobile{
+	display: none;
+}
+
+
+
+.bulkUploadResultsTable{
+	max-height: 250px;
+	overflow: auto;
+	
+	
+	
+}
+
+.bulkUploadResultsTableC{
+	padding: 20px 0;
+	/*border-bottom: 1px solid #333;*/
+	margin-bottom: 30px;
+}
+
+.addclasscodetds{
+	vertical-align: top;
+	margin:15px;
+}
+
+.bulkuploadMessage{
+	padding-left:15px;
+	font-size: 10pt !important;
+}
+
+.buData{
+	width: 18%;
+	background: none;
+border: 1px solid;
+border-color: #D7D7D7 #E7E7E7;
+padding: 5px 10px;
+font-weight: 400!important;
+font-family: "Open Sans"!important;
+letter-spacing: 1px!important;
+text-align: left!important;
+text-transform: none!important;
+font-size: 10pt!important;
+padding: 10px!important;
+}
+.buHead{
+	width: 18%;
+	background: #4d5d63!important;
+	border: 1px solid #333!important;
+	color: #fff!important;
+	padding: 10px!important;
+	font-weight: bold!important;
+	font-family: "Open Sans"!important;
+	letter-spacing: 1px!important;
+	text-align: left!important;
+	font-size: 10pt!important;
+	text-transform: uppercase;
+	
+}
+
+.buheader1{
+	width: 2%;
+	text-align: center;
+	
+}
+.buheader2{
+	width: 2%;
+	text-align: center;
+}
+.buheader3{
+	width: 8%;
+	text-align: center;
+}
+.buheader4{
+	
+}
+.budata1{
+	width: 2%;
+	text-align: center;
+	
+}
+.budata2{
+	width: 2%;
+	text-align: center;
+	
+}
+.budata3{
+	width: 8%;
+	text-align: center;
+	
+}
+.budata4{
+	
+}
+
+.buTitle{
+	font-size: 15pt;
+	font-weight: bold;
+	display: block;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+
+.buRowsAdded{
+	display: block;
+	font-size: 11pt;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+}
+
+.buRowsUpdated{
+	display: block;
+	font-size: 11pt;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+}
+
+.left20 {
+	padding-left:20px;
+}
+
+.description_1 td{
+	min-width: 400px;
+}
+
+.description_1 td .classDescriptionLabel, 
+.description_1 td .classDescriptionContent{
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: middle;
+	padding: 0;
+}
+
+.form_group{
+	margin: 5px 18px;
+	display: block;
+}
+.form_details table.agencyDetailTable{
+	width: 60%;
+	
+}
+.form_details table.agencyDetailTable tr td:last-child{
+	width: 60%;
+}
+.form_details table.agencyDetailTable tr td:first-child{
+	width: 40%;
+}

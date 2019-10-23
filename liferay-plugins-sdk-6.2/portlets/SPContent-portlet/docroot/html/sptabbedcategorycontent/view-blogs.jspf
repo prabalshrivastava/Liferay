@@ -1,0 +1,43 @@
+<%@ include file="/html/sptabbedcategorycontent/init.jsp" %>
+<%@ page import="com.liferay.portal.kernel.util.GetterUtil"%>
+<%@ page import="com.sambaash.platform.util.SPHtmlUtil"%>
+
+	<!-- Blog content -->
+	<%
+		List<Document> blogContentList = (List<Document>) request.getAttribute(WebKeys.BLOG_CONTENT_LIST);
+ 	%>
+
+	<c:if test="${blogContentList != null && blogContentList.size()>0}">
+		<%
+			for (Document document: blogContentList) {
+				String urlTitle = GetterUtil.getString(document.get("urlTitle"));
+				String spBlogDetailURL = "%s/-/blogs/%s";
+				spBlogDetailURL = String.format(spBlogDetailURL, "/blog", urlTitle);
+				String title = GetterUtil.getString(document.get(Field.TITLE));
+				String logoUrl = ActionUtil.getImageUrlFromContent(document.get("description"));
+		%>
+			<div class="col">
+		        <div class="padding-row _item">         
+		            <div class="single-idea">
+		                <div class="image-section">
+		                    <img src="<%= logoUrl %>" alt="blog-image" title="blog">
+		                </div>
+		                <div class="idea-content">
+		                    <div class="small-title"><%= document.get("_ui_title") %></div>
+		                	<div class="normal-title"><%= title %></div>
+		                	<a href="<%= spBlogDetailURL %>" class="launch-button">READ MORE</a> 
+	                        <div class="accordionItem close">
+	                            <h2 class="accordionItemHeading"></h2>
+	                            <div class="accordionItemContent">
+	                                <p><%= SPHtmlUtil.shortenHtmlText(GetterUtil.getString(document.get(Field.CONTENT)),250)%></p>
+	                            </div>
+	                        </div>
+		            	</div>
+	            	</div>            
+	        	</div>				
+			</div>	
+		<%		
+			}
+			blogContentList.clear();
+		%>
+	</c:if>

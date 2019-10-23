@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.spasset.model.SPAssetEntry">
+		<field name="uuid_" type="String" />
+		<field name="spAssetEntryId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="dlFolderId" type="long" />
+		<field name="coverFileEntryId" type="long" />
+		<field name="spAssetTypeId" type="long" />
+		<field name="spAssetEntrySubType" type="String" />
+		<field name="corporateProfileUserId" type="long" />
+		<field name="classNameId" type="long" />
+		<field name="title" type="String">
+			<hint name="max-length">255</hint>
+		</field>
+		<field name="urlTitle" type="String">
+			<hint name="max-length">300</hint>
+		</field>
+		<field name="description" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="content" type="String" />
+		<field name="link" type="String" />
+		<field name="status" type="boolean" />
+		<field name="statusByUserName" type="String" />
+		<field name="type" type="String" />
+		<field name="modifiedBy" type="String" />
+		<field name="allowPingbacks" type="boolean" />
+		<field name="allowTrackbacks" type="boolean" />
+		<field name="trackbacks" type="String" />
+		<field name="permissionType" type="int" />
+		<field name="agreedToTermsOfUse" type="boolean" />
+	</model>
+	<model name="com.sambaash.platform.srv.spasset.model.SPAssetType">
+		<field name="uuid_" type="String" />
+		<field name="spAssetTypeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spAssetTypeName" type="String" />
+		<field name="status" type="boolean" />
+		<field name="modifiedBy" type="String" />
+		<field name="spAssetTypeCreateUrl" type="String" />
+		<field name="spAssetTypeDetailUrl" type="String" />
+		<field name="spAssetTypeInnerDetailUrl" type="String" />
+		<field name="requiredTermsOfUse" type="boolean" />
+		<field name="requiredLogin" type="boolean" />
+		<field name="categoryMandatory" type="boolean" />
+		<field name="notifyUponCreation" type="boolean" />
+		<field name="notificationTemplateId" type="long" />
+		<field name="allowedFileTypes" type="String">
+			<hint name="max-length">255</hint>
+		</field>
+		<field name="maxFileSize" type="int" />
+		<field name="minImageHeight" type="int" />
+		<field name="minImageWidth" type="int" />
+	</model>
+</model-hints>

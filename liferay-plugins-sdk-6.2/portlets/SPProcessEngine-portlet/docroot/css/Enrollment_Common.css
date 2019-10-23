@@ -1,0 +1,1003 @@
+.hovericon {
+  display: none; }
+
+a:hover + div.hovericon {
+  display: block; }
+
+.Pop-Action {
+  width: 154px;
+  position: absolute;
+  right: 40px;
+  z-index: 100; }
+  .Pop-Action ul {
+    display: inline-block;
+    width: 100%; }
+    .Pop-Action ul li {
+      position: relative; }
+      .Pop-Action ul li a {
+        padding: 10px 40px 10px;
+        width: 100%;
+        display: inline-block; }
+      .Pop-Action ul li img {
+        display: inline-block;
+        width: 10px;
+        position: absolute;
+        top: 50%;
+        margin-top: -5px;
+        margin-left: 20px; }
+
+.aui .popover {
+  border: none;
+  box-shadow: none; }
+
+.Notes {
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px; }
+  .Notes h6 {
+    margin: 0;
+    padding: 3px 0; }
+  .Notes p {
+    margin: 0;
+    padding: 0; }
+
+.height82 {
+  height: 82px; }
+
+.btnEn {
+  padding: 8px 10px; }
+
+.StatusIndicator {
+  width: 5px;
+  height: 5px;
+  margin: 0 auto 0 15px; }
+
+.Calendar-Icon, .SearchBar-Container .Calendar-From .Icon-calendar, .SearchBar-Container .Calendar-To .Icon-calendar {
+  width: 38px;
+  height: 40px;
+  top: 1px;
+  right: 0;
+  bottom: 0;
+  left: 1px;
+  position: absolute; }
+  .Calendar-Icon img, .SearchBar-Container .Calendar-From .Icon-calendar img, .SearchBar-Container .Calendar-To .Icon-calendar img {
+    width: 11px;
+    height: 11px;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    position: relative;
+    margin: -5px 0 0 -5px;
+    position: relative;
+    display: block; }
+
+.Search-Icon, .SearchBar-Container .Searchdiv .Icon-Search {
+  width: 38px;
+  height: 40px;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 1px;
+  position: absolute;
+  margin-bottom: 1px; }
+  .Search-Icon img, .SearchBar-Container .Searchdiv .Icon-Search img {
+    width: 11px;
+    height: 11px;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    position: relative;
+    margin: -5px 0 0 -5px;
+    position: relative;
+    display: block; }
+
+.Icon-Bg {
+  padding: 5px 9px; }
+  .Icon-Bg img {
+    width: 13px; }
+
+.Icon-right-border {
+  width: 17.8px;
+  height: 17.9px;
+  display: block;
+  right: 30px;
+  top: 50%;
+  margin-top: -8px;
+  position: absolute;
+  cursor: pointer; }
+  .Icon-right-border img {
+    width: 18px; }
+
+.Icon-Text-Right a {
+  display: block;
+  right: 20px;
+  top: 50%;
+  margin-top: -8px;
+  position: absolute; }
+  .Icon-Text-Right a img {
+    width: 18px;
+    margin-top: -7px; }
+  .Icon-Text-Right a p {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    vertical-align: top; }
+
+.Backtolist-btn {
+  display: inline-block;
+  right: 15px;
+  position: absolute;
+  box-sizing: border-box;
+  top: 9px; }
+  .Backtolist-btn a span {
+    padding: 2px 7px;
+    color: #999;
+    margin-right: 5px; }
+
+.Stage {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  right: 0;
+  margin-top: 18px; }
+
+.HeadTitle-sec {
+  display: inline-block;
+  width: 100%;
+  position: relative; }
+
+.Action {
+  position: relative; }
+  .Action a {
+    padding: 5px;
+    display: block; }
+
+.Span-width-5 {
+  width: 5%; }
+
+.Span-width-10 {
+  width: 10%; }
+
+.Span-width-15 {
+  width: 15%; }
+
+.Span-width-20 {
+  width: 20%; }
+
+.Span-width-25 {
+  width: 25%; }
+
+.Span-width-30 {
+  width: 30%; }
+
+.Span-width-35 {
+  width: 35%; }
+
+.Span-width-40 {
+  width: 40%; }
+
+.Span-width-45 {
+  width: 45%; }
+
+.Span-width-50 {
+  width: 50%; }
+
+.Span-width-55 {
+  width: 55%; }
+
+.Span-width-60 {
+  width: 60%; }
+
+.Span-width-65 {
+  width: 65%; }
+
+.Span-width-70 {
+  width: 70%; }
+
+.Span-width-75 {
+  width: 75%; }
+
+.Span-width-80 {
+  width: 80%; }
+
+.Span-width-85 {
+  width: 85%; }
+
+.Span-width-90 {
+  width: 90%; }
+
+.Span-width-95 {
+  width: 95%; }
+
+.Span-width-100 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+
+.H4-Purple {
+  margin: 0;
+  padding: 0; }
+
+.H5-purple {
+  margin: 0;
+  padding: 0; }
+
+.Headform-title {
+  padding: 40px 0 0; }
+
+.H6-Gray {
+  margin: 0;
+  padding: 0; }
+
+.Oval-1, .Enrollment-Notification .notifyDesc i {
+  width: 12px;
+  height: 12px;
+  display: inline-block; }
+
+.Leftsul ul {
+  margin: 0;
+  padding: 0; }
+  .Leftsul ul li {
+    padding: 10px 0 10px 30px; }
+    .Leftsul ul li.sideNavHeader {
+      padding: 10px 0 10px 20px; }
+    .Leftsul ul li ul.subNavigation {
+      margin-top: 10px; }
+      .Leftsul ul li ul.subNavigation li {
+        padding: 0 0 5px 10px; }
+
+.Enrollment-Notification {
+  position: relative;
+  margin: 0 0 10px 0; }
+  .Enrollment-Notification .notifyTitle {
+    width: 12%;
+    display: inline-block; }
+    .Enrollment-Notification .notifyTitle h6 {
+      display: inline-block;
+      margin: 0; }
+  .Enrollment-Notification .notifyDesc {
+    width: 75%;
+    display: inline-block; }
+    .Enrollment-Notification .notifyDesc i {
+      position: relative;
+      vertical-align: middle;
+      display: inline-block; }
+    .Enrollment-Notification .notifyDesc p {
+      display: inline-block;
+      margin: 0;
+      padding: 0 10px; }
+  .Enrollment-Notification .notifyLink {
+    display: inline-block;
+    position: absolute;
+    right: 4px;
+    top: 8px; }
+
+.Box-Containar {
+  position: relative;
+  display: block;
+  width: 100%; }
+  .Box-Containar .Title {
+    margin: 14px 0;
+    position: relative; }
+  .Box-Containar .Box-row {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0 0 10px 0; }
+    .Box-Containar .Box-row .Box {
+      width: 32.6%;
+      height: 125px;
+      position: relative;
+      display: inline-block;
+      margin-right: 10px; }
+      .Box-Containar .Box-row .Box .Status-Application {
+        width: 40%;
+        display: inline-block;
+        position: absolute;
+        margin: 8px 0;
+        height: 110px; }
+        .Box-Containar .Box-row .Box .Status-Application .BoxNo {
+          margin: 20px 0 0 0;
+          padding: 0; }
+        .Box-Containar .Box-row .Box .Status-Application .BoxTitle {
+          margin: 0;
+          padding: 0; }
+      .Box-Containar .Box-row .Box .Status-Title {
+        width: 50%;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        margin: -30px 0 0px -16px;
+        left: 50%;
+        height: 70px; }
+        .Box-Containar .Box-row .Box .Status-Title p {
+          margin-top: 20px; }
+        .Box-Containar .Box-row .Box .Status-Title .btn-Application a {
+          padding: 5px; }
+      .Box-Containar .Box-row .Box:last-child {
+        margin-right: 0; }
+
+.Enrollment-formfield, .SearchBar-Container {
+  /* Text Input */
+  /* Dropdown Box */
+  /* Text Area */
+  /* Checkbox */
+  /* Submit Button */ }
+  .Enrollment-formfield .payment-mode-selection input[type='radio'], .SearchBar-Container .payment-mode-selection input[type='radio'] {
+    width: 14px;
+    height: 14px; }
+  .Enrollment-formfield input, .SearchBar-Container input,
+  .Enrollment-formfield select,
+  .SearchBar-Container select,
+  .Enrollment-formfield textarea,
+  .SearchBar-Container textarea {
+    padding: 11px; }
+  .Enrollment-formfield label, .SearchBar-Container label {
+    padding: 9px 0 9px 11px; }
+  .Enrollment-formfield input[type='text'], .SearchBar-Container input[type='text'] {
+    width: 100%; }
+  .Enrollment-formfield input[type='radio'], .SearchBar-Container input[type='radio'] {
+    height: 2.5em;
+    width: 2.5em;
+    margin-top: 0;
+    vertical-align: text-top; }
+  .Enrollment-formfield .styled-select, .SearchBar-Container .styled-select {
+    display: inline-block;
+    margin-bottom: 1.5em;
+    position: relative;
+    width: 15em; }
+  .Enrollment-formfield .styled-select:before, .SearchBar-Container .styled-select:before {
+    padding-left: .25em;
+    position: absolute;
+    pointer-events: none;
+    right: .35em; }
+  .Enrollment-formfield select, .SearchBar-Container select {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    line-height: normal;
+    height: 41px; }
+  .Enrollment-formfield textarea, .SearchBar-Container textarea {
+    height: 10em;
+    padding: 1em;
+    width: 100%; }
+  .Enrollment-formfield input[type='checkbox'], .SearchBar-Container input[type='checkbox'] {
+    padding: .25em;
+    height: 1em;
+    width: 1em;
+    vertical-align: text-top; }
+  .Enrollment-formfield input[type='submit'], .SearchBar-Container input[type='submit'] {
+    padding: 9px 18px 8px 19px; }
+
+.Header-White {
+  width: 100%;
+  margin: 0;
+  padding: 20px 15px;
+  position: relative; }
+
+.Drag-Sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 10px; }
+  .Drag-Sec .Drag-content {
+    width: 50%;
+    height: 100px;
+    display: inline-block;
+    opacity: 1 !important; }
+    .Drag-Sec .Drag-content img {
+      width: 35px;
+      height: 35px;
+      display: block;
+      margin: 18px auto; }
+    .Drag-Sec .Drag-content span {
+      text-align: center;
+      margin-top: 14px;
+      padding: 0;
+      display: block; }
+
+.Drag-Notes {
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 25px; }
+  .Drag-Notes h6 {
+    margin: 0;
+    padding: 0; }
+  .Drag-Notes ul.Notes-list {
+    position: relative;
+    padding: 10px 0 !important; }
+    .Drag-Notes ul.Notes-list li {
+      display: block;
+      width: 100%;
+      padding: 2px 20px !important; }
+      .Drag-Notes ul.Notes-list li:before {
+        position: absolute;
+        left: 2px; }
+
+.Header-white-two {
+  width: 100%;
+  margin: 0;
+  padding: 10px; }
+
+.Rules-AreaSection {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 10px; }
+  .Rules-AreaSection .Rules-NameDiv label {
+    display: inline-block;
+    width: 11%; }
+  .Rules-AreaSection .Rules-NameDiv input[type="text"] {
+    width: 30% !important; }
+  .Rules-AreaSection .Rules-No {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+    top: -31px;
+    position: relative; }
+    .Rules-AreaSection .Rules-No span {
+      position: absolute;
+      top: 9px;
+      left: 6px;
+      display: inline-block; }
+  .Rules-AreaSection .RuleName_Entry {
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 10px; }
+  .Rules-AreaSection .RulesetDiv {
+    width: 97%;
+    padding: 10px;
+    margin: 40px 10px 10px;
+    display: block; }
+  .Rules-AreaSection .dropArea {
+    width: 100%;
+    margin: 2px;
+    padding: 20px 5px; }
+
+#conditions .conditions {
+  width: 100%;
+  display: flex;
+  padding: 0 30px;
+  margin: 10px 0;
+  position: relative; }
+  #conditions .conditions select {
+    width: 22.5% !important;
+    display: inline-block !important;
+    margin: 5px 3px !important; }
+  #conditions .conditions input[type=text] {
+    width: 22.5% !important;
+    display: inline-block !important;
+    margin: 5px 3px !important; }
+  #conditions .conditions .close {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    margin-top: -8px;
+    display: block; }
+  #conditions .conditions .Formmenu-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -13px;
+    display: block; }
+    #conditions .conditions .Formmenu-icon img {
+      width: 12px; }
+
+.OR-Div {
+  padding: 10px 0;
+  display: block; }
+
+.Addrule_btn {
+  display: block;
+  margin: 0 auto;
+  display: block;
+  position: relative; }
+  .Addrule_btn a {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100px;
+    padding: 5px 10px; }
+
+.SaveCancel-Btn {
+  width: 100%;
+  display: block;
+  padding: 20px; }
+  .SaveCancel-Btn a {
+    display: inline-block;
+    padding: 8px 20px; }
+
+.LoadMore {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0; }
+  .LoadMore a {
+    display: block; }
+    .LoadMore a img {
+      width: 13px; }
+  .LoadMore p {
+    padding: 0;
+    margin: 0; }
+
+/*************PROGRESS TRACKER*************/
+.ProgressTracker {
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 0 0;
+  background-color: #f3f6f8;
+  width: 100%; }
+  .ProgressTracker .progressNav {
+    margin: 0 0 0 0;
+    padding: 0 100px 0 0; }
+    .ProgressTracker .progressNav ul.progtrckr {
+      display: table;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      table-layout: fixed;
+      width: 100%; }
+      .ProgressTracker .progressNav ul.progtrckr li {
+        display: table-cell;
+        text-align: right;
+        padding-right: 11px; }
+        .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a {
+          text-decoration: none; }
+          .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-No {
+            top: 42px;
+            position: relative;
+            left: 0;
+            z-index: 2; }
+          .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-todo-Notselect {
+            height: 1px;
+            margin: 0 auto;
+            top: 30px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            position: relative;
+            z-index: 1; }
+            .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-todo-Notselect .circle {
+              margin: 0;
+              width: 20px;
+              height: 20px;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              position: absolute;
+              margin-top: -11px;
+              margin-right: -7px; }
+              .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-todo-Notselect .circle:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 26px;
+                height: 26px;
+                background-color: #FFF;
+                border-radius: 50%;
+                border-width: 1px;
+                border-color: #a8a8a8;
+                z-index: -1;
+                margin-left: -4px;
+                margin-top: -4px;
+                border-style: solid; }
+              .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-todo-Notselect .circle.curStage {
+                top: 0px;
+                right: 0;
+                bottom: 0;
+                position: absolute;
+                margin-top: -11px;
+                margin-right: -7px; }
+                .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-todo-Notselect .circle.curStage:after {
+                  border-style: dotted;
+                  border-color: #00C325;
+                  width: 30px;
+                  height: 30px;
+                  margin-left: -6px;
+                  margin-top: -6px;
+                  background-color: #FFF; }
+              .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-todo-Notselect .circle.activeStage {
+                border-width: 0px;
+                border-style: solid; }
+                .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-todo-Notselect .circle.activeStage:after {
+                  border-style: dotted;
+                  border-color: #00c325;
+                  border-width: 2px;
+                  margin-top: -5px;
+                  margin-left: -5px; }
+              .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-todo-Notselect .circle.stepDisplay {
+                border-width: 0px;
+                border-style: solid; }
+                .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-todo-Notselect .circle.stepDisplay:before {
+                  content: '';
+                  width: 0;
+                  height: 0;
+                  border-left: 3px solid transparent;
+                  border-right: 3px solid transparent;
+                  border-top: 3px solid #00C325;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  margin-top: 28px;
+                  margin-left: 8px; }
+              .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-todo-Notselect .circle.completed-Stage {
+                border-width: 0px;
+                border-style: solid; }
+                .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-todo-Notselect .circle.completed-Stage:after {
+                  border-style: solid;
+                  border-color: #00C325;
+                  background-color: #FFF; }
+              .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-todo-Notselect .circle.curStage {
+                border-width: 0px;
+                border-style: solid; }
+          .ProgressTracker .progressNav ul.progtrckr li.progtrckr-todo a .progtrckr-todo-text {
+            top: -30px;
+            right: 0;
+            bottom: 0;
+            left: 50%;
+            position: relative;
+            text-align: center;
+            margin-top: 0;
+            line-height: 1;
+            width: 100%;
+            height: 30px; }
+    .ProgressTracker .progressNav:after {
+      height: 1px;
+      position: absolute;
+      width: 100%;
+      margin-top: -1px;
+      background-color: #e0e7ee; }
+
+/****************************PROGRESS TRACKER END*********************/
+/****FILTER ICON****/
+.filterIcon {
+  width: 3%;
+  display: block;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+  .filterIcon svg {
+    width: 20px; }
+
+.arrow-up:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  margin-right: 28px;
+  margin-top: -8px;
+  top: 0;
+  width: 0;
+  height: 0; }
+
+/****************************SEARCH BAR*******************************/
+.SearchBar-Container {
+  position: relative;
+  padding: 15px 15px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .SearchBar-Container.dropFilter {
+    -webkit-transition: max-height 0.3s;
+    -moz-transition: max-height 0.3s;
+    -ms-transition: max-height 0.3s;
+    -o-transition: max-height 0.3s;
+    transition: max-height 0.3s;
+    background-color: #eef1f4; }
+  .SearchBar-Container.collapsed {
+    max-height: 0;
+    display: none; }
+  .SearchBar-Container .Searchdiv {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 0 0; }
+    .SearchBar-Container .Searchdiv input[type="text"] {
+      padding-left: 40px !important;
+      margin-bottom: 0 !important; }
+  .SearchBar-Container .Calendar-From {
+    display: inline-block;
+    position: relative;
+    margin: 0 35px 0 0; }
+    .SearchBar-Container .Calendar-From input {
+      padding-left: 50px !important; }
+    .SearchBar-Container .Calendar-From:after {
+      position: absolute;
+      top: 3px;
+      right: -23px; }
+  .SearchBar-Container .Calendar-To {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 10px 0; }
+    .SearchBar-Container .Calendar-To input {
+      padding-left: 50px !important; }
+  .SearchBar-Container .Filterdiv {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 10px 0; }
+    .SearchBar-Container .Filterdiv.marginRight0 {
+      margin-right: 0px; }
+    .SearchBar-Container .Filterdiv select#stage {
+      height: 125px;
+      overflow: hidden; }
+  .SearchBar-Container .btn-process {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 30px; }
+    .SearchBar-Container .btn-process a {
+      padding: 8px 16px !important; }
+
+/****************************SEARCH BAR END*******************************/
+/****************************CUSTOM TABLE*******************************/
+.Table-Layout {
+  display: table;
+  width: 100%;
+  text-align: left; }
+  .Table-Layout .Heading {
+    display: table-row;
+    padding: 10px 0;
+    height: auto; }
+    .Table-Layout .Heading .Cell {
+      display: table-cell;
+      padding: 15px; }
+      .Table-Layout .Heading .Cell p {
+        margin: 0;
+        padding: 0; }
+      .Table-Layout .Heading .Cell:last-child {
+        width: 5% !important;
+        text-align: center; }
+  .Table-Layout .Row {
+    display: table-row; }
+    .Table-Layout .Row .Cell {
+      display: table-cell;
+      padding: 15px;
+      position: relative;
+      vertical-align: top; }
+      .Table-Layout .Row .Cell p {
+        margin: 0;
+        padding: 0; }
+      .Table-Layout .Row .Cell:last-child {
+        width: 5% !important;
+        text-align: center; }
+
+/****************************CUSTOM TABLE END*******************************/
+.aui .popover-content {
+  padding: 0; }
+
+.aui .popover .arrow {
+  display: none; }
+
+.aui .popover.top {
+  margin-top: -10px;
+  position: absolute;
+  margin-left: -50px;
+  background: none; }
+
+#column-1 .modal {
+  z-index: 90000 !important;
+  height: 100% !important;
+  max-height: 100%;
+  width: 100% !important;
+  left: 0;
+  top: 0;
+  margin-left: 0; }
+  #column-1 .modal input[type=text],
+  #column-1 .modal .aui input[type="password"],
+  #column-1 .modal .aui input[type="file"],
+  #column-1 .modal select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 20px;
+    height: 40px; }
+  #column-1 .modal .btn {
+    padding: 9px 20px; }
+#column-1 .modal-header {
+  padding: 9px 15px; }
+  #column-1 .modal-header h3 {
+    margin: 0;
+    text-align: center;
+    padding: 0px 18px 10px; }
+  #column-1 .modal-header h2 {
+    margin: 0;
+    text-align: center;
+    padding: 0px 18px 10px; }
+#column-1 .modal-body {
+  width: 100%;
+  height: auto !important;
+  max-height: 100%;
+  border: none; }
+#column-1 .modal-content {
+  overflow: hidden;
+  margin: 0 auto;
+  height: auto !important;
+  max-height: 100%;
+  width: 475px;
+  top: 50%;
+  left: 50%;
+  margin-left: -180px;
+  margin-top: -180px;
+  position: absolute; }
+#column-1 .modal-footer {
+  text-align: center; }
+
+.DesignerWizard-btn {
+  display: inline-block;
+  width: 220px;
+  position: absolute;
+  top: 5px;
+  right: 0; }
+  .DesignerWizard-btn button {
+    width: 70px !important;
+    padding: 4px 10px !important;
+    display: inline-block;
+    font-size: 11px !important; }
+    .DesignerWizard-btn button.greenbtn {
+      margin: 0 10px; }
+    .DesignerWizard-btn button.greybtn {
+      margin: 0 10px; }
+
+.Clear-Redraw-btn {
+  display: inline-block;
+  width: 175px;
+  position: absolute;
+  top: 5px;
+  right: 0; }
+  .Clear-Redraw-btn button {
+    width: auto !important;
+    padding: 4px 10px !important;
+    display: inline-block;
+    font-size: 11px !important; }
+    .Clear-Redraw-btn button.greenbtn {
+      margin: 0 10px; }
+    .Clear-Redraw-btn button.greybtn {
+      margin: 0 10px; }
+
+#column-1 .iframe-process iframe {
+  width: 700px;
+  position: relative;
+  display: block;
+  margin: 0 auto; }
+
+#column-3.span4 .Header-White {
+  display: none; }
+#column-3.span4 .iframe-process iframe {
+  width: 310px;
+  position: relative;
+  display: block;
+  margin: 0 auto; }
+
+.btn-div {
+  text-align: center;
+  padding: 10px 15px 40px 0; }
+
+.user-Progress {
+  padding: 10px 0 10px 30px; }
+  .user-Progress .user-cont {
+    padding: 2px 0;
+    font-size: 9pt; }
+    .user-Progress .user-cont span {
+      width: 150px;
+      display: inline-block;
+      text-align: right;
+      padding-right: 10px; }
+
+.ui-accordion .ui-accordion-content {
+  border: 1px solid #ddd; }
+
+.processComponentWrap table {
+  width: 100%;
+  border-spacing: 5px;
+  border-collapse: separate; }
+  .processComponentWrap table th {
+    width: 50%;
+    border-radius: 5px;
+    background-color: #f6f8fa;
+    border: solid 1px #d9dce3;
+    margin-bottom: 10px 0;
+    padding: 20px; }
+    .processComponentWrap table th figcaption {
+      font-size: 12px;
+      color: #961f63;
+      font-weight: normal; }
+    .processComponentWrap table th span {
+      font-size: 12px;
+      color: #961f63;
+      font-weight: normal; }
+    .processComponentWrap table th img {
+      cursor: move; }
+
+.filterTags {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 8px 0 8px 10px; }
+
+.filterTags ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; }
+
+.filterTags ul li {
+  width: auto;
+  /* height: 28px; */
+  padding: 5px 25px 5px 15px;
+  margin: 2px;
+  position: relative;
+  max-width: 250px;
+  display: block;
+  overflow: hidden; }
+
+.filterTags ul li a.closeTag {
+  width: 10px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  margin-top: -9px; }
+
+.filterTags ul li a.closeTag img {
+  width: 6px; }
+
+.Search_Result_Count {
+  right: 0;
+  margin-top: 16px;
+  margin-right: 20px;
+  width: auto;
+  position: absolute; }
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  height: 30px;
+  width: 100px;
+  display: inline-block; }
+
+.fileUploadBtn {
+  width: auto;
+  padding-top: 8px !important;
+  height: 35px;
+  display: inline-block; }
+
+.Exportbtn {
+  width: 100px;
+  height: 35px;
+  display: inline-block; }
+
+.Exportbtn button {
+  height: 35px; }
+
+.fileUploadBtn input.upload {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  left: 0;
+  width: 100px;
+  margin-top: -2px; }
+
+.Backtolist-btn a::before {
+  content: "<";
+  padding-right: 6px; }
+
+.Backtolist-btn a span {
+  display: none; }
+
+.processComponentWrap {
+  height: auto !important; }
+
+/*# sourceMappingURL=Enrollment_Common.css.map */

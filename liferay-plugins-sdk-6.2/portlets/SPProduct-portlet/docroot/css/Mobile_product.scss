@@ -1,0 +1,1610 @@
+        @import "Product_variables";
+        @import "Product_common";
+        @import "sp_media-queries";
+        .Lp_mobview {
+            .Lp_Mobtab {
+                .Taba {
+
+
+                    padding: 15px;
+                    display: block;
+                    margin: 0 15px;
+                    span:after {
+
+
+                        display: inline-block;
+                        height: inherit;
+                        padding: 0;
+                        position: absolute;
+                        right: 10%;
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+
+        .aui #sections h2.accordionItemHeadingProduct {
+            display: none;
+        }
+
+        .aui #sections .toggler-content-collapsed {
+            display: block;
+        } //SOCIAL SHARE
+        .aui .PTA_ShareSocial {
+            display: block;
+            zoom: 1;
+
+            width: 100%;
+            max-width: 1280px;
+            padding: 0 0 20px 0;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .aui .PTA_ShareSocial_label {
+
+
+
+
+            margin-bottom: 10px;
+        }
+
+        .aui .PTA_ShareSocial ul {
+            display: inline-block;
+            zoom: 1;
+
+
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1280px;
+        }
+
+        .aui .PTA_ShareSocial ul li {
+            display: inline-block;
+            zoom: 1;
+
+            margin-right: 5px;
+            padding: 0;
+        }
+
+        .aui .PTA_ShareSocial ul li a {
+            display: block;
+        }
+
+        .aui .PTA_ShareSocial ul li a img {
+            width: 40px;
+        }
+
+        .aui h4.prod-accrodion-h4 {
+            display: none;
+        }
+
+        @include screen (320px,
+        1023px) {
+            .Product-section-wrap .desk-tab-view .prod-cont-sec1 .Entry-middle .Entrymodule .feeFund-desktopView ul li,
+            .feeFund-mobileView ul li {
+                margin-left: 15px;
+            }
+
+            .fixed {
+                position: relative!important;
+                margin-left: 0!important;
+            }
+            .callOutFormButton {
+                display: flex;
+                justify-content: center;
+            }
+            .template3 {
+                .prod-right-sidebar {
+                    width: 100%;
+                    right: 0;
+                }
+                .prod-cont-left-sidebar {
+                    width: 100%;
+                    padding: 0 20px;
+                }
+            }
+            .template2 {
+                .feeFund-desktopView {
+                    display: block;
+                }
+                .Product-section-wrap .desk-tab-view .table-Entry td:first-child {
+                    width: 20%;
+                }
+                .fixed {
+                    position: relative;
+                }
+                .prod-right-sidebar {
+                    width: 100%;
+                    right: 0;
+                }
+                .Product-section-wrap {
+                    @include padding(0px);
+                    .desk-tab-view {
+                        width: 100%;
+                        display: inline-block;
+                        .prod-cont-sec {
+                            width: 100%;
+                            display: inline-block;
+
+                            @include padding(0 0);
+                            .course-middle {
+                                .coremodule {
+                                    display: inline-block;
+                                    padding: 20px 0 20px 0;
+                                    position: relative;
+                                    margin-bottom: 5px;
+                                    width: 100%;
+                                    ul {
+                                        li {
+                                            width: 40%;
+                                            float: left;
+                                            padding: 25px;
+                                        }
+                                    }
+                                }
+                            }
+                            .list-cont {
+                                width: 100%;
+                                display: inline-block;
+                                position: relative;
+                                .list-imgsec {
+                                    height: 15px;
+                                    width: 22px;
+                                    float: left;
+                                    padding: 0px 5px;
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                                .list-para {
+                                    width: 190px;
+                                    float: left;
+                                }
+                            }
+                            .cont-sec-inner {
+
+                                padding-bottom: 20px;
+                                .cont-image {
+                                    width: 150px!important;
+                                    display: inline-block;
+                                    padding: 0 20px;
+
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                                .cont-desc {
+                                    width: 100%;
+                                    display: inline-block;
+                                    padding: 0;
+                                    h3 {
+                                        padding: 20px 0;
+                                    }
+                                    ul {
+                                        li {
+                                            display: list-item;
+                                            padding: 0 -10px 0 -1px;
+                                            margin-left: 18px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .cont-sec-inner {
+                    text-align: center;
+                    padding-bottom: 20px;
+                    .cont-image {
+                        width: 150px!important;
+                        display: inline-block;
+                        padding: 0 20px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .cont-desc {
+                        width: 100%;
+                        display: inline-block;
+                        padding: 0;
+                        h3 {
+
+
+                            text-align: center;
+                            padding: 20px 0;
+                        }
+                        ul {
+                            li {
+                                display: list-item;
+
+
+
+
+
+                                padding: 0 -10px 0 -1px;
+                                margin-left: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+            .callOutFormWrap {
+                width: 100%;
+            } //MOBILE ACCORDION
+            .aui h4.prod-accrodion-h4 {
+                display: block;
+            }
+            .downloadBrochureMob {
+                display: block;
+            } //Added by karthik 20062017
+            #Lp_Cont_1 {
+                min-height: auto;
+                max-height: 100%;
+            }
+            .aui .PTA_ShareSocial {
+                margin-left: 0px;
+            }
+            #registerIframe {
+                width: 100%;
+
+                min-height: 800px;
+                max-height: 1000px;
+            }
+            .prod-right-sidebar {
+                width: 100%;
+                position: relative;
+                right: 0;
+                top: 0;
+                padding: 20px 20px 0 20px;
+            }
+            #registerForm h2 {
+                margin: 0;
+                padding-bottom: 10px;
+
+
+                font-weight: 700;
+                line-height: inherit;
+                padding: 0 0 20px 0;
+            }
+            .courseOutcome {
+                padding: 20px 0 0px 0;
+            }
+            .Product-section-wrap .desk-view-left {
+                display: none;
+            }
+            .topDesc {
+                margin-top: 0px;
+            } //Mobile Accrodion
+            .aui #sections .toggler-content-collapsed {
+                display: none;
+            }
+            .feeFund-mobileView {
+                display: block;
+                .Product-section-wrap .desk-tab-view .col-shedule .rwd-table td {
+                    max-width: 100%;
+                }
+            }
+            .feeFund-desktopView {
+                display: none;
+            }
+            .feeStructure {
+                table {
+                    th {
+                        padding: 15px!important;
+                    }
+                    td {
+                        vertical-align: middle!important;
+                        padding: 10px!important;
+                    }
+                }
+            }
+            .who-should-attend-mobile {
+                display: block;
+            }
+            .who-should-attend-desktop {
+                display: none;
+            }
+            .course-expl.mobile-center-align p {
+
+                margin-bottom: 20px;
+            }
+            .careerLeft {
+                width: 100%;
+            }
+            .careerRight {
+                width: 100%;
+                margin-left: 0;
+            }
+            .outcomeDetail {}
+            .prod-cont-left-sidebar {
+                width: 100%;
+                padding: 0 20px;
+            }
+            .section {
+                min-height: auto;
+            }
+            .mob-menufixed {
+
+
+                position: fixed;
+                top: 63px;
+                z-index: 100;
+                width: 100%;
+            }
+            .dropbtn_menu {
+
+                margin: 20px 20px 20px;
+                display: block;
+            }
+            .dropbtn_menu:after {
+
+
+                display: inline-block;
+                height: inherit;
+                padding: 0;
+                position: absolute;
+                right: 35px;
+                transform: rotate(360deg);
+            }
+
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown_menu {
+                display: inline-block;
+                width: 100%;
+                top: 10px;
+                z-index: 100;
+            }
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown_menu_content {
+                display: none;
+                position: static;
+
+                min-width: 100%;
+
+                margin-top: -20px;
+            }
+            /* Links inside the dropdown */
+            .dropdown_menu_content a {
+                padding: 14px;
+
+                display: block;
+
+
+                padding: 14px;
+
+
+
+
+                margin: 0 20px;
+            }
+            /* Change color of dropdown links on hover */
+            /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+            .show {
+                display: block;
+            }
+            .Menu_mobile {
+                padding: 0 20px;
+                .mob-menu-div {
+                    width: 100%;
+                    padding: 10px;
+                    option {
+
+                        height: 50x;
+                    }
+                }
+            }
+            .Menu-sidebar-left {
+                display: none;
+            } //productsection
+            .product_section {
+                .Mob-bot-btn {
+                    padding: 25px 0;
+                    button {
+                        height: 48px;
+                        width: 223px;
+                    }
+                }
+                .mob-BV {
+                    position: relative;
+                    width: 100%;
+                    margin: 0px;
+                    padding: 0px;
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        display: inline-block;
+                        li {
+                            display: inline-block;
+                            width: 49.3%;
+                            height: 64px;
+                            float: left;
+                            padding: 0px;
+                            margin: 0px;
+
+                            position: relative;
+                            .mob-BV-img {
+                                position: absolute;
+                                top: 25px;
+                                left: 30px;
+                                img {
+                                    height: 20px;
+                                    width: 17px;
+                                }
+                            }
+                            .mob-BV-content {
+                                display: inline-block;
+                                position: absolute;
+                                top: 22px;
+                                left: 55px;
+                            }
+                        }
+                    }
+                }
+                .Prod_h2 {
+                    margin: 0px 10px;
+                    padding: 20px 0 0 0;
+                }
+                p {
+                    width: auto;
+                    margin: 0px auto;
+                    padding: 20px 20px;
+                    position: relative;
+                }
+                span {
+                    min-width: 100px;
+                    display: block;
+                    margin: 18px auto 0px;
+
+                    padding: 1px 15px;
+                }
+                ul {
+                    width: auto;
+                    padding: 18px;
+                    margin: 0 auto 0;
+
+                    li {
+                        display: inline-block;
+
+                        display: inline;
+
+                        position: relative;
+                        .top-dot {
+                            display: inline-block;
+
+                            position: absolute;
+                            top: 7px;
+                            left: -3px;
+                        }
+                    }
+                }
+            } //course
+            .Course-structure-section {
+                display: block;
+                .Course_wrap {
+                    margin: 20px 20px;
+                    .course_h2 {
+                        margin: 0;
+                        width: 100%;
+                        display: inline-block;
+                        padding: 0 0 20px 0;
+                    }
+                    .course_h2_An {
+                        @include padding(0);
+                        margin: 46px 0 0 0;
+                        padding: 0px;
+                        width: 100%;
+                        display: inline-block;
+                    }
+                    .head-icon-right {
+                        position: absolute;
+                        width: 4%;
+                        top: 35px;
+                        right: 27px;
+                        display: inline-block;
+
+                        .head-icon {
+                            position: absolute;
+                            right: 20px;
+                            top: -8px;
+                            a {
+
+                                img {
+                                    height: 15px;
+                                    width: 15px;
+                                    float: right;
+                                }
+                            }
+                        }
+                    }
+                    .head-icon1 {
+                        position: absolute;
+                        right: -10px;
+                        top: -8px;
+                        a {
+
+                            img {
+                                height: 15px;
+                                width: 15px;
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+            .mobSec {
+                display: block;
+            }
+            .cont-none {
+                display: none;
+            }
+            .Product-section-wrap {
+                @include padding(0px);
+                .desk-tab-view {
+                    width: 100%;
+                    display: inline-block;
+                    .prod-cont-sec {
+                        width: 100%;
+                        display: inline-block;
+
+                        @include padding(0 0);
+                        .course-middle {
+                            .coremodule {
+                                display: inline-block;
+                                padding: 20px 0 20px 0;
+                                position: relative;
+                                margin-bottom: 5px;
+                                width: 100%;
+                                ul {
+                                    li {
+                                        width: 40%;
+                                        float: left;
+                                        padding: 25px;
+                                    }
+                                }
+                            }
+                        }
+                        .list-cont {
+                            width: 100%;
+                            display: inline-block;
+                            position: relative;
+                            .list-imgsec {
+                                height: 15px;
+                                width: 22px;
+                                float: left;
+                                padding: 0px 5px;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .list-para {
+                                width: 190px;
+
+                                float: left;
+                            }
+                        }
+                        .cont-sec-inner {
+
+                            padding-bottom: 20px;
+                            .cont-image {
+                                width: 150px!important;
+                                display: inline-block;
+                                padding: 0 20px;
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .cont-desc {
+                                width: 100%;
+                                display: inline-block;
+                                padding: 0;
+                                h3 {
+
+
+
+                                    padding: 20px 0;
+                                }
+                                ul {
+                                    li {
+                                        display: list-item;
+
+
+
+
+
+                                        padding: 0 -10px 0 -1px;
+                                        margin-left: 18px;
+                                    }
+                                }
+                            }
+                        }
+                        .course-expl {
+                            @include padding(20px 20px);
+                            p {}
+                            h2 {}
+                            .desk-h2-hidden {
+                                h2 {}
+                            }
+                        }
+                    }
+                    .prod-cont-sec1 {
+                        width: 100%;
+                        padding: 0 20px;
+                        .tab-h2-hidden {
+                            h2 {}
+                        }
+                        .course-middle {
+                            padding: 0;
+                            h2 {
+
+
+
+                                margin: 0;
+                            }
+                            h3 {
+
+
+
+                                margin: 0;
+                            }
+                            .coremodule {
+                                display: inline-block;
+                                padding: 20px 0 20px 0;
+                                position: relative;
+                                margin-bottom: 5px;
+                                width: 100%;
+                                ul {
+                                    li {
+                                        width: 100%;
+                                        float: left;
+                                        padding: 4px 0;
+                                        margin-bottom: 1px;
+                                    }
+                                }
+                                .inner-core {
+                                    width: 100%;
+                                    padding: 0px;
+                                    display: block;
+                                    position: relative;
+                                    margin-bottom: 6px;
+                                    z-index: 99;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                        .Entry-middle {
+                            padding: 20px 0;
+                            h2 {
+
+
+
+                                margin: 0;
+                            }
+                            h3 {
+
+
+
+                                margin: 0;
+                            }
+                            .Entrymodule {
+                                display: inline-block;
+                                padding: 0 0 20px 0;
+                                position: relative;
+                                margin-bottom: 5px;
+                                width: 100%;
+                                ul {
+                                    li {
+                                        width: 100%;
+                                        float: left;
+                                        padding: 15px 0;
+                                        margin-bottom: 1px;
+                                    }
+                                }
+                            }
+                        }
+                        .Specification-middle {
+                            padding: 0;
+                            h2 {
+
+
+
+                                margin: 0;
+                            }
+                            .Specification-module {
+                                display: inline-block;
+                                padding: 20px 0 20px 0;
+                                position: relative;
+                                margin-bottom: 5px;
+                                width: 100%;
+                                ul {
+                                    li {
+                                        width: 100%;
+                                        float: left;
+                                        padding: 15px 0px;
+                                    }
+                                }
+                            }
+                        }
+                        .pro-bot-link {
+                            position: relative;
+                            display: none;
+
+                            h1:before {
+
+                                display: block;
+
+                                width: 100%;
+                                height: 1px;
+                                position: absolute;
+                                top: 59%;
+                                z-index: 1;
+                            }
+                            h1:after {
+
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                position: absolute;
+                                top: 10%;
+                                z-index: 10;
+                            }
+                            h1 span {
+
+                                padding: 0 20px;
+                                position: relative;
+
+                                z-index: 5;
+                            }
+                        }
+                        .pro-bot-link-right {
+                            position: relative;
+
+                            display: none;
+                            a {}
+                            h1:before {
+
+                                display: block;
+
+                                width: 100%;
+                                height: 1px;
+                                position: absolute;
+                                top: 59%;
+                                z-index: 1;
+                            }
+                            h1:after {
+
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                position: absolute;
+                                top: 10%;
+                                z-index: 10;
+                            }
+                            h1 span {
+
+                                padding: 0 20px;
+                                position: relative;
+
+                                z-index: 5;
+                            }
+                        }
+                        .list-cont {
+                            width: 100%;
+                            display: inline-block;
+                            position: relative;
+
+                            .list-imgsec {
+                                height: 15px;
+                                width: 14px;
+                                float: left;
+                                padding: 0px 13px;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .list-file {
+                                height: 42px;
+                                width: 40px;
+                                display: inline-block;
+                                padding: 10px;
+                                left: 0;
+                                position: relative;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .list-file-cal {
+                                height: 42px;
+                                width: 40px;
+                                display: inline-block;
+                                padding: 10px;
+                                left: 0;
+                                position: relative;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .list-para {
+                                width: auto;
+
+                                display: inline-block;
+                                padding: 0px 5px 0 5px;
+                            }
+                            .list-para1 {
+                                width: 100%;
+
+                                display: inline-block;
+                                padding: 0;
+
+                                p {
+
+
+
+                                    padding: 15px 25px 0;
+                                }
+                            }
+                        }
+                        .cont-sec-inner {
+                            padding-bottom: 20px;
+                            .cont-image {
+                                width: 7%;
+                                display: inline-block;
+                                padding: 0 20px;
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .cont-desc {
+                                width: 75%;
+                                display: inline-block;
+                                padding: 0px 20px;
+                                h3 {
+
+
+
+                                    margin: 0;
+                                    padding-bottom: 5px;
+                                }
+                                ul {
+                                    li {
+                                        display: list-item;
+
+
+
+
+
+                                        padding: 0 -10px 0 -1px;
+                                        margin-left: 18px;
+                                    }
+                                }
+                            }
+                        }
+                        .course-expl {
+                            @include padding(0);
+
+                            ul {
+                                li {
+                                    display: list-item;
+
+
+
+
+
+                                    padding-bottom: 10px;
+                                    margin-left: 18px;
+                                }
+                            }
+                        }
+                        .course-exp2 {
+                            @include padding(10px 0);
+
+                            ul {
+                                margin-left: 10px;
+                                li {
+                                    display: list-item;
+
+
+
+
+
+                                    padding: 0 -10px 0 -1px;
+                                    margin-left: 18px;
+                                }
+                            }
+                        }
+                        .Who-sholud-attend-sec {
+                            @include padding(20px 0);
+
+                            ul {
+                                li {
+                                    display: list-item;
+
+
+
+
+
+                                    padding: 0 -10px 0 -1px;
+                                    margin-left: 18px;
+                                }
+                            }
+                        }
+                        .rating-sec {
+                            position: relative;
+                            float: left;
+                            width: 100%;
+                            .rating-sec-inner {
+
+                                position: relative;
+                                margin: 0;
+                                width: 100%;
+                                padding: 0;
+                                float: left;
+                                margin-bottom: 15px;
+                                .rt_images {
+                                    height: 181px;
+                                    width: 100%;
+                                    display: inline-block;
+                                    position: relative;
+                                    float: left;
+                                    img {
+                                        width: 100%;
+                                        height: 180px;
+                                    }
+                                    .play-icon {
+                                        position: absolute;
+                                        top: 75px;
+                                        left: 45%;
+                                        img {
+                                            height: 33px;
+                                            width: 33px;
+                                        }
+                                    }
+                                }
+                                .rt_content {
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 100%;
+                                    height: 124px;
+
+
+
+                                    float: left;
+                                    .rt-cont-sec {
+
+                                        padding: 20px;
+                                        h2 {
+
+
+
+                                            margin: 16px 0 0 0;
+                                        }
+
+                                        ul {
+
+                                            li {
+                                                display: inline-block;
+                                                margin: 0;
+                                                img {
+                                                    height: 19px;
+                                                    width: 20px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .who-should-attend {
+                            ul {
+                                position: relative;
+                                li {
+                                    width: 100%;
+                                    display: inline-block;
+                                    margin: 0;
+                                    .Wsa_image {
+                                        display: inline-block;
+                                        height: auto;
+                                        width: 100%;
+                                        position: relative;
+                                        img {
+                                            height: auto;
+                                            width: 100%;
+                                        }
+                                        .inside-cont {
+                                            position: absolute;
+                                            top: 92px;
+                                            width: auto;
+                                            padding: 15px 33px;
+                                            h2 {
+
+
+
+                                                margin: 0;
+                                            }
+                                        }
+                                    }
+                                    .Wsa_content {
+                                        display: inline-block;
+                                        height: auto;
+                                        width: 100%;
+
+
+                                        p {
+
+
+
+                                            padding: 25px;
+                                            height: auto;
+                                        }
+                                    }
+                                    .Wsa_content-desk {
+                                        display: none;
+                                        p {
+
+
+
+                                            padding: 25px;
+                                        }
+                                    }
+                                    .Wsa_content-mob {
+                                        display: inline-block;
+                                        height: 129px;
+                                        width: 100%;
+
+
+                                        p {
+
+
+
+                                            padding: 25px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .table-Wrapper-sec {
+                        width: 100%;
+                        @include padding(0px);
+                    }
+                    .display-hidden-mob {
+                        display: none;
+                    }
+                    .without-paddding-wrap {
+                        width: 100%;
+                        @include padding(0 20px);
+                    }
+                    .prod-right-sidebar {
+                        width: 100%;
+                        display: block;
+                        margin: 0 auto;
+                        max-width: 320px;
+                        h2 {
+                            margin: 0;
+                            padding-bottom: 15px;
+                        }
+                        .prod-right-inner {
+                            margin-bottom: 50px;
+                        }
+                        .prod-videos {
+                            margin-bottom: 10px;
+                            position: relative;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .prod-form input[type="text"],
+                        input[type="file"] {
+
+
+
+                            margin-bottom: 10px;
+                            width: 90%;
+
+                            padding: 10px 15px;
+                        }
+                        .prod-form button {
+                            margin: 10px auto;
+
+                            width: 129px;
+                        }
+                        .prod-broc-content {
+                            width: 100%;
+                            .prod-broc-content-inner {
+                                display: inline-block;
+                                padding: 20px 0 20px 0;
+                                position: relative;
+                                width: 100%;
+
+
+                                margin-bottom: 5px;
+                                .prod-left-icon {
+                                    display: inline-block;
+
+                                    padding: 0 5px 0 0;
+                                    width: 10%;
+                                    img {
+                                        height: 21px;
+                                        width: 16px;
+                                    }
+                                }
+                                .prod-content {
+                                    display: inline-block;
+
+                                    width: 60%;
+                                    p {
+
+
+
+
+                                        padding: 3px 0;
+                                    }
+                                }
+                                .prod-right-icon {
+                                    display: inline-block;
+
+                                    padding: 0 4px;
+                                    width: 10%;
+                                    img {
+                                        height: 22px;
+                                        width: 27px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .prod-right-sidebar1 {
+                        display: none;
+                        h2 {
+                            margin: 0;
+                            padding-bottom: 10px;
+                        }
+                        .prod-right-inner {
+                            margin-bottom: 20px;
+                            .prod-right-list {
+                                position: relative;
+
+                                ul {
+                                    @include padding(0);
+                                    li {
+                                        height: 19px;
+                                        margin: 10px 0;
+                                        width: 100%;
+
+
+                                        .list-imgsec1 {
+                                            height: 15px;
+                                            width: 14px;
+                                            float: left;
+                                            padding: 0;
+                                            margin: 0 5px;
+
+                                            img {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .course-bottom {
+                        position: relative;
+                        margin-bottom: 10px;
+                        .course-p {
+
+                            h2 {
+
+
+                                margin: 0;
+                            }
+                        }
+                    }
+                    .table-all {
+                        width: 100%;
+                        position: relative;
+                        border-collapse: collapse;
+                        margin-bottom: 15px;
+                        h2 {
+
+
+
+                            margin: 0;
+
+                            padding: 10px 0;
+                        }
+
+                        table,
+                        td,
+                        th {
+
+                            border-collapse: collapse;
+                        }
+                        table {
+                            width: 100%;
+                            border-collapse: collapse;
+                        }
+                        th {
+                            height: 49px;
+
+
+
+                            padding: 0 20px;
+                        }
+                        td {
+                            height: 44px;
+                            padding: 4px 10px;
+                        }
+                    }
+                    .table-Entry {
+                        width: 100%;
+                        position: relative;
+                        border-collapse: collapse;
+                        h2 {
+
+
+
+                            margin: 0;
+
+                            padding: 10px 0;
+                        }
+
+                        h4 {
+
+
+
+
+                            padding: 0;
+                            margin: 0;
+                        }
+                        table,
+                        td,
+                        th {
+
+                            border-collapse: collapse;
+                        }
+                        table {
+                            width: 100%;
+                            margin-top: 25px;
+                            border-collapse: collapse;
+                        }
+                        th {
+                            height: 49px;
+                            width: auto;
+
+
+
+                            padding: 20px;
+
+                            &:first-child {
+                                width: 40px;
+                            }
+                        }
+                        td {
+                            height: 40px;
+                            width: 20%;
+
+
+
+
+
+                            padding: 20px 20px;
+
+                            p {
+                                padding-bottom: 10px;
+                            }
+                        }
+                        td:first-child {
+                            height: 40px;
+                            width: 3%;
+
+
+
+
+
+                            padding: 20px 20px;
+                        }
+                    }
+                    .table-Schedule {
+                        width: 100%;
+                        position: relative;
+                        border-collapse: collapse;
+                        margin-bottom: 15px;
+                        h2 {
+
+
+
+                            margin: 0;
+
+                            padding: 10px 0;
+                        }
+
+                        table,
+                        td,
+                        th {
+
+                            border-collapse: collapse;
+                        }
+                        table {
+                            width: 100%;
+                            margin-top: 25px;
+                            border-collapse: collapse;
+                        }
+                        th {
+                            height: 49px;
+
+
+
+                            padding: 0 20px;
+                        }
+                        td {
+                            height: 40px;
+                            width: 50%;
+
+
+
+
+
+                            padding: 20px 20px;
+
+                            p {
+
+
+
+
+                                width: 224px;
+                            }
+                            ul {
+                                margin: 5px 0 5px 0;
+                                li {
+                                    display: list-item;
+
+
+
+
+
+                                    padding: 0 -10px 0 -1px;
+                                    margin-left: 18px;
+                                }
+                            }
+                            ol li {}
+                        }
+                        td:first-child {
+                            height: 40px;
+                            width: 25%;
+
+
+
+
+
+                            padding: 20px 20px;
+
+                            p {
+
+
+
+
+                                width: 142px;
+                            }
+                        }
+                        td:nth-child(2) {
+                            height: 40px;
+                            width: 45%;
+
+
+
+
+
+                            padding: 20px 20px;
+                        }
+                        td:nth-child(3) {
+                            height: 40px;
+                            width: 35%;
+
+
+
+
+
+                            padding: 20px 0px 20px 20px;
+
+                            p {
+
+
+
+
+                                width: 190px;
+                            }
+                        }
+                    }
+                    .col-shedule {
+                        $breakpoint-alpha: 480px; // adjust to your needs
+                        .rwd-table {
+                            margin: -31px 0 0 0;
+                            min-width: 100%; // adjust to your needs
+                            border-collapse: collapse;
+                            tr {}
+                            th {
+                                display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!
+                            }
+                            td {
+                                display: inherit;
+
+
+
+                                padding-top: 1em;
+                                padding-bottom: 1em;
+                                .div-align-tab {
+                                    display: inline-block;
+                                    width: 65%;
+                                    padding: 20px 20px 20px 20px;
+
+
+                                    h1 {
+
+
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+                                    ul {
+                                        padding: 0px 0 10px 0;
+                                        li {
+                                            display: list-item;
+
+
+
+
+                                            margin-left: 18px;
+                                            padding: 2px 0 0 3px;
+                                        }
+                                    }
+                                    ol li {}
+                                }
+                                &:first-child {
+                                    padding-top: 1em;
+                                }
+                                &:last-child {
+                                    padding-bottom: 1em;
+                                }
+                                &:before {
+                                    content: attr(data-th) " ";
+
+                                    display: inline-block;
+                                    width: 5em;
+                                    height: auto;
+
+                                    @media (min-width: $breakpoint-alpha) {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            th {}
+                            th,
+                            td {
+
+                                border-collapse: collapse;
+                                @media (min-width: $breakpoint-alpha) {
+                                    display: table-cell;
+                                    padding: .25em .5em;
+                                    .div-align-tab {
+                                        display: inline-block;
+                                        width: auto;
+                                        padding: 0 10px;
+
+                                        h1 {
+
+
+                                            margin: 0;
+                                            padding: 0;
+                                        }
+                                        ul {
+                                            padding: 0px 0 10px 0;
+                                            li {
+                                                display: list-item;
+
+
+
+
+                                                margin-left: 20px;
+                                                padding: 2px 0 0 3px;
+                                            }
+                                        }
+                                    }
+                                    &:first-child {
+                                        padding-left: 0;
+                                    }
+                                    &:last-child {
+                                        padding-right: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .rwd-table {
+
+
+
+                            overflow: hidden;
+
+                            th,
+                            td {
+                                @media (min-width: $breakpoint-alpha) {
+                                    padding: 1em !important;
+                                }
+                            }
+                            th,
+                            td:before {
+
+
+
+                                padding: 20px 0 0 23px;
+                            }
+                        }
+                    }
+                    .bot-para-mob {
+                        padding: 0px 20px;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 1090px) and (min-width: 1024px) {
+            .prod-cont-left-sidebar,
+            .Product-section-wrap .desk-tab-view .prod-cont-sec1 {
+                padding: 0 20px 0 60px;
+            }
+        } //MObile Accordion Styling
+        .toggler-header-collapsed {
+            &:after {
+
+
+                display: inline-block;
+                height: inherit;
+                padding: 0;
+                position: absolute;
+                right: 10%;
+                transform: rotate(360deg);
+            }
+        }
+
+
+
+        .toggler-header-expanded {
+            &:after {
+
+
+                display: inline-block;
+                height: inherit;
+                padding: 0;
+                position: absolute;
+                right: 10%;
+                transform: rotate(180deg);
+            }
+        }
+
+        .aui h4.prod-accrodion-h4 {
+
+            padding: 20px;
+
+            position: relative;
+        }
+
+        @include screen (414px,
+        767px,
+        landscape) {
+            .Product-section-wrap .desk-tab-view .table-Entry th:first-child {
+                width: 128px;
+            }
+        }
+
+        @include screen (768px,
+        1024px,
+        portrait) {
+            .Product-section-wrap .desk-tab-view .table-Entry th:first-child {
+                width: 179px;
+            }
+        }

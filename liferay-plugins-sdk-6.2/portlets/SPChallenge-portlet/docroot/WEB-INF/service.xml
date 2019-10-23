@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.spchallenge">
+	<author>pradeep</author>
+	<namespace>SPChallenge</namespace>
+
+	<entity name="SPChallenge" uuid="true" table="SPChallenge"
+		local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="spChallengeId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+
+		<!-- Custom fields -->
+		<column name="name" type="String"></column>
+		<column name="openTo" type="String"></column>
+		<column name="type" type="String"></column>
+		<column name="background" type="String"></column>
+		<column name="description" type="String"></column>
+		<column name="scope" type="String"></column>
+		<column name="benefits" type="String"></column>
+		<column name="budget" type="String"></column>
+		<column name="startDate" type="Date"></column>
+		<column name="endDate" type="Date"></column>
+		<column name="applyBy" type="Date"></column>
+		<column name="extras" type="String"></column>
+		<column name="active" type="boolean"></column>
+		<column name="notifyTo" type="String"></column>
+		<column name="scout" type="String"></column>
+		<column name="logoId" type="long"></column>
+		<column name="draft" type="boolean"></column>
+		<column name="budgetCcySign" type="String"></column>
+		<column name="brand" type="long"></column>
+		<column name="vpApprover" type="String"></column>
+		<column name="budgetApprover" type="String"></column>
+
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetLink" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetCategory"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetTag"></reference>
+	</entity>
+	<entity name="SPChallengeApplicant" local-service="true"
+		remote-service="false" table="SPChallengeApplicant" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spChallengeApplicantId" type="long" primary="true">
+		</column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+
+		<!-- Custom fields -->
+		<column name="applicantRefId" type="long"></column>
+		<column name="applicantType" type="String"></column>
+		<column name="spChallengeId" type="long"></column>
+		<column name="q1" type="String"></column>
+		<column name="q2" type="String"></column>
+		<column name="q3" type="String"></column>
+		<column name="q4" type="String"></column>
+		<column name="q5" type="String"></column>
+		<column name="q6" type="String"></column>
+		<column name="q7" type="String"></column>
+		<column name="q8" type="String"></column>
+		<column name="q9" type="String"></column>
+		<column name="q10" type="String"></column>
+		<column name="q11" type="String"></column>
+		<column name="q12" type="String"></column>
+		<column name="q13" type="String"></column>
+		<column name="q14" type="String"></column>
+		<column name="q15" type="String"></column>
+		<column name="q16" type="String"></column>
+		<column name="q17" type="String"></column>
+		<column name="q18" type="String"></column>
+		<column name="q19" type="String"></column>
+		<column name="q20" type="String"></column>
+		<column name="customStatus1" type="boolean"></column>
+		<column name="customStatus2" type="boolean"></column>
+		<column name="active" type="boolean"></column>
+		<column name="applicationStatus" type="int"></column>
+		<column name="notificationStatus" type="int"></column>
+
+		<finder name="ApplicantRefId" return-type="Collection">
+			<finder-column name="applicantRefId"></finder-column>
+		</finder>
+		<finder name="SPChallengeId" return-type="Collection" >
+			<finder-column name="spChallengeId"></finder-column>
+		</finder>		
+		<finder name="ChallengeIdApplicantRefId" return-type="SPChallengeApplicant"
+			where="active = 1 ">
+			<finder-column name="spChallengeId"></finder-column>
+			<finder-column name="applicantRefId"></finder-column>
+		</finder>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetLink" />
+		<reference package-path="com.liferay.portlet.asset" entity="AssetCategory"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetTag"></reference>
+	</entity>
+</service-builder>

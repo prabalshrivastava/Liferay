@@ -1,0 +1,88 @@
+$SPProduct-Primary-color:#ffffff;
+$SPProduct-Primary-color1:#000;
+$SPProduct-Primary-color2:#4a2f4b;
+$SPProduct-Primary-color3:#e9eaed;
+$SPProduct-Primary-color4:#f7f7f7;
+$SPProduct-customcolor1: #e0e7ee;
+$SPProduct-customcolor2:#f6f7f8;
+$SPProduct-customcolor3:#333333;
+$SPProduct-customcolor4:#788290;
+$SPProduct-customcolor5:#9f376b;
+$SPProduct-customcolor6:#fcfcfc;
+$SPProduct-customcolor7:#707070;
+$SPProduct-customcolor8:#f5f8fb;
+$SPProduct-customcolor9:#dfe0e4;
+$SPProduct-customcolor10:#fdfeff;
+$SPProduct-customcolor11:#49bd32;
+$SPProduct-customcolor12:#f5a623;
+$SPProduct-customcolor13:#d0021b;
+$SPProduct-customcolor14:#f59807;
+$SPProduct-customcolor15:#574057;
+$SPProduct-customcolor16:#4f3450;
+$SPProduct-customcolor17:#432c44;
+$SPProduct-customcolor18:#d5d5d5;
+$Error:#cc0000;
+$Error_success:#23A509;
+$bg-darkpink:#663374;
+
+$bg-light-pink:#fcfbfc;
+$bg-Raspberry:#b7446b;
+$bg-maroon:#9f376b;
+$bg-purple:#6a265e;
+$bg-scarlet:#3e033f;
+$Prod-bg-color: #f6f0f4;
+$Lp-lightpink:#e2d3dd;
+$Lp-header-light:#ece0e8;
+$Lp-bord-right:#e1d3db;
+$LP-bord-head:#9d7690;
+$Lp-video-bord:#656565;
+$Lp-whitesmoke:#f8f8f8;
+$font-heading-color:#7d3680;
+$font-inactive-color:#6e7a8c;
+$font-inactive-light:#c8d0d9;
+$font-active-color:#961f63;
+$SPProduct-border-color:#e5e5e5;
+$SPProduct-border-light:0.5px solid #e8dee4;
+$SPProduct-custom-border-color:#707982;
+$table-border-color:#e8dee4;
+$table-border-color1:#e6e9ec;
+$table-head1-bg:#faf3f7;
+$table-head-bg:#faf3f7;
+$table-body-bg:#fffcfe;
+$table-foot-bg:#fafafb;
+
+$SPProduct-font-11:11px;
+$SPProduct-font-12:12px;
+$SPProduct-font-14:14px;
+$SPProduct-font-16:16px;
+$SPProduct-font-18:18px;
+$SPProduct-font-20:20px;
+$SPProduct-font-24:24px;
+$SPProduct-font-30:30px;
+$SPProduct-font-weight-200:200;
+$SPProduct-font-weight-300:300;
+$SPProduct-font-weight-400:400;
+$SPProduct-font-weight-500:500;
+$SPProduct-font-weight-600:600;
+$SPProduct-font-weight-700:700;
+$SPProduct-font-weight-800:800;
+$SPProduct-button-font-color:#5f7081;
+$checkbox-bg:#90a1b5;
+
+$border-bottom-light:0.5px solid #e8dee4;
+$border-left-light:0.5px solid #e8dee4;
+$border-top-light:0.5px solid #e8dee4;
+$border-right-light:0.5px solid #e8dee4;
+$vis-hid:hidden;
+
+
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+

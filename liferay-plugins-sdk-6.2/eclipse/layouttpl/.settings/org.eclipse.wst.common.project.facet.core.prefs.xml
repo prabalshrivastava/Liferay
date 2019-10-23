@@ -1,0 +1,7 @@
+<root>
+  <facet id="liferay.layouttpl">
+    <node name="libprov">
+      <attribute name="provider-id" value="com.liferay.ide.eclipse.plugin.layouttpl.libraryProvider"/>
+    </node>
+  </facet>
+</root>

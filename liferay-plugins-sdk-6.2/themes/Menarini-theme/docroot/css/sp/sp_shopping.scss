@@ -1,0 +1,39 @@
+@import "_sp_custom_variables";
+@import "_sp_mixins";
+@import "sp_media-queries";
+
+.package-row{
+	text-align:left;
+	padding: 40px 20px;
+    border-top: 1px solid #ccc;
+}
+
+.package-row-left{
+	width : 88%;
+	margin-right:20px;
+}
+
+.package-row-right{
+	vertical-align:top;
+}
+
+.packageTitle{
+	padding-right:20px;
+    padding-bottom: 10px;
+}
+
+.package-row-left-title{
+	padding-bottom:10px!important;
+	width:88%;
+	text-align:left;
+}
+
+.cart-total{
+	border-top:1px dotted #ccc;
+}
+
+.cart-discount{
+	width: 78%;
+	text-align: right;
+    padding-right: 20px;
+}

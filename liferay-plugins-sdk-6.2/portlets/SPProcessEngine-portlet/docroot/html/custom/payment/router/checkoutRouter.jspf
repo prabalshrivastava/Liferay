@@ -1,0 +1,7 @@
+<%
+if ("stripe".equals(provider)) {
+%>
+	<%@ include file="/html/custom/payment/provider/stripe/checkout.jspf"  %>
+<%
+}
+%>

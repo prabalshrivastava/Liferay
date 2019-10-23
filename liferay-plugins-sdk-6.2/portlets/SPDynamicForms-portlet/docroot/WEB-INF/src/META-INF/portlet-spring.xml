@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.spdynamicforms.service.SPDynamicFormsLocalService" class="com.sambaash.platform.srv.spdynamicforms.service.impl.SPDynamicFormsLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spdynamicforms.service.SPDynamicFormsService" class="com.sambaash.platform.srv.spdynamicforms.service.impl.SPDynamicFormsServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spdynamicforms.service.SPFormAttachmentsLocalService" class="com.sambaash.platform.srv.spdynamicforms.service.impl.SPFormAttachmentsLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spdynamicforms.service.persistence.SPFormAttachmentsPersistence" class="com.sambaash.platform.srv.spdynamicforms.service.persistence.SPFormAttachmentsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spdynamicforms.service.SPFormStorageLocalService" class="com.sambaash.platform.srv.spdynamicforms.service.impl.SPFormStorageLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spdynamicforms.service.persistence.SPFormStoragePersistence" class="com.sambaash.platform.srv.spdynamicforms.service.persistence.SPFormStoragePersistenceImpl" parent="basePersistence" />
+</beans>

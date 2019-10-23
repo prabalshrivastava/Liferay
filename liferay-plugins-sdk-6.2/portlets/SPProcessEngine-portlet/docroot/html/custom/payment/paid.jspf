@@ -1,0 +1,16 @@
+	<div class="msg">
+		<div class="msg thankyou-msg"  tabindex="1">
+                    <div class="done-icon">
+                      <img src="/SPProcessEngine-portlet/images/done-icon.png" alt="Done">
+                    </div>
+                    <div class="success-msg-title">
+                      Payment received.
+                    </div>
+                    <div class="success-msg">
+                        The payment reference code is <%=payChargeRefId%>
+                      </div>  
+                  </div>
+          <script type="text/javascript">
+          parent.postMessage("scroll", "*");
+          </script>
+     </div>

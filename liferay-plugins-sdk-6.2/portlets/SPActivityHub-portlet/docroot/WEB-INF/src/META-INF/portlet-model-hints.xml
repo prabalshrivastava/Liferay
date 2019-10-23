@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.model.Conversation">
+		<field name="uuid" type="String" />
+		<field name="spConversationId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="entityClassId" type="long" />
+		<field name="entityClassName" type="String" />
+		<field name="entityId" type="long" />
+		<field name="sentByUserId" type="long" />
+		<field name="message" type="String" />
+		<field name="fileEntryId" type="String" />
+		<field name="associatedWith" type="long" />
+		<field name="restricted" type="int" />
+		<field name="status" type="int" />
+		<field name="parentConverstationId" type="long" />
+		<field name="currentPlId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.ConversationUser">
+		<field name="spConversationUserId" type="long" />
+		<field name="spConversationId" type="long" />
+		<field name="sentToUserId" type="long" />
+		<field name="status" type="long" />
+		<field name="entityClassId" type="long" />
+		<field name="entityId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.LogActivity">
+		<field name="spLogActivityId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="entityClassId" type="long" />
+		<field name="entityClassName" type="String" />
+		<field name="entityId" type="long" />
+		<field name="savedByUserId" type="long" />
+		<field name="activityTitle" type="String" />
+		<field name="activityType" type="String" />
+		<field name="activityOutcome" type="String" />
+		<field name="activityDate" type="Date" />
+		<field name="activityTime" type="String" />
+		<field name="activityContent" type="String" />
+		<field name="fileEntryId" type="String" />
+		<field name="associatedWith" type="long" />
+		<field name="status" type="int" />
+		<field name="parentLogActivityId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.model.Note">
+		<field name="spNoteId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="entityClassId" type="long" />
+		<field name="entityClassName" type="String" />
+		<field name="entityId" type="long" />
+		<field name="savedByUserId" type="long" />
+		<field name="noteTitle" type="String" />
+		<field name="noteContent" type="String" />
+		<field name="fileEntryId" type="String" />
+		<field name="associatedWith" type="long" />
+		<field name="status" type="int" />
+		<field name="parentNoteId" type="long" />
+	</model>
+</model-hints>

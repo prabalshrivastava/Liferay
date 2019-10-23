@@ -1,0 +1,1339 @@
+ @import "sp_mixins.scss";
+ @import "sp_media-queries.scss";
+
+ //Display & position
+$display-inlineblock:inline-block;
+$display-block:block;
+$display-none:none;
+$position-relative:relative;
+$position-absolute:absolute;
+$position-fixed:fixed;
+$position-static:static;
+ //sp_startups
+ body.noScroll {
+     /* ...or body.dialogShowing */
+     overflow: hidden;
+ }
+ 
+ body.ScrollActive {
+     /* ...or body.dialogShowing */
+     overflow-y: scroll;
+ }
+ 
+ body {
+  
+     margin: 0;
+     padding: 0;
+ }
+ 
+ .ytp-fullscreen-button.ytp-button {
+     display: none;
+ }
+ 
+ .cmi-max-width {
+     width: 100%;
+    
+     margin: 0 auto;
+ }
+ 
+ .max-width {
+     width: 100%;
+    
+     margin: 0 auto;
+ }
+ 
+ .cmi-search-container {
+     position: relative;
+     .cmiw-search-row {
+         position: relative;
+     }
+ }
+ 
+ .margin-40 {
+     margin: 40px;
+ }
+ 
+ //Heading
+ .cmi-listingsection-header {
+     @include flexbox();
+     @include align-items(center);
+    
+     margin-bottom: 10px;
+    
+     .cmi-heading-txt {
+         padding: 15px 0;
+         position: relative;
+         h2 {
+             padding: 0 20px;
+             margin: 0;
+            
+         }
+         &.h-width70 {
+             width: 70%;
+             &:after {
+                
+                 top: 1px;
+                 position: absolute;
+                 right: 0;
+                 height: 95%;
+                 width: 1px;
+                 
+             }
+         }
+         &.h-width20 {
+             width: 20%;
+             &:after {
+                
+                 top: 1px;
+                 position: absolute;
+                 right: 0;
+                 height: 95%;
+                 width: 1px;
+               
+             }
+         }
+         &.h-width10 {
+             width: 10%;
+         }
+     }
+ }
+ 
+ //CMI COVER
+ .cover-cmi-admin {
+     width: 100%;
+     margin: 0;
+     padding: 0;
+    
+     height: auto;
+ }
+ 
+ .cmi-cover-wrapper {
+     @include flexbox();
+     @include justify-content(flex-start);
+     @include align-items(center);
+     padding: 40px;
+ }
+ 
+ .cmi-coverImg {
+     width: 20%;
+     img {
+         width: 150px;
+         height: 150px;
+        
+     }
+ }
+ 
+ .cmi-Content {
+     h2 {
+        
+         margin: 0;
+         padding: 0 0 10px 0;
+     }
+     ul {
+         
+         margin: 0;
+         padding: 0;
+         li {
+             display: inline-block;
+            
+             padding-right: 10px;
+            
+             &:nth-child(2) {
+                 padding-left: 10px;
+             }
+            
+         }
+     }
+ }
+ 
+ .StatisticsSection {
+     position: $position-relative;
+     @include margin(0 0 20px);
+ }
+ 
+ .cmi-listingsection {
+     position: $position-relative;
+     @include margin(0);
+     @include flexbox();
+     &.left {
+         flex-direction: row;
+     }
+     &.top {
+         flex-direction: column;
+         .cmi-search-filters {
+             width: 100%;
+             .cmia-contentarea {
+                 @include flexbox();
+                 @include flex-wrap(wrap);
+                 @include justify-content(flex-start);
+                 height: 365px;
+                 overflow-y: scroll;
+              
+                 .cmia-section {
+                     display: inline-block;
+                     width: 20%;
+                     height: auto;
+                     position: relative;
+                     box-sizing: border-box;
+                 }
+             }
+         }
+         .cmiw-search-results-wrapper {
+             width: 100%;
+             margin: 0;
+         }
+     }
+ }
+ 
+ .startup-header {
+     .StatisticTitle {
+         @include margin(0);
+         @include padding(10px 0);
+         width: 30%;
+         display: $display-inlineblock;
+     }
+ }
+ 
+ a.cmi-button {
+     @include padding(10px 25px);
+     @include margin(0);
+   
+ }
+ 
+ .btnFilters {
+     button {
+         @include padding(8px 10px);
+         @include margin(0);
+        
+     }
+ }
+ 
+ .callOut-btn-small {
+     button {
+         @include padding(5px 10px);
+         @include margin(0);
+     }
+ }
+ 
+ .callOut-btn-medium {
+     button {
+         @include padding(10px 25px);
+         @include margin(0);
+     }
+ }
+ 
+ .callOut-btn-large {
+     button {
+         @include padding(15px 30px);
+         @include margin(0);
+     }
+ }
+ 
+ .Pull-Left {
+     float: left;
+ }
+ 
+ .Pull-Right {
+     float: right;
+ }
+ 
+ .Abs-right-top {
+     position: absolute;
+     top: 25px;
+     right: 25px;
+ }
+ 
+ .Abs-left-bot {
+     position: absolute;
+     left: 20px;
+     bottom: 20px;
+ }
+ 
+ .Right-Logo {
+     width: 100px;
+     img {
+         width: 100%;
+         height: 45px;
+         
+     }
+ }
+ 
+ .cmia-right-logo {
+     width: 100px;
+     img {
+      
+         width: 100%;
+         height: 45px;
+     }
+ }
+ 
+ .cmi-search-filters {
+     width: 23.2%;
+     position: $position-relative;
+     display: $display-inlineblock;
+     margin-right: 30px;
+     @include box-sizing(border-box);
+    
+     height: 100%;
+     .cmia-clear {
+         float: right;
+     }
+     .cmia-title {
+         @include margin(0);
+         @include padding(10px 0 30px);
+         width: 100%;
+         display: none;
+     }
+     .cmia-contentarea {
+         @include padding(20px 30px);
+         position: $position-relative;
+         width: 100%;
+         @include box-sizing(border-box);
+        
+         .cmia-header-title {
+             width: 100%;
+             display: $display-inlineblock;
+             @include margin(0);
+             @include padding(0 0 20px);
+         }
+         .cmia-section {
+             position: $position-relative;
+             @include box-sizing(border-box);
+             @include margin(0 0 20px);
+             .cmia-section-title {
+                 width: 100%;
+                 display: $display-inlineblock;
+                 @include margin(0);
+                 @include padding(0 0 10px);
+                
+             }
+             .FilterLink-text {
+                 position: $position-relative;
+                 @include box-sizing(border-box);
+                
+                
+             }
+             .cmia-section-item {
+                 position: $position-relative;
+                 @include padding(0 0 10px 0);
+                 &.all-categories {
+                     @include padding(0);
+                     width: 100%;
+                     display: inline-block;
+                     margin: 0;
+                     @include flexbox();
+                     width: 100%;
+                     @include align-items(center);
+                     a {
+                         padding: 10px 0 10px 0px;
+                         display: block;
+                         width: 100%;
+                         margin-bottom: 0px;
+
+                         padding-bottom: 5px;
+                       
+                     }
+                     img.leftarrow {
+                         width: 15px;
+                         height: 15px;
+                         margin-top: 5px;
+                         margin-right: 5px;
+                     }
+                 }
+                 label {
+                    
+                     display: inline-block;
+                     margin-bottom: 0;
+                     padding-left: 20px;
+                 }
+                 input {
+                     position: relative;
+                     margin-top: 3px;
+                     margin-left: -20px;
+                 }
+                 .control-group {
+                     margin-bottom: 0px;
+                 }
+                 a {
+                     padding: 5px 0 5px 5px;
+                     display: block;
+                     width: 100%;
+                     margin-bottom: 9px;
+                     //styles
+                     color: #555;
+                     font-size: 10pt;
+                     font-weight: 400;
+                     line-height: normal;
+                     text-decoration: none;
+                 }
+             }
+         }
+     }
+ }
+ 
+ //Filter Content section
+ .cmiw-search-results-wrapper {
+     width: 75%;
+     position: $position-relative;
+     display: $display-inlineblock;
+     height: auto;
+     @include box-sizing(border-box);
+     @include margin(0);
+     &.fullWidth {
+         width: 100%;
+     }
+ }
+ 
+ .cmi-applicationstatus {
+     width: 20%;
+     @include flexbox();
+     @include flex-direction(row);
+     @include justify-content(center);
+     @include align-items(center);
+     position: relative;
+     &:after {
+        
+         top: 5px;
+         position: absolute;
+         right: 0;
+         height: 95%;
+         width: 1px;
+        
+     }
+ }
+ 
+ .cmi-editSec {
+     width: 10%;
+     @include flexbox();
+     @include flex-direction(row);
+     @include justify-content(center);
+     @include align-items(center);
+     position: relative;
+ }
+ 
+ .statusSec {
+     width: 45px;
+     margin: 0 20px;
+     position: relative;
+     a {
+       
+         margin: 0;
+         padding: 0;
+         img {
+             width: 100%;
+             max-width: 50px;
+         }
+     }
+     .tooltiptext {
+         visibility: hidden;
+         width: 120px;
+        
+         padding: 5px 10px;
+         position: absolute;
+        
+        
+         top: 100%;
+         left: 50%;
+         margin-left: -59px;
+       
+         &:after {
+            
+             position: absolute;
+             bottom: 100%;
+             left: 50%;
+             margin-left: -5px;
+            
+         }
+     }
+     /* Show the tooltip text when you mouse over the tooltip container */
+     &:hover {
+         .tooltiptext {
+             visibility: visible;
+            
+         }
+     }
+ }
+ 
+ 
+ 
+ 
+ 
+ .cmi-sort-filter {
+     position: $position-relative;
+     width: 100%;
+     @include box-sizing(border-box);
+     display: $display-inlineblock;
+     height: auto;
+     padding: 10px;
+     margin-bottom: 10px;
+     .cmi-sort-filterwrap {
+         position: $position-relative;
+         width: 100%;
+         @include box-sizing(border-box);
+         display: inline-block;
+         @include margin(0);
+         @include flexbox();
+         @include justify-content(flex-end);
+         .cmi-sort-searchdiv {
+             position: $position-relative;
+             display: $display-inlineblock;
+             width: 60%;
+             input[type=text] {
+                 @include padding(10px 30px 10px 40px);
+                 width: 100%;
+                
+             }
+             .cmi-text-search-icon {
+                 position: absolute;
+                 left: 0;
+                 top: 10px;
+                 margin-left: 15px;
+               
+                 width: 15px;
+                 img {
+                     width: 15px;
+                 }
+             }
+         }
+         .cmi-mobile-filtericon {
+             display: none;
+         }
+         .cmi-sort-sortingdiv {
+             position: $position-relative;
+             @include flexbox();
+             width: 30%;
+             @include justify-content(flex-end);
+             label {
+                 @include padding(10px 15px);
+                 width: 35%;
+                
+                 display: inline;
+             }
+             select {
+                 @include padding(10px 15px);
+                 width: 60%;
+                
+             }
+         }
+         .St-Link {
+             position: $position-relative;
+             display: $display-inlineblock;
+             width: 15%;
+             margin-left: 20px;
+             button {
+                 @include padding(10px 15px);
+                 width: 100%;
+             }
+         }
+     }
+ }
+ 
+ .cmiw-search-results {
+     display: $display-inlineblock;
+     min-width: 100%;
+     .cmi-content-wrapper {
+        
+         @include padding(0);
+         @include margin(0 0 10px 0);
+         display: flex;
+         @include box-sizing(border-box);
+         width: 100%;
+        
+         .cmi-image-wrap {
+             display: $display-inlineblock;
+             @include padding(0);
+            
+             &.cmi-img-application {
+                 width: 20%;
+                 height: auto;
+                 @include box-sizing(border-box);
+                 display: $display-inlineblock;
+                padding:20px 0;
+                 img {
+                     width: 100%;
+                     height: 230px;
+                 }
+             }
+             &.cmi-img-half {
+                 width: 25%;
+                 @include box-sizing(border-box);
+                 @include padding(20px);
+                 display: $display-inlineblock;
+                 img {
+                     width: 162px;
+                     height: 162px;
+                    
+                 }
+             }
+             &.cmi-img-full {
+                 width: 30%;
+                 height: 230px;
+                 @include box-sizing(border-box);
+                 display: $display-inlineblock;
+                
+                 img {
+                     width: 100%;
+                     height: 230px;
+                   
+                 }
+             }
+             .pi_button {
+                 button {
+                     margin-top: 10px;
+                  
+                     padding: 5px 10px;
+                    
+                    
+                 }
+             }
+         }
+         .cmi-inner-content {
+             display: $display-inlineblock;
+             @include margin(0);
+             @include padding(0);
+             vertical-align: top;
+             height: 100%;
+             min-height: 230px;
+             &.cmi-full-content {
+                 width: 69%;
+                 @include padding(20px);
+                 @include box-sizing(border-box);
+                 position: $position-relative;
+             }
+             &.cmi-application {
+                 width: 50%;
+                 @include padding(20px);
+                 @include box-sizing(border-box);
+                 position: $position-relative;
+                 &:after {
+                    
+                     top: 5px;
+                     position: absolute;
+                     right: 0;
+                     height: 95%;
+                     width: 1px;
+                   
+                 }
+             }
+             &.cmi-half-content {
+                 width: 74%;
+                 @include padding(20px 20px 20px 30px);
+                 @include box-sizing(border-box);
+                 position: $position-relative;
+             }
+             .cmi-inner-title {
+                 width: 80%;
+               
+             }
+             .cmi-inner-ratings {
+                 @include padding(5px 0);
+             }
+             .cmi-inner-postarea {
+                 @include padding(5px 0);
+               
+             }
+             .cmi-inner-description {
+                 @include padding(5px 0 20px);
+                 display: $display-inlineblock;
+                 p {
+                     @include padding(0);
+                     @include margin(0);
+                    
+                 }
+             }
+             .cmi-button-wrap {
+                 position: absolute;
+                 bottom: 20px;
+                 right: 20px;
+                 @include padding(0);
+                 a.cmi-button {
+                     @include padding(10px 25px);
+                     @include margin(0);
+                    
+                 }
+             }
+         }
+         .SF-Callout {
+             display: inline-block;
+            
+             position: relative;
+             width: 100%;
+             @include padding(10px 20px 10px 40px);
+         }
+     }
+ }
+
+  .bfFormtagUI {
+        width: 50%;
+        margin-top: 20px;
+        max-height: 210px;
+        overflow: auto;
+    }
+ 
+ //MOBILE VIEW
+ @include screen (320px, 480px) {
+     .cmiw-search-row.margin-40 {
+         margin: 20px;
+     }
+ .bfFormtagUI {
+        width: 100%;
+        
+    }
+     .cmi-cover-wrapper {
+         @include flex-direction(column);
+         @include justify-content(center);
+         padding: 40px;
+        
+     }
+     .cmi-coverImg {
+         width: 100%;
+         img {
+             width: 100px;
+             height: 100px;
+            
+         }
+     }
+     .cmi-Content {
+         width: 100%;
+     }
+     .show-more-on {
+         .cmia-section-wrapper {
+             height: 160px !important;
+             overflow: hidden;
+         }
+     }
+     .StatisticsSection {
+         display: none;
+     }
+     //button
+     .btnFilters {
+         button {
+             @include padding(2px 6px);
+             @include margin(0);
+         }
+     }
+     ////BOX-CONTAINER END
+     .outer {
+         display: block !important;
+         position: absolute;
+         margin: 15px 20px 0 0;
+         right: 0;
+     }
+     //LEFT FILTER SECTION
+     .cmi-listingsection {
+         &.top {
+             .cmi-search-filters {
+                 .cmia-contentarea {
+                     height: auto;
+                     overflow-y: hidden;
+                     .cmia-section {
+                         width: 100%;
+                     }
+                 }
+             }
+             .cmiw-search-results-wrapper {
+                 width: 100%;
+             }
+         }
+     }
+     .cmi-search-filters {
+        
+         width: 100%;
+         display: none;
+         position: fixed;
+       
+         left: 0;
+         top: 0;
+         margin-top: 62px;
+       
+         @include box-sizing(border-box);
+         padding: 10px 20px;
+         height: 100vh;
+         overflow: hidden;
+        
+         .cmia-title {
+             @include padding(10px 0 10px);
+             display: none;
+         }
+         .cmia-contentarea {
+             @include padding(20px 30px);
+             position: $position-relative;
+             width: 100%;
+             height: 70vh;
+             overflow: scroll;
+             @include box-sizing(border-box);
+            
+         }
+     }
+     //LEFT FILTER SECTION END
+     //SEARCH
+     .cmi-sort-filter {
+         position: $position-relative;
+         width: 100%;
+         height: auto;
+         padding: 12px;
+         margin-bottom: 10px;
+       
+         .cmi-sort-filterwrap {
+             position: $position-relative;
+             width: 100%;
+             @include flexbox();
+             @include justify-content(flex-start);
+             .cmi-sort-searchdiv {
+                 width: 85%;
+                 margin-right: 10px;
+             }
+             .cmi-mobile-filtericon {
+                 display: inline-block;
+                 width: 15%;
+                 position: relative;
+                 a {
+                     width: 38px;
+                     height: 100%;
+                     position: absolute;
+                     @include flexbox();
+                     top: 0;
+                     right: 0;
+                     @include align-items(center);
+                     @include justify-content(center);
+                   
+                     img {
+                         width: 15px;
+                         height: 15px;
+                     }
+                 }
+             }
+             .cmi-sort-sortingdiv {
+                 display: none;
+             }
+             .St-Link {
+                 display: none;
+             }
+         }
+     }
+     //SEARCH END
+     //RIGHT CONTENT SECTION
+     .cmiw-search-results-wrapper {
+         width: 100%;
+         margin: 0;
+     }
+     .cmi-listingsection-header {
+         display: none;
+     }
+     .cmiw-search-results .cmi-content-wrapper {
+         @include flex-direction(column);
+     }
+     .cmiw-search-results .cmi-content-wrapper .cmi-image-wrap.cmi-img-application {
+         width: 100%;
+     }
+     .cmiw-search-results .cmi-content-wrapper .cmi-inner-content.cmi-application {
+         width: 100%;
+     }
+     .cmi-applicationstatus {
+         width: 100%;
+     }
+     .cmi-editSec {
+         width: 100%;
+         padding-bottom: 15px;
+     }
+     .cmiw-search-results {
+         display: block;
+         .cmi-content-wrapper {
+             .cmi-image-wrap {
+                 display: $display-inlineblock;
+                 @include padding(0);
+                 &.cmi-img-half {
+                     width: 100%;
+                     @include padding(10px);
+                     img {
+                         width: 130px;
+                         height: 100%;
+                       
+                     }
+                 }
+                 &.cmi-img-full {
+                     width: 100%;
+                     height: 230px;
+                     img {
+                         width: 100%;
+                         height: 230px;
+                         
+                     }
+                 }
+             }
+             .cmi-inner-content {
+                 @include margin(0);
+                 @include padding(0);
+                 height: auto;
+                 min-height: auto;
+                 &.cmi-full-content {
+                     width: 100%;
+                     @include padding(10px);
+                 }
+                 &.cmi-half-content {
+                     width: 100%;
+                     @include padding(20px);
+                 }
+                 .cmi-inner-title {
+                     width: 100%;
+                 }
+                 .cmi-inner-ratings {
+                     @include padding(0);
+                 }
+                 .cmi-inner-postarea {
+                     @include padding(2px 0);
+                 }
+                 .cmi-inner-description {
+                     @include padding(5px 0 20px);
+                     display: $display-inlineblock;
+                     position: $position-relative;
+                     width: 100%;
+                     p {
+                         @include padding(0);
+                         @include margin(0);
+                         width: 100%;
+                         display: inline;
+                         word-wrap: break-word;
+                     }
+                 }
+                 .cmi-button-wrap {
+                     position: relative;
+                     bottom: 0;
+                     @include padding(10px 5px);
+                     left: 0;
+                     a.cmi-button {
+                         @include padding(10px 25px);
+                         @include margin(0);
+                     }
+                 }
+             }
+             .SF-Callout {
+                 width: 100%;
+                 @include padding(10px 20px 10px 40px);
+             }
+             .callOut-btn-medium {
+                 button {
+                     padding: 5px 10px;
+                 }
+             }
+             .btnFilters.Abs-right-top {
+                 float: none;
+                 position: relative;
+                 @include padding(3px 0);
+                 top: 0;
+                 right: 0;
+             }
+         }
+     }
+     //RIGHT CONTENT SECTION END
+ }
+ 
+ @include screen (481px, 766px) {
+     .bfFormtagUI {
+        width: 100%;
+        
+    }
+     .cmi-listingsection-header
+     {
+        display: none;
+     }
+     .cmiw-search-results .cmi-content-wrapper {
+         @include flex-direction(column);
+     }
+     .cmiw-search-results .cmi-content-wrapper .cmi-image-wrap.cmi-img-application {
+         width: 100%;
+     }
+     .cmiw-search-results .cmi-content-wrapper .cmi-inner-content.cmi-application {
+         width: 100%;
+     }
+     .cmi-applicationstatus {
+         width: 100%;
+     }
+     .cmi-editSec {
+         width: 100%;
+         padding-bottom: 15px;
+     }
+     .cmi-cover-wrapper {
+         @include flex-direction(column);
+         @include justify-content(center);
+         padding: 40px;
+        
+     }
+     .cmi-coverImg {
+         width: 100%;
+         img {
+             width: 100px;
+             height: 100px;
+             
+         }
+     }
+     .cmi-Content {
+         width: 100%;
+     }
+     .show-more-on {
+         .cmia-section-wrapper {
+             height: 170px !important;
+             overflow: hidden;
+         }
+     }
+     .StatisticsSection {
+         display: none;
+     }
+     .outer {
+         display: block !important;
+         position: absolute;
+         margin: 15px 20px 0 0;
+         right: 0;
+     }
+     .cmi-listingsection {
+         &.top {
+             .cmi-search-filters {
+                 .cmia-contentarea {
+                     height: auto;
+                     overflow-y: hidden;
+                     .cmia-section {
+                         width: 100%;
+                     }
+                 }
+             }
+             .cmiw-search-results-wrapper {
+                 width: 100%;
+             }
+         }
+     }
+     .cmi-search-filters {
+       
+         width: 100%;
+         display: none;
+         position: fixed;
+        
+         left: 0;
+         top: 0;
+         margin-top: 62px;
+        
+         @include box-sizing(border-box);
+         padding: 10px 20px;
+         height: 100vh;
+         overflow: hidden;
+        
+         .cmia-title {
+             @include padding(10px 0 10px);
+         }
+         .cmia-contentarea {
+             @include padding(20px 30px);
+             position: $position-relative;
+             width: 100%;
+             height: 70vh;
+             overflow: scroll;
+             @include box-sizing(border-box);
+
+         }
+     }
+     .cmiw-search-results-wrapper {
+         width: 100%;
+     }
+     .cmiw-search-results {
+         .cmi-content-wrapper {
+             display: inline-block;
+             .cmi-image-wrap {
+                 display: $display-inlineblock;
+                 @include padding(0);
+                 &.cmi-img-half {
+                     width: 100%;
+                     @include padding(10px);
+                     img {
+                         width: 100px;
+                         height: 100px;
+                     }
+                 }
+                 &.cmi-img-full {
+                     width: 100%;
+                     height: 230px;
+                     img {
+                         width: 100%;
+                         height: 230px;
+                        
+                     }
+                 }
+                 .cmi-inner-title {
+                     width: 58%;
+                 }
+             }
+             .cmi-inner-content {
+                 @include margin(0);
+                 @include padding(0);
+                 &.cmi-full-content {
+                     width: 100%;
+                     @include padding(10px);
+                 }
+                 &.cmi-half-content {
+                     width: 100%;
+                     @include padding(20px);
+                 }
+                 .cmi-inner-ratings {
+                     @include padding(0);
+                 }
+                 .cmi-inner-postarea {
+                     @include padding(2px 0);
+                 }
+                 .cmi-inner-description {
+                     @include padding(5px 0 20px);
+                     display: $display-inlineblock;
+                     p {
+                         @include padding(0);
+                         @include margin(0);
+                     }
+                 }
+                 .cmi-button-wrap {
+                     left: 20px;
+                 }
+             }
+             .SF-Callout {
+                 width: 100%;
+                 @include padding(10px 20px 10px 40px);
+             }
+             .callOut-btn-medium {
+                 button {
+                     padding: 5px 10px;
+                 }
+             }
+         }
+     }
+     //SEARCH
+     .cmi-sort-filter {
+         position: $position-relative;
+         width: 100%;
+         .cmi-sort-filterwrap {
+             position: $position-relative;
+             width: 100%;
+             @include flexbox();
+             @include justify-content(flex-start);
+             .cmi-sort-searchdiv {
+                 width: 85%;
+                 margin-right: 10px;
+             }
+             .cmi-mobile-filtericon {
+                 display: inline-block;
+                 width: 15%;
+                 position: relative;
+                 a {
+                     padding: 7px 15px 10px 15px;
+                     width: auto;
+                     position: absolute;
+                     right: 0;
+                    
+                     img {
+                         width: 15px;
+                         height: 15px;
+                     }
+                 }
+             }
+             .cmi-sort-sortingdiv {
+                 display: none;
+             }
+             .St-Link {
+                 display: none;
+             }
+         }
+     }
+     //SEARCH END
+ }
+ 
+ @include screen (767px, 1024px) {
+     .show-more-on {
+         .cmia-section-wrapper {
+             height: 170px !important;
+             overflow: hidden;
+         }
+     }
+     .cmi-search-filters {
+         width: 32%;
+     }
+     .cmiw-search-results-wrapper {
+         width: 77%;
+     }
+     .cmiw-search-results {
+         .cmi-content-wrapper {
+             &.cmi-image-wrap.cmi-img-half {
+                 width: 35%;
+             }
+         }
+     }
+     .cmiw-search-results {
+         .cmi-content-wrapper {
+             .cmi-inner-content {
+                 &.cmi-full-content {
+                     width: 69%;
+                 }
+                 .cmi-inner-title {
+                     width: 215px;
+                 }
+             }
+         }
+     }
+     //SEARCH
+     .cmi-sort-filter {
+         position: $position-relative;
+         width: 100%;
+         @include flexbox();
+         .cmi-sort-filterwrap {
+             position: $position-relative;
+             width: 100%;
+             .cmi-sort-searchdiv {
+                 width: 100%;
+             }
+             .cmi-sort-sortingdiv {
+                 width: 100%;
+                 @include flexbox();
+                 @include justify-content(flex-end);
+             }
+             .St-Link {
+                 width: 100%;
+                 margin-left: 10px;
+             }
+         }
+     }
+     //SEARCH END
+ }
+ 
+ @include screen (767px, 1024px, portrait) {
+     .show-more-on {
+         .cmia-section-wrapper {
+             height: 170px !important;
+             overflow: hidden;
+         }
+     }
+     .outer {
+         display: block !important;
+         position: absolute;
+         margin: 15px 20px 0 0;
+         right: 0;
+     }
+     .cmi-listingsection {
+         &.top {
+             .cmi-search-filters {
+                 .cmia-contentarea {
+                     height: auto;
+                     overflow-y: hidden;
+                     .cmia-section {
+                         width: 100%;
+                     }
+                 }
+             }
+             .cmiw-search-results-wrapper {
+                 width: 100%;
+             }
+         }
+     }
+     .cmi-search-filters {
+     
+         width: 100%;
+         display: none;
+         position: fixed;
+
+         left: 0;
+         top: 0;
+         margin-top: 62px;
+      
+         @include box-sizing(border-box);
+         padding: 10px 20px;
+         height: 100vh;
+         overflow: hidden;
+        
+         .cmia-title {
+             @include padding(10px 0 10px);
+         }
+         .cmia-contentarea {
+             @include padding(20px 30px);
+             position: $position-relative;
+             width: 100%;
+             height: 70vh;
+             overflow: scroll;
+             @include box-sizing(border-box);
+            
+         }
+     }
+     .cmiw-search-results-wrapper {
+         width: 100%;
+     }
+     //SEARCH
+     .cmi-sort-filter {
+         position: $position-relative;
+         width: 100%;
+         @include flexbox();
+         .cmi-sort-filterwrap {
+             position: $position-relative;
+             width: 100%;
+             .cmi-sort-searchdiv {
+                 width: 90%;
+             }
+             .cmi-mobile-filtericon {
+                 display: inline-block;
+                 width: 10%;
+                 position: relative;
+                 a {
+                     padding: 7px 15px 10px 15px;
+                     width: auto;
+                     position: absolute;
+                     right: 0;
+                     
+                     img {
+                         width: 15px;
+                         height: 15px;
+                     }
+                 }
+             }
+             .cmi-sort-sortingdiv {
+                 display: none;
+             }
+             .St-Link {
+                 display: none;
+             }
+         }
+     }
+     //SEARCH END
+ }
+ 
+
+ /*  PROGRESS BUTTON */
+ /* Button container */
+ 
+ .aui {
+     .progress-button {
+         position: relative;
+         display: inline-block;
+        
+         width: 10%;
+         min-width: 100px;
+         margin: 0 0 0 20px;
+     }
+     /* Button style */
+     .progress-button button {
+         display: block;
+         margin: 0 auto;
+         padding: 0;
+         width: 100px;
+         height: 40px;
+        
+     }
+    
+     /* Common style of SVGs */
+     .progress-button svg {
+         position: absolute;
+         top: 0;
+         left: 50%;
+         -webkit-transform: translateX(-50%);
+         transform: translateX(-50%);
+         pointer-events: none;
+     }
+    
+     /* exportloading, success and error effects */
+     .exportloading.progress-button button {
+         width: 40px;
+        
+     }
+   
+    
+ }
+ 
+ //styles

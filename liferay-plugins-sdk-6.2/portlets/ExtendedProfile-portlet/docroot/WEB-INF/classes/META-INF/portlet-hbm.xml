@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.extendedprofile.model.SPCertification" />
+	<import class="com.sambaash.platform.srv.extendedprofile.model.SPCompetency" />
+	<import class="com.sambaash.platform.srv.extendedprofile.model.SPJobRole" />
+	<class name="com.sambaash.platform.srv.extendedprofile.model.impl.SPCertificationImpl" table="SPCertification">
+		<cache usage="read-write" />
+		<id name="classPk" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="certificationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.extendedprofile.model.impl.SPCompetencyImpl" table="SPCompetency">
+		<cache usage="read-write" />
+		<id name="classpk" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="competencyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="competencyLevelId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="belongsToJobRole" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="publicView" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.sambaash.platform.srv.extendedprofile.model.impl.SPJobRoleImpl" table="SPJobRole">
+		<cache usage="read-write" />
+		<id name="spJobRoleId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="functionalGroupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="JobLevelId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="careerPathId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

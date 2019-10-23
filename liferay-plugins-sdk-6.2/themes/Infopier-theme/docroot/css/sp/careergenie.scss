@@ -1,0 +1,259 @@
+@import "sp_media-queries";
+
+.per_l .detailPage_wrap {
+    padding-top: 0;
+}
+
+.detailPage_wrap {
+  	padding: 0px 0;
+    /* padding-top: 52px; */
+    padding-bottom: 0;
+    background: #fff;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.boxPadding {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.detailPage_personas {
+    position: relative;
+    min-height: 600px;
+    height: 970px;
+    overflow: hidden;
+    background: url(../images/careergenie/bg_slash_pillars.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+.careerGenie_bg_wrap {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.careerGenie_bg_wrap .careerGenie_bg{
+    position: fixed;
+    background-attachment: fixed;
+}
+
+
+.careerGenie_wrap {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    z-index: 2;
+    padding: 20px 0;
+ 
+    color: #fff;
+}
+
+.careerGenie_wrap .careerGenie_head {
+    padding: 0 80px;
+}
+
+.careerGenie_wrap .careerGenie_head .h1 {
+	
+	font-size: 24pt;
+    margin: 0;
+    padding: 0;
+    color:#7d3680;
+    font-weight: 400;
+}
+
+.careerGenie_Subtext {
+    padding: 5px 80px;
+}
+
+.careerGenie_Subtext p {
+    font-size: 14px ;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    font-weight: 700;
+  }
+
+
+
+.careerGenie_description {
+    padding: 5px 80px;
+}
+
+  .careerGenie_description p {
+    font-size: 14px;
+    margin: 0;
+    padding: 10px 0px;
+    color: #333333;
+    font-weight: 400;
+  }
+  .careerGenie_description ul{
+  margin:0;
+  padding:0;
+}
+
+ .careerGenie_description ul li{
+  font-size: 14px;
+    color: #333;
+    font-weight: 400;
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 0px 15px;
+}
+
+.header_navigation ul.mainMenu > li:hover > a span{
+    color: #794F03;
+}
+
+.header_navigation ul.mainMenu > li.activePg>a span{
+    color: #794F03;
+  border-bottom: 1px solid #794F03;
+}
+
+.careerGenie_nav ul li {
+    text-align: left;
+    display: block;
+    font-size: 0;
+    padding: 20px 80px;
+    cursor: pointer;
+}
+.careerGenie_nav {
+    display: block;
+    padding: 0;
+}
+
+.careerGenie_nav_details {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: top;
+    width: 80%;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+   
+}
+
+.careerGenie_nav_icon {
+   display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 20%;
+    overflow: hidden;
+    padding: 4px 28px;
+    max-width: 200px;
+}
+.border-rightg
+{
+    position: relative;
+    top: 22px;
+    display: inline-block;
+    height: 40px;
+    width: 1px;
+    border-right: 1px solid #979797;
+}
+.careerGenie_nav_icon img
+{
+	width:100%;
+	height:auto;
+}
+.careerGenie_nav_title {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 25%;
+    font-size: 16px;
+    color: #7d3680;
+    height: 30px;
+    padding: 4px 9px;
+    font-weight: bold;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+
+.careerGenie_nav_description {
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 74%;
+font-size: 14px;
+color: #333333;
+font-weight:400;
+    padding: 0 60px;
+    padding-right: 0;
+    letter-spacing: 0;
+}
+
+
+
+
+
+
+#careerGenie-online-bg{
+    background-image: url("../images/careergenie/bg_slash_pillars.png");
+}
+
+#careerGenie-fitness-bg{
+    background-image: url("../images/careergenie/bg_slash_systems_mgmt.png");
+}
+
+#careerGenie-spiritual-bg{
+    background-image: url("../images/careergenie/bg_slash_pillars.png");
+}
+#careerGenie-lifestyle-bg{
+    background-image: url("../images/careergenie/bg_slash_systems_mgmt.png");
+}
+
+.detailPage_personas {
+    background: url("../images/careergenie/bg_slash_pillars.png") repeat fixed center center / cover #8c5219;
+}
+
+.animate {
+    -webkit-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+
+.ContentDescription
+{
+	font-size: 10pt;
+    text-align: left;
+    color: #333;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 18px;
+    padding: 0 12px;
+}
+
+@include screen(320px, 768px){
+	.border-rightg
+	{
+		display:none;
+	}
+}
+
+

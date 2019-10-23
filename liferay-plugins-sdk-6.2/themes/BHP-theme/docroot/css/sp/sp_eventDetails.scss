@@ -1,0 +1,209 @@
+                @import "_sp_custom_variables";
+                @import "sp_media-queries";
+                @import "_sp_mixins";
+                //sp_startups
+                address {
+                    font-style: normal;
+                }
+                
+                .btnDetails {
+                    button {
+                        &.Blue {
+                            background-color: $custom-color-145;
+                            @include fontcolor-size-weight($white, $fontSize-smaller, $fontWeight-regular);
+                            border: none;
+                            &:hover {
+                                background-color: $custom-color-hover;
+                                color: $white;
+                            }
+                        }
+                        &.Green {
+                            background-color: $custom-color-green;
+                            @include fontcolor-size-weight($white, $fontSize-smaller, $fontWeight-regular);
+                            &:hover {
+                                background-color: $custom-color-green-hover;
+                                color: $white;
+                            }
+                        }
+                        &.Yellow {
+                            background-color: $custom-color-60;
+                            @include fontcolor-size-weight($black, $fontSize-smaller, $fontWeight-bold);
+                            &:hover {
+                                background-color: $custom-color-yellow-hover;
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+                
+                .g-detail-banner-container {
+                    background-image: linear-gradient(282deg, #00b388, #0085ca 50%, #005eb8);
+                    background-image: -webkit-linear-gradient(192deg, #00b388, #0085ca 50%, #005eb8);
+                    background-image: -o-linear-gradient(192deg, #00b388, #0085ca 50%, #005eb8);
+                    background-image: linear-gradient(282deg, #00b388, #0085ca 50%, #005eb8);
+                }
+                
+                .gdb-content-section {
+                    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+                    .gdb-image {
+                        @include margin(30px 0 0 0);
+                    }
+                    .gdb-title {
+                        @include fontcolor-size-weight($custom-color-title, $fontSize-small, $fontWeight-medium);
+                        text-shadow: 1px 1px #555;
+                    }
+                    .gdb-description {
+                        ul {
+                            li {
+                                p {
+                                    font-size: $fontSize-smaller;
+                                    font-weight: $fontWeight-regular;
+                                    color: #ffffff;
+                                }
+                                &.separated {
+                                    &:after {
+                                        background-color: $sun-yellow;
+                                        border: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .gdb-navlink {
+                    background-color: rgba(0, 94, 184, 0.5);
+                    ul {
+                        li {
+                            a {
+                                font-size: $fontSize-smaller;
+                                font-weight: $fontWeight-regular;
+                                color: #ffffff;
+                                &:hover {
+                                    color: $sun-yellow;
+                                }
+                                &.is-active {
+                                    color: $sun-yellow;
+                                }
+                            }
+                            &.separated {
+                                &:after {
+                                    background-color: $sun-yellow;
+                                    border: none;
+                                }
+                            }
+                            &:last-child {
+                                &.separated {
+                                    &:after {
+                                        background-color: #000;
+                                        border: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                //aui-gallery
+                .lightbox {
+                    &:after {
+                        color: $sun-yellow;
+                        font-size: $fontSize-medium;
+                    }
+                }
+                
+                .lightbox-background {
+                    background: rgba(0, 0, 0, 0.95);
+                }
+                
+                .lightbox-caption {
+                    background: rgba(0, 0, 0, 0.9);
+                    color: rgba(255, 255, 255, 1);
+                    font-size: 20px;
+                }
+                
+                .lightbox-loader {
+                    svg path,
+                    svg rect {
+                        fill: $sun-yellow;
+                    }
+                }
+                
+                //aui-gallery end
+                .gdb-box-sec {
+                    background-color: $white;
+                    border: solid 1px $custom-color-border;
+                }
+                
+                .detail-content-wrap {
+                    iframe {
+                        border: solid 1px #979797;
+                    }
+                }
+                
+                .detailed-title {
+                    @include fontcolor-size-weight($medium-gray, $fontSize-small, $fontWeight-medium);
+                }
+                
+                .detailed-title-big {
+                    @include fontcolor-size-weight($medium-gray, $fontSize-small , $fontWeight-medium);
+                }
+                
+                .detailed-description {
+                    @include fontcolor-size-weight($medium-gray, $fontSize-standard, $fontWeight-light);
+                    text-align: justify;
+                }
+                
+                .detailed-title-small {
+                    @include fontcolor-size-weight($medium-gray, $fontSize-smaller, $fontWeight-regular);
+                }
+                
+                .detailed-title-small-bold {
+                    @include fontcolor-size-weight($medium-gray, $fontSize-smaller, $fontWeight-black);
+                }
+                
+                .box-section {
+                    .layout-contact {
+                        border-right: solid 1px #e1e1e1;
+                        &:last-child {
+                            border-right: 0;
+                        }
+                        .cont-desc {
+                            font-size: 14px;
+                            font-weight: 700;
+                            color: #1a5aa5;
+                        }
+                        a {
+                            color: $landingPage-color2;
+                        }
+                        &:hover {
+                            a {
+                                color: $custom-color-link;
+                            }
+                        }
+                    }
+                }
+                
+                @include screen (320px, 480px) {
+                    .box-section {
+                        .layout-contact {
+                            border-right: 0;
+                        }
+                    }
+                }
+                
+                @include screen (360px, 640px) {
+                    .box-section {
+                        .layout-contact {
+                            border-right: 0;
+                        }
+                    }
+                }
+                
+                @include screen (768px, 1024px, portrait) {
+                    .box-section {
+                        .layout-contact {
+                            border-right: 0;
+                        }
+                    }
+                }

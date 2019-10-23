@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.genericsearch.model.GSFavourite">
+		<field name="SPGSFavouriteId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="createdBy" type="long" />
+		<field name="layoutId" type="long" />
+		<field name="portletInstanceId" type="String" />
+		<field name="config" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="permissionType" type="int" />
+	</model>
+</model-hints>

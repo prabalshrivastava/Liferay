@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<custom-sql>
+	<sql id="com.sambaash.platform.srv.service.persistence.SPParameterFinder.findByNamePrefix">
+		<![CDATA[
+			SELECT
+				*
+			FROM
+				SPParameter
+			WHERE
+				name LIKE ? 
+		]]>
+	</sql>
+	
+</custom-sql>

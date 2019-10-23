@@ -1,0 +1,353 @@
+.aui input[type=checkbox]:checked {
+  opacity: 1 !important; }
+
+.aui body label input[type=checkbox] {
+  display: inline-block !important; }
+
+.Table-Layout {
+  display: table !important;
+  width: 100%;
+  text-align: left;
+  border: 1.5px solid #d9dce3; }
+
+/*
+.Table-Layout .Heading {
+	display: table-row;
+	padding: 10px 0;
+	height: auto;
+	 background-image: linear-gradient(to bottom, #f9fafc, #f1f4f8);
+}
+
+.Table-Layout .Heading .Cell {
+	display: table-cell;
+	padding: 15px;
+}
+
+.Table-Layout .Heading .Cell p {
+	margin: 0;
+	padding: 0;
+	font-family: Roboto, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: inherit;
+    font-style: normal;
+    font-stretch: expanded;
+    line-height: 1.14;
+    letter-spacing: 0.5px;
+    color: #333;
+}*/
+.Table-Layout .Row .Cell p {
+  font-family: Roboto, Helvetica, sans-serif  !important;
+  font-weight: inherit  !important;
+  font-style: normal  !important;
+  font-stretch: expanded  !important;
+  line-height: 1.14  !important;
+  letter-spacing: 0.5px  !important;
+  color: #333 !important;
+  font-size: 13px !important; }
+
+/*.Table-Layout .Heading .Cell:last-child {
+	width: 5% !important;
+	text-align: center;
+}*/
+.Table-Layout .Row {
+  /* 	display: block; */ }
+
+/*
+.Table-Layout .Row .Cell {
+	display: table-cell;
+    padding:12px 0px 10px 30px !important; 
+	position: relative;
+	vertical-align: top;
+}
+.Table-Layout .Row .Cell1 {
+	display: table-row;
+		position: relative;
+	vertical-align: top;
+}
+*/
+.Table-Layout .Row .Cell p {
+  margin: 0;
+  padding: 0; }
+
+/*
+.Table-Layout .Row .Cell {
+    background-color: #FFFFFF !important;
+    border-bottom: .5px solid rgba(177, 190, 215, 0.1) !important;
+}
+*/
+/*
+.Table-Layout .Row .Cell:last-child {
+	width: 5% !important;
+	text-align: center;
+}
+*/
+.btn-state {
+  border-radius: 3px;
+  font-weight: 600;
+  color: #ffffff !important;
+  text-transform: uppercase; }
+
+.btn-update {
+  background-color: #4c4c84 !important; }
+
+.btn-delete {
+  background-color: #d44848 !important; }
+
+.btn-create {
+  background-color: #058e2f !important;
+  width: 100% !important; }
+
+.enrollmentTitle {
+  background-color: #f5f8fb; }
+
+.enrolledCandidates {
+  font-size: 10px;
+  text-align: right; }
+
+.pendingCandidatesAssignment {
+  font-size: 10px; }
+
+.candidateCount {
+  color: #1181d5;
+  font-weight: 600; }
+
+.aui .newPortlets .pagination {
+  background-color: #F3F5F8;
+  padding: 0px 0px 0px 25px;
+  width: 100%;
+  margin: 0; }
+
+.aui .newPortlets .pagination .pagination.pagination-large {
+  padding: 0;
+  margin: 0; }
+
+.aui .newPortlets .pagination ul {
+  box-shadow: none; }
+
+.aui .newPortlets .pagination ul li {
+  display: inline-block; }
+
+.aui .newPortlets .pagination ul li a {
+  color: #59647b;
+  padding: 4px 10px;
+  background: none;
+  border: 0;
+  font: 400 14px "Work Sans", sans-serif; }
+
+.aui .newPortlets .pagination ul li a.active {
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  background-color: #0f349f;
+  color: #fff; }
+
+.aui .newPortlets .pagination ul li .first, .aui .newPortlets .pagination ul li .last {
+  background: url(../images/first.png) no-repeat;
+  width: 12px;
+  height: 12px;
+  height: 20px;
+  background-position: 4px 4px; }
+
+.aui .newPortlets .pagination ul li .last {
+  background: url(../images/last.png) no-repeat;
+  background-position: 0 3px; }
+
+.aui .newPortlets .pagination ul li .prev, .aui .newPortlets .pagination ul li .next {
+  background: url(../images/prev.png) no-repeat;
+  width: 8px;
+  height: 12px;
+  height: 17px;
+  background-position: 0 1px;
+  padding-right: 0; }
+
+.aui .newPortlets .pagination ul li .next {
+  background: url(../images/next.png) no-repeat;
+  background-position: 0 0; }
+
+.aui .newPortlets .pagination .control-label {
+  float: left;
+  display: block;
+  margin-right: 20px;
+  margin-bottom: 0; }
+
+.aui .newPortlets .pagination select {
+  float: left;
+  width: 10%;
+  border: 0;
+  background: none;
+  height: 18px;
+  padding: 0;
+  margin-right: 20px;
+  color: #3d70b2; }
+
+.aui .newPortlets .pagination .control-group {
+  margin-bottom: 0;
+  margin-right: 20px; }
+
+.aui .newPortlets .pagination span {
+  border-left: 1.5px solid #59647b;
+  padding-left: 10px;
+  top: 5px;
+  position: relative; }
+
+.aui .pagination ul > li > a {
+  line-height: 11px !important; }
+
+ /* .Table-Layout .Heading :nth-child(1)
+{
+	    width: 8%;
+  
+}
+.Table-Layout .Heading :nth-child(2)
+{
+	    width: 12%;
+    
+}
+
+.Table-Layout .Heading :nth-child(3)
+{
+	    width: 12%;
+ 
+}
+.Table-Layout .Heading :nth-child(4)
+{
+	    width: 15%;
+  
+}
+.Table-Layout .Heading :nth-child(5)
+{
+	    width: 12%;
+   
+}
+.Table-Layout .Heading :nth-child(6)
+{
+	    width: 12%;
+    
+}
+.Table-Layout .Heading :nth-child(7)
+{
+	    width: 10%;
+   
+}
+.Table-Layout .Heading :nth-child(8)
+{
+	    width: 10%;
+  
+}.Table-Layout .Heading :nth-child(9)
+{
+	    width: 5%;
+   
+}.Table-Layout .Heading :nth-child(10)
+{
+	    width: 4%;
+    
+} */
+.aui table {
+  border-collapse: initial !important;
+  box-shadow: none; }
+
+.aui table th {
+  background-color: #E4E8F1 !important;
+  color: #A7AFBE !important; }
+
+.aui table td {
+  background: #ffffff !important; }
+
+.Table-Layout .Row .Cell {
+  background-color: #FFFFFF !important;
+  border-bottom: 0.5px solid rgba(177, 190, 215, 0.1) !important; }
+
+.aui .public-page.dockbar-ready .main-content {
+  background-color: #F7F9FC !important; }
+
+.contextmenu {
+  width: 208px !important;
+  z-index: 1 !important;
+  right: 0 !important;
+  /*     left: 40px !important; */
+  /* height: 184px; */
+  border-radius: 3px !important;
+  box-shadow: 0 2px 20px 0 rgba(37, 38, 94, 0.13) !important;
+  border: solid 1px #e0e5ef !important;
+  background-color: #ffffff !important; }
+
+.aui #MultirowPopAction li a {
+  font-weight: 550 !important;
+  font-size: 13px !important;
+  padding: 10px 0 !important;
+  display: unset !important; }
+
+/* new Table CSS*/
+.Table-Layout .Row {
+  display: table-row; }
+
+.Table-Layout .Row:first-child .Cell {
+  background-color: #f5f8fb !important;
+  border-bottom: .5px solid #d9dce3 !important;
+  color: #002f76;
+  font-size: 12px;
+  font-weight: 600; }
+
+.Table-Layout .Row .Cell {
+  background-color: #FFF !important;
+  border-bottom: 0.5px solid rgba(177, 190, 215, 0.1) !important; }
+
+.Table-Layout .Row .Cell {
+  display: table-cell;
+  /* padding: 12px 0 10px 30px!important; */
+  /* position: relative; */
+  vertical-align: top; }
+
+.Table-Layout .Cell {
+  display: table-cell;
+  padding: 15px; }
+
+/* Context menu CSS*/
+.aui .newPortlets .Multi-Pop-Action {
+  margin-top: 22px !important;
+  right: unset !important;
+  margin-left: unset !important; }
+
+/* required star class*/
+.star:after {
+  content: '*';
+  color: red;
+  font-size: 14px; }
+
+.Table-Layout .listsortasc i {
+  background: url(/SPRPEC-portlet/img/accending-icon.png) no-repeat;
+  z-index: 1000;
+  width: 13px;
+  height: 5px;
+  float: right;
+  margin: 5px 5px 0px 0px; }
+
+.Table-Layout .listsortdesc i {
+  background: url(/SPRPEC-portlet/img/decending-icon.png) no-repeat;
+  z-index: 1000;
+  width: 13px;
+  height: 5px;
+  float: right;
+  margin: 5px 5px 0px 0px; }
+
+.add-tooltip {
+  width: 720px;
+  height: 28px;
+  border-radius: 20px;
+  background-color: #000000;
+  margin: 20px auto;
+  font-family: WorkSans;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #ffffff;
+  position: absolute;
+  left: 17%;
+  bottom: 80%; }
+
+.aui .newPortlets #loadingDiv {
+  left: 0; }
+

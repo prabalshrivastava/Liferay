@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+  <g fill="none" fill-rule="evenodd" stroke="#DD3146" stroke-width="2" transform="translate(2 2)" stroke-linecap="square">
+    <path d="M8.19238816,0 L0.414213562,7.77817459"/>
+    <path d="M7.97056275,0 L0.192388155,7.77817459" transform="matrix(-1 0 0 1 8.163 0)"/>
+  </g>
+</svg>

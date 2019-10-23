@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.rsvp.model.Rsvp" />
+	<import class="com.sambaash.platform.srv.rsvp.model.RsvpCoParticipantDetail" />
+	<import class="com.sambaash.platform.srv.rsvp.model.RsvpDetail" />
+	<import class="com.sambaash.platform.srv.rsvp.model.RsvpDiscount" />
+	<import class="com.sambaash.platform.srv.rsvp.model.RsvpPayment" />
+	<import class="com.sambaash.platform.srv.rsvp.model.RsvpPromoCode" />
+	<import class="com.sambaash.platform.srv.rsvp.model.RsvpTicket" />
+	<class name="com.sambaash.platform.srv.rsvp.model.impl.RsvpImpl" table="SPRsvp">
+		<cache usage="read-write" />
+		<id name="rsvpId" column="spRsvpId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="eventId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spAssetTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="rsvpUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="processing" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="price" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="currency" type="com.liferay.portal.dao.orm.hibernate.StringType" column="currency_" />
+		<property name="tax" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="accountId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="paymentFlag" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="registerFlag" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="ticketFlag" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="dynamicSectionName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ccEmail" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.sambaash.platform.srv.rsvp.model.impl.RsvpCoParticipantDetailImpl" table="SPRsvpCoParticipantDetail">
+		<cache usage="read-write" />
+		<id name="rsvpCoParticipantDetailId" column="spRsvpCoParticipantDetailId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="rsvpDetailId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="spRsvpDetailId" />
+		<property name="rsvpPaymentId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="spRsvpPaymentId" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="firstName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nric" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="identificationType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="rsvpStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="attendance" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="attendanceBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="attendanceDate" type="org.hibernate.type.TimestampType" />
+		<property name="ticketNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.rsvp.model.impl.RsvpDetailImpl" table="SPRsvpDetail">
+		<cache usage="read-write" />
+		<id name="rsvpDetailId" column="spRsvpDetailId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="rsvpId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="spRsvpId" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="firstName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="identifiactionType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nric" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="rsvpStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="source" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="attendance" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="attendanceBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="attendanceDate" type="org.hibernate.type.TimestampType" />
+		<property name="rsvpStatusDate" type="org.hibernate.type.TimestampType" />
+		<property name="rsvpStatusBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="numberOfPeople" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="streetAddress1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="streetAddress2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="postalCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="city" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="country" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="state" type="com.liferay.portal.dao.orm.hibernate.StringType" column="state_" />
+		<property name="gender" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phoneNumber1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phoneNumber2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hearAboutUs" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="attendedWebinar" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ageGroup" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="termsOfUse" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="ageRestriction" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.sambaash.platform.srv.rsvp.model.impl.RsvpDiscountImpl" table="SPRsvpDiscount">
+		<cache usage="read-write" />
+		<id name="rsvpDiscountId" column="spRsvpDiscountId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="rsvpId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="spRsvpId" />
+		<property name="rsvpTicketId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="spRsvpTicketId" />
+		<property name="fromDate" type="org.hibernate.type.TimestampType" />
+		<property name="toDate" type="org.hibernate.type.TimestampType" />
+		<property name="noOfTickets" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="discount" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.rsvp.model.impl.RsvpPaymentImpl" table="SPRsvpPayment">
+		<cache usage="read-write" />
+		<id name="rsvpPaymentId" column="spRsvpPaymentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="rsvpDetailId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="spRsvpDetailId" />
+		<property name="rsvpId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="spRsvpId" />
+		<property name="rsvpTicketId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="spRsvpTicketId" />
+		<property name="rsvpDiscountId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="spRsvpDiscountId" />
+		<property name="rsvpPromoCodeId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="spRsvpPromoCodeId" />
+		<property name="price" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="numberOfPeople" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="discount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="netTotal" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="ticketNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="payerEmailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="receiverEmailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="transactionId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="transactionStatus" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="transactionAmount" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="transactionDate" type="org.hibernate.type.TimestampType" />
+		<property name="emailStatus" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.sambaash.platform.srv.rsvp.model.impl.RsvpPromoCodeImpl" table="SPRsvpPromoCode">
+		<cache usage="read-write" />
+		<id name="rsvpPromoCodeId" column="spRsvpPromoCodeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="rsvpId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="spRsvpId" />
+		<property name="rsvpTicketId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="spRsvpTicketId" />
+		<property name="promoCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fromDate" type="org.hibernate.type.TimestampType" />
+		<property name="toDate" type="org.hibernate.type.TimestampType" />
+		<property name="noOfTickets" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="discount" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.rsvp.model.impl.RsvpTicketImpl" table="SPRsvpTicket">
+		<cache usage="read-write" />
+		<id name="rsvpTicketId" column="spRsvpTicketId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="rsvpId" type="com.liferay.portal.dao.orm.hibernate.LongType" column="spRsvpId" />
+		<property name="price" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="quantity" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="soldQuantity" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ticketSequence" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="lastSequenceNumber" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="sequencePrefix" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sequenceSuffix" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ticketTemplateUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

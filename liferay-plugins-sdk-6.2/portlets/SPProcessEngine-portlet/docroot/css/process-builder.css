@@ -1,0 +1,138 @@
+.portlet-column portlet-column-only span12{
+
+	 background: #F2F4F4  ;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+#column-1{
+
+	background-color: #F2F4F4;
+}
+
+.aui .portlet, .aui .portlet-borderless-container {
+	background: #F2F4F4  ;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: grey;
+}
+
+th {
+	background-color: palevioletred;
+	text-align: center;
+	height : 40px;
+	border : 0px;
+	color : #ffffff;
+}
+
+table, th, td {
+
+	border-collapse: collapse;
+
+}
+
+td {
+
+	text-align: center;
+	height : 40px;
+	background-color: #ffffff;
+	border-top : 1px solid grey;
+}
+
+#headerSource {
+	width: 100%;
+	border: 1px solid yellow;
+}
+
+#RuleSetComponents {
+	width: 15%;
+	height: 150px;
+	background-color : #FFFFFF;
+	float: left;
+	border: 1px solid #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+}
+
+#RulesArea {
+	width: 82%;
+	float: right;
+	background-color:#ffffff;
+	margin: 0px;
+}
+
+.headerPart {
+	background-color: #9E9492;
+	margin:0px;
+	padding:0px;
+}
+
+.ruleset {
+	border: 1px solid grey;
+	width: 99%;
+	margin: 5px;
+}
+
+.dropArea {
+	width: 98%;
+	margin: 2px;
+	padding: 5px;
+	border: 1px solid grey;
+}
+
+#demo1 {
+	background-color: #30e8e8;
+	border-radius: 5px;
+}
+
+#demo2 {
+	background-color: #eaeded;
+}
+
+#ruleAddConditionOne {
+	background-color: #eaeded;
+	height: 50px;
+	width: 97%;
+	border: 2px dashed black;
+	border-radius: 5px;
+}
+
+#conditionSets{
+	width : 98%;
+}
+
+#conditions{
+
+	width:98%;
+}
+
+#ruleTop {
+	height: 50px;
+	width: 100%;
+	border: 2px dashed black;
+	border-radius: 5px;
+}
+
+#ruleBottom {
+	height: 20px;
+	width: 100%;
+}
+
+#ruleMiddle {
+	height: 20px;
+	width: 100%;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.selectOption {
+	padding: 10px;
+	margin: 5px;
+}

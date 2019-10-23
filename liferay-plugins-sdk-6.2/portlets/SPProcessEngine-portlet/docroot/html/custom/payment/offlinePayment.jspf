@@ -1,0 +1,14 @@
+			<aui:form action="<%= paymentSubmitUrl %>" name="peOfflinePayment">
+				<aui:input name="formData"  type="hidden"></aui:input>
+				<aui:input name="processStateId"  type="hidden" value="<%= processStateId %>"></aui:input>
+				<aui:input name="nodeId"  type="hidden" value="<%= output.getNodeId() %>"></aui:input>
+				<aui:input name="classPK"  type="hidden" value="<%= output.getClassPk() %>"></aui:input>
+				<aui:input name="classNameId"  type="hidden" value="<%= output.getClassNameId() %>"></aui:input>
+				<aui:input name="processId"  type="hidden" value="<%= output.getProcessId() %>"></aui:input>
+				<aui:input name="actionType"  type="hidden" value="submit"></aui:input>
+				<aui:input name="paymentAction" type="hidden" value="payOffline" ></aui:input>
+				<button type="submit" class="stripe-button-el">
+				<span style="display: block; min-height: 30px;">Pay Offline</span>
+				</button>
+				
+			</aui:form>

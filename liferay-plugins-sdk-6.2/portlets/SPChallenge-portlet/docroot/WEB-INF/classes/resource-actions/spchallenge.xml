@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 6.2.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_6_2_0.dtd">
+
+<resource-action-mapping>
+    <portlet-resource>
+        <portlet-name>sp-challenge-action</portlet-name>
+        <permissions>
+            <supports>
+            	<action-key>ADD_PORTLET_DISPLAY_TEMPLATE</action-key>
+                <action-key>ADD_CHALLENGE</action-key>
+                <action-key>EDIT_CHALLENGE</action-key>
+                <action-key>VIEW_APPLICATION</action-key>
+            </supports>
+            <site-member-defaults>
+            </site-member-defaults>
+            <guest-defaults>
+            </guest-defaults>
+            <guest-unsupported>
+            	<action-key>ADD_PORTLET_DISPLAY_TEMPLATE</action-key>
+             	<action-key>ADD_CHALLENGE</action-key>
+                <action-key>EDIT_CHALLENGE</action-key>
+                <action-key>VIEW_APPLICATION</action-key>
+            </guest-unsupported>
+        </permissions>
+    </portlet-resource>
+    <portlet-resource>
+        <portlet-name>sp-challenge-applicant-action</portlet-name>
+        <permissions>
+            <supports>
+            	<action-key>ADD_PORTLET_DISPLAY_TEMPLATE</action-key>
+                <action-key>VIEW_APPLICATION</action-key>
+            </supports>
+            <site-member-defaults>
+            </site-member-defaults>
+            <guest-defaults>
+            </guest-defaults>
+            <guest-unsupported>
+            	<action-key>ADD_PORTLET_DISPLAY_TEMPLATE</action-key>
+                <action-key>VIEW_APPLICATION</action-key>
+            </guest-unsupported>
+        </permissions>
+    </portlet-resource>
+</resource-action-mapping>

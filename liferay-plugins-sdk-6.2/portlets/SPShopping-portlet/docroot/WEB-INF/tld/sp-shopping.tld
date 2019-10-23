@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<taglib
+	version="2.0"
+	xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+	
+	<tlib-version>1.0</tlib-version>
+	<short-name>sp-shopping</short-name>
+	<uri>/tld/sp-shopping</uri>
+	<tag>
+		<name>cart</name>
+		<tag-class>com.sambaash.platform.spshopping.taglib.CartTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>packageIds</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>paymentRequired</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>orderPage</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>expandable</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>updatable</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

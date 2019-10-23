@@ -1,0 +1,4626 @@
+@import "sp_productsvariable";
+@import "sp_ProductCommon";
+@import "sp_media-queries";
+
+.customizationFields {
+    color: #000;
+}
+
+.Div_Col_row {
+    input,
+    select {
+        font-size: 14px!important;
+    }
+    input {
+        background: #fff!important;
+    }
+}
+
+.callOutFormWrap {
+
+    border-radius: 3px;
+    background-color: #f9fcff;
+    border: solid 1px #e0e7ee;
+}
+
+.productBrochures{
+	color: #333; 
+}
+
+
+.productNameForForm {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.29;
+    text-align: center;
+    color: #002f76;
+}
+
+.callOutFormButton .ns-button {
+
+    font-size: 14px;
+    cursor: default;
+
+    background-color: #f44336;
+    text-decoration: none;
+}
+
+.callOutFormButton span {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.71;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 1px #5f7b4b;
+}
+
+.Input_HalfWidth {
+
+    @extend .Product_input;
+    .icon-right {
+        @extend .right-icon;
+    }
+}
+
+.Input_Fullwidth {
+
+    vertical-align: top;
+    @extend .Product_input;
+    p {
+
+        font-size: $SPProduct-font-14;
+        @extend .font-color;
+    }
+}
+
+.customizationFields {
+
+    border: 1px solid #efefef;
+}
+
+.calloutFieldsWrap {
+    border: 1px solid #efefef;
+}
+
+
+
+
+.order-text {
+    color: #6e7a8c;
+    vertical-align: middle;
+}
+
+.Funding_wrapper .Form-bg {
+    background: #f6f7f8;
+}
+
+.funding-structure {
+    border: 1px solid;
+    border-color: #e0e7ee;
+   
+}
+
+.form-section-header {
+    color: #7d3680;
+   
+    background: #f6f7f8;
+   
+    font-size: 11pt;
+   
+}
+
+.ageCriteriaText {
+   
+    background: #f6f7f8;
+   
+}
+
+.feeFund-mobileView {
+    display: none;
+}
+
+.feeStructure .fee-rightAlign {
+    text-align: right;
+   
+}
+
+.feeStructure .fee-leftAlign {
+    text-align: left;
+  
+}
+
+
+
+.subheader {
+    font-size: 10pt;
+    color: #333;
+    font-weight: 400;
+}
+
+.footerNoteText {
+    font-size: 10px!important;
+}
+
+.table-header-title {
+    color: $font-heading-color;
+}
+
+
+
+.fundCurrencyCode {
+    font-size: 10pt;
+    color: #6e7a8c;
+    text-align: left;
+   
+}
+
+
+
+
+
+
+.selectDisabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.ageCriteriaText {
+    font-size: 10pt;
+    color: #6e7a8c;
+    text-align: center;
+   
+}
+
+
+.top-bottom-border {
+    border-top: 1px solid #e0e7ee;
+    border-bottom: 1px solid #e0e7ee;
+}
+
+.componentTitle {
+    color: #7d3680;
+    font-size: 12pt;
+    font-weight: 600;
+   
+}
+
+
+.addFeeFunding-button {
+    text-align: center;
+   
+}
+
+
+
+
+.selWrap {
+    background-color: #DEE7F8;
+    border-right: 1px solid #CAD8F3;
+    border-bottom: 1px solid #CAD8F3;
+   
+    color: #333;
+}
+
+.sel-list-remove {
+   
+    cursor: pointer;
+}
+
+
+
+
+.Entrymodule ol li {
+    list-style: decimal!important;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 400;
+}
+
+
+
+
+
+.selectedListInput {
+   
+    border-radius: 5px;
+    border: 1px solid #efefef;
+   
+    box-sizing: border-box;
+}
+
+
+
+#summaryLink.Display-none {
+    display: none!important;
+}
+
+#summary-wo-link.Display-none {
+    display: none!important;
+}
+
+//EDIT CLOSE BUTTON
+.editClosebutton {
+   
+   
+   
+    span {
+       
+        background-color: red;
+       
+        text-align: center;
+        color: #FFF;
+        line-height: 34px;
+        @include border-radius(50%);
+        opacity: 0;
+        cursor: pointer;
+       
+    }
+    &:hover {
+        span {
+           
+            opacity: 1;
+            transition: opacity 0.5s ease-in;
+            /* vendorless fallback */
+            -o-transition: opacity 0.5s ease-in;
+            /* opera */
+            -ms-transition: opacity 0.5s ease-in;
+            /* IE 10 betas, not needed in final build. */
+            -moz-transition: opacity 0.5s ease-in;
+            /* Firefox */
+            -webkit-transition: opacity 0.5s ease-in;
+            /*safari and chrome */
+        }
+    }
+}
+
+.aui .productUpdatebox ul li a:hover {
+    background-color: #f5f7f8;
+    color: $font-active-color;
+}
+
+.productUpdatebox {
+   
+    background-color: #FFF;
+    @include border-radius(5px);
+    @extend .Border;
+    ul {
+        li {
+          
+            a {
+                
+                color: #6e7a8c;
+                font-size: $SPProduct-font-12;
+                font-weight: $SPProduct-font-weight-600;
+                text-decoration: none;
+                  &:hover{
+                        background-color: #f5f7f8;
+       
+                    }
+                img {
+                  
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+.yui3-aclist-content ul {
+   
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.yui3-skin-sam .yui3-aclist-item-active {
+    background: #961F63 !important;
+    color: #FFFFFF !important;
+    outline: 0 !important;
+}
+
+.yui3-skin-sam .yui3-aclist-content {
+    background: #F5F8FB !important;
+    border: none !important;
+}
+
+.yui3-aclist ul li {
+    text-align: left !important;
+   
+    background-color: #f5f8fb;
+    color: #000;
+}
+
+.yui3-skin-sam .yui3-aclist-item-hover {
+    background: #BBBBBB !important;
+}
+
+
+
+
+
+/*LITHAN PRODUCT FOR DESKTOP */
+
+.Header_Dummy {
+   
+    background-color: #961f63;
+    z-index: 100;
+}
+
+.Max-width-1280 {
+    background: $SPProduct-Primary-color;
+   
+}
+
+.outComeDetails {
+  
+    @extend .Border;
+    color: $font-active-color;
+}
+
+
+
+/* product top header */
+
+
+
+.Menu_mobile {
+   
+    .mob-menu-div {
+       
+        option {
+            background-color: #FFF;
+            
+            color: #000;
+        }
+    }
+}
+
+
+
+/* Dropdown Button */
+
+.dropbtn_menu {
+    background-color: $SPProduct-Primary-color;
+    border: 1px solid $Lp-lightpink;
+   
+    font-size: $SPProduct-font-12;
+    color: $SPProduct-customcolor9;
+    cursor: pointer;
+    font-weight: $SPProduct-font-weight-700;
+   
+}
+
+
+
+/* Dropdown button on hover & focus */
+
+.dropbtn1:hover,
+.dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+
+
+/* The container <div> - needed to position the dropdown content */
+
+
+
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown_menu_content {
+  
+    background-color: #f9f9f9;
+   
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Links inside the dropdown */
+
+.dropdown_menu_content a {
+   
+    text-decoration: none;
+  
+    background-color: $SPProduct-Primary-color;
+    border: 1px solid $Lp-lightpink;
+   
+    font-size: $SPProduct-font-12;
+    color: $SPProduct-customcolor9;
+    cursor: pointer;
+    font-weight: $SPProduct-font-weight-700;
+
+}
+
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown_menu_content a:hover {
+    background-color: #f1f1f1
+}
+
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+
+
+.mob_menudrop {}
+
+.Menu-sidebar-left {
+   
+    
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
+    z-index: 1;
+
+    ul {
+        background-color: $SPProduct-Primary-color;
+        border: 1px solid $Lp-lightpink;
+        li {
+            a {
+               
+                font-size: $SPProduct-font-12;
+                color: $font-active-color;
+                font-weight: $SPProduct-font-weight-600;
+                text-decoration: none;
+               
+                &.active1 {
+                    background-image: linear-gradient(#f3f3f3 0%, #fbfbfb 100%);
+                    border: 1px solid $Lp-lightpink;
+                   
+                    font-weight: $SPProduct-font-weight-700;
+                    &.active1::after {
+                        content: url("/SPProduct-portlet/images/product/Active_arrow.png");
+                       
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.Schedule_wrapper {
+    background: #F9F9FA;
+   
+    border: 1px solid #E0E3E7;
+   
+}
+
+.product_section {
+   
+    background-color: #ffffff;
+    border-top: 2px solid $Lp-lightpink;
+    border-bottom: 2px solid $Lp-lightpink;
+    .Prod_h2 {
+       
+        font-size: 32px;
+        color: $font-heading-color;
+        text-align: center;
+        border-bottom: none;
+       
+        font-weight: $SPProduct-font-weight-700;
+    }
+    p {
+       
+        font-size: $SPProduct-font-12;
+        font-weight: $SPProduct-font-weight-600;
+        color: $font-heading-color;
+        text-align: center;
+       
+    }
+    span {
+        
+        background-color: $bg-darkpink;
+        border-radius: 3px;
+        
+        font-size: $SPProduct-font-11;
+        font-weight: $SPProduct-font-weight-500;
+        color: $SPProduct-Primary-color;
+    }
+    ul {
+       
+        text-align: center;
+        li {
+           
+            font-size: $SPProduct-font-11;
+            font-weight: $SPProduct-font-weight-400;
+           
+            .top-dot {
+               
+                font-size: $SPProduct-font-16;
+               
+                background-color: $font-heading-color;
+                @include border-radius(50%);
+            }
+        }
+    }
+   
+   
+}
+
+
+
+/* product top header */
+
+
+/* product Wrapper */
+
+.Product-section-wrap {
+   
+    .desk-view-left {
+     
+        vertical-align: top;
+        .prod-left-sidebar {
+            
+            zoom: 1;
+            vertical-align: top;
+            -webkit-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            ul {
+                background-color: $SPProduct-Primary-color;
+                border: 1px solid $Lp-lightpink;
+                li {
+                    a {
+                       
+                        font-size: $SPProduct-font-12;
+                        color: $font-active-color;
+                        font-weight: $SPProduct-font-weight-600;
+                        text-decoration: none;
+                        
+                        &.active1 {
+                            background-image: linear-gradient(#f3f3f3 0%, #fbfbfb 100%);
+                            border: 1px solid $Lp-lightpink;
+                            
+                            font-weight: $SPProduct-font-weight-700;
+                            &.active1::after {
+                                content: url("/SPProduct-portlet/images/product/Active_arrow.png");
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .prod-left-sidebar1 {
+          
+            zoom: 1;
+            vertical-align: top;
+            -webkit-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            h2 {
+                font-size: $SPProduct-font-16;
+                color: $font-heading-color;
+                text-align: left;
+            }
+            ul {
+                background-color: $SPProduct-Primary-color;
+                border: 1px solid $Lp-lightpink;
+                li {
+                    
+                    font-size: $SPProduct-font-12;
+                    color: $SPProduct-customcolor9;
+                    font-weight: $SPProduct-font-weight-400;
+                    
+                    a {
+                        vertical-align: middle;
+                        font-size: $SPProduct-font-12;
+                       
+                        text-decoration: none;
+                        &.active {
+                            background-image: linear-gradient(#f3f3f3 0%, #fbfbfb 100%);
+                            border: 1px solid $Lp-lightpink;
+                            font-weight: $SPProduct-font-weight-700;
+                            &.active:after {
+                                content: url("images/arrowImg.png");
+                               
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .desk-tab-view {
+       
+        .prod-cont-sec {
+          
+            zoom: 1;
+            vertical-align: top;
+           
+            .course-middle {
+                h2 {
+                    font-size: $SPProduct-font-16;
+                    color: $font-heading-color;
+                    text-align: left;
+                   
+                    font-weight: $SPProduct-font-weight-700;
+                    line-height: 1.5;
+                }
+                
+            }
+            .list-cont {
+               
+                .list-imgsec {
+                  
+                   
+                }
+                .list-para {
+                   
+                    vertical-align: middle;
+                    
+                    p {
+                        font-size: $SPProduct-font-12;
+                        text-align: left;
+                        font-weight: $SPProduct-font-weight-400;
+                    }
+                }
+            }
+            .cont-sec-inner {
+                
+                .cont-image {
+                    
+                    vertical-align: top;
+                    
+                }
+                .cont-desc {
+                  
+                    h3 {
+                        font-size: $SPProduct-font-16;
+                        color: $font-heading-color;
+                        text-align: left;
+                       
+                        font-weight: $SPProduct-font-weight-700;
+                        line-height: inherit;
+                    }
+                    ul {
+                        li {
+                           
+                            list-style: circle;
+                            font-size: $SPProduct-font-14;
+                            color: $SPProduct-customcolor3;
+                            text-align: left;
+                            font-weight: $SPProduct-font-weight-400;
+                           
+                        }
+                    }
+                }
+            }
+            .course-expl {
+                
+                p {
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    text-align: left;
+                    font-weight: $SPProduct-font-weight-400;
+                    line-height: 1.57;
+                }
+                h2 {
+                    font-size: $SPProduct-font-16;
+                    color: $font-heading-color;
+                    font-weight: $SPProduct-font-weight-700;
+                    line-height: 1.5;
+                }
+            }
+        }
+        
+        .prod-cont-sec1 {
+           
+            zoom: 1;
+            vertical-align: top;
+           
+            .course-middle {
+               
+                h2 {
+                    font-size: $SPProduct-font-16;
+                    color: $font-heading-color;
+                    text-align: left;
+                   
+                    line-height: 1.5;
+                }
+                h3 {
+                    font-size: $SPProduct-font-14;
+                    color: $font-heading-color;
+                    text-align: center;
+                  
+                    font-weight: $SPProduct-font-weight-700;
+                }
+               
+            }
+            .Entry-middle {
+                h2 {
+                    font-size: $SPProduct-font-16;
+                    color: $font-heading-color;
+                    text-align: center;
+                  
+                    font-weight: $SPProduct-font-weight-700;
+                    line-height: 1.5;
+                }
+                h3 {
+                    font-size: $SPProduct-font-14;
+                    color: $font-heading-color;
+                    text-align: center;
+                   
+                    font-weight: $SPProduct-font-weight-700;
+                }
+                
+            }
+            .pro-bot-link {
+              
+                cursor: pointer;
+                 a {
+                    color: $SPProduct-Primary-color1;
+                    text-decoration: none;
+                    color: $font-heading-color;
+                }
+                h1:before {
+                    content: "";
+                   
+                    border-top: solid 1px $LP-bord-head;
+                   
+                   
+                }
+                h1:after {
+                    
+                    content: url("/SPProduct-portlet/images/product/Active_arrow1.png");
+                   
+                }
+                h1 span {
+                    background: $SPProduct-Primary-color;
+                   
+                    font-size: $SPProduct-font-12;
+                   
+                    font-weight: $SPProduct-font-weight-500;
+                }
+            }
+            .pro-bot-link-right {
+              
+                text-align: right;
+                cursor: pointer;
+               
+                a {
+                    color: $SPProduct-Primary-color1;
+                    text-decoration: none;
+                    color: $font-heading-color;
+                }
+                h1:before {
+                    content: "";
+                   
+                    border-top: solid 1px $LP-bord-head;
+                   
+                }
+                h1:after {
+                    content: url("/SPProduct-portlet/images/product/Active_arrow1.png");
+                   
+                }
+                h1 span {
+                    background: $SPProduct-Primary-color;
+                   
+                    font-size: $SPProduct-font-12;
+                   
+                    font-weight: $SPProduct-font-weight-500;
+                    
+                }
+            }
+            .list-cont {
+               
+                .list-imgsec {
+                   
+                    img {
+                       
+                        vertical-align: middle;
+                        a {
+                            border: none;
+                        }
+                    }
+                }
+                .list-file {
+                  
+                    text-align: center;
+                    img {
+                       
+                        vertical-align: middle;
+                        a {
+                            border: none;
+                        }
+                    }
+                    &.active {
+                        border-bottom: 2px solid #f59807;
+                    }
+                }
+                .list-file-cal {
+                   
+                    text-align: center;
+                    img {
+                       
+                        vertical-align: middle;
+                        a {
+                            border: none;
+                        }
+                    }
+                    &.active {
+                        border-bottom: 2px solid #f59807;
+                    }
+                }
+                .active-list {
+                    border-bottom: 3px solid #f59807;
+                }
+                .list-para {
+                   
+                    vertical-align: middle;
+                  
+                    a {
+                        color: $SPProduct-Primary-color;
+                        text-decoration: none;
+                    }
+                    p {
+                        font-size: $SPProduct-font-12;
+                        text-align: left;
+                        font-weight: $SPProduct-font-weight-400;
+                    }
+                }
+                .list-para1 {
+                   
+                    vertical-align: middle;
+                   
+                    a {
+                        color: $SPProduct-customcolor3;
+                        text-decoration: none;
+                    }
+                    p {
+                        font-size: $SPProduct-font-12;
+                        text-align: left;
+                        font-weight: $SPProduct-font-weight-600;
+                        color: $SPProduct-customcolor3;
+                        line-height: 1.5;
+                    }
+                }
+            }
+            .cont-sec-inner {
+              
+                .cont-image {
+                   
+                    vertical-align: top;
+                  
+                }
+                .cont-desc {
+                  
+                    h3 {
+                        font-size: $SPProduct-font-16;
+                        color: $font-heading-color;
+                        text-align: left;
+                      
+                    }
+                    ul {
+                        li {
+                           
+                            list-style: circle;
+                            font-size: $SPProduct-font-14;
+                            color: $SPProduct-customcolor3;
+                            text-align: left;
+                            font-weight: $SPProduct-font-weight-400;
+                            
+                        }
+                    }
+                }
+            }
+            .course-expl {
+               
+                p {
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    text-align: left;
+                    font-weight: $SPProduct-font-weight-400;
+                }
+                h2 {
+                    font-size: $SPProduct-font-16;
+                    color: $font-heading-color;
+                    font-weight: $SPProduct-font-weight-700;
+                    line-height: 1.5;
+                   
+                    text-align: left;
+                }
+                h3 {
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    font-weight: $SPProduct-font-weight-700;
+                    line-height: 1.29;
+                }
+                ul {
+                 
+                    li {
+                        display: list-item;
+                        list-style: initial;
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        text-align: left;
+                        font-weight: $SPProduct-font-weight-400;
+                       
+                    }
+                }
+                ol {
+                   
+                    li {
+                        list-style: decimal;
+                        font-weight: initial;
+                    }
+                }
+            }
+            .course-exp2 {
+                font-weight: initial;
+               
+                p {
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    text-align: left;
+                    font-weight: $SPProduct-font-weight-400;
+                }
+                h2 {
+                    font-size: $SPProduct-font-16;
+                    color: $font-heading-color;
+                }
+                h3 {
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    font-weight: $SPProduct-font-weight-400;
+                    text-align: left;
+                }
+                ul {
+                   
+                    li {
+                        display: list-item;
+                        list-style: initial;
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        text-align: left;
+                        font-weight: $SPProduct-font-weight-400;
+                        
+                    }
+                }
+                ol {
+                   
+                    li {
+                        list-style: decimal;
+                        font-weight: initial;
+                        display: list-item;
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        text-align: left;
+                       
+                    }
+                }
+            }
+            .Who-sholud-attend-sec {
+                
+                p {
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    text-align: left;
+                    font-weight: $SPProduct-font-weight-400;
+                }
+                h2 {
+                    font-size: $SPProduct-font-16;
+                    color: $font-heading-color;
+                    text-align: center;
+                }
+                h3 {
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    font-weight: $SPProduct-font-weight-700;
+                }
+                ul {
+                    li {
+                       
+                        list-style: initial;
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        text-align: left;
+                        font-weight: $SPProduct-font-weight-400;
+                       
+                    }
+                }
+                ol {
+                  
+                    li {
+                        list-style: decimal;
+                        font-weight: initial;
+                    }
+                }
+            }
+            .rating-sec {
+               
+                .rating-sec-inner {
+                    list-style: none;
+                   
+                    
+                    .rt_content {
+                       
+                        vertical-align: top;
+                        background-color: $bg-light-pink;
+                        border: 0.5px solid $table-border-color;
+                       
+                        .rt-cont-sec {
+                            vertical-align: middle;
+                           
+                            h2 {
+                                font-size: $SPProduct-font-14;
+                                color: $SPProduct-customcolor3;
+                                text-align: center;
+                                font-weight: $SPProduct-font-weight-700;
+                            }
+                            p {
+                                font-size: $SPProduct-font-12;
+                                color: $font-heading-color;
+                                text-align: center;
+                                font-weight: $SPProduct-font-weight-600;
+                            }
+                            ul {
+                                text-align: center;
+                                li {
+                                   
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .who-should-attend {
+              
+                ul {
+                   
+                    li {
+                       
+                        .Wsa_image {
+                           
+                            
+                            .inside-cont {
+                               
+                                h2 {
+                                    font-size: $SPProduct-font-30;
+                                    color: #f5a623;
+                                    text-align: left;
+                                   
+                                    font-weight: $SPProduct-font-weight-700;
+                                }
+                                p {
+                                    font-size: $SPProduct-font-12;
+                                    color: $SPProduct-Primary-color;
+                                    text-align: left;
+                                    font-weight: $SPProduct-font-weight-600;
+                                }
+                            }
+                        }
+                        .Wsa_content {
+                           
+                            vertical-align: top;
+                            background-color: $Lp-whitesmoke;
+                            p {
+                                font-size: $SPProduct-font-14;
+                                color: $SPProduct-customcolor3;
+                                text-align: left;
+                               
+                                font-weight: $SPProduct-font-weight-600;
+                                vertical-align: middle;
+                               
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .prod-right-sidebar {
+           
+            zoom: 1;
+            vertical-align: top;
+           
+            h2 {
+               
+                
+                font-size: $SPProduct-font-16;
+                color: $font-heading-color;
+                font-weight: $SPProduct-font-weight-700;
+                line-height: inherit;
+            }
+            
+            .prod-videos {
+               
+                border: 1px solid $Lp-video-bord;
+                img {
+                  
+                    vertical-align: middle;
+                }
+            }
+            .prod-form input[type="text"],
+            input[type="file"] {
+                background-color: $SPProduct-Primary-color;
+                border: 1px solid $SPProduct-customcolor1;
+                border-radius: 3px;
+               
+                font-size: $SPProduct-font-12;
+               
+            }
+            .prod-form button {
+               
+                cursor: pointer;
+               
+                border: none;
+            }
+            .prod-broc-content {
+               
+                .prod-broc-content-inner {
+                    
+                    background-color: $bg-light-pink;
+                    border: 0.5px solid $table-border-color;
+                   
+                    .prod-left-icon {
+                       
+                        vertical-align: top;
+                      
+                        cursor: pointer;
+                       
+                    }
+                    .prod-content {
+                       
+                        vertical-align: top;
+                      
+                        p {
+                            font-size: $SPProduct-font-12;
+                            color: $SPProduct-customcolor3;
+                            text-align: left;
+                            font-weight: $SPProduct-font-weight-600;
+                          
+                        }
+                    }
+                    .prod-right-icon {
+                       
+                        vertical-align: top;
+                       
+                        cursor: pointer;
+                        
+                    }
+                }
+            }
+        }
+        .prod-right-sidebar1 {
+           
+            zoom: 1;
+            vertical-align: top;
+            
+            h2 {
+              
+                font-size: $SPProduct-font-16;
+                color: $font-heading-color;
+            }
+            .prod-right-inner {
+               
+                .prod-right-list {
+                   
+                    border-left: 1px solid $Lp-bord-right;
+                    ul {
+                      
+                        li {
+                           
+                            vertical-align: middle;
+                            p {
+                                font-weight: $SPProduct-font-weight-400;
+                                font-size: $SPProduct-font-11;
+                                text-decoration: none;
+                                color: $SPProduct-customcolor3;
+                                line-height: 2;
+                            }
+                            .list-imgsec1 {
+                              
+                                vertical-align: middle;
+                                img {
+                                  
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .col-shedule {
+            $breakpoint-alpha: 480px; // adjust to your needs
+            .rwd-table {
+                 // adjust to your needs
+                border-collapse: collapse;
+               
+
+                th {
+                   
+                    border: 0.5px solid $table-border-color;
+                    text-align: center;
+                    background-color: $table-head-bg; // for accessibility, use a visually hidden method here instead! Thanks, reddit!
+                }
+                td {
+                   
+                    text-align: left;
+                    vertical-align: top;
+                    border-right: 0.5px solid $Lp-bord-right;
+                   
+                    background-color: $table-body-bg;
+                    .div-align-tab {
+                       
+                        border-left: 0.5px solid $Lp-bord-right;
+                        h1 {
+                            font-size: $SPProduct-font-14;
+                            color: $SPProduct-customcolor3;
+                           
+                            font-weight: $SPProduct-font-weight-400;
+                            text-align: left;
+                        }
+                        ul {
+                            
+                            li {
+                                
+                                list-style: initial;
+                                font-size: $SPProduct-font-14;
+                                color: $SPProduct-customcolor3;
+                                text-align: left;
+                               
+                            }
+                        }
+                        ol {
+                           
+                            li {
+                                list-style: decimal;
+                                font-weight: initial;
+                            }
+                        }
+                    }
+                   
+                    &:before {
+                       
+                        font-weight: $SPProduct-font-weight-700;
+                        
+                        vertical-align: top;
+                       
+                    }
+                }
+                th {
+                    text-align: center;
+                }
+                th,
+                td {
+                    text-align: left;
+                    border-collapse: collapse;
+                    @media (min-width: $breakpoint-alpha) {
+                       
+                        .div-align-tab {
+                           
+                            border-left: 0;
+                            h1 {
+                                font-size: $SPProduct-font-14;
+                                color: $SPProduct-customcolor3;
+                               
+                                font-weight: $SPProduct-font-weight-400;
+                                text-align: left;
+                                line-height: inherit;
+                            }
+                            ul {
+                               
+                                li {
+                                    
+                                    list-style: initial;
+                                    font-size: $SPProduct-font-14;
+                                    color: $SPProduct-customcolor3;
+                                    text-align: left;
+                                   
+                                }
+                            }
+                            ol {
+                               
+                                li {
+                                    list-style: decimal;
+                                    font-weight: initial;
+                                }
+                            }
+                        }
+                        &:first-child {
+                           
+                            text-align: center;
+                            vertical-align: top;
+                        }
+                        
+                    }
+                }
+            }
+            .rwd-table {
+                background-color: $table-head-bg;
+                font-size: $SPProduct-font-14;
+                color: $SPProduct-customcolor3;
+                overflow: hidden;
+                tr {
+                    border: 0.5px solid $table-border-color;
+                }
+                th {
+                    text-align: center;
+                    background-color: $table-head-bg;
+                }
+                th,
+                td {
+                    @media (min-width: $breakpoint-alpha) {
+                       
+                        border: 0.5px solid $table-border-color;
+                        background-color: $table-body-bg;
+                    }
+                }
+                th,
+                td:before {
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor7;
+                    border-right: 0;
+                   
+                }
+            }
+        }
+        .bot-para-mob {
+            
+            vertical-align: top;
+            p {
+                font-size: $SPProduct-font-14;
+                color: $SPProduct-customcolor3;
+                text-align: left;
+                font-weight: $SPProduct-font-weight-400;
+                line-height: 1.57;
+                a {
+                    font-weight: $SPProduct-font-weight-500;
+                    color: $SPProduct-Primary-color1;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* product Wrapper End*/
+
+
+/*========COURSE STRUCTURE========*/
+
+.Course-structure-section {
+  
+    .Course_wrap {
+        border-bottom: 1px solid $LP-bord-head;
+       
+        .course_h2 {
+            font-size: 20px;
+            color: $font-heading-color;
+            text-align: center;
+           
+            font-weight: $SPProduct-font-weight-700;
+            line-height: 1.2;
+        }
+        .course_h2_An {
+            font-size: 20px;
+            color: $font-heading-color;
+            text-align: center;
+           
+            font-weight: $SPProduct-font-weight-700;
+        }
+        .head-icon-right {
+           
+            vertical-align: middle;
+            .head-icon {
+                
+                a {
+                    border: none;
+                    
+                }
+            }
+        }
+        .head-icon1 {
+          
+            a {
+                border: none;
+                
+            }
+        }
+    }
+}
+
+.course-bottom {
+   
+    .course-p {
+        p {
+            font-size: $SPProduct-font-14;
+            color: $SPProduct-customcolor3;
+            font-weight: $SPProduct-font-weight-400;
+        }
+        h2 {
+            font-size: 20px;
+            color: $font-heading-color;
+           
+        }
+    }
+}
+
+
+
+/*========COURSE STRUCTURE========*/
+
+
+/*===TABLE===*/
+
+.table-all {
+   
+    border-collapse: collapse;
+    
+    font-weight: initial;
+    h2 {
+        font-size: $SPProduct-font-16;
+        color: $font-heading-color;
+        text-align: center;
+       
+        font-weight: $SPProduct-font-weight-700;
+        
+    }
+    p {
+        font-size: $SPProduct-font-14;
+        color: $SPProduct-customcolor3;
+        text-align: left;
+        font-weight: inherit;
+        ul {
+           
+            li {
+                list-style: initial;
+            }
+        }
+        ol {
+           
+            li {
+                list-style: decimal;
+                font-weight: initial;
+            }
+        }
+    }
+    ul {
+       
+        li {
+            list-style: initial;
+        }
+    }
+    ol {
+        
+        li {
+            list-style: decimal;
+            font-weight: initial;
+        }
+    }
+    table,
+    td,
+    th {
+        border: 0.5px solid $table-border-color;
+        border-collapse: collapse;
+    }
+    table {
+       
+        border-collapse: collapse;
+    }
+    th {
+       
+        font-size: $SPProduct-font-14;
+        /* color: $SPProduct-customcolor7; */
+        text-align: center;
+       
+        background-color: $table-head-bg;
+    }
+    td {
+       
+        background-color: $table-body-bg;
+        font-size: $SPProduct-font-14;
+        color: $SPProduct-customcolor3;
+        text-align: left;
+        font-weight: $SPProduct-font-weight-400;
+       
+        vertical-align: top;
+    }
+}
+
+.table-all.learning-duration,
+.table-all.study-options {
+    td {
+        text-align: center!important;
+        p,
+        ul li,
+        ol li {
+            text-align: center!important;
+        }
+    }
+}
+
+.table-Entry {
+   
+    border-collapse: collapse;
+    
+    h2 {
+        font-size: $SPProduct-font-16;
+        color: $font-heading-color;
+        text-align: center;
+       
+        font-weight: $SPProduct-font-weight-700;
+        
+    }
+    h4 {
+        font-size: $SPProduct-font-14;
+        color: $SPProduct-customcolor3;
+        text-align: left;
+        font-weight: $SPProduct-font-weight-700;
+       
+        line-height: 1.29;
+    }
+    p {
+        font-size: $SPProduct-font-12;
+        color: $SPProduct-customcolor3;
+        text-align: center;
+        font-weight: $SPProduct-font-weight-700;
+    }
+    table {
+        border: 0.5px solid $table-border-color;
+        border-collapse: collapse;
+    }
+    table {
+      
+        border-collapse: collapse;
+    }
+    th {
+        font-size: $SPProduct-font-14;
+        color: $SPProduct-customcolor7;
+        text-align: left;
+       
+        background-color: $table-head-bg;
+        font-weight: $SPProduct-font-weight-700;
+        line-height: 1.29;
+    }
+    td {
+       
+        background-color: $table-head-bg;
+        font-size: $SPProduct-font-14;
+        color: $SPProduct-customcolor3;
+        text-align: left;
+        font-weight: $SPProduct-font-weight-400;
+       
+        @extend .Border;
+        vertical-align: middle;
+        p {
+            font-size: $SPProduct-font-14;
+            color: $SPProduct-customcolor3;
+            text-align: left;
+            font-weight: $SPProduct-font-weight-400;
+            line-height: 1.57;
+        }
+    }
+    td:first-child {
+       
+        background-color: $table-head-bg;
+        font-size: $SPProduct-font-14;
+        color: $SPProduct-customcolor3;
+        text-align: left;
+        font-weight: $SPProduct-font-weight-700;
+       
+        vertical-align: middle;
+        line-height: 1.29;
+    }
+}
+
+.table-Schedule {
+  
+    border-collapse: collapse;
+   
+    h2 {
+        font-size: $SPProduct-font-16;
+        color: $font-heading-color;
+        text-align: center;
+       
+        font-weight: $SPProduct-font-weight-700;
+        
+    }
+    p {
+        font-size: $SPProduct-font-12;
+        color: $SPProduct-customcolor3;
+        text-align: center;
+        font-weight: $SPProduct-font-weight-700;
+    }
+    h4 {
+        font-size: $SPProduct-font-16;
+        color: $SPProduct-Primary-color1;
+        text-align: left;
+        font-weight: $SPProduct-font-weight-700;
+      
+    }
+    table,
+    td,
+    th {
+        border: 0.5px solid $table-border-color;
+        border-collapse: collapse;
+    }
+    table {
+      
+        border-collapse: collapse;
+    }
+    th {
+      
+        font-size: $SPProduct-font-14;
+        color: $SPProduct-customcolor7;
+        text-align: center;
+       
+        background-color: $table-head-bg;
+    }
+    td {
+       
+        background-color: $table-head-bg;
+        font-size: $SPProduct-font-14;
+        color: $SPProduct-customcolor3;
+        text-align: left;
+        font-weight: $SPProduct-font-weight-400;
+      
+        vertical-align: top;
+        p {
+            font-size: $SPProduct-font-14;
+            color: $SPProduct-customcolor3;
+            text-align: left;
+            font-weight: $SPProduct-font-weight-700;
+           
+        }
+        ul {
+           
+            li {
+               
+                list-style: initial;
+                font-size: $SPProduct-font-14;
+                color: $SPProduct-customcolor3;
+                text-align: left;
+                font-weight: $SPProduct-font-weight-400;
+              
+            }
+        }
+        ol {
+           
+            li {
+                list-style: decimal;
+                font-weight: initial;
+            }
+        }
+    }
+    td:first-child {
+      
+        background-color: $table-head-bg;
+        font-size: $SPProduct-font-14;
+        color: $SPProduct-customcolor3;
+        text-align: left;
+        font-weight: $SPProduct-font-weight-400;
+       
+        vertical-align: top;
+        p {
+            font-size: $SPProduct-font-14;
+            color: $SPProduct-customcolor3;
+            text-align: left;
+            font-weight: $SPProduct-font-weight-700;
+            
+        }
+    }
+    td:nth-child(2) {
+      
+        background-color: $table-head-bg;
+        font-size: $SPProduct-font-14;
+        color: $SPProduct-customcolor3;
+        text-align: left;
+        font-weight: $SPProduct-font-weight-400;
+      
+        vertical-align: top;
+    }
+    td:nth-child(3) {
+       
+        background-color: $table-head-bg;
+        font-size: $SPProduct-font-14;
+        color: $SPProduct-customcolor3;
+        text-align: left;
+        font-weight: $SPProduct-font-weight-400;
+      
+        vertical-align: top;
+        p {
+            font-size: $SPProduct-font-14;
+            color: $SPProduct-customcolor3;
+            text-align: left;
+           
+        }
+    }
+}
+
+
+
+/*LITHAN PRODUCT FOR DESKTOP END */
+
+
+/*LITHAN PRODUCT FOR TAB START */
+
+@include screen (768px,
+1024px,
+portrait) {
+    
+    .mob-menufixed {
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        border-bottom: $border-bottom-light;
+       
+        z-index: 100;
+        background-color: #FFF;
+        
+    }
+    .dropbtn_menu {
+        color: $font-active-color;
+       
+    }
+    .dropbtn_menu:after {
+        color: #676767;
+        content: url("/SPProduct-portlet/images/Product_create/menuDropDownIcon.png");
+       
+        
+        vertical-align: middle;
+    }
+    /* Dropdown button on hover & focus */
+    .dropbtn1:hover,
+    .dropbtn:focus {
+        background-color: #3e8e41;
+    }
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown_menu {
+       
+        z-index: 100;
+        background-color: $SPProduct-Primary-color;
+    }
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown_menu_content {
+       
+        background-color: #f9f9f9;
+       
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+       
+    }
+    /* Links inside the dropdown */
+    .dropdown_menu_content a {
+       
+        text-decoration: none;
+        
+        background-color: $SPProduct-Primary-color;
+        border: 1px solid $Lp-lightpink;
+       
+        font-size: $SPProduct-font-12;
+        color: $font-active-color;
+        cursor: pointer;
+        font-weight: $SPProduct-font-weight-700;
+       
+    }
+    /* Change color of dropdown links on hover */
+    .dropdown_menu_content a:hover {
+        background-color: #f1f1f1
+    }
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+   
+    .Menu_mobile {
+       
+        .mob-menu-div {
+          
+            option {
+                background-color: #FFF;
+                
+                color: #000;
+            }
+        }
+    }
+    .Menu-sidebar-left {
+      
+        zoom: 1;
+        vertical-align: top;
+       
+        z-index: 100;
+    } //productsection
+    .product_section {
+       
+        background-color: $Prod-bg-color;
+        .Mob-bot-btn {
+          
+            button {
+             
+                background-color: $SPProduct-customcolor14;
+                font-size: $SPProduct-font-16;
+               
+                cursor: pointer;
+            }
+        }
+        .mob-BV {
+           
+            ul {
+              
+                li {
+                   
+                    background-color: $bg-light-pink;
+                   
+                   
+                    
+                }
+            }
+        }
+        .Prod_h2 {
+           
+            border-bottom: 1px solid $LP-bord-head;
+        }
+        
+        span {
+          
+            line-height: 18px;
+        }
+        ul {
+           
+            line-height: 27px;
+            li {
+               
+                text-align: center;
+               
+                font-weight: $SPProduct-font-weight-400;
+               
+                .top-dot {
+                  
+                    font-size: 16px;
+                 
+                    color: #7d3680;
+                }
+            }
+        }
+    } //course
+    .Course-structure-section {
+      
+        .Course_wrap {
+            border-bottom: 0;
+           
+            .course_h2 {
+                font-size: $SPProduct-font-20;
+                color: $font-heading-color;
+                text-align: center;
+               
+                display: inline-block;
+            }
+            .course_h2_An {
+                font-size: $SPProduct-font-20;
+                color: $font-heading-color;
+                text-align: center;
+               
+                display: inline-block;
+            }
+            .head-icon-right {
+                
+                vertical-align: middle;
+                .head-icon {
+                   
+                    a {
+                        border: none;
+                        
+                    }
+                }
+            }
+            .head-icon1 {
+               
+                a {
+                    border: none;
+                    
+                }
+            }
+        }
+    }
+   
+    .Product-section-wrap {
+       
+        .desk-view-left {
+           
+            .prod-left-sidebar {
+              
+                .Lp_Desktab {
+                    .Tabb {
+                        background-color: $SPProduct-Primary-color;
+                        border: 1px solid $Lp-lightpink;
+                        
+                        font-size: $SPProduct-font-12;
+                        color: $font-active-color;
+                        text-decoration: none;
+                        font-weight: $SPProduct-font-weight-400;
+                        cursor: pointer;
+                      
+                        span:after {
+                            color: #676767;
+                            content: url("/SPProduct-portlet/images/Product_create/menuDropDownIcon.png");
+                           
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+            .prod-left-sidebar1 {
+               
+                zoom: 1;
+                vertical-align: top;
+               
+                h2 {
+                    font-size: $SPProduct-font-16;
+                    color: $font-heading-color;
+                    text-align: left;
+                }
+                ul {
+                    background-color: $SPProduct-Primary-color;
+                    border: 1px solid $Lp-lightpink;
+                    li {
+                       
+                        font-size: $SPProduct-font-12;
+                        color: $font-active-color;
+                        font-weight: $SPProduct-font-weight-400;
+                       
+                        a {
+                            vertical-align: middle;
+                            font-size: $SPProduct-font-12;
+                          
+                            text-decoration: none;
+                            &.active {
+                                background-image: linear-gradient(#f3f3f3 0%, #fbfbfb 100%);
+                                border: 1px solid $Lp-lightpink;
+                                font-weight: $SPProduct-font-weight-700;
+                                &.active:after {
+                                    content: url("images/arrowImg.png");
+                                   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .desk-tab-view {
+          
+            .prod-cont-sec {
+             
+                zoom: 1;
+                vertical-align: top;
+              
+                .course-middle {
+                    h2 {
+                        font-size: $SPProduct-font-16;
+                        color: $font-heading-color;
+                        text-align: center;
+                      
+                        line-height: 1.5;
+                    }
+                    
+                }
+                .list-cont {
+                    
+                    .list-imgsec {
+                      
+                        img {
+                          
+                            vertical-align: middle;
+                        }
+                    }
+                    .list-para {
+                       
+                        vertical-align: middle;
+                        
+                        p {
+                            font-size: $SPProduct-font-12;
+                            text-align: left;
+                            font-weight: $SPProduct-font-weight-400;
+                        }
+                    }
+                }
+                .cont-sec-inner {
+                    text-align: center;
+                   
+                    .cont-image {
+                       
+                        vertical-align: top;
+                       
+                    }
+                    .cont-desc {
+                      
+                        h3 {
+                            font-size: $SPProduct-font-16;
+                            color: $font-heading-color;
+                            text-align: center;
+                           
+                        }
+                        ul {
+                            li {
+                               
+                                list-style: circle;
+                                font-size: $SPProduct-font-14;
+                                color: $SPProduct-customcolor3;
+                                text-align: left;
+                                font-weight: $SPProduct-font-weight-400;
+                              
+                            }
+                        }
+                    }
+                }
+                .course-expl {
+                   
+                    p {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        text-align: left;
+                        font-weight: $SPProduct-font-weight-400;
+                    }
+                    h2 {
+                        font-size: $SPProduct-font-16;
+                        color: $font-heading-color;
+                    }
+                    .desk-h2-hidden {
+                        h2 {
+                            font-size: $SPProduct-font-16;
+                            color: $font-heading-color;
+                        }
+                    }
+                }
+            }
+            .prod-cont-sec1 {
+              
+                .tab-h2-hidden {
+                    h2 {
+                        font-size: 20px;
+                        color: $font-heading-color;
+                        text-align: center;
+                    }
+                }
+                .course-middle {
+                   
+                    h2 {
+                        font-size: $SPProduct-font-16;
+                        color: $font-heading-color;
+                        text-align: center;
+                      
+                        line-height: 1.5;
+                    }
+                    h3 {
+                        font-size: $SPProduct-font-14;
+                        color: $font-heading-color;
+                        text-align: center;
+                      
+                        font-weight: $SPProduct-font-weight-700;
+                    }
+                    .coremodule {
+                       
+                       
+                        .inner-core {
+                           
+                            z-index: 99;
+                           
+                        }
+                    }
+                }
+                .Entry-middle {
+                   
+                    h2 {
+                        font-size: $SPProduct-font-20;
+                        color: $font-heading-color;
+                        text-align: center;
+                       
+                    }
+                    h3 {
+                        font-size: $SPProduct-font-14;
+                        color: $font-heading-color;
+                        text-align: center;
+                       
+                        font-weight: $SPProduct-font-weight-700;
+                    }
+                  
+                }
+                .Specification-middle {
+                  
+                    h2 {
+                        font-size: $SPProduct-font-16;
+                        color: $font-heading-color;
+                        text-align: center;
+                      
+                    }
+                   
+                }
+                .pro-bot-link {
+                  
+                    a {
+                        color: $SPProduct-Primary-color1;
+                        text-decoration: none;
+                        color: $font-heading-color;
+                    }
+                    h1:before {
+                        content: "";
+                       
+                        border-top: solid 1px $LP-bord-head;
+                       
+                        z-index: 1;
+                    }
+                    h1:after {
+                        content: "<";
+                      
+                        z-index: 10;
+                    }
+                    h1 span {
+                        background: $SPProduct-Primary-color;
+                       
+                        font-size: $SPProduct-font-12;
+                        z-index: 5;
+                        font-weight: $SPProduct-font-weight-700;
+                    }
+                }
+                .pro-bot-link-right {
+                   
+                    text-align: right;
+                   
+                    a {
+                        color: $SPProduct-Primary-color1;
+                        text-decoration: none;
+                        color: $font-heading-color;
+                    }
+                    h1:before {
+                        content: "";
+                       
+                        border-top: solid 1px $LP-bord-head;
+                      
+                        z-index: 1;
+                    }
+                    h1:after {
+                        content: ">";
+                        
+                        z-index: 10;
+                    }
+                    h1 span {
+                        background: $SPProduct-Primary-color;
+                      
+                        font-size: $SPProduct-font-12;
+                        z-index: 5;
+                        font-weight: $SPProduct-font-weight-700;
+                    }
+                }
+                .list-cont {
+                   
+                    .list-imgsec {
+                       
+                        img {
+                           
+                            vertical-align: middle;
+                            a {
+                                border: none;
+                            }
+                        }
+                    }
+                    .list-file {
+                       
+                        img {
+                          
+                            vertical-align: middle;
+                            a {
+                                border: none;
+                            }
+                        }
+                    }
+                    .list-file-cal {
+                      
+                        img {
+                           
+                            vertical-align: middle;
+                            a {
+                                border: none;
+                            }
+                        }
+                    }
+                    .list-para {
+                      
+                        vertical-align: middle;
+                      
+                        a {
+                            color: $SPProduct-Primary-color;
+                            text-decoration: none;
+                        }
+                        p {
+                            font-size: $SPProduct-font-12;
+                            text-align: left;
+                            font-weight: $SPProduct-font-weight-400;
+                        }
+                    }
+                    .list-para1 {
+                       
+                        vertical-align: middle;
+                      
+                        a {
+                            color: $SPProduct-Primary-color1;
+                            text-decoration: none;
+                        }
+                        p {
+                            font-size: $SPProduct-font-12;
+                            text-align: center;
+                            font-weight: $SPProduct-font-weight-400;
+                           
+                        }
+                    }
+                }
+                .cont-sec-inner {
+                   
+                    .cont-image {
+                       
+                        vertical-align: top;
+                       
+                    }
+                    .cont-desc {
+                       
+                        h3 {
+                            font-size: $SPProduct-font-16;
+                            color: $font-heading-color;
+                            text-align: left;
+                           
+                        }
+                        ul {
+                            li {
+                               
+                                list-style: circle;
+                                font-size: $SPProduct-font-14;
+                                color: $SPProduct-customcolor3;
+                                text-align: left;
+                                font-weight: $SPProduct-font-weight-400;
+                               
+                            }
+                        }
+                    }
+                }
+                .course-expl {
+                  
+                    p {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        text-align: left;
+                        font-weight: $SPProduct-font-weight-400;
+                    }
+                    h2 {
+                        font-size: $SPProduct-font-16;
+                        color: $font-heading-color;
+                        text-align: center;
+                    }
+                    h3 {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        font-weight: $SPProduct-font-weight-700;
+                    }
+                    ul {
+                        li {
+                            
+                            list-style: initial;
+                            font-size: $SPProduct-font-14;
+                            color: $SPProduct-customcolor3;
+                            text-align: left;
+                            font-weight: $SPProduct-font-weight-400;
+                           
+                        }
+                    }
+                    ol {
+                      
+                        li {
+                            list-style: decimal;
+                            font-weight: initial;
+                        }
+                    }
+                }
+                .course-exp2 {
+                  
+                    p {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        text-align: left;
+                        font-weight: $SPProduct-font-weight-400;
+                    }
+                    h2 {
+                        font-size: $SPProduct-font-16;
+                        color: $font-heading-color;
+                    }
+                    h3 {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        font-weight: $SPProduct-font-weight-400;
+                    }
+                    ul {
+                       
+                        li {
+                           
+                            list-style: initial;
+                            font-size: $SPProduct-font-14;
+                            color: $SPProduct-customcolor3;
+                            text-align: left;
+                            font-weight: $SPProduct-font-weight-400;
+                            
+                        }
+                    }
+                    ol {
+                       
+                        li {
+                            list-style: decimal;
+                            font-weight: initial;
+                           
+                            font-size: $SPProduct-font-14;
+                            color: $SPProduct-customcolor3;
+                            text-align: left;
+                           
+                        }
+                    }
+                }
+                .Who-sholud-attend-sec {
+                   
+                    p {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        text-align: left;
+                        font-weight: $SPProduct-font-weight-400;
+                    }
+                    h2 {
+                        font-size: $SPProduct-font-16;
+                        color: $font-heading-color;
+                        text-align: center;
+                    }
+                    h3 {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        font-weight: $SPProduct-font-weight-700;
+                    }
+                    ul {
+                        li {
+                            display: list-item;
+                            list-style: initial;
+                            font-size: $SPProduct-font-14;
+                            color: $SPProduct-customcolor3;
+                            text-align: left;
+                            font-weight: $SPProduct-font-weight-400;
+                           
+                        }
+                    }
+                    ol {
+                       
+                        li {
+                            list-style: decimal;
+                            font-weight: initial;
+                        }
+                    }
+                }
+                .rating-sec {
+                   
+                    .rating-sec-inner {
+                        list-style: none;
+                      
+                     
+                        .rt_content {
+                            
+                            vertical-align: top;
+                            background-color: $bg-light-pink;
+                            border: 0.5px solid $table-border-color;
+                           
+                            .rt-cont-sec {
+                                vertical-align: middle;
+                               
+                                h2 {
+                                    font-size: $SPProduct-font-14;
+                                    color: $SPProduct-customcolor3;
+                                    text-align: center;
+                                   
+                                }
+                                p {
+                                    font-size: $SPProduct-font-12;
+                                    color: $font-heading-color;
+                                    text-align: center;
+                                    font-weight: $SPProduct-font-weight-700;
+                                }
+                                ul {
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+                .who-should-attend {
+                    ul {
+                       
+                        li {
+                            
+                            .Wsa_image {
+                               
+                                .inside-cont {
+                                   
+                                    h2 {
+                                        font-size: $SPProduct-font-30;
+                                        color: #f5a623;
+                                        text-align: left;
+                                        
+                                    }
+                                    p {
+                                        font-size: $SPProduct-font-12;
+                                        color: $SPProduct-Primary-color;
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                            .Wsa_content {
+                               
+                                vertical-align: top;
+                                background-color: $Lp-whitesmoke;
+                                p {
+                                    font-size: $SPProduct-font-14;
+                                    color: $SPProduct-customcolor3;
+                                    text-align: left;
+                                  
+                                }
+                            }
+                            .Wsa_content-desk {
+                               
+                                p {
+                                    font-size: $SPProduct-font-14;
+                                    color: $SPProduct-customcolor3;
+                                    text-align: left;
+                                   
+                                }
+                            }
+                            .Wsa_content-mob {
+                               
+                                vertical-align: top;
+                                background-color: $Lp-whitesmoke;
+                                p {
+                                    font-size: $SPProduct-font-14;
+                                    color: $SPProduct-customcolor3;
+                                    text-align: left;
+                                   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .without-paddding-wrap {
+              
+                .tab-h2-hidden {
+                    h2 {
+                        font-size: $SPProduct-font-20;
+                        color: $font-heading-color;
+                        text-align: center;
+                    }
+                }
+            }
+            .prod-right-sidebar {
+             
+                vertical-align: top;
+                box-sizing: border-box;
+               
+                text-align: center;
+                h2 {
+                   
+                    font-size: $SPProduct-font-16;
+                    color: $font-heading-color;
+                    line-height: 1.5;
+                }
+               
+                .prod-videos {
+                   
+                    border: 1px solid $Lp-video-bord;
+                    img {
+                       
+                        vertical-align: middle;
+                    }
+                }
+                .prod-form input[type="text"],
+                input[type="file"] {
+                    background-color: $SPProduct-Primary-color;
+                    border: 1px solid $SPProduct-customcolor1;
+                    border-radius: 3px;
+                   
+                    font-size: $SPProduct-font-12;
+                   
+                }
+                .prod-form button {
+                   
+                    cursor: pointer;
+                 
+                    border: none;
+                }
+                .prod-broc-content {
+                   
+                    .prod-broc-content-inner {
+                     
+                        background-color: $bg-light-pink;
+                        border: 0.5px solid $table-border-color;
+                       
+                        .prod-left-icon {
+                          
+                            vertical-align: top;
+                           
+                           
+                        }
+                        .prod-content {
+                           
+                            vertical-align: top;
+                           
+                            p {
+                                font-size: $SPProduct-font-12;
+                                color: $SPProduct-customcolor3;
+                                text-align: left;
+                                font-weight: bold;
+                               
+                            }
+                        }
+                        .prod-right-icon {
+                            
+                            vertical-align: top;
+                           
+                           
+                        }
+                    }
+                }
+            }
+            .prod-right-sidebar1 {
+             
+                h2 {
+                  
+                    font-size: $SPProduct-font-16;
+                    color: $font-heading-color;
+                }
+                .prod-right-inner {
+                    
+                    .prod-right-list {
+                       
+                        border-left: 1px solid $Lp-video-bord;
+                        ul {
+                          
+                            li {
+                            
+                                vertical-align: middle;
+                                a {
+                                    font-weight: $SPProduct-font-weight-400;
+                                    font-size: $SPProduct-font-11;
+                                    text-decoration: none;
+                                    color: $SPProduct-customcolor3;
+                                }
+                                .list-imgsec1 {
+                                  
+                                    vertical-align: middle;
+                                    img {
+                                       
+                                        vertical-align: middle;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .course-bottom {
+               
+                .course-p {
+                    p {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        font-weight: $SPProduct-font-weight-400;
+                    }
+                    h2 {
+                        font-size: $SPProduct-font-20;
+                        color: $font-heading-color;
+                      
+                    }
+                }
+            }
+            .table-all {
+               
+                border-collapse: collapse;
+               
+                h2 {
+                    font-size: $SPProduct-font-16;
+                    color: $font-heading-color;
+                    text-align: center;
+                   
+                    font-weight: $SPProduct-font-weight-700;
+                   
+                }
+                p {
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    text-align: center;
+                    font-weight: $SPProduct-font-weight-700;
+                }
+                table,
+                td,
+                th {
+                    border: 0.5px solid $table-border-color;
+                    border-collapse: collapse;
+                }
+                table {
+                   
+                    border-collapse: collapse;
+                }
+                th {
+                   
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor7;
+                    text-align: center;
+                
+                    background-color: $table-head-bg;
+                }
+                td {
+                   
+                    vertical-align: top;
+                }
+            }
+            .table-Entry {
+               
+                border-collapse: collapse;
+                h2 {
+                    font-size: $SPProduct-font-16;
+                    color: $font-heading-color;
+                    text-align: center;
+                   
+                    font-weight: $SPProduct-font-weight-700;
+                   
+                }
+                p {
+                    font-size: $SPProduct-font-12;
+                    color: $SPProduct-customcolor3;
+                    text-align: center;
+                    font-weight: $SPProduct-font-weight-700;
+                }
+                h4 {
+                    font-size: 14px;
+                    color: $SPProduct-customcolor3;
+                    text-align: left;
+                    font-weight: $SPProduct-font-weight-700;
+                  
+                }
+                table,
+                td,
+                th {
+                    border: 0.5px solid $table-border-color;
+                    border-collapse: collapse;
+                }
+                table {
+                   
+                    border-collapse: collapse;
+                }
+                th {
+                  
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor7;
+                    text-align: left;
+                   
+                    background-color: $table-head-bg;
+                }
+                td {
+                   
+                    background-color: $table-head-bg;
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    text-align: left;
+                    font-weight: $SPProduct-font-weight-400;
+                   
+                    vertical-align: middle;
+                    p {
+                       
+                        font-weight: $SPProduct-font-weight-400;
+                        text-align: left;
+                    }
+                }
+                td:first-child {
+                   
+                    background-color: $table-head-bg;
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    text-align: left;
+                    font-weight: $SPProduct-font-weight-400;
+                   
+                    vertical-align: top;
+                }
+            }
+            .table-Schedule {
+              
+                border-collapse: collapse;
+               
+                h2 {
+                    font-size: $SPProduct-font-16;
+                    color: $font-heading-color;
+                    text-align: center;
+                   
+                    font-weight: $SPProduct-font-weight-700;
+                   
+                }
+                p {
+                    font-size: $SPProduct-font-12;
+                    color: $SPProduct-customcolor3;
+                    text-align: center;
+                    font-weight: $SPProduct-font-weight-700;
+                }
+                table,
+                td,
+                th {
+                    border: 0.5px solid $table-border-color;
+                    border-collapse: collapse;
+                }
+                table {
+                   
+                    border-collapse: collapse;
+                }
+                th {
+                   
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor7;
+                    text-align: center;
+                   
+                    background-color: $table-head-bg;
+                }
+                td {
+                   
+                    background-color: $table-head-bg;
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    text-align: left;
+                    font-weight: $SPProduct-font-weight-400;
+                   
+                    vertical-align: top;
+                    p {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        text-align: left;
+                        font-weight: $SPProduct-font-weight-700;
+                       
+                    }
+                    ul {
+                        
+                        li {
+                            
+                            list-style: initial;
+                            font-size: $SPProduct-font-14;
+                            color: $SPProduct-customcolor3;
+                            text-align: left;
+                            font-weight: $SPProduct-font-weight-400;
+                           
+                        }
+                    }
+                    ol {
+                       
+                        li {
+                            list-style: decimal;
+                            font-weight: initial;
+                        }
+                    }
+                }
+                td:first-child {
+                   
+                    background-color: $table-head-bg;
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    text-align: left;
+                    font-weight: $SPProduct-font-weight-400;
+                   
+                    vertical-align: top;
+                    p {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        text-align: left;
+                        font-weight: $SPProduct-font-weight-700;
+                       
+                    }
+                }
+                td:nth-child(2) {
+                  
+                    background-color: $table-head-bg;
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    text-align: left;
+                    font-weight: $SPProduct-font-weight-400;
+                    
+                    vertical-align: top;
+                }
+                td:nth-child(3) {
+                   
+                    background-color: $table-head-bg;
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    text-align: left;
+                    font-weight: $SPProduct-font-weight-400;
+                    
+                    vertical-align: top;
+                    p {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor3;
+                        text-align: left;
+                        font-weight: $SPProduct-font-weight-700;
+                       
+                    }
+                }
+            }
+            .col-shedule {
+                $breakpoint-alpha: 480px;
+                .rwd-table {
+                  
+                    border-collapse: collapse;
+                    tr {
+                        border: 0.5px solid $table-border-color;
+                    }
+                    th {
+                       
+                        border: 0.5px solid $table-border-color;
+                        text-align: center; // for accessibility, use a visually hidden method here instead! Thanks, reddit!
+                    }
+                    td {
+                       
+                        text-align: left;
+                        vertical-align: top;
+                        border-right: 0.5px solid $Lp-bord-right;
+                      
+                        .div-align-tab {
+                           
+                            border-left: 0.5px solid $Lp-bord-right;
+                            h1 {
+                                font-size: $SPProduct-font-14;
+                                color: $SPProduct-customcolor3;
+                              
+                                font-weight: $SPProduct-font-weight-400;
+                                text-align: left;
+                            }
+                            ul {
+                               
+                                li {
+                                   
+                                    list-style: initial;
+                                    font-size: $SPProduct-font-14;
+                                    color: $SPProduct-customcolor3;
+                                    text-align: left;
+                                   
+                                }
+                            }
+                            ol {
+                               
+                                li {
+                                    list-style: decimal;
+                                    font-weight: initial;
+                                }
+                            }
+                        }
+                       
+                        &:before {
+                            content: attr(data-th) " ";
+                            font-weight: $SPProduct-font-weight-700;
+                           
+                            vertical-align: top;
+                           
+                        }
+                    }
+                    th {
+                        text-align: center;
+                    }
+                    th,
+                    td {
+                        text-align: left;
+                        border-collapse: collapse;
+                        @media (min-width: $breakpoint-alpha) {
+                            
+                            .div-align-tab {
+                               
+                                border-left: 0;
+                                h1 {
+                                    font-size: $SPProduct-font-14;
+                                    color: $SPProduct-customcolor3;
+                                  
+                                    font-weight: $SPProduct-font-weight-400;
+                                }
+                                ul {
+                                   
+                                    li {
+                                       
+                                        list-style: initial;
+                                        font-size: $SPProduct-font-14;
+                                        color: $SPProduct-customcolor3;
+                                        text-align: left;
+                                       
+                                    }
+                                }
+                                ol {
+                                   
+                                    li {
+                                        list-style: decimal;
+                                        font-weight: initial;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+                .rwd-table {
+                    background-color: $table-head-bg;
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    overflow: hidden;
+                    tr {
+                        border: 0.5px solid $table-border-color;
+                    }
+                    th {
+                        text-align: center;
+                    }
+                    th,
+                   
+                    th,
+                    td:before {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor7;
+                        border-right: 0;
+                        
+                    }
+                }
+            }
+            .bot-para-mob {
+                
+                vertical-align: top;
+                p {
+                    font-size: $SPProduct-font-14;
+                    color: $SPProduct-customcolor3;
+                    text-align: left;
+                    font-weight: $SPProduct-font-weight-400;
+                    line-height: 1.57;
+                    a {
+                        font-weight: $SPProduct-font-weight-700;
+                        color: $SPProduct-Primary-color1;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*LITHAN PRODUCT FOR TAB END */
+
+
+/****1.PRODUCT FILES*****/
+
+.Border-bottom-active {
+    border-bottom: 1px solid $SPProduct-customcolor18;
+   
+    z-index: 100;
+}
+
+.Border-bottom-active:before {
+    content: "";
+ 
+    border-style: solid;
+    border-width: 0px 11px 10px 11px;
+    border-color: transparent transparent $SPProduct-Primary-color3 transparent;
+    z-index: 100;
+   
+}
+
+.Border-bottom-active:after {
+    content: "";
+  
+    border-style: solid;
+    border-width: 0 11px 11px 10px;
+    border-color: transparent transparent $SPProduct-customcolor18 transparent;
+    z-index: 100;
+   
+}
+
+.ProdBorder-active {
+    border-bottom: 1px solid $SPProduct-customcolor1;
+   
+    z-index: 1;
+}
+
+.ProdBorder-active:before {
+    content: "";
+   
+    border-style: solid;
+    border-width: 0px 11px 10px 11px;
+    border-color: transparent transparent $SPProduct-Primary-color transparent;
+    z-index: 101;
+   
+}
+
+.ProdBorder-active:after {
+    content: "";
+   
+    border-style: solid;
+    border-width: 0 11px 11px 10px;
+    border-color: transparent transparent $SPProduct-customcolor1 transparent;
+   
+}
+
+.Dashboard_Section {
+   
+    .Dashboard_wrapper {
+       
+        /*PRODUCT CREATE SECTION DASHBOARD END*/
+        .DashboardHeader_sec {
+          
+            vertical-align: top;
+            p {
+               
+                font-size: $SPProduct-font-14;
+                @extend .font-color;
+            }
+            /*COURSE CREATE SECTION*/
+            .Product_create {
+               
+                text-align: center;
+               
+                a {
+                    text-decoration: none;
+                   
+                    h2 {
+                        font-size: $SPProduct-font-16;
+                       
+                        color: $SPProduct-customcolor14;
+                    }
+                    p {
+                        font-size: $SPProduct-font-11;
+                        color: $SPProduct-customcolor3;
+                        font-weight: $SPProduct-font-weight-400;
+                        text-align: center;
+                        
+                    }
+                }
+            }
+        }
+        /*PRODUCT CREATE SECTION DASHBOARD END*/
+        /*Dashboard Content Section */
+        .Dash_Contentsec {
+           
+            vertical-align: top;
+            .Prod_item {
+               
+                .Dash_menu {
+                   
+                    a {
+                        
+                        text-decoration: none;
+                       
+                        vertical-align: top;
+                        text-align: center;
+                        .prod-item-inner {
+                           
+                          
+                            p {
+                                font-size: $SPProduct-font-12;
+                                color: $font-active-color;
+                               
+                                font-weight: $SPProduct-font-weight-400;
+                            }
+                        }
+                        &:hover {
+                            background-color: $SPProduct-Primary-color;
+                            border: 1px solid $SPProduct-customcolor12;
+                            -webkit-transition: all 0.4s ease-in;
+                            -moz-transition: all 0.4s ease-in;
+                            -ms-transition: all 0.4s ease-in;
+                            -o-transition: all 0.4s ease-in;
+                            transition: all 0.4s ease-in;
+                        }
+                        
+                    }
+                }
+                .Dashboard_popup {
+                  
+                    a {
+                       
+                        vertical-align: top;
+                        text-align: center;
+                        background-color: #961F63;
+                        text-decoration: none;
+                        color: #FFF;
+                        font-size: 12px;
+                       
+                    }
+                }
+            }
+        }
+        /*Dashboard Content Section End*/
+    }
+}
+
+
+
+
+
+/*Product Create section*/
+
+.Product_Section {
+  
+    .Product_Sidebar {
+       
+        vertical-align: top;
+       
+        .Right_iconmenu {
+            background: $SPProduct-customcolor6;
+            @extend .Border;
+            @include border-radius(3px);
+            vertical-align: top;
+           
+            ul {
+                li {
+                  
+                    border-bottom: 1px solid $SPProduct-customcolor1;
+                    background-color: $SPProduct-Primary-color;
+                    &.sidebar-Header {
+                        background-image: linear-gradient(#f3f3f3 0%, #fbfbfb 100%);
+                        h2 {
+                           
+                            font-size: $SPProduct-font-14;
+                            color: #808285;
+                            font-weight: $SPProduct-font-weight-600;
+                        }
+                    }
+                    .Menuitem {
+                        a {
+                          
+                            vertical-align: top;
+                            text-align: left;
+                           
+                            text-decoration: none;
+                            color: $font-inactive-color;
+                            box-sizing: border-box;
+                            
+                            h2 {
+                                font-size: $SPProduct-font-12;
+                                font-weight: $SPProduct-font-weight-400;
+                               	line-height:40px;
+                              	
+                            }
+                        }
+                        .Left_sidebar_section {
+                            ul {
+                               
+                                border-left: 1px solid $font-active-color;
+                                li {
+                                   
+                                    border-bottom: 0;
+                                    font-size: $SPProduct-font-12;
+                                    font-weight: $SPProduct-font-weight-400;
+                                    background: none;
+                                   
+                                }
+                            }
+                        }
+                    }
+                    &.active {
+                        background-color: $SPProduct-customcolor2;
+                        a {
+                            h2 {
+                                color: $font-active-color;
+                                font-weight: $SPProduct-font-weight-700;
+                            }
+                        }
+                    }
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .Product_wrapper {
+      
+        vertical-align: top;
+       
+        border: none;
+        .Product_header {
+           
+            text-align: center;
+           
+            .Prod-Headtitle {
+                @extend .bg_title;
+                @extend .Border-bottom;
+                
+                h2 {
+                    @extend .color-heading;
+                    font-size: $SPProduct-font-12;
+                   
+                    vertical-align: top;
+                    text-align: left;
+                    line-height: 20px;
+                    a {
+                        @extend .color-heading;
+                        font-size: $SPProduct-font-12;
+                        display: inline-block;
+                        text-decoration: none;
+                       
+                    }
+                }
+                .Menu-Iconright {
+                   
+                    a {
+                        border: none;
+                        text-decoration: none;
+                        img {
+                           
+                            &:hover {
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+            }
+            .Prod-HeadContent {
+               
+                a {
+                    text-decoration: none;
+                  
+                    h2 {
+                        font-size: $SPProduct-font-16;
+                       
+                        @extend .color-heading;
+                    }
+                    p {
+                        font-size: $SPProduct-font-11;
+                        color: $SPProduct-customcolor3;
+                        font-weight: $SPProduct-font-weight-400;
+                        text-align: center;
+                       
+                    }
+                }
+            }
+        }
+        .Product_contsection {
+            .Form-Prodsection {
+                @extend .ul-rounded;
+                /*FORM SUMMARY*/
+                /*FORM SUMMARY END*/
+                .Input_small {
+                   
+                    vertical-align: top;
+                    @extend .Product_input;
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                }
+                .Input_Smallexd {
+                   
+                    vertical-align: top;
+                    @extend .Product_input;
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                }
+                .Input_Medium {
+                   
+                    vertical-align: top;
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                    @extend .Product_input;
+                }
+                .Input_Search {
+                   
+                    vertical-align: top;
+                    @extend .Product_input;
+                   
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                }
+                .Input_Search_halfwidth {
+                   
+                    vertical-align: top;
+                    @extend .Product_input;
+                   
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                }
+                .Input_Search_Fullfwidth {
+                   
+                    vertical-align: top;
+                    @extend .Product_input;
+                    
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                }
+                .Input_Fullwidth {
+                  
+                    vertical-align: top;
+                    @extend .Product_input;
+                    p {
+                      
+                        font-size: $SPProduct-font-14;
+                        @extend .font-color;
+                    }
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                    /*COURSE CREATE SECTION*/
+                    /*COURSE CREATE SECTION END*/
+                }
+                .Image_upload {
+                   
+                    @include border-radius(3px);
+                    background-color: $SPProduct-Primary-color;
+                    p {
+                     
+                        @extend .font-inactive-color;
+                        font-size: $SPProduct-font-12;
+                    }
+                }
+                .Image_upload.Error {
+                    border: 1px solid $Error;
+                }
+                .Image_upload.Error-success {
+                    border: 1px solid $Error-success;
+                }
+                .Input_HalfWidth {
+                  
+                    vertical-align: top;
+                  
+                    @extend .Product_input;
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                    /*COURSE CREATE SECTION*/
+                    /*COURSE CREATE SECTION END*/
+                }
+            }
+        }
+    }
+    .Product_bottom {
+      
+        @extend .Border-section;
+       
+        font-weight: $SPProduct-font-weight-700;
+       
+        text-align: center;
+       
+        a,
+        input[type="button"] {
+            text-decoration: none;
+            @extend .Button-bg;
+            color: $SPProduct-button-font-color;
+            
+            font-size: $SPProduct-font-12;
+           
+        }
+        .Next-icon {
+            a {
+               
+                z-index: 1;
+                background-image: url("/SPProduct-portlet/images/Product_create/menuDropDownIcon.png");
+                background-repeat: no-repeat;
+                background-position: 0px 0px;
+              
+                @extend .Border;
+                @include border-radius(50px);
+                background-position: 8px 11px;
+                background-size: 9px 5px;
+               
+                &:hover {
+                    @extend .bg_title;
+                }
+            }
+        }
+        .Prev-icon {
+            a {
+               
+                z-index: 1;
+                background-image: url("/SPProduct-portlet/images/Product_create/menuDropDownIcon.png");
+                background-repeat: no-repeat;
+                background-position: 0px 0px;
+              
+                @extend .Border;
+                @include border-radius(50px);
+                background-position: 8px 11px;
+                background-size: 9px 5px;
+              
+                &:hover {
+                    @extend .bg_title;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*Product Create section end*/
+
+
+/****PRODUCT FILES*****/
+
+
+/*****************2.LITHAN PRODUCT CREATE2***********/
+
+.product_create.product_createsection{
+	border: none!important;
+}
+.product_create {
+  
+    .product_create_wrapper {
+        /*LeftSidebar*/
+        .Product_Sidebar {
+           
+            vertical-align: top;
+           
+            @extend .Border;
+            .Right_iconmenu {
+                background-color: $SPProduct-Primary-color;
+                @extend .Border;
+                @include border-radius(3px);
+               
+                box-sizing: border-box;
+                ul {
+                   
+                    li {
+                        
+                        border-bottom: 1px solid $SPProduct-customcolor1;
+                        &.sidebar-Header {
+                            @extend .Head-Gradient;
+                            h2 {
+                               
+                                font-size: $SPProduct-font-14;
+                                color: #808285;
+                                font-weight: $SPProduct-font-weight-600;
+                            }
+                        }
+                        .Menuitem {
+                            a {
+                                
+                                vertical-align: top;
+                                text-align: left;
+                                
+                                text-decoration: none;
+                                color: $font-inactive-color;
+                                box-sizing: border-box;
+                               
+                                h2 {
+                                    font-size: $SPProduct-font-12;
+                                    font-weight: $SPProduct-font-weight-400;
+                                    line-height:40px;
+                                   
+                                }
+                            }
+                            .Left_sidebar_section {
+                                ul {
+                                   
+                                    border-left: 1px solid $font-active-color;
+                                    li {
+                                       
+                                       
+                                        border-bottom: 0;
+                                        font-size: $SPProduct-font-12;
+                                        font-weight: $SPProduct-font-weight-400;
+                                        background: none;
+                                        
+                                    }
+                                }
+                            }
+                        }
+                        &.active {
+                            background-color: $SPProduct-customcolor2;
+                            a {
+                                h2 {
+                                    color: $font-active-color;
+                                    font-weight: $SPProduct-font-weight-700;
+                                }
+                            }
+                        }
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        /*LeftSidebar End*/
+        /*Right-section*/
+        .Right_content_section {
+          
+            vertical-align: top;
+           
+            background-color: $SPProduct-Primary-color;
+            border: none;
+            @extend .search_section;
+            .heading-title {
+                @extend .bg_title;
+              
+                box-sizing: border-box;
+               
+                h2 {
+                    @extend .color-heading;
+                    font-size: $SPProduct-font-14;
+                    font-weight: 600;
+                  
+                    vertical-align: top;
+                    line-height: 20px;
+                    a {
+                        @extend .color-heading;
+                        font-size: $SPProduct-font-12;
+                       
+                        text-decoration: none;
+                      
+                    }
+                }
+                .Menu-Iconright {
+                  
+                    a {
+                        border: none;
+                        text-decoration: none;
+                       
+                    }
+                }
+            }
+            .form-section {
+               
+                @extend .ul-rounded;
+                .form-inner {
+                   
+                    @include border-radius(2px);
+                }
+                /*FORM SUMMARY*/
+                .form-summary {
+                   
+                    h2 {
+                        font-size: $SPProduct-font-16;
+                        @extend .color-heading;
+                       
+                    }
+                    .right-icon-sec {
+                       
+                        @extend .box-bg-gradient;
+                        @extend .Border;
+                       
+                        
+                    }
+                    .form-summary-inner {
+                       
+                        @extend .box-bg;
+                        @extend .Border;
+                        @include border-radius(2px 2px 0 2px);
+                        input {
+                            font-size: $SPProduct-font-14;
+                            color: $SPProduct-customcolor3;
+                        }
+                    }
+                    .Summary_input {
+                        input[type="text"],
+                        input[type="password"],
+                        input[type="number"],
+                        input[type="file"],
+                        {
+                            &:hover {
+                                border: 1px solid #f0f0f0;
+                            }
+                        }
+                        textarea {
+                            &:hover {
+                                border: 1px solid #f0f0f0;
+                            }
+                        }
+                        select {
+                            &:hover {
+                                border: 1px solid #f0f0f0;
+                            }
+                        }
+                    }
+                }
+                .Fee-detail {
+                  
+                    background-color: $SPProduct-Primary-color;
+                    @extend .Border;
+                    @include border-radius(3px);
+                    .Fee-inner {
+                       
+                        .div-fee {
+                          
+                            vertical-align: middle;
+                            p {
+                              
+                                font-size: $SPProduct-font-14;
+                                color: $SPProduct-customcolor7;
+                                font-weight: $SPProduct-font-weight-700;
+                            }
+                        }
+                    }
+                }
+                .Table-dropdown {
+                    background: $SPProduct-customcolor8;
+                    @extend .Border;
+                    @include border-radius(3px);
+                  
+                    color: $SPProduct-customcolor4;
+                    text-align: left;
+                   
+                    box-sizing: border-box;
+                    position: relative;
+                    font-size: $SPProduct-font-14;
+                   
+                    &:after {
+                        content: url("/SPProduct-portlet/images/product/Active_arrow.png");
+                        
+                    }
+                }
+                /*FORM SUMMARY END*/
+                .Input_small {
+                  
+                    vertical-align: top;
+                    @extend .Product_input;
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                }
+                .Input_Smallexd {
+                   
+                    vertical-align: top;
+                    @extend .Product_input;
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                }
+                .Input_Medium {
+                  
+                    vertical-align: top;
+                    @extend .Product_input;
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                }
+                .Input_Search {
+                   
+                    vertical-align: top;
+                    @extend .Product_input;
+                   
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                }
+                .Input_Search_halfwidth {
+                  
+                    vertical-align: top;
+                    @extend .Product_input;
+                    
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                }
+                .Input_Search_Fullwidth {
+                   
+                    vertical-align: top;
+                    @extend .Product_input;
+                    
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                }
+                .Input_Fullwidth {
+                   
+                    vertical-align: top;
+                    @extend .Product_input;
+                    label {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor4;
+                       
+                    }
+                    p {
+                       
+                        font-size: $SPProduct-font-14;
+                        @extend .font-color;
+                    }
+                    /*COURSE CREATE SECTION*/
+                    .course-create {
+                       
+                        text-align: center;
+                        
+                        a {
+                            text-decoration: none;
+                            cursor: default;
+                           
+                            h2 {
+                                font-size: $SPProduct-font-16;
+                               
+                                @extend .color-heading;
+                            }
+                            p {
+                                font-size: $SPProduct-font-11;
+                                color: $SPProduct-customcolor3;
+                                font-weight: $SPProduct-font-weight-400;
+                                text-align: center;
+                               
+                            }
+                        }
+                    }
+                    /*COURSE CREATE SECTION END*/
+                }
+                .Image_upload {
+                  
+                    @include border-radius(3px);
+                    background-color: $SPProduct-Primary-color;
+                    p {
+                       
+                        @extend .font-inactive-color;
+                        font-size: $SPProduct-font-12;
+                    }
+                }
+                .Image_upload.Error {
+                    border: 1px solid $Error;
+                }
+                .Image_upload.Error-success {
+                    border: 1px solid $Error-success;
+                }
+                .Image_summary {
+                  
+                    @extend .Border;
+                  
+                    @include border-radius(3px);
+                    background-color: $SPProduct-Primary-color;
+                    p {
+                        
+                        @extend .font-inactive-color;
+                        font-size: $SPProduct-font-12;
+                    }
+                    .image_div {
+                        text-align: center;
+                       
+                    }
+                }
+                .Input_HalfWidth {
+                  
+                    vertical-align: top;
+                   
+                    label {
+                        font-size: $SPProduct-font-14;
+                        color: $SPProduct-customcolor4;
+                      
+                    }
+                    @extend .Product_input;
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                    /*COURSE CREATE SECTION*/
+                    .course-create {
+                       
+                        text-align: center;
+                       
+                        a {
+                            text-decoration: none;
+                            cursor: default;
+                           
+                            h2 {
+                                font-size: $SPProduct-font-16;
+                               
+                                @extend .color-heading;
+                            }
+                            p {
+                                font-size: $SPProduct-font-11;
+                                color: $SPProduct-customcolor3;
+                                font-weight: $SPProduct-font-weight-400;
+                               
+                            }
+                        }
+                    }
+                    /*COURSE CREATE SECTION END*/
+                }
+                .Input_HalfWidth-Last {
+                   
+                    vertical-align: top;
+                    
+                    @extend .Product_input;
+                    .icon-right {
+                        @extend .right-icon;
+                    }
+                    /*COURSE CREATE SECTION*/
+                    .course-create {
+                       
+                        text-align: center;
+                       
+                        a {
+                            text-decoration: none;
+                            cursor: default;
+                            
+                            h2 {
+                                font-size: $SPProduct-font-16;
+                               
+                                @extend .color-heading;
+                            }
+                            p {
+                                font-size: $SPProduct-font-11;
+                                color: $SPProduct-customcolor3;
+                                font-weight: $SPProduct-font-weight-400;
+                               
+                            }
+                        }
+                    }
+                    /*COURSE CREATE SECTION END*/
+                }
+                .Input_HalfWidth-right {
+                   
+                   
+                    vertical-align: top;
+                    
+                    @extend .Product_input;
+                    .Select-dropdown {
+                        vertical-align: top;
+                      
+                        a {
+                            color: $SPProduct-customcolor4;
+                            text-decoration: none;
+                            outline: none;
+                            font-size: $SPProduct-font-12;
+                        }
+                       
+                        dt {
+                           
+                            a {
+                              
+                                line-height: 24px;
+                                overflow: hidden;
+                               
+                                @extend .Border;
+                               
+                                @include border-radius(3px);
+                                color: $SPProduct-customcolor4;
+                                background: $SPProduct-customcolor8;
+                                font-size: $SPProduct-font-14;
+                            }
+                            &::after {
+                                content: url("/SPProduct-portlet/images/product/Active_arrow.png");
+                               
+                            }
+                        }
+                      
+                        dd {
+                          
+                            ul {
+                                background-color: #fff;
+                                @extend .Border;
+                                color: $SPProduct-customcolor3;
+                               
+                                list-style: none;
+                               
+                                z-index: 100;
+                               
+                                span.value {
+                                    display: none;
+                                }
+                                li {
+                                   
+                                    font-size: $SPProduct-font-14;
+                                    text-align: left;
+                                   
+                                    a {
+                                       
+                                        color: $SPProduct-customcolor3;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .Right_bottom {
+              
+                @extend .Border-section;
+               
+                font-weight: $SPProduct-font-weight-700;
+                
+                box-sizing: border-box;
+                text-align: center;
+               
+                a {
+                    text-decoration: none;
+                    @extend .Button-bg;
+                    color: $SPProduct-button-font-color;
+                
+                    font-size: $SPProduct-font-12;
+                   
+                    &:focus {
+                        color: $SPProduct-button-font-color;
+                    }
+                }
+                .Next-icon {
+                    a {
+                        
+                        z-index: 1;
+                        background-image: url("/SPProduct-portlet/images/Product_create/menuDropDownIcon.png");
+                        background-repeat: no-repeat;
+                        background-position: 0px 0px;
+                       
+                        @extend .Border;
+                        @include border-radius(50px);
+                        background-position: 8px 11px;
+                        background-size: 9px 5px;
+                      
+                        &:hover {
+                            @extend .bg_title;
+                        }
+                    }
+                }
+                .Prev-icon {
+                    a {
+                       
+                        z-index: 1;
+                        background-image: url("/SPProduct-portlet/images/Product_create/menuDropDownIcon.png");
+                        background-repeat: no-repeat;
+                        background-position: 0px 0px;
+                       
+                        @extend .Border;
+                        @include border-radius(50px);
+                        background-position: 8px 11px;
+                        background-size: 9px 5px;
+                        
+                       
+                        &:hover {
+                            @extend .bg_title;
+                        }
+                    }
+                }
+            }
+        }
+        /*Right Section End*/
+    }
+}
+
+
+
+/*****************2.LITHAN PRODUCT CREATE 2***********/
+
+
+/*****************3.LITHAN PRODUCT DASHBOARD***********/
+
+.Section_borderbottom {
+    border-bottom: 1px solid $SPProduct-customcolor9;
+}
+
+.product_createsection {
+    @extend .Border;
+    .product_section_wrap {
+       
+        .search_section {
+            @extend .bg_title;
+            @extend .Border;
+           
+            color: $SPProduct-Primary-color;
+            .search_bar {
+              
+                vertical-align: top;
+                input {
+                    background: $SPProduct-customcolor10;
+                    @extend .Border;
+                    @include border-radius(3px);
+                  
+                    font-size: $SPProduct-font-12;
+                   
+                    color: $font-inactive-color;
+                   
+                }
+                .Search_icon {
+                    position: absolute;
+                    
+                    z-index: 1;
+                    background-image: url("/SPProduct-portlet/images/Product_create/Icon-Search.svg");
+                    background-repeat: no-repeat;
+                    background-position: 0px 0px;
+                   
+                }
+            }
+            .Calander_bar {
+               
+                .calander-section {
+                   
+                    vertical-align: top;
+                    input {
+                        /*  @extend .Border; */
+                        @include border-radius(3px);
+                       
+                        font-size: $SPProduct-font-12;
+                        
+                        color: $font-inactive-color;
+                        background-color: $SPProduct-Primary-color;
+                       
+                    }
+                    .Calander_icon {
+                        
+                        z-index: 1;
+                        background-image: url("/SPProduct-portlet/images/Product_create/Icon-Calendar.svg");
+                        background-repeat: no-repeat;
+                        background-position: 15px -3px;
+                        
+                        background-color: $SPProduct-customcolor8;
+                        border-right: 1px solid $SPProduct-customcolor1;
+                        background-size: 11px 40px;
+                        
+                    }
+                }
+                .separate-horizontal {
+                    
+                    z-index: 1;
+                    background-image: url("/SPProduct-portlet/images/Product_create/separate.svg");
+                    background-repeat: no-repeat;
+                    background-position: 3px 3px;
+                   
+                    background-size: 11px 40px;
+                }
+            }
+            .Productadd-section {
+              
+                .addproduct-btn {
+                    background-image: linear-gradient(-180deg, #9cd174 0%, #62a540 100%);
+                    border: 1px solid #62a540;
+                    border-radius: 2px;
+                  
+                    text-decoration: none;
+                    color: $SPProduct-Primary-color;
+                    font-size: $SPProduct-font-11;
+                }
+            }
+            .Search_Result_Count {
+                color: #000000;
+                font-size: 11px;
+               
+                text-align: right;
+            }
+        }
+        .Dispcontent_section {
+            border: 1px solid #e5e5e5;
+           
+            color: $SPProduct-Primary-color;
+            .Prod-DashContent {
+               
+                text-align: center;
+                .Dash_head_inner {
+                    text-decoration: none;
+                    
+                    h2 {
+                        font-size: $SPProduct-font-16;
+                       
+                        @extend .color-heading;
+                    }
+                    p {
+                        font-size: $SPProduct-font-11;
+                        color: $SPProduct-customcolor3;
+                        font-weight: $SPProduct-font-weight-400;
+                        text-align: center;
+                       
+                    }
+                    
+                }
+            }
+            .Product_listing_table {
+                ///BASIC TABLE STYLING
+                table {
+                 
+                    thead {
+                        @extend .Border-bottom;
+                        background: $SPProduct-customcolor2;
+                        th {
+                          
+                            font-weight: $SPProduct-font-weight-700;
+                            font-size: $SPProduct-font-12;
+                            text-align: left;
+                            color: $font-heading-color;
+                            
+                        }
+                    }
+                    tbody {
+                        tr {
+                            @extend .Border-bottom;
+                            td {
+                                
+                                color: $SPProduct-customcolor3;
+                                text-align: left;
+                                font-size: $SPProduct-font-11;
+                                .Edit_image {
+                                  
+                                    a {
+                                        text-decoration: none;
+                                        cursor: pointer;
+                                       
+                                    }
+                                }
+                            }
+                            &:last-child {
+                                border-bottom: 0;
+                            }
+                        }
+                    }
+                    tfoot {
+                        td {
+                           
+                            text-align: left;
+                            font-size: 1.25em;
+                        }
+                    }
+                }
+            }
+            .Product_head_wrap {
+                background: $SPProduct-customcolor2;
+               
+                border-bottom: 1px solid $SPProduct-customcolor1;
+                h2 {
+                  
+                    font-size: $SPProduct-font-12;
+                    color: $font-heading-color;
+                    text-align: center;
+                   
+                    line-height: 2;
+                }
+                .headr-inner {
+                    display: inline-block;
+                    position: relative;
+                   
+                    box-sizing: border-box;
+                   
+                    .table_head-sec {
+                      
+                        border-collapse: collapse;
+                        th {
+                            text-align: center;
+                           
+                            h3 {
+                               
+                                font-size: $SPProduct-font-12;
+                                color: $font-heading-color;
+                                text-align: center;
+                            }
+                        }
+                        p {
+                            font-size: $SPProduct-font-11;
+                            color: $SPProduct-Primary-color;
+                            text-align: center;
+                        }
+                        .color-dot-green {
+                            background-color: #49bd32;
+                           
+                            border-radius: 50%;
+                          
+                        }
+                        .color-dot-yellow {
+                            background-color: #f5a623;
+                           
+                            border-radius: 50%;
+                           
+                        }
+                        .color-dot-Red {
+                            background-color: #d0021b;
+                          
+                            border-radius: 50%;
+                           
+                        }
+                    }
+                }
+                .Pname_div {
+                   
+                    vertical-align: top;
+                    
+                    h2 {
+                       
+                        font-size: $SPProduct-font-12;
+                        color: $font-heading-color;
+                        text-align: left;
+                       
+                    }
+                }
+            }
+            .Product_contwrap {
+               
+                border-bottom: 1px solid $SPProduct-customcolor9;
+               
+                .Pname_div {
+                   
+                    vertical-align: top;
+                  
+                    .threedot {
+                       
+                        background-image: url("/SPProduct-portlet/images/Product_create/3dot.png");
+                        background-repeat: no-repeat;
+                        background-position: 15px 11px;
+                        &:hover {
+                           
+                            background-image: url("/SPProduct-portlet/images/Product_create/3dot-hover.png");
+                            background-repeat: no-repeat;
+                            background-position: 15px 11px;
+                            cursor: pointer;
+                        }
+                    }
+                    h2 {
+                       
+                        font-size: $SPProduct-font-12;
+                        color: $SPProduct-customcolor3;
+                        text-align: left;
+                       
+                        vertical-align: top;
+                       
+                        line-height: normal;
+                        
+                    }
+                    .Prod_id {
+                        font-size: 11px;
+                        color: #333333;
+                        text-align: center;
+                       
+                    }
+                    
+                }
+                .Pname_wrapper {
+                   
+                    .Pname_inner {
+                       
+                        @extend .Border-bottom;
+                        .table_inner-sec {
+                          
+                            border-collapse: collapse;
+                            
+                            td {
+                                text-align: center;
+                               
+                            }
+                            p {
+                                font-size: $SPProduct-font-11;
+                                color: $SPProduct-customcolor3;
+                                text-align: center;
+                                
+                            }
+                            .dash_listing {
+                                font-size: $SPProduct-font-11;
+                                color: $SPProduct-customcolor3;
+                                text-align: center;
+                            }
+                            .color-dot-green {
+                                background-color: $SPProduct-customcolor11;
+                               
+                                @include border-radius(50%);
+                               
+                            }
+                            .color-dot-yellow {
+                                background-color: $SPProduct-customcolor12;
+                               
+                                @include border-radius(50%);
+                              
+                            }
+                            .color-dot-Red {
+                                background-color: $SPProduct-customcolor13;
+                              
+                                @include border-radius(50%);
+                               
+                            }
+                            .Edit_dashboard {
+                                
+                                vertical-align: middle;
+                                a {
+                                    text-decoration: none;
+                                    border: 0;
+                                    cursor: pointer;
+                                   
+                                }
+                            }
+                        }
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                    }
+                }
+                .Loadmore_dot {
+                  
+                    background-image: url("/SPProduct-portlet/images/Product_create/3dot.png");
+                    background-repeat: no-repeat;
+                    background-position: 30px 11px;
+                   
+                  
+                    &:hover {
+                        background-image: url("/SPProduct-portlet/images/Product_create/3dot-hover.png");
+                        cursor: pointer;
+                    }
+                }
+                .Loadmore_text {
+                    color: #788290;
+                    font-size: 8pt;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.aui .alert {
+   
+    font-size: 10pt;
+   
+}
+
+.course-create.Prod-HeadContent {
+    
+    text-align: center;
+    a {
+        text-decoration: none;
+       
+        h2 {
+            font-size: 16px;
+          
+        }
+    }
+}
+
+
+
+/*****************3.LITHAN PRODUCT DASHBOARD END***********/
+
+
+/** product detail screen css - added by Harini **/
+
+.course-Outcome-Title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #7d3680;
+   
+}
+
+.course-Outcome-Desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.57;
+    color: #333333;
+}
+
+
+
+.outcomeDetail {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.57;
+    color: #333333;
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.57;
+        color: #333333;
+    }
+}
+
+.careerDetail p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.57;
+    color: #333333;
+}
+
+.topDesc {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.57;
+    color: #333333;
+  
+}
+
+.durationTitle {
+   
+    background-color: #faf3f7;
+    border: solid 0.5px #dab4cd;
+  
+}
+
+.enrolText {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.57;
+    color: #333333;
+  
+}
+
+.hrsText {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.57;
+    color: #333333;
+}
+
+.hrsNum {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.57;
+    color: #333333;
+}
+
+.prod-cont-left-sidebar {
+   
+    zoom: 1;
+    vertical-align: top;
+ 
+}
+
+.careerLeft {
+   
+    vertical-align: top;
+}
+
+
+
+
+.feeStructure {
+    
+   
+    .header-col-title {
+        font-size: 13px;
+        text-align: right;
+    }
+    .lastRowStyling {
+        color: $font-active-color;
+        font-weight: 600;
+    }
+}
+
+.desk-tab-view .prod-cont-sec1 {
+   
+    zoom: 1;
+    vertical-align: top;
+    
+}
+
+.outcomeDetail ul li,
+.careerDetail ul li {
+   
+    list-style: initial;
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    font-weight: 400;
+   
+}
+
+
+
+.outcomeDetail ol li,
+.careerDetail ol li {
+    list-style: decimal;
+    font-weight: initial;
+}
+
+
+
+.course-expl.orderedList {
+    list-style: inherit;
+}
+
+
+
+.course-expl.course-desc {
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    font-weight: 400;
+}
+
+.aui #errorMsg-Modal {
+    .modal {
+        
+        text-align: center;
+        z-index: 200!important;
+    }
+}
+
+.aui #column-1 #errorMsg-Modal {
+    .modal {
+        background-color: transparent;
+        border: 1px solid #ddd;
+        .btn {
+            color: #000;
+            font-size: 20pt;
+            background-color: transparent;
+        }
+    }
+    .modal-body {
+        color: #333;
+       
+    }
+    .modal-header {
+        height: 0;
+    }
+}
+
+
+
+/** styling moved from advanced styling **/
+
+.Product-section-wrap .desk-tab-view .prod-cont-sec1 .course-expl {
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    font-weight: 400;
+}
+
+
+
+
+
+
+.sc_title {
+    
+    text-align: center;
+}
+
+
+
+
+
+.product_createsection .product_section_wrap .Dispcontent_section .Product_contwrap .Pname_div {
+  
+    vertical-align: top;
+   
+}
+
+
+
+
+
+.Course_struc_div .rwd-table td table {
+   
+    border: none;
+}
+
+.Course_struc_div .rwd-table td table td {
+    text-align: left!important;
+    border: none!important;
+}
+
+.Course_struc_div .rwd-table td table tr {
+    border: none!important;
+}
+
+
+
+.Course_struc_div .rwd-table td:nth-child(3) table td {
+    text-align: left!important;
+    border: none!important;
+}
+
+
+
+#registerIframe {
+  
+    border: 1px solid #efefef;
+   
+}
+
+#registerForm h2 {
+   
+    font-size: 16px;
+    color: #7d3680;
+    font-weight: 700;
+    line-height: inherit;
+}
+
+.prod-right-sidebar {
+   
+    zoom: 1;
+    vertical-align: top;
+   
+}
+
+
+.downloadBrochureMob {
+   
+    background-color: #fff6fa;
+    border-bottom: 1px solid #e2d3dd;
+    border-top: 1px solid #e2d3dd;
+    font-size: 15px;
+}

@@ -1,0 +1,450 @@
+$base-space-unit				: 40px;
+$fontFamily						: 'Work Sans', sans-serif;
+$fontColor						: #333;
+$screen-max-width           	: 1200px;
+$fontSize-tiny					: 9pt;
+$fontSize-small					: 12px;
+$fontSize-regular				: 15px;
+$fontSize-normal				: 14px;
+$fontSize						: 16px;
+$fontSize-med-normal			: 24px;
+$fontSize-med-regular			: 18px;
+$fontSize-medium				: 30px;
+$fontSize-med-24				: 24pt;
+$fontSize-big					: 40px;
+$fontSize-bigger				: 46pt;
+$fontWeight-lighter				: 200;
+$fontWeight-light				: 300;
+$fontWeight-regular				: 400;
+$fontWeight-medium				: 500;
+$fontWeight-semibold			: 600;
+$fontWeight-black				: 700;
+
+$lineHeight-big					: 40px;
+$lineHeight-medium				: 30px;
+$lineHeight-small				: 1.1em;
+$lineHeight-regular				: 22px;
+
+$radius-small					: 4px;
+$secondary-color				: #0085ca;
+
+$themeColor						: #002f76;/**blue**/
+$themeColor1					: #d63c32;/**red**/
+
+$themeColor-2					: $secondary-color;	
+
+$white     						: #ffffff;
+$gray     						: #012062;
+$light-gray						: #91a1b8;
+$medium-gray					: #555555;
+$dark-gray 						: #333333;
+$black      					: #000000;
+$customBgBody                   : #f7f9fc;
+
+$full-width						: 100%;
+
+$body-bg-color					: $customBgBody;
+$menu-bg-color 					: $white;
+$menu-border-color 				: #e3e3e3;
+$link-color						: $themeColor;
+$link-hover-color				: $themeColor;
+$btn-primary-bg-color			: $themeColor1;
+$btn-primary-border-color		: $themeColor1;
+$btn-primary-color				: $white;
+$btn-primary-hover-bg-color		: #d6281b;
+$btn-primary-hover-border-color	: $themeColor1;
+$bgColor-btn-link-bar-hover		: #e7e7e7;
+$btn-primary-hover-color		: $white;
+$footer-bg						: #00205b;
+$border-color					: #bfbfbf;
+$border-gradient-color1			: $white;
+$border-gradient-color2			: #dcdcdc;
+$color-border					: #bfbfbf;
+
+$custom-color-1					: #e8e8e8;
+$custom-color-2					: #3d4249;
+$custom-color-3					: #b94a48; 
+$custom-color-4					: #468847;
+$custom-color-5					: #EEE;
+$custom-color-6					: #767676;
+$custom-color-7					: #dfe0e4;
+$custom-color-8					: #ececec;
+$custom-color-9					: #222;
+$custom-color-10				: #009c9c;
+$custom-color-11				: #5a5a5a;
+$custom-color-12				: #c6c6c6;
+$custom-color-13				: #efefef;
+$custom-color-14				: #8b0b5c;
+$custom-color-15				: #999;
+$custom-color-16				: #a02b73;
+$custom-color-17				: #8f1962;
+$custom-color-18				: #7b0c50;
+$custom-color-19				: #64023f;
+$custom-color-20				: #3f1d32;
+$custom-color-21				: #f6f0f4;
+$custom-color-22				: #d5d5d5;
+$custom-color-23				: #ccc;
+$custom-color-24				: #b0b0b0;
+$custom-color-25				: #8a3232;
+$custom-color-26				: #cf3f3f;
+$custom-color-27				: #5c324d;
+$custom-color-28				: #f3f3f3;
+$custom-color-30				: #788290;
+$custom-color-31				: #dfdfdf;
+$custom-color-32				: #7f255e;
+$custom-color-33				: #4a2d3f;
+$custom-color-34				: #f5f5f5;
+$custom-color-35				: #272626;
+$custom-color-36				: #f0f0f0;
+$custom-color-37				: #e9edf0;
+$custom-color-38				: #677584;
+$custom-color-39				: #E5E5E5;
+$custom-color-40				: #762353;
+$custom-color-41				: #77174e;
+$custom-color-42				: #a47e35;
+$custom-color-43				: #57a435;
+$custom-color-44				: #989898;
+$custom-color-45				: #e3e4e9;
+$custom-color-46				: #dce0e4;
+$custom-color-47				: #a9a9a9;
+$custom-color-48				: #acc3da;
+$custom-color-49				: #f8f8f8;
+$custom-color-50				: #6d6e72;
+
+//STAGE COLORS
+$gold-color-1:#ffe78b;
+$gold-color-2:#e49224;
+$silver-color-1:#ebebeb;
+$silver-color-2:#a8a8a8;
+$bronze-color-1:#ffc58b;
+$bronze-color-2:#cd6735;
+$iron-color-1:#bbb4b0;
+$iron-color-2:#714f3e;
+
+/**
+$bgColor-activeState			: $custom-color-4;
+
+$bgColor-body					: $light-gray;
+$bgColor-header					: rgba(255,255,255,0.9);
+$bgColor-section				: rgba(255,255,255,1);
+$bgColor-mark					: #71c5e8;
+$bgColor-link					: #f5f5f1;
+$bgColor-badge					: $tertiary-color;
+$bgColor-field					: #fafafa;
+$bgColor-tHead					: #e3e4e9;
+$bgColor-tCell					: $light-gray;
+
+
+$bgColor-btn-primary			: $light-gray;
+$bgColor-btn-primary-hover		: #e2e2e2;
+$bgColor-btn-primary-active		: $light-gray;
+$bgColor-btn-callout			: $secondary-color;
+$bgColor-btn-callout-hover		: $tertiary-color;
+$bgColor-btn-disabled			: #eef4f7;
+$bgColor-btn-icon				: $secondary-color;
+$bgColor-btn-icon-hover			: $tertiary-color;
+$bgColor-btn-link-bar			: $light-gray;
+$bgColor-btn-link-bar-hover		: #e7e7e7;
+$bgColor-btn-link-bar-active	: $light-gray;
+$bgColor-btn-social-icon		: $secondary-color;
+$bgColor-btn-social-icon-hover	: $tertiary-color;
+$bgColor-btn-group-item			: $light-gray;
+$bgColor-btn-group-item-hover	: $white;
+$bgColor-btn-group-item-active	: $light-gray;
+$bgColor-btn-dropdown			: $light-gray;
+$bgColor-btn-dropdown-hover		: $white;
+$bgColor-btn-dropdown-active	: $light-gray;
+$bgColor-btn-text-icon			: $light-gray;
+$bgColor-btn-text-icon-hover	: $white;
+$bgColor-btn-text-icon-active	: $light-gray;
+
+
+$color-feature					: #67747c;
+$color-caption					: #67747c;
+$color-small					: $bodyColor;
+$color-mark						: $bodyColor;
+$color-blockquote				: #757575;
+$color-cite						: #757575;
+$color-link						: $secondary-color;
+$color-link-hover				: $tertiary-color;
+$color-link-disabled			: #cbd9e4;
+$color-tooltip					: #999999;
+$color-badge					: #FFFFFF;
+$color-dropdown					: $bodyColor;
+$color-border					: #bfbfbf;
+$color-tagline					: #a5a5a5;
+
+
+$color-btn-callout				: $white;
+$color-btn-disabled				: #d8e2e8;
+$color-btn-icon					: $white;
+$color-btn-link-bar				: $bodyColor;
+$color-btn-social-icon			: $white;
+$color-btn-group-item			: $bodyColor;
+$color-btn-dropdown				: $bodyColor;
+$color-btn-text-icon			: $bodyColor;
+
+$color-facebook					: #4c66a4;
+$color-googleplus				: #dd4b39;
+$color-pinterest				: #cb2027;
+$color-twitter					: #2fc2ef;
+$color-youtube					: #de332b;
+$color-tumbler					: #35465c;
+
+
+
+$notice    						: #f9d17c;
+$notice-hl 						: #fcbd36;
+$error							: #b94a48;
+$success   						: #468847;
+$warning     					: #c09853;
+$info							: #3a87ad;
+
+
+$max-width						: 1280px;
+$max-height						: 100%;
+
+
+$section-padding				: 5%;
+$button-padding-big				: 15px;
+$button-padding-medium			: 10px;
+$button-padding-small			: 8px;
+$button-padding-smaller			: 5px;
+
+
+$radius-round					: 50%;
+$radius-big						: 10px;
+$radius-medium					: 5px;
+$radius-small					: 3px;
+$radius-smaller					: 2px;
+
+**/
+
+//Enrollment variables
+$plum: #6e1046;
+$plum-two: #5d133d;
+$battleship-grey: #5f6e7d;
+$pale-grey: #e0e7ee;
+$pale-grey-white: #f5f7f8;
+$greyish: #aaa9a9;
+$silver: #d9dce3;
+$bluey-grey: #90a1b5;
+$white-two: #dcdcdc;
+$ice-blue: #fdfeff;
+$pinkish-grey: #bcbcbc;
+$white-three: $custom-color-39;
+$scarlet: #d0021b;
+$pinkish-grey-two: #cbcbcb;
+$cocoa: #673e35;
+$sienna: #cd491d;
+$warm-grey: #707070;
+$leafy-green: #49bd32;
+$greyish-brown: #404040;
+$pinkish-grey-three: #c2c2c2;
+$dusty-orange: #ee8929;
+$pale-grey-two: #f5f8fb;
+$warm-grey-two: #777777;
+$squash: #edb917;
+$pale-grey-three: #f6f7f8;
+$gross-green: #bbc919;
+$greyish-three: #afafaf;
+$black-two: #212121;
+$pale-grey-four: #e9eaed;
+$pale-grey-five: #d8dee5;
+$greyblue: #5f7081;
+$battleship-grey-two: #687587;
+$nasty-green: #74bc46;
+$earth: #a15140;
+$squash-two: #f5a623;
+$white-five: #e0e0e0;
+$silver-three: #cccfd7;
+$white-six: #fcfcfc;
+$tomato: #e75728;
+$pale-grey-six: #eff1f4;
+$mango: #ff9a3b;
+$frog-green: #66c209;
+$off-white: #fffeee;
+$golden-yellow: #ffc81b;
+$sickly-yellow: #d2e220;
+$nasty-green-two: #62a540;
+$apple-green-two: #73bb24;
+$grey-blue:#5f7081;
+$brownish-orange: #e16219;
+$greyish-two: #a6a6a6;
+$white-thirteen: #f1f1f1;
+$pale-grey-seven: #e8edf2;
+$white-fourteen: #e6e6e6;
+$warm-grey-five: #9b9b9b;
+
+$dark-sand:#af915b;
+$white-pop: $custom-color-34; 
+$very-light-pink:#fffcfc; 
+$cool-grey:#98a0ac;
+$cool-white:#f9f9f9;
+$bluey-grey:#abb5c5; 
+//gradient-colors
+
+$pale-olive-green:#9cd174; 
+$pale-grey-eight:#f6f8fa; 
+$pale-grey-nine:#eaeef2; 
+$cloudy-blue:#b0c0cd; 
+$btn-bg1:#68ba0e;
+$btn-bg1-border:#65a51e;
+$white-50: rgba(213, 213, 213, 0.5);
+$white-50-two: rgba(255, 255, 255, 0.5);
+$white-50-three:rgb(247, 248, 248);
+$white-08-four:rgba(213, 213, 213, 0.02);
+$white-modal-bg: rgba(65, 83, 102, 0.8); 
+$white-Header2:#e2e2e2; 
+$beige:#f1e7db; 
+$off-white-two:#fffef0; 
+
+//text-align
+$textcenter:center;
+$textleft:left;
+$textright:right;
+$textjustify:justify;
+
+
+//Font (sizes & Weight & family)
+$font11:8pt;
+$font14:10.5pt;
+//Lineheight
+$lineheight12:12px;
+$lineheight18:18px;
+$lineheight24:24px;
+$lineheight40:40px;
+//border-width
+$side1: 1px;
+$side2: 2px;
+$side3: 3px;
+$side4: 4px;
+
+//generic-search
+
+
+/** sp_filter **/
+$custom-color-58				: #C9FFBF; /** figure, .result_item_image bg gradient**/
+$custom-color-59				: #FFAFBD; /** figure, .result_item_image bg gradient**/
+$custom-color-60				: #ffc72c; /** .result_item_title **/
+$custom-color-61				: #aaa; /** .result_item_desc **/
+$custom-color-62				: #f8f8f8; /** .sp_filter  /.profile_form_navigation - bg**/
+
+/** sp_groups **/
+$custom-color-67				: #bfbfbf; /** .sp-group-member **/
+$custom-color-68				: #acc3da; /** .sp-group-nav li text color **/
+$custom-color-69				: #D6D6D6; /** .ip-si-x text color**/
+$custom-color-70				: #FDA1A1; /** &.mobileSignOut **/
+
+/** startup profile **/
+$custom-color-79				: #ccc; /** .avatar_container border **/
+$custom-color-80				: #30a1f1; /** .avatar_cta input border **/
+$custom-color-81				: #4dacf1; /** .avatar_cta input bg **/
+$custom-color-82				: #D0D0D0; /** separatot line **/
+$custom-color-83				: #8b4d20; /** .avatar_cta cancel button  bg **/
+$custom-color-84				: #8b3c20; /** .avatar_cta cancel button  border **/
+$custom-color-85				: #f1faff; /** section.profile_content / .profile_forms_wrap - bg**/
+$custom-color-86				: #eaf3cf; /** .tab_helpText - bg**/
+$custom-color-87				: #bcd379; /**  .icon_helpText - border **/
+$custom-color-88				: #a1bf49; /**  .icon_helpText - text color **/
+$custom-color-89				: #768a39; /** .title_helpText - text color **/
+$custom-color-90				: #D74F4F; /** drag drop .fd_container - border**/
+$custom-color-91				: #898989; /** .col_section_item{ -border **/
+$custom-color-92				: #e2e2e2; /** #toggler a-active bg & text color **/
+
+/** user profile **/
+$custom-color-93				: #C8C9CA; /** profile header border **/
+$custom-color-94				: #AEB2B8; /** profile header border **/
+$custom-color-95				: #7f7f7f; /** input field text colot**/
+
+
+$custom-color-96				: #21ea1e; /** .callout-counter -gradient bg **/
+$custom-color-97				: #12c91e; /** .callout-counter -gradient bg **/
+$custom-color-98				: #fafafa; /** forms input bg **/ 
+$custom-color-99				: #a9a9a9; /**  forms input text color**/
+$custom-color-100				: #f8f9fb; /** table striped bg **/
+$custom-color-101				: #e3e4e9; /** table header bg **/
+$custom-color-102				: #eaf3cf; /** alert success bg **/
+$custom-color-103				: #6c7d38; /** alert success text color **/
+$custom-color-104				: #fdb7b4; /** alert failed bg **/
+$custom-color-105				: #8f2f2b; /** alert failed text color **/
+$custom-color-106				: #ffce89; /** alert update bg **/
+$custom-color-107				: #885815; /** alert failed text color **/
+
+$custom-color-108				: rgba(217,224,226,0.4); /** #spblogs-stream-list ul li border **/
+$custom-color-109				: rgba(0,0,0,0.05); /** ip-sb-options bg **/
+$custom-color-110				: rgba(100, 100, 100, 0.2); /** .header-circle  border **/
+$custom-color-111				: rgba(0, 0, 0, 0.7); /** .innerPage_header_social_cta bradient bg **/
+$custom-color-112				: rgba(255,255,255,0.9); /** .main-header bg **/
+$custom-color-113				: rgba(7,7,7,0.10); /** .aui .dshHeadWrap .dsh_greeting **/
+$custom-color-114				: rgba(255,255,255,0.4); /** .main-navigation ul li hover border **/
+$custom-color-115				: rgb(242, 118, 118); /** startup_list{ **/
+$custom-color-116				: rgba(255,255,255,0.8); /** .closePop **/
+$custom-color-117				: rgba(69, 69, 69, 0.40); /** .aui-dialog box-shadow **/
+$custom-color-118				: rgba(0,0,0,.3); /** .portlet-content box-shadow **/
+$custom-color-119				: rgba(0,0,0,0.50); /** #spblogs-stream-list ul li border **/
+$custom-color-120				: rgba(0,0,0,.8); /** input focus & hover **/
+$custom-color-121				: rgba(0,0,0,.6); 
+$custom-color-122				: rgba(0,0,0,.4); 
+
+$custom-color-123				: rgba(255,255,255,0.7); /** .aui-field-input-text - bg **/
+$custom-color-124				: rgba(241, 241, 241, 0.5); /** .sp-af-comment-entry-container **/
+$custom-color-125				: rgb(222,14,14); /** .sp-activity-like-comment-stat **/
+$custom-color-126				: rgba(0, 0, 0, 0.18); /** **/
+$custom-color-127				: rgba(255, 255, 255, 0.52); /** .ip-sb{ hover **/
+$custom-color-128				: rgba(0,0,0,.1); /** **/
+$custom-color-129				: rgba(212,204,198,0.3); /** **/
+$custom-color-130				: rgba(0,0,0,0.15); /** **/
+$custom-color-131				: rgba(255,255,255,.3); /** **/
+$custom-color-132				: rgba(0,0,0, 0); /** **/
+$custom-color-133				: rgba(0,0,0,.5); /** **/
+$custom-color-134				: rgba(255,255,255,1); /** **/
+$custom-color-135				: rgb(242, 118, 118); /** **/
+$custom-color-136				: rgba(0,0,0,.2); /** **/
+$custom-color-137				: rgba(193, 240, 255, 0.2); /** **/
+$custom-color-138				: #34495e;
+$custom-color-139				: #DEE7F8;
+$custom-color-140				: #CAD8F3;
+$custom-color-141				: #404040;
+$custom-color-142				: #CFCFCF;
+$custom-color-143				: #888;
+$custom-color-144				: #16538e;
+$custom-color-145				: #f59807;
+$custom-color-146				: #dce0e4;
+
+//LANDING PAGE
+$font-xsmall:8pt;
+$font-mdLanding:16pt;
+$font-lg1Landing:22pt;
+$font-lgLanding:30pt;
+$sun-yellow:#fed02f;
+$landingPage-color1:#fed02f;
+$landingPage-color2:#1a5aa5;
+$landingPage-color3:#00b388;
+$landingPage-color4:#00a8ff;
+$landing-textShadow:rgba(88, 88, 88, 0.87);
+/** startup profile mobile **/
+$custom-color-78				: #0d91d9; /** navigation .mobileNavSelect **/
+
+/*startupprofile*/
+$custom-color-147				: #f3f5f8;
+$custom-color-148				: #dbe6ee;
+$custom-color-149				: #f2f4f6;
+$custom-color-150				: #888888;
+$custom-color-151				: #343434;
+$startup-primary-color			: #606060;
+$startup-link-color				: $themeColor;
+$secondary-color				: #0085ca;
+$tertiary-color					: #005EB8;
+
+//STARTUP DETAILS PAGE
+$bodyColor						: #333333;
+$custom-color-121				: rgba(0,0,0,.6); 
+$custom-color-title:#f4f4f4;
+$custom-color-border:#ececec;
+$custom-color-link:#fec92f;
+$custom-color-hover:#ff9b00;
+$custom-color-green-hover:#2eeab9;
+$custom-color-yellow-hover:#FFEB3B;
+$custom-color-green:#13b288;
+

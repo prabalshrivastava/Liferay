@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.processbuilder">
+	<author>nareshchebolu</author>
+	<namespace>processbuilder</namespace>
+
+	<entity name="PEProcess" table="SPPEProcess" local-service="true"
+		remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spPEProcessId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="name" type="String" />
+		<column name="definiton" type="String" />
+		<column name="entityClassId" type="long" />
+		<column name="agentEnabled" type="boolean" />
+		<column name="agentRoleIds" type="String" />
+		<column name="approveRoleIds" type="String" />
+		<column name="miscData" type="String" />
+		<column name="diagramData" type="String" />
+		<column name="entityTitle" type="String" />
+		<column name="approverPageName" type="String" />
+		<column name="userPageName" type="String" />
+		<column name="agentPageName" type="String" />
+		<column name="status" type="int" />
+		<column name="applicantRoleId" type="long" />
+		<column name="supervisorRoleIds" type="String" />
+		<column name="supervisorPageName" type="String" />
+		<column name="closedReasonVocId" type="long" />
+		<column name="accountCreationEmailEnabled" type="boolean" />
+		<column name="enableAssignment" type="boolean" />
+		<column name="editFeeDetails" type="boolean" />
+		<column name="scheduleModelId" type="long" />
+		<column name="enableSingleSubmission" type="boolean" />
+		<column name="orientation" type="String" />
+		<column name="showHeader" type="boolean" />
+		<column name="enableFirstStepProgress" type="boolean" />
+		<column name="subProductTypeId" type="long" />
+		<column name="productTypeId" type="long" />
+		<column name="singleSubmissionErrorMsg" type="String" />		
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="name" />
+		</order>
+		<finder return-type="Collection" name="status">
+			<finder-column name="status"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="spPEProcessIds">
+			<finder-column name="spPEProcessId" arrayable-operator="OR"></finder-column>
+		</finder>
+		<finder return-type="PEProcess" name="ProcessName">
+			<finder-column name="name"></finder-column>
+		</finder>
+	</entity>
+	<entity name="PEProcessState" table="SPPEProcessState"
+		local-service="true" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spPEProcessStateId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="spPEProcessId" type="long" />
+		<column name="entityClassId" type="long" />
+		<column name="entityId" type="long" />
+		<column name="userIdProcess" type="long" />
+		<column name="userIdCreator" type="long" />
+		<column name="statusTypeId" type="long" />
+
+		<column name="spPEProcessStageId" type="long" />
+
+		<column name="status" type="String" />
+		<column name="nodeId" type="long" />
+		<column name="nodeIdLastProcessed" type="long" />
+		<column name="nodeIdLastDisplayed" type="long" />
+		<column name="nodeIdLastDataSubmitted" type="long" />
+		<column name="data" type="String" />
+		<column name="lastErrorCode" type="long" />
+		<column name="lastErrorMsg" type="String" />
+		<column name="lastErrorDate" type="Date" />
+		<column name="currentStatusTypeApprovers" type="String" />
+		<column name="currentNodeSubmitters" type="String" />
+		<column name="lock" type="int" />
+		<column name="lockDate" type="Date" />
+		<column name="userIdSupervisor" type="long" />
+		<column name="userIdAgent" type="long" />
+		<column name="closedStageId" type="long" />
+		<column name="closedDate" type="Date" />
+		<column name="closedReasonCatId" type="long" />
+		<column name="closedDescription" type="String" />
+		<column name="convertedFromProcessStateId" type="long" />
+		<column name="convertedToProcessStateId" type="long" />
+		<column name="activeStatus" type="int" />
+		<column name="amount" type="String" />
+		<column name="sourceClassId" type="long" />
+		<column name="sourceEntityID" type="long" />
+		
+		<finder name="userIdProcess" return-type="Collection">
+			<finder-column name="userIdProcess"></finder-column>
+		</finder>
+		<finder name="userIdProcessPEProcessId" return-type="Collection">
+			<finder-column name="userIdProcess"></finder-column>
+			<finder-column name="spPEProcessId"></finder-column>
+		</finder>
+		<finder name="PEProcessId" return-type="Collection">
+			<finder-column name="spPEProcessId"></finder-column>
+		</finder>
+		<finder name="userIdProcessPEProcessIClassId" return-type="Collection">
+			<finder-column name="userIdProcess"></finder-column>
+			<finder-column name="spPEProcessId"></finder-column>
+			<finder-column name="entityClassId"></finder-column>
+		</finder>
+		<finder name="userIdProcessPEProcessIdEntityClassIdEntityIdActiveStatus" return-type="Collection">
+			<finder-column name="userIdProcess"></finder-column>
+			<finder-column name="spPEProcessId"></finder-column>
+			<finder-column name="entityClassId"></finder-column>
+			<finder-column name="entityId"></finder-column>
+			<finder-column name="activeStatus"></finder-column>
+		</finder>
+		<finder name="processStatePK" return-type="PEProcessState">
+			<finder-column name="userIdProcess"></finder-column>
+			<finder-column name="spPEProcessId"></finder-column>
+			<finder-column name="entityId"></finder-column>
+		</finder>
+		<finder name="ProcessStateLead" return-type="Collection" where="closedStageId = 0 and (convertedToProcessStateId != null or convertedToProcessStateId = 0) and status != 'Rejected'">
+			<finder-column name="spPEProcessId" arrayable-operator="OR"></finder-column>
+			<finder-column name="userIdProcess"></finder-column>
+		</finder>
+		<finder name="ProcessStateOpportunity" return-type="Collection" where="closedStageId = 0 and status != 'Rejected'">
+			<finder-column name="spPEProcessId" arrayable-operator="OR"></finder-column>
+			<finder-column name="userIdProcess"></finder-column>
+		</finder>
+		<finder name="userIdProcessPEProcessStageId" return-type="Collection">
+			<finder-column name="userIdProcess"></finder-column>
+			<finder-column name="spPEProcessStageId"></finder-column>
+		</finder>
+		<finder name="userIdProcessAndPEProcessIdAndSourceClassIdAndSourceEntityIDAndActiveStatus" return-type="Collection">
+			<finder-column name="userIdProcess"></finder-column>
+			<finder-column name="spPEProcessId"></finder-column>
+			<finder-column name="sourceClassId"></finder-column>
+			<finder-column name="sourceEntityID"></finder-column>
+			<finder-column name="activeStatus"></finder-column>
+		</finder>
+	</entity>
+
+	<!-- Changing table name or column name, must also change in localserviceimpl
+		as it is referring them -->
+
+	<entity name="PEProcessAudit" table="SPPEProcessAudit"
+		local-service="true" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spPEProcessAuditId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="userId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- process state primary key -->
+
+		<column name="spPEProcessStateId" type="long" />
+		
+		<!-- some key info in peprocessstate table. this is including here so that grouping with processsate is not requeired whenever we need run some queries  -->
+		<column name="spPEProcessId" type="long" />
+		<column name="entityClassId" type="long" />
+		<column name="entityId" type="long" />
+		<column name="userIdProcess" type="long" />
+		<column name="statusTypeId" type="long" />
+		<column name="spPEProcessStageId" type="long" />
+		<column name="nodeId" type="long" />
+		<column name="status" type="String" />
+		<column name="userIdSupervisor" type="long" />
+		<column name="userIdAgent" type="long" />
+		<column name="spPEClosedStageId" type="long" />
+		
+		<column name="type" type="String" />
+		<column name="doneBy" type="String" />
+		<column name="action" type="String" />
+		<column name="field1" type="String" />
+		<column name="field2" type="String" />
+		<column name="field3" type="String" />
+		<column name="field4" type="String" />
+		<column name="field5" type="long" />
+		<column name="storageId" type="long" />
+		<column name="data1" type="String" />
+		<column name="data2" type="String" />
+		<column name="sourceClassId" type="long" />
+		<column name="sourceEntityID" type="long" />
+		
+		<finder name="PEProcessStateId" return-type="Collection">
+			<finder-column name="spPEProcessStateId"></finder-column>
+		</finder>
+		<finder name="PEProcessStateIdFormId" return-type="Collection">
+			<finder-column name="spPEProcessStateId"></finder-column>
+			<finder-column name="field2"></finder-column>
+		</finder>
+		<finder name="TypePEProcessStateId" return-type="Collection">
+			<finder-column name="type"></finder-column>
+			<finder-column name="spPEProcessStateId"></finder-column>
+		</finder>
+		<finder name="PEProcessStateIdTypeCreateDateLT" return-type="Collection">
+			<finder-column name="type"></finder-column>
+			<finder-column name="createDate" comparator="&lt;"></finder-column>
+			<finder-column name="spPEProcessStateId"></finder-column>
+		</finder>
+		<finder name="DoneByPEProcessStateId" return-type="Collection">
+			<finder-column name="doneBy"></finder-column>
+			<finder-column name="spPEProcessStateId"></finder-column>
+		</finder>
+		<finder name="TypeActionPEProcessStateId" return-type="Collection">
+			<finder-column name="type"></finder-column>
+			<finder-column name="action"></finder-column>
+			<finder-column name="spPEProcessStateId"></finder-column>
+		</finder>
+
+		<!-- PEProcessStateIdTypeField2 - for fetching status type record having corresponding form/jsp node id. Field5 stores nodeId of form/jsp -->
+		<finder name="PEProcessStateIdTypeField2" return-type="PEProcessAudit">
+			<finder-column name="spPEProcessStateId"></finder-column>
+			<finder-column name="type"></finder-column>
+			<finder-column name="field2"></finder-column>
+		</finder>
+
+		<!-- PEProcessStateIdNodeId - for fetching audit records for given node id-->
+		<finder name="PEProcessStateIdNodeId" return-type="Collection">
+			<finder-column name="spPEProcessStateId"></finder-column>
+			<finder-column name="nodeId"></finder-column>
+		</finder>
+		
+		<finder name="PEProcessStateIdType" return-type="Collection">
+			<finder-column name="spPEProcessStateId"></finder-column>
+			<finder-column name="type"></finder-column>
+		</finder>
+		<finder name="PEProcessStateIdNodeIdAction" return-type="PEProcessAudit" >
+			<finder-column name="spPEProcessStateId"></finder-column>
+			<finder-column name="nodeId"></finder-column>
+			<finder-column name="action"></finder-column>
+		</finder>
+		<finder name="ActionTypeField2" return-type="Collection">
+			<finder-column name="action"></finder-column>
+			<finder-column name="type"></finder-column>
+			<finder-column name="field2"></finder-column>
+		</finder>
+	</entity>
+	<entity name="PECustomActionInfo" table="SPPECustomActionInfo"
+		local-service="true" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spPEActionId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="actionClassName" type="String" />
+		<column name="title" type="String" />
+		<column name="defaultConfiguration" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="title" />
+		</order>
+
+	</entity>
+	<entity name="PERuleSet" remote-service="false" uuid="true"
+		local-service="true" table="SPPERuleSet">
+
+		<!-- PK fields -->
+
+		<column name="spPERuleSetId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="name" type="String"></column>
+		<column name="componentType" type="String"></column>
+		<column name="componentId" type="String"></column>
+		<column name="status" type="long"></column>
+		<column name="formVersion" type="String"></column>
+		<finder return-type="Collection" name="ComponentType">
+			<finder-column name="componentType" case-sensitive="false"></finder-column>
+		</finder>
+	</entity>
+	<entity name="PERule" remote-service="false" uuid="true"
+		local-service="true" table="SPPERule">
+
+		<!-- PK fields -->
+
+		<column name="spPERuleId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="spPERuleSetId" type="long"></column>
+		<column name="name" type="String"></column>
+		<column name="type" type="String"></column>
+		<column name="definition" type="String"></column>
+		<column name="sequenceNO" type="long"></column>
+		<finder return-type="Collection" name="RuleSetId">
+			<finder-column name="spPERuleSetId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="PEProcessStatusType" remote-service="false" uuid="true"
+		local-service="true" table="SPPEProcessStatusType">
+
+		<!-- PK fields -->
+
+		<column name="spPEProcessStatusTypeId" type="long" primary="true"></column>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+
+		<column name="spPEProcessId" type="long"></column>
+		<!-- PEConstants.COLUMN_STATUS_NAME. changing status name here must change there also -->
+		<column name="statusName" type="String"></column>
+		<column name="seqNo" type="long"></column>
+		<column name="approveTemplateId" type="long"></column>
+		<column name="rejectTemplateId" type="long"></column>
+
+		<!-- Each status type falls under some stage -->
+
+		<column name="spPEProcessStageId" type="long"></column>
+		<order>
+			<order-column name="seqNo"></order-column>
+		</order>
+		<finder return-type="Collection" name="spPEProcessId">
+			<finder-column name="spPEProcessId"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="spPEProcessIds">
+			<finder-column name="spPEProcessId" arrayable-operator="OR"></finder-column>
+			
+		</finder>
+	</entity>
+	<entity name="PEProcessStage" table="SPPEProcessStage"
+		local-service="true" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spPEProcessStageId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="userId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="name" type="String" />
+		<column name="style" type="String" />
+		<column name="seqNo" type="long" />
+		
+		<!-- Order by -->
+		<order>
+			<order-column name="seqNo"></order-column>
+		</order>
+		
+		
+	</entity>
+	<entity name="PEDummyEntity" table="SPPEDummyEntity"
+		local-service="true" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="spPEDummyEntityId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="name" type="String" />
+		
+		<finder return-type="PEDummyEntity" name="Name">
+			<finder-column name="name"></finder-column>
+		</finder>
+		<finder name="entityIds" return-type="Collection">
+			<finder-column name="spPEDummyEntityId" arrayable-operator="OR"/>
+		</finder>
+	</entity>
+	<entity name="PESupervisor" table="SPPESupervisor"
+		local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spPESupervisorId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+	    <!-- Dont change column names. -->
+		<column name="filter1" type="String" />
+		<column name="filter2" type="String" />
+		<column name="filter3" type="String" />
+		<column name="filter4" type="String" />
+		<column name="filter5" type="String" />
+		<column name="supervisorId" type="long" />
+		
+	</entity>
+	<entity name="PEEngine" local-service="true" remote-service="true">
+	</entity>
+	<entity name="FormBuilder" local-service="true" remote-service="true">
+	</entity>
+	<exceptions>
+		<exception>PERuleSet</exception>
+		<exception>PERule</exception>
+	</exceptions>
+
+</service-builder>

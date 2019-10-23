@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 6.2.0//EN" "http://www.liferay.com/dtd/liferay-display_6_2_0.dtd">
+
+<display>
+
+	<category name="Sambaash">
+		<portlet id="SPNeo4j"></portlet>
+		<portlet id="SPNeo4j-Populate-Existing-Data"></portlet>
+		<portlet id="SPNeo4j-Interested-Entities"></portlet>
+		<portlet id="SPNeo4j-Update-Interests"></portlet>
+		<portlet id="SPNeo4j-Activity-Feed"></portlet>
+		<portlet id="SPNeo4j-Activity-Feed-Filter"></portlet>
+		<portlet id="SPNeo4j-Follow"></portlet>
+		<portlet id="SPNeo4j-Social-Connections"></portlet>
+		<portlet id="SPNeo4j-Following-Grid-List"></portlet>
+		<portlet id="SPNeo4j-Following-Suggestions"></portlet>
+	</category>
+</display>

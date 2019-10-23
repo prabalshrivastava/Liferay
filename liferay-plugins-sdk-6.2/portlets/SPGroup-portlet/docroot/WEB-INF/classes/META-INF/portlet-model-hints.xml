@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.spgroup.model.SPGroup">
+		<field name="uuid" type="String" />
+		<field name="spGroupId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="title" type="String" />
+		<field name="urlTitle" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">256</hint>
+		</field>
+		<field name="imageId" type="long" />
+		<field name="type" type="int" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.sambaash.platform.srv.spgroup.model.SPGroupPref">
+		<field name="spGroupPrefId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="dIn" type="boolean" />
+		<field name="dGoogle" type="boolean" />
+		<field name="dFb" type="boolean" />
+		<field name="dTw" type="boolean" />
+		<field name="cIn" type="boolean" />
+		<field name="cGoogle" type="boolean" />
+		<field name="cFb" type="boolean" />
+		<field name="cTw" type="boolean" />
+		<field name="enableSubscribeToComments" type="boolean" />
+		<field name="enableGroupUpdateNotification" type="boolean" />
+		<field name="enableMemberUpdate" type="boolean" />
+		<field name="enableDiscussionUpdate" type="boolean" />
+		<field name="updateFrequency" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.spgroup.model.SPGroupUser">
+		<field name="spGroupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="joinDate" type="Date" />
+		<field name="role" type="int" />
+		<field name="status" type="int" />
+	</model>
+</model-hints>

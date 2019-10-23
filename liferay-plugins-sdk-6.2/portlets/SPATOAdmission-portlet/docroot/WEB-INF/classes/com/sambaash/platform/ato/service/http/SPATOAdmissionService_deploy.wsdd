@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<service name="Plugin_SPATOAdmission_SPATOAdmissionService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.sambaash.platform.ato.service.http.SPATOAdmissionServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="SPATOAdmissionServiceSoap" />
+		<parameter name="wsdlServiceElement" value="SPATOAdmissionServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_SPATOAdmission_SPATOAdmissionService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.ato.platform.sambaash.com" />
+	</service>
+</deployment>

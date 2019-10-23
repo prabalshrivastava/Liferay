@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.video">
+	<author>gauravvijayvergia</author>
+	<namespace>VideoFileEntry</namespace>
+
+	<entity name="VideoFileEntry" table="SPVideoFileEntry" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spVideoFileEntryId" type="long" primary="true" />
+
+        <!-- Group instance -->
+
+        <column name="groupId" type="long" />
+
+        <!-- Audit fields -->
+
+        <column name="companyId" type="long" />
+        <column name="userId" type="long" />
+        <column name="userName" type="String" />
+        <column name="createDate" type="Date" />
+        <column name="modifiedDate" type="Date" />
+
+        <!-- Other fields -->
+
+        <column name="fileEntryId" type="long" />
+        <column name="fileVersionId" type="long" />
+        <column name="folderId" type="long" />
+        <column name="jobId" type="String" />
+        <column name="jobResponse" type="String" />
+        <column name="status" type="int" />
+
+        <!-- Order -->
+
+        <order by="asc">
+            <order-column name="spVideoFileEntryId" />
+        </order>
+        
+        <finder name="FileEntryAndFileVersion" return-type="VideoFileEntry">
+			<finder-column name="fileEntryId" />
+			<finder-column name="fileVersionId" />
+		</finder>
+        
+	</entity>
+</service-builder>

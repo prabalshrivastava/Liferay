@@ -1,0 +1,1403 @@
+@import "Enrollment_variables";
+//font-for pages
+//mixins
+//@include linx(white, blue, green, red);
+@mixin linx ($link, $visit, $hover, $active) {
+    a {
+        color: $link;
+        &:visited {
+            color: $visit;
+        }
+        &:hover {
+            color: $hover;
+        }
+        &:active {
+            color: $active;
+        }
+    }
+}
+
+@mixin padding($padding) {
+    padding: $padding;
+}
+
+@mixin margin($margin) {
+    margin: $margin;
+}
+
+//@include opacity(0.8);
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// @include center-block;
+@mixin center-block {
+    display: $display-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//@include abs-pos(10px, 10px, 5px, 15px);
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: $position-absolute;
+}
+
+//@include rel-pos(10px, 10px, 5px, 15px);
+@mixin rel-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: $position-relative;
+}
+
+.hovericon {
+    display: none;
+}
+
+a:hover+div.hovericon {
+    display: $display-block;
+}
+
+//POPUP
+.Pop-Action {
+    width: 154px;
+    position: absolute;
+    right: 40px;
+    z-index: 100;
+    ul {
+        display: $display-inlineblock;
+        width: $widthFlex;
+        li {
+            position: $position-relative;
+            a {
+                @include padding(10px 40px 10px);
+                width: $widthFlex;
+                display: $display-inlineblock;
+            }
+            img {
+                display: $display-inlineblock;
+                width: 10px;
+                position: $position-absolute;
+                top: 50%;
+                margin-top: -5px;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+.aui .popover {
+    border: none;
+    box-shadow: none;
+}
+
+//Notes
+.Notes {
+    @include padding(10px);
+    display: $display-inlineblock;
+    width: $widthFlex;
+    margin-bottom: 20px;
+    h6 {
+        @include margin(0);
+        @include padding(3px 0);
+    }
+    p {
+        @include margin(0);
+        @include padding(0);
+    }
+}
+
+//height
+.height82 {
+    height: 82px;
+}
+
+// Buttons
+.btnEn {
+    @include padding(8px 10px);
+}
+
+//STATUS
+.StatusIndicator {
+    width: 5px;
+    height: 5px;
+    @include margin(0 auto 0 15px);
+}
+
+//ICONS
+.Calendar-Icon {
+    width: 38px;
+    height: 40px;
+    @include abs-pos(1px, 0, 0, 1px);
+    img {
+        width: 11px;
+        height: 11px;
+        @include rel-pos(50%, 0, 0, 50%);
+        @include margin(-5px 0 0 -5px);
+        position: $position-relative;
+        display: $display-block;
+    }
+}
+
+.Search-Icon {
+    width: 38px;
+    height: 40px;
+    @include abs-pos(auto, 0, 0, 1px);
+    margin-bottom: 1px;
+
+    img {
+        width: 11px;
+        height: 11px;
+        @include rel-pos(50%, 0, 0, 50%);
+        @include margin(-5px 0 0 -5px);
+        position: $position-relative;
+        display: $display-block;
+    }
+}
+
+//ICON BG
+.Icon-Bg {
+    @include padding(5px 9px);
+    img {
+        width: 13px;
+    }
+}
+
+.Icon-right-border {
+    width: 17.8px;
+    height: 17.9px;
+    display: $display-block;
+    right: 30px;
+    top: 50%;
+    margin-top: -8px;
+    position: $position-absolute;
+    cursor: pointer;
+    img {
+        width: 18px;
+    }
+}
+
+.Icon-Text-Right {
+    a {
+        display: $display-block;
+        right: 20px;
+        top: 50%;
+        margin-top: -8px;
+        position: $position-absolute;
+        img {
+            width: 18px;
+            margin-top: -7px;
+        }
+        p {
+            display: $display-inlineblock;
+            padding: 0;
+            margin: 0;
+            vertical-align: top;
+        }
+    }
+}
+
+.Backtolist-btn {
+    display: inline-block;
+    right: 15px;
+    position: absolute;
+    box-sizing: border-box;
+    top: 9px;
+    a {
+
+        span {
+
+            padding: 2px 7px;
+
+            color: #999;
+
+            margin-right: 5px;
+        }
+    }
+}
+
+//STAGE CIRCLE
+.Stage {
+    width: 12px;
+    height: 12px;
+    position: $position-absolute;
+    display: $display-inlineblock;
+    top: 0;
+    right: 0;
+    margin-top: 18px;
+}
+
+//HEADING-SEC
+.HeadTitle-sec {
+    display: $display-inlineblock;
+    width: 100%;
+    position: $position-relative;
+}
+
+//ACTIONS
+.Action {
+    position: $position-relative;
+    a {
+
+        @include padding(5px);
+        display: $display-block;
+    }
+}
+
+//Span-width
+.Span-width-5 {
+    width: $span-W5;
+}
+
+.Span-width-10 {
+    width: $span-W10;
+}
+
+.Span-width-15 {
+    width: $span-W15;
+}
+
+.Span-width-20 {
+    width: $span-W20;
+}
+
+.Span-width-25 {
+    width: $span-W25;
+}
+
+.Span-width-30 {
+    width: $span-W30;
+}
+
+.Span-width-35 {
+    width: $span-W35;
+}
+
+.Span-width-40 {
+    width: $span-W40;
+}
+
+.Span-width-45 {
+    width: $span-W45;
+}
+
+.Span-width-50 {
+    width: $span-W50;
+}
+
+.Span-width-55 {
+    width: $span-W55;
+}
+
+.Span-width-60 {
+    width: $span-W60;
+}
+
+.Span-width-65 {
+    width: $span-W65;
+}
+
+.Span-width-70 {
+    width: $span-W70;
+}
+
+.Span-width-75 {
+    width: $span-W75;
+}
+
+.Span-width-80 {
+    width: $span-W80;
+}
+
+.Span-width-85 {
+    width: $span-W85;
+}
+
+.Span-width-90 {
+    width: $span-W90;
+}
+
+.Span-width-95 {
+    width: $span-W95;
+}
+
+.Span-width-100 {
+    width: $span-W100;
+    margin: 0 auto;
+    text-align: center;
+}
+
+//Fonts
+.H4-Purple {
+    margin: 0;
+    @include padding(0);
+}
+
+.H5-purple {
+    margin: 0;
+    @include padding(0);
+}
+
+.Headform-title {
+     padding: 40px 0 0;
+}
+
+.H6-Gray {
+    margin: 0;
+    @include padding(0);
+}
+
+//shapes
+.Oval-1 {
+    width: 12px;
+    height: 12px;
+    display: $display-inlineblock;
+}
+
+//EnrollmentSide nav
+.Leftsul {
+    ul {
+        margin: 0;
+        @include padding(0);
+        li {
+            @include padding(10px 0 10px 30px);
+            &.sideNavHeader {
+                @include padding(10px 0 10px 20px);
+            }
+            ul.subNavigation {
+                margin-top: 10px;
+                li {
+                    @include padding(0 0 5px 10px);
+                }
+            }
+        }
+    }
+}
+
+//Enrollment Notification
+.Enrollment-Notification {
+    position: $position-relative;
+    @include margin(0 0 10px 0);
+    .notifyTitle {
+        width: 12%;
+        display: $display-inlineblock;
+
+        h6 {
+            display: $display-inlineblock;
+            @include margin(0);
+        }
+    }
+    
+    .notifyDesc {
+        width: 75%;
+        display: $display-inlineblock;
+        i {
+            @extend .Oval-1;
+            position: $position-relative;
+            vertical-align: $v-middle;
+
+            display: $display-inlineblock;
+        }
+        p {
+
+            display: $display-inlineblock;
+            @include margin(0);
+            @include padding(0 10px);
+        }
+    }
+    .notifyLink {
+        display: $display-inlineblock;
+        position: $position-absolute;
+        right: 4px;
+        top: 8px;
+    }
+}
+
+//BOXES
+.Box-Containar {
+    position: $position-relative;
+    display: $display-block;
+    width: 100%;
+    .Title {
+
+        @include margin(14px 0);
+        position: $position-relative;
+        ;
+    }
+    .Box-row {
+        position: $position-relative;
+        display: flex;
+        width: 100%;
+        @include margin(0 0 10px 0);
+        .Box {
+            width: 32.6%;
+            height: 125px;
+            position: $position-relative;
+            display: $display-inlineblock;
+            margin-right: 10px;
+            .Status-Application {
+                width: 40%;
+                display: $display-inlineblock;
+
+                position: $position-absolute;
+                @include margin(8px 0);
+                height: 110px;
+                .BoxNo {
+                    @include margin(20px 0 0 0);
+                    @include padding(0);
+                }
+                .BoxTitle {
+                    @include margin(0);
+                    @include padding(0);
+                }
+            }
+            .Status-Title {
+                width: 50%;
+                display: $display-inlineblock;
+
+                position: $position-absolute;
+                top: 50%;
+                margin: -30px 0 0px -16px;
+                left: 50%;
+                height: 70px;
+
+                p {
+                    margin-top: 20px;
+                }
+                .btn-Application {
+                    a {
+                        @include padding(5px);
+                    }
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+//Enrollment form field
+.Enrollment-formfield {
+	
+	.payment-mode-selection input[type='radio']{
+		    width: 14px;
+    		height: 14px;
+	}
+
+	
+    input,
+    select,
+    textarea {
+        @include padding(11px);
+    }
+    label {
+        @include padding(9px 0 9px 11px);
+    }
+    /* Text Input */
+    input[type='text'] {
+        width: 100%;
+    }
+    input[type='radio'] {
+        height: 2.5em;
+        width: 2.5em;
+        margin-top: 0;
+        vertical-align: text-top;
+    }
+    /* Dropdown Box */
+    .styled-select {
+        display: $display-inlineblock;
+        margin-bottom: 1.5em;
+        position: $position-relative;
+        width: 15em;
+    }
+    .styled-select:before {
+        padding-left: .25em;
+        position: $position-absolute;
+        pointer-events: none;
+        right: .35em;
+    }
+    select {
+        display: $display-inlineblock;
+        margin: 0;
+        width: 100%;
+        line-height: normal;
+        height: 41px;
+    }
+    /* Text Area */
+    textarea {
+        height: 10em;
+        padding: 1em;
+        width: 100%;
+    }
+    /* Checkbox */
+    input[type='checkbox'] {
+        padding: .25em;
+        height: 1em;
+        width: 1em;
+        vertical-align: text-top;
+    }
+    /* Submit Button */
+    input[type='submit'] {
+        @include padding(9px 18px 8px 19px);
+    }
+}
+
+.Header-White {
+    width: $widthFlex;
+    @include margin(0);
+    @include padding(20px 15px);
+    position: $position-relative;
+}
+
+.Drag-Sec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; //done karthik
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; //done karthik
+    padding: 10px;
+    .Drag-content {
+        width: 50%;
+        height: 100px;
+        display: $display-inlineblock;
+        opacity: 1 !important;
+        img {
+            width: 35px;
+            height: 35px;
+            display: $display-block;
+            margin: 18px auto;
+        }
+        span {
+            text-align: $textcenter;
+            margin-top: 14px;
+            padding: 0;
+            display: block;
+        }
+    }
+}
+
+.Drag-Notes {
+    width: 100%;
+    @include padding(10px 20px);
+    margin-top: 25px;
+    h6 {
+        @include margin(0);
+        @include padding(0);
+    }
+    ul.Notes-list {
+        position: $position-relative;
+        @include padding(10px 0 !important);
+        li {
+            display: $display-block;
+            width: 100%;
+            @include padding(2px 20px !important);
+            &:before {
+                position: $position-absolute;
+                left: 2px;
+            }
+        }
+    }
+}
+
+.Header-white-two {
+    width: $widthFlex;
+    @include margin(0);
+    @include padding(10px);
+}
+
+.Rules-AreaSection {
+    display: $display-inlineblock;
+    width: $widthFlex;
+    @include padding(20px 10px);
+    .Rules-NameDiv {
+        label {
+            display: $display-inlineblock;
+            width: 11%;
+        }
+        input[type="text"] {
+            width: 30% !important;
+        }
+    }
+    .Rules-No {
+        width: 40px;
+        height: 40px;
+        @include margin(0 auto);
+
+        display: $display-block;
+        top: -31px;
+
+
+        position: $position-relative;
+        span {
+            position: $position-absolute;
+            top: 9px;
+            left: 6px;
+            display: $display-inlineblock;
+        }
+    }
+    .RuleName_Entry {
+        width: 50%;
+        display: $display-inlineblock;
+        margin-bottom: 10px;
+    }
+    .RulesetDiv {
+        width: 97%;
+        @include padding(10px);
+        @include margin(40px 10px 10px);
+        display: $display-block;
+    }
+    .dropArea {
+        width: 100%;
+        margin: 2px;
+        padding: 20px 5px;
+    }
+}
+
+#conditions {
+    .conditions {
+        width: 100%;
+        display: flex;
+        @include padding(0 30px);
+        @include margin(10px 0);
+        position: $position-relative;
+        select {
+            width: 22.5% !important;
+            display: inline-block !important;
+            margin: 5px 3px !important;
+        }
+        input[type=text] {
+            width: 22.5% !important;
+            display: inline-block !important;
+            margin: 5px 3px !important;
+        }
+        .close {
+            position: $position-absolute;
+            top: 50%;
+            right: 13px;
+            margin-top: -8px;
+            display: $display-block;
+        }
+        .Formmenu-icon {
+            position: $position-absolute;
+            top: 50%;
+            left: 10px;
+            margin-top: -13px;
+            display: $display-block;
+            img {
+                width: 12px;
+            }
+        }
+    }
+}
+
+.OR-Div {
+    padding: 10px 0;
+    display: $display-block;
+}
+
+.Addrule_btn {
+    display: block;
+    @include margin(0 auto);
+    display: $display-block;
+    position: $position-relative;
+    a {
+        display: $display-block;
+        @include margin(0 auto);
+        width: 100%;
+        max-width: 100px;
+        padding: 5px 10px;
+    }
+}
+
+.SaveCancel-Btn {
+    width: $widthFlex;
+    display: $display-block;
+    @include padding(20px);
+
+    a {
+        display: $display-inlineblock;
+        @include padding(8px 20px);
+    }
+}
+
+.LoadMore {
+    position: $position-relative;
+    display: $display-inlineblock;
+    width: 100%;
+    @include padding(20px 0);
+    a {
+
+        display: $display-block;
+        img {
+            width: 13px;
+        }
+    }
+    p {
+
+        @include padding(0);
+        @include margin(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*************PROGRESS TRACKER*************/
+
+.ProgressTracker {
+    @include padding(0);
+    @include margin(0 auto);
+    position: $position-relative;
+    @include padding(20px 0 0);
+    background-color: #f3f6f8;
+    width: 100%;
+    .progressNav {
+        @include margin(0 0 0 0);
+        @include padding(0 100px 0 0);
+        ul.progtrckr {
+            display: table;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            table-layout: fixed;
+            width: 100%;
+            li {
+                display: table-cell;
+                text-align: right;
+                padding-right: 11px;
+                &.progtrckr-todo {
+                    a {
+                        text-decoration: none;
+                        .progtrckr-No {
+                            top: 42px;
+                            position: relative;
+                            left: 0;
+                            z-index: 2;
+                        }
+                        .progtrckr-todo-Notselect {
+                            height: 1px;
+                            @include margin(0 auto);
+                            @include rel-pos(30px, 0, 0, 0);
+                            z-index: 1;
+                            .circle {
+                                @include margin(0);
+                                width: 20px;
+                                height: 20px;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                position: absolute;
+                                margin-top: -11px;
+                                margin-right: -7px;
+                                &:after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 26px;
+                                    height: 26px;
+                                    background-color: #FFF;
+                                    border-radius: 50%;
+                                    border-width: 1px;
+                                    border-color: #a8a8a8;
+                                    z-index: -1;
+                                    margin-left: -4px;
+                                    margin-top: -4px;
+                                    border-style: solid;
+                                }
+                                &.curStage {
+                                    top: 0px;
+                                    right: 0;
+                                    bottom: 0;
+                                    position: absolute;
+                                    margin-top: -11px;
+                                    margin-right: -7px;
+                                    &:after {
+                                        border-style: dotted;
+                                        border-color: #00C325;
+                                        width: 30px;
+                                        height: 30px;
+                                        margin-left: -6px;
+                                        margin-top: -6px;
+                                        background-color: #FFF;
+                                    }
+                                }
+                                &.activeStage {
+                                    border-width: 0px;
+                                    border-style: solid;
+                                    &:after {
+                                        border-style: dotted;
+                                        border-color: #00c325;
+                                        border-width: 2px;
+                                        margin-top: -5px;
+                                        margin-left: -5px;
+                                    }
+                                }
+                                &.stepDisplay {
+                                    border-width: 0px;
+                                    border-style: solid;
+                                    &:before {
+                                        content: '';
+                                        width: 0;
+                                        height: 0;
+                                        border-left: 3px solid transparent;
+                                        border-right: 3px solid transparent;
+                                        border-top: 3px solid #00C325;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        margin-top: 28px;
+                                        margin-left: 8px;
+                                    }
+                                }
+                                &.completed-Stage {
+                                    border-width: 0px;
+                                    border-style: solid;
+                                    &:after {
+                                        border-style: solid;
+                                        border-color: #00C325;
+                                        background-color: #FFF;
+                                    }
+                                }
+                                &.curStage {
+                                    border-width: 0px;
+                                    border-style: solid;
+                                }
+                            }
+                        }
+                        .progtrckr-todo-text {
+                            top: -30px;
+                            right: 0;
+                            bottom: 0;
+                            left: 50%;
+                            position: relative;
+                            text-align: center;
+                            margin-top: 0;
+                            line-height: 1;
+                            width: 100%;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        &:after {
+            height: 1px;
+            position: absolute;
+            width: 100%;
+            margin-top: -1px;
+            background-color: #e0e7ee;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/****************************PROGRESS TRACKER END*********************/
+
+
+/****FILTER ICON****/
+
+.filterIcon {
+    width: 3%;
+    display: block;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    svg {
+        width: 20px;
+    }
+}
+
+
+.arrow-up {
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        margin-right: 28px;
+        margin-top: -8px;
+        top: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+
+
+
+
+
+
+/****************************SEARCH BAR*******************************/
+
+.SearchBar-Container {
+    position: $position-relative;
+    @extend .Enrollment-formfield;
+    @include padding(15px 15px);
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &.dropFilter {
+        -webkit-transition: max-height 0.3s;
+        -moz-transition: max-height 0.3s;
+        -ms-transition: max-height 0.3s;
+        -o-transition: max-height 0.3s;
+        transition: max-height 0.3s;
+        background-color: #eef1f4;
+    }
+    &.collapsed {
+        max-height: 0;
+        display: none;
+    }
+    .Searchdiv {
+        display: $display-inlineblock;
+        position: $position-relative;
+        @include margin(0 10px 0 0);
+
+        input[type="text"] {
+            padding-left: 40px!important;
+
+            margin-bottom: 0 !important;
+        }
+        .Icon-Search {
+            @extend .Search-Icon;
+        }
+    }
+    .Calendar-From {
+        display: $display-inlineblock;
+        position: $position-relative;
+        @include margin(0 35px 0 0);
+        input {
+            padding-left: 50px !important;
+        }
+        .Icon-calendar {
+            @extend .Calendar-Icon;
+        }
+        &:after {
+            position: $position-absolute;
+            top: 3px;
+            right: -23px;
+        }
+    }
+    .Calendar-To {
+        display: $display-inlineblock;
+        position: $position-relative;
+        @include margin(0 10px 10px 0);
+        input {
+            padding-left: 50px !important;
+        }
+        .Icon-calendar {
+            @extend .Calendar-Icon;
+        }
+    }
+    .Filterdiv {
+        display: $display-inlineblock;
+        position: $position-relative;
+        @include margin(0 10px 10px 0);
+        &.marginRight0 {
+            margin-right: 0px;
+        }
+        select#stage {
+            height: 125px;
+            overflow: hidden;
+        }
+    }
+    .btn-process {
+        display: $display-inlineblock;
+        position: $position-absolute;
+        right: 20px;
+        top: 30px;
+        a {
+            @include padding(8px 16px !important);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/****************************SEARCH BAR END*******************************/
+
+
+/****************************CUSTOM TABLE*******************************/
+
+.Table-Layout {
+    display: table;
+    width: 100%;
+    text-align: left;
+    .Heading {
+        display: table-row;
+        @include padding(10px 0);
+        height: auto;
+        .Cell {
+            display: table-cell;
+            @include padding(15px);
+            p {
+                @include margin(0);
+                @include padding(0);
+            }
+            &:last-child {
+                width: $span-W5 !important;
+                text-align: $textcenter;
+            }
+        }
+    }
+    .Row {
+        display: table-row;
+        .Cell {
+            display: table-cell;
+            @include padding(15px);
+            position: $position-relative;
+            vertical-align: top;
+            p {
+                @include margin(0);
+                @include padding(0);
+            }
+            &:last-child {
+                width: $span-W5 !important;
+                text-align: $textcenter;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/****************************CUSTOM TABLE END*******************************/
+
+// SEARCH BAR END
+// MODEL POP UP
+.aui .popover-content {
+    @include padding(0);
+}
+
+.aui .popover .arrow {
+    display: none;
+}
+
+.aui .popover.top {
+    margin-top: -10px;
+    position: $position-absolute;
+    margin-left: -50px;
+    background: none;
+}
+
+#column-1 {
+    .modal {
+        z-index: 90000 !important;
+        height: 100%!important;
+        max-height: 100%;
+        width: 100% !important;
+        left: 0;
+        top: 0;
+        margin-left: 0;
+        input[type=text],
+        .aui input[type="password"],
+        .aui input[type="file"],
+        select {
+            width: 100%;
+            @include margin( 10px 0);
+            @include padding(0 20px);
+            height: 40px;
+        }
+        .btn {
+            @include padding(9px 20px);
+        }
+    }
+    .modal-header {
+        @include padding(9px 15px);
+        h3 {
+            margin: 0;
+            text-align: $textcenter;
+            @include padding(0px 18px 10px);
+        }
+        h2 {
+            margin: 0;
+            text-align: $textcenter;
+            @include padding(0px 18px 10px);
+        }
+    }
+    .modal-body {
+        width: 100%;
+        height: auto !important;
+        max-height: 100%;
+        border: none;
+    }
+    .modal-content {
+        overflow: hidden;
+        @include margin(0 auto);
+        height: auto !important;
+        max-height: 100%;
+        width: 475px;
+        top: 50%;
+        left: 50%;
+        margin-left: -180px;
+        margin-top: -180px;
+        position: $position-absolute;
+    }
+    .modal-footer {
+        text-align: $textcenter;
+    }
+}
+
+.DesignerWizard-btn {
+    display: inline-block;
+    width: 220px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    button {
+        width: 70px !important;
+        @include padding (4px 10px !important);
+        display: inline-block;
+        font-size: 11px !important;
+        &.greenbtn {
+            @include margin(0 10px);
+        }
+        &.greybtn {
+            @include margin(0 10px);
+        }
+    }
+}
+
+.Clear-Redraw-btn {
+    display: inline-block;
+    width: 175px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    button {
+        width: auto !important;
+        @include padding (4px 10px !important);
+        display: inline-block;
+        font-size: 11px !important;
+        &.greenbtn {
+            @include margin(0 10px);
+        }
+        &.greybtn {
+            @include margin(0 10px);
+        }
+    }
+}
+
+#column-1 {
+    .iframe-process {
+        iframe {
+            width: 700px;
+            position: relative;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+#column-3.span4 {
+    .Header-White {
+        display: none;
+    }
+    .iframe-process {
+        iframe {
+            width: 310px;
+            position: relative;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+.btn-div {
+    text-align: center;
+    @include padding(10px 15px 40px 0);
+}
+
+.user-Progress {
+    padding: 10px 0 10px 30px;
+    .user-cont {
+        padding: 2px 0;
+        font-size: 9pt;
+        span {
+            width: 150px;
+            display: inline-block;
+            text-align: right;
+            padding-right: 10px;
+        }
+    }
+}
+
+//PROCESS COMPONENT
+.ui-accordion .ui-accordion-content {
+    border: 1px solid #ddd;
+}
+
+.processComponentWrap {
+    table {
+        width: 100%;
+        border-spacing: 5px;
+        border-collapse: separate;
+        th {
+            width: 50%;
+            border-radius: 5px;
+            background-color: #f6f8fa;
+            border: solid 1px #d9dce3;
+            margin-bottom: 10px 0;
+            padding: 20px;
+            figcaption {
+                font-size: 12px;
+                color: #961f63;
+                font-weight: normal;
+            }
+            span {
+                font-size: 12px;
+                color: #961f63;
+                font-weight: normal;
+            }
+            img {
+                cursor: move;
+            }
+        }
+    }
+}
+
+//Filter tags
+.filterTags {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 8px 0 8px 10px;
+}
+
+.filterTags ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filterTags ul li {
+    width: auto;
+    /* height: 28px; */
+    padding: 5px 25px 5px 15px;
+    margin: 2px;
+
+    position: relative;
+
+    max-width: 250px;
+
+    display: block;
+    overflow: hidden;
+}
+
+.filterTags ul li a.closeTag {
+    width: 10px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    margin-top: -9px;
+}
+
+
+.filterTags ul li a.closeTag img {
+    width: 6px;
+}
+
+.Search_Result_Count {
+    right: 0;
+
+    margin-top: 16px;
+    margin-right: 20px;
+
+    width: auto;
+    position: absolute;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    height: 30px;
+
+    width: 100px;
+    display: inline-block;
+}
+
+.fileUploadBtn {
+    	width:auto;
+padding-top:8px!important;
+    height: 35px;
+    display: inline-block;
+}
+
+.Exportbtn {
+    width: 100px;
+    height: 35px;
+    display: inline-block;
+}
+
+.Exportbtn button {
+    height: 35px;
+}
+
+.fileUploadBtn input.upload {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    left: 0;
+    width: 100px;
+    margin-top: -2px;
+}
+
+.Backtolist-btn a::before {
+    content: "<";
+    padding-right: 6px;
+}
+
+.Backtolist-btn a span{
+display:none;
+}
+
+.processComponentWrap {
+    height: auto!important;
+}

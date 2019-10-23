@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 6.2.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_6_2_0.dtd">
+
+<resource-action-mapping>
+    <resource file="resource-actions/agency.xml" />
+    <resource file="resource-actions/classMaster.xml" />
+    <resource file="resource-actions/trademarks.xml" />
+    <resource file="resource-actions/litigation.xml" />
+</resource-action-mapping>

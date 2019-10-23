@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.processbuilder.model.impl.PECustomActionInfoModelImpl">
+		<attributes>
+			<id name="spPEActionId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="actionClassName" />
+			<basic name="title" />
+			<basic name="defaultConfiguration" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.processbuilder.model.impl.PEDummyEntityModelImpl">
+		<attributes>
+			<id name="spPEDummyEntityId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="name" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessModelImpl">
+		<attributes>
+			<id name="spPEProcessId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="name" />
+			<basic name="definiton" />
+			<basic name="entityClassId" />
+			<basic name="agentEnabled" />
+			<basic name="agentRoleIds" />
+			<basic name="approveRoleIds" />
+			<basic name="miscData" />
+			<basic name="diagramData" />
+			<basic name="entityTitle" />
+			<basic name="approverPageName" />
+			<basic name="userPageName" />
+			<basic name="agentPageName" />
+			<basic name="status" />
+			<basic name="applicantRoleId" />
+			<basic name="supervisorRoleIds" />
+			<basic name="supervisorPageName" />
+			<basic name="closedReasonVocId" />
+			<basic name="accountCreationEmailEnabled" />
+			<basic name="enableAssignment" />
+			<basic name="editFeeDetails" />
+			<basic name="scheduleModelId" />
+			<basic name="enableSingleSubmission" />
+			<basic name="orientation" />
+			<basic name="showHeader" />
+			<basic name="enableFirstStepProgress" />
+			<basic name="subProductTypeId" />
+			<basic name="productTypeId" />
+			<basic name="singleSubmissionErrorMsg" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessAuditModelImpl">
+		<attributes>
+			<id name="spPEProcessAuditId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="companyId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spPEProcessStateId" />
+			<basic name="spPEProcessId" />
+			<basic name="entityClassId" />
+			<basic name="entityId" />
+			<basic name="userIdProcess" />
+			<basic name="statusTypeId" />
+			<basic name="spPEProcessStageId" />
+			<basic name="nodeId" />
+			<basic name="status" />
+			<basic name="userIdSupervisor" />
+			<basic name="userIdAgent" />
+			<basic name="spPEClosedStageId" />
+			<basic name="type">
+				<column name="TYPE_" />
+			</basic>
+			<basic name="doneBy" />
+			<basic name="action" />
+			<basic name="field1" />
+			<basic name="field2" />
+			<basic name="field3" />
+			<basic name="field4" />
+			<basic name="field5" />
+			<basic name="storageId" />
+			<basic name="data1" />
+			<basic name="data2" />
+			<basic name="sourceClassId" />
+			<basic name="sourceEntityID" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessStageModelImpl">
+		<attributes>
+			<id name="spPEProcessStageId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="companyId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="name" />
+			<basic name="style" />
+			<basic name="seqNo" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessStateModelImpl">
+		<attributes>
+			<id name="spPEProcessStateId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spPEProcessId" />
+			<basic name="entityClassId" />
+			<basic name="entityId" />
+			<basic name="userIdProcess" />
+			<basic name="userIdCreator" />
+			<basic name="statusTypeId" />
+			<basic name="spPEProcessStageId" />
+			<basic name="status" />
+			<basic name="nodeId" />
+			<basic name="nodeIdLastProcessed" />
+			<basic name="nodeIdLastDisplayed" />
+			<basic name="nodeIdLastDataSubmitted" />
+			<basic name="data">
+				<column name="DATA_" />
+			</basic>
+			<basic name="lastErrorCode" />
+			<basic name="lastErrorMsg" />
+			<basic name="lastErrorDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="currentStatusTypeApprovers" />
+			<basic name="currentNodeSubmitters" />
+			<basic name="lock">
+				<column name="LOCK_" />
+			</basic>
+			<basic name="lockDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="userIdSupervisor" />
+			<basic name="userIdAgent" />
+			<basic name="closedStageId" />
+			<basic name="closedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="closedReasonCatId" />
+			<basic name="closedDescription" />
+			<basic name="convertedFromProcessStateId" />
+			<basic name="convertedToProcessStateId" />
+			<basic name="activeStatus" />
+			<basic name="amount" />
+			<basic name="sourceClassId" />
+			<basic name="sourceEntityID" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessStatusTypeModelImpl">
+		<attributes>
+			<id name="spPEProcessStatusTypeId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spPEProcessId" />
+			<basic name="statusName" />
+			<basic name="seqNo" />
+			<basic name="approveTemplateId" />
+			<basic name="rejectTemplateId" />
+			<basic name="spPEProcessStageId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.processbuilder.model.impl.PERuleModelImpl">
+		<attributes>
+			<id name="spPERuleId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spPERuleSetId" />
+			<basic name="name" />
+			<basic name="type">
+				<column name="TYPE_" />
+			</basic>
+			<basic name="definition" />
+			<basic name="sequenceNO" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.processbuilder.model.impl.PERuleSetModelImpl">
+		<attributes>
+			<id name="spPERuleSetId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="name" />
+			<basic name="componentType" />
+			<basic name="componentId" />
+			<basic name="status" />
+			<basic name="formVersion" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.processbuilder.model.impl.PESupervisorModelImpl">
+		<attributes>
+			<id name="spPESupervisorId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="filter1" />
+			<basic name="filter2" />
+			<basic name="filter3" />
+			<basic name="filter4" />
+			<basic name="filter5" />
+			<basic name="supervisorId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.processbuilder.model.impl.PECustomActionInfoImpl" name="PECustomActionInfo">
+		<table name="SPPECustomActionInfo" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.processbuilder.model.impl.PEDummyEntityImpl" name="PEDummyEntity">
+		<table name="SPPEDummyEntity" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessImpl" name="PEProcess">
+		<table name="SPPEProcess" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessAuditImpl" name="PEProcessAudit">
+		<table name="SPPEProcessAudit" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessStageImpl" name="PEProcessStage">
+		<table name="SPPEProcessStage" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessStateImpl" name="PEProcessState">
+		<table name="SPPEProcessState" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessStatusTypeImpl" name="PEProcessStatusType">
+		<table name="SPPEProcessStatusType" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.processbuilder.model.impl.PERuleImpl" name="PERule">
+		<table name="SPPERule" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.processbuilder.model.impl.PERuleSetImpl" name="PERuleSet">
+		<table name="SPPERuleSet" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.processbuilder.model.impl.PESupervisorImpl" name="PESupervisor">
+		<table name="SPPESupervisor" />
+		<attributes />
+	</entity>
+</entity-mappings>

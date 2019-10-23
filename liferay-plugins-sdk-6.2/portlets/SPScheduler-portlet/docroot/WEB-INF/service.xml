@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.spscheduler">
+	<author>pradeep</author>
+	<namespace>SPScheduler</namespace>
+
+	<entity name="SPJobEntry" table="SP_JOB_ENTRY" uuid="true"
+		local-service="true" remote-service="false">
+
+		<column name="spJobEntryId" type="long" primary="true" />
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+		<column name="jobName" type="String"></column>
+		<column name="jobClass" type="String"></column>
+		<column name="portletId" type="String"></column>
+		<column name="status" type="int" />
+		<column name="statusMsg" type="String" />
+		<column name="cronExpression" type="String"></column>
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<finder name="JobNameAndJobClass" return-type="Collection">
+			<finder-column name="jobName"></finder-column>
+			<finder-column name="jobClass"></finder-column>
+		</finder>
+
+	</entity>
+
+</service-builder>

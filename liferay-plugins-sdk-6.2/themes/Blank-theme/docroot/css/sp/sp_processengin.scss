@@ -1,0 +1,1242 @@
+     @import "sp_custom_variables";
+     @import "sp_mixins";
+     //***Enrollment Screen*****//
+     .enrollmentContainer {
+         .enrollmentRow {
+             @extend .Enrollment-formfield;
+             /*Leftsidebar*/
+             .sidebarNavigation {
+                 @extend .Leftsul !optional;
+             }
+             /*Leftsidebar End*/
+             /*RightcontentWrapper*/
+             .maincontentRight {
+                 background-color: $white;
+                 .mainContentContainer {
+                     @extend .roundedborder;
+                     background-color: $white;
+                 }
+             }
+         }
+     }
+     
+     //Process Header
+     .SectionHeader {
+         background-color: $white-50-three;
+         border-bottom: solid 1px $white;
+         .HeaderContainer {
+             .HeaderRow {
+                 .ProcessHeader {
+                     @include box-sizing(border-box);
+                     .ProcessBack {
+                         @include box-sizing(border-box);
+                         a {
+                             text-decoration: none;
+                             outline: none;
+                             cursor: pointer;
+                             z-index: 10;
+                         }
+                         p {
+                             @include fontsize-weight($fontSize-small, $fontWeight-bold);
+                         }
+                     }
+                     .ProcessTitle {
+                         @include box-sizing(border-box);
+                         h2 {
+                             @include fontsize-weight($fontSize, $fontWeight-black);
+                         }
+                     }
+                     .ProcessLink {
+                         @include box-sizing(border-box);
+                         .ProcessNotify {
+                             a {
+                                 text-decoration: none;
+                                 outline: none;
+                             }
+                         }
+                         .ProcessDropdown {
+                             a {
+                                 text-decoration: none;
+                                 outline: none;
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+     
+     .Bg-Border-ProcessNav {
+         background-image: linear-gradient(to bottom, $white-08-four, $white-50);
+         border-bottom: solid 1px $white;
+     }
+     
+     .BgPink-Border-ProcessNav {
+         background-image: linear-gradient(to top, $plum-two, $plum);
+     }
+     
+     .Section-ProcessNav {
+         background-image: linear-gradient(to bottom, $white-50-two, $white-50);
+         .ProcessNav-Container {
+             .ProcessNavRow {
+                 .ProcessNav-Notes {
+                     h2 {
+                         @include fontcolor-size-weight($btn-primary-bg-color, $fontSize, $fontWeight-black);
+                     }
+                     p {
+                         @include fontcolor-size-weight($black, $font11, $fontWeight-regular);
+                     }
+                 }
+                 .ProcessNav-Link {
+                     ul {
+                         text-decoration: none;
+                         list-style: none;
+                         li {
+                             a {
+                                 text-decoration: none;
+                                 outline: none;
+                                 p {
+                                     @include fontcolor-size-weight($themeColor, $font11, $fontWeight-regular);
+                                 }
+                                 &:hover {
+                                     background-image: linear-gradient(to bottom, $white, $white-50);
+                                 }
+                                 &.active {
+                                     background-image: linear-gradient(to bottom, $white, $white-50);
+                                     &:after {
+                                         content: "";
+                                         @include box-sizing(border-box);
+                                         border: 0.7em solid black;
+                                         border-color: #dedede transparent transparent transparent;
+                                     }
+                                 }
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+     }
+     
+     //Process Header End
+     //COLOR
+     .color-bruise {
+         color: $link-hover-color;
+     }
+     
+     .color-white {
+         color: $white !important;
+     }
+     
+     //POPUP
+     .Pop-Action {
+         background-color: $white-six;
+         border: solid 1px $silver;
+         border-radius: 3px;
+         ul {
+             li {
+                 a {
+                     border-bottom: 1px solid $silver;
+                     text-decoration: none;
+                     outline: none;
+                     font-size: $fontSize-small;
+                     font-weight: $fontWeight-regular;
+                     color: $themeColor;
+                     @include box-sizing(border-box);
+                     &:hover {
+                         color: $themeColor;
+                     }
+                 }
+                 &:hover {
+                     background-color: $white-pop;
+                 }
+                 &:last-child {
+                     border-bottom: none;
+                 }
+             }
+         }
+     }
+     
+     .aui .popover {
+         border: none;
+         box-shadow: none;
+     }
+     
+     //Notes
+     .Notes {
+         @include box-sizing(border-box);
+         background-color: $off-white-two;
+         border: solid 1px $beige;
+         h6 {
+             @include fontcolor-size-weight($btn-primary-bg-color, $fontSize-small, $fontWeight-black);
+         }
+         p {
+             @include fontcolor-size-weight($black, $font11 !important, $fontWeight-bold !important);
+         }
+     }
+     
+     // Buttons
+     .btnEn {
+         text-decoration: none;
+         @include border-radius(4px);
+         @include fontcolor-size-weight($greyblue, $fontSize-small, $fontWeight-black);
+     }
+     
+     .btnEn-pale-grey {
+         @include linearGradientLeft($pale-grey-eight, $pale-grey-nine);
+     }
+     
+     .seqLine {
+         @include linearGradientLeft($pale-grey-three, $pale-grey-three);
+     }
+     
+     //STATUS
+     .StatusIndicator {
+         @include border-radius(50%);
+         &.NotActive {
+             background-color: $squash-two;
+         }
+         &.Active {
+             background-color: $leafy-green;
+         }
+     }
+     
+     //ICONS
+     .Calendar-Icon {
+         background-color: $pale-grey-two;
+         @include box-sizing(border-box);
+         border-right: 1px solid $pale-grey-four;
+         border-top-left-radius: 3px;
+         border-top-right-radius: 3px;
+         img {
+             @include box-sizing(border-box);
+         }
+     }
+     
+     .Search-Icon {
+         background-color: $pale-grey-two;
+         @include box-sizing(border-box);
+         border-right: 1px solid $pale-grey-four;
+         border-top-left-radius: 3px;
+         border-top-right-radius: 3px;
+         img {
+             @include box-sizing(border-box);
+         }
+     }
+     
+     //ICON BG
+     .Icon-Bg {
+         background-image: linear-gradient(to bottom, $pale-grey-eight, $pale-grey-nine);
+         border: solid 1px $pale-grey-six;
+         @include border-radius(2px);
+         &:hover {
+             background-image: linear-gradient(to bottom, $pale-grey-nine, $pale-grey-eight);
+         }
+     }
+     
+     .Icon-Text-Right {
+         a {
+             text-decoration: none;
+             outline: none;
+             p {
+                 @include fontcolor-size-weight( $warm-grey, $fontSize-small, $fontWeight-black);
+                 vertical-align: top;
+             }
+         }
+     }
+     
+     //STAGE CIRCLE
+     .Stage {
+         background: $dusty-orange;
+         border-radius: 50%;
+         &.Gold {
+             @include radial-gradient($gold-color-1, $gold-color-2);
+         }
+         &.Silver {
+             @include radial-gradient($silver-color-1, $silver-color-2);
+         }
+         &.Bronze {
+             @include radial-gradient($bronze-color-1, $bronze-color-2);
+         }
+         &.Iron {
+             @include radial-gradient($iron-color-1, $iron-color-2);
+         }
+     }
+     
+     //HEADING-SEC
+     .HeadTitle-sec {
+         background-color: $pale-grey-two;
+         border-bottom: solid 0.5px $pinkish-grey-two;
+         h4 {
+             &.Title {
+                 @include fontcolor-size-weight($link-hover-color, $fontSize, $fontWeight-black);
+             }
+         }
+     }
+     
+     //ACTIONS
+     .Action {
+         a {
+             text-decoration: none;
+             outline: none;
+             @include fontsize-weight($fontSize-small, $fontWeight-regular);
+             @include border-radius(2px);
+             &.Take {
+                 color: $scarlet;
+                 border: solid 1px $scarlet;
+             }
+             &.NotTake {
+                 color: $bluey-grey;
+                 border: solid 1px $cloudy-blue;
+             }
+         }
+     }
+     
+     .Headform-title {
+         @include fontcolor-size-weight($link-hover-color, $fontSize, $fontWeight-black);
+     }
+     
+     //Fonts
+     .H4-Purple {
+         line-height: $lineheight18;
+         @include fontcolor-size-weight($black, $fontSize-small, $fontWeight-bold);
+     }
+     
+     .H5-purple {
+         @include fontcolor-size-weight($black, $fontSize-small, $fontWeight-bold);
+         line-height: $lineheight18;
+     }
+     
+     .H6-Gray {
+         @include fontcolor-size-weight($warm-grey, $font14, $fontWeight-black);
+         line-height: $lineheight18;
+     }
+     /* Text styles */
+     
+     .H2-purple {
+         @include fontcolor-size-weight( $link-hover-color, $fontSize-med, $fontWeight-black);
+     }
+     
+     .H4-purple {
+         @include fontcolor-size-weight( $link-hover-color, $fontSize, $fontWeight-black);
+     }
+     
+     .H4-White {
+         font-family: Roboto;
+         @include fontcolor-size-weight( $white, $fontSize, $fontWeight-black);
+     }
+     
+     .bodycopy-big-black {
+         @include fontcolor-size-weight( $black, $font14, $fontWeight-black);
+     }
+     
+     .label-gray {
+         @include fontcolor-size-weight( $custom-color-30, $font14, $fontWeight-regular);
+     }
+     
+     .bodycopy-big-gray {
+         @include fontcolor-size-weight( #b9b9b9, $font14, $fontWeight-regular);
+     }
+     
+     .bodycopy-big-black {
+         @include fontcolor-size-weight( $black, $font14, $fontWeight-regular);
+     }
+     
+     .bodycopy-big-white {
+         @include fontcolor-size-weight( $white, $font14, $fontWeight-regular);
+     }
+     
+     .H5-bold-black {
+         @include fontcolor-size-weight( $black, $font14, $fontWeight-regular);
+     }
+     
+     .H5-bold-gray {
+         @include fontcolor-size-weight( $warm-grey, $font14, $fontWeight-regular);
+     }
+     
+     .H5-sbold-black {
+         @include fontcolor-size-weight( $black, $font14, $fontWeight-bold);
+     }
+     
+     .H6-sbold-purple {
+         @include fontcolor-size-weight( $link-hover-color, $fontSize-small, $fontWeight-bold);
+     }
+     
+     .bodycopy-black {
+         @include fontcolor-size-weight( $black, $fontSize-small, $fontWeight-bold);
+     }
+     
+     .H6-sbold-black {
+         @include fontcolor-size-weight( $black, $fontSize-small, $fontWeight-bold);
+     }
+     
+     .placeholder-copy {
+         @include fontcolor-size-weight( #687587, $fontSize-small, $fontWeight-light);
+     }
+     
+     .link-purple {
+         @include fontcolor-size-weight( $themeColor, $fontSize-small, $fontWeight-bold);
+     }
+     
+     .bodycopy-gray {
+         font-size: $fontSize-small;
+         font-weight: $fontWeight-regular;
+         line-height: 1.5;
+         color: $greyish-two;
+     }
+     
+     .link-bluishgray {
+         font-size: $fontSize-small;
+         font-weight: $fontWeight-regular;
+         line-height: 3.67;
+         color: #5f6e7d;
+     }
+     
+     .button-copy-gray {
+         font-size: $fontSize-small;
+         font-weight: $fontWeight-black;
+         color: #5f7081;
+     }
+     
+     .link-purple {
+         font-size: $fontSize-small;
+         font-weight: $fontWeight-black;
+         color: $themeColor;
+     }
+     
+     .bodycopy-bold-white {
+         font-size: $fontSize-small;
+         font-weight: $fontWeight-black;
+         line-height: 1.5;
+         color: $white;
+     }
+     
+     .bodycopy-bold-gray {
+         font-size: $fontSize-small;
+         font-weight: $fontWeight-black;
+         line-height: 1.5;
+         color: $warm-grey;
+     }
+     
+     .bodycopy-small-sbold-white {
+         font-size: $font11;
+         font-weight: 600;
+         line-height: 1.36;
+         color: $white;
+     }
+     
+     .highlight-copy-gray {
+         font-size: $font11;
+         font-weight: $fontWeight-regular;
+         line-height: 1.64;
+         color: #8ea0ae;
+     }
+     
+     .bodycopy-small-black {
+         font-size: 11px;
+         font-weight: normal;
+         line-height: 1.64;
+         color: $black;
+     }
+     
+     .bodycopy-small-white {
+         font-size: $font11;
+         font-weight: $fontWeight-regular;
+         line-height: 1.36;
+         color: $white;
+     }
+     
+     .Body-copy-big-Bold {
+         font-size: $font14;
+         font-weight: $fontWeight-black;
+         line-height: 1.29;
+         color: $black;
+     }
+     
+     .highlight-copy-red {
+         font-size: $font11;
+         font-weight: $fontWeight-regular;
+         line-height: 1.64;
+         color: #d0021b;
+     }
+     
+     .Body-copy-big {
+         font-size: $font14;
+         font-weight: $fontWeight-regular;
+         line-height: 1.29;
+         color: $black;
+     }
+     
+     //Gradients
+     .bgSilverGradient {
+         background-image: linear-gradient(to top, $white-thirteen, $white);
+     }
+     
+     .bgWhiteGradient {
+         background-image: linear-gradient(to top, $white-two, $white-three);
+     }
+     
+     .roundedborder {
+         @include border-radius (3px);
+         border: 1px solid $silver;
+     }
+     
+     .roundedborder-Silver {
+         @include border-radius (5px);
+         border: 1px solid $pale-grey;
+     }
+     
+     .roundedborder-pale-grey {
+         @include border-radius (3px);
+         border: 1px solid $pale-grey;
+     }
+     
+     //shapes
+     .Oval-1 {
+         background-color: $brownish-orange;
+         @include border-radius(50%);
+     }
+     
+     .Line {
+         border-style: solid;
+         border-width: 1px;
+         border-bottom-color: linear-gradient(NaNdeg, $cocoa, $greyish-brown);
+         border-image-slice: 1;
+     }
+     
+     //EnrollmentSide nav
+     .Leftsul {
+         @include box-sizing(border-box);
+         ul {
+             @include box-sizing(border-box);
+             @include border-radius(5px);
+             list-style: none;
+             li {
+                 @include border(0 0 $side1 0, $silver);
+                 a {
+                     @include box-sizing(border-box);
+                     @include fontcolor-size-weight($black, $fontSize-small, $fontWeight-bold);
+                     line-height: $lineheight18;
+                     text-decoration: none;
+                     outline: none;
+                 }
+                 &.sideNavHeader {
+                     @extend .bgSilverGradient;
+                     h6 {
+                         @extend .H6-Gray;
+                     }
+                 }
+                 &.activeSidemenu {
+                     background-image: url("../images/right-arrow-angle.svg");
+                     background-size: 10px;
+                     background-repeat: no-repeat;
+                     background-position: left 64px bottom 4px;
+                     background-origin: content-box;
+                     a {
+                         @include fontcolor-size-weight($themeColor,
+                         $fontSize-small,
+                         $fontWeight-black);
+                         text-decoration: none;
+                         outline: none;
+                     }
+                 }
+                 ul.subNavigation {
+                     @include border(0 0 0 $side1,
+                     $themeColor);
+                     @include border-radius(0);
+                     li {
+                         border-bottom: none;
+                         a {
+                             @include fontcolor-size-weight($battleship-grey,
+                             $fontSize-small,
+                             $fontWeight-regular);
+                             text-decoration: none;
+                             outline: none;
+                         }
+                         &.activeSidemenu-1 {
+                             background-image: url("/SPProcessEngine-portlet/images/right-arrow-angle.svg");
+                             background-size: 10px;
+                             background-repeat: no-repeat;
+                             background-position: left 88px bottom 4px;
+                             background-origin: content-box;
+                             a {
+                                 @include fontcolor-size-weight($themeColor,
+                                 $fontSize-small,
+                                 $fontWeight-black);
+                                 text-decoration: none;
+                                 outline: none;
+                             }
+                         }
+                     }
+                 }
+                 &:last-child {
+                     border-bottom: none;
+                 }
+             }
+         }
+     }
+     
+     //Enrollment Notification
+     .Enrollment-Notification {
+         ;
+         background-color: $dark-sand;
+         @include border-radius(3px);
+         .notifyTitle {
+             @include fontcolor-size-weight($white,
+             $fontSize-small,
+             $fontWeight-bold);
+             h6 {
+                 line-height: $lineheight40;
+                 @include fontcolor-size-weight($white,
+                 $fontSize-small,
+                 $fontWeight-bold);
+             }
+         }
+         .notifyDesc {
+             i {
+                 @extend .Oval-1;
+                 line-height: $lineheight12;
+                 @include fontcolor-size-weight($white,
+                 $font11,
+                 $fontWeight-bold);
+                 font-style: normal;
+             }
+             p {
+                 @include fontcolor-size-weight($white,
+                 $font11,
+                 $fontWeight-regular);
+             }
+         }
+     }
+     
+     //BOXES
+     .Box-Containar {
+         @include box-sizing(border-box);
+         .Title {
+             @include fontcolor-size-weight($link-hover-color,
+             $fontSize,
+             $fontWeight-black);
+         }
+         .Box-row {
+             .Box {
+                 border-radius: 5px;
+                 background-color: $white;
+                 border: solid 1px $silver;
+                 @include box-sizing(border-box);
+                 .Status-Application {
+                     border-right: 1px solid $silver;
+                     .BoxNo {
+                         @include fontcolor-size-weight($black-two,
+                         $fontSize-med,
+                         $fontWeight-black);
+                     }
+                     .BoxTitle {
+                         font-size: $font11;
+                         font-weight: $fontWeight-regular;
+                         color: $black;
+                     }
+                 }
+                 .Status-Title {
+                     p {
+                         @include fontcolor-size-weight($themeColor,
+                         $fontSize-small,
+                         $fontWeight-bold);
+                     }
+                     .btn-Application {
+                         a {
+                             text-decoration: none;
+                             outline: none;
+                             border-radius: 4px;
+                             background-color: $btn-bg1;
+                             border: solid 1px $btn-bg1-border;
+                             @include fontcolor-size-weight($white,
+                             $fontSize-small,
+                             $fontWeight-bold);
+                         }
+                     }
+                 }
+             }
+         }
+     }
+     
+     //Enrollment form field
+     .Enrollment-formfield {
+         input,
+         select,
+         textarea {
+             outline: none;
+             @include border-radius(3px);
+             background-color: $ice-blue;
+             border: solid 1px $pale-grey;
+             @include box-sizing(border-box);
+         }
+         /* Text Input */
+         input[type='text'] {
+             @extend .roundedborder;
+             background-color: $ice-blue;
+             @include fontcolor-size ($black,
+             $fontSize-small);
+             letter-spacing: normal;
+         }
+         ::-webkit-input-placeholder {
+             color: $battleship-grey;
+         }
+         :-moz-placeholder {
+             color: $battleship-grey;
+         }
+         /* FF 18 */
+         ::-moz-placeholder {
+             color: $battleship-grey;
+         }
+         /* FF 19+ */
+         :-ms-input-placeholder {
+             color: $battleship-grey;
+         }
+         /* Radio Buttons */
+         form {
+             font-size: 1.2em;
+         }
+         fieldset {
+             @extend .roundedborder;
+         }
+         input[type='radio'] {
+             border: solid 1px $silver;
+             @include border-radius(50%);
+             background-color: $ice-blue;
+             color: $bluey-grey;
+             cursor: pointer;
+         }
+         /* Dropdown Box */
+         .styled-select {
+             @extend .roundedborder;
+             background-color: $ice-blue;
+             @include fontcolor-size ($pale-grey,
+             $fontSize-small);
+             cursor: pointer;
+         }
+         .styled-select:before {
+             border: solid 1px $silver;
+             border-width: 0 0 0 1px;
+             content: '\f103';
+             @include fontcolor-size ($custom-color-30,
+             $fontSize-small);
+             font-size: 1.25em;
+             pointer-events: none;
+         }
+         select {
+             @extend .roundedborder;
+             cursor: pointer;
+             background-color: $ice-blue;
+             @include fontcolor-size ($custom-color-30,
+             $fontSize-small);
+             @include box-sizing(border-box);
+             line-height: normal;
+         }
+         /* Text Area */
+         textarea {
+             @extend .roundedborder;
+             background-color: $ice-blue;
+             @include fontcolor-size ( $greyblue,
+             $fontSize-small);
+         }
+         /* Checkbox */
+         input[type='checkbox'] {
+             @extend .roundedborder;
+             background-color: $ice-blue;
+             cursor: pointer;
+             font-size: $fontSize;
+         }
+         /* Submit Button */
+         input[type='submit'] {
+             @extend .roundedborder;
+             border: 1px solid $pale-grey-five;
+             background-image: linear-gradient(to bottom, $pale-grey-eight, $pale-grey-nine);
+             cursor: pointer;
+             @include fontcolor-size ( $greyblue,
+             $fontSize-small);
+         }
+         input[type='submit']:hover {
+             background-color: $pale-grey-five;
+         }
+     }
+     
+     .Header-White {
+         @extend .bgWhiteGradient;
+         @include box-sizing(border-box);
+     }
+     
+     .Drag-Sec {
+         background-color: $white;
+         .Drag-content {
+             border: solid 1px $white;
+             cursor: move;
+             span {
+                 font-size: $fontSize-small;
+                 font-weight: $fontWeight-regular;
+                 color: $themeColor;
+             }
+             &:hover {
+                 @include border-radius(4px);
+                 background-color: $pale-grey-eight;
+                 border: solid 1px $custom-color-38;
+             }
+         }
+         p {
+             font-size: $fontSize-small;
+             font-weight: normal;
+             color: $battleship-grey;
+         }
+     }
+     
+     .Drag-Notes {
+         @include border-radius(5px);
+         background-color: $off-white-two;
+         border: solid 1px $beige;
+         h6 {
+             font-size: $fontSize-small;
+             font-weight: $fontWeight-black;
+             color: $btn-primary-bg-color;
+         }
+         ul.Notes-list {
+             list-style: none;
+             counter-reset: my;
+             li {
+                 font-size: $font11;
+                 font-weight: $fontWeight-regular;
+                 color: $black;
+                 border-bottom: none !important;
+                 line-height: normal;
+                 &:before {
+                     counter-increment: my;
+                     content: counter(my) ". ";
+                 }
+             }
+         }
+     }
+     
+     .Header-white-two {
+         background-image: linear-gradient(to bottom, $footer-bg, $white-Header2);
+         border-bottom: solid 1px $custom-color-7;
+         h4 {
+             @include fontcolor-size-weight( $warm-grey,
+             $font14,
+             $fontWeight-black);
+         }
+     }
+     
+     .Rules-AreaSection {
+         .Rules-NameDiv {
+             label {
+                 @include box-sizing(border-box);
+             }
+             input[type="text"] {
+                 font-size: $font14;
+                 font-weight: $fontWeight-regular;
+                 color: $custom-color-30;
+             }
+         }
+         .Rules-No {
+             background-color: $white;
+             border: solid 1px $greyblue;
+             @include border-radius(50%);
+             span {
+                 font-size: $font14;
+                 font-weight: $fontWeight-regular;
+                 line-height: 1.29;
+                 color: $frog-green;
+             }
+         }
+         .RulesetDiv {
+             @include border-radius(6px);
+             background-color: $very-light-pink;
+             border: solid 1px $bluey-grey;
+             @include box-sizing(border-box);
+         }
+         .dropArea {
+             @include border-radius(5px);
+             border: 1px dashed $bluey-grey;
+             span {
+                 font-size: $fontSize;
+                 font-weight: $fontWeight-light;
+                 line-height: 1.5;
+                 color: $cool-grey;
+             }
+         }
+     }
+     
+     #conditions {
+         .conditions {
+             background-color: $cool-white;
+             border: solid 1px $pale-grey-four;
+         }
+     }
+     
+     .OR-Div {
+         font-size: $font14;
+         font-weight: $fontWeight-regular;
+         color: $custom-color-30;
+     }
+     
+     .Addrule_btn {
+         a {
+             @include border-radius(3px);
+             border: solid 1px $bluey-grey;
+             background-color: $white;
+             color: $custom-color-30;
+             font-size: $font11;
+             cursor: pointer;
+             text-decoration: none;
+             outline: none;
+             &:hover {
+                 background-color: $white;
+                 color: $themeColor;
+                 border: solid 1px $themeColor;
+             }
+         }
+     }
+     
+     .SaveCancel-Btn {
+         a {
+             border-radius: 4px;
+             background-image: linear-gradient(to bottom, $pale-grey-six, $pale-grey-five);
+             border: solid 1px $pale-grey-seven;
+             font-size: $fontSize-small;
+             font-weight: $fontWeight-black !important;
+             color: $grey-blue !important;
+             text-decoration: none;
+             outline: none;
+             &:hover {
+                 background-image: linear-gradient(to bottom, $pale-grey-five, $pale-grey-six);
+             }
+         }
+     }
+     
+     .LoadMore {
+         background-color: $white;
+         a {
+             border: none;
+             text-decoration: none;
+             cursor: pointer;
+             text-decoration: none;
+             outline: none;
+         }
+         p {
+             @include fontcolor-size-weight( $custom-color-30,
+             $font11,
+             $fontWeight-regular);
+         }
+     }
+     /*************PROGRESS TRACKER*************/
+     
+     .ProgressTracker {
+         @include box-sizing(border-box);
+         background-color: $white;
+         .progressNav {
+             @include box-sizing(border-box);
+             ul.progtrckr {
+                 li {
+                     &.progtrckr-todo {
+                         color: $silver;
+                         a {
+                             text-decoration: none;
+                             .progtrckr-No {
+                                 @include fontcolor-size-weight($greyish,
+                                 $fontSize-small,
+                                 $fontWeight-bold);
+                             }
+                             .progtrckr-todo-Notselect {
+                                 background-color: $pale-grey;
+                                 .circle {
+                                     background-color: $pale-grey-six;
+                                     @include border-radius(50%);
+                                     border-width: 1px;
+                                     border-style: solid;
+                                     border-color: $silver;
+                                     &.activeStage {
+                                         border-width: 4px;
+                                         border-style: solid;
+                                     }
+                                     &.completedStage {
+                                         border-width: 1px;
+                                         border-style: solid;
+                                     }
+                                     &.secClass1 {
+                                         background-color: $warm-grey-two;
+                                         border-color: $greyish-brown;
+                                     }
+                                     &.secClass2 {
+                                         background-color: $earth;
+                                         border-color: $cocoa;
+                                     }
+                                     &.secClass3 {
+                                         background-color: $tomato;
+                                         border-color: $sienna;
+                                     }
+                                     &.secClass4 {
+                                         background-color: $mango;
+                                         border-color: $dusty-orange;
+                                     }
+                                     &.secClass5 {
+                                         background-color: $golden-yellow;
+                                         border-color: $squash;
+                                     }
+                                     &.secClass6 {
+                                         background-color: $sickly-yellow;
+                                         border-color: $gross-green;
+                                     }
+                                     &.secClass7 {
+                                         background-color: $gross-green;
+                                         border-color: $sickly-yellow;
+                                     }
+                                 }
+                             }
+                             .progtrckr-todo-text {
+                                 @include fontcolor-size-weight($greyish,
+                                 $fontSize-small,
+                                 $fontWeight-regular);
+                                 &.activeStepColor {
+                                     @include fontcolor-size-weight($themeColor,
+                                     $fontSize-small,
+                                     $fontWeight-bold);
+                                 }
+                                 &.completedStepColor {
+                                     @include fontcolor-size-weight($black,
+                                     $fontSize-small,
+                                     $fontWeight-regular);
+                                 }
+                             }
+                         }
+                     }
+                 }
+             }
+             &:after {
+                 content: "";
+                 background-color: $pale-grey-three;
+             }
+         }
+     }
+     /****************************PROGRESS TRACKER END*********************/
+     /****************************SEARCH BAR*******************************/
+     
+     .SearchBar-Container {
+         @include box-sizing(border-box);
+         background-color: $pale-grey-two;
+         border-bottom: solid 0.5px $silver;
+         @extend .Enrollment-formfield;
+         .Searchdiv {
+             @include box-sizing(border-box);
+             .Icon-Search {
+                 @extend .Search-Icon;
+             }
+         }
+         .Calendar-From {
+             @include box-sizing(border-box);
+             .Icon-calendar {
+                 @extend .Calendar-Icon;
+             }
+             &:after {
+                 content: "-";
+                 font-size: $fontSize-med;
+                 color: $warm-grey;
+                 font-weight: $fontWeight-black;
+             }
+         }
+         .Calendar-To {
+             @include box-sizing(border-box);
+             .Icon-calendar {
+                 @extend .Calendar-Icon;
+             }
+         }
+         .Filterdiv {
+             @include box-sizing(border-box);
+         }
+         .btn-process {
+             @include box-sizing(border-box);
+             a {
+                 @include border-radius(3px);
+                 @include fontcolor-size-weight($white,
+                 $fontSize-small,
+                 $fontWeight-regular);
+                 background-image: linear-gradient(to bottom, $pale-olive-green, $nasty-green-two);
+                 border: solid 1px $nasty-green;
+                 text-decoration: none;
+                 outline: none;
+                 &:hover {
+                     @include fontcolor-size-weight($white,
+                     $fontSize-small,
+                     $fontWeight-regular);
+                 }
+             }
+         }
+     }
+     /****************************SEARCH BAR END*******************************/
+     /****************************CUSTOM TABLE*******************************/
+     
+     .Table-Layout {
+         @include box-sizing(border-box);
+         .Heading {
+             border-bottom: solid 0.5px $silver;
+             @include fontcolor-size-weight($link-hover-color,
+             $fontSize-small,
+             $fontWeight-bold);
+             .Cell {
+                 background-color: $pale-grey-two;
+                 border-bottom: 0.5px solid $silver;
+                 p {
+                     @include fontcolor-size-weight($link-hover-color,
+                     $fontSize-small,
+                     $fontWeight-bold);
+                 }
+             }
+         }
+         .Row {
+             .Cell {
+                 background-color: $white;
+                 border-bottom: 0.5px solid $silver;
+                 p {
+                     font-size: $fontSize-small;
+                     font-weight: $fontWeight-regular;
+                     color: $black;
+                     span {
+                         color: $themeColor;
+                         font-weight: $fontWeight-bold;
+                     }
+                     &.Date-Time {
+                         font-size: $font11;
+                     }
+                 }
+             }
+         }
+     }
+     /****************************CUSTOM TABLE END*******************************/
+     
+     // SEARCH BAR END
+     // MODEL POP UP
+     .aui .popover .arrow {
+         display: none;
+     }
+     
+     .aui .popover.top {
+         background: none;
+     }
+     
+     #column-1 {
+         .modal {
+             background-color: $white-modal-bg;
+             border: none;
+             box-shadow: none;
+             border-radius: 0;
+             input[type=text],
+             .aui input[type="password"],
+             .aui input[type="file"],
+             select {
+                 @include border-radius(3px);
+                 background-color: $white;
+                 border: solid 1px $silver;
+             }
+             .btn {
+                 background-color: rgba(65, 83, 102, 0.8);
+                 border: solid 1px #dfe0e4;
+                 @include fontcolor-size-weight($grey-blue,
+                 $fontSize-small,
+                 $fontWeight-black);
+                 &:hover,
+                 &:focus {
+                     background-color: $white-modal-bg;
+                     border: solid 1px $custom-color-7;
+                 }
+             }
+         }
+         .modal-header {
+             border-bottom: 0;
+             background-color: $pale-grey-white;
+             /* font-size: 9pt; */
+             color: $custom-color-38;
+             h3 {
+                 @include fontcolor-size-weight($warm-grey,
+                 $font14,
+                 $fontWeight-black);
+                 border-bottom: solid 1px $silver;
+             }
+             h2 {
+                 @include fontcolor-size-weight($warm-grey,
+                 $font14,
+                 $fontWeight-black);
+                 border-bottom: solid 1px $silver;
+             }
+         }
+         .modal-body {
+             border: none;
+         }
+         .modal-content {
+             background-color: $pale-grey-white;
+             border: solid 1px $pale-grey-two;
+             @include border-radius(6px);
+         }
+         .modal-footer {
+             background-color: none;
+             border-top: none;
+             box-shadow: none;
+             background: none;
+         }
+     }
+     
+     .DesignerWizard-btn {
+         button {
+             font-size: 11px !important;
+             &.greenbtn {
+                 border: solid 1px #74bc46 !important;
+                 background-image: linear-gradient(to bottom, $pale-olive-green, $nasty-green);
+                 color: $white !important;
+                 font-weight: $fontWeight-bold !important;
+             }
+             &.greybtn {
+                 background-image: linear-gradient(to bottom, $pale-grey-six, $pale-grey-five);
+                 border: solid 1px $pale-grey-seven;
+                 color: $grey-blue !important;
+                 font-weight: $fontWeight-bold !important;
+             }
+         }
+     }
+     
+     .Clear-Redraw-btn {
+         button {
+             font-size: 11px !important;
+             &.greenbtn {
+                 border: solid 1px #74bc46 !important;
+                 background-image: linear-gradient(to bottom, $pale-olive-green, $nasty-green);
+                 color: $white !important;
+                 font-weight: $fontWeight-bold !important;
+             }
+             &.greybtn {
+                 background-image: linear-gradient(to bottom, $pale-grey-six, $pale-grey-five);
+                 border: solid 1px $pale-grey-seven;
+                 color: $grey-blue !important;
+                 font-weight: $fontWeight-bold !important;
+             }
+         }
+     }
+     
+     .Dotted-bg {
+         background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+         background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+         background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+         background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+         -webkit-background-size: 5px 5px;
+         -moz-background-size: 5px 5px;
+         background-size: 5px 5px;
+     }
+     
+     .btn-div {
+         button {
+             @include border-radius(4px);
+             background-image: linear-gradient(to bottom, $pale-grey-eight, $pale-grey-nine);
+             border: solid 1px #d8dee5;
+         }
+     }
+     
+@media (max-width: 979px){
+	.aui enrollmentRow #heading {
+	    margin-top: 0!important;
+	}
+}

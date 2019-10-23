@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.spgroup.model.SPGroup" />
+	<import class="com.sambaash.platform.srv.spgroup.model.SPGroupPref" />
+	<import class="com.sambaash.platform.srv.spgroup.model.SPGroupUser" />
+	<class name="com.sambaash.platform.srv.spgroup.model.impl.SPGroupImpl" table="SPGroup">
+		<cache usage="read-write" />
+		<id name="spGroupId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="urlTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="imageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="type" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="type_" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spgroup.model.impl.SPGroupPrefImpl" table="SPGroupPref">
+		<cache usage="read-write" />
+		<id name="spGroupPrefId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="dIn" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="dGoogle" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="dFb" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="dTw" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="cIn" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="cGoogle" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="cFb" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="cTw" access="com.liferay.portal.dao.orm.hibernate.CamelCasePropertyAccessor" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="enableSubscribeToComments" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="enableGroupUpdateNotification" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="enableMemberUpdate" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="enableDiscussionUpdate" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="updateFrequency" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spgroup.model.impl.SPGroupUserImpl" table="SPGroupUser">
+		<cache usage="read-write" />
+		<composite-id name="primaryKey" class="com.sambaash.platform.srv.spgroup.service.persistence.SPGroupUserPK">
+			<key-property name="spGroupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+			<key-property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		</composite-id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="joinDate" type="org.hibernate.type.TimestampType" />
+		<property name="role" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+</hibernate-mapping>

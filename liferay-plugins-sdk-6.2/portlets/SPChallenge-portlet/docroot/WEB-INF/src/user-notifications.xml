@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE user-notification-definitions PUBLIC "-//Liferay//DTD User Notification Definitions 6.2.0//EN" "http://www.liferay.com/dtd/liferay-user-notification-definitions_6_2_0.dtd">
+<user-notification-definitions>
+	<definition>
+		<notification-type>${com.sambaash.platform.spchallenge.notification.SPChallengeNotificationConstants.NOTIFICATION_TYPE_CHALLENGE_CREATE}</notification-type>
+		<description>Receive a notification when a Challenge is created</description>
+		<delivery-type>
+			<name>website</name>
+			<type>${com.liferay.portal.model.UserNotificationDeliveryConstants.TYPE_WEBSITE}</type>
+			<default>true</default>
+			<modifiable>true</modifiable>
+		</delivery-type>
+	</definition>
+	<definition>
+		<notification-type>${com.sambaash.platform.spchallenge.notification.SPChallengeNotificationConstants.NOTIFICATION_TYPE_CHALLENGE_APPLIED}</notification-type>
+		<description>Receive a notification when a someone applies for a Challenge</description>
+		<delivery-type>
+			<name>website</name>
+			<type>${com.liferay.portal.model.UserNotificationDeliveryConstants.TYPE_WEBSITE}</type>
+			<default>true</default>
+			<modifiable>true</modifiable>
+		</delivery-type>
+	</definition>
+</user-notification-definitions>

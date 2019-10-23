@@ -1,0 +1,289 @@
+.section_DKmenu {
+  background-color: #FFF;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 64px;
+  padding-top: 22px; }
+
+.sys_pad20top {
+  margin-top: 73px; }
+
+.ap_event_tabNavWrap {
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  padding-top: 10px; }
+
+.ap_event_tabNavWrap ul li a {
+  text-transform: none;
+  font-size: 12pt; }
+
+.wrapWidth {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1150px; }
+
+.ap_event_tabNavWrap ul {
+  font-size: 0;
+  text-align: left; }
+
+.ap_event_tabNavWrap ul li {
+  display: inline-block;
+  zoom: 1;
+  cursor: pointer; }
+
+.ap_event_tabNavWrap ul li a {
+  display: block;
+  padding: 15px;
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 1px;
+  text-align: left;
+  text-decoration: none;
+  color: #961f63;
+  font-weight: bold;
+  background-color: #ffffff;
+  border: 1px solid #e2d3dd; }
+
+.ap_event_tabNavWrap ul li a img, .ap_event_tabNavWrap ul li a span {
+  vertical-align: middle; }
+
+.ap_event_tabNavWrap ul li a img {
+  margin-right: 10px;
+  width: 22px;
+  height: 22px; }
+
+.APEventFAQ_answers ul li .question_title {
+  letter-spacing: 0px; }
+
+.APEventFAQ_answers ul li .answer_content p {
+  letter-spacing: 0px; }
+
+/***
+SYSTEM MANAGEMENT START
+***/
+.vp1280 .portlet-layout .aui-w70-vresize, .vp1024 .portlet-layout .aui-w70-vresize {
+  width: 70%; }
+
+.vp1280 .portlet-layout .aui-w30-vresize, .vp1024 .portlet-layout .aui-w30-vresize {
+  width: 30%; }
+
+._description p {
+  margin-bottom: 20px; }
+
+@media screen and (min-width: 767px) and (max-width: 978px) {
+  .detailPage_col.col1.program-detail {
+    padding: 40px;
+    padding-right: 40px; }
+
+  .detailPage_col.col2.program-detail {
+    padding: 20px;
+    padding-left: 20px; }
+
+  .headWrap_image {
+    vertical-align: top; } }
+.vp1024 .detailPage_col article {
+  margin-right: 0; }
+
+.boxPadding {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box; }
+
+._headWrap {
+  margin-top: 0 !important; }
+
+.careergenie_head h1 {
+  font-size: 24px;
+  color: #7d3680;
+  text-align: left; }
+
+.careergenie_head {
+  padding: 0; }
+
+.pageLeftContent {
+  float: left;
+  position: relative;
+  display: block;
+  width: 75%; }
+
+.pageLeftContent figure {
+  display: inline-block;
+  zoom: 1;
+  vertical-align: middle;
+  width: 25%;
+  overflow: hidden;
+  padding: 4px 4px;
+  float: left;
+  background-color: transparent;
+  border-radius: 50%; }
+
+.pageLeftContent figure img {
+  width: 100%; }
+
+.pageLeftContent .headWrap_details {
+  display: inline-block;
+  zoom: 1;
+  vertical-align: middle;
+  width: 62%;
+  overflow: hidden;
+  padding: 4px 28px;
+  /* max-width: 200px; */
+  float: left; }
+
+.pageLeftContent .contentTitle {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #333333;
+  text-align: left;
+  font-weight: 600; }
+
+.pageLeftContent .content_Description {
+  font-size: 14px;
+  text-align: justify;
+  color: #333;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 22px; }
+
+.content_Description {
+  font-size: 14px;
+  text-align: justify;
+  color: #333;
+  font-weight: 400;
+  letter-spacing: 0; }
+
+.pageRightContent {
+  float: left;
+  position: relative;
+  display: block;
+  width: 23%; }
+
+.pageRightContent .rightContentTitle {
+  padding: 10px 0;
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  color: #7d3680;
+  width: 100%; }
+
+.pageRightContent .rightContentList {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  float: left;
+  border: 1px solid #CCC; }
+
+.pageRightContent .rightContentList .contenticon {
+  width: 25%;
+  padding: 12px 20px;
+  float: left;
+  vertical-align: middle; }
+
+.pageRightContent .rightContentList .contenticon img {
+  width: 28px;
+  height: 100%; }
+
+.pageRightContent .rightContentList .contenticonTitle {
+  width: 70%;
+  padding: 20px 0px;
+  float: left;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  color: #333333;
+  text-align: left; }
+
+/***
+SYSTEM MANAGEMENT END
+***/
+/***
+ENTRANT START
+***/
+.pageWrapper {
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  padding-top: 10px; }
+
+.pageContentsDiv {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1150px;
+  padding: 0 13px; }
+
+.pageTitle h1 {
+  font-size: 24px;
+  color: #7d3680;
+  text-align: left;
+  margin: 0; }
+
+.pageContent {
+  margin: 0;
+  padding: 0; }
+
+.pageContent .contentTitle {
+  font-size: 14px;
+  color: #333333;
+  text-align: left;
+  font-weight: 700; }
+
+.pageContent table, .pageContent td, .pageContent th {
+  border: 0.5px solid #e8dee4; }
+.pageContent table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 25px; }
+.pageContent th {
+  height: 49px;
+  font-size: 14px;
+  color: #707070;
+  text-align: left;
+  padding: 0 20px;
+  background-color: #faf3f7; }
+.pageContent td {
+  height: 40px;
+  background-color: #fffcfe;
+  font-size: 14px;
+  color: #333333;
+  text-align: left;
+  font-weight: 600;
+  padding: 10px 20px;
+  vertical-align: middle; }
+.pageContent td:not(:first-child) {
+  width: 70%; }
+
+.tableDiv a {
+  color: #961f63;
+  text-decoration: none; }
+
+.mobileTabContent-content1 {
+  padding: 20px; }
+
+/***
+ENTRANT END
+***/
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .detailPage_col.col1.program-detail {
+    padding: 20px;
+    padding-right: 20px; }
+
+  .detailPage_col.col2.program-detail {
+    padding: 20px;
+    padding-left: 20px; }
+
+  .ap_event_tabNavWrap {
+    display: none; }
+
+  .section_DKmenu {
+    background-color: transparent;
+    position: inherit;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    padding-top: 0; } }
+
+/*# sourceMappingURL=careergeniedetails.css.map */

@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.processbuilder.model.FormBuilder" />
+	<import class="com.sambaash.platform.srv.processbuilder.model.PECustomActionInfo" />
+	<import class="com.sambaash.platform.srv.processbuilder.model.PEDummyEntity" />
+	<import class="com.sambaash.platform.srv.processbuilder.model.PEEngine" />
+	<import class="com.sambaash.platform.srv.processbuilder.model.PEProcess" />
+	<import class="com.sambaash.platform.srv.processbuilder.model.PEProcessAudit" />
+	<import class="com.sambaash.platform.srv.processbuilder.model.PEProcessStage" />
+	<import class="com.sambaash.platform.srv.processbuilder.model.PEProcessState" />
+	<import class="com.sambaash.platform.srv.processbuilder.model.PEProcessStatusType" />
+	<import class="com.sambaash.platform.srv.processbuilder.model.PERule" />
+	<import class="com.sambaash.platform.srv.processbuilder.model.PERuleSet" />
+	<import class="com.sambaash.platform.srv.processbuilder.model.PESupervisor" />
+	<class name="com.sambaash.platform.srv.processbuilder.model.impl.PECustomActionInfoImpl" table="SPPECustomActionInfo">
+		<cache usage="read-write" />
+		<id name="spPEActionId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="actionClassName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="defaultConfiguration" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.processbuilder.model.impl.PEDummyEntityImpl" table="SPPEDummyEntity">
+		<cache usage="read-write" />
+		<id name="spPEDummyEntityId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessImpl" table="SPPEProcess">
+		<cache usage="read-write" />
+		<id name="spPEProcessId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="definiton" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="entityClassId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="agentEnabled" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="agentRoleIds" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="approveRoleIds" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="miscData" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="diagramData" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="entityTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="approverPageName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userPageName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="agentPageName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="applicantRoleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="supervisorRoleIds" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="supervisorPageName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="closedReasonVocId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="accountCreationEmailEnabled" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="enableAssignment" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="editFeeDetails" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="scheduleModelId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="enableSingleSubmission" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="orientation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="showHeader" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="enableFirstStepProgress" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="subProductTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="productTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="singleSubmissionErrorMsg" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessAuditImpl" table="SPPEProcessAudit">
+		<cache usage="read-write" />
+		<id name="spPEProcessAuditId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spPEProcessStateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spPEProcessId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entityClassId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entityId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userIdProcess" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spPEProcessStageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="nodeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userIdSupervisor" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userIdAgent" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spPEClosedStageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="type" type="com.liferay.portal.dao.orm.hibernate.StringType" column="type_" />
+		<property name="doneBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="action" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="field1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="field2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="field3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="field4" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="field5" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="storageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="data1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="data2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sourceClassId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sourceEntityID" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessStageImpl" table="SPPEProcessStage">
+		<cache usage="read-write" />
+		<id name="spPEProcessStageId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="style" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="seqNo" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessStateImpl" table="SPPEProcessState">
+		<cache usage="read-write" />
+		<id name="spPEProcessStateId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spPEProcessId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entityClassId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entityId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userIdProcess" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userIdCreator" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spPEProcessStageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nodeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="nodeIdLastProcessed" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="nodeIdLastDisplayed" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="nodeIdLastDataSubmitted" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="data" type="com.liferay.portal.dao.orm.hibernate.StringType" column="data_" />
+		<property name="lastErrorCode" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="lastErrorMsg" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastErrorDate" type="org.hibernate.type.TimestampType" />
+		<property name="currentStatusTypeApprovers" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="currentNodeSubmitters" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lock" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="lock_" />
+		<property name="lockDate" type="org.hibernate.type.TimestampType" />
+		<property name="userIdSupervisor" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userIdAgent" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="closedStageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="closedDate" type="org.hibernate.type.TimestampType" />
+		<property name="closedReasonCatId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="closedDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="convertedFromProcessStateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="convertedToProcessStateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="activeStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="amount" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sourceClassId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sourceEntityID" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.processbuilder.model.impl.PEProcessStatusTypeImpl" table="SPPEProcessStatusType">
+		<cache usage="read-write" />
+		<id name="spPEProcessStatusTypeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spPEProcessId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="seqNo" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="approveTemplateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="rejectTemplateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spPEProcessStageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.processbuilder.model.impl.PERuleImpl" table="SPPERule">
+		<cache usage="read-write" />
+		<id name="spPERuleId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spPERuleSetId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="type" type="com.liferay.portal.dao.orm.hibernate.StringType" column="type_" />
+		<property name="definition" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sequenceNO" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.processbuilder.model.impl.PERuleSetImpl" table="SPPERuleSet">
+		<cache usage="read-write" />
+		<id name="spPERuleSetId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="componentType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="componentId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="formVersion" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.processbuilder.model.impl.PESupervisorImpl" table="SPPESupervisor">
+		<cache usage="read-write" />
+		<id name="spPESupervisorId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="filter1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="filter2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="filter3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="filter4" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="filter5" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="supervisorId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

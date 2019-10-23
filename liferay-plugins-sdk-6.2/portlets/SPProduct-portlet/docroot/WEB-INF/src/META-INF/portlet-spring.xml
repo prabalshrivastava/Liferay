@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.service.ActivityLocalService" class="com.sambaash.platform.srv.service.impl.ActivityLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.ActivityPersistence" class="com.sambaash.platform.srv.service.persistence.ActivityPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.AssessmentLocalService" class="com.sambaash.platform.srv.service.impl.AssessmentLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.AssessmentPersistence" class="com.sambaash.platform.srv.service.persistence.AssessmentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.CertificateLocalService" class="com.sambaash.platform.srv.service.impl.CertificateLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.CertificatePersistence" class="com.sambaash.platform.srv.service.persistence.CertificatePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.CompetencyUnitLocalService" class="com.sambaash.platform.srv.service.impl.CompetencyUnitLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.CompetencyUnitPersistence" class="com.sambaash.platform.srv.service.persistence.CompetencyUnitPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.CourseLocalService" class="com.sambaash.platform.srv.service.impl.CourseLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.CoursePersistence" class="com.sambaash.platform.srv.service.persistence.CoursePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.CourseCareerLocalService" class="com.sambaash.platform.srv.service.impl.CourseCareerLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.CourseCareerPersistence" class="com.sambaash.platform.srv.service.persistence.CourseCareerPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.CourseCertificateLocalService" class="com.sambaash.platform.srv.service.impl.CourseCertificateLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.CourseCertificatePersistence" class="com.sambaash.platform.srv.service.persistence.CourseCertificatePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.CourseDurationLocalService" class="com.sambaash.platform.srv.service.impl.CourseDurationLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.CourseDurationPersistence" class="com.sambaash.platform.srv.service.persistence.CourseDurationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.CourseDurationTypeLocalService" class="com.sambaash.platform.srv.service.impl.CourseDurationTypeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.CourseDurationTypePersistence" class="com.sambaash.platform.srv.service.persistence.CourseDurationTypePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.CourseEnrollContractLocalService" class="com.sambaash.platform.srv.service.impl.CourseEnrollContractLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.CourseEnrollContractPersistence" class="com.sambaash.platform.srv.service.persistence.CourseEnrollContractPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.CourseEnrollEsignInfoLocalService" class="com.sambaash.platform.srv.service.impl.CourseEnrollEsignInfoLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.CourseEnrollEsignInfoPersistence" class="com.sambaash.platform.srv.service.persistence.CourseEnrollEsignInfoPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.CourseLearningLocalService" class="com.sambaash.platform.srv.service.impl.CourseLearningLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.CourseLearningPersistence" class="com.sambaash.platform.srv.service.persistence.CourseLearningPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.CourseModuleLocalService" class="com.sambaash.platform.srv.service.impl.CourseModuleLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.CourseModulePersistence" class="com.sambaash.platform.srv.service.persistence.CourseModulePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.CourseOutcomeLocalService" class="com.sambaash.platform.srv.service.impl.CourseOutcomeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.CourseOutcomePersistence" class="com.sambaash.platform.srv.service.persistence.CourseOutcomePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.FeeDetailsLocalService" class="com.sambaash.platform.srv.service.impl.FeeDetailsLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.FeeDetailsPersistence" class="com.sambaash.platform.srv.service.persistence.FeeDetailsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.FeeTypeLocalService" class="com.sambaash.platform.srv.service.impl.FeeTypeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.FeeTypePersistence" class="com.sambaash.platform.srv.service.persistence.FeeTypePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.FrameworkLocalService" class="com.sambaash.platform.srv.service.impl.FrameworkLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.FrameworkPersistence" class="com.sambaash.platform.srv.service.persistence.FrameworkPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.FundingLocalService" class="com.sambaash.platform.srv.service.impl.FundingLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.FundingPersistence" class="com.sambaash.platform.srv.service.persistence.FundingPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.GraduationCriteriaLocalService" class="com.sambaash.platform.srv.service.impl.GraduationCriteriaLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.GraduationCriteriaPersistence" class="com.sambaash.platform.srv.service.persistence.GraduationCriteriaPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.MiscellaneousFeesLocalService" class="com.sambaash.platform.srv.service.impl.MiscellaneousFeesLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.MiscellaneousFeesPersistence" class="com.sambaash.platform.srv.service.persistence.MiscellaneousFeesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.ModuleLocalService" class="com.sambaash.platform.srv.service.impl.ModuleLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.ModulePersistence" class="com.sambaash.platform.srv.service.persistence.ModulePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.ModuleCertificateLocalService" class="com.sambaash.platform.srv.service.impl.ModuleCertificateLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.ModuleCertificatePersistence" class="com.sambaash.platform.srv.service.persistence.ModuleCertificatePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.ModuleCompetencyUnitLocalService" class="com.sambaash.platform.srv.service.impl.ModuleCompetencyUnitLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.ModuleCompetencyUnitPersistence" class="com.sambaash.platform.srv.service.persistence.ModuleCompetencyUnitPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.ModuleFrameworkLocalService" class="com.sambaash.platform.srv.service.impl.ModuleFrameworkLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.ModuleFrameworkPersistence" class="com.sambaash.platform.srv.service.persistence.ModuleFrameworkPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.OutcomeLocalService" class="com.sambaash.platform.srv.service.impl.OutcomeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.OutcomePersistence" class="com.sambaash.platform.srv.service.persistence.OutcomePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.OutlineLocalService" class="com.sambaash.platform.srv.service.impl.OutlineLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.OutlinePersistence" class="com.sambaash.platform.srv.service.persistence.OutlinePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.PersonaLocalService" class="com.sambaash.platform.srv.service.impl.PersonaLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.PersonaPersistence" class="com.sambaash.platform.srv.service.persistence.PersonaPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.PersonaAttendeeLocalService" class="com.sambaash.platform.srv.service.impl.PersonaAttendeeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.PersonaAttendeePersistence" class="com.sambaash.platform.srv.service.persistence.PersonaAttendeePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.ProductLocalService" class="com.sambaash.platform.srv.service.impl.ProductLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.ProductPersistence" class="com.sambaash.platform.srv.service.persistence.ProductPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.ProductCourseLocalService" class="com.sambaash.platform.srv.service.impl.ProductCourseLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.ProductCoursePersistence" class="com.sambaash.platform.srv.service.persistence.ProductCoursePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.ProductSupervisorLocalService" class="com.sambaash.platform.srv.service.impl.ProductSupervisorLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.ProductSupervisorPersistence" class="com.sambaash.platform.srv.service.persistence.ProductSupervisorPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.ProgressionPathLocalService" class="com.sambaash.platform.srv.service.impl.ProgressionPathLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.ProgressionPathPersistence" class="com.sambaash.platform.srv.service.persistence.ProgressionPathPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.ScheduleLocalService" class="com.sambaash.platform.srv.service.impl.ScheduleLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.SchedulePersistence" class="com.sambaash.platform.srv.service.persistence.SchedulePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.StudentCourseFeeLocalService" class="com.sambaash.platform.srv.service.impl.StudentCourseFeeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.StudentCourseFeePersistence" class="com.sambaash.platform.srv.service.persistence.StudentCourseFeePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.StudentCourseFeeInstmntLocalService" class="com.sambaash.platform.srv.service.impl.StudentCourseFeeInstmntLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.StudentCourseFeeInstmntPersistence" class="com.sambaash.platform.srv.service.persistence.StudentCourseFeeInstmntPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.service.StudyOptionLocalService" class="com.sambaash.platform.srv.service.impl.StudyOptionLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.service.persistence.StudyOptionPersistence" class="com.sambaash.platform.srv.service.persistence.StudyOptionPersistenceImpl" parent="basePersistence" />
+</beans>

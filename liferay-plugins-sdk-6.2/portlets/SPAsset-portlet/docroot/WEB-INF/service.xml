@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+
+<service-builder package-path="com.sambaash.platform.srv.spasset">
+	<author>harini</author>
+	<namespace>SPAsset</namespace>
+	<entity name="SPAssetEntry" table="SPAssetEntry" local-service="true" remote-service="true">
+		<!-- PK fields -->
+		<column name="uuid_" type="String"></column>
+		<column name="spAssetEntryId" type="long" primary="true"></column>
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<!-- Other fields -->
+		<column name="dlFolderId" type="long"></column>
+		<column name="coverFileEntryId" type="long"></column>
+		<column name="spAssetTypeId" type="long"></column>
+		<column name="spAssetEntrySubType" type="String"></column>
+		<column name="corporateProfileUserId" type="long"></column>
+		<column name="classNameId" type="long"></column>
+		<column name="title" type="String"></column>
+		<column name="urlTitle" type="String"></column>
+		<column name="description" type="String"></column>
+		<column name="content" type="String"></column>
+		<column name="link" type="String"></column>
+		<column name="status" type="boolean"></column>
+		<column name="statusByUserName" type="String"></column>
+		<column name="type" type="String"></column>
+		<column name="modifiedBy" type="String"></column>
+		<column name="allowPingbacks" type="boolean"></column>
+		<column name="allowTrackbacks" type="boolean"></column>
+		<column name="trackbacks" type="String"></column>
+		<column name="permissionType" type="int"></column>
+		<column name="agreedToTermsOfUse" type="boolean"></column>
+		<order>
+			<order-column name="createDate" order-by="desc"></order-column>
+		</order>
+		<finder name="urlTitle" return-type="SPAssetEntry">
+			<finder-column name="urlTitle"></finder-column>
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		<finder name="SpAssetTypeIdStatus" return-type="Collection">
+			<finder-column name="spAssetTypeId"></finder-column>
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="status"></finder-column>
+		</finder>
+		<finder name="SpAssetTypeId" return-type="Collection">
+			<finder-column name="spAssetTypeId"></finder-column>
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		<reference package-path="com.liferay.counter" entity="Counter"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry"></reference>
+		<reference package-path="com.liferay.portlet.documentlibrary" entity="DLApp"></reference>
+		<reference package-path="com.liferay.portlet.documentlibrary" entity="DLAppHelper"></reference>
+		<reference package-path="com.liferay.portlet.documentlibrary" entity="DLFileEntry"></reference>
+		<reference package-path="com.liferay.portlet.documentlibrary" entity="DLFileEntryType"></reference>
+		<reference package-path="com.liferay.portlet.documentlibrary" entity="DLFileVersion"></reference>
+		<reference package-path="com.liferay.portlet.documentlibrary" entity="DLFolder"></reference>
+	</entity>
+	<entity name="SPAssetType" table="SPAssetType" local-service="true" remote-service="true">
+		<!-- PK fields -->
+		<column name="uuid_" type="String" />
+		<column name="spAssetTypeId" type="long" primary="true"></column>
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<!-- Other fields -->
+		<column name="spAssetTypeName" type="String"></column>
+		<column name="status" type="boolean"></column>
+		<column name="modifiedBy" type="String"></column>
+		<column name="spAssetTypeCreateUrl" type="String"></column>
+		<column name="spAssetTypeDetailUrl" type="String"></column>
+		<column name="spAssetTypeInnerDetailUrl" type="String"></column>
+		<column name="requiredTermsOfUse" type="boolean"></column>
+		<column name="requiredLogin" type="boolean"></column>
+		<column name="categoryMandatory" type="boolean"></column>
+		<column name="notifyUponCreation" type="boolean"></column>
+		<column name="notificationTemplateId" type="long"></column>
+		<column name="allowedFileTypes" type="String"></column>
+		<column name="maxFileSize" type="int"></column>
+		<column name="minImageHeight" type="int"></column>
+		<column name="minImageWidth" type="int"></column>
+		
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+		</finder>
+		<finder name="status" return-type="Collection">
+			<finder-column name="status" />
+		</finder>
+
+	</entity>
+</service-builder>

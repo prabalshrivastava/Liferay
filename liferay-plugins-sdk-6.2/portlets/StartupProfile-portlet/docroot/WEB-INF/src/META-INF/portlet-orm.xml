@@ -1,0 +1,598 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.AccreditationModelImpl">
+		<attributes>
+			<id name="accreditationId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="organizationId" />
+			<basic name="aselected" />
+			<basic name="avalue" />
+			<basic name="bselected" />
+			<basic name="bvalue" />
+			<basic name="cselected" />
+			<basic name="cvalue" />
+			<basic name="ccompanyName">
+				<column name="CCOMPANYNAME" />
+			</basic>
+			<basic name="csamepolicy" />
+			<basic name="celaborate" />
+			<basic name="dselected" />
+			<basic name="dvalue" />
+			<basic name="accreditationStatus" />
+			<basic name="dateOfAccreditation">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateOfExpiry">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="latestPaymentDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="startDateOfReaccreditation">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateOfReaccdtReview">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="AccreditationBy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.AddressModelImpl">
+		<attributes>
+			<id name="addressId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="organizationId" />
+			<basic name="name" />
+			<basic name="street1" />
+			<basic name="street2" />
+			<basic name="street3" />
+			<basic name="street4" />
+			<basic name="city" />
+			<basic name="region" />
+			<basic name="country" />
+			<basic name="postalCode" />
+			<basic name="hq" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.ApprovedMentorsModelImpl">
+		<attributes>
+			<id name="mentorId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="organizationId" />
+			<basic name="userId" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="approvedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="remarks" />
+			<basic name="status" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.ATODocumentModelImpl">
+		<attributes>
+			<id name="atoDocumentId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="organizationId" />
+			<basic name="documentType" />
+			<basic name="documentFileId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.EmployeeInfoModelImpl">
+		<attributes>
+			<id name="employeeInfoId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="organizationId" />
+			<basic name="employees" />
+			<basic name="directors" />
+			<basic name="financeEmployees" />
+			<basic name="professionalCandidates" />
+			<basic name="foundationCandidates" />
+			<basic name="accountancyCandidates" />
+			<basic name="ISCAAccountants" />
+			<basic name="ICASAccountants" />
+			<basic name="ICAEWAccountants" />
+			<basic name="CAIAccountants" />
+			<basic name="ACCAAccountants" />
+			<basic name="CPAAccountants" />
+			<basic name="CAANZAccountants" />
+			<basic name="CPACanadaAccountants" />
+			<basic name="HKCPAAccountants" />
+			<basic name="SAICAAccountants" />
+			<basic name="JICPAAccountants" />
+			<basic name="AICPAAccountants" />
+			<basic name="CIMAAccountants" />
+			<basic name="othersAccountants" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.FundingRoundModelImpl">
+		<attributes>
+			<id name="fundingRoundId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="organizationId" />
+			<basic name="name" />
+			<basic name="apiPath" />
+			<basic name="imageUrl" />
+			<basic name="announcedOn" />
+			<basic name="moneyRaisedInUsd" />
+			<basic name="fundingType" />
+			<basic name="description" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.GuidelinesModelImpl">
+		<attributes>
+			<id name="guidelineId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="organizationId" />
+			<basic name="principleId" />
+			<basic name="guideline1" />
+			<basic name="guideline2" />
+			<basic name="guideline3" />
+			<basic name="guideline4" />
+			<basic name="guideline5" />
+			<basic name="guideline6" />
+			<basic name="guideline7" />
+			<basic name="guideline8" />
+			<basic name="moreInfo" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.OrganisationRemarksModelImpl">
+		<attributes>
+			<id name="remarksId" />
+			<basic name="organizationId" />
+			<basic name="remarkType" />
+			<basic name="Remarks" />
+			<basic name="Notes" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.OrganizationModelImpl">
+		<attributes>
+			<id name="organizationId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="name" />
+			<basic name="corporateCode" />
+			<basic name="corporateType" />
+			<basic name="corporateCategory" />
+			<basic name="apiPath" />
+			<basic name="categories" />
+			<basic name="foundedOn" />
+			<basic name="noOfEmployees" />
+			<basic name="emailId" />
+			<basic name="website" />
+			<basic name="facebook" />
+			<basic name="twitter" />
+			<basic name="linkedIn" />
+			<basic name="crunchbase" />
+			<basic name="mobile" />
+			<basic name="totalFunds" />
+			<basic name="uen" />
+			<basic name="description" />
+			<basic name="shortPitch" />
+			<basic name="lifecycleStage" />
+			<basic name="capitalRaised" />
+			<basic name="isIncorporated" />
+			<basic name="stockSymbol" />
+			<basic name="imageUrl" />
+			<basic name="videos" />
+			<basic name="profileOutline" />
+			<basic name="raisingFunds" />
+			<basic name="extras" />
+			<basic name="uniqueDesc" />
+			<basic name="links" />
+			<basic name="isBaseOrg" />
+			<basic name="completeness" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<basic name="logoId" />
+			<basic name="methodologyType" />
+			<basic name="methodologySubType" />
+			<basic name="stage" />
+			<basic name="feedback" />
+			<basic name="videoLinks" />
+			<basic name="projectsWorkedOn" />
+			<basic name="showInBlackbook" />
+			<basic name="faxNumber" />
+			<basic name="contactName" />
+			<basic name="contactDesignation" />
+			<basic name="pipelineStatus" />
+			<basic name="businessDevManager" />
+			<basic name="prevBusinessDevManager" />
+			<basic name="isATO" />
+			<basic name="approvalDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="status" />
+			<basic name="listedCo" />
+			<basic name="noOfPotentialCandidates" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.PersonModelImpl">
+		<attributes>
+			<id name="personId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="name" />
+			<basic name="title" />
+			<basic name="apiPath" />
+			<basic name="emailId" />
+			<basic name="description" />
+			<basic name="imageUrl" />
+			<basic name="mobile" />
+			<basic name="skype" />
+			<basic name="memberUserId" />
+			<basic name="extras" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<transient name="memberUserUuid" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.PrinciplesModelImpl">
+		<attributes>
+			<id name="principleId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="siteId" />
+			<basic name="principleText" />
+			<basic name="guideline1" />
+			<basic name="guideline2" />
+			<basic name="guideline3" />
+			<basic name="guideline4" />
+			<basic name="guideline5" />
+			<basic name="guideline6" />
+			<basic name="guideline7" />
+			<basic name="guideline8" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.QuestionnaireModelImpl">
+		<attributes>
+			<id name="questionnaireId">
+				<column name="SPQUESTIONNAIREID" />
+			</id>
+			<basic name="entryClassPK" />
+			<basic name="entryClassName" />
+			<basic name="answer1" />
+			<basic name="answer2" />
+			<basic name="answer3" />
+			<basic name="answer4" />
+			<basic name="answer5" />
+			<basic name="answer6" />
+			<basic name="answer7" />
+			<basic name="answer8" />
+			<basic name="answer9" />
+			<basic name="answer10" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.ReAccreditationModelImpl">
+		<attributes>
+			<id name="accreditationId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="organizationId" />
+			<basic name="accreditationStatus" />
+			<basic name="dateOfAccreditation">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateOfExpiry">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="latestPaymentDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="startDateOfReaccreditation">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dateOfReaccdtReview">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="AccreditationBy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.RelationshipModelImpl">
+		<attributes>
+			<id name="relationshipId" />
+			<basic name="organizationId" />
+			<basic name="refId" />
+			<basic name="refTypeId" />
+			<basic name="relation" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.SPATOContactsModelImpl">
+		<attributes>
+			<id name="spATOContactId" />
+			<basic name="groupId" />
+			<basic name="organizationId" />
+			<basic name="userId" />
+			<basic name="firstName" />
+			<basic name="lastName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="primaryPrincipalUserId" />
+			<basic name="secondaryPrincipalUserId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.startupprofile.model.impl.SPOrgContactUsModelImpl">
+		<attributes>
+			<id name="spContactUsId" />
+			<basic name="groupId" />
+			<basic name="organizationId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="salutation" />
+			<basic name="person" />
+			<basic name="firstName" />
+			<basic name="lastName" />
+			<basic name="designation" />
+			<basic name="qualification" />
+			<basic name="qualificationDate" />
+			<basic name="emailAddress" />
+			<basic name="department" />
+			<basic name="mobileNumber" />
+			<basic name="telephoneNumber" />
+			<basic name="faxNumber" />
+			<basic name="billingContact" />
+			<basic name="operationsContact" />
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.AccreditationImpl" name="Accreditation">
+		<table name="SPAccreditation" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.AddressImpl" name="Address">
+		<table name="SPAddress" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.ApprovedMentorsImpl" name="ApprovedMentors">
+		<table name="SPMentors" />
+		<attributes>
+			<transient name="email" />
+			<transient name="firstName" />
+			<transient name="jobTitle" />
+			<transient name="lastName" />
+			<transient name="mobile" />
+			<transient name="titleId" />
+		</attributes>
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.ATODocumentImpl" name="ATODocument">
+		<table name="SPATODocument" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.EmployeeInfoImpl" name="EmployeeInfo">
+		<table name="SPEmployeeInfo" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.FundingRoundImpl" name="FundingRound">
+		<table name="SPFundingRounds" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.GuidelinesImpl" name="Guidelines">
+		<table name="SPGuidelines" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.OrganisationRemarksImpl" name="OrganisationRemarks">
+		<table name="SPOrganisationRemarks" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.OrganizationImpl" name="Organization">
+		<table name="SPOrganization" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.PersonImpl" name="Person">
+		<table name="SPPerson" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.PrinciplesImpl" name="Principles">
+		<table name="SPPrinciples" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.QuestionnaireImpl" name="Questionnaire">
+		<table name="SPQuestionnaire" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.ReAccreditationImpl" name="ReAccreditation">
+		<table name="SPReAccreditation" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.RelationshipImpl" name="Relationship">
+		<table name="SPRelationships" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.SPATOContactsImpl" name="SPATOContacts">
+		<table name="SPATOContacts" />
+		<attributes>
+			<transient name="primaryJobTitle" />
+			<transient name="primaryMobile" />
+			<transient name="primaryPrincipalUserEmail" />
+			<transient name="primaryPrincipalUserFirstName" />
+			<transient name="primaryPrincipalUserLastName" />
+			<transient name="primaryTitleId" />
+			<transient name="secondaryJobTitle" />
+			<transient name="secondaryMobile" />
+			<transient name="secondaryPrincipalUserEmail" />
+			<transient name="secondaryPrincipalUserFirstName" />
+			<transient name="secondaryPrincipalUserLastName" />
+			<transient name="secondaryTitleId" />
+		</attributes>
+	</entity>
+	<entity class="com.sambaash.platform.srv.startupprofile.model.impl.SPOrgContactUsImpl" name="SPOrgContactUs">
+		<table name="SPOrgContactUs" />
+		<attributes />
+	</entity>
+</entity-mappings>

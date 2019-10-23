@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.spjob.model.SPJob" />
+	<import class="com.sambaash.platform.srv.spjob.model.SPJobApplicants" />
+	<import class="com.sambaash.platform.srv.spjob.model.SPJobApplicantsPortfolio" />
+	<class name="com.sambaash.platform.srv.spjob.model.impl.SPJobImpl" table="SPJob">
+		<cache usage="read-write" />
+		<id name="spJobId" column="jobId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="yearsOfExperience" type="com.liferay.portal.dao.orm.hibernate.StringType" column="experience" />
+		<property name="corporateName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="corporateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="jobTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="jobType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="jobLocation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="jobDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="autoMatch" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="currency" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="salary" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="rate" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startDate" type="org.hibernate.type.TimestampType" />
+		<property name="endDate" type="org.hibernate.type.TimestampType" />
+		<property name="closingDate" type="org.hibernate.type.TimestampType" />
+		<property name="extra1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="extra2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="extra3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="extra4" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="extra5" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="notefto" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spjob.model.impl.SPJobApplicantsImpl" table="SPJobApplicants">
+		<cache usage="read-write" />
+		<id name="spJobApplicantsId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="jobId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="updatedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="firstName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="contactNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="yearsOfExperience" type="com.liferay.portal.dao.orm.hibernate.StringType" column="experience" />
+		<property name="resume" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="coverLetter" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="briefInfos" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="extra1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="extra2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="extra3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="extra4" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="extra5" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spjob.model.impl.SPJobApplicantsPortfolioImpl" table="SPJobApplicantsCustomizedPortfolio">
+		<cache usage="read-write" />
+		<composite-id name="primaryKey" class="com.sambaash.platform.srv.spjob.service.persistence.SPJobApplicantsPortfolioPK">
+			<key-property name="jobApplyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+			<key-property name="porfolioId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		</composite-id>
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="updatedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="extra1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="extra2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

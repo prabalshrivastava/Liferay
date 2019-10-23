@@ -1,0 +1,430 @@
+/** profile_form_navigation -- additional text **/
+/** sp_custom.scss **/
+/** main wrapper bg color -- declared as variable in sp_custom.scss **/
+/** main navigation list bg & on hover color **/
+/** signed in menu list on hover bg color & aui-dialog - header bg color **/
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** profile_form_navigation -- additional text **/
+/** sp_custom.scss **/
+/** main wrapper bg color -- declared as variable in sp_custom.scss **/
+/** main navigation list bg & on hover color **/
+/** signed in menu list on hover bg color & aui-dialog - header bg color **/
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** SP Mixins **/
+.usersearch-max-width {
+  max-width: 1280px; }
+
+.max-width {
+  max-width: 1280px; }
+
+.usersearch-listingsection.top .usersearch-search-filters .usersearcha-contentarea {
+  background-color: #fff;
+  border: solid 1px #e0e0e0; }
+
+a.usersearch-button {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 10pt;
+  font-weight: 400;
+  background: #0066b3;
+  border: 0; }
+
+.btnFilters button {
+  border: none; }
+  .btnFilters button.Blue {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+  .btnFilters button.Green {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+  .btnFilters button.Yellow {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0; }
+
+.usersearcha-right-country p {
+  font-size: 10px;
+  color: #343434;
+  line-height: normal;
+  text-transform: uppercase; }
+
+.usersearch-search-filters .usersearcha-contentarea {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: solid 1px #e0e0e0; }
+  .usersearch-search-filters .usersearcha-contentarea .usersearcha-section .usersearcha-section-title {
+    text-transform: uppercase; }
+  .usersearch-search-filters .usersearcha-contentarea .usersearcha-section .FilterLink-text a {
+    text-decoration: none;
+    outline: none; }
+  .usersearch-search-filters .usersearcha-contentarea .usersearcha-section .usersearcha-section-item.all-categories a {
+    color: #888888;
+    font-size: 10pt;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: normal;
+    text-transform: uppercase; }
+    .usersearch-search-filters .usersearcha-contentarea .usersearcha-section .usersearcha-section-item.all-categories a:hover {
+      color: #0066b3; }
+  .usersearch-search-filters .usersearcha-contentarea .usersearcha-section .usersearcha-section-item a {
+    color: #555;
+    font-size: 10pt;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none; }
+
+.usersearchw-search-results .usersearch-content-wrapper {
+  border-radius: 5px;
+  background-color: #fff;
+  border: solid 1px #e0e0e0; }
+  .usersearchw-search-results .usersearch-content-wrapper .usersearch-image-wrap.usersearch-img-full {
+    background-image: radial-gradient(circle at 50% 50%, #ffffff, #e0f1ff); }
+  .usersearchw-search-results .usersearch-content-wrapper .usersearch-image-wrap .pi_button button {
+    background-color: #F2F5F8;
+    text-transform: none; }
+    .usersearchw-search-results .usersearch-content-wrapper .usersearch-image-wrap .pi_button button:hover {
+      background-color: #f0f0f0; }
+  .usersearchw-search-results .usersearch-content-wrapper .usersearch-inner-content .usersearch-inner-title {
+    color: #555;
+    font-size: 12pt;
+    font-weight: 700; }
+  .usersearchw-search-results .usersearch-content-wrapper .usersearch-inner-content .usersearch-inner-postarea .us-postarea-content {
+    font-size: 13px;
+    font-weight: 500;
+    color: #333333; }
+    .usersearchw-search-results .usersearch-content-wrapper .usersearch-inner-content .usersearch-inner-postarea .us-postarea-content:after {
+      border-radius: 50%;
+      background-color: #989898; }
+    .usersearchw-search-results .usersearch-content-wrapper .usersearch-inner-content .usersearch-inner-postarea .us-postarea-content span {
+      font-size: 13px;
+      font-weight: 500;
+      color: #333333; }
+  .usersearchw-search-results .usersearch-content-wrapper .usersearch-inner-content .usersearch-inner-contact .us-contact-content a {
+    font-size: 13px;
+    font-weight: 400;
+    color: #005eb8;
+    text-decoration: none;
+    line-height: normal; }
+    .usersearchw-search-results .usersearch-content-wrapper .usersearch-inner-content .usersearch-inner-contact .us-contact-content a span {
+      font-size: 13px;
+      font-weight: 400;
+      color: #005eb8;
+      text-decoration: none;
+      line-height: normal; }
+  .usersearchw-search-results .usersearch-content-wrapper .usersearch-inner-content .usersearch-button-wrap a.usersearch-button {
+    color: #fff;
+    font-size: 10pt;
+    font-weight: 400;
+    background: #0066b3;
+    border: 0; }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .usersearch-coverImg img {
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.22); }
+
+  .usersearch-search-filters {
+    border-top: 4px solid #ffc830;
+    background: #f3f3f3; }
+
+  .usersearch-sort-filter {
+    background-color: #f9fafb;
+    border: solid 1px #e0e7ee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px; }
+    .usersearch-sort-filter .usersearch-sort-filterwrap .usersearch-mobile-filtericon a {
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px; } }
+@media screen and (min-width: 481px) and (max-width: 766px) {
+  .usersearch-coverImg img {
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.22); }
+
+  .usersearch-search-filters {
+    border-top: 4px solid #ffc830;
+    background: #f3f3f3; } }
+@media screen and (min-width: 767px) and (max-width: 1024px) and (orientation: portrait) {
+  .usersearch-search-filters {
+    border-top: 4px solid #ffc830;
+    background: #f3f3f3; }
+    .usersearch-search-filters .usersearcha-contentarea {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px; }
+
+  .usersearch-sort-filter .usersearch-mobile-filtericon a {
+    border-radius: 3px; } }
+
+/*# sourceMappingURL=usersearch_custom.css.map */

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.spservices.service.MembershipPackageLocalService" class="com.sambaash.platform.srv.spservices.service.impl.MembershipPackageLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.MembershipPackagePersistence" class="com.sambaash.platform.srv.spservices.service.persistence.MembershipPackagePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.MembershipPackageAddonServicesLocalService" class="com.sambaash.platform.srv.spservices.service.impl.MembershipPackageAddonServicesLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.MembershipPackageAddonServicesPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.MembershipPackageAddonServicesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.MembershipPackageGrpServicesLocalService" class="com.sambaash.platform.srv.spservices.service.impl.MembershipPackageGrpServicesLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.MembershipPackageGrpServicesPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.MembershipPackageGrpServicesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.MembershipPackageIndServicesLocalService" class="com.sambaash.platform.srv.spservices.service.impl.MembershipPackageIndServicesLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.MembershipPackageIndServicesPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.MembershipPackageIndServicesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.MembershipPackagePromotionCodeLocalService" class="com.sambaash.platform.srv.spservices.service.impl.MembershipPackagePromotionCodeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.MembershipPackagePromotionCodePersistence" class="com.sambaash.platform.srv.spservices.service.persistence.MembershipPackagePromotionCodePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.MembershipPackageServicesRolesLocalService" class="com.sambaash.platform.srv.spservices.service.impl.MembershipPackageServicesRolesLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.MembershipPackageServicesRolesPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.MembershipPackageServicesRolesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.MembershipSubscribedServicesLocalService" class="com.sambaash.platform.srv.spservices.service.impl.MembershipSubscribedServicesLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.MembershipSubscribedServicesPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.MembershipSubscribedServicesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.MembershipSubscriptionLocalService" class="com.sambaash.platform.srv.spservices.service.impl.MembershipSubscriptionLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.MembershipSubscriptionPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.MembershipSubscriptionPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.MembershipSubscriptionAddonServicesLocalService" class="com.sambaash.platform.srv.spservices.service.impl.MembershipSubscriptionAddonServicesLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.MembershipSubscriptionAddonServicesPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.MembershipSubscriptionAddonServicesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.ServiceComponentGroupLocalService" class="com.sambaash.platform.srv.spservices.service.impl.ServiceComponentGroupLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.ServiceComponentGroupPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.ServiceComponentGroupPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.ServiceComponentsLocalService" class="com.sambaash.platform.srv.spservices.service.impl.ServiceComponentsLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.ServiceComponentsPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.ServiceComponentsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPApiAuditLogsLocalService" class="com.sambaash.platform.srv.spservices.service.impl.SPApiAuditLogsLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.SPApiAuditLogsPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.SPApiAuditLogsPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPAuditLocalService" class="com.sambaash.platform.srv.spservices.service.impl.SPAuditLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.SPAuditPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.SPAuditPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPIPGeoLocationLocalService" class="com.sambaash.platform.srv.spservices.service.impl.SPIPGeoLocationLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.SPIPGeoLocationPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.SPIPGeoLocationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPLdapMappingLocalService" class="com.sambaash.platform.srv.spservices.service.impl.SPLdapMappingLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.SPLdapMappingPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.SPLdapMappingPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPLdapProfileLocalService" class="com.sambaash.platform.srv.spservices.service.impl.SPLdapProfileLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.SPLdapProfilePersistence" class="com.sambaash.platform.srv.spservices.service.persistence.SPLdapProfilePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPLikesLocalService" class="com.sambaash.platform.srv.spservices.service.impl.SPLikesLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.SPLikesPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.SPLikesPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPListTypeLocalService" class="com.sambaash.platform.srv.spservices.service.impl.SPListTypeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPListTypeService" class="com.sambaash.platform.srv.spservices.service.impl.SPListTypeServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.SPListTypePersistence" class="com.sambaash.platform.srv.spservices.service.persistence.SPListTypePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPParameterLocalService" class="com.sambaash.platform.srv.spservices.service.impl.SPParameterLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.SPParameterPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.SPParameterPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.SPParameterFinder" class="com.sambaash.platform.srv.spservices.service.persistence.SPParameterFinderImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPSiteLocalService" class="com.sambaash.platform.srv.spservices.service.impl.SPSiteLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.SPSitePersistence" class="com.sambaash.platform.srv.spservices.service.persistence.SPSitePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPSiteSetupLocalService" class="com.sambaash.platform.srv.spservices.service.impl.SPSiteSetupLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.SPSiteSetupPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.SPSiteSetupPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPUserTypeLocalService" class="com.sambaash.platform.srv.spservices.service.impl.SPUserTypeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPUserTypeService" class="com.sambaash.platform.srv.spservices.service.impl.SPUserTypeServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.SPUserTypePersistence" class="com.sambaash.platform.srv.spservices.service.persistence.SPUserTypePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spservices.service.SPUserTypeConfigLocalService" class="com.sambaash.platform.srv.spservices.service.impl.SPUserTypeConfigLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spservices.service.persistence.SPUserTypeConfigPersistence" class="com.sambaash.platform.srv.spservices.service.persistence.SPUserTypeConfigPersistenceImpl" parent="basePersistence" />
+</beans>

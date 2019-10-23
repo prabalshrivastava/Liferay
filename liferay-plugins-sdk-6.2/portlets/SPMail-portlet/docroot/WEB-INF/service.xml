@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.mail">
+	<author>gauravvijayvergia</author>
+	<namespace>SPMail</namespace>
+
+		<entity name="SPMailTemplate" table="SPMailTemplate" local-service="true"
+		remote-service="true">
+
+		<column name="spMailTemplateId" db-name="spMailTemplateId" type="long" primary="true" />
+
+		<column name="productTypeId" db-name="productTypeId" type="long" />
+		<column name="subProductTypeId" db-name="subProductTypeId" type="long" />
+		<column name="templateName" db-name="templateName" type="String" />
+		<column name="groupId" db-name="groupId" type="long" />
+		<column name="companyId" db-name="companyId" type="long" />
+		<column name="subject" db-name="subject" type="String" />
+		<column name="htmlContent" db-name="htmlContent" type="String" />
+		<column name="textContent" db-name="textContent" type="String" />
+		<column name="htmlUpload" db-name="htmlUpload" type="boolean" />
+		<column name="status" db-name="status" type="boolean" />
+		<column name="createBy" db-name="createBy" type="long" />
+		<column name="createDate" db-name="createDate" type="Date" />
+		<column name="modifiedBy" db-name="modifiedBy" type="long" />
+		<column name="modifiedDate" db-name="modifiedDate" type="Date" />
+		<column name="parentTempalteId" db-name="parentTempalteId" type="long" />
+		<column name="versionNumber" db-name="versionNumber" type="String" />
+		<column name="fromAddress" db-name="fromAddress" type="String" />
+		<column name="fromName" db-name="fromName" type="String" />
+
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="parentTempalteId" />
+			<order-column name="versionNumber" />
+			<order-column name="modifiedDate" />
+		</order>
+		
+		<finder name="ProductTypeIdAndSubProductTypeIdAndTemplateName" return-type="Collection" db-index="true" where="status=0">
+			<finder-column name="productTypeId"></finder-column>
+			<finder-column name="subProductTypeId"></finder-column>
+			<finder-column name="templateName"></finder-column>
+		</finder>
+		
+		<finder name="TemplateName" return-type="Collection" db-index="true" where="status=0">
+			<finder-column name="templateName"></finder-column>
+		</finder>
+		
+		<finder name="TemplateNameAndVersionNumber" return-type="SPMailTemplate" db-index="true" unique="true">
+			<finder-column name="templateName"></finder-column>
+			<finder-column name="versionNumber"></finder-column>
+		</finder>
+		
+		<finder name="ProductTypeIdAndSubProductTypeIdAndTemplateNameAndVersionNumber" return-type="SPMailTemplate" db-index="true" unique="true">
+			<finder-column name="productTypeId"></finder-column>
+			<finder-column name="subProductTypeId"></finder-column>
+			<finder-column name="templateName"></finder-column>
+			<finder-column name="versionNumber"></finder-column>
+		</finder>
+
+		<finder name="parentTempalteId" return-type="Collection" db-index="false">
+			<finder-column name="parentTempalteId"></finder-column>
+		</finder>
+		
+		<finder name="status" return-type="Collection">
+			<finder-column name="status"></finder-column>
+		</finder>
+
+	</entity>
+
+
+	<entity name="SPMailTemplateAttachment" table="SPMailTemplateAttachment"
+		local-service="true" remote-service="false">
+
+		<column name="spTemplateAttachmentId" db-name="spRsvpTemplateId" type="long"
+			primary="true" />
+
+		<column name="templateId" db-name="templateId" type="long" />
+		<column name="rsvpId" db-name="rsvpId" type="long" />
+		<column name="fileEntryId" db-name="fileEntryId" type="long" />
+
+		<finder name="TemplateId" return-type="Collection" db-index="false">
+			<finder-column name="templateId"></finder-column>
+		</finder>
+		
+		<finder name="fileEntryId" return-type="Collection" db-index="false">
+			<finder-column name="fileEntryId"></finder-column>
+		</finder>
+
+		<finder name="TemplateIdFileEntryId" return-type="Collection" db-index="false">
+			<finder-column name="templateId"></finder-column>
+			<finder-column name="fileEntryId"></finder-column>
+		</finder>
+
+	</entity>
+
+
+	<entity name="SPMailCampaign" table="SPMailCampaign" local-service="true"
+		remote-service="false">
+
+		<column name="spMailCampaignId" db-name="spMailCampaignId" type="long"
+			primary="true" />
+
+		<column name="groupId" db-name="groupId" type="long" />
+		<column name="companyId" db-name="companyId" type="long" />
+
+		<column name="campaignName" db-name="campaignName" type="String" />
+		<column name="categoryId" db-name="categoryId" type="long" />
+		<column name="mainTempalteId" db-name="mainTempalteId" type="long" />
+		<column name="rem1TempalteId" db-name="rem1TempalteId" type="long" />
+		<column name="rem2TempalteId" db-name="rem2TempalteId" type="long" />
+		<column name="rem3TempalteId" db-name="rem3TempalteId" type="long" />
+		<column name="thankyouTempalteId" db-name="thankyouTempalteId" type="long" />
+		<column name="missedyouTempalteId" db-name="missedyouTempalteId" type="long" />
+		<column name="mainScheduledDate" db-name="mainScheduledDate" type="Date" />
+		<column name="rem1ScheduledDate" db-name="rem1ScheduledDate" type="Date" />
+		<column name="rem2ScheduledDate" db-name="rem2ScheduledDate" type="Date" />
+		<column name="rem3ScheduledDate" db-name="rem3ScheduledDate" type="Date" />
+		<column name="thankYouScheduledDate" db-name="thankYouScheduledDate"
+			type="Date" />
+		<column name="missedyouScheduledDate" db-name="missedyouScheduledDate"
+			type="Date" />
+		<column name="rsvpId" db-name="rsvpId" type="long" />
+		<column name="dlFileEntryId" db-name="dlFileEntryId" type="long" />
+		<column name="sentBy" db-name="sentBy" type="long" />
+		<column name="sentDate" db-name="sentDate" type="Date" />
+		<column name="createBy" db-name="createBy" type="long" />
+		<column name="createDate" db-name="createDate" type="Date" />
+		<column name="modifiedBy" db-name="modifiedBy" type="long" />
+		<column name="modifiedDate" db-name="modifiedDate" type="Date" />
+		<column name="status" db-name="status" type="int" />
+		<column name="archive" db-name="archive" type="boolean" />
+		<column name="campaignType"  type="String" />
+
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="createDate" />
+		</order>
+
+		<finder name="Archive" return-type="Collection" db-index="false">
+			<finder-column name="archive"></finder-column>
+		</finder>
+
+		<finder name="CampaignName" return-type="SPMailCampaign" db-index="false">
+			<finder-column name="campaignName"></finder-column>
+		</finder>
+
+		<finder name="rsvpId" return-type="SPMailCampaign" db-index="false">
+			<finder-column name="rsvpId"></finder-column>
+		</finder>
+
+	</entity>
+
+	<entity name="SPMailCampaignSubscribers" table="SPMailCampaignSubscribers"
+		local-service="true" remote-service="false">
+
+		<column name="spMailCampaignSubscribersId" db-name="spMailCampaignSubscribersId"
+			type="long" primary="true" />
+
+		<column name="spMailCampaignId" db-name="spMailCampaignId" type="long" />
+		<column name="userId" db-name="userId" type="long" />
+		<column name="parentSubscriberId" db-name="parentSubscriberId" type="long" />
+		<column name="emailAddress" db-name="emailAddress" type="String" />
+		<column name="firstName" db-name="firstName" type="String" />
+		<column name="lastName" db-name="lastName" type="String" />
+		<column name="spMailType" db-name="spMailType" type="int" />
+		<column name="messageId" db-name="messageId" type="String" />
+		<column name="opened" db-name="opened" type="boolean" />
+		<column name="countryName" db-name="countryName" type="String" />
+		<column name="city" db-name="city" type="String" />
+		<column name="regionName" db-name="regionName" type="String" />
+		<column name="areaCode" db-name="areaCode" type="int" />
+		<column name="latitude" db-name="latitude" type="String" />
+		<column name="longitude" db-name="longitude" type="String" />
+		<column name="ipAddress" db-name="ipAddress" type="String" />
+		<column name="webVersion" db-name="webVersion" type="boolean" />
+		<column name="openedDate" db-name="openedDate" type="Date" />
+		<column name="createBy" db-name="createBy" type="long" />
+		<column name="createDate" db-name="createDate" type="Date" />
+		<column name="modifiedBy" db-name="modifiedBy" type="long" />
+		<column name="modifiedDate" db-name="modifiedDate" type="Date" />
+		<column name="status" db-name="status" type="int" />
+
+		<order by="desc">
+			<order-column name="createDate" />
+		</order>
+
+		<finder name="CampaignId" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+		</finder>
+
+		<finder name="UserId" return-type="Collection">
+			<finder-column name="userId"></finder-column>
+		</finder>
+		
+		<finder name="UserIdAndOpened" return-type="Collection">
+			<finder-column name="userId"></finder-column>
+			<finder-column name="opened"></finder-column>
+		</finder>
+		
+		<finder name="CampaignIdAndMailType" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="spMailType"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdMailTypeAndStatus" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="spMailType"></finder-column>
+			<finder-column name="status"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdMailTypeAndOpened" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="spMailType"></finder-column>
+			<finder-column name="opened"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdMailTypeAndEmailAddress" return-type="SPMailCampaignSubscribers" unique="true">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="spMailType"></finder-column>
+			<finder-column name="emailAddress" case-sensitive="false"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdAndEmailAddress" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="emailAddress" case-sensitive="false"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdMailTypeOpenedAndEmailAddress" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="spMailType"></finder-column>
+			<finder-column name="opened"></finder-column>
+			<finder-column name="emailAddress" case-sensitive="false"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdOpenedAndEmailAddress" return-type="Collection" >
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="opened"></finder-column>
+			<finder-column name="emailAddress" case-sensitive="false"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdMailTypeOpenedAndFirstName" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="spMailType"></finder-column>
+			<finder-column name="opened"></finder-column>
+			<finder-column name="firstName" case-sensitive="false"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdMailTypeAndFirstName" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="spMailType"></finder-column>
+			<finder-column name="firstName" case-sensitive="false"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdOpenedAndFirstName" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="opened"></finder-column>
+			<finder-column name="firstName" case-sensitive="false"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdAndFirstName" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="firstName" case-sensitive="false"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdMailTypeOpenedAndLastName" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="spMailType"></finder-column>
+			<finder-column name="opened"></finder-column>
+			<finder-column name="lastName" case-sensitive="false"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdMailTypeAndLastName" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="spMailType"></finder-column>
+			<finder-column name="lastName" case-sensitive="false"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdOpenedAndLastName" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="opened"></finder-column>
+			<finder-column name="lastName" case-sensitive="false"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdAndLastName" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="lastName" case-sensitive="false"></finder-column>
+		</finder>
+
+		<finder name="EmailAddress" return-type="Collection" >
+			<finder-column name="emailAddress" case-sensitive="false"></finder-column>
+		</finder>
+
+		<finder name="MessageId" return-type="SPMailCampaignSubscribers">
+			<finder-column name="messageId"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdAndOpened" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="opened"></finder-column>
+		</finder>
+
+	</entity>
+
+
+	<entity name="SPMailUnsubscribe" table="SPMailUnsubscribe"
+		local-service="true" remote-service="false">
+
+		<column name="spMailUnsubscribeId" db-name="spMailUnsubscribeId" type="long"
+			primary="true" />
+
+		<column name="categoryId" db-name="categoryId" type="long" />
+		<column name="userId" db-name="userId" type="long" />
+		<column name="emailAddress" db-name="emailAddress" type="String" />
+		<column name="unsubscribeDate" db-name="unsubscribeDate" type="Date" />
+
+		<finder name="EmailAddressAndCategoryId" return-type="SPMailUnsubscribe" db-index="true">
+			<finder-column name="emailAddress"></finder-column>
+			<finder-column name="categoryId"></finder-column>
+		</finder>
+
+		<finder name="EmailAddress" return-type="SPMailUnsubscribe" db-index="true">
+			<finder-column name="emailAddress"></finder-column>
+		</finder>
+
+		<finder name="UserId" return-type="SPMailUnsubscribe" db-index="true">
+			<finder-column name="userId"></finder-column>
+		</finder>
+	</entity>
+
+
+	<entity name="SPMailBlackList" table="SPMailBlackList" local-service="true"
+		remote-service="false">
+
+		<column name="spMailBlackListId" db-name="spMailBlackListId" type="long"
+			primary="true" />
+		<column name="spMailCampaignId" db-name="spMailCampaignId" type="long" />
+		<column name="userId" db-name="userId" type="long" />
+		<column name="emailAddress" db-name="emailAddress" type="String" />
+		<column name="bounced" db-name="bounced" type="boolean" />
+		<column name="bounce_soft" db-name="bounce_soft" type="boolean" />
+		<column name="complain" db-name="complain" type="boolean" />
+		<column name="createDate" db-name="createDate" type="Date" />
+		<column name="message" db-name="message" type="String" />
+		<column name="messageId" db-name="messageId" type="String" />
+		<finder name="CampaignIdAndBounced" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="bounced"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdAndComplain" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="complain"></finder-column>
+		</finder>
+
+		<finder name="CampaignIdAndBouncedSoft" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="bounce_soft"></finder-column>
+		</finder>
+
+		<finder name="EmailAddress" return-type="SPMailBlackList" unique="true">
+			<finder-column name="emailAddress"></finder-column>
+		</finder>
+
+		<finder name="CampaignId" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+		</finder>
+
+		<finder name="MessageId" return-type="SPMailBlackList" unique="true" db-index="false">
+			<finder-column name="messageId"></finder-column>
+		</finder>
+
+	</entity>
+
+
+	<entity name="SPMailLinkTracking" table="SPMailLinkTracking"
+		local-service="true" remote-service="false">
+
+		<column name="spMailLinkTrackingId" db-name="spMailLinkTrackingId"
+			type="long" primary="true" />
+
+		<column name="spMailCampaignId" db-name="spMailCampaignId" type="long" />
+		<column name="spMailCampaignEDMId" db-name="spMailCampaignEDMId" type="long" />
+		<column name="spMailCampaignSubscribersId" db-name="spMailCampaignSubscribersId"
+			type="long" />
+		<column name="label" db-name="label" type="String" />
+		<column name="link" db-name="link" type="String" />
+		<column name="encryptedlink" db-name="encryptedlink" type="String" />
+		<column name="status" db-name="status" type="boolean" />
+		<column name="openedDate" db-name="openedDate" type="Date" />
+		<column name="createDate" db-name="createDate" type="Date" />
+
+		<finder name="CampaignIdAndSubscribersId" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="spMailCampaignSubscribersId"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="SPMailSubscriberUserAgent" table="SPMailSubscriberUserAgent"
+		local-service="true" remote-service="false">
+		<column name="spMailSubscriberUserAgentId" db-name="spMailSubscriberUserAgentId"
+			type="long"   primary="true" />
+		<column name="spMailCampaignSubscribersId" db-name="spMailCampaignSubscribersId"
+			type="long" />
+		<column name="spMailCampaignId" db-name="spMailCampaignId" type="long" />
+		<column name="name" db-name="name" type="String" />
+		<column name="type" db-name="type" type="String" />
+		<column name="typeName" db-name="typeName" type="String" />
+		<column name="deviceCategory" db-name="deviceCategory" type="String" />
+		<column name="family" db-name="family" type="String" />
+		<column name="operatingSystem" db-name="operatingSystem" type="String" />
+		<column name="versionNumber" db-name="versionNumber" type="String" />
+		<column name="userAgent" db-name="userAgent" type="String" />
+
+		<finder name="CampaignIdAndSubscribersId" return-type="SPMailSubscriberUserAgent"  unique="true">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="spMailCampaignSubscribersId"></finder-column>
+		</finder>
+
+	</entity>
+	<entity name="SPMailCampaignEDM" table="SPMailCampaignEDM"
+		local-service="true" remote-service="false">
+		<column name="spMailCampaignEDMId" 	type="long"  primary="true" />		
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<column name="name" type="String" />
+		<column name="spMailCampaignId" type="long"/>
+		<column name="spMailTemplateId" type="long"/>
+		<column name="seqNo" type="int" />
+		<column name="dayOfWeek" type="int" />
+		<column name="dayOfMonth" type="int" />
+		<column name="delayUnit" type="String" />
+		<column name="status" type="String" />
+		<column name="delayAmount"  type="int" />
+		<column name="croneType"  type="String" />
+		<column name="nextScheduleDateTime"  type="Date" />
+		
+		<order by="asc">
+			<order-column name="seqNo"></order-column>
+		</order>
+		
+		<finder name="CampaignId" return-type="Collection">
+			<finder-column name="spMailCampaignId"></finder-column>
+		</finder>
+		<finder name="CampaignIdMailType" return-type="SPMailCampaignEDM">
+			<finder-column name="spMailCampaignId"></finder-column>
+			<finder-column name="seqNo"></finder-column>
+		</finder>
+	</entity>
+	<entity name="SPMail" local-service="true" remote-service="false">
+	</entity>
+	
+	<entity name="SPEMailAudit" table="SPEMailAudit" local-service="true"
+		remote-service="false">
+
+		<column name="spEMailAudit" type="long" primary="true" />
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="sentTo" type="String" />
+		<column name="cc" type="String" />
+		<column name="bcc" type="String" />
+
+		<column name="category" type="String" />
+		<column name="subject" type="String" />
+		<column name="content" type="String" />
+		<column name="sentDate" type="Date" />
+		<column name="messasgeId" type="String" />
+		<column name="userId" type="long" />
+		<column name="orgId" type="long" />
+		<column name="processStateId" type="long" />
+		<column name="nodeId" type="long" />
+
+		<finder name="ProcessStateIdAndNodeId" return-type="Collection" db-index="true">
+			<finder-column name="processStateId"></finder-column>
+			<finder-column name="nodeId"></finder-column>
+		</finder>
+		<finder name="ProcessStateIdAndNodeIdAndUserId" return-type="Collection" db-index="true">
+			<finder-column name="processStateId"></finder-column>
+			<finder-column name="nodeId"></finder-column>
+			<finder-column name="userId"></finder-column>
+		</finder>
+				<finder name="ProcessStateIdAndNodeIdAndOrgId" return-type="Collection" db-index="true">
+			<finder-column name="processStateId"></finder-column>
+			<finder-column name="nodeId"></finder-column>
+			<finder-column name="orgId"></finder-column>
+		</finder>
+		<finder name="ProcessStateIdAndNodeIdAndUserIdAndOrgId" return-type="Collection" db-index="true">
+			<finder-column name="processStateId"></finder-column>
+			<finder-column name="nodeId"></finder-column>
+			<finder-column name="userId"></finder-column>
+			<finder-column name="orgId"></finder-column>
+		</finder>
+	</entity>
+	
+	<exceptions>
+		<exception>SPMailCampaignSubscribersFirstName</exception>
+		<exception>SPMailCampaignSubscribersLastName</exception>
+		<exception>SPMailCampaignSubscribersEmail</exception>
+	</exceptions>
+
+</service-builder>

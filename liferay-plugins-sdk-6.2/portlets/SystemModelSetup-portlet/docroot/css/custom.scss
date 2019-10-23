@@ -1,0 +1,573 @@
+$border-color:#dcdcdc;
+$bg-color-none:none;
+$btn-bg-color:#3b8bb6;
+$btn-txt-color:#ffffff;
+$titile-color:#158cb8;
+$btn-bg-color:#158cb8;
+$btn-txt-color:#fff;
+$table-row-border:#e0e0e0;
+$hr-border-color:#eee;
+$link-color:#265ba1;
+$table-header-bg:#f5f7fa;
+$table-header-color:#333333;
+$table-border:1px solid #dfe3e6;
+$font-family:'Work Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600');
+
+.aui 
+	{
+	.text-right{
+		text-align:right;
+	}
+	button{
+		border:0;
+	}
+	div#popoverId img{
+		height:16px;
+	}
+	
+	
+	.control-group
+		{
+		input[type="text"]{
+			background:$bg-color-none;
+		}
+		input[type="password"]{
+			background:$bg-color-none;
+		}
+		input[type="datetime"]{
+			background:$bg-color-none;
+		}
+		input[type="datetime-local"]{
+			background:$bg-color-none;
+		}
+		input[type="date"]{
+			background:$bg-color-none;
+		}
+		input[type="month"]{
+			background:$bg-color-none;
+		}
+		input[type="time"]{
+			background:$bg-color-none;
+		}
+		input[type="week"]{
+			background:$bg-color-none;
+		}
+		input[type="number"]{
+			background:$bg-color-none;
+		}
+		input[type="email"]{
+			background:$bg-color-none;
+		}
+		input[type="url"]{
+			background:$bg-color-none;
+		}
+		input[type="search"]{
+			background:$bg-color-none;
+		}
+		input[type="tel"]{
+			background:$bg-color-none;
+		}
+		input[type="color"]{
+			background:$bg-color-none;
+		}
+	}
+}
+
+.aui {
+	.btn {
+	    background:$btn-bg-color;
+	    color: $btn-txt-color;
+	    border: 0;
+	    padding: 10px 20px;
+	    text-shadow: none;
+	    margin-bottom: 15px;
+	}
+}
+.aui {
+	.container 
+		{
+			h2{
+				margin-bottom:15px;
+				color: $titile-color;
+				font:600 34px  'Work Sans', sans-serif;
+			}
+			label{
+				font:500 13px  'Work Sans', sans-serif;
+			}
+		}
+}
+
+
+/***************************Column Filter Form ****************/
+.aui {
+	
+.dataListing{
+	 font:400 14px 'Work Sans', sans-serif;
+	 position:relative;
+	.search-container{
+		
+		.control-group{
+			margin-bottom:0;
+		}
+		.toggler-content-expanded{
+		.column-list{
+			.control-group{
+				margin-bottom:30px;
+			}
+		}
+	}
+		
+	.search-icon{
+		font-size:20px;
+		font-weight:300;
+		border:0;
+		background:url(../images/search-icon.png) no-repeat;
+		
+	    background-position: 1px 15px;
+	    padding-left: 30px;
+	 &:focus{
+	 	box-shadow:none;
+	 }   
+	}&:before{
+		content:'';
+		
+		
+	}
+	.toggler-content{
+			position:absolute;
+			z-index:99;
+		}
+	.span10{
+		.control-group{
+		    margin-bottom: 0;
+		}
+	}
+	
+		.span4{
+			button{
+				display:inline-block;
+				font:500 14px 'Work Sans', sans-serif;
+				    margin: 14px 13px;
+				float:left;
+				background-color:none;
+				border:0;
+				outline:0;
+			}
+		}
+		.order{
+			background:url(../images/sort.png) no-repeat;
+			width:16px;
+			height:22px;
+			background-position: 0 5px;
+		}
+		.setting{
+			background:url(../images/setting.png) no-repeat;
+			width:24px;
+			height:24px;
+			position:relative;
+			background-position: 1px 6px;
+			margin:0 10px;
+		}
+		.toggler-header-expanded:after{
+			content:'';
+			position:absolute;
+			background:url(../images/top-arrow.jpg) no-repeat;
+			width:22px;
+			height:9px;
+			margin-top: 20px;
+    		left: 0;
+    		z-index:1;
+		}
+		.more{
+			background:url(../images/big.png) no-repeat;
+			width:3px;
+			height: 20px;
+    		background-position: 0 5px;
+    		margin-right:5px;
+		}
+		.addNew{
+		  width: 110px;
+		  border-radius: 3px;
+		  background-color: #0f9f1c;
+		  color:#fff;
+		  margin-top: 6px;
+		  margin-right:40px;
+		}
+	}
+	.search{
+		 width: 150px;
+		  height: 40px;
+		  border-radius: 3px;
+		  background: #0f349f;
+		  color:#fff;
+		  border:0;
+		  font:500 14px 'Work Sans', sans-serif;
+		  margin-right:10px;
+	}
+	
+	.reset{
+		 @extend .search;
+		  background-color: #ededf6;
+		  color:#0f349f;
+		  margin-left:10px;
+		 
+	}
+	.control-label{
+		display:none;
+	}
+	select{
+		  width: 90%;
+		  height: 50px;
+		  border-radius: 3px;
+		  background-color: #ffffff;
+		  border: solid 1px #b1bed7;
+		 
+	}
+	.choose-col{
+	 
+		i{
+			background:url(../images/info.png) no-repeat;
+			width:18px;
+			height:18px;
+			position:absolute;
+			display:block;
+			left: 12px;
+    		top: 12px;
+		}
+		max-width: 545px;
+	    border-radius: 20px;
+	    background-color: #000;
+	    position: relative;
+	    color: #fff;
+	    margin: 25px auto;
+	    font-size: 12px;
+	    box-sizing: border-box;
+	    padding: 0 0 0 20px;
+	}
+	.column-list{
+	 form{
+		max-width:800px;
+		width:100%;
+		margin:auto;
+  	}
+  	.control-label{
+		float:left;
+		width:10%;
+		margin-top:17px;
+		display:block;
+	}
+	  	background-image: linear-gradient(to top, #ffffff, #f3f5fa);
+	  	padding:50px 0;
+	  	border-top:1px solid #dbdeee;
+	  	box-shadow:inset 0 12px 20px 0 rgba(37,38,94,0.07);
+	}
+	.data-lising{
+		
+		table{
+			width:100%;
+			 box-shadow: 0 0 15px 0 #e1e6eb;
+			td{
+				font-size: 14px;
+    			padding: 10px 15px;
+    			background:#fff;
+    			color:#333;
+			}
+			
+		}
+		
+		overflow:auto;
+		padding: 30px 40px;
+		background:#F7F9FC;
+  		border-top:1px solid #dbdeee;
+  	 	box-shadow:inset 0 5px 25px 0 rgba(37,38,94,0.04);
+		
+	}
+	.pagination{
+		background-color:#f1f4fc;
+		padding:14px 20px 5px 10px; 
+		width:100%;
+		margin:0;
+		.pagination.pagination-large{
+			padding:0; 
+			margin:0;
+		}
+		ul{
+			box-shadow:none;
+			li{
+				display:inline-block;
+			
+			a
+			{
+				color:#59647b;
+				padding:4px 10px;
+				background:none;
+				border:0;
+				font:400 14px 'Work Sans', sans-serif;
+			}
+			a.active{
+				 width: 24px;
+				 height: 24px;
+				 border-radius: 2px;
+				 background-color: #0f349f;
+				 color:#fff;
+			}
+			.first{
+				background:url(../images/first.png) no-repeat;
+				width:12px;
+				height:12px;
+				height: 20px;
+    			background-position: 0 3px;
+			}
+			.last{
+				background:url(../images/last.png) no-repeat;
+				background-position: 0 3px;
+				@extend .first;
+			}
+			.prev{
+				background:url(../images/prev.png) no-repeat;
+				width:8px;
+				height:12px;
+				height: 17px;
+    			background-position: 0 1px;
+			}
+			.next{
+				background:url(../images/next.png) no-repeat;
+				@extend .prev;
+				background-position: 0 1px;
+			}
+}
+		}
+		.control-label{
+			float:left;
+			display:block;
+			margin-right:20px;
+			margin-bottom:0;
+		}
+		select{
+			float:left;
+			width:10%;
+			border:0;
+			background:none;
+			height:18px;
+			padding:0;
+			margin-right:20px;
+			color:#3d70b2;
+		}
+		.control-group{margin-bottom:0;margin-right:20px;}
+		span{
+			border-left: 1.5px solid #59647b;
+    		padding-left: 10px;
+    		top: 5px;
+		    position: relative;
+
+		}	
+	}
+}
+
+/*******Tax Code*********/
+.portlet-column {
+	width:100% !important;
+	.view-template{
+			display:block;
+			margin:15px 20px;
+		}
+}
+.formContainer{
+	.table{ 
+			td{
+				background-color:transparent;
+				border:0;
+				padding:10px 0;
+				&:first-child{
+					padding-right:20px;
+				}
+			}
+		}
+		.formio-component-textfield{
+			.form-control{
+				height:50px;
+				border:1px solid #b1bed7;
+				background:#f9fafc;
+				padding:10px 15px;
+				
+			}
+		}
+		.formio-component-number{
+			.form-control{
+				height:50px;
+				border:1px solid #b1bed7;
+				background:#f9fafc;
+				padding:10px 15px;
+				
+			}
+		}
+		.formio-component-textarea{
+			.form-control{
+				height:100px;
+				padding:10px 15px;
+				border:1px solid #b1bed7;
+				background:#f9fafc;
+				 border-radius: 3px;
+				 
+			}
+		}
+		.formio-choices {
+			.form-control{
+				
+					height:50px;
+					border:1px solid #b1bed7;
+					background:#fff;
+					padding:10px 15px;
+					border-radius:3px;
+					box-shadow:none;
+			
+			}
+		}
+		.formio-component-datetime{
+			.form-control{
+			height:50px;
+					border:1px solid #b1bed7;
+					background:#f9fafc;
+					padding:10px 15px;
+					border-radius:3px;
+					box-shadow:none;
+		}
+		.input-group-addon{
+			background-color:transparent;
+			border:0;
+		}
+		.glyphicon.glyphicon-calendar{
+			background:url(../images/calendar.png) no-repeat;
+			width:16px;
+			height:18px;
+			right: 15px;
+		    top: 35px;
+		    position: absolute;
+		}
+		.glyphicon-calendar:before{
+			content:'';
+		}
+	}
+	.btn{
+		 
+		 
+		  width: 130px;
+		  height: 40px;
+		  border-radius: 3px;
+		  font-weight:700;
+		  color:#0f349f;
+		  text-transform:uppercase;
+		  &:focus{
+		  	outline: 0;
+    		outline-offset: 0;
+		  	
+		  }
+		   &:active{
+		  		outline: 0;
+		  		box-shadow:none;
+		  }
+	} 
+	.btn-default{
+		 background:#eff4fb !important;
+		 color:#0f349f;
+		 &:focus{
+		  	outline: 0;
+    		outline-offset: 0;
+		  	
+		  }
+		  &:hover{
+		  	background:#E2EEFF !important;
+		  }
+	}
+	.btn-primary{
+		@extend .btn;
+		background:#0f349f;
+		color:#fff;
+		&:hover{
+			background:#2F4FAE;
+			border-color:#2F4FAE;
+		}
+	}
+	.btn-warning{
+		 width: 150px;
+		  height: 40px;
+		  border-radius: 3px;
+		  background-color: #eff4fb;
+		  color:#0f349f;
+		  font-weight:700;
+	}
+	.input-group {
+		.form-check{
+			display:inline-block;
+			padding-left:0;
+			label{
+				padding-left:0;
+				margin-right:20px;
+				margin-bottom:10px;
+				input[type="radio"]{
+					opacity:0;
+				}
+				input[type="radio"]:checked + span
+				{
+					background:url(../images/selected.png) no-repeat;
+					padding-left: 25px;
+    				padding-bottom: 10px;
+				}
+				input[type="radio"] + span
+				{
+					background:url(../images/un-selected.png) no-repeat;
+					padding-left: 25px;
+    				padding-bottom: 10px;
+				}
+			}
+		}
+	}
+	}
+	
+	/*******************End**********************/
+	/*************common style*******************/
+	
+	
+	
+	
+	
+	/*************End common style*******************/
+	/*****************No data listing***********************/
+	.nodates {
+				padding:127px 0;
+				background:#f7f9fc;
+				box-shadow: 0 0 30px 0 #e1e6eb;
+
+				h3{
+					position:relative;
+					padding-top:157px;
+				&:before{
+						position:absolute;
+						top:0;
+						content:'';
+						background:url(../images/nodatesImg.png) no-repeat;
+						width:147px;
+						height:147px;
+						left: 0;
+					    right: 0;
+					    margin: auto;
+					}
+				}
+	}
+	#threedot{
+		text-align:right;
+		li{
+			text-align:left;
+		}
+	}
+	.Heading th:last-child{
+		text-align:right;
+	}
+	/*****************End No data listing***********************/
+	
+	
+}
+
+
+	

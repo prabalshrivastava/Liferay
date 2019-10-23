@@ -1,0 +1,849 @@
+/** profile_form_navigation -- additional text **/
+/** sp_custom.scss **/
+/** main wrapper bg color -- declared as variable in sp_custom.scss **/
+/** main navigation list bg & on hover color **/
+/** signed in menu list on hover bg color & aui-dialog - header bg color **/
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** profile_form_navigation -- additional text **/
+/** sp_custom.scss **/
+/** main wrapper bg color -- declared as variable in sp_custom.scss **/
+/** main navigation list bg & on hover color **/
+/** signed in menu list on hover bg color & aui-dialog - header bg color **/
+/** footer bg color, spchallenges .navBar **/
+/** signed-in menu li hover bg **/
+/** signed-in menu li a text color  **/
+/** signed-in menu li a action icons border color **/
+/** signed-in menu li ul bg color, form group field border, form_section_content - bg & border, profileimagewrapper- bg **/
+/** register buton text color **/
+/** .section_box - border **/
+/** video bg **/
+/** page status bg color in gradient - along with #e0e0e0 **/
+/** .innerPage_header **/
+/** .innerPage_header - gratient bg **/
+/** .innerPage_header - gratient bg **/
+/** .form-title **/
+/** form validator error color **/
+/** input field border **/
+/** input, textarea border bottom **/
+/** select field text color **/
+/** .pi-or-hr text color , .pi-drop-text text color **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** .bulleted-square-title - title **/
+/** adminCtrls a bg color**/
+/** .emphaTxt text color**/
+/** documnet library **/
+/** .document-library-breadcrumb **/
+/** .aui-paginator-container **/
+/** .lfr-discussion-message **/
+/** sp_events **/
+/** .event-maindiv-title bg **/
+/** .event-maindiv,.event-detail-table1 **/
+/** .event-maindiv - border **/
+/** a.urlLink:hover **/
+/** .event-detail-rightRow1 **/
+/** sp_feeds **/
+/** .sp-af-comment-entry-container li border **/
+/** .sp-feeds-activity-filter li bg**/
+/** .sp-feeds-activity-filter li border**/
+/** .sp-feeds-tabs b **/
+/** sp_filter **/
+/** figure, .result_item_image bg gradient**/
+/** figure, .result_item_image bg gradient**/
+/** .result_item_title **/
+/** .result_item_desc **/
+/** .sp_filter  /.profile_form_navigation - bg**/
+/** sp_gallery **/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - bg**/
+/** #spAssetDetailViewListDiv / .yt-uix-slider-prev - border **/
+/** .menu-steps a - text color  **/
+/** sp_user-profile **/
+/** button border **/
+/** sp_groups **/
+/** .sp-group-member **/
+/** .sp-group-nav li text color **/
+/** .ip-si-x text color**/
+/** &.mobileSignOut **/
+/** inbox.css **/
+/** #mailsTable tr border **/
+/** &.msgUnread bg color **/
+/** .sp-login-new-user border **/
+/** sp_mobile **/
+/** .dl-menu-sub-title - bg **/
+/** .dl-menu-sub-title - text color **/
+/** .menu_back_btn **/
+/** footer box - text color **/
+/** startup profile mobile **/
+/** navigation .mobileNavSelect **/
+/** startup profile **/
+/** .avatar_container border **/
+/** .avatar_cta input border **/
+/** .avatar_cta input bg **/
+/** separatot line **/
+/** .avatar_cta cancel button  bg **/
+/** .avatar_cta cancel button  border **/
+/** section.profile_content / .profile_forms_wrap - bg**/
+/** .tab_helpText - bg**/
+/**  .icon_helpText - border **/
+/**  .icon_helpText - text color **/
+/** .title_helpText - text color **/
+/** drag drop .fd_container - border**/
+/** .col_section_item{ -border **/
+/** #toggler a-active bg & text color **/
+/** user profile **/
+/** profile header border **/
+/** profile header border **/
+/** input field text colot**/
+/** .callout-counter -gradient bg **/
+/** .callout-counter -gradient bg **/
+/** forms input bg **/
+/**  forms input text color**/
+/** table striped bg **/
+/** table header bg **/
+/** alert success bg **/
+/** alert success text color **/
+/** alert failed bg **/
+/** alert failed text color **/
+/** alert update bg **/
+/** alert failed text color **/
+/** #spblogs-stream-list ul li border **/
+/** ip-sb-options bg **/
+/** .header-circle  border **/
+/** .innerPage_header_social_cta bradient bg **/
+/** .main-header bg **/
+/** .aui .dshHeadWrap .dsh_greeting **/
+/** .main-navigation ul li hover border **/
+/** startup_list{ **/
+/** .closePop **/
+/** .aui-dialog box-shadow **/
+/** .portlet-content box-shadow **/
+/** #spblogs-stream-list ul li border **/
+/** input focus & hover **/
+/** .aui-field-input-text - bg **/
+/** .sp-af-comment-entry-container **/
+/** .sp-activity-like-comment-stat **/
+/** **/
+/** .ip-sb{ hover **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/** **/
+/*startupprofile*/
+/** SP Mixins **/
+/** Mobile **/
+.dl-back {
+  display: none; }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .dl-back {
+    display: block; }
+
+  #column-1,
+  #column-2,
+  #column-3 {
+    width: 100%;
+    padding: 20px; }
+
+  .portlet-column-only {
+    padding: 0 !important; }
+
+  html.aui .mobile_header_cta {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    position: absolute;
+    right: 0;
+    padding: 10px 0;
+    padding-right: 36px; }
+
+  html.aui .dockbar-ready #wrapper {
+    margin-top: 62px; }
+
+  html.aui .otherBasicInfo,
+  html.aui .nameBasicInfo {
+    display: inline-block;
+    float: none;
+    width: 100%;
+    margin-top: 0px;
+    border-right: 0px; }
+
+  html.aui .companyLogo2 a img.ul_gray {
+    display: none; }
+
+  html.aui .companyLogo2 a img.ul_white {
+    display: block; }
+
+  html.aui .dl-menu .avaDetails {
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid #333333; }
+
+  html.aui .dl-menu .avaDetails img {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    -webkit-clip-path: circle(20px at center);
+    -ms-clip-path: circle(20px at center);
+    -moz-clip-path: circle(20px at center);
+    -o-clip-path: circle(20px at center);
+    clip-path: circle(20px at center);
+    vertical-align: middle;
+    width: 40px;
+    height: 40px; }
+
+  html.aui .dl-menu .avaDetails span.avaName {
+    display: block;
+    margin: 5px;
+    color: #ffffff;
+    font-size: 10pt;
+    line-height: 12pt; }
+
+  html.aui .dl-menu .avaDetails span.mobileSignOut {
+    display: block;
+    margin: 5px; }
+
+  html.aui .dl-menu .avaDetails span.mobileSignOut a {
+    color: #FDA1A1;
+    font-size: 9pt;
+    line-height: 9pt; }
+
+  html.aui .dl-menu ul li a:hover {
+    background: #005EB8; }
+
+  html.aui .main-footer {
+    display: block !important; }
+
+  html.aui .main-footer .footer-content-wrap {
+    padding: 20px 0;
+    background-color: #e0e0e0 !important;
+    background-image: none;
+    max-height: 100%; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-left {
+    width: 50%; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-left .footer-nav-vertical {
+    text-align: left;
+    padding-left: 20px; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-left .footer-nav-vertical ul li {
+    margin: 8px 0 !important; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-middle {
+    width: 50%;
+    padding: 0;
+    padding-left: 0;
+    padding-right: 20px;
+    text-align: right; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-middle .footer-nav-horizontal ul {
+    padding-bottom: 10px; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-middle .footer-nav-horizontal ul li a {
+    font-size: 7pt; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-right {
+    display: none; }
+
+  html.aui .portlet-document-library .document-container {
+    text-align: center; }
+
+  html.aui .app-view-entry-taglib.entry-display-style.display-icon {
+    height: 230px;
+    float: none;
+    width: 45%; }
+
+  html.aui .app-view-entry-taglib.entry-display-style.display-icon .folder-action a {
+    width: 100%; }
+
+  html.aui .app-view-entry-taglib.entry-display-style.display-icon .entry-action.overlay {
+    right: 0;
+    left: 0; }
+
+  html.aui #wrapper {
+    margin-top: 62px; } }
+@media screen and (min-width: 768px) and (max-width: 1100px) and (orientation: landscape) {
+  html.aui .mobile_header_cta {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    position: absolute;
+    right: 0;
+    padding: 10px 0;
+    padding-right: 60px; } }
+@media screen and (min-width: 768px) and (max-width: 1100px) and (orientation: portrait) {
+  html.aui .mobile_header_cta {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    position: absolute;
+    right: 0;
+    padding: 10px 0;
+    padding-right: 60px; }
+
+  html.aui #column-1,
+  html.aui #column-2,
+  html.aui #column-3 {
+    width: 100%;
+    padding: 20px; }
+
+  html.aui .portlet-column-only {
+    padding: 0 !important; }
+
+  html.aui .companyLogo2 a img.ul_gray {
+    display: none; }
+
+  html.aui .companyLogo2 a img.ul_white {
+    display: block; }
+
+  html.aui .otherBasicInfo,
+  html.aui .nameBasicInfo {
+    display: inline-block;
+    float: none;
+    width: 100%;
+    margin-top: 0px;
+    border-right: 0px; }
+
+  html.aui .dl-menu .avaDetails {
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid #333333; }
+
+  html.aui .dl-menu .avaDetails img {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    -webkit-clip-path: circle(20px at center);
+    -ms-clip-path: circle(20px at center);
+    -moz-clip-path: circle(20px at center);
+    -o-clip-path: circle(20px at center);
+    clip-path: circle(20px at center);
+    vertical-align: middle;
+    width: 40px;
+    height: 40px; }
+
+  html.aui .dl-menu .avaDetails span.avaName {
+    display: block;
+    margin: 5px;
+    color: #ffffff;
+    font-size: 10pt;
+    line-height: 12pt; }
+
+  html.aui .dl-menu .avaDetails span.mobileSignOut {
+    display: block;
+    margin: 5px; }
+
+  html.aui .dl-menu .avaDetails span.mobileSignOut a {
+    color: #FDA1A1;
+    font-size: 9pt;
+    line-height: 9pt; }
+
+  html.aui .dl-menu ul li a:hover {
+    background: #005EB8; }
+
+  html.aui .main-footer {
+    display: block !important; }
+
+  html.aui .main-footer .footer-content-wrap {
+    padding: 20px 0;
+    background-color: #e0e0e0 !important;
+    background-image: none;
+    max-height: 100%; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-left {
+    width: 50%; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-left .footer-nav-vertical {
+    text-align: left;
+    padding-left: 20px; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-left .footer-nav-vertical ul li {
+    margin: 8px 0 !important; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-middle {
+    width: 50%;
+    padding: 0;
+    padding-left: 0;
+    padding-right: 20px;
+    text-align: right; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-middle .footer-nav-horizontal ul {
+    padding-bottom: 10px; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-middle .footer-nav-horizontal ul li a {
+    font-size: 7pt; }
+
+  html.aui .main-footer .footer-content-wrap .footer-content .footer-right {
+    display: none; }
+
+  html.aui .portlet-document-library .document-container {
+    text-align: center; }
+
+  html.aui .app-view-entry-taglib.entry-display-style.display-icon {
+    height: 230px;
+    float: none;
+    width: 45%; }
+
+  html.aui .app-view-entry-taglib.entry-display-style.display-icon .folder-action a {
+    width: 100%; }
+
+  html.aui .app-view-entry-taglib.entry-display-style.display-icon .entry-action.overlay {
+    right: 0;
+    left: 0; }
+
+  html.aui #wrapper {
+    margin-top: 62px; } }
+.aui nav.mobile-menu,
+.mobile-menu {
+  display: none; }
+
+.aui nav.mobile-menu.active,
+.mobile-menu.active {
+  left: 0; }
+
+.aui nav.mobile-menu.active .mobile-menu-head,
+.mobile-menu.active .mobile-menu-head {
+  left: 0;
+  background: #0e0e9a; }
+
+.aui nav.mobile-menu.active .mobile-menu-icon-hamburger span,
+.mobile-menu.active .mobile-menu-icon-hamburger span {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.aui nav.mobile-menu.active .mobile-menu-icon-hamburger span::before, .aui nav.mobile-menu.active .mobile-menu-icon-hamburger span::after,
+.mobile-menu.active .mobile-menu-icon-hamburger span::before,
+.mobile-menu.active .mobile-menu-icon-hamburger span::after {
+  margin-left: 12px;
+  width: 60%; }
+
+.aui nav.mobile-menu.active .mobile-menu-icon-hamburger span::before,
+.mobile-menu.active .mobile-menu-icon-hamburger span::before {
+  transform: rotate(45deg);
+  top: -6px; }
+
+.aui nav.mobile-menu.active .mobile-menu-icon-hamburger span::after,
+.mobile-menu.active .mobile-menu-icon-hamburger span::after {
+  transform: rotate(-45deg);
+  bottom: -6px; }
+
+.aui button.mobile-menu-icon-hamburger {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 63px !important;
+  height: 63px !important;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  background: transparent; }
+
+.aui button.mobile-menu-icon-hamburger:focus {
+  outline: none; }
+
+.aui button.mobile-menu-icon-hamburger span {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 18px;
+  right: 18px;
+  height: 4px;
+  background: #ffffff; }
+
+.aui button.mobile-menu-icon-hamburger span::before, .aui button.mobile-menu-icon-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+  content: "";
+  -webkit-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.3s;
+  -ms-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.3s;
+  -moz-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.3s;
+  -o-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.3s;
+  transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.3s; }
+
+.aui button.mobile-menu-icon-hamburger span::after {
+  bottom: -8px; }
+
+.aui button.mobile-menu-icon-hamburger span::before {
+  top: -8px; }
+
+.aui .dockbar-ready .mobile-navigation-button {
+  margin-right: 0; }
+
+.aui .main-header-mobile {
+  display: none;
+  background: #005EB8;
+  text-align: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  z-index: 5000;
+  -webkit-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.7s;
+  -ms-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.7s;
+  -moz-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.7s;
+  -o-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.7s;
+  transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.7s; }
+
+.aui .main-header-mobile * {
+  -webkit-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.7s;
+  -ms-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.7s;
+  -moz-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.7s;
+  -o-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.7s;
+  transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.7s; }
+
+.aui .main-header-mobile .mobile-header-logo {
+  display: inline-block;
+  width: 62px;
+  height: 62px;
+  padding: 5px;
+  margin-left: 5px;
+  vertical-align: middle; }
+
+.aui .main-header-mobile .mobile-header-logo img {
+  display: block;
+  width: 100%; }
+
+.aui .main-header-mobile .mobile-navigation {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.aui .main-header-mobile .mobile-navigation nav {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  margin-top: 62px;
+  background-color: #333333;
+  overflow-y: scroll;
+  width: 150px;
+  height: 90vh; }
+
+.aui .main-header-mobile .mobile-navigation nav ul {
+  text-align: left;
+  text-transform: uppercase; }
+
+.aui .main-header-mobile .mobile-navigation nav ul li {
+  display: block; }
+
+.aui .main-header-mobile .mobile-navigation nav ul li a {
+  padding: 10px;
+  display: block;
+  line-height: 10pt;
+  font-size: 10pt; }
+
+.aui .main-header-mobile .mobile-navigation nav ul li a span {
+  color: #ffffff; }
+
+.aui .main-header-mobile .mobile-navigation nav ul ul {
+  display: none; }
+
+.aui .main-header-mobile .mobile-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px; }
+
+.aui .main-header-mobile.active {
+  left: 0; }
+
+.aui .main-header-mobile.active .mobile-menu-head {
+  left: 0;
+  background: #0e0e9a; }
+
+.aui .main-header-mobile.active .mobile-menu-icon-hamburger span {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background: transparent; }
+
+.aui .main-header-mobile.active .mobile-menu-icon-hamburger span::before, .aui .main-header-mobile.active .mobile-menu-icon-hamburger span::after {
+  margin-left: 0;
+  width: 100%; }
+
+.aui .main-header-mobile.active .mobile-menu-icon-hamburger span::before {
+  transform: rotate(45deg);
+  top: 0; }
+
+.aui .main-header-mobile.active .mobile-menu-icon-hamburger span::after {
+  transform: rotate(-45deg);
+  bottom: 0; }
+
+.aui .main-header-mobile.active .mobile-navigation nav {
+  right: 0; }
+
+@media screen and (min-width: 320px) and (max-width: 1100px) {
+  .aui .main-header {
+    display: none !important; }
+
+  .aui .otherBasicInfo,
+  .aui .nameBasicInfo {
+    display: inline-block;
+    float: none;
+    width: 100%;
+    margin-top: 0px;
+    border-right: 0px; }
+
+  .aui .main-header-mobile {
+    display: block;
+    z-index: 3000;
+    height: 62px; }
+
+  .aui .main-header-mobile .aui nav.mobile-menu,
+  .aui .main-header-mobile .mobile-menu {
+    display: block; }
+
+  .aui .main-footer {
+    display: block; }
+
+  .aui body {
+    padding: 0; }
+
+  .aui .portlet-dockbar {
+    left: auto;
+    width: auto; }
+
+  .aui .portlet-dockbar .navbar-inner {
+    padding: 0; }
+
+  .aui .portlet-dockbar .navbar-inner #_145_navSiteNavigationNavbarBtn {
+    display: none; } }
+.dl-menu-sub-title {
+  padding: 10px 15px;
+  background: #141414;
+  color: #525252;
+  font-size: 10pt;
+  text-align: center; }
+
+.dl-menuwrapper li .dl-submenu {
+  display: none !important; }
+
+.dl-menu.dl-subview li,
+.dl-menu.dl-subview li.dl-subviewopen > a,
+.dl-menu.dl-subview li.dl-subview > a {
+  display: none !important; }
+
+.dl-menu.dl-subview li.dl-subview,
+.dl-menu.dl-subview li.dl-subview .dl-submenu,
+.dl-menu.dl-subview li.dl-subviewopen,
+.dl-menu.dl-subview li.dl-subviewopen > .dl-submenu,
+.dl-menu.dl-subview li.dl-subviewopen > .dl-submenu > li {
+  display: block !important; }
+
+/* Dynamically added submenu outside of the menu context */
+.dl-menuwrapper > .dl-submenu {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  left: 0;
+  margin: 0; }
+
+.dl-menuwrapper li.dl-back > a {
+  padding-left: 30px;
+  background: rgba(0, 0, 0, 0.1); }
+
+.dl-menuwrapper li > a:not(:only-child):after {
+  position: relative;
+  top: 0;
+  color: #ffffff;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  content: ">";
+  min-width: 10px;
+  vertical-align: middle; }
+
+.dl-menuwrapper li.dl-back:after {
+  left: 10px;
+  color: rgba(212, 204, 198, 0.3);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.dl-menuwrapper li > a:after {
+  padding-left: 5px;
+  color: rgba(0, 0, 0, 0.15); }
+
+.dl-back {
+  background: #333333;
+  text-align: left; }
+
+.menu_back_btn {
+  color: #292929; }
+
+.menu_back_btn img {
+  margin-left: 5px;
+  vertical-align: middle;
+  width: 20px; }
+
+.menu_back_btn:after {
+  content: ""; }
+
+.dl-menu a {
+  font-size: 11.25pt;
+  font-weight: 400;
+  color: #ffffff; }
+
+.menu-icon-container {
+  line-height: 0;
+  text-align: right; }
+
+/*# sourceMappingURL=sp_mobile.css.map */
+

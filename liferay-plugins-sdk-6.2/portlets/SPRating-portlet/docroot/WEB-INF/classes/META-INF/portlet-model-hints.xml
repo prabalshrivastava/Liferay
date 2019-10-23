@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.sprating.model.AttrRate">
+		<field name="uuid" type="String" />
+		<field name="spAttrRateId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="objId" type="String" />
+		<field name="classNameId" type="long" />
+		<field name="ratingAttrId" type="long" />
+		<field name="value" type="double" />
+	</model>
+	<model name="com.sambaash.platform.srv.sprating.model.RatingAttr">
+		<field name="uuid" type="String" />
+		<field name="spRatingAttrId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ratingComponentId" type="long" />
+		<field name="name" type="String" />
+		<field name="weight" type="double" />
+		<field name="visible" type="boolean" />
+	</model>
+	<model name="com.sambaash.platform.srv.sprating.model.RatingComponent">
+		<field name="uuid" type="String" />
+		<field name="spRatingComponentId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="classNameId" type="long" />
+	</model>
+</model-hints>

@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	<portlet>
+		<portlet-name>SPProcessEngine</portlet-name>
+		<display-name>Process Engine</display-name>
+		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Process Engine</title>
+			<short-title>Process Engine</short-title>
+			<keywords/>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>pe-process-register-action</portlet-name>
+		<display-name>Process Register Action</display-name>
+		<portlet-class>com.sambaash.platform.portlet.pe.action.RegisterProcessAction</portlet-class>
+		<init-param>
+			<name>add-process-action-success-action</name>
+			<value>false</value>
+		</init-param>
+		<init-param>
+			<name>config-template</name>
+			<value>/html/register/config.jsp</value>
+		</init-param>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/process.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>Process Register Action</title>
+			<short-title>Process Register Action</short-title>
+			<keywords/>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>rules-repository</portlet-name>
+		<display-name>Process Engine Rules Repository</display-name>
+		<portlet-class>com.sambaash.platform.portlet.pe.action.RulesRepositoryAction</portlet-class>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/rulesrepo/edit.jsp</value>
+		</init-param>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/rulesrepo/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>PRocess Engine Rules Repository</title>
+			<short-title>PRocess Engine Rules Repository</short-title>
+			<keywords/>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>forms-repository</portlet-name>
+		<display-name>Process Engine Forms Repository</display-name>
+		<portlet-class>com.sambaash.platform.portlet.pe.action.FormsRepositoryAction</portlet-class>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/forms/edit.jsp</value>
+		</init-param>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/forms/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>PRocess Engine Forms Repository</title>
+			<short-title>PRocess Engine Forms Repository</short-title>
+			<keywords/>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>process-state-listing</portlet-name>
+		<display-name>Process State Listing</display-name>
+		<portlet-class>com.sambaash.platform.portlet.pe.action.ProcessStateAction</portlet-class>
+		<init-param>
+			<name>add-process-action-success-action</name>
+			<value>false</value>
+		</init-param>
+		<init-param>
+			<name>config-template</name>
+			<value>/html/processstate/config.jsp</value>
+		</init-param>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/processstate/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>Process State Listing</title>
+			<short-title>Process State Listing</short-title>
+			<keywords/>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>process-builder-action</portlet-name>
+		<display-name>Process Builder</display-name>
+		<portlet-class>com.sambaash.platform.portlet.pe.action.ProcessBuilderAction</portlet-class>
+		<init-param>
+			<name>config-template</name>
+			<value>/html/pb/config.jsp</value>
+		</init-param>
+		<init-param>
+			<name>view-template</name>
+
+			<!-- <value>/html/pb/designwizard.jsp</value> -->
+
+			<value>/html/pb/process-builder.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Process Builder Action</title>
+			<short-title>Process Builder Action</short-title>
+			<keywords/>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>pe-data-patching</portlet-name>
+		<display-name>Process Engine Data Patching</display-name>
+		<portlet-class>
+			com.sambaash.platform.portlet.pe.datapatching.PEDataPatching
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/datapatching/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Process Engine Data Patching</title>
+			<short-title>Pe Data Patching</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>pe-guest-page</portlet-name>
+		<display-name>Pe Guest Page</display-name>
+		<portlet-class>
+			com.sambaash.platform.portlet.pe.action.PEGuestPageAction
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/guestpages/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Pe Guest Page</title>
+			<short-title>Pe Guest Page</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>pe dummy entity</portlet-name>
+		<display-name>Pe Dummy Entity</display-name>
+		<portlet-class>
+			com.sambaash.platform.portlet.pe.action.PEDEAction
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/dummyEntity/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Pe Dummy Entity</title>
+			<short-title>Pe Dummy Entity</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+</portlet-app>

@@ -1,0 +1,199 @@
+#togglerSortColumn .toggler-content-wrapper {
+	overflow: inherit;
+}
+
+#togglerSortColumn ul li {
+	display: inline-block;
+	float: left;
+	margin: 0 5px;
+}
+#togglerSortColumn ul {
+	float: right;
+}
+
+#togglerSortColumn .toggler-content-wrapper {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+
+#togglerSortColumn .content.toggler-content {
+	background-image: linear-gradient(to top, #fff, #f3f5fa);
+	padding: 0 !important;
+	border-top: 1px solid #dbdeee;
+	box-shadow: inset 0 12px 20px 0 rgba(37, 38, 94, 0.07);
+	left: 0;
+	width: 100%;
+	text-align: center;
+	top: 52px;
+}
+
+#loadingDiv {
+	width: 100%;
+	height: 100%;
+	background: #b8b9bf40;
+	position: fixed;
+	z-index: 999999 !important;
+	top: 0;
+	display: none
+}
+
+.m-blockui {
+	border-radius: 4px;
+	display: table;
+	table-layout: fixed;
+}
+
+.m-blockui>span {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 8px 15px;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.m-blockui>span>.m-loader, .m-blockui>span>.m-spinner {
+	margin-right: 10px;
+}
+
+.m-blockui {
+	background: #ffffff;
+	-webkit-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+	box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+}
+
+.m-blockui.m-blockui-no-shadow {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.m-blockui>span {
+	color: #6f727d;
+}
+
+.m-blockui.m-blockui--skin-dark {
+	background: #2c2e3e;
+	-webkit-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.5);
+	box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.5);
+}
+
+.m-blockui.m-blockui--skin-dark.m-blockui-no-shadow {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.m-blockui.m-blockui--skin-dark>span {
+	color: #9093ac;
+}
+
+.m-loader.m-loader--brand:before {
+	border-top-color: #716aca;
+	margin-left: 34px;
+}
+
+.m-loader:before {
+	width: 1.4rem;
+	height: 1.4rem;
+	margin-top: -0.7rem;
+	margin-left: -0.7rem;
+	border-top-width: 2px !important;
+	border-right-width: 2px !important;
+}
+
+.m-loader:before {
+	content: '';
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-top: 2px solid #07d;
+	border-right: 2px solid transparent;
+	border-radius: 50%;
+	-webkit-animation: m-loader-rotate 0.6s linear infinite;
+	animation: spin 800ms linear infinite !important
+}
+
+.payment-icon {
+  width: 11px;
+  height: 11px;
+  object-fit: contain;
+}
+
+.mass-process-popup-cancel-action {
+    margin: 20px 0 0 10px!important;
+    padding: 8px 12px!important;
+    width: 150px!important;
+    border-radius: 3px!important;
+    font-weight: bold!important;
+}
+.mass-process-popup-submit-action {
+    margin: 20px 10px 0 0!important;
+    padding: 8px 12px!important;
+    height: auto!important;
+}
+
+#mass-process-action-dialog-box .PROCESS-PAYMENT {
+    width: 100%;
+    height: 15px;
+    font-family: WorkSans !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.07 !important;
+    letter-spacing: normal;
+    color: #333333 !important;
+}
+
+#mass-process-action-dialog-box .control-label {
+  height: 18px;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: #59647b !important;
+}
+#mass-process-action-dialog-box .aui label {
+    height: 18px;
+    font-family: WorkSans;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: #59647b;
+    padding-left: 15px;
+}
+#mass-process-action-dialog-box .input-error{
+	border:1px solid #c00 !important;
+}
+
+#mass-process-action-dialog{
+	bottom: 0;
+    position: fixed;
+    top: auto !important;
+}
+#mass-process-action-dialog .formContainer {
+	margin-top: 38px;
+}
+#mass-process-action-dialog .formContainer .control-label {
+	font-size: 13px;
+    color: #59647b;
+    font-weight: 500;
+    padding-left: 14px;
+}
+#mass-process-action-dialog .PROCESS-PAYMENT {
+	font-size: 16px !important;
+    font-family: "Work Sans" !important;
+    padding-top: 13px;
+    border-bottom: none !important
+}
+#mass-process-action-dialog .modal-header {
+	height: 60px;
+    border-bottom: solid 2px #b1bed7;
+}

@@ -1,0 +1,35 @@
+@import "sp_custom_variables";
+@import "sp_mixins";
+@import "sp_media-queries";
+
+.portlet-login .sp-social-login-wrap .sp-social-login-content .sp-social-login-section-left {
+    background-color: $white;
+    text-align: left;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top: 1px solid $themeColor;
+    border-left: 1px solid $themeColor;
+    border-right: 1px solid $themeColor;
+}
+
+.portlet-login .sp-social-login-wrap .sp-social-login-content .sp-social-login-section-right {
+    background-color: $light-gray;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 1px solid $themeColor;
+}
+
+.portlet-login .navigation {
+    background: $white;
+    border-top: 1px solid $themeColor;
+}
+
+.portlet-login .sp-social-login-wrap .sp-social-login-content .sp-social-login-section-left .sl-login-wrap .sl-login-content .sl-login-title {
+    font-size: 21pt;
+}
+
+@include screen(320px, 767px) {
+	.portlet-login .sp-social-login-wrap .sp-social-login-content .sp-social-login-section-left {
+		border:none;
+	}	
+}

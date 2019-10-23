@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.spasset.model.SPAssetEntry" />
+	<import class="com.sambaash.platform.srv.spasset.model.SPAssetType" />
+	<class name="com.sambaash.platform.srv.spasset.model.impl.SPAssetEntryImpl" table="SPAssetEntry">
+		<cache usage="read-write" />
+		<id name="spAssetEntryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid_" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="dlFolderId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="coverFileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spAssetTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spAssetEntrySubType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="corporateProfileUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="classNameId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="urlTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="link" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="statusByUserName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="type" type="com.liferay.portal.dao.orm.hibernate.StringType" column="type_" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="allowPingbacks" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="allowTrackbacks" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="trackbacks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="permissionType" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="agreedToTermsOfUse" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.sambaash.platform.srv.spasset.model.impl.SPAssetTypeImpl" table="SPAssetType">
+		<cache usage="read-write" />
+		<id name="spAssetTypeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid_" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spAssetTypeName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="spAssetTypeCreateUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="spAssetTypeDetailUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="spAssetTypeInnerDetailUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="requiredTermsOfUse" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="requiredLogin" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="categoryMandatory" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="notifyUponCreation" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="notificationTemplateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="allowedFileTypes" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="maxFileSize" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="minImageHeight" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="minImageWidth" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+</hibernate-mapping>

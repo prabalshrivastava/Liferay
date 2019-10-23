@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.spsocialsharing.model.SPSocialSharing">
+		<field name="uuid" type="String" />
+		<field name="spSocialSharingId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="classNameId" type="long" />
+		<field name="classPK" type="long" />
+		<field name="facebook" type="int" />
+		<field name="twitter" type="int" />
+		<field name="linkedin" type="int" />
+		<field name="yahoo" type="int" />
+		<field name="google" type="int" />
+		<field name="facebookPage" type="int" />
+	</model>
+</model-hints>

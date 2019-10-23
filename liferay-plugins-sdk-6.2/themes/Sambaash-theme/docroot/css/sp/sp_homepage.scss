@@ -1,0 +1,1043 @@
+    /* Slideshow container */
+
+    @import "page_mixins";
+    @import "sp_mixins";
+    @import "sp_media-queries";
+    @import url('sp_fonts.css');
+    /*******1.SLIDER********/
+
+    .sliderInnerContentv1 {
+        @include flexbox();
+        @include align-items(center);
+        justify-content: flex-end;
+        @include flex-direction(column);
+        width: 100%;
+        height: 85%;
+        max-width: 1280px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        padding-bottom: 40px;
+        h2.captionTitle1 {
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+            color: #f4f4f4;
+            text-shadow: 0 2px 4px rgba(61, 89, 103, 0.46);
+            line-height: 1;
+            margin: 0 0 15px 0;
+            padding: 0;
+            font-family: "europa", sans-serif;
+        }
+        h3.captionTitle2 {
+            font-size: 70px;
+            font-weight: bold;
+            text-align: center;
+            color: #2dd8fb;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            font-family: "europa", sans-serif;
+            line-height: 1;
+            margin: 0 0 20px 0;
+            padding: 0;
+        }
+        p.captionDescription {
+            font-size: 22px;
+            font-weight: 500;
+            color: #ffffff;
+            margin: 0 0 30px 0;
+            line-height: 1;
+            text-align: center;
+            padding: 0;
+            font-family: "europa", sans-serif;
+        }
+        a.captionLink {
+            width: 130px;
+            height: 35px;
+            border-radius: 4px;
+            background-image: linear-gradient(255deg, #393a92, #032a7d);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.29;
+            text-align: center;
+            color: #ffffff;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            text-decoration: none;
+            line-height: normal;
+            font-family: "europa", sans-serif;
+        }
+    }
+
+    .home_ClientLogov1 {
+        width: 100%;
+        height: 15%;
+        background-color: #ffffff;
+        border-bottom: 1px solid #eee;
+        margin: 0;
+        padding: 0;
+        .hClient_Wrap {
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            max-width: 1280px;
+            margin: 0 auto;
+            @include flexbox();
+            @include flex-direction(row);
+            @include align-items(center);
+            @include justify-content(center);
+            box-sizing: border-box;
+
+        .client-imgsec {
+            width: 15%;
+            margin: 0;
+            padding: 30px 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+            img {
+                width: 100%;
+                height: 40px;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+p.clTitle {
+
+    margin: 0 auto;
+    padding: 10px 0 0;
+    max-width: 1280px;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #555555;
+}
+
+
+.slideshow-containerv1 {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+
+#fslider-slider {
+    width: 100%;
+    height: 85%;
+    background: #FFF;
+    padding: 0!important;
+
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#fslider-slider .slider-inner {
+    /*max-width:720px;*/
+    margin: 0 auto;
+    height: 85vh;
+    /*center-aligned */
+    font-size: 0px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#fslider-slider ul {
+    position: relative;
+    list-style: none;
+    padding: 45% 0 0 0 !important;
+    box-sizing: border-box;
+    background: black;
+}
+
+#fslider-slider ul {
+    position: relative;
+    list-style: none;
+    padding: 45% 0 0 0 !important;
+    box-sizing: border-box;
+    background: black;
+    height: 85vh!important;
+}
+
+#fslider-slider li {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-size: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+#fslider-slider li.ns-show {
+    opacity: 1;
+}
+
+
+
+
+/* --------- slider image ------- */
+
+#fslider-slider .ns-img {
+
+
+    /*box-shadow: 0 1px 5px rgba(0,0,0,.8),inset 0 0 2px rgba(255,255,255,.4);*/
+    border-radius: 4px;
+
+    cursor: default;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+/* ---------Arrow buttons ------- */
+
+div.navsWrapper {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    right: 90px;
+    bottom: 9%;
+    z-index: 10;
+}
+
+#fslider-slider-prev,
+#fslider-slider-next {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 56px;
+    top: 50%;
+    margin-top: -10px;
+    background-color: transparent;
+    border: 1px solid #fff;
+
+    backface-visibility: hidden;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    user-select: none;
+    border-radius: 2px;
+    z-index: 10;
+
+    font-family: sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    -webkit-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+#fslider-slider-prev {
+    left: 20px;
+}
+
+#fslider-slider-next {
+    right: 20px;
+}
+
+#fslider-slider-prev:hover,
+#fslider-slider-next:hover {
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+/*pagination within the prev/next buttons*/
+
+#fslider-slider-prev div,
+#fslider-slider-next div {
+    white-space: nowrap;
+    opacity: 0;
+    position: absolute;
+}
+
+#fslider-slider-prev div {
+    left: 6px;
+}
+
+#fslider-slider-next div {
+    right: 6px;
+}
+
+#fslider-slider-prev:hover div,
+#fslider-slider-next:hover div {
+    opacity: 1;
+    display: none;
+}
+
+#fslider-slider-prev:hover.disabled,
+#fslider-slider-next:hover.disabled {
+    opacity: 0.1;
+    cursor: default;
+}
+
+
+
+
+/* arrows */
+
+#fslider-slider-prev::before {
+    position: absolute;
+    top: 17px;
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    backface-visibility: hidden;
+}
+
+#fslider-slider-next::before {
+    position: absolute;
+    top: 17px;
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    backface-visibility: hidden;
+}
+
+#fslider-slider-prev::before {
+    -ms-transform: rotate(-45deg);
+    /*IE 9*/
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: 15px;
+}
+
+#fslider-slider-next::before {
+    -ms-transform: rotate(135deg);
+    /*IE 9*/
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    left: 15px;
+}
+
+
+
+
+/*------ pager(nav bullets) ------*/
+
+
+/* The pager id should be: slider id + "-pager" */
+
+#fslider-slider-pager,
+#fslider-slider-pause-play {
+    display: none;
+}
+
+
+
+
+/*Responsive settings*/
+
+@media only screen and (max-width:500px) {
+
+    #fslider-slider-prev,
+    #fslider-slider-next,
+    #fslider-slider-pager {
+        display: none;
+    }
+}
+
+@include screen (320px,
+768px) {
+    .home_ClientLogov1 .hClient_Wrap {
+        @include flex-wrap(wrap);
+    }
+    #fslider-slider ul {
+
+        height: 85vh!important;
+    }
+    .sliderInnerContentv1 {
+        height: 100%;
+        @include justify-content(flex-end);
+        padding: 0 20px;
+        bottom: 0;
+        padding-bottom: 40px;
+    }
+    .sliderInnerContentv1 h3.captionTitle2 {
+        font-size: 30px;
+        margin: 0 0 10px 0;
+    }
+    .sliderInnerContentv1 h2.captionTitle1 {
+        font-size: 24px;
+        margin: 0 0 10px 0;
+        font-weight: 400;
+    }
+    .sliderInnerContentv1 p.captionDescription {
+        margin: 0 0 15px 0;
+        text-align: center;
+        font-size: 18px;
+    }
+    .home_ClientLogov1 .hClient_Wrap .client-imgsec {
+        width: 15%;
+        margin: 0 10px;
+        padding: 15px 0;
+    }
+}
+
+@include screen (320px,
+768px, landscape) {
+    .sliderInnerContentv1 h2.captionTitle1 {
+        font-size: 28px;
+    }
+    .sliderInnerContentv1 h3.captionTitle2 {
+        font-size: 34px;
+    }
+    .sliderInnerContentv1 p.captionDescription {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+@include screen (768px,
+1024px, landscape) {
+    .sliderInnerContentv1 {
+        height: 100%;
+        @include justify-content(center);
+        padding: 0 20px;
+    }
+}
+
+
+
+
+
+
+
+/*******1.box container********/
+
+section.pboxContainer {
+    background-color: #ffffff;
+    padding: 100px 40px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 1280px;
+    font-family: "europa", sans-serif;
+}
+
+h2.boxMainTitle {
+    font-size: 32px;
+    width: 100%;
+    max-width: 800px;
+    font-weight: 800;
+    color: #333333;
+    margin: 0 auto 15px auto;
+    padding: 0;
+    line-height: normal;
+    text-align: center;
+    font-family: "europa", sans-serif;
+}
+
+p.boxMainDescription {
+    font-size: 22px;
+    width: 100%;
+    max-width: 960px;
+    line-height: 1.36;
+    text-align: center;
+    color: #343434;
+    margin: 0 auto 40px auto;
+    padding: 0;
+    font-weight: 300;
+    line-height: normal;
+    font-family: "europa", sans-serif;
+}
+
+.pboxWrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+}
+
+    .pboxWrapperinner {
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include justify-content(center);
+        @include align-items(flex-start);
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+
+
+.pboxContentWrap {
+    width: 33%;
+    max-width: 320px;
+    margin: 0;
+    padding: 0 0 30px;
+    margin: 0 30px;
+
+        .bxImg {
+            width: 100%;
+            max-width: 320px;
+            height: 200px;
+            margin: 0 0 20px 0;
+            position: relative;
+            @include flexbox();
+            @include flex-direction(column);
+            @include align-items(center);
+            @include justify-content(center);
+            border-radius: 8px;
+            img.bxcimg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            h1.pbcMainTitle {
+                font-size: 60px;
+                font-weight: 100;
+                color: #ffffff;
+                margin: 0 0 10px 0;
+                padding: 0;
+                line-height: normal;
+                text-align: left;
+                font-family: "europa", sans-serif;
+                position: absolute;
+                top: 50%;
+                margin-top: -80px;
+            }
+            h2.pbcTitle {
+                font-size: 22px;
+                font-weight: 400;
+                color: #ffffff;
+                margin: 0 0 10px 0;
+                padding: 0 40px;
+                line-height: normal;
+                text-align: center;
+                font-family: "europa", sans-serif;
+                position: absolute;
+                top: 50%;
+            }
+        }
+    }
+
+    .pboxContentWrap {
+
+        p.pbcDecsription {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: normal;
+            color: #343434;
+            margin: 0 0 10px 0;
+            padding: 0;
+            text-align: center;
+            font-family: "europa", sans-serif;
+        }
+        a.pbcLink {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.29;
+            color: #005eb8;
+            line-height: normal;
+            text-align: center;
+            margin: 0;
+            width: 100%;
+            padding: 0;
+            display: block;
+            text-decoration: none;
+            outline: none;
+            font-family: "europa", sans-serif;
+        }
+    }
+
+
+
+
+    @include respond-to('small') {
+        section.pboxContainer {
+            padding: 40px 20px;
+        }
+        .pboxWrapperinner {
+            @include flex-direction(column);
+            @include align-items(center);
+        }
+        .pboxContentWrap {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .pboxContentWrap .bxImg {
+            width: 100%;
+            margin: 0 0 10px 0;
+        }
+        .pboxContentWrap .bxImg img.bxcimg {
+            width: 100%;
+        }
+    } //BOX END
+    //CASE STUDIES
+    .casestudiesv1 {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        @include flexbox();
+        @include flex-direction(column);
+        @include box-sizing(border-box);
+        .casestudiesv1-colLeft {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            @include flexbox();
+            @include flex-direction(row);
+            @include box-sizing(border-box);
+        }
+        .casestudiesv1-colRight {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            @include flexbox();
+            @include flex-direction(row);
+            @include box-sizing(border-box);
+        }
+        a {
+            text-decoration: none;
+            outline: none;
+            padding: 2rem 4rem 0.5rem;
+            font-family: "europa", sans-serif;
+            &.caseReadMore {
+                text-align: right;
+                z-index: 2;
+                font-family: "europa", sans-serif;
+            }
+        }
+    }
+
+.casestudiesv1LHeaderSec {
+    width: 100%;
+    height: 30vh;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(215deg, #492f7c, #144898);
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    position: relative;
+    img.csHeaderBg {
+        width: 150px;
+        height: auto;
+        object-fit: contain;
+        position: absolute;
+        right: 40px;
+    }
+}
+
+.casestudiesv1TContentSec {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include box-sizing(border-box);
+}
+
+.casestudiesv1More {
+    width: 33.33%;
+    height: 30vh;
+    margin: 0;
+    padding: 0;
+    background-color: #3a2760;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    a.showMoreLink {
+        font-size: 12px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        color: #ffffff;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        font-family: "europa", sans-serif;
+    }
+}
+
+.casestudiesv1BContentSec {
+    width: 33.33%;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(top);
+    @include align-items(top);
+    position: relative;
+    &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.3em;
+        background-image: linear-gradient(to top, #000000, rgba(0, 0, 0, 0.55));
+        transition: opacity 0.5s ease-out;
+        z-index: 1;
+        opacity: 0;
+    }
+
+    &:hover {
+        &:after {
+            opacity: 0.6;
+        }
+    }
+}
+
+.MS-Edge .caseBgv1 {
+    display: none;
+}
+
+.caseBgv1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    img {
+        width: 100%;
+        object-fit: cover;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+h1.HeadingStyle {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.22;
+    color: #f4f4f4;
+    margin: 0;
+    line-height: normal;
+    padding: 0;
+    z-index: 2;
+    padding-bottom: 15px;
+    font-family: "europa", sans-serif;
+}
+
+h2.contentHeding {
+    @include font-size(24px);
+    font-weight: 500;
+    overflow: hidden;
+    color: #f4f4f4;
+    margin: 0;
+    line-height: normal;
+    padding: 2rem 4rem 0.5rem;
+    z-index: 2;
+    font-family: "europa", sans-serif;
+}
+
+p.contentParagraph {
+    @include font-size(16px);
+    font-weight: 300;
+    overflow: hidden;
+    line-height: normal;
+
+    color: #f4f4f4;
+    margin: 0;
+    padding: 0rem 4rem 1rem;
+    z-index: 2;
+    font-family: "europa", sans-serif;
+}
+
+
+span.headingSmall {
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    line-height: normal;
+
+    color: #f4f4f4;
+    margin: 0;
+    padding: 0rem 4rem 1rem;
+    z-index: 2;
+    font-family: "europa", sans-serif;
+}
+
+img.arrowRightImg {
+    width: 30px;
+    height: auto;
+}
+
+
+
+
+@include respond-to('small') {
+    .casestudiesv1 {
+        height: auto;
+    }
+    .casestudiesv1LHeaderSec {
+        height: 200px;
+    }
+    .casestudiesv1 .casestudiesv1-colRight {
+        @include flex-direction(column);
+    }
+    .casestudiesv1BContentSec {
+        width: 100%;
+        height: 100%;
+        min-height: 250px;
+    }
+    .caseBgv1 {
+        top: 0;
+        overflow: hidden;
+        height: auto;
+    }
+    .caseBgv1 img {
+        top: 0;
+        height: 100%;
+    }
+    h2.contentHeding {
+        padding: 0 40px;
+        margin-top: 40px
+    }
+    span.headingSmall {
+        padding: 0 40px;
+        margin-top: 5px;
+    }
+    p.contentParagraph {
+        padding: 0 40px;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+/* =====CASE STUDIES=== */
+
+
+/* =====CASE STUDIES=== */
+
+    //Box Vertion2
+    .keyboxWrapinner {
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include justify-content(center);
+        @include align-items(flex-start);
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+
+
+    .keyboxContWrap {
+        width: 25%;
+        max-width: 250px;
+        margin: 0;
+        @include flexbox();
+        @include align-items(center);
+        @include flex-direction(column);
+        padding: 0 0 30px;
+        @include justify-content(center);
+        margin: 0 20px;
+    }
+
+.keyboxContWrap {
+    h2.kbcTitle {
+        font-size: 60px;
+        font-weight: 900;
+        color: #333333;
+        margin: 0 0 10px 0;
+        padding: 0;
+        line-height: normal;
+        text-align: center;
+        font-family: "europa", sans-serif;
+    }
+    p.kbcDecsription {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: normal;
+        color: #343434;
+        margin: 0 0 10px 0;
+        padding: 0;
+        text-align: center;
+        font-family: "europa", sans-serif;
+    }
+    a.kbcLink {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.29;
+        color: #005eb8;
+        line-height: normal;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        outline: none;
+        font-family: "europa", sans-serif;
+    }
+}
+
+.MaskGradienLine {
+    width: 250px;
+    height: 6px;
+    border-radius: 8px;
+    background-image: linear-gradient(to left, #f5515f, #9f031b);
+    margin: 0 0 20px 0;
+ 
+}
+
+    @include respond-to('small') {
+        .keyboxWrapinner {
+            @include flex-direction(column);
+            @include align-items(center);
+        }
+        .keyboxContWrap {
+            width: 100%;
+        }
+    } //CASE STUDY V2
+    .csv2Container {
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include justify-content(flex-start);
+        @include align-items(flex-start);
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .csv2Row {
+        width: 45%;
+
+        margin: 0;
+        @include flexbox();
+        @include align-items(flex-start);
+        @include flex-direction(row);
+        padding: 0 0 60px;
+        @include justify-content(center);
+        margin: 0 20px;
+    }
+
+    .csv2Row {
+        .csv2Image {
+            width: 135px;
+            height: 135px;
+            margin: 0 20px 0 0;
+            padding: 0;
+
+            vertical-align: top;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                object-fit: contain;
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    .csv2ContSec {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0 0 0;
+        padding: 0;
+        width: 70%;
+        h2.csv2ContTitle {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333333;
+            margin: 0 0 10px 0;
+            padding: 0;
+            line-height: normal;
+            text-align: left;
+            font-family: "europa", sans-serif;
+        }
+        p.csv2ContDescription {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: normal;
+            color: #343434;
+            margin: 0 0 10px 0;
+            padding: 0;
+            text-align: left;
+            font-family: "europa", sans-serif;
+        }
+        a.csv2Link {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.29;
+            color: #005eb8;
+            line-height: normal;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            outline: none;
+            font-family: "europa", sans-serif;
+        }
+    }
+
+    @include respond-to('small') {
+
+        .csv2Row {
+            width: 100%;
+            margin: 0 0;
+            padding: 0 0 30px;
+            @include flex-direction(column);
+            .csv2Image {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        .csv2ContSec
+        {
+            width: 100%;
+        }
+        .csv2ContSec h2.csv2ContTitle
+        {
+            width: 100%;
+            text-align: center;
+        }
+        .csv2ContSec p.csv2ContDescription
+        {
+            text-align: center;
+        }
+        .csv2ContSec a.csv2Link
+        {
+            width: 100%;
+            text-align: center;
+        }
+    }

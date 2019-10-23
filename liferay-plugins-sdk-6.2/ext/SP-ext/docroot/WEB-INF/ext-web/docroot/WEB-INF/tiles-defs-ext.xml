@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	<definition name="portlet.ext" extends="portlet" />
+	
+	<!-- added for share menu in document library by Harini -->
+	<definition name="portlet.document_library.share_file_entry" extends="portlet.document_library">
+		<put name="portlet_content" value="/portlet/document_library/share_file_entry.jsp" />
+	</definition>
+</tiles-definitions>

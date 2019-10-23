@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE routes PUBLIC "-//Liferay//DTD Friendly URL Routes 6.1.0//EN" "http://www.liferay.com/dtd/liferay-friendly-url-routes_6_1_0.dtd">
+<routes>
+	<route>
+		<pattern>/create/{mvcPathName}</pattern>
+		<generated-parameter name="jspPage">/html/create/{mvcPathName}.jsp</generated-parameter>
+	</route>
+	<route>
+		<pattern>/list/{mvcPathName}</pattern>
+		<generated-parameter name="jspPage">/html/list/{mvcPathName}.jsp</generated-parameter>
+	</route>
+	<route>
+		<pattern>/detail/{mvcPathName}</pattern>
+		<generated-parameter name="jspPage">/html/detail/{mvcPathName}.jsp</generated-parameter>
+	</route>	
+	<route>
+		<pattern>/{mvcPathName}</pattern>
+		<generated-parameter name="jspPage">/html/{mvcPathName}.jsp</generated-parameter>
+	</route>
+</routes>

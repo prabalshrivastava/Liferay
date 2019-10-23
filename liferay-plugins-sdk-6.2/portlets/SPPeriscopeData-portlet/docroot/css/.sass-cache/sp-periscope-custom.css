@@ -1,0 +1,238 @@
+/*********************
+
+RESPONSIVE BREAKPOINT
+**********************/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+.ps-pref-container {
+  width: 100%;
+  margin: 5px auto;
+  padding: 0; }
+
+.ps-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0; }
+
+.ps-main-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  padding: 40px;
+  box-sizing: border-box; }
+
+.ps-sidebar {
+  overflow-x: hidden;
+  width: 0;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: none 1px #d9dce3;
+  padding: 0;
+  margin: 0;
+  margin-right: 15px;
+  top: 39px;
+  left: 37px;
+  position: absolute; }
+
+.ps-sidebar .closebtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 36px;
+  margin-left: 50px; }
+
+#ps-content-wrapper {
+  transition: margin-left .5s; }
+
+.ps-content-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: solid 1px #d9dce3;
+  padding: 20px;
+  margin: 0;
+  margin-left: 15px; }
+
+.ps-sidebar-heading h2 {
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.29;
+  color: #606060;
+  margin: 0;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom, #ffffff, #f3f6f8);
+  border-bottom: solid 1px #dce6ef; }
+
+.ps-sidebarnav {
+  padding: 10px 20px;
+  margin: 0;
+  border-bottom: 1px solid #d9dce3; }
+
+.ps-sidebarnav h3 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ababab;
+  margin: 0;
+  padding: 5px 0 10px 0;
+  line-height: normal;
+  position: relative;
+  cursor: pointer; }
+
+.ps-sidebarnav h3.toggler-header-collapsed {
+  border-bottom: none; }
+
+.ps-sidebarnav h3.toggler-header-expanded {
+  border-bottom: none; }
+
+h3.ps-headerToggler.toggler-header-collapsed:after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  color: #005eb8;
+  font-size: 16px;
+  font-weight: 400; }
+
+h3.ps-headerToggler.toggler-header-expanded:after {
+  content: "-";
+  position: absolute;
+  right: 0;
+  color: #005eb8;
+  font-size: 16px;
+  font-weight: 400; }
+
+.aui .ps-sidebarnav .toggler-content-wrapper .toggler-content-collapsed {
+  display: block; }
+
+.ps-dropbtn {
+  color: white;
+  border: none;
+  cursor: pointer; }
+
+/* The container <div> - needed to position the dropdown content */
+.ps-dropdown {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%; }
+
+/* Dropdown Content (Hidden by Default) */
+.ps-dropdown .ps-dropdown-content a {
+  padding: 6px 10px; }
+
+.ps-dropdown .ps-dropdown-content a:last-child {
+  padding-bottom: 6px; }
+
+.ps-sidebarnav ul li.ps-activeMenu .ps-dropdown .ps-dropdown-content a {
+  color: #555; }
+
+.ps-sidebarnav ul li.ps-activeMenu .ps-dropdown .ps-dropdown-content a.ps-activeMenudrop {
+  color: #1a5aa5; }
+
+.ps-dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #ffffff;
+  border: solid 1px #dce0e4;
+  width: 150px;
+  border-radius: 5px;
+  z-index: 1;
+  left: 0;
+  margin-left: -50px; }
+
+/* Links inside the dropdown */
+.ps-dropdown-content a.drpsp {
+  color: black;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #555;
+  font-size: 9pt; }
+
+/* Change color of dropdown links on hover */
+/* Show the dropdown menu on hover */
+.ps-dropdown:hover .ps-dropdown-content {
+  display: block; }
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.ps-sidebarnav ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.ps-sidebarnav ul li {
+  padding-bottom: 12px;
+  margin: 0;
+  list-style: none;
+  position: relative; }
+
+.ps-sidebarnav ul li a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #333333;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.ps-sidebarnav ul li a:hover {
+  color: #1a5aa5; }
+
+.ps-sidebarnav ul li a:hover .ps-dropdown {
+  display: block; }
+
+.ps-sidebarnav ul li img {
+  max-width: 26px;
+  padding-right: 10px; }
+
+.ps-sidebarnav ul li span {
+  line-height: normal;
+  padding: 0;
+  margin: 0; }
+
+.ps-sidebarnav ul li.ps-activeMenu a {
+  color: #1a5aa5; }
+
+.ps-sidebarnav ul li.ps-activeMenu:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 15px;
+  font-size: 15px;
+  color: #1a5aa5;
+  background-image: url("/SPPeriscopeData-portlet/images/ps-active-arrow.svg");
+  background-size: 100%; }
+
+/*# sourceMappingURL=sp-periscope-custom.css.map */
+

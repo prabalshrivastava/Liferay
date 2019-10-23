@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 6.2.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_6_2_0.dtd">
+
+<resource-action-mapping>
+    <resource file="resource-actions/discount-promocode.xml" />
+    <resource file="resource-actions/price-scheme.xml" />
+    <resource file="resource-actions/price-sub-scheme.xml" />
+    <resource file="resource-actions/transaction-fee.xml" />
+    <resource file="resource-actions/price-scheme-linking.xml" />
+</resource-action-mapping>

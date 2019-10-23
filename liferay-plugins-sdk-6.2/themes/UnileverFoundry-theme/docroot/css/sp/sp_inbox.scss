@@ -1,0 +1,314 @@
+@import "_sp_custom_variables";
+@import "_sp_mixins";
+@import "sp_media-queries";
+
+
+.inbox-portlet{
+	.portlet-content-container{
+		background-color: $light-gray;
+	}
+}
+.sp-inbox{
+
+	.sp-inbox-search{
+		input[type="text"]{
+			width: 200px;
+		}
+		button{
+			width: 100px;
+		}
+	}
+
+	.sp-inbox-menu{
+		.sp-inbox-menu-list {
+			padding: 10px 0;
+			ul{
+				li{
+					position: relative;
+					cursor: pointer;
+
+					&:hover{
+						> a{
+							font-weight: bold;
+						}
+					}
+					&.in-menu-item{
+						position: relative;
+						cursor: pointer;
+						
+						 span{
+							padding: 0 5px;
+							 display: block;
+							 
+							
+						}
+						
+						> span{
+							 &:hover{
+							 	display: block;
+								background: $custom-color-126;
+							 }
+						}
+						
+						
+					}
+
+					ul{
+						padding-left: 20px;
+						
+						li{
+							cursor: pointer;
+							
+								> span{
+									   
+									    &:hover{
+									   		 background: $custom-color-126;
+										}
+								}
+							
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.sp-inbox-filters{
+		padding: 10px 0;
+		margin: 0 20px;
+		text-align: right;
+
+		@include vendor-prefix(box-sizing, border-box);
+		@include animate-cubic(.4s);
+	}
+
+	.sp-inbox-actions{
+		padding: 10px 0px;
+		margin: 0 20px;
+		text-align: right;
+
+		border-bottom: 1px solid $color-border;
+		@include vendor-prefix(box-sizing, border-box);
+		@include animate-cubic(.4s);
+
+	}
+
+	.sp-inbox-section{
+		&.sp-inbox-section-left{
+			background-color: $custom-color-5;
+			padding: 20px;
+
+			@include vendor-prefix(box-sizing, border-box);
+			@include animate-cubic(.4s);
+
+			#contentBodyDiv{
+				padding: 20px;
+			}
+		}
+	}
+
+	#contentBodyDiv{
+		padding: 20px;
+	}
+
+	#cmpseMsgDiv{
+		padding: 20px;
+		
+		
+		#cmpMsgToInnerDiv{
+			.ip-to-input-outer{
+				background-color: transparent;
+				border: none !important;
+
+				&:focus, &:hover{
+					border: none !important;
+				}
+			}
+			ul.horizontal{
+				display: inline-block;
+				
+				li{
+					display: inline-block;
+					zoom: 1;
+					padding: 5px 8px;
+					background-color: $light-gray;
+					margin-right: 5px;
+					margin-bottom: 5px;
+					
+					.sp-group-clearfix{
+						line-height: 0;
+						
+						.sp-group-mrm{
+							display: inline-block;
+							width: 20px;
+							line-height: 0;
+							vertical-align: middle;
+						}
+						
+						> .sp-group-ui-dib{
+							display: inline-block;
+							vertical-align: middle;
+							padding-left: 10px;
+							
+							.sp-group-ui-vam{
+								&:first-child{
+									display: none;
+								}
+								
+							}
+							
+							.ip-si-x{
+								font-size: 8pt;
+							    padding-left: 5px;
+							    font-weight: bold;
+							    color: $custom-color-69;
+							    cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#cmpMsgActionsDiv{
+			display: inline-block;
+			margin-right: 5px;
+		}
+		#cmpMsgSaveDraftDiv{
+			display: inline-block;
+			margin-right: 5px;
+		}
+		#cmpMsgSendDiv{
+			display: inline-block;
+			margin-right: 5px;
+		}
+
+	}
+
+
+	.ip-sb{
+
+		.ip-sb-options{
+			padding: 10px;
+			background-color: $light-gray;
+			
+			.ip-sb-option{
+				margin-bottom: 5px;
+				padding: 5px;
+				cursor: pointer;
+				
+				
+				&:hover, &.hover{
+					background-color: $custom-color-127;
+				}
+			}
+
+			.sp-group-mrm{
+				line-height: 0;
+			    width: 40px;
+			    display: inline-block;
+			}
+
+			.sp-group-ui-oh{
+				display: inline-block;
+				vertical-align: middle;
+				.sp-group-ui-dib{
+					.sp-group-ui-vam{
+						&:first-child{
+							display: none;
+						}
+						padding-left: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	#mailsTable{
+		tr{
+			border-bottom: 1px solid $custom-color-71;
+
+
+			@include animate-cubic(.4s);
+
+			&#mailHeaderRow{
+				td{
+					    font-weight: bold;
+					    text-transform: uppercase;
+					    font-size: 9pt;
+					    line-height: 9pt;
+				}
+			}
+
+			&.msgUnread{
+
+				background-color: $custom-color-72;
+
+				td{
+					font-weight: $fontWeight-medium;
+
+					&#subject{
+						color: $themeColor-2;
+					}
+				}
+			}
+
+			td{
+				padding: 10px 5px;
+				line-height: 11pt;
+				cursor: pointer;
+				word-wrap: nowrap;
+				overflow: hidden;
+
+				&#from{
+					width: 25%;
+				}
+
+				&#subject{
+					width: 40%;
+				}
+
+				&#date{
+					width: 30%;
+				}
+
+
+				input{
+					margin: 0;
+
+				}
+			}
+		}
+	}
+
+}
+
+
+@include screen(320px, 767px, portrait){
+	  
+	  .inbox-portlet {
+	  	.portlet-content{
+	  		padding: 0;
+	  	}
+	  	
+	  }
+	  .sp-inbox{
+	  		padding: 0 !important;
+	  		
+	  		.sp-inbox-section{
+	  			
+	  			width: 100%;
+	  			
+	  			.sp-inbox-menu{
+	  				.sp-inbox-menu-list{
+	  					
+	  				}
+	  			}
+	  		
+	  		}
+	  		
+	  		.sp-inbox-search{
+	  			display: none;
+	  		}
+	  	}
+}

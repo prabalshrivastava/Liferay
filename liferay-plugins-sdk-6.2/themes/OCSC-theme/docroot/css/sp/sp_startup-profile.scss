@@ -1,0 +1,1669 @@
+@import "sp_custom_variables";
+@import "sp_mixins";
+@import "sp_media-queries";
+
+$themeColor: $themeColor;
+
+
+.aui {
+    /** SP-PROFILE **/
+     .startuplisting-portlet {
+        max-width: $screen-max-width;
+         display: block;
+        padding: 0 30px;
+         margin:0 auto;
+        -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .startup-profiles {
+        .table-data {
+            font-size: $fontSize-standard;
+            font-weight: $fontWeight-regular;
+        }
+    }
+    .manage-startup-profile-portlet {
+        margin: 0 auto;
+        .sp_profile.sp_profile_view {
+            .sp_ratings {
+
+                .ratingsSection_wrap {
+                    background: none;
+                    border: none;
+                    border-radius: initial;
+                    .rs_container {
+                        .rs_ave {
+                            background: none;
+
+                            .rs_link {
+
+                                a {
+                                    text-decoration: none;
+                                }
+                            }
+                            .aveRating.stars {
+
+                                ul li {
+                                    zoom: 0.8;
+                                }
+                            }
+                            .rs_cta {
+
+                                background: none;
+                                border: none;
+                                border-left: 1px solid;
+
+                                font-size: 9pt;
+                                text-transform: uppercase;
+                            }
+                            span.aveValue {
+                                display: none;
+                            }
+                            .ratings-pop-wrap {
+                                .ratings-pop-content {
+
+                                    a:hover {
+                                        color: $themeColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ratings-pop-wrap {
+                background: $custom-color-121;
+                .ratings-pop-content {
+                    color: #272727;
+
+
+                    .ratings-pop-item {
+
+                        text-align: left;
+
+                        span {
+                            span {
+
+                                color: #555555;
+                                font-size: 11.25pt;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+                .rating-content {
+                    a {
+
+                        zoom: 1.6;
+                    }
+                }
+            }
+
+            .header-cta-band {
+
+                color: $white;
+                background: $themeColor;
+            }
+
+            /* only for startup display page.*/
+            .sp_tab_buttons {
+                font-size: 10pt;
+
+                li:hover {
+                    background: none;
+                    font-weight: 600;
+                }
+                li {
+                    border-bottom: none;
+
+                    font-size: 11.25pt;
+                    font-weight: $fontWeight-bold;
+                }
+                li.active {
+                    border-bottom: 0;
+                    font-weight: 600;
+                    font-size: 11.25pt;
+                    font-weight: $fontWeight-bold;
+                    color: $themeColor;
+                }
+                li.active:after {
+                    content: "";
+                    border: solid;
+                    border-color: #393939 transparent;
+                    border-width: 11px 11px 0 11px;
+
+                    z-index: 1;
+                }
+            }
+        }
+        .result_wrapper {
+
+            zoom: 1;
+            vertical-align: middle;
+        }
+
+        .control-group {
+
+            .form-validator-stack {
+                font-size: $fontSize-tiny;
+            }
+        }
+    }
+    .sp_tab_buttons {
+        font-size: 10pt;
+
+        li:hover {
+            background-color: $custom-color-149;
+            font-weight: 400;
+            color: $white;
+        }
+        li {
+
+            border-bottom: 2px solid $custom-color-148;
+            background-color: $custom-color-149;
+            line-height: 27px;
+            text-align: center;
+            cursor: pointer;
+        }
+        li.active {
+            background-color: #1e8bc3;
+            border-bottom: 2px solid $themeColor1;
+            color: $white;
+        }
+    }
+    .sp_tabs {
+        .sp_tab {
+
+            &.active {
+
+                font-size: $fontSize-medium;
+            }
+            .fileEntry {
+                font-size: $fontSize-standard;
+
+
+                .fileEntryImg img {
+
+                    border: 1px solid $custom-color-67;
+                }
+            }
+        }
+    }
+    .file-uploader {
+        font-size: $fontSize-smaller;
+    }
+
+    .sp_profile {
+
+
+        .profile_avatar_wrap {
+
+            text-align: left;
+
+            * {
+                @include vendor-prefix(transition, all 0.7s ease-in-out);
+            }
+            .avatar_container {
+
+                @include vendor-prefix(border-radius, 3px);
+                border: 1px dashed $custom-color-79;
+
+                background: $custom-color-27;
+
+                zoom: 1;
+                &.ddImage {
+                    @include vendor-prefix(border-radius, 0);
+                    @include vendor-prefix(box-shadow, 0);
+
+                    text-align: center;
+
+
+                    .avatar_cta {
+
+                        font-size: 0;
+
+                        input.avatarCTA {
+
+                            zoom: 1;
+
+                            text-align: center;
+                            color: $white;
+                            text-transform: uppercase;
+
+                            cursor: pointer;
+                            border: 0;
+                            border-bottom: 3px solid $custom-color-80 !important;
+                            font-size: 10pt;
+                            font-weight: 400;
+                            &[type="button"].avatar_save {
+                                background: $custom-color-81 !important;
+                                border-bottom: 3px solid $custom-color-80 !important;
+                            }
+                            &[type="cancel"].avatar_cancel {
+                                background: $custom-color-83 !important;
+                                border-bottom: 3px solid $custom-color-84 !important;
+                            }
+                        }
+                    }
+                }
+                &:before {
+                    content: " ";
+
+                    z-index: -1;
+
+                    border: 4px solid $white;
+                    @include vendor-prefix(border-radius, 50%);
+                }
+            }
+        }
+        section.head {
+            text-align: center;
+            font-weight: $fontWeight-light;
+
+            .headText {
+                line-height: 18pt;
+
+                span {
+                    line-height: 30pt;
+                }
+            }
+            .cta_wrap {
+
+                font-size: 0;
+
+                .cta_item {
+
+                    zoom: 1;
+
+                    a {
+
+                        text-align: center;
+                        font-size: $fontSize-small;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        color: $white;
+                        @include vendor-prefix(border-radius, 10px);
+                        cursor: pointer;
+                        @include vendor-prefix(transition, all ease-in-out .3s);
+                        span {
+                            color: $white;
+                            font-size: inherit;
+
+                            zoom: 1;
+                            vertical-align: middle;
+                        }
+                        i {
+
+                            zoom: 1;
+                            vertical-align: middle;
+                        }
+                    }
+                    .cta_item_desc {
+                        font-size: $fontSize-smaller;
+                        font-style: italic;
+                        color: $dark-gray;
+                    }
+                }
+                .cta_item.active {
+                    a {
+                        background: $custom-color-81;
+                        border-bottom: 3px solid $custom-color-80;
+                    }
+                }
+                .sep_line {
+
+                    background: $custom-color-82;
+
+                    span {
+                        background: $custom-color-82;
+
+                        @include vendor-prefix(border-radius, 50%);
+                        overflow: hidden;
+                        font-size: $fontSize-small;
+                        color: $white;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        section.crunchbaseSelectList {
+            text-align: center;
+
+            background: $white;
+
+            input {
+                @include vendor-prefix(border-radius, 5px);
+
+                zoom: 1;
+
+                font-size: $fontSize-smaller;
+                letter-spacing: 1px;
+                font-family: $fontFamily;
+            }
+        }
+
+        section.profile_content {
+
+            .profile_forms_wrap {
+
+                font-size: 0;
+
+                text-align: center;
+
+                .page_headTitle {
+
+                    text-align: center;
+                    opacity: 0;
+                    i {
+
+                        zoom: 1;
+
+                        vertical-align: middle;
+
+                        line-height: 0;
+                    }
+                    span {
+
+                        zoom: 1;
+                        font-size: 24pt;
+                        vertical-align: middle;
+                        text-transform: uppercase;
+                    }
+                }
+                .profile_form_navigation {
+
+                    zoom: 1;
+                    vertical-align: top;
+
+                    z-index: 99;
+                    @include vendor-prefix(box-sizing, border-box);
+
+                    -webkit-transition: none;
+                    transition: none;
+                    font-size: 12pt;
+                    border: solid 1px $custom-color-148;
+                    border-radius: 5px;
+                    .formNavTitle {
+                        padding: 14px 0 14px 26px;
+
+                        font-weight: $fontWeight-bold;
+                        color: $startup-primary-color;
+
+                        text-align: left;
+                        background-image: linear-gradient(to bottom, $white, $custom-color-147);
+                        border-bottom: solid 1px $custom-color-148;
+                    }
+                    nav {
+
+                        ul {
+
+                            background-color: $white;
+
+                            li , li h2{
+                                text-align: left;
+                                font-size: $fontSize-tiny!important;
+                                color: $bodyColor;
+                                font-weight: $fontWeight-bold!important;
+                                background-color: $white;
+                                cursor: pointer;
+
+                                span {
+
+                                    zoom: 1;
+                                    vertical-align: middle;
+                                    line-height: normal;
+				font-size: $fontSize-tiny;
+                                    text-align: left;
+
+                                    color: $bodyColor;
+                                    @include vendor-prefix(transition, all ease-in-out .2s);
+                                    line-height: 16px;
+                                }
+                            }
+                            li:hover span {
+                                color: $bodyColor;
+                            }
+                            li:hover span h2 {
+                                color: $bodyColor;
+                            }
+                            li.formDone {
+                                span::after {
+                                    content: url(/StartupProfile-portlet/images/checkIcon_20.png);
+
+                                    zoom: 1;
+                                    vertical-align: middle;
+                                }
+                            }
+                            li.active {
+                                span {
+                                    color: $startup-link-color;
+                                    font-weight: bold;
+                                }
+                                span::after {
+                                    ontent: '';
+                                    color: #1a5aa5;
+                                    font-size: 12pt;
+
+                                    zoom: 1;
+                                    vertical-align: middle;
+
+                                    line-height: 20px;
+
+                                    background: url(@theme_image_path@/startup-profile/right-arrow.svg);
+                                    background-size: 100% 100%;
+                                    background-repeat: no-repeat;
+                                }
+                                span h2 {
+                                    color: $startup-link-color;
+                                    font-weight: bold;
+                                }
+                                span h2::after {
+                                    ontent: '';
+                                    color: #1a5aa5;
+                                    font-size: 12pt;
+
+                                    zoom: 1;
+                                    vertical-align: middle;
+
+                                    line-height: 20px;
+
+                                    background: url(@theme_image_path@/startup-profile/right-arrow.svg);
+                                    background-size: 100% 100%;
+                                    background-repeat: no-repeat;
+                                }
+                            }
+                        }
+                    }
+                }
+                .ie .profile_form_navigation {
+
+                    zoom: 1;
+                    vertical-align: top;
+
+                    z-index: 99;
+
+                    -webkit-transition: none;
+                    transition: none;
+                    font-size: 12pt;
+                    background-color: $white;
+                    border: solid 1px $custom-color-148;
+                }
+                .profile_form {
+
+                    zoom: 1;
+
+                    vertical-align: top;
+
+                    font-size: 0;
+                    text-align: left;
+
+                    background-color: $white;
+                    border: solid 1px $custom-color-148;
+                    border-radius: 5px;
+                    .form {
+
+                        .formContent {}
+                        .formTitle {
+
+                            border-bottom: 1px solid $medium-gray;
+                            font-size: 16pt;
+                            font-weight: $fontWeight-bold;
+                            color: $medium-gray;
+
+                            text-transform: uppercase;
+                        }
+                        .formSubTitle {
+
+                            border-bottom: none;
+
+                            position: relative;
+                            span {
+
+                                zoom: 1;
+                                font-size: $fontSize-standard;
+                                font-weight: $fontWeight-medium;
+                                text-align: left;
+                                color: $bodyColor;
+                                text-transform: uppercase;
+                            }
+                        }
+                        .aui-form-validator-error-container {
+                            .aui-field-element {
+                                background: none !important;
+                            }
+                            .aui-form-validator-error {
+                                border-color: $custom-color-33 !important;
+                            }
+                        }
+                        .formGroupTitle {
+
+                            border-bottom: 1px solid $custom-color-32;
+
+                            span {
+
+                                zoom: 1;
+                                font-size: 12pt;
+                                font-weight: $fontWeight-medium;
+                                text-align: left;
+                                color: $bodyColor;
+                            }
+                        }
+                    }
+                    .form.active {
+                        display: block;
+                    }
+                    .formTextField,
+                    .formTextArea,
+                    .formSelect,
+                    .formRadio,
+                    .formCTA,
+                    .formSelectField,
+                    .formCheckField,
+                    .formRadioField {
+
+                        zoom: 1;
+                        vertical-align: top;
+
+                        font-size: 12pt;
+
+
+
+                        .form-validator-message {
+
+                            font-size: 7pt;
+                            font-style: italic;
+                            font-weight: $fontWeight-medium;
+                        }
+                    }
+                    .formCheckField {
+                        .checkItem {
+
+                            zoom: 1;
+                            vertical-align: middle;
+
+                            label {
+
+                                zoom: 1;
+                            }
+                            input {}
+                        }
+                    }
+                    .formRadioField {
+                        .radioItem {
+
+                            zoom: 1;
+                            vertical-align: middle;
+
+
+                            label {
+
+                                zoom: 1;
+                            }
+                            input {}
+                        }
+                    }
+                    .formGroupfield {
+
+                        zoom: 1;
+                        vertical-align: middle;
+
+                        font-size: 12pt;
+
+                        .formGroupfield {
+
+                            border: 1px solid $custom-color-24;
+                        }
+                    }
+                    .formCTA {
+                        text-align: center;
+                    }
+                    .fw {
+
+                        font-size: 0;
+                    }
+                    label,
+                    .aui-field-label {
+
+                        text-align: left;
+
+                        font-weight: $fontWeight-bold;
+                    }
+
+                    input,
+                    textarea {
+                        padding: 10px;
+                        @include vendor-prefix(border-radius, 2px !important);
+
+                        @include vendor-prefix(transition, all ease-in-out .3s !important);
+                        font-size: 10pt !important;
+                        letter-spacing: 1px !important;
+                    }
+                    input[type="Submit"] {
+
+                        zoom: 1;
+
+                        text-align: center;
+                        text-transform: uppercase;
+
+                        cursor: pointer;
+                        border: 0;
+                        border-bottom: 3px solid $custom-color-80 !important;
+                        font: 10pt $fontFamily !important;
+                    }
+                    input[type="Button"] {
+
+                        zoom: 1;
+
+                        text-align: center;
+                        text-transform: uppercase;
+
+                        cursor: pointer;
+                        border: 0;
+                        font-weight: $fontWeight-bold;
+                        border-radius: 3px !important;
+                        background-image: linear-gradient(to bottom, #f4f4f4, #e5e5e5);
+                        border: solid 1px #d0d0d0;
+                    }
+                    input[type="Cancel"] {
+
+                        zoom: 1;
+
+                        text-align: center;
+                        text-transform: uppercase;
+
+                        border: 0;
+                        cursor: pointer;
+                        font: 10pt $fontFamily !important;
+                    }
+                    input[type="Submit"]:hover {}
+                    input[type="Cancel"]:hover {}
+                    input[type=text],
+                    textarea {
+                        @include vendor-prefix(transition, all 0.30s ease-in-out);
+                        outline: none;
+                        background: $white;
+                    }
+                    input[type=text]:focus,
+                    textarea:focus,
+                    input[type=text]:hover,
+                    textarea:hover {
+                        box-shadow: 0px 0 0px $custom-color-120;
+                    }
+                    .multipleCTA {
+
+                        zoom: 1;
+                        font-size: 0;
+                        text-align: right; //added by karthik june07
+                        a {
+
+                            zoom: 1;
+
+                            @include vendor-prefix(border-radius, 50%);
+                            border: 1px solid $themeColor;
+                            color: $themeColor;
+                            background: transparent;
+
+                            font-size: $fontSize-smaller;
+                            line-height: 6pt;
+                            text-decoration: none;
+
+                            text-align: center;
+                            cursor: pointer;
+                            @include vendor-prefix(transition, all .5s ease-in-out);
+                        }
+                        a:hover {
+                            background: $themeColor;
+                            color: $white;
+                        }
+                    }
+                    .form_review,
+                    .form_disabled,
+                    .normal_view {
+                        input[type=text]:focus,
+                        textarea:focus {
+                            box-shadow: 0 !important;
+                            border: 0 !important;
+                        }
+                        input,
+                        textarea {
+
+                            @include vendor-prefix(border-radius, 5px !important);
+                            border: 0 !important;
+                            border-bottom: 1px solid $custom-color-67 !important;
+
+                            @include vendor-prefix(transition, all ease-in-out .3s !important);
+                            font-size: 10pt !important;
+                            letter-spacing: 1px !important;
+                            &:hover {
+                                box-shadow: 0 !important;
+                                border: 0 !important;
+                                border-bottom: 1px solid $custom-color-67 !important;
+                            }
+                        }
+                        select {
+                            margin: 0;
+                            @include vendor-prefix(appearance, none);
+                            @include vendor-prefix(border-radius, 5px !important);
+
+                            font-size: 10pt !important;
+                            letter-spacing: 1px !important;
+
+                            background: transparent !important;
+                            border: 0;
+                        }
+                        input[type="Submit"] {
+
+                            zoom: 1;
+
+                            text-align: center;
+                            text-transform: uppercase;
+
+                            cursor: pointer;
+                            border: 0;
+                        }
+                        input[type="Button"] {
+
+                            zoom: 1;
+
+                            text-align: center;
+                            text-transform: uppercase;
+
+                            cursor: pointer;
+                            border: 0;
+                        }
+                        input[type="Cancel"] {
+
+                            zoom: 1;
+
+                            text-align: center;
+                            text-transform: uppercase;
+
+                            border: 0;
+                            cursor: pointer;
+                        }
+                        input[type="Submit"]:hover {}
+                        input[type="Cancel"]:hover {}
+                        .formFields_data {
+
+
+                            .form_section {
+
+                                span.form_section_title {
+
+                                    color: $themeColor;
+                                    font-size: $fontSize-small;
+                                    font-weight: $fontWeight-bold;
+                                    text-transform: uppercase;
+                                    border-bottom: 1px solid $themeColor;
+                                }
+                                .form_section_content {
+
+                                    font-size: 0;
+                                    .fieldName {
+
+                                        zoom: 1;
+
+
+                                        font-size: 12pt;
+                                        font-weight: $fontWeight-bold;
+                                        color: $black;
+                                        text-transform: uppercase;
+                                        background: $custom-color-24;
+                                        border-bottom: 1px solid $custom-color-24;
+                                        vertical-align: top;
+                                    }
+                                    .fieldContent {
+
+                                        zoom: 1;
+
+                                        font-size: 12pt;
+                                        font-weight: $fontWeight-light;
+                                        font-style: italic;
+                                        color: $black;
+                                        border-bottom: 1px solid $custom-color-24;
+                                        vertical-align: top;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .profile_form.loadForm {
+                    background: url('/StartupProfile-portlet/images/gears.svg');
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+    .sp_profile.sp_profile_view {
+
+        section.profile_content {
+            .profile_forms_wrap {
+                .profile_form_navigation {
+                    nav ul li span {
+                        text-align: left;
+                    }
+                }
+                .profile_form {
+                    vertical-align: top;
+
+                    .form {
+                        .logoDiv-viewPage {
+
+                            @include vendor-prefix(border-radius,
+                            5px);
+
+                            border-collapse: initial;
+                            .logoContent-viewPage {
+                                line-height: 0;
+
+                                vertical-align: middle;
+
+                                background-color: $custom-color-7;
+                            }
+                        }
+                        .formViewItem {
+
+                            .formViewContent {
+                                display: none;
+                            }
+                            .formTitle {
+
+                                cursor: pointer;
+                                &:after {
+                                    font-family: "Brandon Grotesque";
+                                    font-weight: $fontWeight-black;
+                                    content: "+";
+                                    font-size: $fontSize-bigger;
+
+                                    line-height: 20pt;
+                                    color: $themeColor;
+                                }
+                            }
+                            &.active {
+
+                                .formTitle {
+                                    &:after {
+
+                                        zoom: 1;
+                                        content: "-";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    input[type=text],
+                    textarea,
+                    select {
+                        background: $custom-color-48 !important;
+                        border: 0 !important;
+                        &:hover,
+                        &:focus {
+                            border: 0 !important;
+                            outline: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tab_helpText {
+        background: $custom-color-86;
+
+        text-align: left;
+
+        .icon_helpText {
+
+            span {
+                @include vendor-prefix(border-radius,
+                50%);
+                border: 2px solid $custom-color-87;
+
+                font-weight: bold;
+                font-size: $fontSize-standard;
+                line-height: 0;
+                color: $custom-color-88;
+            }
+        }
+        .title_helpText {
+
+            span {
+                text-transform: uppercase;
+                font-size: $fontSize-smaller;
+                color: $custom-color-89;
+            }
+        }
+        .content_helpText {
+
+            span {
+                font-size: $fontSize-smaller;
+                color: $custom-color-89;
+            }
+        }
+        .arrow_helpText {
+
+            zoom: 1;
+
+            line-height: 0;
+            &:after {
+                border-bottom: 15px solid transparent;
+                border-left: 15px solid $custom-color-86;
+
+                zoom: 1;
+                content: "";
+            }
+            &:before {
+                border-top: 15px solid transparent;
+                border-left: 15px solid $custom-color-86;
+
+                zoom: 1;
+                content: "";
+            }
+        }
+    }
+    /** SP-RATINGS **/
+    .sp_ratings {
+
+        text-align: center;
+
+        .ratingsSection_wrap {
+
+            background: $themeColor;
+            border: 1px solid $themeColor;
+            @include vendor-prefix(border-radius,
+            5px);
+
+            zoom: 1;
+
+            .rs_container {
+
+                .rs_link {
+
+                    a {
+                        text-transform: uppercase;
+                        color: $themeColor;
+                        text-decoration: underline;
+                        font-size: 9pt;
+                    }
+                }
+                .rs_cta {
+                    background: $custom-color-112;
+
+                    border-top: 1px solid $themeColor;
+                }
+                .rs_ave {
+                    background: $custom-color-112;
+
+                    text-align: center;
+                    span.aveText {
+                        font-size: 12pt;
+                        font-weight: bold;
+                        letter-spacing: 0;
+                        color: $themeColor;
+                        text-transform: uppercase;
+                    }
+                    span.aveValue {
+                        font-size: 52pt;
+                        line-height: 52pt;
+                        color: $themeColor;
+
+                        font-weight: $fontWeight-light;
+                        letter-spacing: 0;
+                    }
+                    span.noRatingsYet {
+                        font-size: 22pt;
+                        line-height: 24pt;
+                        color: $themeColor;
+
+                        font-weight: $fontWeight-light;
+                        letter-spacing: 0;
+                    }
+                    .aveRating {
+                        &.stars {
+                            ul {
+                                li {
+                                    background: transparent url(../../images/rating.png) no-repeat scroll;
+                                }
+                            }
+                        }
+                        ul {
+                            font-size: 0;
+                            li {
+
+                                zoom: 1;
+                                vertical-align: middle;
+                                background-position: 0 0;
+                                &.r-on {
+                                    background-position: 0 -32px;
+                                }
+                                &.r-hover {
+                                    background-position: 0 -64px;
+                                }
+                                &.r-full {
+                                    background-position: 0 -32px;
+                                }
+                                &.r-half {
+                                    background-position: 0 -96px;
+                                }
+                                &.r-50 {
+                                    background-position: 0 -96px;
+                                }
+                                &.r-25 {
+                                    background-position: 0 -128px;
+                                }
+                                &.r-75 {
+                                    background-position: 0 -160px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .rs_items {
+
+                    background: $custom-color-112;
+                }
+            }
+        }
+    }
+    .aui-rating {
+        .aui-rating-label-element {
+
+            text-align: center;
+            vertical-align: middle;
+        }
+        .aui-rating-element {
+
+            zoom: 1;
+            vertical-align: middle;
+
+            background: transparent url(../images/rating.png) no-repeat scroll 0 0;
+            &.aui-rating-element-on {
+                background-position: 0 -32px;
+            }
+            &.aui-rating-element-hover {
+                background-position: 0 -64px;
+            }
+        }
+    }
+    .ratings-pop-wrap {
+
+
+        background: $custom-color-118;
+
+        text-align: center;
+        z-index: 5000;
+        .closePop {
+
+            zoom: 1;
+
+            cursor: pointer;
+        }
+        .ratings-pop-content {
+
+            zoom: 1;
+
+            background: $white;
+
+            text-align: center;
+            @include vendor-prefix(border-radius,
+            5px);
+
+            @include vendor-prefix(box-shadow,
+            1px 1px 5px $custom-color-133);
+
+            .ratings-pop-title {
+                font-size: $fontSize-small;
+                text-transform: uppercase;
+
+                text-align: center;
+                font-weight: 700;
+            }
+            .ratings-pop-subtitle {
+                font-size: $fontSize-smaller;
+
+                color: #555555;
+                font-size: 10pt;
+                font-weight: 400;
+            }
+            .ratings-pop-item {
+
+                zoom: 1;
+                vertical-align: middle;
+            }
+        }
+        .aveRating {
+
+            zoom: 1;
+            vertical-align: middle;
+        }
+    }
+    .attr-def {
+
+        border-left: 2px solid $themeColor;
+    }
+    .show-inline {
+
+        zoom: 1;
+    }
+
+
+    /** END SP-RATINGS **/
+    /** Drag Drop **/
+    .fd_container {
+
+        background: $white;
+        font-size: 12pt;
+        border-collapse: initial;
+
+        border: 2px dashed $color-border;
+        &.fd_hover {
+            border: 1px dashed $custom-color-90;
+            .fdWrap {
+                color: $white;
+            }
+        }
+        .fdWrap {
+
+            vertical-align: middle;
+            text-align: center;
+
+            z-index: 1;
+
+            font-size: $fontSize-medium;
+            text-transform: uppercase;
+            color: $gray;
+            &.hover {
+                box-shadow: inset 0 0px 6px 0px #909090;
+
+                cursor: default;
+                transition: all ease-in-out .5s;
+                -webkit-transition: all ease-in-out .5s;
+                color: white;
+            }
+        }
+        .imageContainer {
+
+            z-index: 1;
+
+            text-align: center;
+        }
+    }
+
+    .display_view {
+        font-size: 0;
+
+        text-align: center;
+        .col_section {
+
+            input[type="text"],
+            input[type="password"],
+            input[type="file"],
+            select,
+            textarea,
+            .textarea {
+                border: 0 !important;
+                background: none !important;
+                border-bottom: 1px solid $custom-color-34 !important;
+                &:hover,
+                &:focus {
+                    border-bottom: 1px solid $custom-color-34 !important;
+                }
+            }
+        }
+    }
+    .col_section {
+
+        zoom: 1;
+        vertical-align: top;
+        text-align: left;
+
+        .col_section_title {
+
+            h2 {
+                font-size: 12pt;
+                font-weight: $fontWeight-medium;
+                text-transform: none;
+                color: $medium-gray;
+            }
+        }
+
+        &.col_section_20 {
+
+            font-size: 12pt;
+
+            .col_section_item {
+                .col_applyItem {
+                    text-align: center;
+                    position: relative;
+
+
+                    &.sepOr {
+                        border-top: 1px solid $custom-color-91;
+                    }
+                    span {
+                        font-weight: $fontWeight-light;
+                        font-style: italic;
+                        color: $black;
+
+                        zoom: 1;
+                        font-size: 10pt;
+                    }
+                    a {
+                        &.genCTA {
+
+                            zoom: 1;
+
+                            @include vendor-prefix(border-radius,
+                            4px);
+                            span {
+                                color: $white;
+                                font-style: normal;
+                                text-transform: uppercase;
+                            }
+                        }
+                        &.btn-callout {
+
+                            span {
+                                color: $white;
+                                font-style: normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sepOr {
+        &:before {
+            content: "OR";
+            font-size: 12pt;
+            text-transform: uppercase;
+            color: $custom-color-91;
+            background: $white;
+            @include vendor-prefix(border-radius,
+            50%);
+
+            zoom: 1;
+
+            vertical-align: middle;
+        }
+    }
+    #toggler {
+        background: $custom-color-24;
+        .toggler_item {
+
+            cursor: pointer;
+            background: $light-gray;
+            .toggler_content {
+
+                background: $white;
+                ul {
+
+                    font-size: 9pt;
+                    li {
+
+                        a {
+                            color: $bodyColor;
+                            font-size: $fontSize-smaller;
+                            font-weight: $fontWeight-bold;
+                            &:hover {
+                                color: $themeColor;
+                            }
+                        }
+                    }
+                }
+            }
+            span {
+                text-transform: uppercase;
+                font-size: $fontSize-smaller;
+                font-weight: bold;
+
+                b {
+                    font-weight: $fontWeight-bold;
+                }
+            }
+            &.active {
+                background: $custom-color-92;
+                color: $bodyColor;
+                font-weight: $fontWeight-bold;
+                .toggler_content {
+                    background: $custom-color-134;
+                }
+            }
+        }
+    }
+    .dockbar-ready {
+
+        .sp_profile_view {
+            .posFixed {
+
+                transition: 1s;
+                &.posFixed-scrolled {
+
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+
+    .form_review,
+    .form_disabled,
+    .normal_view,
+    .display_view {
+        input[type=text]:focus,
+        textarea:focus {
+            box-shadow: 0 !important;
+            border: 0 !important;
+        }
+        input,
+        textarea {
+
+            @include vendor-prefix(border-radius,
+            5px !important);
+            border: 0 !important;
+            border-bottom: 1px solid $custom-color-67 !important;
+
+            @include vendor-prefix(transition,
+            all ease-in-out .3s !important);
+            font-size: 10pt !important;
+            letter-spacing: 1px !important;
+            &:hover {
+                box-shadow: 0 !important;
+                border: 0 !important;
+                border-bottom: 1px solid $custom-color-67 !important;
+            }
+        }
+        select {
+
+            @include vendor-prefix(appearance,
+            none);
+            @include vendor-prefix(border-radius,
+            5px !important);
+
+            color: $custom-color-36;
+            font-size: 10pt !important;
+            letter-spacing: 1px !important;
+
+            background: transparent !important;
+            border: 0;
+        }
+        input[type="Submit"] {
+
+            zoom: 1;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            cursor: pointer;
+            border: 0;
+        }
+        input[type="Button"] {
+
+            zoom: 1;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            cursor: pointer;
+            border: 0;
+        }
+        input[type="Cancel"] {
+
+            zoom: 1;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            border: 0;
+            cursor: pointer;
+        }
+        input[type="Submit"]:hover {}
+        input[type="Cancel"]:hover {}
+        .formFields_data {
+
+            .form_section {
+
+                span.form_section_title {
+
+                    color: $themeColor;
+                    font-size: $fontSize-small;
+                    font-weight: $fontWeight-medium;
+                    text-transform: uppercase;
+                    border-bottom: 1px solid $themeColor;
+                }
+                .form_section_content {
+
+                    font-size: 0;
+                    .fieldName {
+
+                        zoom: 1;
+
+                        font-size: 12pt;
+                        font-weight: $fontWeight-medium;
+                        color: $black;
+                        text-transform: uppercase;
+                        background: $custom-color-24;
+                        border-bottom: 1px solid $custom-color-24;
+                        vertical-align: top;
+                    }
+                    .fieldContent {
+
+                        zoom: 1;
+
+                        font-size: 12pt;
+                        font-weight: $fontWeight-light;
+                        font-style: italic;
+                        color: $black;
+                        border-bottom: 1px solid $custom-color-24;
+                        vertical-align: top;
+                    }
+                }
+            }
+        }
+        .fd_container {
+            background: transparent;
+            border: 0;
+            text-align: center;
+
+            &:hover {
+                background: transparent;
+                border: 0;
+            }
+        }
+    }
+    .animated {
+        .d_left {
+            @include vendor-prefix(animation-delay,
+            .3s);
+        }
+        .d_right {
+            @include vendor-prefix(animation-delay,
+            .3s);
+        }
+        .d_down {
+            @include vendor-prefix(animation-delay,
+            .4s);
+        }
+    }
+    .sp-challenge-action-portlet {
+
+        .innerPage_header {
+            background-attachment: fixed;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+    /** Dashboard **/
+    .my-challenges-action-portlet {
+
+
+        h2 {
+            font-size: $fontSize-small;
+            text-transform: uppercase;
+            line-height: 14pt;
+        }
+        .result_item {
+
+            text-align: left;
+            box-shadow: none;
+            border-bottom: 1px solid $custom-color-24;
+            background: $light-gray;
+            figure,
+            .result_item_image {
+
+                zoom: 1;
+            }
+            .result_item_title {
+
+                zoom: 1;
+
+                background: none;
+                color: $black;
+                font-size: 12pt;
+                text-transform: none;
+                text-align: left;
+                vertical-align: top;
+
+                span {
+                    font-size: 14.5pt;
+                    line-height: 16pt;
+                }
+            }
+            .result_item_author {
+
+                zoom: 1;
+
+                text-transform: uppercase;
+            }
+        }
+    }
+    .my-startups-portlet {
+
+        .myStartups {
+
+            border: 1px solid #e1e1e1;
+            background: $white!important;
+        }
+        h2 {
+            font-size: $fontSize-small;
+            text-transform: uppercase;
+            line-height: 14pt;
+            font-weight: $fontWeight-medium;
+        }
+        .mystartup_content {
+
+            font-size: $fontSize-standard;
+
+            li {
+
+                position: relative;
+                span {
+
+                    zoom: 1;
+                    vertical-align: middle;
+
+                    &.startup_logo {
+
+                        vertical-align: middle;
+
+                        line-height: 0;
+                    }
+                    a {
+
+                        zoom: 1;
+                        vertical-align: middle;
+                        line-height: 0;
+
+                        img {
+
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /** End Dashboard **/
+    .no_height {
+
+        @include vendor-prefix(transition,
+        height ease-in-out 1s);
+    }
+    .w_height {
+        @include vendor-prefix(transition,
+        height ease-in-out 1s);
+    }
+    .posFixed {
+
+        -webkit-transition: top 0.5s, bottom 0.5s;
+    }
+
+    .section_title {
+        font-size: $fontSize-small;
+        line-height: 18pt;
+
+        font-weight: $fontWeight-light;
+    }
+}
+
+
+@include screen(320px,
+767px) {
+
+    .productDiv {
+
+        text-align: center;
+    }
+    .infoDiv {
+
+        .h4 {
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+
+
+/**Changes Done by karthik **/
+
+html.aui.lp-fh .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation,
+html.aui .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation,
+html.aui.ab-us .sp_filter .profile_content .profile_forms_wrap .profile_form_navigation {
+
+    background: #ffffff;
+    border: 1px solid #bfbfbf;
+    -webkit-transition: all ease-in 0.5s;
+    -ms-transition: all ease-in 0.5s;
+    -moz-transition: all ease-in 0.5s;
+    -o-transition: all ease-in 0.5s;
+    transition: all ease-in 0.5s;
+}
+
+.aui .sp_profile section.profile_content .profile_forms_wrap .profile_form input[type="file"] {
+    outline: none;
+    border: 1px solid #bfbfbf;
+    background: #fafafa;
+
+    font-size: 10pt;
+    letter-spacing: 1px;
+
+    color: #333333;
+
+    text-transform: none;
+    -webkit-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+    -ms-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+    -moz-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+    -o-transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+    transition: all cubic-bezier(0.06, 0.76, 0.25, 0.96) 0.4s;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}

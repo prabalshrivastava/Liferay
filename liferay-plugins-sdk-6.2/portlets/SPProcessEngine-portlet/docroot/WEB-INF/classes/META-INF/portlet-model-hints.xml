@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.processbuilder.model.PECustomActionInfo">
+		<field name="uuid" type="String" />
+		<field name="spPEActionId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="actionClassName" type="String" />
+		<field name="title" type="String" />
+		<field name="defaultConfiguration" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+	</model>
+	<model name="com.sambaash.platform.srv.processbuilder.model.PEDummyEntity">
+		<field name="uuid" type="String" />
+		<field name="spPEDummyEntityId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.processbuilder.model.PEProcess">
+		<field name="uuid" type="String" />
+		<field name="spPEProcessId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="definiton" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="entityClassId" type="long" />
+		<field name="agentEnabled" type="boolean" />
+		<field name="agentRoleIds" type="String" />
+		<field name="approveRoleIds" type="String" />
+		<field name="miscData" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="diagramData" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="entityTitle" type="String" />
+		<field name="approverPageName" type="String" />
+		<field name="userPageName" type="String" />
+		<field name="agentPageName" type="String" />
+		<field name="status" type="int" />
+		<field name="applicantRoleId" type="long" />
+		<field name="supervisorRoleIds" type="String" />
+		<field name="supervisorPageName" type="String" />
+		<field name="closedReasonVocId" type="long" />
+		<field name="accountCreationEmailEnabled" type="boolean" />
+		<field name="enableAssignment" type="boolean" />
+		<field name="editFeeDetails" type="boolean" />
+		<field name="scheduleModelId" type="long" />
+		<field name="enableSingleSubmission" type="boolean" />
+		<field name="orientation" type="String" />
+		<field name="showHeader" type="boolean" />
+		<field name="enableFirstStepProgress" type="boolean" />
+		<field name="subProductTypeId" type="long" />
+		<field name="productTypeId" type="long" />
+		<field name="singleSubmissionErrorMsg" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.processbuilder.model.PEProcessAudit">
+		<field name="uuid" type="String" />
+		<field name="spPEProcessAuditId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spPEProcessStateId" type="long" />
+		<field name="spPEProcessId" type="long" />
+		<field name="entityClassId" type="long" />
+		<field name="entityId" type="long" />
+		<field name="userIdProcess" type="long" />
+		<field name="statusTypeId" type="long" />
+		<field name="spPEProcessStageId" type="long" />
+		<field name="nodeId" type="long" />
+		<field name="status" type="String" />
+		<field name="userIdSupervisor" type="long" />
+		<field name="userIdAgent" type="long" />
+		<field name="spPEClosedStageId" type="long" />
+		<field name="type" type="String" />
+		<field name="doneBy" type="String" />
+		<field name="action" type="String" />
+		<field name="field1" type="String" />
+		<field name="field2" type="String" />
+		<field name="field3" type="String" />
+		<field name="field4" type="String" />
+		<field name="field5" type="long" />
+		<field name="storageId" type="long" />
+		<field name="data1" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="data2" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="sourceClassId" type="long" />
+		<field name="sourceEntityID" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.processbuilder.model.PEProcessStage">
+		<field name="uuid" type="String" />
+		<field name="spPEProcessStageId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="style" type="String">
+			<hint name="max-length">20000</hint>
+		</field>
+		<field name="seqNo" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.processbuilder.model.PEProcessState">
+		<field name="uuid" type="String" />
+		<field name="spPEProcessStateId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spPEProcessId" type="long" />
+		<field name="entityClassId" type="long" />
+		<field name="entityId" type="long" />
+		<field name="userIdProcess" type="long" />
+		<field name="userIdCreator" type="long" />
+		<field name="statusTypeId" type="long" />
+		<field name="spPEProcessStageId" type="long" />
+		<field name="status" type="String" />
+		<field name="nodeId" type="long" />
+		<field name="nodeIdLastProcessed" type="long" />
+		<field name="nodeIdLastDisplayed" type="long" />
+		<field name="nodeIdLastDataSubmitted" type="long" />
+		<field name="data" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="lastErrorCode" type="long" />
+		<field name="lastErrorMsg" type="String" />
+		<field name="lastErrorDate" type="Date" />
+		<field name="currentStatusTypeApprovers" type="String" />
+		<field name="currentNodeSubmitters" type="String" />
+		<field name="lock" type="int" />
+		<field name="lockDate" type="Date" />
+		<field name="userIdSupervisor" type="long" />
+		<field name="userIdAgent" type="long" />
+		<field name="closedStageId" type="long" />
+		<field name="closedDate" type="Date" />
+		<field name="closedReasonCatId" type="long" />
+		<field name="closedDescription" type="String" />
+		<field name="convertedFromProcessStateId" type="long" />
+		<field name="convertedToProcessStateId" type="long" />
+		<field name="activeStatus" type="int" />
+		<field name="amount" type="String" />
+		<field name="sourceClassId" type="long" />
+		<field name="sourceEntityID" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.processbuilder.model.PEProcessStatusType">
+		<field name="uuid" type="String" />
+		<field name="spPEProcessStatusTypeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spPEProcessId" type="long" />
+		<field name="statusName" type="String" />
+		<field name="seqNo" type="long" />
+		<field name="approveTemplateId" type="long" />
+		<field name="rejectTemplateId" type="long" />
+		<field name="spPEProcessStageId" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.processbuilder.model.PERule">
+		<field name="uuid" type="String" />
+		<field name="spPERuleId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="spPERuleSetId" type="long" />
+		<field name="name" type="String" />
+		<field name="type" type="String" />
+		<field name="definition" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="sequenceNO" type="long" />
+	</model>
+	<model name="com.sambaash.platform.srv.processbuilder.model.PERuleSet">
+		<field name="uuid" type="String" />
+		<field name="spPERuleSetId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="componentType" type="String" />
+		<field name="componentId" type="String" />
+		<field name="status" type="long" />
+		<field name="formVersion" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.processbuilder.model.PESupervisor">
+		<field name="spPESupervisorId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="filter1" type="String" />
+		<field name="filter2" type="String" />
+		<field name="filter3" type="String" />
+		<field name="filter4" type="String" />
+		<field name="filter5" type="String" />
+		<field name="supervisorId" type="long" />
+	</model>
+</model-hints>

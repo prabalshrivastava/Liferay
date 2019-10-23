@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 6.2.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_6_2_0.dtd">
+
+<resource-action-mapping>
+	<portlet-resource>
+		<portlet-name>invigilator-attendance</portlet-name>
+		<permissions>
+			<supports>
+				<action-key>VIEW_LISTING</action-key>
+				<action-key>VIEW_MODEL</action-key>
+				<action-key>EXPORT_MODEL</action-key>
+				<action-key>RECORD_MANUALLY_MODEL</action-key>
+				<action-key>PRINT_MODEL</action-key>
+				<action-key>RECORD_BY_BARCODE_MODEL</action-key>
+				<action-key>EXPORT_AS_PDF_MODEL</action-key>
+			</supports>
+			<site-member-defaults>
+				<action-key>VIEW_LISTING</action-key>
+			</site-member-defaults>
+			<guest-defaults>
+				<action-key>VIEW_LISTING</action-key>
+			</guest-defaults>
+			<guest-unsupported>
+				<action-key>VIEW_MODEL</action-key>
+				<action-key>EXPORT_MODEL</action-key>
+				<action-key>RECORD_MANUALLY_MODEL</action-key>
+				<action-key>PRINT_MODEL</action-key>
+				<action-key>RECORD_BY_BARCODE_MODEL</action-key>
+				<action-key>EXPORT_AS_PDF_MODEL</action-key>
+			</guest-unsupported>
+		</permissions>
+	</portlet-resource>
+
+</resource-action-mapping>

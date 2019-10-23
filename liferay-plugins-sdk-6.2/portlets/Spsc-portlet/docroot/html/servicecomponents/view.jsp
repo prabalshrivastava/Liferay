@@ -1,0 +1,1 @@
+<%@ include file="servicecomponentgroup_list.jsp" %>

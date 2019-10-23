@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.extendedprofile.model.impl.SPCertificationModelImpl">
+		<attributes>
+			<id name="classPk" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="certificationId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.extendedprofile.model.impl.SPCompetencyModelImpl">
+		<attributes>
+			<id name="classpk" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="categoryId" />
+			<basic name="competencyId" />
+			<basic name="competencyLevelId" />
+			<basic name="belongsToJobRole" />
+			<basic name="publicView" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.extendedprofile.model.impl.SPJobRoleModelImpl">
+		<attributes>
+			<id name="spJobRoleId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="functionalGroupId" />
+			<basic name="JobLevelId" />
+			<basic name="careerPathId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.extendedprofile.model.impl.SPCertificationImpl" name="SPCertification">
+		<table name="SPCertification" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.extendedprofile.model.impl.SPCompetencyImpl" name="SPCompetency">
+		<table name="SPCompetency" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.extendedprofile.model.impl.SPJobRoleImpl" name="SPJobRole">
+		<table name="SPJobRole" />
+		<attributes />
+	</entity>
+</entity-mappings>

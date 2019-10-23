@@ -1,0 +1,424 @@
+@import "sp_custom_variables";
+@import "sp_mixins";
+@import "sp_media-queries";
+
+/** linked search portlet **/
+
+.group-title-2{
+	color: $custom-color-6;
+	font-size: 10pt;
+	text-transform: uppercase;
+}
+
+.checkbox-label {
+    width: 84%;
+}
+
+.filter-category-item{
+	padding-bottom:20px;
+}
+
+.selectedCatgUrl {
+    background-color: $themeColor1;
+    color: $white;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    @include vendor-prefix(transition, all cubic-bezier(0.06,0.76,0.25,0.96) .4s);
+    font-size: $fontSize;
+}
+
+.SPLinkedFilterSearch-portlet{
+	
+	.normalText{
+		color: $fontColor!important;
+    	cursor: default!important;
+	}
+	
+	.wcResult-type{
+		font-size: 8pt;
+	    font-weight: $fontWeight-semibold;
+	    text-transform: uppercase;
+	}
+
+	.wcResult-mobile{
+		display: none;
+	}
+
+	.searchHeader{
+
+		.searchHeaderText{
+			h1{
+				color: $custom-color-6;
+				font-size: 24pt;
+				font-weight: $fontWeight-semibold;
+			}
+		}
+	}
+
+
+	#webContent-searchFilters{
+
+		@include vendor-prefix(box-sizing,border-box);
+
+		.filter-category-item{
+			ul{
+				li{
+
+					&.active{
+						background-color: $custom-color-28;
+
+						a{
+							span{
+								font-weight: $fontWeight-semibold;
+							}
+						}
+					}
+
+				}
+			}
+		}
+	}
+	.webContent-searchResults-wrap{
+
+		border-left: 1px solid $border-gradient-color2;
+		@include vendor-prefix(box-sizing,border-box);
+
+		.searchFilter-Category{
+		    background: $custom-color-39;
+		    color: $themeColor;
+
+		    .selectedCatgName{
+		    	font-size: 16pt;
+		    	font-weight: $fontWeight-semibold;
+		    }
+		     .selectedCatgDesc{
+		     	font-size: 10pt;
+		     }
+		     .selectedCatgUrl{
+	    			a{
+		    			color:$white;
+		    			text-decoration:none;
+		    			font-size: $fontSize;
+			    			&:hover{
+			    				color:$themeColor;
+			    			}
+		    			}
+		    		}
+			}
+
+		#webContent-searchResults,#searchResults{
+
+			 .wcResult-stream-item{
+
+			  	.wcResult-image{
+			  		@include vendor-prefix(box-sizing,border-box);
+  			  	 }
+			  	.wcResult-body{
+
+			  		@include vendor-prefix(box-sizing,border-box);
+			  		font-size: $fontSize;
+			  		padding-top:0;
+
+			  		.wcResult-header{
+			  			.wcResult-title{
+				  			font-size: 14pt;
+				  			text-decoration: none;
+				  			/* font-weight: $fontWeight-med; */
+				  		}
+
+				  		.wcResult-provider{
+
+				  			.wcResult-type{
+				  				font-size: 8pt;
+				  				color: $fontColor;
+				  				font-weight: $fontWeight-semibold;
+				  				text-transform: uppercase;
+
+
+				  				&.type-Module{
+				  					color: $custom-color-43;
+				  				}
+
+				  				&.type-Program{
+				  					color: $custom-color-42;
+				  				}
+				  			}
+				  		}
+
+
+
+			  		}
+
+			  		.wcResult-desc{
+			  			line-height: 14pt;
+			  			font-size: 10pt;
+			  		}
+
+			  		.wcResult-details{
+
+			  			span.detail-label{
+			  				font-size: 8pt;
+			  				color: $custom-color-44;
+			  			}
+			  			.wcResult-duration{
+			  				font-size: 8pt;
+			  				/* font-weight: $fontWeight-med; */
+			  				color: $themeColor;
+
+			  				&:not(:empty)::before{
+			  					content: "\f111";
+			  					color: $custom-color-44;
+			  					font-family: "FontAwesome";
+			  					font-size: 3pt;
+			  				}
+			  			}
+			  			.wcResult-size{
+			  				font-size: 8pt;
+			  				/* font-weight: $fontWeight-med; */
+			  				color: $themeColor;
+
+			  				&:not(:empty)::before{
+			  					content: "\f111";
+			  					color: $custom-color-44;
+			  					font-family: "FontAwesome";
+			  					font-size: 3pt;
+			  					text-align: center;
+			  				}
+			  			}
+			  			.wcResult-splz{
+			  				font-size: 8pt;
+			  				/* font-weight: $fontWeight-med; */
+			  				color: $themeColor;
+
+			  				&:not(:empty)::before{
+			  					content: "\f111";
+			  					color: $custom-color-44;
+			  					font-family: "FontAwesome";
+			  					font-size: 3pt;
+			  				}
+			  			}
+			  		}
+			  	}
+			 }
+		}
+
+		.search-loadMore{
+
+			div{
+				background: $custom-color-34;
+				color: $themeColor;
+				font-size: 10pt;
+			}
+		}
+	}
+}
+
+.searchField{
+	@include vendor-prefix(border-radius, 4px);
+
+	input[type="text"]{
+		width: 80%;
+		@include vendor-prefix(border-radius, 0);
+	}
+
+	.search-btn{
+		input{
+			@include vendor-prefix(border-radius, 0);
+		}
+
+		&::before{
+			color:$white;
+			font-size: $fontSize;
+			font-weight: $fontWeight-semibold;
+			content: "\f0b0";
+			font-family: "FontAwesome";
+			background:$themeColor;
+			@include vendor-prefix(box-sizing, border-box);
+		}
+	}
+}
+
+.filter-btn{
+		background: $themeColor;
+		@include vendor-prefix(border-radius, 4px);
+	&::before{
+		font-size: $fontSize;
+		color: $white;
+		font-weight: $fontWeight-semibold;
+		content: "\f0b0";
+		font-family: "FontAwesome";
+		@include vendor-prefix(box-sizing, border-box);
+	}
+}
+
+ @include screen(768px, 1024px) { 
+	.checkbox-label {
+	    width: 80%;
+	}
+}
+
+@include screen(320px, 1023px) { 
+ 
+.aui .wcResult-provider-wrap{
+ 	display: block;
+    position: relative;
+    text-align: left;
+ }
+ 
+.aui .SPLinkedFilterSearch-portlet .webContent-searchResults-wrap #searchResults .wcResult-stream-item .wcResult-body .wcResult-header .wcResult-provider{
+     float: none;
+ }
+ 
+ .webContent-search-wrap-content{
+	margin:20px auto;
+	padding:0;
+}
+
+.SPLinkedFilterSearch-portlet .webContent-searchResults-wrap .searchFilter-Category{
+    min-height: 200px;
+    padding-bottom: 70px;
+}
+
+.SPLinkedFilterSearch-portlet{
+
+		.wcResult-mobile{
+			display: block !important;
+		}
+		.searchHeader {
+			padding: 20px;
+			position: fixed;
+
+			top: 60px;
+			left: 0;
+			display: block;
+			width: 100%;
+			background: $white;
+			z-index: 310;
+			@include vendor-prefix(box-sizing,border-box);
+
+			.searchHeaderText {
+				display: none;
+				h1{
+
+				}
+			}
+
+			.openSearch{
+				width: 100%;
+				text-align: center;
+
+				#openSearchText{
+					width: 70%!important;
+					margin-right: 10px;
+				}
+			}
+
+			.search-btn{
+				display: none;
+			}
+
+			.filter-btn{
+				display: inline-block;
+				*display: inline;
+				zoom: 1;
+
+				@include animate-cubic(.4s);
+
+				&.active-filter{
+					background: $custom-color-28;
+
+					&::before{
+						color: $themeColor;
+					}
+				}
+
+
+			}
+		}
+
+		#webContent-searchFilters{
+			width: 100%;
+			display: block;
+			position:fixed;
+			top: -100%;
+			z-index: 300;
+
+			margin-top: 140px;
+			background: $custom-color-28;
+
+			@include vendor-prefix(box-sizing, border-box);
+
+			padding: 40px;
+
+			height: 60%;
+
+			@include animate-cubic(.4s);
+		}
+
+		.webContent-search-content{
+			margin-top: 110px;
+		}
+
+		.webContent-searchResults-wrap{
+			width: 100%;
+			margin: 0;
+			#webContent-searchResults,#searchResults{
+				padding: 0 20px ;
+
+				.search-stream-mosaic-block-content{
+					margin-bottom: 30px;
+				}
+
+				 .wcResult-stream-item{
+				 	height: auto;
+				 	.wcResult-image{
+				 		width: 30%;
+				 		height: 100px;
+				 	}
+				 	.wcResult-body {
+				 	 	width: 70%;
+				 	 	padding-left: 20px;
+
+				 	 	.wcResult-header{
+				 	 		
+				 	 		.wcResult-title{
+				 	 			display: block;
+				 	 			line-height: 17pt;
+				 	 		}
+
+				 	 		.wcResult-provider{
+				 	 			display: block;
+				 	 			position: relative;
+				 	 			text-align: left;
+				 	 			width: 50px;
+				 	 		}
+				 	 	}
+				 	 	.wcResult-desc{
+				 	 		display: none;
+
+
+				 	 	}
+				 	 	.wcResult-details{
+				 	 		margin-top: 10px;
+				 	 	}
+				 	 }
+				 	 .wcResult-desc{
+				 	 		max-height: 100%;
+				 	 		height: auto;
+				 	 		font-size: 10pt;
+				 	 		padding: 10px 0;
+
+
+				 	 }
+
+				 }
+
+			}
+		}
+
+	}
+}

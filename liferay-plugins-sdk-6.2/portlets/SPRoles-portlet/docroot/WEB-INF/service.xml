@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.sambaash.platform.srv.roles">
+	<author>gauravvijayvergia</author>
+	<namespace>SPRoles</namespace>
+
+	<entity name="SPRoles" uuid="true" table="SPRoles" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spRoleId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="roleId" type="long" />
+		<column name="categoryId1" type="long" />
+		<column name="categoryId2" type="long" />
+		<column name="countryCategoryId" type="long" />
+		<column name="departmentCategoryId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="roleId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="RoleId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="roleId" />
+		</finder>
+
+		<finder name="CategoryId1" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="categoryId1" />
+		</finder>
+
+		<finder name="RoleIdCategoryId1" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="roleId" />
+			<finder-column name="categoryId1" />
+		</finder>
+
+		<finder name="RoleIdCategoryId2" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="roleId" />
+			<finder-column name="categoryId2" />
+		</finder>
+
+		<finder name="RoleIdCategoryId1AndCategoryId2" return-type="SPRoles">
+			<finder-column name="groupId" />
+			<finder-column name="roleId" />
+			<finder-column name="categoryId1" />
+			<finder-column name="categoryId2" />
+		</finder>
+
+		<finder name="CountryCategoryId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="countryCategoryId" />
+		</finder>
+
+		<finder name="DepartmentCategoryId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="departmentCategoryId" />
+		</finder>
+
+		<finder name="CountryCategoryIdAndDepartmentCategoryId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="countryCategoryId" />
+			<finder-column name="departmentCategoryId" />
+		</finder>
+
+	</entity>
+
+	<entity name="SPCategoriesMapping" uuid="true" table="SPCategoriesMapping" local-service="true" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="spCategoryMappingId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="createdVocabularyId" type="long" />
+		<column name="mainCategoryId" type="long" />
+		<column name="subCategoryId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="mainCategoryId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="CreatedVocabularyId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="createdVocabularyId" />
+		</finder>
+
+		<finder name="MainCategoryId" return-type="Collection">
+			<finder-column name="groupId" />
+			<finder-column name="mainCategoryId" />
+		</finder>
+
+		<finder name="MainAndSubCategoryId" return-type="SPCategoriesMapping">
+			<finder-column name="groupId" />
+			<finder-column name="mainCategoryId" />
+			<finder-column name="subCategoryId" />
+		</finder>
+
+	</entity>
+
+</service-builder>

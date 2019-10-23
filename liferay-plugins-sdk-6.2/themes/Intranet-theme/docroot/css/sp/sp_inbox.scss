@@ -1,0 +1,183 @@
+@import "sp_custom_variables";
+@import "sp_mixins";
+@import "sp_media-queries";
+
+
+.inbox-portlet{
+	.max-width{
+	margin:0 auto!important;
+	}
+}
+
+.ip-to-input-outer input[type=text]:focus{
+	border:none!important;
+}
+
+.table-header-bg {
+    background-color: #e3e4e9;
+}
+
+.callout-notification-count {
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 9pt;
+    line-height: 9pt;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+.sp-inbox{
+
+	.sp-inbox-menu{
+		.sp-inbox-menu-list {
+			ul{
+				li{
+
+					&:hover{
+						> a{
+							font-weight: bold;
+						}
+					}
+					&.in-menu-item{
+						color: $black;
+						
+						> span{
+							 &:hover{
+							 	color:$themeColor;
+							 }
+						}
+					}
+
+					ul{
+						li{
+								> span{
+									    &:hover{
+									    color:$themeColor;
+										}
+								}
+							
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.sp-inbox-filters{
+		@include vendor-prefix(box-sizing, border-box);
+		@include animate-cubic(.4s);
+	}
+
+	.sp-inbox-actions{
+		border-bottom: 1px solid $color-border;
+		@include vendor-prefix(box-sizing, border-box);
+		@include animate-cubic(.4s);
+
+	}
+
+	.sp-inbox-section{
+		&.sp-inbox-section-left{
+		background-color: $custom-color-5;
+			@include vendor-prefix(box-sizing, border-box);
+			@include animate-cubic(.4s);
+		}
+	}
+
+	#contentBodyDiv{
+		border-top: 1px solid #e8e8e8;
+	}
+
+	#cmpseMsgDiv{
+		#cmpMsgToInnerDiv{
+			.ip-to-input-outer{
+				background-color: transparent;
+				border: none !important;
+				&:focus, &:hover{
+					border: none !important;
+				}
+			}
+			ul.horizontal{
+				li{
+					background-color: $themeColor;
+border-radius: 25px;
+					
+					.sp-group-clearfix{
+						line-height: 0;
+						
+						.sp-group-mrm{
+							line-height: 0;
+						}
+						
+						> .sp-group-ui-dib{
+							
+							.ip-si-x{
+								font-size: 8pt;
+							    font-weight: bold;
+							    color: $custom-color-67;
+							  
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	.ip-sb{
+
+		.ip-sb-options{
+			background-color: $light-gray;
+			
+			.ip-sb-option{
+				&:hover, &.hover{
+					background-color: $white;
+				}
+			}
+
+			.sp-group-mrm{
+				line-height: 0;
+			}
+
+		}
+	}
+
+	#mailsTable{
+		tr{
+			border-bottom: 1px solid $custom-color-1;
+
+
+			@include animate-cubic(.4s);
+
+			&#mailHeaderRow{
+				td{
+					    font-weight: bold;
+					    text-transform: uppercase;
+					    font-size: 9pt;
+					    line-height: 9pt;
+				}
+			}
+
+			&.msgUnread{
+
+				background-color: $custom-color-68;
+
+				td{
+					font-weight: $fontWeight-medium;
+
+					&#subject{
+						color: $themeColor;
+					}
+				}
+			}
+
+			td{
+				line-height: 11pt;
+			}
+		}
+	}
+
+}

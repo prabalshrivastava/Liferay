@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.spasset.model.impl.SPAssetEntryModelImpl">
+		<attributes>
+			<id name="spAssetEntryId" />
+			<basic name="uuid_" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dlFolderId" />
+			<basic name="coverFileEntryId" />
+			<basic name="spAssetTypeId" />
+			<basic name="spAssetEntrySubType" />
+			<basic name="corporateProfileUserId" />
+			<basic name="classNameId" />
+			<basic name="title" />
+			<basic name="urlTitle" />
+			<basic name="description" />
+			<basic name="content" />
+			<basic name="link" />
+			<basic name="status" />
+			<basic name="statusByUserName" />
+			<basic name="type">
+				<column name="TYPE_" />
+			</basic>
+			<basic name="modifiedBy" />
+			<basic name="allowPingbacks" />
+			<basic name="allowTrackbacks" />
+			<basic name="trackbacks" />
+			<basic name="permissionType" />
+			<basic name="agreedToTermsOfUse" />
+			<transient name="className" />
+			<transient name="corporateProfileUserUuid" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spasset.model.impl.SPAssetTypeModelImpl">
+		<attributes>
+			<id name="spAssetTypeId" />
+			<basic name="uuid_" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="spAssetTypeName" />
+			<basic name="status" />
+			<basic name="modifiedBy" />
+			<basic name="spAssetTypeCreateUrl" />
+			<basic name="spAssetTypeDetailUrl" />
+			<basic name="spAssetTypeInnerDetailUrl" />
+			<basic name="requiredTermsOfUse" />
+			<basic name="requiredLogin" />
+			<basic name="categoryMandatory" />
+			<basic name="notifyUponCreation" />
+			<basic name="notificationTemplateId" />
+			<basic name="allowedFileTypes" />
+			<basic name="maxFileSize" />
+			<basic name="minImageHeight" />
+			<basic name="minImageWidth" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.spasset.model.impl.SPAssetEntryImpl" name="SPAssetEntry">
+		<table name="SPAssetEntry" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spasset.model.impl.SPAssetTypeImpl" name="SPAssetType">
+		<table name="SPAssetType" />
+		<attributes />
+	</entity>
+</entity-mappings>

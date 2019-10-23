@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.spNav-sidebar {
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: solid 1px #d9dce3; }
+
+.spNav-content-wrapper {
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: solid 1px #d9dce3; }
+
+.spNav-sidebar-heading h2 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.29;
+  color: #606060;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-image: linear-gradient(to bottom, #ffffff, #f3f6f8);
+  border-bottom: solid 1px #dce6ef; }
+
+.spNav-sidebarnav {
+  border-bottom: 1px solid #d9dce3; }
+
+.spNav-sidebarnav h3 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #333333;
+  line-height: normal; }
+
+/* The container <div> - needed to position the dropdown content */
+/* Dropdown Content (Hidden by Default) */
+.spNav-dropdown-content {
+  background-color: #ffffff;
+  border: solid 1px #dce0e4;
+  width: 150px;
+  border-radius: 5px;
+  display: none; }
+
+/* Links inside the dropdown */
+.spNav-dropdown-content a.drspNavp {
+  color: #000;
+  text-decoration: none;
+  color: #555;
+  font-size: 9pt; }
+
+/* Change color of dropdown links on hover */
+/* Show the dropdown menu on hover */
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.spNav-sidebarnav ul li.borderSeparate {
+  border-bottom: 1px solid #dce0e4; }
+
+.spNav-sidebarnav ul li a {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #333333;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer; }
+
+.spNav-sidebarnav ul li a:hover {
+  color: #1a5aa5; }
+
+.spNav-sidebarnav ul li a {
+  position: relative; }
+
+.spNav-sidebarnav ul li a.is-active {
+  color: #1a5aa5;
+  font-weight: 700; }
+
+.spNav-sidebarnav ul li a.is-active:after {
+  font-size: 15px;
+  color: #1a5aa5;
+  line-height: normal;
+  background-image: url("../images/spNav-active-arrow.svg");
+  background-size: 100%; }
+
+/*# sourceMappingURL=sp_sidebar_styles.css.map */
+

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.sharing.model.SPSharing">
+		<field name="spSharingId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="userId" type="long" />
+		<field name="emailAddress" type="String" />
+		<field name="classNameId" type="long" />
+		<field name="classPK" type="long" />
+		<field name="duration" type="int" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="url" type="String" />
+		<field name="expired" type="boolean" />
+		<field name="internalShare" type="boolean" />
+		<field name="writePermission" type="boolean" />
+		<field name="viewCount" type="int" />
+	</model>
+</model-hints>

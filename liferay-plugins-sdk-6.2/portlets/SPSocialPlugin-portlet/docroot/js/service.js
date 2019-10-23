@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.SocialSharing", "sambaash.platform.srv.socialplugins.service", "SocialPlugins-portlet");

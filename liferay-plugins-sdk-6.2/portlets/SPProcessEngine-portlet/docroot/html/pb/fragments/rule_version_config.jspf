@@ -1,0 +1,6 @@
+<span style="font-size: 12px">Rule Version </span>
+<select id="ruleVersion">
+	<option value="1">Version 1</option>
+	<option value="2">Version 2</option>
+</select>
+<br>

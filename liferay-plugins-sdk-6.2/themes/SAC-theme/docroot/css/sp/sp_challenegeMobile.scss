@@ -1,0 +1,125 @@
+@import "sp_custom_variables";
+@import "sp_mixins";
+@import "sp_media-queries";
+
+/** Mobile **/
+
+@include screen(320px, 767px) {
+   
+  
+    html.aui {
+       
+       
+        .page_headTitle {
+            i {
+                margin: 10px 15px;
+            }
+        }
+       
+      
+        .commonForm {
+            &.form960 {
+                width: 100%;
+                padding: 0;
+            }
+            .formTextField {
+                width: 100%;
+            }
+            .formTextArea {
+                width: 100%;
+            }
+            .formSelect {
+                width: 100%;
+            }
+            .formRadio {
+                width: 100%;
+            }
+            .formCTA {
+                width: 100%;
+                input[type="button"] {
+                    margin: 0 2px 0 0;
+                }
+            }
+        }
+        .dashboardEventList {
+            height: 220px;
+            .dsh_wrap {
+                .colRight {
+                    width: 40% !important;
+                    img {
+                        width: 100% !important;
+                        height: auto !important;
+                    }
+                }
+                .colLeft {
+                    width: 60% !important;
+                    padding: 10px;
+                }
+            }
+        }
+        .section_item_wrap {
+            padding-bottom: 20px;
+        }
+    }
+}
+
+
+
+@include screen(768px, 1100px, portrait) {
+    html.aui {
+        
+        .page_headTitle {
+            i {
+                margin: 10px 15px;
+            }
+        }
+        
+        .dashboardEventList {
+            height: 220px;
+            .dsh_wrap {
+                .colRight {
+                    width: 40% !important;
+                    img {
+                        width: 100% !important;
+                        height: auto !important;
+                    }
+                }
+                .colLeft {
+                    width: 60% !important;
+                    padding: 10px;
+                }
+            }
+        }
+        .commonForm {
+            &.form960 {
+                width: 100%;
+                padding: 0;
+            }
+            .formTextField {
+                width: 100%;
+            }
+            .formTextArea {
+                width: 100%;
+            }
+            .formSelect {
+                width: 100%;
+            }
+            .formRadio {
+                width: 100%;
+            }
+            .formCTA {
+                width: 100%;
+                input[type="button"] {
+                    margin: 0 2px 0 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

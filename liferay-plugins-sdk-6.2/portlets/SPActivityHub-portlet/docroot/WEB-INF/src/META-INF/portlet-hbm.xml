@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.model.Conversation" />
+	<import class="com.sambaash.platform.srv.model.ConversationUser" />
+	<import class="com.sambaash.platform.srv.model.LogActivity" />
+	<import class="com.sambaash.platform.srv.model.Note" />
+	<class name="com.sambaash.platform.srv.model.impl.ConversationImpl" table="SPConversation">
+		<cache usage="read-write" />
+		<id name="spConversationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="entityClassId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entityClassName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="entityId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sentByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="message" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileEntryId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="associatedWith" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="restricted" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="parentConverstationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="currentPlId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.ConversationUserImpl" table="SPConversationUser">
+		<cache usage="read-write" />
+		<id name="spConversationUserId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="spConversationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sentToUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entityClassId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entityId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.LogActivityImpl" table="SPLogActivity">
+		<cache usage="read-write" />
+		<id name="spLogActivityId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="entityClassId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entityClassName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="entityId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="savedByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="activityTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="activityType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="activityOutcome" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="activityDate" type="org.hibernate.type.TimestampType" />
+		<property name="activityTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="activityContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileEntryId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="associatedWith" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="parentLogActivityId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.NoteImpl" table="SPNote">
+		<cache usage="read-write" />
+		<id name="spNoteId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="entityClassId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="entityClassName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="entityId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="savedByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="noteTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="noteContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileEntryId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="associatedWith" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="parentNoteId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

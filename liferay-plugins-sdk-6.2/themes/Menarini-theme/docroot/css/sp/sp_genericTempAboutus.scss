@@ -1,0 +1,280 @@
+@import "sp_custom_variables";
+@import "sp_mixins";
+@import "page_mixins";
+@import "sp_media-queries";
+.aui.safari {
+    .genericContentWrap {
+        position: absolute;
+        bottom: 0;
+    }
+     .gnl-Linksec a.AboutMoreLinksec
+    {
+            border: solid 1px #e7e7e7;
+    }
+}
+
+
+.generic-LeftImageRightListContent {
+    @include flexbox();
+    position: relative;
+    width: 100%;
+    @include box-sizing(border-box);
+    min-height: 350px;
+    max-height: 100%;
+    margin: 30px 0;
+    border: 0.5px $bgColor-btn-link-bar-hover solid;
+    &.secRow {
+        @include flex-direction(row);
+    }
+    &.secRowReverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.generic-LeftImageRightListContent .leftImageContent {
+    width: 50%;
+    position: relative;
+    img.glimg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position:top right;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+.generic-LeftImageRightListContent .rightListContent {
+    width: 50%;
+    position: relative;
+    background-color: $white;
+    ul {
+        margin: 0;
+        padding: 40px;
+        width: 100%;
+        line-height: normal;
+        @include box-sizing(border-box);
+        li {
+            list-style: none;
+            @include flexbox();
+            @include flex-direction(row);
+            .rightListDataIcon {
+                width: 5%;
+                padding: 5px 0 0;
+                img {
+                    width: 100%;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+}
+
+p.gl-listDescription {
+    width: 95%;
+    font-size: $fontSize-standard;
+    font-weight: $fontWeight-light ;
+    font-style: normal;
+    font-stretch: normal;
+    color: #555555;
+    padding: 0 0 30px 20px;
+    margin: 0;
+    text-align: left;
+}
+
+.genericContentWrap {
+    padding: 40px;
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(flex-end);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @include box-sizing(border-box);
+    background-image: linear-gradient(to bottom,transparent,rgba(0, 0, 0, 0.38));
+    h2.gl-Heading {
+        font-size: 22px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        color: #fec92f;
+        margin: 0;
+        padding-bottom: 10px;
+        text-align: left;
+    }
+    p.gl-Description {
+        padding: 0;
+        margin: 0;
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        color: $white;
+        text-align: left;
+    }
+}
+
+//Link section
+.gnl-Linksec {
+    @include flexbox();
+    @include flex-direction(row);
+    flex-wrap: wrap;
+    width: 100%;
+    a.AboutMoreLinksec {
+        width: 33.33%;
+        height: 175px;
+        border: solid 0.5px $bgColor-btn-link-bar-hover;
+        @include box-sizing(border-box);
+        @include flexbox();
+        justify-content: center;
+        align-items: center;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        p {
+            margin: 0;
+            font-size: 11pt;
+            font-weight: $fontWeight-medium;
+            font-style: normal;
+            font-stretch: normal;
+            color: $medium-gray;
+            text-decoration: none;
+            text-align: center;
+        }
+        &:hover {
+            background-color: #f0efef;
+        }
+    }
+}
+
+//MOBILE 320
+@include screen (320px, 767px) {
+    .generic-LeftImageRightListContent {
+        &.secRow {
+            @include flex-direction(column);
+        }
+        &.secRowReverse {
+            @include flex-direction(column);
+        }
+    }
+    .generic-LeftImageRightListContent .leftImageContent {
+        width: 100%;
+        height: auto;
+        img.glimg {
+            object-position : top right;
+        }
+        &.height150
+        {
+             height: 150px;
+        }
+    }
+    .generic-LeftImageRightListContent .rightListContent {
+        width: 100%;
+        ul {
+            margin: 0;
+            padding: 20px;
+            width: 100%;
+            line-height: normal;
+            @include box-sizing(border-box);
+            li {
+                list-style: none;
+                @include flexbox();
+                @include flex-direction(row);
+                .rightListDataIcon {
+                    width: 10%;
+                    padding: 5px 0 0;
+                }
+            }
+        }
+    }
+    .gnl-Linksec {
+        @include flex-direction(column);
+        a.AboutMoreLinksec {
+            width: 100%;
+            height: 60px;
+            @include justify-content(flex-start);
+            padding: 0 40px;
+            p {
+                text-align: left;
+            }
+        }
+    }
+    .genericContentWrap {
+        padding: 40px 20px;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(flex-end);
+        width: 100%;
+        height: 100%;
+        position: relative;
+        @include box-sizing(border-box);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35));
+    }
+    p.gl-listDescription {
+        width: 90%;
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        color: #555555;
+        padding: 0 0 20px 15px;
+        margin: 0;
+        text-align: left;
+    }
+    .aui.safari {
+        .genericContentWrap {
+            position: relative;
+            bottom: 0;
+        }
+    }
+}
+
+@include screen (320px, 767px, landscape) {
+    .generic-LeftImageRightListContent .rightListContent {
+        width: 100% !important;
+        ul {
+            padding: 20px;
+            li {
+                .rightListDataIcon {
+                    width: 3%;
+                    padding: 3px 0 0;
+                }
+            }
+        }
+    }
+    .gnl-Linksec {
+        @include flex-direction(column);
+        a.AboutMoreLinksec {
+            width: 100%;
+            height: 60px;
+            p {
+                text-align: center;
+                padding: 0;
+            }
+        }
+    }
+    .genericContentWrap {
+        padding: 40px 20px;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(flex-end);
+        width: 100%;
+        height: 100%;
+        position: relative;
+        @include box-sizing(border-box);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+    }
+    .aui.safari {
+        .genericContentWrap {
+            position: relative;
+            bottom: 0;
+        }
+    }
+}
+
+//MOBILE 320
+

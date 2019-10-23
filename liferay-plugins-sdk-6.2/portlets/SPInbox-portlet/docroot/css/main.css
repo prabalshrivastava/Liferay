@@ -1,0 +1,12 @@
+@import "sp_inbox";
+
+.show-inline {
+  display: inline-block;
+  *display: inline;
+  zoom: 1; }
+
+.show-content {
+  display: block; }
+
+.hide-content {
+  display: none !important; }

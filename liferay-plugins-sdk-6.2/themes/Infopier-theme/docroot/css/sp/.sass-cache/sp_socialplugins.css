@@ -1,0 +1,138 @@
+#social-connections-dashboard {
+  width: 200px;
+  padding-right: 20px; }
+
+.social-icons {
+  float: right;
+  margin-right: 20px;
+  margin-top: 4px; }
+
+.social-icons ul {
+  font: .875em/1 Tahoma,Arial,sans-serif;
+  list-style: none outside none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0; }
+
+.social-icons ul li {
+  float: left;
+  height: 30px;
+  margin: 10px 0 10px 5px;
+  width: 30px; }
+
+.social-icons ul li a {
+  border: 1px solid transparent;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  display: block;
+  height: 23px;
+  line-height: 28px;
+  overflow: hidden;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+  width: 23px; }
+
+.social-icons .facebook a {
+  background: none repeat scroll 0 0 #3C5A98;
+  height: 30px;
+  letter-spacing: 11px;
+  width: 30px;
+  -moz-box-shadow: 26px;
+  -webkit-box-shadow: 26px;
+  box-shadow: 26px;
+  border: 1px solid #d68533;
+  color: white;
+  font-size: 25px;
+  font-weight: 11px;
+  line-height: 29px;
+  position: 30px;
+  text-indent: 12px;
+  text-transform: lowercase; }
+
+.social-icons .twitter a {
+  background: #daf6f7;
+  background: -moz-linear-gradient(center top, #dbf7f8, #88e1e6) repeat scroll 0 0 transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dbf7f8), to(#88e1e6));
+  height: 30px;
+  letter-spacing: 14px;
+  text-shadow: 1.4px 1.4px 1px white, -1.4px -1.4px 1px white, 1.4px -1.4px 1px white, -1.4px 1.4px 1px white;
+  width: 30px;
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  border: 1px solid #a8eaec;
+  color: #76ddf8;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 30px;
+  position: relative;
+  text-indent: 9px;
+  text-transform: lowercase; }
+
+.social-icons .linkedin a {
+  background: none repeat scroll 0 0 #439DBF;
+  height: 30px;
+  text-indent: 4px;
+  text-transform: lowercase;
+  width: 28px;
+  -moz-box-shadow: 26px;
+  -webkit-box-shadow: 26px;
+  box-shadow: 26px;
+  border: 1px solid #d68533;
+  color: white;
+  font-size: 25px;
+  font-weight: 4px;
+  line-height: 29px;
+  position: 30px;
+  text-indent: 3px;
+  text-transform: lowercase; }
+
+.social-icons .google a {
+  background-color: #1E3C7F;
+  background-image: -moz-linear-gradient(center top, #447aec, #1e3c7f);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#447aec), to(#1e3c7f));
+  background-image: -o-linear-gradient(top, #447aec, #1e3c7f);
+  background-position: 0 0;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr=#447AEC,endColorstr=#1E3C7F,GradientType=1);
+  height: 30px;
+  width: 30px;
+  font: 35px/19px Georgia,Times New Roman,Times,serif;
+  -moz-box-shadow: 26px;
+  -webkit-box-shadow: 26px;
+  box-shadow: 26px;
+  border: 1px solid #d68533;
+  color: white;
+  font-size: 25px;
+  font-weight: 7px;
+  line-height: 29px;
+  position: 25px;
+  text-indent: 3px;
+  text-transform: lowercase; }
+
+.social-icons .yahoo a {
+  background-color: #7B0099;
+  background-image: -moz-linear-gradient(center top, #b066c2, #7b0099);
+  background-image: -moz-linear-gradient(center top, #b066c2, #7b0099);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b066c2), to(#7b0099));
+  background-image: -o-linear-gradient(top, #b066c2, #7b0099);
+  background-position: 0 0;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr=#B066C2,endColorstr=#7B0099,GradientType=1);
+  height: 30px;
+  width: 30px;
+  font: 35px/19px Georgia,Times New Roman,Times,serif;
+  letter-spacing: 40px;
+  -moz-box-shadow: 23px;
+  -webkit-box-shadow: 23px;
+  box-shadow: 23px;
+  border: 1px solid #d68533;
+  color: white;
+  font-size: 25px;
+  font-weight: 7px;
+  line-height: 29px;
+  position: 30px;
+  text-indent: 9px;
+  text-transform: lowercase; }
+
+/*# sourceMappingURL=sp_socialplugins.css.map */
+

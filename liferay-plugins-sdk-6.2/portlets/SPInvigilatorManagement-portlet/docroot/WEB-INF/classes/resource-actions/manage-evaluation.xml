@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 6.2.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_6_2_0.dtd">
+
+<resource-action-mapping>
+    <portlet-resource>
+        <portlet-name>Manage-Evaluation</portlet-name>
+        <permissions>
+            <supports>
+                <action-key>VIEW_LISTING</action-key>
+                <action-key>VIEW_MODEL</action-key>
+                <action-key>ADD_MODEL</action-key>
+                <action-key>COPY_MODEL</action-key>
+                <action-key>EDIT_MODEL</action-key>
+                <action-key>EXPORT_MODEL</action-key>
+                <action-key>ACTIVATE_MODEL</action-key>
+                <action-key>ARCHIVE_MODEL</action-key>
+                <action-key>MASTERVIEW_MODEL</action-key>
+                <action-key>CONFIRM_MODEL</action-key>
+                <action-key>CANCEL_MODEL</action-key>
+            </supports>
+            <site-member-defaults>
+            	<action-key>VIEW_LISTING</action-key>
+            </site-member-defaults>
+            <guest-defaults>
+            </guest-defaults>
+            <guest-unsupported>
+                <action-key>VIEW_MODEL</action-key>
+                <action-key>ADD_MODEL</action-key>
+                <action-key>COPY_MODEL</action-key>
+                <action-key>EDIT_MODEL</action-key>
+                <action-key>EXPORT_MODEL</action-key>
+                <action-key>ACTIVATE_MODEL</action-key>
+                <action-key>ARCHIVE_MODEL</action-key>
+                <action-key>MASTERVIEW_MODEL</action-key>
+            </guest-unsupported> 
+        </permissions>
+    </portlet-resource>
+    
+</resource-action-mapping>

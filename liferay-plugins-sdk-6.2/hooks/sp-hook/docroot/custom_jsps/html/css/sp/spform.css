@@ -1,0 +1,12 @@
+.aui .formio-form .form-group input.form-control {
+    display: block !important;
+}
+
+.aui .formio-form input[type="file"] {
+    width: 0px;
+    height: 0px;
+}
+
+.aui .formio-form div.tooltip {
+    opacity: 1;
+}

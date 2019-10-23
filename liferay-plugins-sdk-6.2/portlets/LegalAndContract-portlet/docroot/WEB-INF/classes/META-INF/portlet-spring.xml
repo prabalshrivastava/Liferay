@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.legalandcontract.service.AgencyLocalService" class="com.sambaash.platform.srv.legalandcontract.service.impl.AgencyLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.legalandcontract.service.persistence.AgencyPersistence" class="com.sambaash.platform.srv.legalandcontract.service.persistence.AgencyPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.legalandcontract.service.ClassMasterLocalService" class="com.sambaash.platform.srv.legalandcontract.service.impl.ClassMasterLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.legalandcontract.service.persistence.ClassMasterPersistence" class="com.sambaash.platform.srv.legalandcontract.service.persistence.ClassMasterPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.legalandcontract.service.LitigationLocalService" class="com.sambaash.platform.srv.legalandcontract.service.impl.LitigationLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.legalandcontract.service.persistence.LitigationPersistence" class="com.sambaash.platform.srv.legalandcontract.service.persistence.LitigationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.legalandcontract.service.RDLLocalService" class="com.sambaash.platform.srv.legalandcontract.service.impl.RDLLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.legalandcontract.service.persistence.RDLPersistence" class="com.sambaash.platform.srv.legalandcontract.service.persistence.RDLPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.legalandcontract.service.TrademarksLocalService" class="com.sambaash.platform.srv.legalandcontract.service.impl.TrademarksLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.legalandcontract.service.persistence.TrademarksPersistence" class="com.sambaash.platform.srv.legalandcontract.service.persistence.TrademarksPersistenceImpl" parent="basePersistence" />
+</beans>

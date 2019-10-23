@@ -1,0 +1,186 @@
+<%@page import="com.sambaash.platform.srv.spchallenge.service.SPChallengeLocalServiceUtil"%>
+<%@page import="com.liferay.portal.kernel.util.DateFormatFactoryUtil"%>
+<%@page import="com.liferay.compat.portal.kernel.util.LocaleUtil"%>
+<%@page import="com.sambaash.platform.util.SambaashUtil"%>
+<%@page import="com.sambaash.platform.srv.spchallenge.model.SPChallenge"%>
+<%@page import="com.sambaash.platform.srv.spchallenge.model.SPChallengeApplicant"%>
+<%@page import="java.util.List"%>
+<%@page import="com.sambaash.platform.startupprofile.StartupConstants"%>
+<%@ page trimDirectiveWhitespaces="true" %>
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui"%>
+<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui"%>
+<%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme"%>
+<%@page import="com.sambaash.platform.util.LabelUtil"%>
+
+<portlet:defineObjects />
+<liferay-theme:defineObjects />
+
+<div class="cmi-search-container max-width" id="generic-search-wrapper">
+   <div class="cmiw-search-row margin-40">
+      <div class="cmi-listingsection-header">
+            <div class="cmi-heading-txt h-width70">
+                <h2><%=LabelUtil.getLabel(pageContext, themeDisplay,"label.challenges.applied.to")%></h2>
+            </div>
+            <div class="cmi-heading-txt h-width20">
+                 <h2><%=LabelUtil.getLabel(pageContext, themeDisplay,"label.application.status")%></h2>
+            </div>
+            <div class="cmi-heading-txt h-width10">
+                 <h2><%=LabelUtil.getLabel(pageContext, themeDisplay,"label.view.details")%></h2>
+            </div>
+      </div>
+<%
+List<SPChallengeApplicant> applications = (List<SPChallengeApplicant>) renderRequest.getAttribute(StartupConstants.ORG_CHALLENGE_APPLICATIONS);
+List<SPChallenge> challengeDetails = (List<SPChallenge>) renderRequest.getAttribute(StartupConstants.ORG_CHALLENGE_DETAILS);
+int numberOfApplications = applications==null ? 0 : applications.size();
+for (int i=0; i<numberOfApplications; i++) {
+	SPChallenge challenge = challengeDetails.get(i);
+	SPChallengeApplicant challengeApplication = applications.get(i);
+	String logoUrl = SambaashUtil.getDLFileIconUrl(renderRequest, challenge.getLogoId());
+	String applyBy = DateFormatFactoryUtil.getSimpleDateFormat("MMM dd, yyyy", LocaleUtil.getDefault()).format(challenge.getEndDate());
+	String url = SPChallengeLocalServiceUtil.displayChallengeFriendlyURL(themeDisplay, challenge.getSpChallengeId());
+	String viewApplicationUrl = SPChallengeLocalServiceUtil.displayApplicationFriendlyURL(themeDisplay, challengeApplication.getSpChallengeApplicantId());
+	String applAcceptedClass = "statuspending";
+	String applRejectedClass = "statuspending";
+	String applMaybeClass = "statuspending";
+	if (challengeApplication.getApplicationStatus()==StartupConstants.APPLICATION_ACCEPTED) {
+		applAcceptedClass = "Sucess";
+		applRejectedClass = "";
+		applMaybeClass = "";
+	} else if (challengeApplication.getApplicationStatus()==StartupConstants.APPLICATION_KEEP_IN_VIEW){
+		applAcceptedClass = "";
+		applMaybeClass = "Sucess";
+		applRejectedClass = "";		
+	} else if (challengeApplication.getApplicationStatus()==StartupConstants.APPLICATION_REJECTED){
+		applAcceptedClass = "";
+		applMaybeClass = "";
+		applRejectedClass = "Sucess";		
+	}
+%>
+
+
+      <div class="cmi-listingsection">
+                <!-- Content SECTION -->
+                <div class="cmiw-search-results-wrapper fullWidth">
+                    <div class="cmiw-search-results cmia-orientation-horizontal" id="generic-search-results">
+                        <div class="cmiw-search-single-result">
+                            <div class="cmi-content-wrapper result">
+                                <div class="cmi-image-wrap cmi-img-application"> <img src="<%=logoUrl%>" alt="brief-image" title="brief"> </div>
+                                <div class="cmi-inner-content cmi-application">
+                                    <div><h2 class="cmi-inner-title"><%=challenge.getName()%></h2></div>
+                                    <div class="cmi-inner-ratings">
+                                        <div class="cmia-rating-item"> </div>
+                                    </div>
+                                    <div class="cmi-inner-postarea"> <%=LabelUtil.getLabel(pageContext, themeDisplay,"label.apply.by")%> <%=applyBy%> </div>
+                                    <div class="cmi-inner-description">
+                                        <div class="cmi-inner-description">
+                                            <p><%=challenge.getBackground()%></p>
+                                        </div>
+                                    </div>
+                                    <div class="cmi-button-wrap"> <a href="<%=url%>" class="cmi-button"><%=LabelUtil.getLabel(pageContext, themeDisplay,"label.show.more")%></a> </div>
+                                </div>
+                                <div class="cmi-applicationstatus">
+                                    <div class="statusSec <%=applAcceptedClass%>">
+                                        <a href="#">
+                                            
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<g>
+ 
+<path class="sucessImage"d="M11.8,0c-3.1,0-5.9,1.2-8,3.2c-2.2,2.1-3.7,5-3.8,8.3c0,0,0,0,0,0.1l0,0c0,0,0,0,0,0s0,0.1,0,0.1C-0.2,18.2,5,23.7,11.6,24
+    c6.6,0.3,12.2-4.9,12.4-11.5C24.2,5.8,19.1,0.2,12.4,0C12.2,0,12,0,11.8,0L11.8,0z M11.8,0.4c0.2,0,0.4,0,0.6,0
+    C18.8,0.6,23.9,6,23.6,12.4c-0.2,6.4-5.6,11.4-12.1,11.2C5.1,23.4,0.1,18,0.3,11.6v0c0,0,0,0,0,0v0c0.1-3.2,1.6-6,3.7-8.1
+    C6.1,1.6,8.9,0.4,11.8,0.4L11.8,0.4z"/>
+
+     <polygon class="sucessImage" points="10.8,16.3 7.3,12.7 7.7,12.4 11.1,15.8 16.3,9 16.7,9.3 11.5,16.2 "/>
+</g>
+</svg>
+                                        </a>
+                                        <span class="tooltiptext"><%=LabelUtil.getLabel(pageContext, themeDisplay,"label.successful")%></span>
+                                    </div>
+                                    
+                                    <div class="statusSec <%=applMaybeClass%>">
+                                        <a href="#">
+                                            
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 48 48" xml:space="preserve">
+  <g fill="none" fill-rule="evenodd">
+    <path class='maybeImage' d='M24,47.5 C11.0213084,47.5 0.5,36.9786916 0.5,24 C0.5,11.0213084 11.0213084,0.5 24,0.5 C36.9786916,0.5 47.5,11.0213084 47.5,24 C47.5,36.9786916 36.9786916,47.5 24,47.5 Z'/>"
+    <text font-family='Multicolore, Multicolore' font-size='21' font-weight='300' fill-opacity='0.8'>
+      <tspan x="18" y="33">?</tspan>
+    </text>
+  </g>
+</svg>
+                                        </a>
+                                        <span class="tooltiptext"><%=LabelUtil.getLabel(pageContext, themeDisplay,"label.maybe")%></span>
+                                    </div>
+                                    
+                                    <div class="statusSec <%=applRejectedClass%>">
+                                        <a href="#">
+                                           
+
+                                            <svg version="1.1"
+     id="Layer_2" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70"
+     style="enable-background:new 0 0 70 70;" xml:space="preserve">
+
+<path class="unsucess"  d="M34.4,0c-8.9,0.1-17.1,3.6-23.2,9.3C4.7,15.3,0.5,23.8,0,33.4c0,0.1,0,0.1,0,0.2l0,0c0,0,0,0,0,0.1s0,0.2,0,0.2
+    c-0.6,19.2,14.5,35.3,33.7,36c19.2,0.8,35.5-14.3,36.2-33.6S55.5,0.7,36.2,0C35.6,0,35,0,34.4,0L34.4,0z M34.5,1.1
+    c0.6,0,1.1,0,1.7,0C55,1.8,69.6,17.6,68.8,36.3C68.1,55,52.4,69.7,33.7,68.9C15,68.3,0.4,52.6,1,33.9v-0.1c0,0,0,0,0-0.1v-0.1
+    C1.4,24.4,5.6,16,11.8,10.2C17.9,4.6,25.8,1.2,34.5,1.1L34.5,1.1z M26.6,26.1c-0.3,0.1-0.5,0.3-0.5,0.7c0,0.1,0.1,0.3,0.2,0.3
+    l8.7,8.7l-8.7,8.7c-0.2,0.2-0.2,0.5,0,0.8c0.2,0.2,0.5,0.2,0.8,0l8.7-8.7l8.7,8.7c0.2,0.2,0.5,0.2,0.8,0c0.2-0.2,0.2-0.5,0-0.8
+    l-8.7-8.7l8.7-8.7c0.2-0.2,0.2-0.5,0-0.8c-0.1-0.1-0.3-0.2-0.4-0.2c-0.2,0-0.3,0.1-0.4,0.2l-8.7,8.7l-8.7-8.7
+    C26.9,26.1,26.8,26,26.6,26.1L26.6,26.1z"/>
+   
+</svg>
+
+
+                                        </a>
+                                         <span class="tooltiptext"><%=LabelUtil.getLabel(pageContext, themeDisplay,"label.unsuccessful")%></span>
+                                    </div>
+                                </div>
+                                <div class="cmi-editSec">
+                                    <div class="statusSec">
+                                        <a href="<%=viewApplicationUrl%>" class="editIconMyapp">
+                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+    .st0{fill:#72819B;}
+</style>
+<path class="st0" d="M11.8,0c-3.1,0-5.9,1.2-8,3.2c-2.2,2.1-3.7,5-3.8,8.3c0,0,0,0,0,0.1l0,0l0,0v0.1c-0.2,6.5,5,12,11.6,12.3
+    S23.8,19.1,24,12.5C24.2,5.8,19.1,0.2,12.4,0C12.2,0,12,0,11.8,0L11.8,0z M11.8,0.4c0.2,0,0.4,0,0.6,0c6.4,0.2,11.5,5.6,11.2,12
+    c-0.2,6.4-5.6,11.4-12.1,11.2C5.1,23.4,0.1,18,0.3,11.6l0,0l0,0l0,0c0.1-3.2,1.6-6,3.7-8.1C6.1,1.6,8.9,0.4,11.8,0.4L11.8,0.4z"/>
+<g>
+    <g>
+        <g>
+            <path class="st0" d="M17.1,11.5C15.9,10.1,14,9.3,12,9.3s-3.9,0.8-5.1,2.2c-0.3,0.3-0.3,0.8,0,1.1c1.2,1.4,3.1,2.2,5.1,2.2
+                s3.9-0.8,5.1-2.2C17.3,12.2,17.3,11.8,17.1,11.5z M10.6,9.8c0.5-0.1,0.9-0.1,1.4-0.1s0.9,0,1.4,0.1c0.5,0.4,0.8,1,0.8,1.7
+                c0,1.2-1,2.2-2.2,2.2s-2.2-1-2.2-2.2C9.8,10.8,10.1,10.2,10.6,9.8z M16.8,12.3c-1.1,1.3-2.9,2.1-4.8,2.1s-3.7-0.8-4.8-2.1
+                c-0.2-0.2-0.2-0.4,0-0.6c0.7-0.8,1.7-1.4,2.8-1.8c-0.3,0.4-0.5,1-0.5,1.5c0,1.4,1.1,2.5,2.5,2.5s2.5-1.1,2.5-2.5
+                c0-0.6-0.2-1.1-0.5-1.5c1.1,0.3,2.1,0.9,2.8,1.8C17,11.9,17,12.1,16.8,12.3z"/>
+        </g>
+    </g>
+    <g>
+        <g>
+            <path class="st0" d="M13,11c0-0.1-0.1-0.1-0.2-0.1c-0.1,0-0.1,0.1-0.1,0.2c0,0.1,0.1,0.2,0.1,0.3c0,0.4-0.3,0.7-0.7,0.7
+                s-0.7-0.3-0.7-0.7c0-0.4,0.3-0.7,0.7-0.7c0.1,0,0.2,0,0.3,0.1c0.1,0,0.2,0,0.2-0.1c0-0.1,0-0.2-0.1-0.2c-0.1-0.1-0.3-0.1-0.4-0.1
+                c-0.6,0-1.1,0.5-1.1,1.1s0.5,1.1,1.1,1.1c0.6,0,1.1-0.5,1.1-1.1C13.1,11.3,13.1,11.2,13,11z"/>
+        </g>
+    </g>
+</g>
+</svg>
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      </div>            
+
+<%
+}
+%>					
+
+  </div>
+</div>

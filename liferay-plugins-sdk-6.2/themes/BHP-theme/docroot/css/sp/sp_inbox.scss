@@ -1,0 +1,165 @@
+@import "_sp_custom_variables";
+@import "_sp_mixins";
+@import "sp_media-queries";
+
+
+.inbox-portlet{
+	.portlet-content-container{
+		background-color: $light-gray;
+	}
+}
+
+.ip-to-input-outer input[type=text]:focus{
+	border:none!important;
+}
+
+.sp-inbox{
+
+	.sp-inbox-menu{
+		.sp-inbox-menu-list {
+			ul{
+				li{
+
+					&:hover{
+						> a{
+							font-weight: bold;
+						}
+					}
+					&.in-menu-item{
+						color: $black;
+						
+						> span{
+							 &:hover{
+							 	color:$themeColor;
+							 }
+						}
+					}
+
+					ul{
+						li{
+								> span{
+									    &:hover{
+									    color:$themeColor;
+										}
+								}
+							
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.sp-inbox-filters{
+		@include vendor-prefix(box-sizing, border-box);
+		@include animate-cubic(.4s);
+	}
+
+	.sp-inbox-actions{
+		border-bottom: 1px solid $color-border;
+		@include vendor-prefix(box-sizing, border-box);
+		@include animate-cubic(.4s);
+
+	}
+
+	.sp-inbox-section{
+		&.sp-inbox-section-left{
+			background-color: $custom-color-5;
+			@include vendor-prefix(box-sizing, border-box);
+			@include animate-cubic(.4s);
+		}
+	}
+
+	#contentBodyDiv{
+		border-top: 1px solid #e8e8e8;
+	}
+
+	#cmpseMsgDiv{
+		#cmpMsgToInnerDiv{
+			.ip-to-input-outer{
+				background-color: transparent;
+				border: none !important;
+
+				&:focus, &:hover{
+					border: none !important;
+				}
+			}
+			ul.horizontal{
+				li{
+					background-color: $themeColor;
+    				border-radius: 25px;
+					
+					.sp-group-clearfix{
+						line-height: 0;
+						
+						.sp-group-mrm{
+							line-height: 0;
+						}
+						
+						> .sp-group-ui-dib{
+							
+							.ip-si-x{
+								font-size: 8pt;
+							    font-weight: bold;
+							    color: $custom-color-69;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	.ip-sb{
+
+		.ip-sb-options{
+			background-color: $light-gray;
+			
+			.ip-sb-option{
+				&:hover, &.hover{
+					background-color: $custom-color-127;
+				}
+			}
+
+			.sp-group-mrm{
+				line-height: 0;
+			}
+
+		}
+	}
+
+	#mailsTable{
+		tr{
+			border-bottom: 1px solid $custom-color-71;
+			@include animate-cubic(.4s);
+			&#mailHeaderRow{
+				td{
+					    font-weight: bold;
+					    text-transform: uppercase;
+					    font-size: 9pt;
+					    line-height: 9pt;
+				}
+			}
+
+			&.msgUnread{
+
+				background-color: $custom-color-72;
+
+				td{
+					font-weight: $fontWeight-medium;
+
+					&#subject{
+						color: $themeColor-2;
+					}
+				}
+			}
+
+			td{
+				line-height: 11pt;
+			}
+		}
+	}
+
+}
+

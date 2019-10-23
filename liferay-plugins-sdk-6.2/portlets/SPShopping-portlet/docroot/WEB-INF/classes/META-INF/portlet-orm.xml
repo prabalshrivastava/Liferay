@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.sambaash.platform.srv.spshopping.model.impl.SPCartModelImpl">
+		<attributes>
+			<id name="spCartId" />
+			<basic name="groupId" />
+			<basic name="discount" />
+			<basic name="totalPrice" />
+			<basic name="userRemarks" />
+			<basic name="status" />
+			<basic name="transactionDetails" />
+			<basic name="orderPage" />
+			<basic name="rsvpDetailId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spshopping.model.impl.SPCartPackageModelImpl">
+		<attributes>
+			<id name="spCartPackageId" />
+			<basic name="groupId" />
+			<basic name="cartId" />
+			<basic name="packageId" />
+			<basic name="selectedCurrency" />
+			<basic name="usedDiscountRefId" />
+			<basic name="usedDiscountRefPCId" />
+			<basic name="discount" />
+			<basic name="initialPrice" />
+			<basic name="totalPrice" />
+			<basic name="remarks" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spshopping.model.impl.SPCartPackageItemModelImpl">
+		<attributes>
+			<id name="spCartPackageItemId" />
+			<basic name="groupId" />
+			<basic name="spCartPackageId" />
+			<basic name="title" />
+			<basic name="itemCode" />
+			<basic name="quantity" />
+			<basic name="entityClassPk" />
+			<basic name="entityClassName" />
+			<basic name="totalPrice" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spshopping.model.impl.SPDiscountModelImpl">
+		<attributes>
+			<id name="spDiscountId" />
+			<basic name="groupId" />
+			<basic name="title" />
+			<basic name="percent" />
+			<basic name="packageId" />
+			<basic name="value" />
+			<basic name="couponCode" />
+			<basic name="description" />
+			<basic name="startDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="endDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="minQuantity" />
+			<basic name="maxQuantity" />
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spshopping.model.impl.SPPackageItemsModelImpl">
+		<attributes>
+			<id name="spPackageItemsId" />
+			<basic name="groupId" />
+			<basic name="packageId" />
+			<basic name="itemId" />
+			<basic name="quantity" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spshopping.model.impl.SPSellingItemModelImpl">
+		<attributes>
+			<id name="spSellingItemId" />
+			<basic name="groupId" />
+			<basic name="title" />
+			<basic name="itemCode" />
+			<basic name="entityClassPk" />
+			<basic name="entityClassNameId" />
+			<basic name="entityClassName" />
+			<basic name="shortDescription" />
+			<basic name="longDescription" />
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spshopping.model.impl.SPSellingPackageModelImpl">
+		<attributes>
+			<id name="spSellingPackageId" />
+			<basic name="groupId" />
+			<basic name="title" />
+			<basic name="pkgCode" />
+			<basic name="shortDescription" />
+			<basic name="longDescription" />
+			<basic name="currencyCode" />
+			<basic name="startDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="endDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="notify" />
+			<basic name="needsPayment" />
+			<basic name="orderPage" />
+			<basic name="orderSequence" />
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spshopping.model.impl.SPSellingPriceModelImpl">
+		<attributes>
+			<id name="spSellingPriceId" />
+			<basic name="groupId" />
+			<basic name="priceRefId" />
+			<basic name="priceRefTypeId" />
+			<basic name="currencyCode" />
+			<basic name="basePrice" />
+			<basic name="taxName" />
+			<basic name="taxValue" />
+			<basic name="totalPrice" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.sambaash.platform.srv.spshopping.model.impl.SPTaxModelImpl">
+		<attributes>
+			<id name="spTaxId" />
+			<basic name="groupId" />
+			<basic name="currencyCode" />
+			<basic name="taxName" />
+			<basic name="taxValue" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.sambaash.platform.srv.spshopping.model.impl.SPCartImpl" name="SPCart">
+		<table name="SPCart" />
+		<attributes>
+			<transient name="discountAmount" />
+			<transient name="totalPriceAmount" />
+		</attributes>
+	</entity>
+	<entity class="com.sambaash.platform.srv.spshopping.model.impl.SPCartPackageImpl" name="SPCartPackage">
+		<table name="SPCartPackage" />
+		<attributes>
+			<transient name="discountAmount" />
+			<transient name="initialPriceAmount" />
+			<transient name="totalPriceAmount" />
+		</attributes>
+	</entity>
+	<entity class="com.sambaash.platform.srv.spshopping.model.impl.SPCartPackageItemImpl" name="SPCartPackageItem">
+		<table name="SPCartPackageItem" />
+		<attributes>
+			<transient name="totalPriceAmount" />
+		</attributes>
+	</entity>
+	<entity class="com.sambaash.platform.srv.spshopping.model.impl.SPDiscountImpl" name="SPDiscount">
+		<table name="SPDiscount" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spshopping.model.impl.SPPackageItemsImpl" name="SPPackageItems">
+		<table name="SPPackageItems" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spshopping.model.impl.SPSellingItemImpl" name="SPSellingItem">
+		<table name="SPSellingItem" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spshopping.model.impl.SPSellingPackageImpl" name="SPSellingPackage">
+		<table name="SPSellingPackage" />
+		<attributes />
+	</entity>
+	<entity class="com.sambaash.platform.srv.spshopping.model.impl.SPSellingPriceImpl" name="SPSellingPrice">
+		<table name="SPSellingPrice" />
+		<attributes>
+			<transient name="basePriceAmount" />
+			<transient name="taxValueAmount" />
+			<transient name="totalPriceAmount" />
+		</attributes>
+	</entity>
+	<entity class="com.sambaash.platform.srv.spshopping.model.impl.SPTaxImpl" name="SPTax">
+		<table name="SPTax" />
+		<attributes />
+	</entity>
+</entity-mappings>

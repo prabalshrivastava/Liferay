@@ -1,0 +1,47 @@
+<%
+String paySiteName = payNode.getPaySiteName();
+String paySiteLogo = payNode.getPaySiteLogo();
+// check Provider PK in dataMap first
+String providerPK = payNode.getDatamap(dataSource, "stripe.public.key");
+if (StringUtils.isEmpty(providerPK)) {
+	// else get from SPParameter
+	providerPK = SambaashUtil.getParameter("stripe" + PEPaymentHelper.PUBLIC_KEY_PARAM_SUFFIX, themeDisplay.getScopeGroupId());
+}
+%>
+	<aui:input name="paymentAction" type="hidden" value="pay" >
+	</aui:input>
+	  <script
+	    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+	    data-key='<%= providerPK %>'
+	    data-amount="<%=PEPaymentUtil.amountStringToBigIntegerString(payAmount)%>"
+	    data-currency="<%=payCcy%>"
+	    data-name="<%=paySiteName%>"
+	    data-description="<%=payDesc%>"
+	    data-image="<%=paySiteLogo%>"
+	    data-locale="auto"
+	    data-email="<%=payUserEmail%>">
+	  </script>
+
+<script>
+AUI().on('domready', function () {
+	var stripeSubmit = false;
+	AUI().all(".stripe-button-el").each(function(_btn){
+		var c = _btn.getContent();
+		if (c.indexOf("Pay with Card") > -1) {
+			_btn.setContent(c.replace("Pay with Card", "Pay with Credit / Debit Card"));
+		    _btn.delegate('click', function(){AUI().all(".stripe-button-el").setAttribute("disabled","true")}, 'button');		
+		}
+	});
+	window.addEventListener("message", function(event) {
+		   var data = JSON.parse(event.data);
+		   if (data.method=="closed" && !stripeSubmit) {
+		      AUI().all(".stripe-button-el").removeAttribute("disabled");
+		   }
+		   if (data.method=="setToken") {
+		      AUI().all(".stripe-button-el").setAttribute("disabled","true");
+		      stripeSubmit = true;
+		   }
+	});	
+});
+</script>	
+

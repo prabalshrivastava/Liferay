@@ -1,0 +1,94 @@
+
+.Table-Layout {
+	display: table;
+	width: 98%;
+	text-align: left;
+	border: 1.5px solid #d9dce3;
+}
+.Row {
+	display: table;
+	width: 98%;
+	text-align: left;
+	border: 1.5px solid #d9dce3;
+}
+
+.Table-Layout .Heading {
+	display: table-row;
+	padding: 10px 0;
+	height: auto;
+}
+.Row {
+	display: table-row;
+	padding: 10px 0;
+	height: auto;
+}
+
+.Table-Layout .Heading .Cell {
+	display: table-cell;
+	padding: 15px;
+}
+.Row .Cell
+{
+	display: table-cell;
+	padding: 15px;
+}
+.Row .Cell p
+{
+		margin: 0;
+	padding: 0;
+	color: #060606 !important;
+	font-size: 11px !important;
+	line-height: 15px !important;
+}
+.Table-Layout .Heading .Cell p {
+	margin: 0;
+	padding: 0;
+	color: #060606 !important;
+	font-size: 11px !important;
+	line-height: 15px !important;
+}
+
+/*.Table-Layout .Heading .Cell:last-child {
+	width: 5% !important;
+	text-align: center;
+}
+.Row .Cell:last-child {
+	width: 5% !important;
+	text-align: center;
+}*/
+.Table-Layout .Row {
+	display: table-row;
+}
+.Row {
+	display: table-row;
+}
+.Table-Layout .Row .Cell {
+	display: table-cell;
+	padding: 15px;
+	position: relative;
+	vertical-align: top;
+}
+.Row .Cell {
+	display: table-cell;
+	padding: 15px;
+	position: relative;
+	vertical-align: top;
+}
+
+.Table-Layout .Row .Cell p {
+	margin: 0;
+	padding: 0;
+}
+ .Row .Cell p {
+	margin: 0;
+	padding: 0;
+}
+
+/*.Table-Layout .Row .Cell:last-child {
+	width: 5% !important;
+	text-align: center;
+}
+.Row .Cell:last-child {
+	width: 5% !important;
+	text-align: center;
+}*/

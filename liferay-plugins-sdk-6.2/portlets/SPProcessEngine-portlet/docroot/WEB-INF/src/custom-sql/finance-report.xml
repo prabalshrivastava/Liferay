@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<custom-sql>
+	<sql id="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessStateFinder.getOfflineFinancereport">
+		<![CDATA[
+Select * from (SELECT s.spPEProcessStateId as 'ApplicationId', f.productName as 'Product Name', u.firstName as 'First Name', u.lastName as 'Last Name', u.EmailAddress as 'Email Address',
+(ifnull(f.RegistartionFee,0) * ifnull(TRIM(BOTH '"' FROM JSON_EXTRACT(s.data_, "$.pay_quantity_28")),1)) as 'Registration Fee', ifnull(TRIM(BOTH '"' FROM JSON_EXTRACT(s.data_, "$.pay_tran_datetime_28")),'NA') as 'Registration Fee - Capture Date', 0 as 'Placement Test Fee', 'NA' as 'Placement Fee - Capture Date', 0 as 'Preparation Course Fee','NA' as 'Preparation Course Fee - Capture Date'
+FROM SPPEProcessState s, User_ u, ((select c.countryId, p.spProductId, p.productName, c.courseName,  f.amount * r.rate as 'RegistartionFee', 0 as 'PlacementTestFee', 0 as 'PreparationCourseFee' 
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r where p.spCourseId = c.spCourseId and c.spCourseId = f.spCourseId and f.feeType = 1 and r.countryId = c.countryId 
+union select c.countryId, p.spProductId, p.productName, c.courseName,    f.amount * 0.94 as 'RegistartionFee', 0 as 'PlacementTestFee', 0 as 'PreparationCourseFee' 
+from SPProduct p, SPCourse c, SPFeeDetails f where p.spCourseId = c.spCourseId and c.spCourseId = f.spCourseId and f.feeType = 2 
+union select a.countryId, a.spProductId, a.productName, a.courseName, a.RegistartionFee, 
+max(CASE WHEN a.PlacementTestFee > 0 THEN a.PlacementTestFee ELSE 0 END), max(CASE WHEN a.PreparationCourseFee > 0 THEN a.PreparationCourseFee ELSE 0 END) 
+from (select c.countryId, p.spProductId, p.productName, c.courseName,  0 as 'RegistartionFee', f.amount * r.rate as 'PlacementTestFee', 0 as 'PreparationCourseFee' 
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r where p.spCourseId = c.spCourseId and c.spCourseId = f.spCourseId and f.feeType = 6 and r.countryId = c.countryId 
+union select c.countryId, p.spProductId, p.productName, c.courseName,  0 as 'RegistartionFee', 0 as 'PlacementTestFee', f.amount * r.rate as 'PreparationCourseFee' 
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r where p.spCourseId = c.spCourseId and c.spCourseId = f.spCourseId and f.feeType = 7 and r.countryId = c.countryId) as a GROUP BY a.countryId) as f)  
+WHERE (JSON_EXTRACT(s.data_, "$.modeOfPayment")  = 'Offline'  or JSON_EXTRACT(s.data_, "$.paymentMode")  = 'Offline') 
+AND s.entityClassId in (select classNameId from ClassName_ where `value`='com.sambaash.platform.srv.model.Product')  
+AND s.entityId = f.spProductId AND s.userIdProcess = u.userId and f.RegistartionFee > 0 and CAST(ifnull(SUBSTR(JSON_EXTRACT(s.data_, "$.pay_tran_datetime_28"),2,11),'NA') AS datetime) between ? and ?) as s1
+union ALL 
+(SELECT s.spPEProcessStateId as 'ApplicationId', f.productName as 'Product Name', u.firstName as 'First Name', u.lastName as 'Last Name', u.EmailAddress as 'Email Address',
+0 as 'Registration Fee','NA' as 'Registration Fee - Capture Date',(ifnull(f.PlacementTestFee,0) * ifnull(TRIM(BOTH '"' FROM JSON_EXTRACT(s.data_, "$.pay_quantity_28")),0)) as 'Placement Test Fee', ifnull(JSON_EXTRACT(s.data_, "$.pay_tran_placement_datetime_28"),'NA') as 'Placement Fee - Capture Date', 0 as 'Preparation Course Fee','NA' as 'Preparation Course Fee - Capture Date'
+FROM SPPEProcessState s, User_ u, ((select c.countryId, p.spProductId, p.productName, c.courseName,  f.amount * r.rate as 'RegistartionFee', 0 as 'PlacementTestFee', 0 as 'PreparationCourseFee' 
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r where p.spCourseId = c.spCourseId and c.spCourseId = f.spCourseId and f.feeType = 1 and r.countryId = c.countryId 
+union select c.countryId, p.spProductId, p.productName, c.courseName,    f.amount * 0.94 as 'RegistartionFee', 0 as 'PlacementTestFee', 0 as 'PreparationCourseFee' 
+from SPProduct p, SPCourse c, SPFeeDetails f where p.spCourseId = c.spCourseId and c.spCourseId = f.spCourseId and f.feeType = 2 
+union select a.countryId, a.spProductId, a.productName, a.courseName, a.RegistartionFee, 
+max(CASE WHEN a.PlacementTestFee > 0 THEN a.PlacementTestFee ELSE 0 END), max(CASE WHEN a.PreparationCourseFee > 0 THEN a.PreparationCourseFee ELSE 0 END) 
+from (select c.countryId, p.spProductId, p.productName, c.courseName,  0 as 'RegistartionFee', f.amount * r.rate as 'PlacementTestFee', 0 as 'PreparationCourseFee' 
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r where p.spCourseId = c.spCourseId and c.spCourseId = f.spCourseId and f.feeType = 6 and r.countryId = c.countryId 
+union select c.countryId, p.spProductId, p.productName, c.courseName,  0 as 'RegistartionFee', 0 as 'PlacementTestFee', f.amount * r.rate as 'PreparationCourseFee' 
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r where p.spCourseId = c.spCourseId and c.spCourseId = f.spCourseId and f.feeType = 7 and r.countryId = c.countryId) as a GROUP BY a.countryId) as f)  
+WHERE (JSON_EXTRACT(s.data_, "$.modeOfPayment")  = 'Offline'  or JSON_EXTRACT(s.data_, "$.paymentMode")  = 'Offline') 
+AND s.entityClassId in (select classNameId from ClassName_ where `value`='com.sambaash.platform.srv.model.Product')  
+AND s.entityId = f.spProductId AND s.userIdProcess = u.userId and f.PlacementTestFee > 0 and CAST(ifnull(SUBSTR(JSON_EXTRACT(s.data_, "$.pay_tran_placement_datetime_28"),2,11),'NA') AS datetime) between ? and ?) 
+union ALL 
+(SELECT s.spPEProcessStateId as 'ApplicationId', f.productName as 'Product Name', u.firstName as 'First Name', u.lastName as 'Last Name', u.EmailAddress as 'Email Address',
+0 as 'Registration Fee', 'NA' as 'Registration Fee - Capture Date', 0 as 'Placement Test Fee', 'NA' as 'Placement Fee - Capture Date',(ifnull(f.PreparationCourseFee,0) * ifnull(TRIM(BOTH '"' FROM JSON_EXTRACT(s.data_, "$.pay_quantity_28")),0)) as 'Preparation Course Fee',ifnull(JSON_EXTRACT(s.data_, "$.pay_tran_course_datetime_28"),'NA') as 'Preparation Course Fee - Capture Date'
+FROM SPPEProcessState s, User_ u, ((select c.countryId, p.spProductId, p.productName, c.courseName,  f.amount * r.rate as 'RegistartionFee', 0 as 'PlacementTestFee', 0 as 'PreparationCourseFee' 
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r where p.spCourseId = c.spCourseId and c.spCourseId = f.spCourseId and f.feeType = 1 and r.countryId = c.countryId 
+union select c.countryId, p.spProductId, p.productName, c.courseName,    f.amount * 0.94 as 'RegistartionFee', 0 as 'PlacementTestFee', 0 as 'PreparationCourseFee' 
+from SPProduct p, SPCourse c, SPFeeDetails f where p.spCourseId = c.spCourseId and c.spCourseId = f.spCourseId and f.feeType = 2 
+union select a.countryId, a.spProductId, a.productName, a.courseName, a.RegistartionFee, 
+max(CASE WHEN a.PlacementTestFee > 0 THEN a.PlacementTestFee ELSE 0 END), max(CASE WHEN a.PreparationCourseFee > 0 THEN a.PreparationCourseFee ELSE 0 END) 
+from (select c.countryId, p.spProductId, p.productName, c.courseName,  0 as 'RegistartionFee', f.amount * r.rate as 'PlacementTestFee', 0 as 'PreparationCourseFee' 
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r where p.spCourseId = c.spCourseId and c.spCourseId = f.spCourseId and f.feeType = 6 and r.countryId = c.countryId 
+union select c.countryId, p.spProductId, p.productName, c.courseName,  0 as 'RegistartionFee', 0 as 'PlacementTestFee', f.amount * r.rate as 'PreparationCourseFee' 
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r where p.spCourseId = c.spCourseId and c.spCourseId = f.spCourseId and f.feeType = 7 and r.countryId = c.countryId) as a GROUP BY a.countryId) as f)  
+WHERE (JSON_EXTRACT(s.data_, "$.modeOfPayment")  = 'Offline'  or JSON_EXTRACT(s.data_, "$.paymentMode")  = 'Offline') 
+AND s.entityClassId in (select classNameId from ClassName_ where `value`='com.sambaash.platform.srv.model.Product')  
+AND s.entityId = f.spProductId AND s.userIdProcess = u.userId and f.PreparationCourseFee > 0 and CAST(ifnull(SUBSTR(JSON_EXTRACT(s.data_, "$.pay_tran_course_datetime_28"),2,11),'NA') AS datetime) between ? and ?) ORDER BY ApplicationId;
+		]]>
+	</sql>
+	
+	<sql id="com.sambaash.platform.srv.processbuilder.service.persistence.PEProcessStateFinder.getOnlineFinancereport">
+		<![CDATA[
+select * from (SELECT distinct s.spPEProcessStateId as 'ApplicationId', f.productName as 'Product Name', u.firstName as 'First Name', u.lastName as 'Last Name', u.EmailAddress as 'Email Address', ifnull(TRIM(BOTH '"' FROM JSON_EXTRACT(s.data_, "$.charge_ref_code_28")),'NA') as 'Stripe Id (Registration Fee)', ifnull(TRIM(BOTH '"' FROM JSON_EXTRACT(s.data_, "$.pay_amount_28")),0) as 'Registration Fee', ifnull(TRIM(BOTH '"' FROM JSON_EXTRACT(s.data_, "$.pay_tran_datetime_28")),'NA') as 'Registration Fee - Payment Date', 'NA' as 'Stripe Id (Placement Test Fee)', 0 as 'Placement Test Fee', 'NA' as 'Placement Fee - Payment Date', 'NA' as 'Stripe Id (Preparation Course Fee)', 0 as 'Preparation Course Fee','NA' as 'Preparation Fee - Payment Date'
+   FROM
+    SPPEProcessState s, SPProduct p, User_ u, ((select c.countryId, p.spProductId, p.productName, c.courseName, 
+    f.amount * r.rate as 'RegistartionFee', 0 as 'PlacementTestFee', 0 as 'PreparationCourseFee'
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r
+where p.spCourseId = c.spCourseId
+and c.spCourseId = f.spCourseId
+and f.feeType = 1
+and r.countryId = c.countryId
+union
+select c.countryId, p.spProductId, p.productName, c.courseName, 
+      f.amount * 0.94 as 'RegistartionFee', 0 as 'PlacementTestFee', 0 as 'PreparationCourseFee'
+from SPProduct p, SPCourse c, SPFeeDetails f
+where p.spCourseId = c.spCourseId
+and c.spCourseId = f.spCourseId
+and f.feeType = 2
+union
+select a.countryId, a.spProductId, a.productName, a.courseName, a.RegistartionFee,
+max(CASE WHEN a.PlacementTestFee > 0 THEN a.PlacementTestFee ELSE 0 END),
+max(CASE WHEN a.PreparationCourseFee > 0 THEN a.PreparationCourseFee ELSE 0 END) from
+(select c.countryId, p.spProductId, p.productName, c.courseName, 
+    0 as 'RegistartionFee', f.amount * r.rate as 'PlacementTestFee', 0 as 'PreparationCourseFee'
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r
+where p.spCourseId = c.spCourseId
+and c.spCourseId = f.spCourseId
+and f.feeType = 6
+and r.countryId = c.countryId
+union
+select c.countryId, p.spProductId, p.productName, c.courseName, 
+    0 as 'RegistartionFee', 0 as 'PlacementTestFee', f.amount * r.rate as 'PreparationCourseFee'
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r
+where p.spCourseId = c.spCourseId
+and c.spCourseId = f.spCourseId
+and f.feeType = 7
+and r.countryId = c.countryId) as a) as f)
+  WHERE (JSON_EXTRACT(s.data_, "$.charge_ref_code_28") IS NOT NULL)
+AND (JSON_EXTRACT(s.data_, "$.modeOfPayment")  = 'Online' 
+or JSON_EXTRACT(s.data_, "$.paymentMode")  = 'Online')
+AND s.entityClassId in (select classNameId from ClassName_ where `value`='com.sambaash.platform.srv.model.Product') 
+AND s.entityId = f.spProductId
+AND s.userIdProcess = u.userId and CAST(ifnull(SUBSTR(JSON_EXTRACT(s.data_, "$.pay_tran_datetime_28"),2,11),'NA') AS datetime) between ? and ?) as s1
+Union all (SELECT distinct s.spPEProcessStateId as 'ApplicationId', f.productName as 'Product Name', u.firstName as 'First Name', u.lastName as 'Last Name', u.EmailAddress as 'Email Address', 'NA' as 'Stripe Id (Registration Fee)', 0 as 'Registration Fee', 'NA' as 'Registration Fee - Payment Date', ifnull(TRIM(BOTH '"' FROM JSON_EXTRACT(s.data_, "$.charge_ref_code_15")),'NA') as 'Stripe Id (Placement Test Fee)', ifnull(TRIM(BOTH '"' FROM JSON_EXTRACT(s.data_, "$.pay_amount_15")),0) as 'Placement Test Fee', ifnull(JSON_EXTRACT(s.data_, "$.pay_tran_placement_datetime_28"),'NA') as 'Placement Fee -Payment Date', 'NA' as 'Stripe Id (Preparation Course Fee)', 0 as 'Preparation Course Fee','NA' as 'Preparation Fee - Payment Date'
+   FROM
+    SPPEProcessState s, SPProduct p, User_ u, ((select c.countryId, p.spProductId, p.productName, c.courseName, 
+    f.amount * r.rate as 'RegistartionFee', 0 as 'PlacementTestFee', 0 as 'PreparationCourseFee'
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r
+where p.spCourseId = c.spCourseId
+and c.spCourseId = f.spCourseId
+and f.feeType = 1
+and r.countryId = c.countryId
+union
+select c.countryId, p.spProductId, p.productName, c.courseName, 
+      f.amount * 0.94 as 'RegistartionFee', 0 as 'PlacementTestFee', 0 as 'PreparationCourseFee'
+from SPProduct p, SPCourse c, SPFeeDetails f
+where p.spCourseId = c.spCourseId
+and c.spCourseId = f.spCourseId
+and f.feeType = 2
+union
+select a.countryId, a.spProductId, a.productName, a.courseName, a.RegistartionFee,
+max(CASE WHEN a.PlacementTestFee > 0 THEN a.PlacementTestFee ELSE 0 END),
+max(CASE WHEN a.PreparationCourseFee > 0 THEN a.PreparationCourseFee ELSE 0 END) from
+(select c.countryId, p.spProductId, p.productName, c.courseName, 
+    0 as 'RegistartionFee', f.amount * r.rate as 'PlacementTestFee', 0 as 'PreparationCourseFee'
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r
+where p.spCourseId = c.spCourseId
+and c.spCourseId = f.spCourseId
+and f.feeType = 6
+and r.countryId = c.countryId
+union
+select c.countryId, p.spProductId, p.productName, c.courseName, 
+    0 as 'RegistartionFee', 0 as 'PlacementTestFee', f.amount * r.rate as 'PreparationCourseFee'
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r
+where p.spCourseId = c.spCourseId
+and c.spCourseId = f.spCourseId
+and f.feeType = 7
+and r.countryId = c.countryId) as a) as f)
+  WHERE (JSON_EXTRACT(s.data_, "$.charge_ref_code_15") IS NOT NULL)
+AND (JSON_EXTRACT(s.data_, "$.modeOfPayment")  = 'Online' 
+or JSON_EXTRACT(s.data_, "$.paymentMode")  = 'Online')
+AND s.entityClassId in (select classNameId from ClassName_ where `value`='com.sambaash.platform.srv.model.Product') 
+AND s.entityId = f.spProductId
+AND s.userIdProcess = u.userId and CAST(ifnull(SUBSTR(JSON_EXTRACT(s.data_, "$.pay_tran_placement_datetime_28"),2,11),'NA') AS datetime) between ? and ?)
+union all (SELECT distinct s.spPEProcessStateId as 'ApplicationId', f.productName as 'Product Name', u.firstName as 'First Name', u.lastName as 'Last Name', u.EmailAddress as 'Email Address', 'NA' as 'Stripe Id (Registration Fee)', 0 as 'Registration Fee', 'NA' as 'Registration Fee -Payment Date', 'NA' as 'Stripe Id (Placement Test Fee)', 0 as 'Placement Test Fee', 'NA' as 'Placement Fee - Payment Date', ifnull(TRIM(BOTH '"' FROM JSON_EXTRACT(s.data_, "$.charge_ref_code_42")),'NA') as 'Stripe Id (Preparation Course Fee)', ifnull(TRIM(BOTH '"' FROM JSON_EXTRACT(s.data_, "$.pay_amount_42")),0) as 'Preparation Course Fee',JSON_EXTRACT(s.data_, "$.pay_tran_course_datetime_28") as 'Preparation Fee - Payment Date'
+   FROM
+    SPPEProcessState s, SPProduct p, User_ u, ((select c.countryId, p.spProductId, p.productName, c.courseName, 
+    f.amount * r.rate as 'RegistartionFee', 0 as 'PlacementTestFee', 0 as 'PreparationCourseFee'
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r
+where p.spCourseId = c.spCourseId
+and c.spCourseId = f.spCourseId
+and f.feeType = 1
+and r.countryId = c.countryId
+union
+select c.countryId, p.spProductId, p.productName, c.courseName, 
+      f.amount * 0.94 as 'RegistartionFee', 0 as 'PlacementTestFee', 0 as 'PreparationCourseFee'
+from SPProduct p, SPCourse c, SPFeeDetails f
+where p.spCourseId = c.spCourseId
+and c.spCourseId = f.spCourseId
+and f.feeType = 2
+union
+select a.countryId, a.spProductId, a.productName, a.courseName, a.RegistartionFee,
+max(CASE WHEN a.PlacementTestFee > 0 THEN a.PlacementTestFee ELSE 0 END),
+max(CASE WHEN a.PreparationCourseFee > 0 THEN a.PreparationCourseFee ELSE 0 END) from
+(select c.countryId, p.spProductId, p.productName, c.courseName, 
+    0 as 'RegistartionFee', f.amount * r.rate as 'PlacementTestFee', 0 as 'PreparationCourseFee'
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r
+where p.spCourseId = c.spCourseId
+and c.spCourseId = f.spCourseId
+and f.feeType = 6
+and r.countryId = c.countryId
+union
+select c.countryId, p.spProductId, p.productName, c.courseName, 
+    0 as 'RegistartionFee', 0 as 'PlacementTestFee', f.amount * r.rate as 'PreparationCourseFee'
+from SPProduct p, SPCourse c, SPFeeDetails f, SPCurrencyRates r
+where p.spCourseId = c.spCourseId
+and c.spCourseId = f.spCourseId
+and f.feeType = 7
+and r.countryId = c.countryId) as a) as f)
+  WHERE (JSON_EXTRACT(s.data_, "$.charge_ref_code_42") IS NOT NULL)
+AND (JSON_EXTRACT(s.data_, "$.modeOfPayment")  = 'Online' 
+or JSON_EXTRACT(s.data_, "$.paymentMode")  = 'Online')
+AND s.entityClassId in (select classNameId from ClassName_ where `value`='com.sambaash.platform.srv.model.Product') 
+AND s.entityId = f.spProductId
+AND s.userIdProcess = u.userId and CAST(ifnull(SUBSTR(JSON_EXTRACT(s.data_, "$.pay_tran_course_datetime_28"),2,11),'NA') AS datetime) between ? and ?) order by ApplicationId;
+		]]>
+	</sql>
+</custom-sql>

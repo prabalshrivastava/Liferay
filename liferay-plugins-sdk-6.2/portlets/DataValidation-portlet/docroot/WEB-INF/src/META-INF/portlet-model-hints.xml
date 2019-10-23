@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.validation.model.SPStudentProgramme">
+		<field name="spStudentCourseId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="nric" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="programme" type="String" />
+		<field name="courseCentre" type="String" />
+		<field name="courseStartDate" type="Date" />
+		<field name="courseEndDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.validation.model.SPStudentProgrammeResult">
+		<field name="spStudentProgrammeResultId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="nric" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="courseCentre" type="String" />
+		<field name="courseStartDate" type="Date" />
+		<field name="courseEndDate" type="Date" />
+		<field name="programme" type="String" />
+		<field name="exam" type="Date" />
+		<field name="examType" type="String" />
+		<field name="paper1Result" type="String" />
+		<field name="paper2Result" type="String" />
+		<field name="overallResult" type="String" />
+	</model>
+</model-hints>

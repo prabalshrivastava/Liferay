@@ -1,0 +1,43 @@
+<%@page import="com.sambaash.platform.tag.handlers.CommentTagProcess"%>
+<%@taglib	uri="/tld/sp-ui" prefix="sp-ui"%>
+
+<%@page import="com.liferay.portal.kernel.json.JSONFactoryUtil"%>
+<%@page import="com.liferay.portal.kernel.json.JSONObject"%>
+<%@page import="org.apache.commons.lang.StringUtils"%>
+<%@page import="com.sambaash.platform.srv.startupprofile.model.Organization"%>
+<%	
+	String orgJsonStrC = (String) renderRequest.getAttribute("organization");
+	long currentOrgId = 0;
+	boolean enableComments = false;
+	if (StringUtils.isNotEmpty(orgJsonStrC)) {
+		try {
+			JSONObject orgJsonObj = JSONFactoryUtil.createJSONObject(orgJsonStrC);
+			currentOrgId = orgJsonObj.getLong("organizationId");
+			enableComments = CommentTagProcess.hasCommentPermissionAttribute(renderRequest, CommentTagProcess.ACTION_VIEW_COMMENTS_PERMISSION);
+		} catch (Exception e) {
+			// don't enable comments
+		}
+	}
+%>
+<section class="form form_22 animated" form-name="form_22">
+    <span class="formTitle"><liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.comments.section")%>' />
+    <input type="button" value="<liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.comments.section.proceed")%>' />" class="proceedFromTop" />
+    </span>
+	<p><liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.comments.section.desc")%>' /></p>	
+	<div class="formContent">   
+		<div class="fw">
+		<c:if test="<%= enableComments %>">
+			<portlet:resourceURL var="resourceURL" id="myResourceID01" />
+			<div class="commentsDiv">
+				<sp-ui:comment classPK="<%= currentOrgId %>"
+					className="<%= Organization.class.getName() %>"
+					ajaxUrl="<%= resourceURL %>" prefix="startup"></sp-ui:comment>
+			</div>
+		</c:if>
+		</div>
+	</div>
+    <div class="formCTA fw">
+        <input type="button" id="form_22Proceed" value="<liferay-ui:message key='<%=LabelUtil.getLabel(pageContext, themeDisplay,"label.comments.section.proceed")%>' />" class="proceed" />
+    </div>
+
+</section>

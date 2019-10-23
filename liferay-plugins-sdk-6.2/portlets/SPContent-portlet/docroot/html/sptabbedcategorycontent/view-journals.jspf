@@ -1,0 +1,19 @@
+<%@ include file="/html/sptabbedcategorycontent/init.jsp" %>
+	<%
+		List<String> journalContentList = (List<String>) request.getAttribute(WebKeys.JOURNAL_CONTENT_LIST);
+	%>
+				
+	<c:if test="${journalContentList != null && journalContentList.size()>0}">
+		<c:forEach items="${journalContentList}" var="jc">
+			<div class="col">
+		        <div class="padding-row _item">         
+		            <div class="single-idea">
+				${jc}
+	            	</div>
+            	</div>            
+        	</div>					
+		</c:forEach>
+		<% 
+			journalContentList.clear();
+		%>
+	</c:if>

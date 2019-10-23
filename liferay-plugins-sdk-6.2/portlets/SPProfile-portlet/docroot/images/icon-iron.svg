@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style id="bx-google-fonts">@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,500,700,900,100italic,300italic,400,400italic,500italic,700italic,900italic);</style>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="matrix(1, 0, 0, 1, 1, 1)">
+    <circle cx="6" cy="6" r="6" stroke="#95A5A6"/>
+  </g>
+  <path d="M 1.752 4.187 L 1.752 4.187 Z" style="stroke: black; fill: none;"/>
+  <text x="5.755" y="9.678" transform="matrix(1.697459, 0, 0, 1, -4.659587, 0.189349)" style="fill: rgb(149, 165, 166); font-size: 8px; white-space: pre;">I</text>
+</svg>

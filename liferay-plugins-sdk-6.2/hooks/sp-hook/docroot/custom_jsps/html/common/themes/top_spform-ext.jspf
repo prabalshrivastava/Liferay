@@ -1,0 +1,20 @@
+<script type="text/javascript" src="/html/js/sp/lodash.min.js"></script>
+<script src="/html/js/sp/babel.min.js"></script>
+<script src='/html/js/sp/formio.full.js'></script>
+<script type="text/babel" src='/html/js/sp/fileService.js'></script>
+
+<script type="text/babel" src='/html/js/sp/class/SPBase.js'></script>
+<script type="text/babel" src='/html/js/sp/class/SPEventAware.js'></script>
+<script type="text/babel" src='/html/js/sp/class/SPAjax.js'></script>
+<script type="text/babel" src='/html/js/sp/class/SPForm.js'></script>
+<script type="text/babel" src='/html/js/sp/class/SPDynamicForm.js'></script>
+<script type="text/babel" src='/html/js/sp/class/SPFormLogicHandler.js'></script>
+<script type="text/babel" src='/html/js/sp/class/SPProcessEngineForm.js'></script>
+<script src='/html/js/sp/class/SPFormPermissionHandler.js'></script>
+<script src='/html/js/sp/SambaashUtils.js'></script>
+<script src='/html/js/sp/SPFormController.js'></script>
+
+<link rel='stylesheet' href='/html/css/sp/spform.css?minifierType=css'>
+<link rel='stylesheet' href='/html/css/sp/glyphicon.css?minifierType=css'>
+<!-- <link rel='stylesheet' href='/html/css/sp/bootstrap.min.css?minifierType=css'> -->
+<!-- <link rel='stylesheet' href='/html/css/sp/formio.full.min.css?minifierType=css'> -->

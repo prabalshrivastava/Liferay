@@ -1,0 +1,111 @@
+@import "sp_custom_variables";
+@import "sp_mixins";
+@import "sp_media-queries";
+        //SIGNIN & SIGNUP
+        .portlet-login .sp-social-login-wrap {
+            display: table;
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
+            height: 280vh;
+            padding-top: 20px;
+            background-color: transparent;
+            min-height: 800px;
+        }
+        
+        .portlet-login .sp-social-login-wrap .sp-social-login-content {
+            display: table-cell;
+            vertical-align: top;
+        }
+        
+        .portlet-login .sp-social-login-wrap .sp-social-login-content .sp-soclog {
+            display: block;
+            max-width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            padding-top: 40px;
+        }
+        
+        .portlet-login .sp-social-login-wrap .sp-social-login-content .sp-social-login-section {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+            padding: 20px 40px;
+        }
+        
+        .portlet-login .sp-social-login-wrap .sp-social-login-content .sp-social-login-section-left .sl-login-wrap {
+            display: table;
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+        
+        .portlet-login .sp-social-login-wrap .sp-social-login-content .sp-social-login-section-left .sl-login-wrap .sl-login-content {
+            display: table-cell;
+            height: 100%;
+            width: 100%;
+            vertical-align: middle;
+        }
+        
+        .portlet-login .sp-social-login-wrap .sp-social-login-content .sp-social-login-section-left .sl-login-wrap .sl-login-content .sl-login-title {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        
+        .portlet-login .sp-login-callout {
+            padding: 0 20px;
+        }
+        
+        .portlet-login .form fieldset {
+            border-width: 0;
+            margin-bottom: 0;
+            padding: 0;
+        }
+        
+        .portlet-login .sp-social-login-wrap .sp-social-login-content .sp-social-login-section-left .button-holder {
+            text-align: center;
+        }
+        
+        .portlet-login .sp-social-login-wrap .sp-social-login-content .control-group input[type="text"] {
+            max-width: 100% !important;
+        }
+        
+        .portlet-login .navigation {
+            padding: 10px;
+            ul {
+                text-align: center;
+                li {
+                    padding-right: 20px;
+                    float: none;
+                    display: inline-block;
+                    img {
+                        width: 45px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+.forgot-password {
+	vertical-align:top;
+}        
+        
+ @include screen(320px, 767px) {       
+       .portlet-login .sp-social-login-wrap .sp-social-login-content .sp-social-login-section {
+            width: 100%!important;
+            padding: 20px;
+            border:none!important;
+        } 
+        
+        .remember-me.half-width,.forgot-password.half-width {
+		    width: 100%;
+		}
+		
+		.forgot-password.text-right{
+			text-align: left;
+		}
+		
+		.remember-me{
+		    margin-top: -28px;
+		}
+}

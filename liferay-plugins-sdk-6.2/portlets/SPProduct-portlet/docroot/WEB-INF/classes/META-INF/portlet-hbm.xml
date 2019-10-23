@@ -1,0 +1,695 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.model.Activity" />
+	<import class="com.sambaash.platform.srv.model.Assessment" />
+	<import class="com.sambaash.platform.srv.model.Certificate" />
+	<import class="com.sambaash.platform.srv.model.CompetencyUnit" />
+	<import class="com.sambaash.platform.srv.model.Course" />
+	<import class="com.sambaash.platform.srv.model.CourseCareer" />
+	<import class="com.sambaash.platform.srv.model.CourseCertificate" />
+	<import class="com.sambaash.platform.srv.model.CourseDuration" />
+	<import class="com.sambaash.platform.srv.model.CourseDurationType" />
+	<import class="com.sambaash.platform.srv.model.CourseEnrollContract" />
+	<import class="com.sambaash.platform.srv.model.CourseEnrollEsignInfo" />
+	<import class="com.sambaash.platform.srv.model.CourseLearning" />
+	<import class="com.sambaash.platform.srv.model.CourseModule" />
+	<import class="com.sambaash.platform.srv.model.CourseOutcome" />
+	<import class="com.sambaash.platform.srv.model.FeeDetails" />
+	<import class="com.sambaash.platform.srv.model.FeeType" />
+	<import class="com.sambaash.platform.srv.model.Framework" />
+	<import class="com.sambaash.platform.srv.model.Funding" />
+	<import class="com.sambaash.platform.srv.model.GraduationCriteria" />
+	<import class="com.sambaash.platform.srv.model.MiscellaneousFees" />
+	<import class="com.sambaash.platform.srv.model.Module" />
+	<import class="com.sambaash.platform.srv.model.ModuleCertificate" />
+	<import class="com.sambaash.platform.srv.model.ModuleCompetencyUnit" />
+	<import class="com.sambaash.platform.srv.model.ModuleFramework" />
+	<import class="com.sambaash.platform.srv.model.Outcome" />
+	<import class="com.sambaash.platform.srv.model.Outline" />
+	<import class="com.sambaash.platform.srv.model.Persona" />
+	<import class="com.sambaash.platform.srv.model.PersonaAttendee" />
+	<import class="com.sambaash.platform.srv.model.Product" />
+	<import class="com.sambaash.platform.srv.model.ProductCourse" />
+	<import class="com.sambaash.platform.srv.model.ProductSupervisor" />
+	<import class="com.sambaash.platform.srv.model.ProgressionPath" />
+	<import class="com.sambaash.platform.srv.model.Schedule" />
+	<import class="com.sambaash.platform.srv.model.StudentCourseFee" />
+	<import class="com.sambaash.platform.srv.model.StudentCourseFeeInstmnt" />
+	<import class="com.sambaash.platform.srv.model.StudyOption" />
+	<class name="com.sambaash.platform.srv.model.impl.ActivityImpl" table="SPActivity">
+		<cache usage="read-write" />
+		<id name="spActivityId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spModuleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spScheduleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="activityTiming" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="activityPerformer" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="activityDuration" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.AssessmentImpl" table="SPAssessment">
+		<cache usage="read-write" />
+		<id name="spAssessmentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spModuleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="assessmentDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="assessmentType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="assessmentMethod" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="assessmentMode" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="locationType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="eligibility" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="gradingType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="maximumMarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="passingMarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.CertificateImpl" table="SPCertificate">
+		<cache usage="read-write" />
+		<id name="spCertificatetId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="countryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="certificateCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="certificateType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="level" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="attachmentFolderId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.CompetencyUnitImpl" table="SPCompetencyUnit">
+		<cache usage="read-write" />
+		<id name="spCompetencyUnitId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="countryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spFrameworkId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="competencyUnitCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="competencyUnitDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="jobFamily" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="competencyLevel" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="creditValue" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.CourseImpl" table="SPCourse">
+		<cache usage="read-write" />
+		<id name="spCourseId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="countryId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="courseCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="courseName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="displayCourseName" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="courseDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="courseDurationFullTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="learningDurationFullTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="courseDurationPartTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="learningDurationPartTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="complexityLevel" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="courseType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="frameworkApprovalStatus" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="graduationCriteriaDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fundingDescPre" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fundingDescPost" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="feeDetailsDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="testLink" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="courseOutcomeTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="courseOutcomeDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="personaDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="certificateTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="awardingBodyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="courseLevel" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="miscFeeDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="courseDeveloperId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.CourseCareerImpl" table="SPCourseCareer">
+		<cache usage="read-write" />
+		<id name="spCourseCareerId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="intro" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.CourseCertificateImpl" table="SPCourseCertificate">
+		<cache usage="read-write" />
+		<id name="spCourseCertificateId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spCertificatetId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.CourseDurationImpl" table="SPCourseDuration">
+		<cache usage="read-write" />
+		<id name="spCourseDurationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spCourseLearningId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.CourseDurationTypeImpl" table="SPCourseDurationType">
+		<cache usage="read-write" />
+		<id name="spCourseDurationTypeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spCourseDurationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="title1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="duration1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="title2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="duration2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.CourseEnrollContractImpl" table="SPCourseEnrollContract">
+		<cache usage="read-write" />
+		<id name="spCourseContractId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="countryId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="courseType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="docType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="seqNo" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="contractTemplateFileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="dataTemplateFileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="extraInfo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.CourseEnrollEsignInfoImpl" table="SPCourseEnrollEsignInfo">
+		<cache usage="read-write" />
+		<id name="spEsignInfoId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="signerId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="packageId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="documentId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastGeneratedUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="spPEProcessStateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="extraInfo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.CourseLearningImpl" table="SPCourseLearning">
+		<cache usage="read-write" />
+		<id name="spCourseLearningId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="intro" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="optionTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="option1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="option2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="note" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.CourseModuleImpl" table="SPCourseModule">
+		<cache usage="read-write" />
+		<id name="spCourseModuleId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spModuleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.CourseOutcomeImpl" table="SPCourseOutcome">
+		<cache usage="read-write" />
+		<id name="spCourseOutcomeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="outcomeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="outcomeDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.FeeDetailsImpl" table="SPFeeDetails">
+		<cache usage="read-write" />
+		<id name="spFeeDetailsId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="feeType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="feeDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="calculationBase" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="amount" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="displayOrder" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fundId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.FeeTypeImpl" table="SPFeeType">
+		<cache usage="read-write" />
+		<id name="spFeeTypeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="feeType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="feeTypeName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="feeTypeDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="misc" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.FrameworkImpl" table="SPFramework">
+		<cache usage="read-write" />
+		<id name="spFrameworkId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="countryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="frameworkCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="frameworkName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="frameworkImageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.FundingImpl" table="SPFunding">
+		<cache usage="read-write" />
+		<id name="spFundingId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="courseType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fundingDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fundingCriteria" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fundOrder" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sponsoredBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="residenceStatus" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ageOperator" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="age" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="earningStatus" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="salaryOperator" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="salary" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="fundingHour" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fundingAmount" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="netFees" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="absenteePayroll" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fundingCourseFee" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.GraduationCriteriaImpl" table="SPGraduationCriteria">
+		<cache usage="read-write" />
+		<id name="spGraduationCriteriaId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="criteriaType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="criteriaLevel" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="criteriaValueRange" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="criteriaDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.MiscellaneousFeesImpl" table="SPMiscellaneousFees">
+		<cache usage="read-write" />
+		<id name="spMiscFeesId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="miscFeeType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="amount" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="payable" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.ModuleImpl" table="SPModule">
+		<cache usage="read-write" />
+		<id name="spModuleId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="countryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="moduleCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="moduleName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="moduleDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="moduleType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="creditValue" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="moduleDuration" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="noOfSessions" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="generalDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.ModuleCertificateImpl" table="SPModuleCertificate">
+		<cache usage="read-write" />
+		<id name="spModuleCertificateId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spModuleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spCertificatetId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.ModuleCompetencyUnitImpl" table="SPModuleCompetencyUnit">
+		<cache usage="read-write" />
+		<id name="spModuleCompetencyUnitId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spModuleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spCompetencyUnitId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.ModuleFrameworkImpl" table="SPModuleFramework">
+		<cache usage="read-write" />
+		<id name="spModuleFrameworkId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spModuleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spFrameworkId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.OutcomeImpl" table="SPOutcome">
+		<cache usage="read-write" />
+		<id name="spOutcomeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="countryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="outcomeCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="outcomeDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="outcomeType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="outcomeFolderId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spCompetencyUnitId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.OutlineImpl" table="SPOutline">
+		<cache usage="read-write" />
+		<id name="spOutlineId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spCompetencyUnitId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="outlineType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="outlineDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.PersonaImpl" table="SPPersona">
+		<cache usage="read-write" />
+		<id name="spPersonaId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="personaType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="ageGroup" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="personaDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="personaImageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.PersonaAttendeeImpl" table="SPPersonaAttendee">
+		<cache usage="read-write" />
+		<id name="spPersonaAttendeeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="imageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spPersonaId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.ProductImpl" table="SPProduct">
+		<cache usage="read-write" />
+		<id name="spProductId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="countryId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="productCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="productName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="productDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="productImageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="productBrochuresFolderId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="productVideoFolderId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="creditValues" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="PEProcessId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="productTemplateName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="productTemplateLanguage" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="registrationEnabled" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="samePageRegistration" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="productFormImageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="productFormName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="productFormButtonName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="productFormUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="productBannerImageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="hasInventory" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="bannerDetailsEnabled" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.ProductCourseImpl" table="SPProductCourse">
+		<cache usage="read-write" />
+		<id name="spProductCourseId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spProductId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.ProductSupervisorImpl" table="SPProductSupervisor">
+		<cache usage="read-write" />
+		<id name="spProductSupervisorId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="countryName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="countryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="productId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="supervisorId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.ProgressionPathImpl" table="SPProgressionPath">
+		<cache usage="read-write" />
+		<id name="spProgressionPathId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="careerLevel" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="level" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="progressionType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="progressionCategory" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="startMonth" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="endMonth" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="duration" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="optionalMandatory" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.ScheduleImpl" table="SPSchedule">
+		<cache usage="read-write" />
+		<id name="spScheduleId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spModuleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sessionNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="sessionType" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sessionDuration" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.StudentCourseFeeImpl" table="SPStudentCourseFee">
+		<cache usage="read-write" />
+		<id name="spStudentCourseFeeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spPEProcessStateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="feeType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="amount" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="order_" />
+		<property name="formula" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="label" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.StudentCourseFeeInstmntImpl" table="SPStudentCourseFeeInstmnt">
+		<cache usage="read-write" />
+		<id name="spStudentCourseFeeInstmntId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spPEProcessStateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="insmntNo" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="amount" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="date" type="org.hibernate.type.TimestampType" column="date_" />
+	</class>
+	<class name="com.sambaash.platform.srv.model.impl.StudyOptionImpl" table="SPCourseStudyOption">
+		<cache usage="read-write" />
+		<id name="spStudyOptionId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="spCourseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="desc" type="com.liferay.portal.dao.orm.hibernate.StringType" column="desc_" />
+		<property name="coverImageFileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+</hibernate-mapping>

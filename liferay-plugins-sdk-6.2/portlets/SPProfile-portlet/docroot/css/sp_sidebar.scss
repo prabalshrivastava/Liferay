@@ -1,0 +1,139 @@
+    @import "cm_mixin";
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .spNav-sidebar {
+        width: 23%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        margin-right: 10px;
+    }
+
+
+
+    .spNav-sidebar-heading {
+        h2 {
+            padding: 15px 20px;
+            margin: 0;
+        }
+    }
+
+    .spNav-sidebarnav {
+        padding: 10px 20px;
+        margin: 0;
+        h3 {
+            margin: 0;
+            padding: 5px 0 10px 0;
+        }
+    } //drop
+    /* The container <div> - needed to position the dropdown content */
+
+    .spNav-dropdown {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+    }
+    /* Dropdown Content (Hidden by Default) */
+
+    .spNav-dropdown .spNav-dropdown-content a {
+        padding: 6px 10px;
+        &:last-child {
+            padding-bottom: 6px;
+        }
+    }
+
+    .spNav-dropdown-content {
+        display: block;
+        position: absolute;
+        width: 150px;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        margin-left: 50px;
+    }
+    /* Links inside the dropdown */
+
+    .spNav-dropdown-content a.drspNavp {
+
+        padding: 8px 15px;
+    }
+    /* Change color of dropdown links on hover */
+    /* Show the dropdown menu on hover */
+
+    .spNav-dropdown:hover .spNav-dropdown-content {
+        display: block;
+    }
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+
+    .spNav-sidebarnav ul {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        li {
+            padding-bottom: 12px;
+            margin: 0;
+            list-style: none;
+            position: relative;
+        }
+    }
+
+    .spNav-sidebarnav ul li a {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+        @include flexbox();
+        @include flex-direction(row);
+        &:hover+.spNav-dropdown-content {
+
+
+            display: block;
+        }
+    }
+
+    .spNav-sidebarnav ul li {
+        img {
+            width: 24px;
+            height: 15px;
+            padding-right: 10px;
+        }
+        span {
+
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .spNav-sidebarnav ul li {
+        &.borderSeparate {
+           margin-bottom: 10px;
+        }
+    }
+
+    .spNav-sidebarnav ul li a {
+
+
+        +div.cmTabContent {
+            display: block;
+        }
+    }
+
+    .spNav-sidebarnav ul li {
+        a {
+            &.is-active {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 10px;
+                    height: 15px;
+                }
+            }
+        }
+    }

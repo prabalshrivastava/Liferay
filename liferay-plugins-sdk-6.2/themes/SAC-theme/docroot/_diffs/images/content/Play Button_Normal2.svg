@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg version="1.1" id="Play" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
+<g id="Circle">
+	<path fill="#00A9E0" d="M30,1c16,0,29,13,29,29S46,59,30,59S1,46,1,30S14,1,30,1 M30,0C13.4,0,0,13.4,0,30s13.4,30,30,30
+		s30-13.4,30-30S46.6,0,30,0L30,0z"/>
+</g>
+<g id="Triangle">
+	<polygon fill="#3FA9F5" points="24,17.5 24,43.1 40.1,30.7 	"/>
+</g>
+
+</svg>

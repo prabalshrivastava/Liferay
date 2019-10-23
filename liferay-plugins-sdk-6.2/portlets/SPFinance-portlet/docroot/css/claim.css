@@ -1,0 +1,47 @@
+.two-column-control label {
+	line-height: 33px
+} 
+
+.aui .newPortlets .invoice-action-dialog .modalpopupBox.modal .modal-content h3:before {
+	background: url("../images/remarks.png") !important;
+	width: 25px !important;
+    height: 25px !important;
+}
+
+.status-col {
+    border-radius: 15px;
+    text-align: center !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 130px;
+    display: block;
+}
+.pending-submission {
+	background-color:#ffc48b !important;
+	border: 4px solid #ffc48b;
+}
+.pending-verification {
+	background-color:#ffd724 !important;
+	border: 4px solid #ffd724;
+}
+.pending-approval {
+	background-color:#ffd724 !important;
+	border: 4px solid #ffd724;
+}
+.approved {
+	background-color:#8bdb7c !important;
+	border: 4px solid #8bdb7c;
+}
+.rejected {
+	background-color:#ffb5b5 !important;
+	border: 4px solid #ffb5b5;
+}
+.pending-amendments {
+	background-color:#ffd724 !important;
+	border: 4px solid #ffd724;
+}
+.reject-btn {
+	background-color: #e92f4b !important;
+    color: white !important;
+}

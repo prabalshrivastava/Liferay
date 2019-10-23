@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.validation.service.SPStudentProgrammeLocalService" class="com.sambaash.platform.srv.validation.service.impl.SPStudentProgrammeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.validation.service.SPStudentProgrammeService" class="com.sambaash.platform.srv.validation.service.impl.SPStudentProgrammeServiceImpl" />
+	<bean id="com.sambaash.platform.srv.validation.service.persistence.SPStudentProgrammePersistence" class="com.sambaash.platform.srv.validation.service.persistence.SPStudentProgrammePersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.validation.service.SPStudentProgrammeResultLocalService" class="com.sambaash.platform.srv.validation.service.impl.SPStudentProgrammeResultLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.validation.service.persistence.SPStudentProgrammeResultPersistence" class="com.sambaash.platform.srv.validation.service.persistence.SPStudentProgrammeResultPersistenceImpl" parent="basePersistence" />
+</beans>

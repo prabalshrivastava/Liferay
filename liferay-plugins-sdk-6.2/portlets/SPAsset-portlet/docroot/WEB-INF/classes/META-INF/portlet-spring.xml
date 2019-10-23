@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.sambaash.platform.srv.spasset.service.SPAssetEntryLocalService" class="com.sambaash.platform.srv.spasset.service.impl.SPAssetEntryLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spasset.service.SPAssetEntryService" class="com.sambaash.platform.srv.spasset.service.impl.SPAssetEntryServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spasset.service.persistence.SPAssetEntryPersistence" class="com.sambaash.platform.srv.spasset.service.persistence.SPAssetEntryPersistenceImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spasset.service.persistence.SPAssetEntryFinder" class="com.sambaash.platform.srv.spasset.service.persistence.SPAssetEntryFinderImpl" parent="basePersistence" />
+	<bean id="com.sambaash.platform.srv.spasset.service.SPAssetTypeLocalService" class="com.sambaash.platform.srv.spasset.service.impl.SPAssetTypeLocalServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spasset.service.SPAssetTypeService" class="com.sambaash.platform.srv.spasset.service.impl.SPAssetTypeServiceImpl" />
+	<bean id="com.sambaash.platform.srv.spasset.service.persistence.SPAssetTypePersistence" class="com.sambaash.platform.srv.spasset.service.persistence.SPAssetTypePersistenceImpl" parent="basePersistence" />
+</beans>

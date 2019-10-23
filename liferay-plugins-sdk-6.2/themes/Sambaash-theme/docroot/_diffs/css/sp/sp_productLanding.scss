@@ -1,0 +1,928 @@
+@import "sp_custom_variables";
+@import "sp_mixins";
+@import "sp_media-queries";
+
+
+/* 1.Cover Section Background Image + Content Section */
+
+.productCoverSection {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    margin: 0;
+    padding: 0;
+
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.Pc-Wrapper {
+    @include flexbox();
+    width: 100%;
+    max-width: 926px;
+    height: auto;
+    margin: 0 auto;
+    padding: 120px 0;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+    box-sizing: border-box;
+}
+
+h2.PCMainTitle {
+    font-size: 60px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.73;
+    letter-spacing: normal;
+    text-align: left;
+    color: #f4f4f4;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+h4.PCSubTitle {
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffca00;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+p.PCDescription {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #efefef;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+a.PCLink {
+    padding: 15px 30px;
+    border-radius: 6px;
+    background-color: #ffa40f;
+    color: #ffffff;
+    text-decoration: none;
+    outline: none;
+    font-size: 19px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px #c57d08;
+}
+
+//2.30*70 Image + Content Section
+.productContentSection {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    margin: 0;
+    padding: 0;
+}
+
+.Pc-WrapperContent {
+    @include flexbox();
+    width: 100%;
+    max-width: 926px;
+    height: auto;
+    margin: 0 auto;
+    padding: 60px 0;
+    box-sizing: border-box;
+
+    @include align-items(flex-start);
+    @include justify-content(center);
+    &:nth-child(even) {
+        @include flex-direction(row-reverse);
+        border-top: 1px solid #dae0e5;
+        h2.productContentHeading {
+            text-align: right;
+        }
+        p.productContentDescription {
+            text-align: right;
+        }
+    }
+    &:nth-child(odd) {
+        @include flex-direction(row);
+    }
+
+    .PCWC30 {
+        width: 30%;
+        padding: 20px;
+        margin: 0;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+    .PCWC70 {
+        width: 70%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+h2.productContentHeading {
+    font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #0b55a5;
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+p.productContentDescription {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #343434;
+}
+
+//3.Diagram - Image + Content zigzag Section
+.productDiagramSection {
+    width: 100%;
+    height: auto;
+    padding: 40px 30px;
+    margin: 0;
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+
+.Pc-WrapperDiagram {
+    @include flexbox();
+    width: 100%;
+    max-width: 926px;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px 0 100px;
+
+    @include align-items(flex-start);
+    @include justify-content(center);
+}
+
+
+
+.Pc-DiagramSec {
+
+    &:nth-child(even) {
+        @include flex-direction(column-reverse);
+        .Pc-DiagramImg {
+            margin-top: 10px;
+            position: relative;
+            box-shadow: 0px -1px 1px #bbd2e2;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1px;
+                height: 22px;
+                margin-top: -13px;
+                z-index: -1;
+                background-color: #bbd2e2;
+                transform: rotate(146deg);
+                display: none;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 1px;
+                height: 65px;
+                margin-top: -36px;
+                z-index: -1;
+                background-color: #bbd2e2;
+                transform: rotate(31deg);
+                display: none;
+            }
+        }
+    }
+    &:nth-child(odd) {
+        @include flex-direction(column);
+        .Pc-DiagramImg {
+
+            box-shadow: 0px 1px 1px #bbd2e2;
+        }
+        .Pc-DiagramTitle {
+            margin-top: 10px;
+        }
+    }
+    width: 14%;
+    z-index: 2;
+    position: relative;
+    margin: 0 0;
+    @include flexbox();
+    @include flex-direction(column);
+    .Pc-DiagramImg {
+        width: 136px;
+        height: 97px;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        border-radius: 8px;
+        background-color: #f5f8fa;
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+    }
+    .Pc-DiagramTitle {
+        width: 136px;
+        height: 95px;
+        padding: 0 10px;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        box-sizing: border-box;
+        h2 {
+            font-size: 15px;
+            font-weight: 400;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #343434;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+//4.Image + Content overlay 
+.pdIOverlayWrapper {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    margin: 0;
+    padding: 0;
+
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right top;
+    box-sizing: border-box;
+}
+
+.PdIOverlayContainer {
+    @include flexbox();
+    width: 100%;
+    max-width: 926px;
+    height: auto;
+    margin: 0 auto;
+    padding: 60px 0;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+    box-sizing: border-box;
+    h2.PIOSubTitle {
+        font-size: 30px;
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 20px 0;
+        padding: 0;
+    }
+
+    p.PIODescription {
+        font-size: 16px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        text-align: left;
+        color: #bad3ee;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 20px 0;
+        padding: 0;
+    }
+}
+
+//5.Diagram Circle - Rounded Icon + Content Bottom
+.pdDCirclewrapper {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.pdDCircleContainer {
+
+    width: 100%;
+    max-width: 926px;
+    height: auto;
+    margin: 0 auto;
+    padding: 300px 0 350px;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+}
+
+.pdDCircleBorder {
+    width: 756px;
+    height: 756px;
+
+    border: dashed 1px #89a2c6;
+    border-radius: 50%;
+    margin: 0 auto;
+    border-spacing: 50px;
+    position: relative;
+}
+
+.pdDcircleContentWrapper {
+    position: absolute;
+
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    min-height: 240px;
+
+    border-radius: 8px;
+
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    &:nth-child(1) {
+        top: 0;
+        left: 50%;
+        margin-left: -220px;
+        max-width: 445px;
+        .pdDcircleList {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: -215px;
+            margin-left: 20px;
+            max-width: 100%!important;
+            li {
+                width: 50%;
+            }
+        }
+    }
+    &:nth-child(2) {
+        top: 0;
+        right: 0;
+        margin-right: -68px;
+        margin-top: 160px;
+        .pdDcircleList {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-right: -160px;
+            margin-top: -80px;
+        }
+    }
+    &:nth-child(3) {
+        top: 0;
+        left: 0;
+        margin-left: -68px;
+        margin-top: 160px;
+        .pdDcircleList {
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-left: -160px;
+            margin-top: -80px;
+        }
+    }
+    &:nth-child(4) {
+        top: 50%;
+        left: 50%;
+        margin-left: -115px;
+        margin-top: 0;
+    }
+    &:nth-child(5) {
+        bottom: 0;
+        left: 0;
+        margin-left: -92px;
+        margin-bottom: -130px;
+        .pdDcircleList {
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-left: -150px;
+            margin-top: -75px;
+        }
+    }
+    &:nth-child(6) {
+        bottom: 0;
+        right: 0;
+        margin-right: -95px;
+        margin-top: 0;
+        margin-bottom: -130px;
+        .pdDcircleList {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-right: -156px;
+            margin-top: -75px;
+        }
+    }
+    &:nth-child(7) {
+        bottom: 0;
+        left: 50%;
+        margin-left: -220px;
+        margin-bottom: -244px;
+        max-width: 445px;
+        .pdDcircleList {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            margin-left: 20px;
+            max-width: 100% !important;
+            li {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.pdDcircleIcon {
+    width: 105px;
+    height: 105px;
+    background-color: #ffffff;
+    border: solid 9px #dae5ee;
+    border-radius: 50%;
+    margin-top: -60px;
+    margin-bottom: 10px;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+    }
+}
+
+h2.pdDcircleheading {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #343434;
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+ul.pdDcircleList {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    max-width: 220px;
+    li {
+        list-style: none;
+        text-align: left;
+        color: #343434;
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 2px;
+        padding: 0 0 0 15px;
+        line-height: normal;
+        list-style-position: inside;
+        position: relative;
+        &:after {
+            content: '';
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #409cc5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 8px;
+        }
+    }
+}
+
+@include respond-to('small') {
+    /* Product cover section Mobile view */
+    .Pc-Wrapper {
+        padding: 100px 30px 40px;
+    }
+    h2.PCMainTitle {
+        line-height: 1;
+    }
+
+    /*  Content section 1 Mobile view */
+    .Pc-WrapperContent {
+        padding: 60px 30px 30px;
+    }
+    .Pc-WrapperContent:nth-child(odd) {
+        @include flex-direction(column);
+    }
+    .Pc-WrapperContent:nth-child(even) {
+        @include flex-direction(column);
+        h2.productContentHeading {
+            text-align: left;
+        }
+        p.productContentDescription {
+            text-align: left;
+        }
+    }
+    .Pc-WrapperContent .PCWC70 {
+        width: 100%;
+    }
+    .Pc-WrapperContent .PCWC30 {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    /*  Content Diagram1 */
+    .Pc-WrapperDiagram {
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        padding: 30px 0 30px;
+    }
+    .Pc-DiagramSec {
+        width: 100%;
+        @include justify-content(center);
+        @include align-items(center);
+        @include flex-direction(row);
+        margin-bottom: 10px;
+    }
+    .Pc-DiagramSec:nth-child(even) {
+        @include flex-direction(column);
+        .Pc-DiagramImg {
+            margin-top: 0px;
+        }
+    }
+    .Pc-DiagramSec:nth-child(odd) .Pc-DiagramTitle {
+        margin-top: 0px;
+        width: 200px;
+    }
+    .Pc-DiagramSec .Pc-DiagramTitle {
+
+        width: 200px;
+    }
+    .Pc-DiagramSec:nth-child(even) .Pc-DiagramImg:before {
+        display: none;
+    }
+    .Pc-DiagramSec:nth-child(even) .Pc-DiagramImg:after {
+        display: none;
+    }
+
+    /* Diagram5 mobile */
+    .pdDCircleBorder {
+        width: 100%;
+        height: auto;
+        border: 0px;
+    }
+    .pdDcircleContentWrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-bottom: 60px;
+        border: solid 1px #e6ecf1;
+        max-width: 300px;
+        margin: 100px auto 0!important;
+        box-sizing: border-box;
+        opacity: 1;
+    }
+    .pdDcircleIcon {
+        margin-top: -66px;
+    }
+    .pdDCircleContainer {
+        padding: 40px 0 40px;
+    }
+    .pdDcircleContentWrapper {
+        &:after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 58px;
+            background-color: #e6ecf1;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            margin-bottom: -58px;
+        }
+
+        &:nth-child(1) {
+            top: 0;
+            left: 0%;
+            margin-left: -0;
+            max-width: 300px;
+            .pdDcircleList {
+                position: relative;
+                top: 0;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 0;
+                max-width: 215px !important;
+                li {
+                    width: 100%;
+                }
+            }
+        }
+        &:nth-child(2) {
+            top: 0;
+            right: 0;
+            margin-right: -0;
+            margin-top: 0;
+            .pdDcircleList {
+                position: relative;
+                right: 0;
+                top: 0;
+                margin-right: 0;
+                margin-top: 0;
+            }
+        }
+        &:nth-child(3) {
+            top: 0;
+            left: 0;
+            margin-left: -0;
+            margin-top: 0;
+            .pdDcircleList {
+                position: relative;
+                left: 0;
+                top: 0;
+                margin-left: 0;
+                margin-top: 0;
+            }
+        }
+        &:nth-child(4) {
+            top: 0%;
+            left: 0%;
+            margin-left: -0;
+            margin-top: 0;
+        }
+        &:nth-child(5) {
+            bottom: 0;
+            left: 0;
+            margin-left: -0;
+            margin-bottom: -0;
+            .pdDcircleList {
+                position: relative;
+                left: 0;
+                top: 0;
+                margin-left: 0;
+                margin-top: 0;
+            }
+        }
+        &:nth-child(6) {
+            bottom: 0;
+            right: 0;
+            margin-right: -0;
+            margin-top: 0;
+            margin-bottom: -0;
+            .pdDcircleList {
+                position: relative;
+                right: 0;
+                margin-right: 0;
+                margin-top: 0;
+            }
+        }
+        &:nth-child(7) {
+            bottom: 0;
+            left: 0;
+            margin-left: 0;
+            margin-bottom: 0;
+            max-width: 300px;
+            &:after {
+                display: none;
+            }
+            .pdDcircleList {
+                position: relative;
+                bottom: 0;
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 0;
+                margin-left: 0;
+                max-width: 220px !important;
+                li {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    ul.pdDcircleList {
+        padding-bottom: 20px;
+    }
+
+    /*  Content Overlay */
+    .PdIOverlayContainer {
+        padding: 300px 30px 30px;
+        box-sizing: border-box;
+        position: relative;
+        max-width: 100%;
+    }
+    .PdIOverlayContainer:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to top, #06287c, rgba(0, 0, 0, 0));
+    }
+    .PdIOverlayContainer p.PIODescription {
+        z-index: 1;
+    }
+    .PdIOverlayContainer h2.PIOSubTitle {
+        z-index: 1;
+    }
+}
+
+@include screen (769px,
+1024px) {
+    .PdIOverlayContainer {
+        max-width: 100%;
+        padding: 60px 60px;
+        margin: 0 auto 0 0;
+    }
+    /* Diagram5 mobile */
+    .pdDCircleBorder {
+        width: 100%;
+        height: auto !important;
+        border: 0px;
+        max-height: 100%!important;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .pdDcircleContentWrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-bottom: 60px;
+        border: solid 1px #e6ecf1;
+        max-width: 300px;
+        margin: 100px auto 0!important;
+        box-sizing: border-box;
+        opacity: 1;
+    }
+    .pdDcircleIcon {
+        margin-top: -66px;
+    }
+    .pdDCircleContainer {
+        padding: 40px 0 40px;
+    }
+    .pdDcircleContentWrapper {
+        &:after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 58px;
+            background-color: #e6ecf1;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            margin-bottom: -58px;
+        }
+
+        &:nth-child(1) {
+            top: 0;
+            left: 0%;
+            margin-left: -0;
+            max-width: 300px;
+            .pdDcircleList {
+                position: relative;
+                top: 0;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 0;
+                max-width: 215px !important;
+                li {
+                    width: 100%;
+                }
+            }
+        }
+        &:nth-child(2) {
+            top: 0;
+            right: 0;
+            margin-right: -0;
+            margin-top: 0;
+            .pdDcircleList {
+                position: relative;
+                right: 0;
+                top: 0;
+                margin-right: 0;
+                margin-top: 0;
+            }
+        }
+        &:nth-child(3) {
+            top: 0;
+            left: 0;
+            margin-left: -0;
+            margin-top: 0;
+            .pdDcircleList {
+                position: relative;
+                left: 0;
+                top: 0;
+                margin-left: 0;
+                margin-top: 0;
+            }
+        }
+        &:nth-child(4) {
+            top: 0%;
+            left: 0%;
+            margin-left: -0;
+            margin-top: 0;
+        }
+        &:nth-child(5) {
+            bottom: 0;
+            left: 0;
+            margin-left: -0;
+            margin-bottom: -0;
+            .pdDcircleList {
+                position: relative;
+                left: 0;
+                top: 0;
+                margin-left: 0;
+                margin-top: 0;
+            }
+             &:after{
+                display: none;
+            }
+        }
+        &:nth-child(6) {
+            bottom: 0;
+            right: 0;
+            margin-right: -0;
+            margin-top: 0;
+            margin-bottom: -0;
+            .pdDcircleList {
+                position: relative;
+                right: 0;
+                margin-right: 0;
+                margin-top: 0;
+            }
+            &:after{
+                left: 0;
+            }
+        }
+        &:nth-child(7) {
+            bottom: 0;
+            left: 0;
+            margin-left: 0;
+            margin-bottom: 0;
+            max-width: 300px;
+            &:after {
+                display: none;
+            }
+            .pdDcircleList {
+                position: relative;
+                bottom: 0;
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 0;
+                margin-left: 0;
+                max-width: 220px !important;
+                li {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    ul.pdDcircleList {
+        padding-bottom: 20px;
+    }
+}

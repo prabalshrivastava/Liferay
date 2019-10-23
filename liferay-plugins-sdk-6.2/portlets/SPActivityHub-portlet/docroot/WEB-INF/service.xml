@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder
+	package-path="com.sambaash.platform.srv">
+	<author>aishwarya</author>
+	<namespace>spactivityhub</namespace>
+
+	<entity name="Conversation" uuid="true" local-service="true" remote-service="false" table="SPConversation">
+
+		<!-- PK fields -->
+
+		<column name="spConversationId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="entityClassId" type="long" />
+		<column name="entityClassName" type="String" />
+		<column name="entityId" type="long" />
+		<column name="sentByUserId" type="long" />
+		<column name="message" type="String" />
+		<column name="fileEntryId" type="String" />
+		<column name="associatedWith" type="long" />
+		<column name="restricted" type="int" />
+		<column name="status" type="int" />
+		<column name="parentConverstationId" type="long" />
+		<column name="currentPlId" type="long" />
+		
+		<finder return-type="Conversation" name="entityClassIdEntityIdParentConverstationId">
+			<finder-column name="entityClassId"></finder-column>
+			<finder-column name="entityId"></finder-column>
+			<finder-column name="parentConverstationId"></finder-column>
+		</finder>
+		
+		<finder return-type="Collection" name="entityClassIdEntityIdStatus">
+			<finder-column name="entityClassId"></finder-column>
+			<finder-column name="entityId"></finder-column>
+			<finder-column name="status"></finder-column>
+		</finder>
+		
+		<finder return-type="Collection" name="associatedWithRestrictedEntityIdEntityClassIdStatus">
+			<finder-column name="associatedWith"></finder-column>
+			<finder-column name="restricted"></finder-column>
+			<finder-column name="entityId"></finder-column>
+			<finder-column name="entityClassId"></finder-column>
+			<finder-column name="status"></finder-column>
+		</finder>
+
+	</entity>
+	
+	<entity name="ConversationUser" local-service="true" remote-service="false" table="SPConversationUser">
+
+		<!-- PK fields -->
+
+		<column name="spConversationUserId" type="long" primary="true" />
+
+		<!-- Other fields -->
+
+		<column name="spConversationId" type="long" />
+		<column name="sentToUserId" type="long" />
+		<column name="status" type="long" />
+		<column name="entityClassId" type="long" />
+		<column name="entityId" type="long" />
+		
+		<finder return-type="Collection" name="sentToUserIdStatusEntityClassIdEntityId">
+			<finder-column name="sentToUserId" arrayable-operator="OR"></finder-column>
+			<finder-column name="status"></finder-column>
+			<finder-column name="entityClassId"></finder-column>
+			<finder-column name="entityId"></finder-column>
+		</finder>
+		
+		<finder return-type="Collection" name="spConversationId">
+			<finder-column name="spConversationId"></finder-column>
+		</finder>
+
+	</entity>
+	
+	<entity name="Note" local-service="true" remote-service="false" table="SPNote">
+
+		<!-- PK fields -->
+
+		<column name="spNoteId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="entityClassId" type="long" />
+		<column name="entityClassName" type="String" />
+		<column name="entityId" type="long" />
+		<column name="savedByUserId" type="long" />
+		<column name="noteTitle" type="String" />
+		<column name="noteContent" type="String" />
+		<column name="fileEntryId" type="String" />
+		<column name="associatedWith" type="long" />
+		<column name="status" type="int" />
+		<column name="parentNoteId" type="long" />
+		
+		<finder return-type="Note" name="entityClassIdEntityIdParentNoteId">
+			<finder-column name="entityClassId"></finder-column>
+			<finder-column name="entityId"></finder-column>
+			<finder-column name="parentNoteId"></finder-column>
+		</finder>
+		
+	</entity>
+	
+	
+	<entity name="LogActivity" local-service="true" remote-service="false" table="SPLogActivity">
+
+		<!-- PK fields -->
+
+		<column name="spLogActivityId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="entityClassId" type="long" />
+		<column name="entityClassName" type="String" />
+		<column name="entityId" type="long" />
+		<column name="savedByUserId" type="long" />
+		<column name="activityTitle" type="String" />
+		<column name="activityType" type="String" />
+		<column name="activityOutcome" type="String" />
+		<column name="activityDate" type="Date" />
+		<column name="activityTime" type="String" />
+		<column name="activityContent" type="String" />
+		<column name="fileEntryId" type="String" />
+		<column name="associatedWith" type="long" />
+		<column name="status" type="int" />
+		<column name="parentLogActivityId" type="long" />
+		
+		<finder return-type="LogActivity" name="entityClassIdEntityIdParentLogActivityId">
+			<finder-column name="entityClassId"></finder-column>
+			<finder-column name="entityId"></finder-column>
+			<finder-column name="parentLogActivityId"></finder-column>
+		</finder>
+		
+	</entity>
+	
+</service-builder>

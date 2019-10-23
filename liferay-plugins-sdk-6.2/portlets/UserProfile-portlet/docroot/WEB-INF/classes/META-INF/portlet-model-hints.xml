@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sambaash.platform.srv.spsocialprofile.model.ExamBodyUser">
+		<field name="examBodyUserId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="emailAddress" type="String" />
+		<field name="examBody" type="String" />
+		<field name="active" type="boolean" />
+	</model>
+	<model name="com.sambaash.platform.srv.spsocialprofile.model.SocialProfile">
+		<field name="uuid" type="String" />
+		<field name="userId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="userType" type="String" />
+		<field name="memberPackage" type="long" />
+		<field name="userRegistrationStatus" type="String" />
+		<field name="classPK" type="long" />
+		<field name="location" type="String" />
+		<field name="profileViewCount" type="int" />
+		<field name="interest" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="honors" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="groupAssociation" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="skillsQualification" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="title" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="trainingEducation" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="about" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="documentId" type="long" />
+		<field name="userInfo" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="status" type="int" />
+		<field name="twitterId" type="String">
+			<hint name="max-length">1024</hint>
+		</field>
+		<field name="linkedinId" type="String">
+			<hint name="max-length">1024</hint>
+		</field>
+		<field name="yahooId" type="String">
+			<hint name="max-length">1024</hint>
+		</field>
+		<field name="googleId" type="String">
+			<hint name="max-length">1024</hint>
+		</field>
+		<field name="facebookAuthToken" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="openIdAuthToken" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="twitterAuthToken" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="linkedinAuthToken" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="yahooAuthToken" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="googleAuthToken" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="facebookAuthSecret" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="openIdAuthSecret" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="twitterAuthSecret" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="linkedinAuthSecret" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="yahooAuthSecret" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="googleAuthSecret" type="String">
+			<hint name="max-length">5000</hint>
+		</field>
+		<field name="loginCount" type="int" />
+		<field name="updateInterestsStatus" type="int" />
+	</model>
+	<model name="com.sambaash.platform.srv.spsocialprofile.model.SocialProfileDetail">
+		<field name="uuid" type="String" />
+		<field name="socialProfileDetailId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="userJobId" type="String" />
+		<field name="companyName" type="String" />
+	</model>
+	<model name="com.sambaash.platform.srv.spsocialprofile.model.SocialProfileFriends">
+		<field name="socialProfileFriendsId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="belongsToUserId" type="long" />
+		<field name="socialNetworkProfileId" type="long" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="birthday" type="String" />
+		<field name="location" type="String" />
+		<field name="pictureUrl" type="String">
+			<hint name="max-length">3000</hint>
+		</field>
+		<field name="userName" type="String" />
+		<field name="gender" type="int" />
+		<field name="socialNetworkType" type="int" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spsocialprofile.model.SocialProfileLike">
+		<field name="socialProfileLikeId" type="long" />
+		<field name="socialNetworkProfileId" type="long" />
+		<field name="name" type="String">
+			<hint name="max-length">3000</hint>
+		</field>
+		<field name="category" type="String" />
+		<field name="socialNetworkLikeId" type="long" />
+		<field name="socialNetworkType" type="int" />
+		<field name="socialNetworkCreateDate" type="Date" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spsocialprofile.model.SocialProfilePullAudit">
+		<field name="userId" type="long" />
+		<field name="socialNetworkProfileId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="lastQueriedDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spsocialprofile.model.SocialProfileViewAudit">
+		<field name="uuid" type="String" />
+		<field name="socialProfileViewAuditId" type="long" />
+		<field name="loggedInUserId" type="long" />
+		<field name="profileUserId" type="long" />
+		<field name="lastViewDate" type="Date" />
+	</model>
+	<model name="com.sambaash.platform.srv.spsocialprofile.model.UserAvailabilityCalendar">
+		<field name="userAvailabilityCalendarId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="userId" type="long" />
+		<field name="availableFor" type="String" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="active" type="boolean" />
+	</model>
+</model-hints>

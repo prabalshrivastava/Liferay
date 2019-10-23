@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	
+	<portlet>
+		<portlet-name>award-type</portlet-name>
+		<display-name>Award Type</display-name>
+		<portlet-class>
+			com.sambaash.platform.result.action.AwardTypePortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/awardtype/list.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/awardtype/config.jsp</value>
+		</init-param>
+		<init-param>
+			<name>update-template</name>
+			<value>/html/awardtype/create.jsp</value>
+		</init-param>
+		<init-param>
+			<name>copy-template</name>
+			<value>/html/awardtype/copy.jsp</value>
+		</init-param>
+		<init-param>
+			<name>detail-template</name>
+			<value>/html/awardtype/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>Award Type</title>
+			<short-title>Award Type</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>candidate-result</portlet-name>
+		<display-name>Candidate Result</display-name>
+		<portlet-class>
+			com.sambaash.platform.result.action.CandidateResultPortlet
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/candidateresult/list.jsp</value>
+		</init-param>
+		<init-param>
+			<name>edit-template</name>
+			<value>/html/candidateresult/config.jsp</value>
+		</init-param>
+		<init-param>
+			<name>update-template</name>
+			<value>/html/candidateresult/create.jsp</value>
+		</init-param>
+		<init-param>
+			<name>copy-template</name>
+			<value>/html/candidateresult/copy.jsp</value>
+		</init-param>
+		<init-param>
+			<name>detail-template</name>
+			<value>/html/candidateresult/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>Candidate Result</title>
+			<short-title>Candidate Result</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+</portlet-app>

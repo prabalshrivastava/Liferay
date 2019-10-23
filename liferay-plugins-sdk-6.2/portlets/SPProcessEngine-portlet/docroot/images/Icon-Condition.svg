@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="511" height="326" viewBox="0 0 511 326" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <circle id="a" cx="255" cy="41" r="41"/>
+    <mask id="e" width="82" height="82" x="0" y="0" fill="white">
+      <use xlink:href="#a"/>
+    </mask>
+    <circle id="b" cx="41" cy="253" r="41"/>
+    <mask id="f" width="82" height="82" x="0" y="0" fill="white">
+      <use xlink:href="#b"/>
+    </mask>
+    <circle id="c" cx="470" cy="253" r="41"/>
+    <mask id="g" width="82" height="82" x="0" y="0" fill="white">
+      <use xlink:href="#c"/>
+    </mask>
+    <polygon id="d" points="255 176 330 251 255 326 180 251"/>
+    <mask id="h" width="150" height="150" x="0" y="0" fill="white">
+      <use xlink:href="#d"/>
+    </mask>
+  </defs>
+  <g fill="none" fill-rule="evenodd" stroke="#656565">
+    <path stroke-width="16" d="M255,80 L255,180" stroke-linecap="square"/>
+    <use stroke-width="32" mask="url(#e)" xlink:href="#a"/>
+    <use stroke-width="32" mask="url(#f)" xlink:href="#b"/>
+    <use stroke-width="32" mask="url(#g)" xlink:href="#c"/>
+    <path stroke-width="16" d="M326.5 253L431.438077 253M82 253L182 253" stroke-linecap="square"/>
+    <use stroke-width="32" mask="url(#h)" xlink:href="#d"/>
+  </g>
+</svg>

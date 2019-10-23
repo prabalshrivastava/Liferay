@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="28px" height="31px" viewBox="0 0 28 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon - Process</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Process-Builder" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="24" transform="translate(-279.000000, -281.000000)">
+            <g id="Content-/-Basic-Data" transform="translate(0.000000, 49.000000)">
+                <g id="Tabs-/-Vertical" transform="translate(120.000000, 107.000000)">
+                    <g id="Icon---Process" transform="translate(158.000000, 126.000000)">
+                        <ellipse id="Oval-1573" stroke="#979797" cx="15" cy="15" rx="12" ry="12"></ellipse>
+                        <polygon id="Triangle-50" fill="#656565" transform="translate(26.413092, 11.367819) rotate(-194.000000) translate(-26.413092, -11.367819) " points="26.4130924 8.42731002 29.3536018 14.3083288 23.472583 14.3083288"></polygon>
+                        <polygon id="Triangle-50" fill="#656565" transform="translate(3.629265, 11.332066) rotate(-166.000000) translate(-3.629265, -11.332066) " points="3.62926465 8.34661902 6.61471209 14.3175139 0.643817206 14.3175139"></polygon>
+                        <polygon id="Triangle-50" fill="#656565" points="18.3729619 24 18.3729619 30 12.3729619 27"></polygon>
+                        <ellipse id="Oval-185" stroke="#656565" fill="#F59807" cx="15" cy="3" rx="3" ry="3"></ellipse>
+                        <ellipse id="Oval-185" stroke="#656565" fill="#F59807" cx="25.5" cy="21" rx="3" ry="3"></ellipse>
+                        <ellipse id="Oval-185" stroke="#656565" fill="#F59807" cx="4.5" cy="21" rx="3" ry="3"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

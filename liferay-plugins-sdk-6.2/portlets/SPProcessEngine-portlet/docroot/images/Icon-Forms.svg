@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="27px" height="30px" viewBox="0 0 27 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon-Forms</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Process-Builder" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="24" transform="translate(-510.000000, -471.000000)">
+            <g id="Content-/-Basic-Data" transform="translate(0.000000, 49.000000)">
+                <g id="Sequence-Details-" transform="translate(473.000000, 133.000000)">
+                    <g id="Forms" transform="translate(0.000000, 201.000000)">
+                        <g id="Icon-Forms" transform="translate(38.000000, 89.000000)">
+                            <path d="M3.46837945,20.1985492 L3.46837945,0 L25.4423874,0 L25.4423874,24.710071 C25.4423874,26.3618429 24.0935632,27.7008685 22.4388815,27.7008685 L20.9012884,27.7008685 C19.2424979,27.7008685 17.8977825,26.3595983 17.8977825,24.6926032 L17.8977825,23.2067819 C17.8977825,21.5453628 19.2373404,20.1985165 20.9029929,20.1985165 L21.3883399,20.1985165 L2.99647775,20.1985165 C1.34156878,20.1985165 -2.54977438e-11,21.5397865 -2.54976416e-11,23.2067814 L-2.54975504e-11,24.6926025 C-2.54974485e-11,26.3540214 1.33793645,27.7008675 2.99647775,27.7008675 L21.3883399,27.7008675" id="Path-1867" stroke="#656565"></path>
+                            <path d="M9.8784585,5.00060505 L21.6966403,5.00060505" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                            <ellipse id="Oval-181" stroke="#F59807" cx="7.38636364" cy="5.02272727" rx="0.886363636" ry="0.886363636"></ellipse>
+                            <path d="M9.8784585,9.13696869 L21.6966403,9.13696869" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                            <ellipse id="Oval-181" stroke="#F59807" cx="7.38636364" cy="9.15909091" rx="0.886363636" ry="0.886363636"></ellipse>
+                            <path d="M9.8784585,13.2733323 L21.6966403,13.2733323" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                            <path d="M15.0258095,17.409696 L21.6966403,17.409696" id="Line" stroke="#979797" stroke-linecap="square"></path>
+                            <ellipse id="Oval-181" stroke="#F59807" cx="7.38636364" cy="13.2954545" rx="0.886363636" ry="0.886363636"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

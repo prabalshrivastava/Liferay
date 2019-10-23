@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.sambaash.platform.srv.validation.model.SPStudentProgramme" />
+	<import class="com.sambaash.platform.srv.validation.model.SPStudentProgrammeResult" />
+	<class name="com.sambaash.platform.srv.validation.model.impl.SPStudentProgrammeImpl" table="SPStudentProgramme">
+		<cache usage="read-write" />
+		<id name="spStudentCourseId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="nric" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="programme" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="courseCentre" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="courseStartDate" type="org.hibernate.type.TimestampType" />
+		<property name="courseEndDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.sambaash.platform.srv.validation.model.impl.SPStudentProgrammeResultImpl" table="SPStudentProgrammeResult">
+		<cache usage="read-write" />
+		<id name="spStudentProgrammeResultId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="nric" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="courseCentre" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="courseStartDate" type="org.hibernate.type.TimestampType" />
+		<property name="courseEndDate" type="org.hibernate.type.TimestampType" />
+		<property name="programme" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="exam" type="org.hibernate.type.TimestampType" />
+		<property name="examType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="paper1Result" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="paper2Result" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="overallResult" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

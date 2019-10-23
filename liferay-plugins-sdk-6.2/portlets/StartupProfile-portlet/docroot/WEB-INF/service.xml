@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+
+<service-builder package-path="com.sambaash.platform.srv.startupprofile">
+	<author>pradeep</author>
+	<namespace>startupprofile</namespace>
+	<entity name="Organization" uuid="true" local-service="true" remote-service="true" table="SPOrganization">
+		<!-- PK fields -->
+		<column name="organizationId" type="long" primary="true"></column>
+		<column name="name" type="String"></column>
+		<column name="corporateCode" type="String"></column>
+		<column name="corporateType" type="String"></column>
+		<column name="corporateCategory" type="String"></column>
+		<column name="apiPath" type="String"></column>
+		<column name="categories" type="String"></column>
+		<column name="foundedOn" type="String"></column>
+		<column name="noOfEmployees" type="int"></column>
+		<column name="emailId" type="String"></column>
+		<column name="website" type="String"></column>
+		<column name="facebook" type="String"></column>
+		<column name="twitter" type="String"></column>
+		<column name="linkedIn" type="String"></column>
+		<column name="crunchbase" type="String"></column>
+		<column name="mobile" type="String"></column>
+		<column name="totalFunds" type="String"></column>
+		<column name="uen" type="String"></column>
+		<!-- long pitch -->
+		<column name="description" type="String"></column>
+		<column name="shortPitch" type="String"></column>
+		<column name="lifecycleStage" type="String"></column>
+		<column name="capitalRaised" type="String"></column>
+		<column name="isIncorporated" type="boolean"></column>
+		<column name="stockSymbol" type="String"></column>
+		<column name="imageUrl" type="String"></column>
+		<column name="videos" type="String"></column>
+		<column name="profileOutline" type="String"></column>
+		<column name="raisingFunds" type="String"></column>
+		<column name="extras" type="String"></column>
+		<column name="uniqueDesc" type="String"></column>
+		<column name="links" type="String"></column>
+		<column name="isBaseOrg" type="boolean"></column>
+		<column name="completeness" type="boolean"></column>
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="active" type="boolean"></column>
+		<column name="logoId" type="long"></column>
+		<column name="methodologyType" type="long"></column>
+		<column name="methodologySubType" type="long"></column>
+		<column name="stage" type="int"></column>
+		<column name="feedback" type="String"></column>
+		<column name="videoLinks" type="String"></column>
+		<column name="projectsWorkedOn" type="String"></column>
+		<column name="showInBlackbook" type="boolean"></column>
+		<column name="faxNumber" type="String"></column>
+		<column name="contactName" type="String"></column>
+		<column name="contactDesignation" type="String"></column>
+		<column name="pipelineStatus" type="int"></column>
+		<column name="businessDevManager" type="int"></column>
+		<column name="prevBusinessDevManager" type="int"></column>
+		
+		<column name="isATO" type="boolean"></column>
+		<column name="approvalDate" type="Date"></column>
+		<column name="status" type="int"></column>
+
+<!-- additional fields  from SAC migration-->
+		<column name="listedCo" type="String"></column>
+		<column name="noOfPotentialCandidates" type="long"></column>
+        <order by="asc">
+            <order-column name="name" case-sensitive="false"></order-column>
+        </order>
+		
+		<finder return-type="Collection" name="baseOrgAndActive">
+			<finder-column name="isBaseOrg"></finder-column>
+			<finder-column name="active"></finder-column>
+		</finder>
+		<finder name="StartupName" return-type="Collection" where="active = 1 and isBaseOrg = 1">
+			<finder-column name="name" case-sensitive="false"></finder-column>
+		</finder>
+		<finder name="UserId" return-type="Collection" where="active = 1 and isBaseOrg = 1">
+			<finder-column name="userId"></finder-column>
+		</finder>
+		<finder name="UENNumber" return-type="Collection" where="active = 1 and isBaseOrg = 1">
+			<finder-column name="uen" case-sensitive="false"></finder-column>
+        </finder>
+        
+        <finder name="ATO" return-type="Collection">
+        	<finder-column name="isATO"></finder-column>
+        </finder>
+        
+		<reference package-path="com.liferay.portlet.asset" entity="AssetEntry"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetLink"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetCategory"></reference>
+		<reference package-path="com.liferay.portlet.asset" entity="AssetTag"></reference>
+	</entity>
+	
+	<entity name="OrganisationRemarks" local-service="true" remote-service="false" table="SPOrganisationRemarks">
+		<!-- PK fields -->
+		<column name="remarksId" type="long" primary="true"></column>
+		<column name="organizationId" type="long"></column>
+		<column name="remarkType" type="String"></column>
+		<column name="Remarks" type="String"></column>
+		<column name="Notes" type="String"></column>
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+	
+	<finder return-type="Collection" name="OrganizationId">
+		<finder-column name="organizationId"></finder-column>
+	</finder>
+	</entity>
+	
+	<entity name="Address" uuid="true" local-service="true" remote-service="false" table="SPAddress">
+		<!-- PK fields -->
+		<column name="addressId" type="long" primary="true"></column>
+		<column name="organizationId" type="long"></column>
+		<column name="name" type="String"></column>
+		<column name="street1" type="String"></column>
+		<column name="street2" type="String"></column>
+		<column name="street3" type="String"></column>
+		<column name="street4" type="String"></column>
+		<column name="city" type="String"></column>
+		<column name="region" type="String"></column>
+		<column name="country" type="String"></column>
+		<column name="postalCode" type="String"></column>
+		<column name="hq" type="boolean"></column>
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="active" type="boolean"></column>
+		<finder name="OrganizationId" return-type="Collection">
+			<finder-column name="organizationId"></finder-column>
+		</finder>
+		
+		<finder name="OrganizationIdAndHq" return-type="Collection">
+			<finder-column name="organizationId"></finder-column>
+			<finder-column name="hq"></finder-column>
+		</finder>
+	</entity>
+	
+	
+	<entity name="SPOrgContactUs" table="SPOrgContactUs" local-service="true"
+		remote-service="false">
+		<column name="spContactUsId" db-name="spContactUsId" type="long"
+			primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="organizationId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Other fields -->			
+		<column name="salutation" db-name="salutation" type="String" />
+		<column name="person" db-name="person" type="String" />
+		<column name="firstName" db-name="firstName" type="String" />
+		<column name="lastName" db-name="lastName" type="String" />
+		<column name="designation" db-name="designation" type="String" />
+		<column name="qualification" db-name="qualification" type="String" />
+		<column name="qualificationDate" db-name="qualificationDate" type="String" />
+		<column name="emailAddress" db-name="emailAddress" type="String" />
+		
+		<column name="department" db-name="department" type="String" />
+		<column name="mobileNumber" db-name="mobileNumber" type="long" />
+		<column name="telephoneNumber" db-name="telephoneNumber" type="long" />
+		<column name="faxNumber" db-name="faxNumber" type="long" />
+		<column name="billingContact" type="boolean"></column>
+		<column name="operationsContact" type="boolean"></column>
+		<column name="active" type="boolean"></column>
+		<finder name="OrganizationId" return-type="Collection">
+			<finder-column name="organizationId"></finder-column>
+		</finder>
+		
+	</entity>
+	
+	
+	<entity name="SPATOContacts" table="SPATOContacts" local-service="true"
+		remote-service="false">
+		<column name="spATOContactId" db-name="spATOContactId" type="long" primary="true" />
+			
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="organizationId" type="long" />
+		<column name="userId" type="long" />
+		<column name="firstName" type="String" />
+		<column name="lastName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Other fields -->			
+		<column name="primaryPrincipalUserId" db-name="primaryPrincipalUserId" type="String" />
+		
+		<column name="secondaryPrincipalUserId" db-name="secondaryPrincipalUserId" type="String" />
+		
+		<finder name="OrganizationId" return-type="Collection">
+			<finder-column name="organizationId"></finder-column>
+		</finder>
+		
+		<finder name="PrimaryPrincipalUserId" return-type="Collection">
+			<finder-column name="primaryPrincipalUserId"></finder-column>
+		</finder>
+		
+		<finder name="SecondaryPrincipalUserId" return-type="Collection">
+			<finder-column name="secondaryPrincipalUserId"></finder-column>
+		</finder>
+		
+	</entity>
+	
+	<entity name="ApprovedMentors" uuid="true" table="SPMentors" local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="mentorId" type="long" primary="true"></column>
+		<column name="organizationId" type="long"></column>
+		<column name="userId" db-name="userId" type="String" />
+
+		<column name="createDate" type="Date" />
+		<column name="approvedDate" type="Date" />
+		<column name="remarks" type="String" />
+		
+		
+		<column name="status" db-name="status" type="int" />
+		
+		<finder name="UserId" return-type="Collection">
+			<finder-column name="userId"></finder-column>
+		</finder>
+		
+		<finder name="OrganizationId" return-type="Collection">
+			<finder-column name="organizationId"></finder-column>
+		</finder>
+		<finder name="Status" return-type="Collection">
+			<finder-column name="status"></finder-column>
+		</finder>
+		<finder name="OrganizationAndUserId" return-type="Collection">
+            <finder-column name="organizationId"></finder-column>
+            <finder-column name="userId"></finder-column>
+        </finder>
+        <finder name="OrganizationIdApprovedMentors" return-type="Collection" where="status = 1">
+			<finder-column name="organizationId"></finder-column>
+		</finder>
+        <finder name="OrganizationIdStatus" return-type="Collection">
+            <finder-column name="organizationId"></finder-column>
+            <finder-column name="status"></finder-column>
+        </finder>
+	</entity>
+	
+	<entity name="Guidelines" uuid="true" table="SPGuidelines" local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="guidelineId" type="long" primary="true"></column>
+		<column name="organizationId" type="long"></column>
+		<column name="principleId" type="long" ></column>
+		<column name="guideline1" db-name="guideline1" type="boolean" />
+		<column name="guideline2" db-name="guideline2" type="boolean" />
+		<column name="guideline3" db-name="guideline3" type="boolean" />
+		<column name="guideline4" db-name="guideline4" type="boolean" />
+		<column name="guideline5" db-name="guideline5" type="boolean" />
+		<column name="guideline6" db-name="guideline6" type="boolean" />
+		<column name="guideline7" db-name="guideline7" type="boolean" />
+		<column name="guideline8" db-name="guideline8" type="boolean" />
+		<column name="moreInfo" db-name="moreInfo" type="String" />
+		<finder name="OrganizationId" return-type="Collection">
+			<finder-column name="organizationId"></finder-column>
+		</finder>
+		<finder name="OrganizationAndPrincipleIdId" return-type="Collection">
+            <finder-column name="organizationId"></finder-column>
+            <finder-column name="principleId"></finder-column>
+        </finder>
+	</entity>
+	
+	<entity name="Principles" uuid="true" table="SPPrinciples" local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="siteId" type="long"></column>
+		<column name="principleId" type="long"  primary="true"></column>
+		<column name="principleText" db-name="principleText" type="String" />
+		<column name="guideline1" db-name="guideline1" type="String" />
+		<column name="guideline2" db-name="guideline2" type="String" />
+		<column name="guideline3" db-name="guideline3" type="String" />
+		<column name="guideline4" db-name="guideline4" type="String" />
+		<column name="guideline5" db-name="guideline5" type="String" />
+		<column name="guideline6" db-name="guideline6" type="String" />
+		<column name="guideline7" db-name="guideline7" type="String" />
+		<column name="guideline8" db-name="guideline8" type="String" />
+		
+		<finder name="SiteId" return-type="Collection">
+			<finder-column name="siteId"></finder-column>
+		</finder>
+		
+	</entity>
+	
+	<entity name="EmployeeInfo" uuid="true" table="SPEmployeeInfo" local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="employeeInfoId" type="long" primary="true"></column>
+		<column name="organizationId" type="long"></column>
+		<column name="employees" db-name="employees" type="String" />
+		<column name="directors" db-name="directors" type="String" />
+		<column name="financeEmployees" db-name="financeEmployees" type="String" />
+		<column name="professionalCandidates" db-name="professionalCandidates" type="String" />
+		<column name="foundationCandidates" db-name="foundationCandidates" type="String" />
+		<column name="accountancyCandidates" db-name="accountancyCandidates" type="String" />
+		<column name="ISCAAccountants" db-name="ISCAAccountants" type="String" />
+		<column name="ICASAccountants" db-name="ICASAccountants" type="String" />
+		
+		<column name="ICAEWAccountants" db-name="ICAEWAccountants" type="String" />
+		<column name="CAIAccountants" db-name="CAIAccountants" type="String" />
+		<column name="ACCAAccountants" db-name="ACCAAccountants" type="String" />
+		<column name="CPAAccountants" db-name="CPAAccountants" type="String" />
+		<column name="CAANZAccountants" db-name="CAANZAccountants" type="String" />
+		<column name="CPACanadaAccountants" db-name="CPACanadaAccountants" type="String" />
+		
+		<column name="HKCPAAccountants" db-name="HKCPAAccountants" type="String" />
+		<column name="SAICAAccountants" db-name="SAICAAccountants" type="String" />
+		<column name="JICPAAccountants" db-name="JICPAAccountants" type="String" />
+		<column name="AICPAAccountants" db-name="AICPAAccountants" type="String" />
+		<column name="CIMAAccountants"  db-name="CIMAAccountants" type="String" />
+		<column name="othersAccountants" db-name="othersAccountants" type="String" />
+		<finder name="OrganizationId" return-type="Collection">
+			<finder-column name="organizationId"></finder-column>
+		</finder>
+	</entity>
+	
+	
+	<entity name="Accreditation" uuid="true" table="SPAccreditation" local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="accreditationId" type="long" primary="true"></column>
+		<column name="organizationId" type="long"></column>
+		<column name="aselected" type="boolean"></column>
+		<column name="avalue" db-name="avalue" type="String" />
+		<column name="bselected" type="boolean"></column>
+		<column name="bvalue" db-name="bvalue" type="String" />
+		<column name="cselected" type="boolean"></column>
+		<column name="cvalue" db-name="cvalue" type="String" />
+		<column name="ccompanyName" db-name="cCompanyName" type="String" />
+		<column name="csamepolicy" type="boolean"></column>
+		<column name="celaborate" db-name="celaborate" type="String" />
+		
+		<column name="dselected" type="boolean"></column>
+		<column name="dvalue" db-name="dvalue" type="String" />
+<column name="accreditationStatus" type="String"></column>
+		<column name="dateOfAccreditation" type="Date"></column>
+		<column name="dateOfExpiry" type="Date"></column>
+		<column name="latestPaymentDate" type="Date"></column>
+		<column name="startDateOfReaccreditation" type="Date"></column>
+		<column name="dateOfReaccdtReview" type="Date"></column>
+		<column name="AccreditationBy" type="String"></column>
+		<finder name="OrganizationId" return-type="Collection">
+			<finder-column name="organizationId"></finder-column>
+		</finder>
+		
+	</entity>
+	
+	<entity name="ReAccreditation" uuid="true" table="SPReAccreditation" local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="accreditationId" type="long" primary="true"></column>
+		<column name="organizationId" type="long"></column>
+		
+		<column name="accreditationStatus" type="String"></column>
+		<column name="dateOfAccreditation" type="Date"></column>
+		<column name="dateOfExpiry" type="Date"></column>
+		<column name="latestPaymentDate" type="Date"></column>
+		<column name="startDateOfReaccreditation" type="Date"></column>
+		<column name="dateOfReaccdtReview" type="Date"></column>
+		<column name="AccreditationBy" type="String"></column>
+		<finder name="OrganizationId" return-type="Collection">
+			<finder-column name="organizationId"></finder-column>
+		</finder>
+		
+	</entity>
+	
+	<entity name="ATODocument" uuid="true" table="SPATODocument" local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="atoDocumentId" type="long" primary="true"></column>
+		<column name="organizationId" type="long"></column>
+		<column name="documentType" db-name="documentType" type="String"></column>
+		<column name="documentFileId" db-name="documentFileId" type="String" />
+		<finder name="DocumentType" return-type="Collection">
+			<finder-column name="documentType"></finder-column>
+		</finder>
+		<finder name="OrganizationId" return-type="Collection">
+			<finder-column name="organizationId"></finder-column>
+		</finder>
+        <finder name="OrganizationAndDocumentType" return-type="Collection">
+            <finder-column name="organizationId"></finder-column>
+            <finder-column name="documentType"></finder-column>
+        </finder>
+		
+	</entity>
+	
+	
+	<entity name="FundingRound" uuid="true" table="SPFundingRounds" local-service="true" remote-service="false">
+		<!-- PK fields -->
+		<column name="fundingRoundId" type="long" primary="true"></column>
+		<column name="organizationId" type="long"></column>
+		<column name="name" type="String"></column>
+		<column name="apiPath" type="String"></column>
+		<column name="imageUrl" type="String"></column>
+		<column name="announcedOn" type="String"></column>
+		<column name="moneyRaisedInUsd" type="String"></column>
+		<column name="fundingType" type="String"></column>
+		<column name="description" type="String"></column>
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="active" type="boolean"></column>
+	</entity>
+	
+	<entity name="Person" uuid="true" local-service="true" remote-service="false" table="SPPerson">
+		<!-- PK fields -->
+		<column name="personId" type="long" primary="true"></column>
+		<column name="name" type="String"></column>
+		<column name="title" type="String"></column>
+		<column name="apiPath" type="String"></column>
+		<column name="emailId" type="String"></column>
+		<column name="description" type="String"></column>
+		<column name="imageUrl" type="String"></column>
+		<column name="mobile" type="String"></column>
+		<column name="skype" type="String"></column>
+		<column name="memberUserId" type="long"></column>
+		<column name="extras" type="String"></column>
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="active" type="boolean"></column>
+	</entity>
+	
+	<entity name="Relationship" local-service="true" remote-service="false" table="SPRelationships">
+		<!-- PK fields -->
+		<column name="relationshipId" type="long" primary="true"></column>
+		<column name="organizationId" type="long"></column>
+		<column name="refId" type="long"></column>
+		<column name="refTypeId" type="long"></column>
+		<column name="relation" type="long"></column>
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="active" type="boolean"></column>
+	</entity>
+	
+	
+	<!-- Needed in future for crunchbase migration -->
+	<!-- <entity name="Products" uuid="true" local-service="true" remote-service="false"
+		table="SP_Products">
+		PK fields
+		<column name="productId" type="long" primary="true"></column>
+		
+		<column name="organizationId" type="long"></column>
+		
+		<column name="name" type="String"></column>
+		<column name="apiPath" type="String"></column>
+		<column name="imageUrl" type="String"></column>
+		<column name="launchedOn" type="String"></column>
+		<column name="knownAs" type="String"></column>
+		<column name="website" type="String"></column>
+		<column name="description" type="String"></column>
+		<column name="extras" type="String"></column>
+	</entity> -->
+	<!-- <entity name="Investments" uuid="true"  local-service="true" remote-service="false"
+		table="SP_Investments">
+		PK fields
+		<column name="investmentId" type="long" primary="true"></column>
+		
+		<column name="organizationId" type="long"></column>
+		
+		<column name="name" type="String"></column>
+		<column name="apiPath" type="String"></column>
+		<column name="moneyInvested" type="String"></column>
+		<column name="description" type="String"></column>
+		<column name="investedIn" type="String"></column>
+		<column name="frApiPath" type="String"></column>
+	</entity> -->
+	<!-- <entity name="Ipo" uuid="true"  local-service="true" remote-service="false" table="SP_Ipo">
+
+		PK fields
+		<column name="ipoId" type="long" primary="true"></column>
+
+        <column name="organizationId" type="long"></column>
+
+        <column name="name" type="String"></column>
+        <column name="apiPath" type="String"></column>
+        <column name="wentPublicOn" type="String"></column>
+        <column name="sharesSold" type="String"></column>
+        <column name="moneyRaised" type="String"></column>
+        <column name="stockSymbol" type="String"></column>
+        <column name="description" type="String"></column>
+	</entity> -->
+	<entity name="Questionnaire" local-service="true" remote-service="false" table="SPQuestionnaire">
+		<column name="questionnaireId" type="long" primary="true" db-name="spQuestionnaireId"></column>
+		<column name="entryClassPK" type="long"></column>
+		<column name="entryClassName" type="String"></column>
+		<column name="answer1" type="String"></column>
+		<column name="answer2" type="String"></column>
+		<column name="answer3" type="String"></column>
+		<column name="answer4" type="String"></column>
+		<column name="answer5" type="String"></column>
+		<column name="answer6" type="String"></column>
+		<column name="answer7" type="String"></column>
+		<column name="answer8" type="String"></column>
+		<column name="answer9" type="String"></column>
+		<column name="answer10" type="String"></column>
+		<!-- Audit fields -->
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<finder return-type="Questionnaire" name="IDAndClass">
+			<finder-column name="entryClassPK"></finder-column>
+			<finder-column name="entryClassName"></finder-column>
+		</finder>
+	</entity>
+    <entity name="StartupProfile" local-service="true" remote-service="true"></entity>
+</service-builder>
